@@ -190,10 +190,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const paidBtn       = document.getElementById('paidBtn');
   const backToFormBtn = document.getElementById('backToFormBtn');
 
-  // Helper: show only one step
+  // Helper: show only one step + update step indicator
   function showEnrollStep(step) {
     [enrollStep1, enrollStep2, enrollStep3].forEach(el => el.style.display = 'none');
     step.style.display = 'block';
+
+    // Update step dots
+    const dots  = [document.getElementById('stepDot1'), document.getElementById('stepDot2'), document.getElementById('stepDot3')];
+    const lines = [document.getElementById('stepLine1'), document.getElementById('stepLine2')];
+    const idx   = step === enrollStep1 ? 0 : step === enrollStep2 ? 1 : 2;
+
+    dots.forEach((d, i) => {
+      d.classList.remove('active', 'done');
+      if (i < idx)  d.classList.add('done');
+      if (i === idx) d.classList.add('active');
+      
+      const span = d.querySelector('span');
+      if (span) {
+        if (i < idx) span.textContent = '✓';
+        else span.textContent = i + 1;
+      }
+    });
+    lines.forEach((l, i) => {
+      l.classList.toggle('done', i < idx);
+    });
   }
 
   // Open modal when a package button is clicked
@@ -248,10 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const utrInput = document.getElementById('utrInput');
     utrInput.value = '';
     paidBtn.disabled = true;
-    paidBtn.style.background = '#94a3b8';
-    paidBtn.style.cursor = 'not-allowed';
-    paidBtn.style.opacity = '0.7';
-
     showEnrollStep(enrollStep2);
   });
 
@@ -259,9 +275,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('utrInput')?.addEventListener('input', function() {
     const hasValue = this.value.trim().length >= 8;
     paidBtn.disabled = !hasValue;
-    paidBtn.style.background = hasValue ? '#16a34a' : '#94a3b8';
-    paidBtn.style.cursor = hasValue ? 'pointer' : 'not-allowed';
-    paidBtn.style.opacity = hasValue ? '1' : '0.7';
   });
 
   // Back button: return to form and reset UTR
