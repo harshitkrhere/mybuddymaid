@@ -175,6 +175,117 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ── Enrollment Modal (3-Step QR Payment Flow) ──────────────────
+  const UPI_ID   = 'shivjaan0913-2@okaxis';   // ← Change this to boss's UPI ID when ready
+  const UPI_NAME = 'MyBuddyMaid';
+
+  const paymentModal  = document.getElementById('paymentModalOverlay');
+  const paymentClose  = document.getElementById('paymentClose');
+  const enrollStep1   = document.getElementById('enrollStep1');
+  const enrollStep2   = document.getElementById('enrollStep2');
+  const enrollStep3   = document.getElementById('enrollStep3');
+  const paymentForm   = document.getElementById('paymentForm');
+  const payPlanName   = document.getElementById('payPlanName');
+  const payAmount     = document.getElementById('payAmount');
+  const paidBtn       = document.getElementById('paidBtn');
+  const backToFormBtn = document.getElementById('backToFormBtn');
+
+  // Helper: show only one step
+  function showEnrollStep(step) {
+    [enrollStep1, enrollStep2, enrollStep3].forEach(el => el.style.display = 'none');
+    step.style.display = 'block';
+  }
+
+  // Open modal when a package button is clicked
+  document.querySelectorAll('[data-open-payment]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const plan  = btn.getAttribute('data-open-payment');
+      const price = btn.getAttribute('data-price');
+
+      document.getElementById('payPlanNameText').textContent  = plan;
+      document.getElementById('payPlanPriceText').textContent = `₹${Number(price).toLocaleString('en-IN')}`;
+      payPlanName.value = plan;
+      payAmount.value   = price;
+
+      paymentForm.reset();
+      showEnrollStep(enrollStep1);
+      paymentModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close modal helpers
+  function closeEnrollModal() {
+    paymentModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  paymentClose?.addEventListener('click', closeEnrollModal);
+  paymentModal?.addEventListener('click', e => { if (e.target === paymentModal) closeEnrollModal(); });
+
+  // STEP 1 → STEP 2: validate form, generate QR
+  paymentForm?.addEventListener('submit', e => {
+    e.preventDefault();
+    const name  = document.getElementById('payName').value.trim();
+    const email = document.getElementById('payEmail').value.trim();
+    const phone = document.getElementById('payPhone').value.trim();
+    if (!name || !email || !phone) return;
+
+    const amount = payAmount.value;
+
+    // Generate UPI QR
+    const upiUri = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(UPI_NAME)}&am=${amount}&cu=INR&tn=${encodeURIComponent(payPlanName.value + ' Enrollment')}`;
+    document.getElementById('qrAmountDisplay').textContent = `₹${Number(amount).toLocaleString('en-IN')}`;
+
+    new QRious({
+      element: document.getElementById('enrollQRCanvas'),
+      value:   upiUri,
+      size:    220,
+      level:   'H',
+    });
+
+    showEnrollStep(enrollStep2);
+  });
+
+  // Back button: return to form
+  backToFormBtn?.addEventListener('click', () => showEnrollStep(enrollStep1));
+
+  // STEP 2 → STEP 3: user confirms payment → save to sheet
+  paidBtn?.addEventListener('click', async () => {
+    paidBtn.disabled    = true;
+    paidBtn.textContent = '⏳ Saving your details…';
+
+    const data = {
+      type:      'enrollment',
+      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      name:      document.getElementById('payName').value.trim(),
+      email:     document.getElementById('payEmail').value.trim(),
+      phone:     document.getElementById('payPhone').value.trim(),
+      package:   payPlanName.value,
+      amount:    payAmount.value,
+    };
+
+    try {
+      await fetch(SHEETS_URL, {
+        method: 'POST',
+        mode:   'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(data),
+      });
+    } catch (_) { /* no-cors always throws — data still arrives */ }
+
+    showEnrollStep(enrollStep3);
+
+    // Auto-close after 5 seconds
+    setTimeout(() => {
+      closeEnrollModal();
+      paidBtn.disabled    = false;
+      paidBtn.textContent = '✅ I\'ve Completed Payment';
+      paymentForm.reset();
+    }, 5000);
+  });
+
+
   // ---- Salary Calculator ----
   const calcType = document.getElementById('calcType');
   const calcCity = document.getElementById('calcCity');

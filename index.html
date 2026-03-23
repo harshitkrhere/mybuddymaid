@@ -253,7 +253,7 @@
         <li>Unlimited Lead Access</li>
         <li>Refund Available (T&C)</li>
       </ul>
-      <a href="#" class="btn btn-outline" data-open-booking style="width:100%;justify-content:center;">Get Started →</a>
+      <a href="#" class="btn btn-outline" data-open-payment="Silver Buddy" data-price="1499" style="width:100%;justify-content:center;">Get Started →</a>
     </div>
     <div class="pricing-card popular reveal" data-delay="0.1s">
       <h3> Gold Buddy</h3>
@@ -268,7 +268,7 @@
         <li>Unlimited Lead Access</li>
         <li>Full Refund Available</li>
       </ul>
-      <a href="#" class="btn btn-primary" data-open-booking style="width:100%;justify-content:center;">Choose Gold </a>
+      <a href="#" class="btn btn-primary" data-open-payment="Gold Buddy" data-price="2499" style="width:100%;justify-content:center;">Choose Gold </a>
     </div>
     <div class="pricing-card reveal" data-delay="0.2s">
       <h3> Diamond Buddy</h3>
@@ -283,7 +283,7 @@
         <li>Priority Deployment in 24hrs</li>
         <li>Full Refund + Insurance Cover</li>
       </ul>
-      <a href="#" class="btn btn-outline" data-open-booking style="width:100%;justify-content:center;">Go Diamond </a>
+      <a href="#" class="btn btn-outline" data-open-payment="Diamond Buddy" data-price="3999" style="width:100%;justify-content:center;">Go Diamond </a>
     </div>
   </div>
 
@@ -677,7 +677,82 @@
   </div>
 </div>
 
+<!-- ===== ENROLLMENT MODAL (3-Step QR Payment Flow) ===== -->
+<div class="modal-overlay" id="paymentModalOverlay">
+  <div class="modal-box" id="enrollModalBox" style="padding: 32px 28px; max-width:480px;">
+    <button class="modal-close" id="paymentClose">✕</button>
 
+    <!-- STEP 1: Fill Details -->
+    <div id="enrollStep1">
+      <h3 style="text-align:center;font-size:1.6rem;margin-bottom:4px;">Complete Your Enrollment</h3>
+      <p style="text-align:center;color:#64748b;font-size:0.95rem;margin-bottom:20px;">
+        Enrolling for <strong id="payPlanNameText" style="color:var(--teal-primary);"></strong>
+        &nbsp;·&nbsp; <strong id="payPlanPriceText" style="color:var(--teal-primary);"></strong>
+      </p>
+      <form id="paymentForm" novalidate>
+        <input type="hidden" id="payPlanName">
+        <input type="hidden" id="payAmount">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="payName" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="payEmail" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group" style="margin-bottom:8px;">
+          <label>Contact Number</label>
+          <input type="tel" id="payPhone" placeholder="e.g., 9876543210 (10 digits)" required>
+          <small style="color:#94a3b8;font-size:0.78rem;display:block;margin-top:5px;">We will use this to confirm your payment.</small>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:15px;font-size:1rem;margin-top:16px;border:none;border-radius:10px;">
+          Proceed to Payment →
+        </button>
+      </form>
+    </div>
+
+    <!-- STEP 2: QR Code -->
+    <div id="enrollStep2" style="display:none;text-align:center;">
+      <div style="display:inline-block;background:#f0fdf4;border-radius:12px;padding:6px 16px;margin-bottom:16px;">
+        <span style="font-size:0.8rem;font-weight:700;color:#16a34a;letter-spacing:1px;">STEP 2 OF 2 · SCAN & PAY</span>
+      </div>
+      <h3 style="font-size:1.5rem;margin-bottom:4px;">Scan to Pay</h3>
+      <p style="color:#64748b;font-size:0.9rem;margin-bottom:20px;">
+        Open any UPI app (PhonePe, GPay, Paytm…) and scan this QR code to pay
+        <strong id="qrAmountDisplay" style="color:var(--teal-primary);"></strong>
+      </p>
+
+      <div style="display:flex;justify-content:center;margin-bottom:16px;">
+        <div style="border:2px solid #e2e8f0;border-radius:16px;padding:12px;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.06);">
+          <canvas id="enrollQRCanvas"></canvas>
+        </div>
+      </div>
+
+      <p style="font-size:0.82rem;color:#94a3b8;margin-bottom:20px;">
+        UPI ID: <strong style="color:#334155;">shivjaan0913-2@okaxis</strong>
+      </p>
+
+      <button id="paidBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:15px;font-size:1rem;border:none;border-radius:10px;background:#16a34a;">
+        ✅ I've Completed Payment
+      </button>
+      <button id="backToFormBtn" style="width:100%;margin-top:10px;background:none;border:none;color:#94a3b8;font-size:0.85rem;cursor:pointer;padding:6px;">
+        ← Go back and edit details
+      </button>
+    </div>
+
+    <!-- STEP 3: Confirmation -->
+    <div id="enrollStep3" class="success-state" style="display:none;">
+      <div class="check"></div>
+      <h3>Payment Received! 🎉</h3>
+      <p style="color:#64748b;margin-top:10px;font-size:0.95rem;line-height:1.6;">
+        Thank you! Our team will call you on your registered number<br>
+        <strong>within 30 minutes</strong> to confirm your buddy assignment.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
