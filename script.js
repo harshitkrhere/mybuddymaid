@@ -244,16 +244,40 @@ document.addEventListener('DOMContentLoaded', () => {
       level:   'H',
     });
 
+    // Reset & disable UTR field when showing QR step
+    const utrInput = document.getElementById('utrInput');
+    utrInput.value = '';
+    paidBtn.disabled = true;
+    paidBtn.style.background = '#94a3b8';
+    paidBtn.style.cursor = 'not-allowed';
+    paidBtn.style.opacity = '0.7';
+
     showEnrollStep(enrollStep2);
   });
 
-  // Back button: return to form
-  backToFormBtn?.addEventListener('click', () => showEnrollStep(enrollStep1));
+  // Enable paid button only when UTR has 8+ characters
+  document.getElementById('utrInput')?.addEventListener('input', function() {
+    const hasValue = this.value.trim().length >= 8;
+    paidBtn.disabled = !hasValue;
+    paidBtn.style.background = hasValue ? '#16a34a' : '#94a3b8';
+    paidBtn.style.cursor = hasValue ? 'pointer' : 'not-allowed';
+    paidBtn.style.opacity = hasValue ? '1' : '0.7';
+  });
+
+  // Back button: return to form and reset UTR
+  backToFormBtn?.addEventListener('click', () => {
+    document.getElementById('utrInput').value = '';
+    paidBtn.disabled = true;
+    showEnrollStep(enrollStep1);
+  });
 
   // STEP 2 → STEP 3: user confirms payment → save to sheet
   paidBtn?.addEventListener('click', async () => {
     paidBtn.disabled    = true;
     paidBtn.textContent = '⏳ Saving your details…';
+
+    const utr = document.getElementById('utrInput').value.trim();
+    if (!utr || utr.length < 8) return; // extra guard
 
     const data = {
       type:      'enrollment',
@@ -263,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
       phone:     document.getElementById('payPhone').value.trim(),
       package:   payPlanName.value,
       amount:    payAmount.value,
+      utr:       utr,
     };
 
     try {
@@ -276,13 +301,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showEnrollStep(enrollStep3);
 
-    // Auto-close after 5 seconds
+    // Auto-close after 6 seconds and reset everything
     setTimeout(() => {
       closeEnrollModal();
       paidBtn.disabled    = false;
       paidBtn.textContent = '✅ I\'ve Completed Payment';
+      document.getElementById('utrInput').value = '';
       paymentForm.reset();
-    }, 5000);
+    }, 6000);
   });
 
 

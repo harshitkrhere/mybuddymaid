@@ -24,6 +24,7 @@ function doPost(e) {
         "'" + (data.phone   || ''),   // ' prefix → plain text (avoids +91 #ERROR!)
         data.package   || '',
         data.amount    || '',
+        data.utr       || '',         // UPI Transaction ID for verification
       ]);
 
     } else {
