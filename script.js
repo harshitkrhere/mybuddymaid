@@ -326,9 +326,47 @@ document.addEventListener('DOMContentLoaded', () => {
     rzp.open();
   });
 
+  // ── Terms & Conditions Modal ──
+  const tncOverlay    = document.getElementById('tncModalOverlay');
+  const tncCheckbox   = document.getElementById('tncCheckbox');
+  const proceedPayBtn = document.getElementById('proceedPayBtn');
+
+  // Open T&C when link is clicked
+  document.getElementById('openTnc')?.addEventListener('click', e => {
+    e.preventDefault();
+    tncOverlay?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Close via X button
+  document.getElementById('tncClose')?.addEventListener('click', () => {
+    tncOverlay?.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  // "I Agree & Continue" button — ticks checkbox and closes modal
+  document.getElementById('tncAgreeBtn')?.addEventListener('click', () => {
+    if (tncCheckbox) { tncCheckbox.checked = true; proceedPayBtn.disabled = false; }
+    tncOverlay?.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  // Checkbox directly enables/disables Pay Now
+  tncCheckbox?.addEventListener('change', () => {
+    if (proceedPayBtn) proceedPayBtn.disabled = !tncCheckbox.checked;
+  });
+
+  // Reset T&C when enrollment modal closes
+  const _origClose = closeEnrollModal;
+  function closeEnrollModal() {
+    _origClose();
+    if (tncCheckbox) { tncCheckbox.checked = false; }
+    if (proceedPayBtn) proceedPayBtn.disabled = true;
+  }
 
 
   // ---- Salary Calculator ----
+
   const calcType = document.getElementById('calcType');
   const calcCity = document.getElementById('calcCity');
   const calcResult = document.getElementById('calcResult');

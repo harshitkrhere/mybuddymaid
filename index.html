@@ -686,10 +686,116 @@
       <h3>Booking Request Received!</h3>
       <p style="color:#888;margin-top:8px;">Our buddy team will email you within 30 minutes with the next steps.</p>
     </div>
+
+  </div>
+</div>
+
+<!-- ===== TERMS & CONDITIONS MODAL ===== -->
+<div class="tnc-overlay" id="tncModalOverlay">
+  <div class="tnc-modal">
+    <div class="tnc-modal-header">
+      <h2>Terms &amp; Conditions</h2>
+      <button class="tnc-close" id="tncClose">✕</button>
+    </div>
+    <div class="tnc-modal-body">
+      <h3>1. Introduction</h3>
+      <p>Welcome to My Buddy Maid. By accessing our website and using our services, you agree to these Terms &amp; Conditions. Please read them carefully.</p>
+
+      <h3>2. Nature of Service</h3>
+      <p>My Buddy Maid acts strictly as a <strong>platform/marketplace</strong> that connects customers with independent domestic workers (maids, babysitters, caregivers, etc.).</p>
+      <ul>
+        <li>We <strong>do not employ</strong> any service provider directly</li>
+        <li>All service providers are <strong>independent individuals</strong></li>
+        <li>We only facilitate connections and are <strong>not a service provider</strong></li>
+      </ul>
+
+      <h3>3. No Guarantee Clause</h3>
+      <ul>
+        <li>We do <strong>not guarantee</strong> job confirmation, availability, suitability, or compatibility of any service provider</li>
+        <li>Hiring depends completely on mutual agreement between customer and service provider</li>
+      </ul>
+
+      <h3>4. Service Process</h3>
+      <ul>
+        <li>After payment, customer receives <strong>contact details of service providers</strong></li>
+        <li>Final hiring, salary, duties, and working terms are decided <strong>directly between customer and service provider</strong></li>
+        <li>My Buddy Maid is <strong>not part of any employment agreement</strong></li>
+      </ul>
+
+      <h3>5. Replacement Policy</h3>
+      <ul>
+        <li>1st contact shared after payment</li>
+        <li>If not suitable → 2nd replacement</li>
+        <li>If still not suitable → 3rd replacement</li>
+        <li>Maximum <strong>3 contacts</strong> will be provided per package</li>
+      </ul>
+
+      <h3>6. Refund Policy</h3>
+      <p>Refund is applicable <strong>only after 60 days</strong> from service activation.</p>
+      <p><strong>Conditions for refund eligibility:</strong></p>
+      <ul>
+        <li>Customer has received all 3 contacts</li>
+        <li>No agreement has been finalised</li>
+      </ul>
+      <p>Refund processing time: <strong>5–10 working days</strong></p>
+      <p><strong>Note:</strong> A platform fee of <strong>₹500–₹1,000 is non-refundable</strong>. Remaining amount (if applicable) may be refunded after approval.</p>
+      <p><strong>Non-Refundable Cases:</strong></p>
+      <ul>
+        <li>Customer hires any maid (from our platform or outside)</li>
+        <li>Customer is unresponsive or delays process</li>
+        <li>Wrong or misleading requirements given</li>
+        <li>Customer rejects all options without valid reason</li>
+      </ul>
+
+      <h3>7. Payment Terms</h3>
+      <ul>
+        <li>Payments made are <strong>platform/service fees only</strong></li>
+        <li>Salary/payment to maid is handled <strong>directly by customer</strong></li>
+        <li>We are not responsible for salary disputes</li>
+      </ul>
+
+      <h3>8. Verification Disclaimer</h3>
+      <ul>
+        <li>Basic KYC (Aadhaar, phone, address) may be collected</li>
+        <li>We <strong>do not guarantee police verification</strong> unless explicitly stated</li>
+        <li>Final verification responsibility lies with the <strong>customer</strong></li>
+      </ul>
+
+      <h3>9. No Responsibility After Hiring</h3>
+      <p>Once a service provider is hired, My Buddy Maid has <strong>no responsibility</strong> for: behaviour, performance, continuation of service, or any disputes.</p>
+
+      <h3>10. Liability Limitation</h3>
+      <p>My Buddy Maid shall not be held liable for: theft, misconduct, negligence, personal injury or damages, service quality issues, or any disputes between customer and service provider. Customers must do their own due diligence before hiring.</p>
+
+      <h3>11. User Responsibilities</h3>
+      <p>By using our service, you agree that you will provide accurate information, treat service providers respectfully, and not engage in illegal or unethical activities.</p>
+
+      <h3>12. Cancellation Policy</h3>
+      <ul>
+        <li>Once service provider contact is shared, service is considered initiated</li>
+        <li>Cancellation before receiving contact is subject to approval</li>
+      </ul>
+
+      <h3>13. Fraud &amp; Misuse</h3>
+      <p>Any false complaints, fraud, or misuse of the platform may lead to immediate termination without refund.</p>
+
+      <h3>14. Dispute Resolution</h3>
+      <p>All disputes shall be subject to jurisdiction of the operating city courts. Parties agree to attempt mutual resolution first.</p>
+
+      <h3>15. Modifications</h3>
+      <p>My Buddy Maid reserves the right to update these Terms at any time without prior notice.</p>
+
+      <h3>16. Contact Information</h3>
+      <p>For support, contact us at <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a></p>
+    </div>
+    <div class="tnc-modal-footer">
+      <button class="pm-btn pm-btn-primary" id="tncAgreeBtn">I Agree &amp; Continue</button>
+    </div>
   </div>
 </div>
 
 <!-- ===== PREMIUM ENROLLMENT MODAL ===== -->
+
 <div class="premium-modal-overlay" id="paymentModalOverlay">
   <div class="premium-modal-container">
     <div class="premium-modal-header">
@@ -742,7 +848,15 @@
             <span>✓ No hidden fees</span>
           </div>
 
-          <button type="submit" class="pm-btn pm-btn-primary" id="proceedPayBtn">
+          <!-- T&C Checkbox -->
+          <div class="pm-tnc-row">
+            <label class="pm-tnc-label">
+              <input type="checkbox" id="tncCheckbox">
+              <span>I have read and agree to the <a href="#" id="openTnc" class="pm-tnc-link">Terms &amp; Conditions</a></span>
+            </label>
+          </div>
+
+          <button type="submit" class="pm-btn pm-btn-primary" id="proceedPayBtn" disabled>
             Pay Now — <span id="submitAmountLabel">₹2,499</span>
           </button>
         </form>

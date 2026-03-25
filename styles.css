@@ -867,3 +867,59 @@ body {
   .modal-box h3 { font-size: 1.3rem; }
   .modal-close { top: 12px; right: 12px; }
 }
+
+/* --- T&C Modal --- */
+.tnc-overlay {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  background: rgba(15,23,42,0.7); backdrop-filter: blur(6px);
+  z-index: 10000; display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  padding: 16px; box-sizing: border-box;
+}
+.tnc-overlay.active { opacity: 1; pointer-events: auto; }
+.tnc-modal {
+  background: #fff; border-radius: 20px; max-width: 580px; width: 100%;
+  max-height: 88vh; display: flex; flex-direction: column;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  transform: translateY(24px) scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+.tnc-overlay.active .tnc-modal { transform: translateY(0) scale(1); }
+.tnc-modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 24px 16px; border-bottom: 1px solid #e2e8f0; flex-shrink: 0;
+}
+.tnc-modal-header h2 { font-size: 1.25rem; color: #0f172a; font-weight: 700; margin: 0; }
+.tnc-close {
+  background: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 50%;
+  cursor: pointer; color: #64748b; font-size: 0.9rem; transition: all 0.2s;
+}
+.tnc-close:hover { background: #e2e8f0; color: #0f172a; }
+.tnc-modal-body {
+  padding: 20px 24px; overflow-y: auto; flex: 1; line-height: 1.7;
+  color: #334155; font-size: 0.88rem;
+}
+.tnc-modal-body h3 {
+  font-size: 0.9rem; font-weight: 700; color: #0f172a;
+  margin: 18px 0 6px; padding-bottom: 4px; border-bottom: 1px solid #f1f5f9;
+}
+.tnc-modal-body h3:first-child { margin-top: 0; }
+.tnc-modal-body ul { padding-left: 20px; margin: 6px 0; }
+.tnc-modal-body li { margin-bottom: 4px; }
+.tnc-modal-body a { color: #0d9488; }
+.tnc-modal-footer { padding: 16px 24px; border-top: 1px solid #e2e8f0; flex-shrink: 0; }
+
+/* T&C Checkbox row */
+.pm-tnc-row { margin: 16px 0 12px; }
+.pm-tnc-label {
+  display: flex; align-items: flex-start; gap: 10px;
+  cursor: pointer; font-size: 0.85rem; color: #475569; line-height: 1.4;
+}
+.pm-tnc-label input[type="checkbox"] {
+  width: 18px; height: 18px; border: 2px solid #cbd5e1; border-radius: 4px;
+  accent-color: #0d9488; cursor: pointer; flex-shrink: 0; margin-top: 1px;
+}
+.pm-tnc-link { color: #0d9488; font-weight: 600; text-decoration: underline; }
+#proceedPayBtn:disabled {
+  background: #94a3b8 !important; cursor: not-allowed; box-shadow: none !important; transform: none !important;
+}
