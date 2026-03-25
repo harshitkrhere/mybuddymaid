@@ -175,7 +175,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ── T&C for Instant Booking Form ──
+  const bookingTncCb  = document.getElementById('bookingTncCheckbox');
+  const submitBtn_ref = document.getElementById('submitBtn');
+
+  document.getElementById('openTncBooking')?.addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('tncModalOverlay')?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  bookingTncCb?.addEventListener('change', () => {
+    if (submitBtn_ref) submitBtn_ref.disabled = !bookingTncCb.checked;
+  });
+
+  // "I Agree & Continue" in T&C modal also covers booking form checkbox
+  const _origTncAgree = document.getElementById('tncAgreeBtn');
+  _origTncAgree?.addEventListener('click', () => {
+    if (bookingTncCb && !bookingTncCb.checked) {
+      bookingTncCb.checked = true;
+      if (submitBtn_ref) submitBtn_ref.disabled = false;
+    }
+  });
+
+  // Reset booking checkbox when modal closes
+  modal?.addEventListener('click', e => {
+    if (e.target === modal && bookingTncCb) {
+      bookingTncCb.checked = false;
+      if (submitBtn_ref) submitBtn_ref.disabled = true;
+    }
+  });
+  closeBtn?.addEventListener('click', () => {
+    if (bookingTncCb) { bookingTncCb.checked = false; }
+    if (submitBtn_ref) submitBtn_ref.disabled = true;
+  });
+
   // ── Enrollment Modal (Razorpay Automated Payment) ──────────────────
+
   const RZP_KEY = 'rzp_live_SVW7I4Fu5WQpAt';
 
   const paymentModal  = document.getElementById('paymentModalOverlay');

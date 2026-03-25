@@ -678,7 +678,15 @@
           <label>Any Special Requirements? (Optional)</label>
           <textarea name="notes" rows="3" placeholder="e.g., Hindi-speaking, vegetarian cook, experience with infants..."></textarea>
         </div>
-        <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;">🚀 Book My Buddy Now</button>
+        <!-- T&C Checkbox -->
+        <div class="pm-tnc-row">
+          <label class="pm-tnc-label">
+            <input type="checkbox" id="bookingTncCheckbox">
+            <span>I have read and agree to the <a href="#" id="openTncBooking" class="pm-tnc-link">Terms &amp; Conditions</a></span>
+          </label>
+        </div>
+        <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;" disabled>🚀 Book My Buddy Now</button>
+
       </form>
     </div>
     <div id="successState" class="success-state" style="display:none;">
