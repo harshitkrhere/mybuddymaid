@@ -175,45 +175,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ── Enrollment Modal (3-Step QR Payment Flow) ──────────────────
-  const UPI_ID   = 'shivjaan0913-2@okaxis';   // ← Change this to boss's UPI ID when ready
-  const UPI_NAME = 'MyBuddyMaid';
+  // ── Enrollment Modal (Razorpay Automated Payment) ──────────────────
+  const RZP_KEY = 'rzp_live_SVW7I4Fu5WQpAt';
 
   const paymentModal  = document.getElementById('paymentModalOverlay');
   const paymentClose  = document.getElementById('paymentClose');
   const enrollStep1   = document.getElementById('enrollStep1');
-  const enrollStep2   = document.getElementById('enrollStep2');
   const enrollStep3   = document.getElementById('enrollStep3');
   const paymentForm   = document.getElementById('paymentForm');
   const payPlanName   = document.getElementById('payPlanName');
   const payAmount     = document.getElementById('payAmount');
-  const paidBtn       = document.getElementById('paidBtn');
-  const backToFormBtn = document.getElementById('backToFormBtn');
 
-  // Helper: show only one step + update step indicator
+  // Helper: show step + update stepper UI
   function showEnrollStep(step) {
-    [enrollStep1, enrollStep2, enrollStep3].forEach(el => el.style.display = 'none');
-    step.style.display = 'block';
+    [enrollStep1, enrollStep3].forEach(el => { if (el) el.style.display = 'none'; });
+    if (step) step.style.display = 'block';
 
-    // Update step dots
-    const dots  = [document.getElementById('stepDot1'), document.getElementById('stepDot2'), document.getElementById('stepDot3')];
-    const lines = [document.getElementById('stepLine1'), document.getElementById('stepLine2')];
-    const idx   = step === enrollStep1 ? 0 : step === enrollStep2 ? 1 : 2;
+    const dots  = [document.getElementById('stepDot1'), document.getElementById('stepDot2')];
+    const lines = [document.getElementById('stepLine1')];
+    const idx   = step === enrollStep1 ? 0 : 1;
 
     dots.forEach((d, i) => {
+      if (!d) return;
       d.classList.remove('active', 'done');
       if (i < idx)  d.classList.add('done');
       if (i === idx) d.classList.add('active');
-      
       const span = d.querySelector('span');
-      if (span) {
-        if (i < idx) span.textContent = '✓';
-        else span.textContent = i + 1;
-      }
+      if (span) span.textContent = i < idx ? '✓' : i + 1;
     });
-    lines.forEach((l, i) => {
-      l.classList.toggle('done', i < idx);
-    });
+    lines.forEach((l, i) => { if (l) l.classList.toggle('done', i < idx); });
   }
 
   // Open modal when a package button is clicked
@@ -225,6 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.getElementById('payPlanNameText').textContent  = plan;
       document.getElementById('payPlanPriceText').textContent = `₹${Number(price).toLocaleString('en-IN')}`;
+      const submitLabel = document.getElementById('submitAmountLabel');
+      if (submitLabel) submitLabel.textContent = `₹${Number(price).toLocaleString('en-IN')}`;
       payPlanName.value = plan;
       payAmount.value   = price;
 
@@ -235,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Close modal helpers
+  // Close modal
   function closeEnrollModal() {
     paymentModal.classList.remove('active');
     document.body.style.overflow = '';
@@ -243,86 +235,97 @@ document.addEventListener('DOMContentLoaded', () => {
   paymentClose?.addEventListener('click', closeEnrollModal);
   paymentModal?.addEventListener('click', e => { if (e.target === paymentModal) closeEnrollModal(); });
 
-  // STEP 1 → STEP 2: validate form, generate QR
+  // STEP 1: Form submit → open Razorpay checkout
   paymentForm?.addEventListener('submit', e => {
     e.preventDefault();
-    const name  = document.getElementById('payName').value.trim();
-    const email = document.getElementById('payEmail').value.trim();
-    const phone = document.getElementById('payPhone').value.trim();
-    if (!name || !email || !phone) return;
 
-    const amount = payAmount.value;
+    // Clear previous errors
+    document.querySelectorAll('.pm-field-error').forEach(el => el.remove());
+    document.querySelectorAll('.pm-input-group input').forEach(el => el.style.borderColor = '');
 
-    // Generate UPI QR
-    const upiUri = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(UPI_NAME)}&am=${amount}&cu=INR&tn=${encodeURIComponent(payPlanName.value + ' Enrollment')}`;
-    document.getElementById('qrAmountDisplay').textContent = `₹${Number(amount).toLocaleString('en-IN')}`;
+    const nameEl  = document.getElementById('payName');
+    const emailEl = document.getElementById('payEmail');
+    const phoneEl = document.getElementById('payPhone');
+    const name  = nameEl.value.trim();
+    const email = emailEl.value.trim();
+    const phone = phoneEl.value.trim();
 
-    new QRious({
-      element: document.getElementById('enrollQRCanvas'),
-      value:   upiUri,
-      size:    220,
-      level:   'H',
-    });
+    function showError(inputEl, msg) {
+      inputEl.style.borderColor = '#ef4444';
+      const err = document.createElement('small');
+      err.className = 'pm-field-error';
+      err.style.cssText = 'display:block;color:#ef4444;font-size:0.75rem;margin-top:4px;';
+      err.textContent = msg;
+      inputEl.parentNode.appendChild(err);
+    }
 
-    // Reset & disable UTR field when showing QR step
-    const utrInput = document.getElementById('utrInput');
-    utrInput.value = '';
-    paidBtn.disabled = true;
-    showEnrollStep(enrollStep2);
-  });
+    let valid = true;
+    if (name.length < 2 || !/^[a-zA-Z\s\u0900-\u097F]+$/.test(name)) {
+      showError(nameEl, 'Please enter your real full name (letters only).');
+      valid = false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+      showError(emailEl, 'Please enter a valid email address.');
+      valid = false;
+    }
+    if (!/^[6-9]\d{9}$/.test(phone.replace(/\D/g, ''))) {
+      showError(phoneEl, 'Please enter a valid 10-digit Indian mobile number.');
+      valid = false;
+    }
+    if (!valid) return;
 
-  // Enable paid button only when UTR has 8+ characters
-  document.getElementById('utrInput')?.addEventListener('input', function() {
-    const hasValue = this.value.trim().length >= 8;
-    paidBtn.disabled = !hasValue;
-  });
+    const amount = parseInt(payAmount.value, 10);
+    const plan   = payPlanName.value;
 
-  // Back button: return to form and reset UTR
-  backToFormBtn?.addEventListener('click', () => {
-    document.getElementById('utrInput').value = '';
-    paidBtn.disabled = true;
-    showEnrollStep(enrollStep1);
-  });
+    const options = {
+      key:         RZP_KEY,
+      amount:      amount * 100,          // Razorpay expects paise
+      currency:    'INR',
+      name:        'MyBuddyMaid',
+      description: plan + ' Enrollment Package',
+      image:       'logo.png',
+      prefill: { name, email, contact: phone },
+      theme: { color: '#0d9488' },
+      modal: {
+        ondismiss: () => {
+          // User closed payment popup — stay on step 1
+        }
+      },
+      handler: async function(response) {
+        // Payment succeeded — save to Google Sheet
+        const data = {
+          type:               'enrollment',
+          timestamp:          new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+          name,
+          email,
+          phone,
+          package:            plan,
+          amount:             amount,
+          utr:                response.razorpay_payment_id,   // Razorpay payment ID stored as UTR
+        };
+        try {
+          await fetch(SHEETS_URL, {
+            method:  'POST',
+            mode:    'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify(data),
+          });
+        } catch (_) { /* no-cors always throws — data still arrives */ }
 
-  // STEP 2 → STEP 3: user confirms payment → save to sheet
-  paidBtn?.addEventListener('click', async () => {
-    paidBtn.disabled    = true;
-    paidBtn.textContent = '⏳ Saving your details…';
+        showEnrollStep(enrollStep3);
 
-    const utr = document.getElementById('utrInput').value.trim();
-    if (!utr || utr.length < 8) return; // extra guard
-
-    const data = {
-      type:      'enrollment',
-      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-      name:      document.getElementById('payName').value.trim(),
-      email:     document.getElementById('payEmail').value.trim(),
-      phone:     document.getElementById('payPhone').value.trim(),
-      package:   payPlanName.value,
-      amount:    payAmount.value,
-      utr:       utr,
+        // Auto-close after 6 seconds
+        setTimeout(() => {
+          closeEnrollModal();
+          paymentForm.reset();
+        }, 6000);
+      }
     };
 
-    try {
-      await fetch(SHEETS_URL, {
-        method: 'POST',
-        mode:   'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(data),
-      });
-    } catch (_) { /* no-cors always throws — data still arrives */ }
-
-    showEnrollStep(enrollStep3);
-
-    // Auto-close after 6 seconds and reset everything
-    setTimeout(() => {
-      closeEnrollModal();
-      paidBtn.disabled    = false;
-      paidBtn.textContent = '✅ I\'ve Completed Payment';
-      document.getElementById('utrInput').value = '';
-      paymentForm.reset();
-    }, 6000);
+    const rzp = new Razorpay(options);
+    rzp.open();
   });
+
 
 
   // ---- Salary Calculator ----

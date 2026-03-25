@@ -9,13 +9,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
   <link rel="stylesheet" href="styles.css">
 
   <link rel="icon" type="image/png" href="logo.png">
 
   <!-- Vercel Web Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Razorpay: preconnect to warm up DNS / TCP before user clicks Pay -->
+  <link rel="preconnect" href="https://checkout.razorpay.com" crossorigin>
+  <link rel="preconnect" href="https://api.razorpay.com" crossorigin>
+  <link rel="dns-prefetch" href="//lumberjack.razorpay.com">
+  <link rel="dns-prefetch" href="//cdn.razorpay.com">
+  <!-- Load Razorpay SDK immediately (async) so it is ready before the user clicks -->
+  <script async src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
 
@@ -692,39 +700,37 @@
       <div class="pm-stepper">
         <div class="pm-step active" id="stepDot1"><span>1</span> Details</div>
         <div class="pm-step-line" id="stepLine1"></div>
-        <div class="pm-step" id="stepDot2"><span>2</span> Pay</div>
-        <div class="pm-step-line" id="stepLine2"></div>
-        <div class="pm-step" id="stepDot3"><span>3</span> Done</div>
+        <div class="pm-step" id="stepDot2"><span>2</span> Done</div>
       </div>
     </div>
-    
+
     <div class="premium-modal-body">
       <!-- Plan Summary Card -->
       <div class="pm-plan-card">
         <div class="pm-plan-icon">✨</div>
         <div class="pm-plan-info">
-          <div class="pm-plan-name" id="payPlanNameText">Diamond Buddy</div>
+          <div class="pm-plan-name" id="payPlanNameText">Gold Buddy</div>
           <div class="pm-plan-desc">One-time enrollment fee</div>
         </div>
-        <div class="pm-plan-price" id="payPlanPriceText">₹3,999</div>
+        <div class="pm-plan-price" id="payPlanPriceText">₹2,499</div>
       </div>
 
-      <!-- STEP 1: Details -->
+      <!-- STEP 1: Details Form -->
       <div class="pm-step-content active" id="enrollStep1">
         <form id="paymentForm" class="pm-form" novalidate>
           <input type="hidden" id="payPlanName">
           <input type="hidden" id="payAmount">
-          
+
           <div class="pm-input-group">
             <label>Full Name</label>
             <input type="text" id="payName" placeholder="Enter your full name" required>
           </div>
-          
+
           <div class="pm-input-group">
             <label>Email Address</label>
             <input type="email" id="payEmail" placeholder="name@example.com" required>
           </div>
-          
+
           <div class="pm-input-group">
             <label>WhatsApp Number</label>
             <input type="tel" id="payPhone" placeholder="10-digit mobile number" required>
@@ -732,46 +738,26 @@
 
           <div class="pm-trust-row">
             <span>🔒 256-bit Secure</span>
+            <span>🇮🇳 UPI / Cards / Wallets</span>
             <span>✓ No hidden fees</span>
           </div>
 
-          <button type="submit" class="pm-btn pm-btn-primary">
-            Continue to Payment <span style="font-size:1.2rem;line-height:1;">→</span>
+          <button type="submit" class="pm-btn pm-btn-primary" id="proceedPayBtn">
+            Pay Now — <span id="submitAmountLabel">₹2,499</span>
           </button>
         </form>
       </div>
 
-      <!-- STEP 2: QR & UTR -->
-      <div class="pm-step-content" id="enrollStep2" style="display: none;">
-        <div class="pm-qr-section">
-          <p class="pm-qr-subtitle">Scan & Pay via any UPI App</p>
-          <div class="pm-qr-box">
-            <canvas id="enrollQRCanvas"></canvas>
-            <div class="pm-qr-amount-badge">Pay <span id="qrAmountDisplay">₹2,499</span></div>
-          </div>
-          <p class="pm-upi-id">UPI ID: shivjaan0913-2@okaxis</p>
-        </div>
-
-        <div class="pm-utr-section">
-          <label>Enter 12-digit UTR / Transaction ID</label>
-          <input type="text" id="utrInput" placeholder="e.g. 312345678901" maxlength="25">
-          <small>Check your GPay / PhonePe / Paytm history</small>
-        </div>
-
-        <button id="paidBtn" class="pm-btn pm-btn-success" disabled>Verify Payment</button>
-        <button id="backToFormBtn" class="pm-btn pm-btn-ghost">← Back to details</button>
-      </div>
-
-      <!-- STEP 3: Success -->
-      <div class="pm-step-content pm-success-state" id="enrollStep3" style="display: none;">
+      <!-- STEP 2: Success -->
+      <div class="pm-step-content pm-success-state" id="enrollStep3" style="display:none;">
         <div class="pm-success-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
         </div>
-        <h3 style="font-size:1.5rem;color:#0f172a;margin-bottom:8px;font-weight:700;">Payment Confirmed</h3>
+        <h3 style="font-size:1.5rem;color:#0f172a;margin-bottom:8px;font-weight:700;">Payment Confirmed! 🎉</h3>
         <p style="color:#64748b;font-size:0.95rem;line-height:1.6;margin-bottom:24px;">Your enrollment is complete. Our team will reach out <strong style="color:#0f172a;">within 30 minutes</strong> to assign your buddy.</p>
         <div class="pm-success-card">
-          <div class="pm-sc-item"><span class="check">✓</span> Payment Verified</div>
-          <div class="pm-sc-item"><span class="check">✓</span> Profile Created</div>
+          <div class="pm-sc-item"><span class="check">✓</span> Payment Verified by Razorpay</div>
+          <div class="pm-sc-item"><span class="check">✓</span> Enrollment Recorded</div>
           <div class="pm-sc-item"><span class="check">✓</span> Priority Support Enabled</div>
         </div>
       </div>
@@ -780,7 +766,8 @@
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
+
+
