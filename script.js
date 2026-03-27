@@ -321,6 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description: plan + ' Enrollment Package',
       image:       'logo.png',
       prefill: { name, email, contact: phone },
+      notes: { name: name, package: plan, type: 'enrollment' },
       theme: { color: '#0d9488' },
       modal: {
         ondismiss: () => {

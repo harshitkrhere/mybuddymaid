@@ -21,26 +21,77 @@ function doPost(e) {
     const ss   = SpreadsheetApp.openById(SPREADSHEET_ID);
     const data = JSON.parse(e.postData.contents);
 
-    if (data.type === 'enrollment') {
-      // ── Package Enrollment → "Enrollments" tab ──────────────────
-      const sheet = ss.getSheetByName('Enrollments');
-      sheet.appendRow([
-        data.timestamp || new Date().toLocaleString('en-IN'),
-        data.name      || '',
-        data.email     || '',
-        "'" + (data.phone || ''),   // ' prefix → plain text
-        data.package   || '',
-        data.amount    || '',
-        data.utr       || '',       // Razorpay Payment ID
-      ]);
-
-      // ── Send automated confirmation email ──
-      if (data.email) {
-        sendEnrollmentEmail(data);
+    // ── 1. Razorpay Backend Webhook (Bulletproof Fallback) ──
+    if (data.event === 'payment.captured') {
+      const payment   = data.payload.payment.entity;
+      const amount    = payment.amount / 100; // paise to INR
+      const rzpEmail  = payment.email || '';
+      const rzpPhone  = payment.contact || '';
+      const utr       = payment.id;
+      
+      // Determine plan from amount or Razorpay 'notes'
+      let planName = payment.notes?.package || 'Unknown Buddy';
+      if (planName === 'Unknown Buddy') {
+        if (amount === 1499) planName = 'Silver Buddy';
+        else if (amount === 2499) planName = 'Gold Buddy';
+        else if (amount === 3999) planName = 'Diamond Buddy';
       }
 
-    } else {
-      // ── General Booking → "Bookings" tab ────────────────────────
+      const sheet = ss.getSheetByName('Enrollments');
+      // Deduplicate: check if this payment ID is already saved by frontend
+      const dataRange = sheet.getDataRange().getValues();
+      const existing = dataRange.some(row => row[6] === utr); // Column G is UTR Payment ID
+      
+      if (!existing) {
+        sheet.appendRow([
+          new Date().toLocaleString('en-IN'), // Timestamp
+          payment.notes?.name || 'Customer',  // Name
+          rzpEmail,                           // Email
+          "'" + rzpPhone,                     // Phone
+          planName,                           // Package
+          amount,                             // Amount
+          utr                                 // Payment ID
+        ]);
+        
+        // Auto-send email
+        sendEnrollmentEmail({
+          name: payment.notes?.name || 'Customer',
+          email: rzpEmail,
+          phone: rzpPhone,
+          package: planName,
+          amount: amount,
+          utr: utr
+        });
+      }
+
+      return ContentService.createTextOutput(JSON.stringify({ status: 'ok' })).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    // ── 2. Standard Frontend Webhook ──
+    if (data.type === 'enrollment') {
+      const sheet = ss.getSheetByName('Enrollments');
+      // Deduplicate: Frontend might fire slightly before/after Razorpay webhook
+      const utr = data.utr || '';
+      const dataRange = sheet.getDataRange().getValues();
+      const existing = utr ? dataRange.some(row => row[6] === utr) : false;
+
+      if (!existing) {
+        sheet.appendRow([
+          data.timestamp || new Date().toLocaleString('en-IN'),
+          data.name      || '',
+          data.email     || '',
+          "'" + (data.phone || ''),   // ' prefix → plain text
+          data.package   || '',
+          data.amount    || '',
+          utr                         // Razorpay Payment ID
+        ]);
+
+        if (data.email) {
+          sendEnrollmentEmail(data);
+        }
+      }
+    } else if (data.type !== 'enrollment' && !data.event) {
+      // ── General Booking → "Bookings" tab ──
       const sheet = ss.getSheetByName('Bookings');
       sheet.appendRow([
         data.timestamp || new Date().toLocaleString('en-IN'),
@@ -305,9 +356,28 @@ function sendEnrollmentEmail(data) {
 </body>
 </html>`;
 
-  // Convert HTML to PDF using Google Apps Script's built-in Blob conversion
-  const blob = Utilities.newBlob(invoiceHtml, MimeType.HTML, 'invoice.html').getAs(MimeType.PDF);
-  const pdfBase64 = Utilities.base64Encode(blob.getBytes());
+  // Convert HTML invoice to PDF via a temp Google Doc
+  let pdfBase64 = '';
+  let tempFileId = null;
+  try {
+    const tempBlob = Utilities.newBlob(invoiceHtml, 'text/html', 'invoice.html');
+    const tempFile = Drive.Files.create(
+      { name: 'TempInvoice', mimeType: 'application/vnd.google-apps.document' },
+      tempBlob,
+      { convert: true }
+    );
+    tempFileId = tempFile.id;
+    const pdfBlob = DriveApp.getFileById(tempFileId).getAs('application/pdf');
+    pdfBase64 = Utilities.base64Encode(pdfBlob.getBytes());
+  } catch (pdfErr) {
+    // PDF failed — still send email without attachment
+    Logger.log('PDF generation failed: ' + pdfErr.message);
+  } finally {
+    // Clean up temp file
+    if (tempFileId) {
+      try { DriveApp.getFileById(tempFileId).setTrashed(true); } catch(_) {}
+    }
+  }
 
   const subject = `${planEmoji} Your ${planTag} Enrollment is Confirmed — MyBuddyMaid`;
 
@@ -318,21 +388,36 @@ function sendEnrollmentEmail(data) {
     subject:  subject,
     html:     htmlBody,
     reply_to: FROM_EMAIL,
-    attachments: [
-      {
-        filename: `MyBuddyMaid_Invoice_${planTag.replace(/\s+/g, '_')}.pdf`,
-        content: pdfBase64
-      }
-    ]
   };
 
-  UrlFetchApp.fetch('https://api.resend.com/emails', {
-    method:      'post',
-    contentType: 'application/json',
-    headers:     { 'Authorization': 'Bearer ' + RESEND_API_KEY },
-    payload:     JSON.stringify(payload),
-    muteHttpExceptions: true,
-  });
+  // Attach PDF only if generation succeeded
+  if (pdfBase64) {
+    payload.attachments = [
+      {
+        filename: 'MyBuddyMaid_Invoice_' + planTag.replace(/\s+/g, '_') + '.pdf',
+        content: pdfBase64
+      }
+    ];
+  }
+
+  try {
+    const resendResponse = UrlFetchApp.fetch('https://api.resend.com/emails', {
+      method:      'post',
+      contentType: 'application/json',
+      headers:     { 'Authorization': 'Bearer ' + RESEND_API_KEY },
+      payload:     JSON.stringify(payload),
+      muteHttpExceptions: true,
+    });
+    const responseCode = resendResponse.getResponseCode();
+    if (responseCode >= 400) {
+      Logger.log('Resend rejected email: ' + resendResponse.getContentText());
+      const ss   = SpreadsheetApp.openById(SPREADSHEET_ID);
+      const sheet = ss.getSheetByName('Bookings');
+      sheet.appendRow([new Date().toLocaleString('en-IN'), 'EMAIL ERROR', email, resendResponse.getContentText(), '', '', '']);
+    }
+  } catch (emailErr) {
+    Logger.log('Resend email failed: ' + emailErr.message);
+  }
 }
 
 
