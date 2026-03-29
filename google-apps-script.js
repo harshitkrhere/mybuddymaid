@@ -440,3 +440,5 @@ function setupSheets() {
 
   Logger.log('✅ Both sheet tabs are ready!');
 }
+.  
+ 
