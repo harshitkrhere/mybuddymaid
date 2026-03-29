@@ -114,8 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const bookingModal = document.getElementById('bookingModal');
   const tncModal = document.getElementById('tncModal');
 
+  const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyHzevpz4xDPbBkS8vKTZuuiHZFQkx2H4nEzKLiK7HDTX7a0J-eI3l5X7cc9Yq9id3Y/exec';
+
   // Open booking modal
-  document.querySelectorAll('[data-open-booking], [data-open-payment]').forEach(btn => {
+  document.querySelectorAll('[data-open-booking]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       
@@ -138,12 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
          serviceSelectGroup.style.display = 'none'; // Hide the select visual
       } else if (serviceSelectGroup) {
          serviceSelectGroup.style.display = 'block';
-      }
-
-      // If clicked from pricing, auto-select package info (Optional enhancement)
-      const packageType = btn.getAttribute('data-open-payment');
-      if (packageType) {
-        // Find select box and set it roughly, or just know user came from pricing
       }
 
       bookingModal.classList.add('active');
@@ -197,15 +193,203 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Click outside modal to close
-  document.querySelectorAll('.modal-overlay').forEach(modal => {
+  document.querySelectorAll('.modal-overlay, .premium-modal-overlay').forEach(modal => {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.classList.remove('active');
-        if (!document.querySelectorAll('.modal-overlay.active').length) {
+        if (!document.querySelectorAll('.modal-overlay.active, .premium-modal-overlay.active').length) {
           document.body.style.overflow = '';
         }
       }
     });
   });
+
+  // =====================================
+  // 7. GOOGLE SHEETS FORM SUBMISSION
+  // =====================================
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    // Replace the mock inline onsubmit attribute behavior
+    bookingForm.onsubmit = null; 
+    bookingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = bookingForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerText;
+      submitBtn.innerText = 'Submitting...';
+      submitBtn.disabled = true;
+
+      const inputs = bookingForm.querySelectorAll('input, select');
+      const data = { timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) };
+      
+      // Basic mapping from the new form structure based on order of inputs
+      try {
+        data.name = inputs[0].value.trim();
+        data.phone = inputs[1].value.trim();
+        data.email = inputs[2].value.trim();
+        data.city = inputs[3].value;
+        data.service = inputs[4].value;
+        const notesField = document.getElementById('bookingNotes');
+        data.notes = notesField && notesField.value.trim() ? notesField.value.trim() : '-';
+      } catch (e) {
+        data.notes = 'Error parsing notes';
+      }
+
+      try {
+        await fetch(SHEETS_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+      } catch (e) { console.error(e); }
+
+      document.getElementById('bookingFormState').style.display='none'; 
+      document.getElementById('bookingSuccessState').style.display='block';
+      submitBtn.innerText = originalText;
+      submitBtn.disabled = false;
+    });
+  }
+
+  // =====================================
+  // 8. RAZORPAY SECURE ENROLLMENT
+  // =====================================
+  const RZP_KEY = 'rzp_live_SVW7I4Fu5WQpAt';
+  const paymentModal = document.getElementById('paymentModalOverlay');
+  const payPlanNameText = document.getElementById('payPlanNameText');
+  const payPlanPriceText = document.getElementById('payPlanPriceText');
+  const submitAmountLabel = document.getElementById('submitAmountLabel');
+  
+  document.querySelectorAll('[data-open-payment]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      if (!paymentModal) return;
+
+      const plan = btn.getAttribute('data-open-payment'); // 'Silver Package'
+      const priceText = btn.closest('.pricing-card').querySelector('.pricing-price').innerText.split('₹')[1].split('/')[0].replace(',','');
+      const price = parseInt(priceText, 10);
+      
+      if (payPlanNameText) payPlanNameText.textContent = plan;
+      if (payPlanPriceText) payPlanPriceText.textContent = `₹${price.toLocaleString('en-IN')}`;
+      if (submitAmountLabel) submitAmountLabel.textContent = `₹${price.toLocaleString('en-IN')}`;
+      
+      document.getElementById('payPlanName').value = plan;
+      document.getElementById('payAmount').value = price;
+      
+      document.getElementById('enrollStep1').style.display = 'block';
+      document.getElementById('enrollStep3').style.display = 'none';
+
+      paymentModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  const paymentForm = document.getElementById('paymentForm');
+  const tncCheckbox = document.getElementById('tncCheckbox');
+  const proceedPayBtn = document.getElementById('proceedPayBtn');
+  
+  if (tncCheckbox && proceedPayBtn) {
+    tncCheckbox.addEventListener('change', () => {
+      proceedPayBtn.disabled = !tncCheckbox.checked;
+    });
+  }
+
+  if (paymentForm) {
+    paymentForm.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      const name = document.getElementById('payName').value.trim();
+      const email = document.getElementById('payEmail').value.trim();
+      const phone = document.getElementById('payPhone').value.trim();
+      const plan = document.getElementById('payPlanName').value;
+      const amount = parseInt(document.getElementById('payAmount').value, 10);
+
+      // --- Custom Validation ---
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[6-9]\d{9}$/;
+
+      if (name.length < 2) {
+        alert("Please enter your full name.");
+        return;
+      }
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+      if (!phoneRegex.test(phone)) {
+        alert("Please enter a valid 10-digit mobile number.");
+        return;
+      }
+      
+      const originalBtnText = proceedPayBtn.innerHTML;
+      proceedPayBtn.innerHTML = 'Connecting to Secure Server...';
+      proceedPayBtn.disabled = true;
+
+      const options = {
+        key: RZP_KEY,
+        amount: amount * 100, // Razorpay expects paise
+        currency: 'INR',
+        name: 'MyBuddyMaid',
+        description: plan + ' Enrollment',
+        image: 'logo.png',
+        prefill: { name, email, contact: phone },
+        notes: { name: name, package: plan, type: 'enrollment' },
+        theme: { color: '#123524' }, // Updated to match site's primary green
+        handler: async function(response) {
+          const data = {
+            type: 'enrollment',
+            timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+            name, email, phone,
+            package: plan, amount,
+            utr: response.razorpay_payment_id,
+          };
+          try {
+            await fetch(SHEETS_URL, {
+              method: 'POST', mode: 'no-cors',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+            });
+          } catch(e) {}
+          
+          document.getElementById('enrollStep1').style.display = 'none';
+          document.getElementById('enrollStep3').style.display = 'block';
+          
+          setTimeout(() => {
+            paymentModal.classList.remove('active');
+            document.body.style.overflow = '';
+            paymentForm.reset();
+            tncCheckbox.checked = false;
+            proceedPayBtn.disabled = true;
+          }, 6000);
+        }
+      };
+      
+      const rzp = new Razorpay(options);
+      rzp.on('payment.failed', function (response){
+         proceedPayBtn.innerHTML = originalBtnText;
+         proceedPayBtn.disabled = false;
+      });
+      rzp.open();
+      
+      // Reset button if modal is closed without payment
+      paymentModal.addEventListener('click', (ev) => {
+         // rough catch
+         setTimeout(() => {
+            if (document.body.style.overflow === '' && !paymentModal.classList.contains('active')) {
+               proceedPayBtn.innerHTML = originalBtnText;
+               proceedPayBtn.disabled = false;
+            }
+         }, 500);
+      });
+    });
+  }
+  
+  const paymentClose = document.getElementById('paymentClose');
+  if (paymentClose && paymentModal) {
+    paymentClose.addEventListener('click', () => {
+      paymentModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
 
 });
