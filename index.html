@@ -8,7 +8,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
   
   <link rel="stylesheet" href="styles.css">
@@ -23,9 +23,7 @@
 </head>
 <body>
 
-  <!-- ==========================================
-       HEADER / NAVBAR
-       ========================================== -->
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#" class="nav-logo" aria-label="MyBuddyMaid Home">
@@ -33,7 +31,7 @@
       </a>
       
       <nav class="nav-links">
-        <a href="#why">Why Us</a>
+        <a href="#why">About</a>
         <a href="#services">Services</a>
         <a href="#how">How It Works</a>
         <a href="#pricing">Pricing</a>
@@ -68,7 +66,7 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#why">Why Us</a>
+    <a href="#why">About</a>
     <a href="#services">Services</a>
     <a href="#how">How It Works</a>
     <a href="#pricing">Pricing</a>
@@ -76,66 +74,60 @@
     <a href="#faq">FAQ</a>
   </div>
 
-  <!-- ==========================================
-       HERO SECTION
-       ========================================== -->
+  <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero" id="hero">
     <div class="container hero-container">
-      <div class="hero-text reveal">
-        <div class="badge"><i class="ph-bold ph-shield-check"></i> India's #1 Trusted Home Service</div>
+      <div class="hero-content reveal">
+        <div class="badge badge-dark"><i class="ph-bold ph-shield-check"></i> India's #1 Trusted Home Service</div>
         <h1>
           Professional Care,<br>
-          <span>Absolute Peace of Mind.</span>
+          <span class="accent">Absolute Peace of Mind.</span>
         </h1>
         <p class="hero-subtitle">
-          Experience the new standard of home care. We provide trained, police-verified, and reliable professionals for your daily household needs—from expert cooking to compassionate elderly care.
+          Experience the new standard of home care. We provide trained, police-verified, and reliable professionals for your daily household needs — from expert cooking to compassionate elderly care.
         </p>
         
         <div class="hero-ctas">
           <button class="btn btn-primary" data-open-booking>
             Find Your Buddy <i class="ph-bold ph-arrow-right"></i>
           </button>
-          <a href="#pricing" class="btn btn-outline">View Packages</a>
+          <a href="#pricing" class="btn btn-outline-light">View Packages</a>
         </div>
         
         <div class="hero-trust">
-          <div><i class="ph-fill ph-check-circle"></i> Police Verified</div>
-          <div><i class="ph-fill ph-check-circle"></i> 1-Year Guarantee</div>
-          <div><i class="ph-fill ph-star"></i> 4.9/5 Rating</div>
+          <div class="hero-trust-item"><i class="ph-fill ph-check-circle"></i> Police Verified</div>
+          <div class="hero-trust-item"><i class="ph-fill ph-check-circle"></i> 1-Year Guarantee</div>
+          <div class="hero-trust-item"><i class="ph-fill ph-star"></i> 4.9/5 Rating</div>
         </div>
       </div>
       
-      <div class="hero-visual reveal" style="transition-delay: 0.2s;">
+      <div class="hero-visual reveal" style="transition-delay: 0.15s;">
         <img src="hero1.jpg" alt="Professional home care provider">
-        <div class="hero-badge">
-          <div style="background: var(--c-primary-light); color: var(--c-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-            <i class="ph-bold ph-users" style="font-size: 1.25rem;"></i>
-          </div>
+        <div class="hero-float-card">
+          <div class="hero-float-icon"><i class="ph-bold ph-users"></i></div>
           <div>
-            <div style="font-family: var(--f-heading); font-weight: 700; font-size: 1.125rem; color: var(--c-text-main);">12,000+</div>
-            <div style="font-size: 0.75rem; color: var(--c-text-muted); font-weight: 500;">Happy Families</div>
+            <div class="hero-float-number">12,000+</div>
+            <div class="hero-float-label">Happy Families</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       TRUST BAR
-       ========================================== -->
-  <section class="trust-bar">
-    <div class="container trust-bar-grid">
-      <div class="trust-item reveal">
+  <!-- ═══════════════ STATS BAR ═══════════════ -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat-item reveal">
         <i class="ph-fill ph-shield-check"></i>
         <h4>100% Police Verified</h4>
         <p>Rigorous background checks for every professional.</p>
       </div>
-      <div class="trust-item reveal" style="transition-delay: 0.1s;">
+      <div class="stat-item reveal" style="transition-delay: 0.1s;">
         <i class="ph-fill ph-medal"></i>
         <h4>1-Year Replacement</h4>
         <p>Free replacements if you're not completely satisfied.</p>
       </div>
-      <div class="trust-item reveal" style="transition-delay: 0.2s;">
+      <div class="stat-item reveal" style="transition-delay: 0.2s;">
         <i class="ph-fill ph-heart"></i>
         <h4>Trained & Empathetic</h4>
         <p>Vetted for both skills and behavioral excellence.</p>
@@ -143,34 +135,32 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       WHY US
-       ========================================== -->
+  <!-- ═══════════════ ABOUT ═══════════════ -->
   <section class="section" id="why">
-    <div class="container why-container">
-      <div class="why-image-wrapper reveal">
+    <div class="container about-grid">
+      <div class="about-image reveal">
         <img src="about-us.png" alt="Caring companion assisting elderly person">
       </div>
       
-      <div class="why-content reveal" style="transition-delay: 0.2s;">
+      <div class="about-content reveal" style="transition-delay: 0.15s;">
         <div class="badge">About MyBuddyMaid</div>
         <h2>Redefining Household Support in India</h2>
         <p>Since 2021, we have been committed to solving the biggest challenge urban families face: finding reliable, trustworthy, and professional household help.</p>
-        <p>We don't just provide "maids"—we provide trained <strong>Buddies</strong> who integrate seamlessly into your life, ensuring your home runs smoothly and your loved ones are cared for.</p>
+        <p>We don't just provide "maids" — we provide trained <strong>Buddies</strong> who integrate seamlessly into your life, ensuring your home runs smoothly and your loved ones are cared for.</p>
         
-        <div class="why-list">
-          <div class="why-list-item">
-            <div class="why-icon"><i class="ph-bold ph-magnifying-glass"></i></div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="ph-bold ph-magnifying-glass"></i></div>
             <div>
               <h4>Rigorous Vetting Process</h4>
-              <p style="margin: 0; font-size: 0.9375rem;">Only 1 in 10 applicants pass our stringent background, health, and skill checks.</p>
+              <p>Only 1 in 10 applicants pass our stringent background, health, and skill checks.</p>
             </div>
           </div>
-          <div class="why-list-item">
-            <div class="why-icon"><i class="ph-bold ph-headset"></i></div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="ph-bold ph-headset"></i></div>
             <div>
               <h4>Dedicated Account Manager</h4>
-              <p style="margin: 0; font-size: 0.9375rem;">Skip the agencies. Get a direct point of contact for any assistance.</p>
+              <p>Skip the agencies. Get a direct point of contact for any assistance.</p>
             </div>
           </div>
         </div>
@@ -178,96 +168,86 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       SERVICES
-       ========================================== -->
+  <!-- ═══════════════ SERVICES ═══════════════ -->
   <section class="section section-alt" id="services">
     <div class="container">
       <div class="section-header reveal">
         <div class="badge">Our Services</div>
         <h2>Tailored Support For Every Home</h2>
-        <p>From part-time assistance to 24/7 live-in care, we matching the perfect professional to your unique household requirements.</p>
+        <p>From part-time assistance to 24/7 live-in care, we match the perfect professional to your unique household requirements.</p>
       </div>
       
       <div class="services-grid">
-        <!-- Service 1 -->
-        <div class="service-card reveal" style="display: flex; flex-direction: column;">
-          <figure class="service-image-wrapper">
-            <img src="part%20time%20buddy.png" alt="Part-Time Buddy" loading="lazy">
-          </figure>
-          <div class="service-icon"><i class="ph-fill ph-broom"></i></div>
-          <h3>Part-Time Buddy</h3>
-          <p style="flex-grow: 1;">Flexible daily help for 4-12 hours. Ideal for working professionals needing daily cleaning, laundry, and kitchen management.</p>
-          <div class="service-price" style="margin-bottom: 1.5rem;">From ₹5,000 / month</div>
-          <button class="btn btn-outline" data-open-booking="Cleaning & General Help" style="width: 100%; margin-top: auto;">Book Now</button>
+        <div class="service-card reveal">
+          <div class="service-img-wrap"><img class="service-img" src="part%20time%20buddy.png" alt="Part-Time Buddy" loading="lazy"></div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i class="ph-fill ph-broom"></i></div>
+            <h3>Part-Time Buddy</h3>
+            <p>Flexible daily help for 4-12 hours. Ideal for working professionals needing daily cleaning, laundry, and kitchen management.</p>
+            <div class="service-price-tag">From ₹5,000 / month</div>
+            <button class="btn btn-outline" data-open-booking="Cleaning & General Help">Book Now</button>
+          </div>
         </div>
         
-        <!-- Service 2 -->
-        <div class="service-card reveal" style="transition-delay: 0.1s; display: flex; flex-direction: column;">
-          <figure class="service-image-wrapper">
-            <img src="a%20full%20time%20live%20in.png" alt="Full-Time Live-In" loading="lazy">
-          </figure>
-          <div class="service-icon"><i class="ph-fill ph-house"></i></div>
-          <h3>Full-Time Live-In</h3>
-          <p style="flex-grow: 1;">Complete 24x7 household management. A dedicated professional who stays with your family for ultimate convenience.</p>
-          <div class="service-price" style="margin-bottom: 1.5rem;">From ₹12,000 / month</div>
-          <button class="btn btn-outline" data-open-booking="Comprehensive 24/7" style="width: 100%; margin-top: auto;">Book Now</button>
+        <div class="service-card reveal" style="transition-delay: 0.1s;">
+          <div class="service-img-wrap"><img class="service-img" src="a%20full%20time%20live%20in.png" alt="Full-Time Live-In" loading="lazy"></div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i class="ph-fill ph-house"></i></div>
+            <h3>Full-Time Live-In</h3>
+            <p>Complete 24x7 household management. A dedicated professional who stays with your family for ultimate convenience.</p>
+            <div class="service-price-tag">From ₹12,000 / month</div>
+            <button class="btn btn-outline" data-open-booking="Comprehensive 24/7">Book Now</button>
+          </div>
         </div>
         
-        <!-- Service 3 -->
-        <div class="service-card reveal" style="transition-delay: 0.2s; display: flex; flex-direction: column;">
-          <figure class="service-image-wrapper">
-            <img src="eldercare.png" alt="Elderly Care" loading="lazy">
-          </figure>
-          <div class="service-icon"><i class="ph-fill ph-heartbeat"></i></div>
-          <h3>Elderly Care</h3>
-          <p style="flex-grow: 1;">Compassionate, patient companions trained for senior needs—mobility support, medication reminders, and loving care.</p>
-          <div class="service-price" style="margin-bottom: 1.5rem;">From ₹14,000 / month</div>
-          <button class="btn btn-outline" data-open-booking="Elderly Care" style="width: 100%; margin-top: auto;">Book Now</button>
+        <div class="service-card reveal" style="transition-delay: 0.2s;">
+          <div class="service-img-wrap"><img class="service-img" src="eldercare.png" alt="Elderly Care" loading="lazy"></div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i class="ph-fill ph-heartbeat"></i></div>
+            <h3>Elderly Care</h3>
+            <p>Compassionate, patient companions trained for senior needs — mobility support, medication reminders, and loving care.</p>
+            <div class="service-price-tag">From ₹14,000 / month</div>
+            <button class="btn btn-outline" data-open-booking="Elderly Care">Book Now</button>
+          </div>
         </div>
         
-        <!-- Service 4 -->
-        <div class="service-card reveal" style="display: flex; flex-direction: column;">
-          <figure class="service-image-wrapper">
-            <img src="cook.png" alt="Specialized Cook" loading="lazy">
-          </figure>
-          <div class="service-icon"><i class="ph-fill ph-cooking-pot"></i></div>
-          <h3>Specialized Cook</h3>
-          <p style="flex-grow: 1;">Expert chefs for North Indian, South Indian, or Continental cuisine. Hygienic, healthy, and tailored to your dietary needs.</p>
-          <div class="service-price" style="margin-bottom: 1.5rem;">From ₹8,000 / month</div>
-          <button class="btn btn-outline" data-open-booking="Specialized Cook" style="width: 100%; margin-top: auto;">Book Now</button>
+        <div class="service-card reveal">
+          <div class="service-img-wrap"><img class="service-img" src="cook.png" alt="Specialized Cook" loading="lazy"></div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i class="ph-fill ph-cooking-pot"></i></div>
+            <h3>Specialized Cook</h3>
+            <p>Expert chefs for North Indian, South Indian, or Continental cuisine. Hygienic, healthy, and tailored to your dietary needs.</p>
+            <div class="service-price-tag">From ₹8,000 / month</div>
+            <button class="btn btn-outline" data-open-booking="Specialized Cook">Book Now</button>
+          </div>
         </div>
         
-        <!-- Service 5 -->
-        <div class="service-card reveal" style="transition-delay: 0.1s; display: flex; flex-direction: column;">
-          <figure class="service-image-wrapper">
-            <img src="babbysitting.png" alt="Babysitting & Nanny" loading="lazy">
-          </figure>
-          <div class="service-icon"><i class="ph-fill ph-baby"></i></div>
-          <h3>Babysitting & Nanny</h3>
-          <p style="flex-grow: 1;">Verified, loving caretakers who engage your children safely. Focus on nutrition, hygiene, and developmental activities.</p>
-          <div class="service-price" style="margin-bottom: 1.5rem;">From ₹10,000 / month</div>
-          <button class="btn btn-outline" data-open-booking="Nanny / Babysitter" style="width: 100%; margin-top: auto;">Book Now</button>
+        <div class="service-card reveal" style="transition-delay: 0.1s;">
+          <div class="service-img-wrap"><img class="service-img" src="babbysitting.png" alt="Babysitting & Nanny" loading="lazy"></div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i class="ph-fill ph-baby"></i></div>
+            <h3>Babysitting & Nanny</h3>
+            <p>Verified, loving caretakers who engage your children safely. Focus on nutrition, hygiene, and developmental activities.</p>
+            <div class="service-price-tag">From ₹10,000 / month</div>
+            <button class="btn btn-outline" data-open-booking="Nanny / Babysitter">Book Now</button>
+          </div>
         </div>
         
-        <!-- Service 6 -->
-        <div class="service-card reveal" style="transition-delay: 0.2s; display: flex; flex-direction: column;">
-          <figure class="service-image-wrapper">
-            <img src="postalcare.png" alt="Postnatal Care" loading="lazy">
-          </figure>
-          <div class="service-icon"><i class="ph-fill ph-first-aid"></i></div>
-          <h3>Postnatal Care</h3>
-          <p style="flex-grow: 1;">Premium care inspired by global standards. Specialized infant handling, mother wellness, and holistic postpartum recovery.</p>
-          <div class="service-price" style="margin-bottom: 1.5rem;">Premium Service</div>
-          <button class="btn btn-outline" data-open-booking="Postnatal Care" style="width: 100%; margin-top: auto;">Book Now</button>
+        <div class="service-card reveal" style="transition-delay: 0.2s;">
+          <div class="service-img-wrap"><img class="service-img" src="postalcare.png" alt="Postnatal Care" loading="lazy"></div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i class="ph-fill ph-first-aid"></i></div>
+            <h3>Postnatal Care</h3>
+            <p>Premium care inspired by global standards. Specialized infant handling, mother wellness, and holistic postpartum recovery.</p>
+            <div class="service-price-tag">Premium Service</div>
+            <button class="btn btn-outline" data-open-booking="Postnatal Care">Book Now</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       HOW IT WORKS (TIMELINE)
-       ========================================== -->
+  <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
   <section class="section" id="how">
     <div class="container">
       <div class="section-header reveal">
@@ -276,53 +256,51 @@
         <p>We've streamlined the hiring process so you can find reliable help efficiently and securely.</p>
       </div>
       
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-number">1</div>
-          <div class="timeline-content">
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-number">1</div>
+          <div class="step-content">
             <h3>Share Your Requirements</h3>
-            <p>Tell us exactly what you need—skills, language preference, budget, and timings. We listen attentively to understand your family's dynamic.</p>
+            <p>Tell us exactly what you need — skills, language preference, budget, and timings.</p>
           </div>
         </div>
         
-        <div class="timeline-item reveal">
-          <div class="timeline-number">2</div>
-          <div class="timeline-content">
+        <div class="step-card reveal" style="transition-delay: 0.1s;">
+          <div class="step-number">2</div>
+          <div class="step-content">
             <h3>Review Curated Profiles</h3>
-            <p>Within 24 hours, we match you with 2-5 pre-verified Buddy profiles. We do the heavy lifting of filtering so you only see the best fits.</p>
+            <p>Within 24 hours, we match you with 2-5 pre-verified Buddy profiles. Only the best fits.</p>
           </div>
         </div>
         
-        <div class="timeline-item reveal">
-          <div class="timeline-number">3</div>
-          <div class="timeline-content">
+        <div class="step-card reveal" style="transition-delay: 0.15s;">
+          <div class="step-number">3</div>
+          <div class="step-content">
             <h3>Interview & Select</h3>
-            <p>Conduct secure video or audio interviews with the shortlisted candidates. Ask questions, gauge compatibility, and make your choice with confidence.</p>
+            <p>Conduct secure video or audio interviews. Ask questions, gauge compatibility, and choose with confidence.</p>
           </div>
         </div>
         
-        <div class="timeline-item reveal">
-          <div class="timeline-number">4</div>
-          <div class="timeline-content">
+        <div class="step-card reveal" style="transition-delay: 0.2s;">
+          <div class="step-number">4</div>
+          <div class="step-content">
             <h3>Transparent Verification</h3>
-            <p>Once selected, we share the complete background check dossier including ID proofs, police verification status, and past employer references.</p>
+            <p>We share the complete background check dossier including ID proofs and police verification status.</p>
           </div>
         </div>
         
-        <div class="timeline-item reveal">
-          <div class="timeline-number">5</div>
-          <div class="timeline-content">
+        <div class="step-card reveal" style="transition-delay: 0.25s;">
+          <div class="step-number">5</div>
+          <div class="step-content">
             <h3>Deployment & Support</h3>
-            <p>Your Buddy arrives. More importantly, our relationship continues with dedicated support and a free replacement guarantee for up to a year.</p>
+            <p>Your Buddy arrives with dedicated support and a free replacement guarantee for up to a year.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       PRICING
-       ========================================== -->
+  <!-- ═══════════════ PRICING ═══════════════ -->
   <section class="section section-alt" id="pricing">
     <div class="container">
       <div class="section-header reveal">
@@ -334,11 +312,9 @@
       <div class="pricing-grid">
         <!-- Silver -->
         <div class="pricing-card reveal">
-          <div class="pricing-header">
-            <h3>Silver Package</h3>
-            <p class="text-muted">Standard ongoing requirements.</p>
-          </div>
-          <div class="pricing-price">₹1,499<span> / one-time</span></div>
+          <h3>Silver Package</h3>
+          <p class="text-muted">Standard ongoing requirements.</p>
+          <div class="pricing-amount">₹2,499<span> / one-time</span></div>
           <ul class="pricing-features">
             <li><i class="ph-bold ph-check"></i> 90 Days Replacement Guarantee</li>
             <li><i class="ph-bold ph-check"></i> Access to Standard Pool</li>
@@ -351,12 +327,10 @@
         
         <!-- Gold -->
         <div class="pricing-card popular reveal" style="transition-delay: 0.1s;">
-          <div class="popular-badge">Most Popular</div>
-          <div class="pricing-header">
-            <h3>Gold Package</h3>
-            <p class="text-muted">Comprehensive peace of mind.</p>
-          </div>
-          <div class="pricing-price">₹2,499<span> / one-time</span></div>
+          <div class="card-badge popular-badge">Most Popular</div>
+          <h3>Gold Package</h3>
+          <p class="text-muted">Comprehensive peace of mind.</p>
+          <div class="pricing-amount">₹3,999<span> / one-time</span></div>
           <ul class="pricing-features">
             <li><i class="ph-bold ph-check"></i> 180 Days Replacement Guarantee</li>
             <li><i class="ph-bold ph-check"></i> Access to Premium Pool</li>
@@ -369,11 +343,9 @@
         
         <!-- Diamond -->
         <div class="pricing-card reveal" style="transition-delay: 0.2s;">
-          <div class="pricing-header">
-            <h3>Diamond Package</h3>
-            <p class="text-muted">Premium elite service tier.</p>
-          </div>
-          <div class="pricing-price">₹3,999<span> / one-time</span></div>
+          <h3>Diamond Package</h3>
+          <p class="text-muted">Premium elite service tier.</p>
+          <div class="pricing-amount">₹5,999<span> / one-time</span></div>
           <ul class="pricing-features">
             <li><i class="ph-bold ph-check"></i> 365 Days Replacement Guarantee</li>
             <li><i class="ph-bold ph-check"></i> Elite Verified Pool</li>
@@ -383,14 +355,31 @@
           </ul>
           <button class="btn btn-outline" data-open-payment="Diamond Package">Go Diamond</button>
         </div>
+        
+        <!-- Platinum -->
+        <div class="pricing-card platinum reveal" style="transition-delay: 0.3s;">
+          <div class="card-badge platinum-badge">Best Value</div>
+          <h3>Platinum Package</h3>
+          <p class="text-muted">Ultimate coverage for families.</p>
+          <div class="pricing-amount">₹8,999<span> / one-time</span></div>
+          <ul class="pricing-features">
+            <li><i class="ph-bold ph-check"></i> 456 Days Replacement Guarantee</li>
+            <li><i class="ph-bold ph-check"></i> 15 Free Replacements</li>
+            <li><i class="ph-bold ph-check"></i> VIP Concierge Verified Pool</li>
+            <li><i class="ph-bold ph-check"></i> Full Police + Medical Check</li>
+            <li><i class="ph-bold ph-check"></i> 24×7 Priority Account Manager</li>
+            <li><i class="ph-bold ph-check"></i> Same-Day Emergency Deployment</li>
+          </ul>
+          <button class="btn btn-outline" data-open-payment="Platinum Package">Go Platinum</button>
+        </div>
       </div>
       
       <!-- Salary Estimator -->
       <div class="estimator-card reveal">
-        <h3 class="text-center" style="margin-bottom: 0.5rem;">Salary Estimator Tool</h3>
-        <p class="text-center" style="margin-bottom: 2rem;">Get an instant estimate of monthly salary expectations based on current market rates.</p>
+        <h3 style="text-align:center; margin-bottom: 0.375rem;">Salary Estimator Tool</h3>
+        <p style="text-align:center; margin-bottom: 1.75rem;">Get an instant estimate of monthly salary expectations based on current market rates.</p>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div class="estimator-grid">
           <div class="form-group">
             <label>Service Category</label>
             <select class="form-control" id="calcType">
@@ -411,16 +400,14 @@
         </div>
         
         <div class="estimator-result">
-          <div style="font-size: 0.875rem; color: var(--c-primary); font-weight: 600; text-transform: uppercase;">Estimated Market Salary</div>
+          <div class="label">Estimated Market Salary</div>
           <div class="amount" id="calcResult">₹8,000 - ₹12,000 / mo</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       TESTIMONIALS
-       ========================================== -->
+  <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
   <section class="section" id="reviews">
     <div class="container">
       <div class="section-header reveal">
@@ -439,7 +426,7 @@
         
         <div class="testimonial-card reveal" style="transition-delay: 0.1s;">
           <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-quote">"Living in another city, I needed someone trustworthy for my aging parents. The elderly care buddy they provided is exceptional—patient, trained, and deeply empathetic. The dedicated account manager is incredibly helpful."</p>
+          <p class="testimonial-quote">"Living in another city, I needed someone trustworthy for my aging parents. The elderly care buddy they provided is exceptional — patient, trained, and deeply empathetic. The dedicated account manager is incredibly helpful."</p>
           <div class="testimonial-author">Arjun Mehta</div>
           <div class="testimonial-location">Mumbai, MH</div>
         </div>
@@ -461,9 +448,7 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       FAQ
-       ========================================== -->
+  <!-- ═══════════════ FAQ ═══════════════ -->
   <section class="section section-alt" id="faq">
     <div class="container">
       <div class="section-header reveal">
@@ -472,21 +457,19 @@
         <p>Clear, direct answers to common queries about our process, pricing, and policies.</p>
       </div>
       
-      <div class="faq-container">
-        <!-- FAQ 1 -->
-        <div class="faq-item reveal active">
+      <div class="faq-list">
+        <div class="faq-item active reveal">
           <button class="faq-question">
             How robust is the background verification process?
             <i class="ph-bold ph-caret-down"></i>
           </button>
           <div class="faq-answer" style="max-height: 500px;">
             <div class="faq-answer-inner">
-              Safety is our paramount concern. Every Buddy undergoes Aadhaar validation, previous employer reference checks, and a behavioral assessment. For Gold and Diamond packages, comprehensive Police Verification is conducted and the complete dossier is shared securely with you prior to placement.
+              Safety is our paramount concern. Every Buddy undergoes Aadhaar validation, previous employer reference checks, and a behavioral assessment. For Gold, Diamond, and Platinum packages, comprehensive Police Verification is conducted and the complete dossier is shared securely with you prior to placement.
             </div>
           </div>
         </div>
         
-        <!-- FAQ 2 -->
         <div class="faq-item reveal">
           <button class="faq-question">
             How does the Replacement Guarantee work?
@@ -494,12 +477,11 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              If your assigned professional leaves or if you're unsatisfied with their performance, we provide free replacements based on your package (90 days for Silver, 180 for Gold, 365 for Diamond). We aim to provide the new profile within 48 hours to minimize disruption.
+              If your assigned professional leaves or if you're unsatisfied with their performance, we provide free replacements based on your package (90 days for Silver, 180 for Gold, 365 for Diamond, and 456 days with up to 15 replacements for Platinum). We aim to provide the new profile within 48 hours to minimize disruption.
             </div>
           </div>
         </div>
         
-        <!-- FAQ 3 -->
         <div class="faq-item reveal">
           <button class="faq-question">
             What are the payment terms between me and the Buddy?
@@ -512,7 +494,6 @@
           </div>
         </div>
         
-        <!-- FAQ 4 -->
         <div class="faq-item reveal">
           <button class="faq-question">
             Is the platform fee refundable?
@@ -528,17 +509,13 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       FOOTER
-       ========================================== -->
+  <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <a href="#" class="footer-logo">
-            <img src="logo.png" alt="MyBuddyMaid Logo">
-          </a>
-          <p style="color: #94A3B8; margin-bottom: 2rem;">India's premier network of trusted, verified household professionals. Redefining home care standards since 2021.</p>
+        <div class="footer-brand">
+          <a href="#" class="footer-logo"><img src="logo.png" alt="MyBuddyMaid Logo"></a>
+          <p>India's premier network of trusted, verified household professionals. Redefining home care standards since 2021.</p>
         </div>
         
         <div>
@@ -565,18 +542,18 @@
         
         <div>
           <h4>Contact Support</h4>
-          <div class="footer-contact">
+          <div class="footer-contact-item">
             <i class="ph-bold ph-envelope-simple"></i>
             <div>
-              <span style="display: block; font-weight: 600; color: #FFFFFF; margin-bottom: 0.25rem;">Email Us</span>
-              <a href="mailto:info@mybuddymaid.in" style="color: #94A3B8;">info@mybuddymaid.in</a>
+              <span>Email Us</span>
+              <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a>
             </div>
           </div>
-          <div class="footer-contact">
+          <div class="footer-contact-item">
             <i class="ph-bold ph-map-pin"></i>
             <div>
-              <span style="display: block; font-weight: 600; color: #FFFFFF; margin-bottom: 0.25rem;">Headquarters</span>
-              175, 5th Floor, Main Road,<br>Chandra Layout, Bengaluru, KA 560040
+              <span>Headquarters</span>
+              <p>175, 5th Floor, Main Road,<br>Chandra Layout, Bengaluru, KA 560040</p>
             </div>
           </div>
         </div>
@@ -589,13 +566,9 @@
     </div>
   </footer>
 
-  <!-- ==========================================
-       MODALS
-       ========================================== -->
-  
-  <!-- Booking / Lead Modal -->
+  <!-- ═══════════════ BOOKING MODAL ═══════════════ -->
   <div class="modal-overlay" id="bookingModal">
-    <div class="modal-content">
+    <div class="modal-box">
       <button class="modal-close" aria-label="Close" data-close-modal><i class="ph-bold ph-x"></i></button>
       
       <div id="bookingFormState">
@@ -604,90 +577,91 @@
           <p class="text-muted">Provide your requirements and our team will connect with curated profiles within 24 hours.</p>
         </div>
         
-        <form id="bookingForm" onsubmit="event.preventDefault(); document.getElementById('bookingFormState').style.display='none'; document.getElementById('bookingSuccessState').style.display='block';">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" class="form-control" placeholder="e.g., Jane Doe" required>
-          </div>
-          <div class="form-group">
-            <label>Mobile Number</label>
-            <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" class="form-control" placeholder="jane@example.com" required>
-          </div>
-          <div class="form-group">
-            <label>City Overview</label>
-            <select class="form-control" required>
-              <option value="">Select City</option>
-              <option>Delhi NCR</option>
-              <option>Mumbai</option>
-              <option>Bangalore</option>
-              <option>Hyderabad</option>
-              <option>Pune</option>
-              <option>Chennai</option>
-              <option>Kolkata</option>
-              <option>Ahmedabad</option>
-              <option>Jaipur</option>
-              <option>Surat</option>
-              <option>Lucknow</option>
-              <option>Chandigarh</option>
-              <option>Indore</option>
-              <option>Kochi</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group" id="serviceSelectGroup">
-            <label>Primary Requirement</label>
-            <select class="form-control" id="modalServiceSelect" required>
-              <option value="">Select Category</option>
-              <option value="Cleaning & General Help">Cleaning & General Help</option>
-              <option value="Specialized Cook">Specialized Cook</option>
-              <option value="Elderly Care">Elderly Care</option>
-              <option value="Nanny / Babysitter">Nanny / Babysitter</option>
-              <option value="Comprehensive 24/7">Comprehensive 24/7</option>
-              <option value="Postnatal Care">Postnatal Care</option>
-            </select>
-          </div>
-          
-          <div class="form-group" style="margin-top: 1rem;">
-            <label>Additional Notes (Optional)</label>
-            <textarea class="form-control" id="bookingNotes" rows="3" placeholder="e.g., Hindi-speaking, vegetarian cook, experience with infants..."></textarea>
-          </div>
-          
-          <div style="margin: 1.5rem 0; display: flex; align-items: flex-start; gap: 0.75rem;">
-            <input type="checkbox" id="tncCheck" required style="margin-top: 4px;">
-            <label for="tncCheck" style="font-size: 0.875rem; color: var(--c-text-muted);">
-              I agree to the <a href="#" id="modalTncLink" style="color: var(--c-primary); text-decoration: underline;">Terms & Conditions</a> of MyBuddyMaid platform services.
-            </label>
-          </div>
-          
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
-        </form>
+        <div class="modal-body">
+          <form id="bookingForm" novalidate>
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" class="form-control" id="bookName" placeholder="e.g., Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label>Mobile Number</label>
+              <input type="tel" class="form-control" id="bookPhone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" class="form-control" id="bookEmail" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+              <label>City</label>
+              <select class="form-control" id="bookCity" required>
+                <option value="">Select City</option>
+                <option>Delhi NCR</option>
+                <option>Mumbai</option>
+                <option>Bangalore</option>
+                <option>Hyderabad</option>
+                <option>Pune</option>
+                <option>Chennai</option>
+                <option>Kolkata</option>
+                <option>Ahmedabad</option>
+                <option>Jaipur</option>
+                <option>Surat</option>
+                <option>Lucknow</option>
+                <option>Chandigarh</option>
+                <option>Indore</option>
+                <option>Kochi</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group" id="serviceSelectGroup">
+              <label>Primary Requirement</label>
+              <select class="form-control" id="bookService" required>
+                <option value="">Select Category</option>
+                <option value="Cleaning & General Help">Cleaning & General Help</option>
+                <option value="Specialized Cook">Specialized Cook</option>
+                <option value="Elderly Care">Elderly Care</option>
+                <option value="Nanny / Babysitter">Nanny / Babysitter</option>
+                <option value="Comprehensive 24/7">Comprehensive 24/7</option>
+                <option value="Postnatal Care">Postnatal Care</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Additional Notes (Optional)</label>
+              <textarea class="form-control" id="bookNotes" rows="3" placeholder="e.g., Hindi-speaking, vegetarian cook, experience with infants..."></textarea>
+            </div>
+            
+            <div class="tnc-check">
+              <input type="checkbox" id="bookTncCheck" required>
+              <label for="bookTncCheck">
+                I agree to the <a href="#" id="modalTncLink">Terms & Conditions</a> of MyBuddyMaid platform services.
+              </label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="bookSubmitBtn">Submit Request</button>
+          </form>
+        </div>
       </div>
       
-      <div id="bookingSuccessState" style="display: none; text-align: center; padding: 2rem 0;">
-        <div style="width: 64px; height: 64px; background: var(--c-primary-light); color: var(--c-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">
-          <i class="ph-bold ph-check"></i>
+      <div id="bookingSuccessState" style="display: none;">
+        <div class="modal-body">
+          <div class="modal-success">
+            <div class="modal-success-icon"><i class="ph-bold ph-check"></i></div>
+            <h3>Booking Confirmed!</h3>
+            <p class="text-muted">To finalize your booking, please select and purchase a package below.</p>
+            <button class="btn btn-primary" id="btnContinueToPricing" style="width: 100%; margin-top: 1rem;">View Packages</button>
+          </div>
         </div>
-        <h3 style="margin-bottom: 0.5rem;">Booking Confirmed!</h3>
-        <p class="text-muted">To finalize your booking, please select and purchase a package below.</p>
-        <button class="btn btn-primary" id="btnContinueToPricing" style="margin-top: 1.5rem; width: 100%;">View Transparent Packages</button>
       </div>
     </div>
   </div>
 
-  <!-- Terms & Conditions Modal -->
+  <!-- ═══════════════ T&C MODAL ═══════════════ -->
   <div class="modal-overlay" id="tncModal">
-    <div class="modal-content tnc-content">
+    <div class="modal-box wide tnc-content">
       <button class="modal-close" aria-label="Close" data-close-modal><i class="ph-bold ph-x"></i></button>
-      
       <div class="modal-header">
         <h3>Platform Terms & Conditions</h3>
         <p class="text-muted">Last updated: March 2026</p>
       </div>
-      
       <div class="tnc-body">
         <h3>1. Introduction</h3>
         <p>By accessing the MyBuddyMaid platform, you agree to these legal terms regarding the facilitation of domestic professional services.</p>
@@ -709,108 +683,107 @@
         <h3>4. Fee & Replacement Policy</h3>
         <ul>
           <li>The platform fee guarantees access to our verified pool and replacement timelines.</li>
-          <li>If unsuited, up to 3 replacements are provided within the scope of your selected package term (Silver: 90 days, Gold: 180 days, Diamond: 365 days).</li>
+          <li>If unsuited, up to 3 replacements are provided within the scope of your selected package term (Silver: 90 days, Gold: 180 days, Diamond: 365 days, Platinum: 456 days with up to 15 replacements).</li>
         </ul>
 
         <h3>5. Refund Policy</h3>
         <p>Refunds (minus processing fees) are only issued if the platform fails to provide 3 verified candidate profiles matching absolute stated criteria within 60 days of payment. No refunds are granted once a candidate is successfully hired or if the client becomes unresponsive.</p>
         
         <div style="margin-top: 2rem;">
-          <button class="btn btn-primary" data-close-modal>I Understand & Agree</button>
+          <button class="btn btn-primary" data-close-modal style="width:100%;">I Understand & Agree</button>
         </div>
       </div>
     </div>
   </div>
 
-<!-- ===== PREMIUM ENROLLMENT MODAL ===== -->
-
-<div class="premium-modal-overlay" id="paymentModalOverlay">
-  <div class="premium-modal-container">
-    <div class="premium-modal-header">
-      <div class="pm-header-top">
-        <span class="pm-brand">⭐ MyBuddyMaid <span class="pm-badge">SECURE</span></span>
-        <button class="pm-close" id="paymentClose">✕</button>
-      </div>
-      <div class="pm-stepper">
-        <div class="pm-step active" id="stepDot1"><span>1</span> Details</div>
-        <div class="pm-step-line" id="stepLine1"></div>
-        <div class="pm-step" id="stepDot2"><span>2</span> Done</div>
-      </div>
-    </div>
-
-    <div class="premium-modal-body">
-      <!-- Plan Summary Card -->
-      <div class="pm-plan-card">
-        <div class="pm-plan-icon">✨</div>
-        <div class="pm-plan-info">
-          <div class="pm-plan-name" id="payPlanNameText">Gold Buddy</div>
-          <div class="pm-plan-desc">One-time enrollment fee</div>
+  <!-- ═══════════════ PAYMENT MODAL ═══════════════ -->
+  <div class="pay-modal-overlay" id="paymentModal">
+    <div class="pay-modal">
+      <div class="pay-modal-head">
+        <div class="pay-head-top">
+          <span class="pay-brand">⭐ MyBuddyMaid <span class="pay-secure-tag">SECURE</span></span>
+          <button class="pay-close-btn" id="paymentClose">✕</button>
         </div>
-        <div class="pm-plan-price" id="payPlanPriceText">₹2,499</div>
+        <div class="pay-stepper">
+          <div class="pay-step active" id="payStep1"><span>1</span> Details</div>
+          <div class="pay-step-line"></div>
+          <div class="pay-step" id="payStep2"><span>2</span> Done</div>
+        </div>
       </div>
 
-      <!-- STEP 1: Details Form -->
-      <div class="pm-step-content active" id="enrollStep1">
-        <form id="paymentForm" class="pm-form" novalidate>
-          <input type="hidden" id="payPlanName">
-          <input type="hidden" id="payAmount">
+      <div class="pay-plan-card">
+        <div class="pay-plan-emoji" id="payPlanEmoji">✨</div>
+        <div>
+          <div class="pay-plan-name" id="payPlanName">Gold Package</div>
+          <div class="pay-plan-desc">One-time enrollment fee</div>
+        </div>
+        <div class="pay-plan-price" id="payPlanPrice">₹3,999</div>
+      </div>
 
-          <div class="pm-input-group">
+      <!-- Step 1: Form -->
+      <div id="payStep1Content">
+        <form id="paymentForm" class="pay-form" novalidate>
+          <input type="hidden" id="payHiddenPlan">
+          <input type="hidden" id="payHiddenAmount">
+
+          <div class="pay-input-group">
             <label>Full Name</label>
             <input type="text" id="payName" placeholder="Enter your full name" required>
+            <div class="pay-error-msg" id="payNameError">Please enter your full name.</div>
           </div>
 
-          <div class="pm-input-group">
+          <div class="pay-input-group">
             <label>Email Address</label>
             <input type="email" id="payEmail" placeholder="name@example.com" required>
+            <div class="pay-error-msg" id="payEmailError">Please enter a valid email address.</div>
           </div>
 
-          <div class="pm-input-group">
+          <div class="pay-input-group">
             <label>WhatsApp Number</label>
             <input type="tel" id="payPhone" placeholder="10-digit mobile number" required>
+            <div class="pay-error-msg" id="payPhoneError">Please enter a valid 10-digit mobile number.</div>
           </div>
 
-          <div class="pm-trust-row">
+          <div class="pay-trust-row">
             <span>🔒 256-bit Secure</span>
             <span>🇮🇳 UPI / Cards / Wallets</span>
             <span>✓ No hidden fees</span>
           </div>
 
-          <!-- T&C Checkbox -->
-          <div class="pm-tnc-row">
-            <label class="pm-tnc-label">
-              <input type="checkbox" id="tncCheckbox">
-              <span>I have read and agree to the <a href="#" id="openTnc" class="pm-tnc-link">Terms &amp; Conditions</a></span>
+          <div class="pay-tnc-row">
+            <label class="pay-tnc-label">
+              <input type="checkbox" id="payTncCheck">
+              <span>I have read and agree to the <a href="#" id="payTncLink" class="pay-tnc-link">Terms &amp; Conditions</a></span>
             </label>
           </div>
 
-          <button type="submit" class="pm-btn pm-btn-primary" id="proceedPayBtn" disabled>
-            Pay Now — <span id="submitAmountLabel">₹2,499</span>
+          <button type="submit" class="pay-submit-btn" id="paySubmitBtn" disabled>
+            Pay Now — <span id="paySubmitAmount">₹3,999</span>
           </button>
         </form>
       </div>
 
-      <!-- STEP 2: Success -->
-      <div class="pm-step-content pm-success-state" id="enrollStep3" style="display:none;">
-        <div class="pm-success-icon">
+      <!-- Step 2: Success -->
+      <div class="pay-success" id="payStep2Content">
+        <div class="pay-success-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
         </div>
-        <h3 style="font-size:1.5rem;color:#0f172a;margin-bottom:8px;font-weight:700;">Payment Confirmed! 🎉</h3>
-        <p style="color:#64748b;font-size:0.95rem;line-height:1.6;margin-bottom:24px;">Your enrollment is complete. Our team will reach out <strong style="color:#0f172a;">within 30 minutes</strong> to assign your buddy.</p>
-        <div class="pm-success-card">
-          <div class="pm-sc-item"><span class="check">✓</span> Payment Verified by Razorpay</div>
-          <div class="pm-sc-item"><span class="check">✓</span> Enrollment Recorded</div>
-          <div class="pm-sc-item"><span class="check">✓</span> Priority Support Enabled</div>
+        <h3>Payment Confirmed! 🎉</h3>
+        <p>Your enrollment is complete. Our team will reach out <strong>within 30 minutes</strong> to assign your buddy.</p>
+        <div class="pay-success-checks">
+          <div><span class="check">✓</span> Payment Verified by Razorpay</div>
+          <div><span class="check">✓</span> Enrollment Recorded</div>
+          <div><span class="check">✓</span> Priority Support Enabled</div>
         </div>
       </div>
-
     </div>
   </div>
-</div>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="ph-fill ph-whatsapp-logo"></i>
+  </a>
 
   <script src="script.js"></script>
-
-
 </body>
-</html>.  
- 
+</html>
