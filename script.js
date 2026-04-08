@@ -14,11 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. STICKY NAVBAR
   // ═══════════════════════════════════════════════════════
   const navbar = document.getElementById('navbar');
+  const stickyCta = document.getElementById('stickyCta');
   const onScroll = () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  // Sticky CTA bar — show when hero is scrolled past
+  const heroSection = document.getElementById('hero');
+  if (heroSection && stickyCta) {
+    const stickyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        stickyCta.classList.toggle('visible', !entry.isIntersecting);
+      });
+    }, { threshold: 0.05 });
+    stickyObserver.observe(heroSection);
+  }
 
   // ═══════════════════════════════════════════════════════
   // 2. MOBILE MENU

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyBuddyMaid — Professional Home Companions & Services</title>
-  <meta name="description" content="India's most trusted professional maid & home helper service. Police-verified, trained buddies for cooking, cleaning, babysitting, elderly care & more.">
+  <title>Verified Maid Service in Delhi NCR & Ludhiana — MyBuddyMaid</title>
+  <meta name="description" content="Book police-verified maids, cooks, nannies & elderly care in Delhi NCR & Ludhiana. 1-year replacement guarantee. Trusted by 12,000+ families. Starting at ₹2,499.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +42,7 @@
       <div class="nav-right">
         <select class="city-select" aria-label="Select City">
           <option>Delhi NCR</option>
+          <option>Ludhiana</option>
           <option>Mumbai</option>
           <option>Bangalore</option>
           <option>Hyderabad</option>
@@ -57,6 +58,7 @@
           <option>Kochi</option>
           <option>Other</option>
         </select>
+        <button class="btn btn-primary btn-nav-cta" data-open-booking>Book Now</button>
         <button class="hamburger" aria-label="Open Mobile Menu" id="mobileMenuBtn">
           <span></span><span></span><span></span>
         </button>
@@ -78,31 +80,35 @@
   <section class="hero" id="hero">
     <div class="container hero-container">
       <div class="hero-content reveal">
-        <div class="badge badge-dark"><i class="ph-bold ph-shield-check"></i> India's #1 Trusted Home Service</div>
+        <div class="badge badge-dark"><i class="ph-bold ph-shield-check"></i> #1 Verified Home Help in Delhi NCR</div>
         <h1>
-          Professional Care,<br>
-          <span class="accent">Absolute Peace of Mind.</span>
+          Book Verified Home Help<br>
+          <span class="accent">in Delhi NCR</span>
         </h1>
         <p class="hero-subtitle">
-          Experience the new standard of home care. We provide trained, police-verified, and reliable professionals for your daily household needs — from expert cooking to compassionate elderly care.
+          Now also serving <strong>Ludhiana</strong> and major cities across India. Background-verified, replacement-guaranteed helpers — available in 24 hours.
         </p>
         
         <div class="hero-ctas">
-          <button class="btn btn-primary" data-open-booking>
-            Find Your Buddy <i class="ph-bold ph-arrow-right"></i>
+          <button class="btn btn-primary btn-hero-cta" data-open-booking>
+            Book Now <i class="ph-bold ph-arrow-right"></i>
           </button>
-          <a href="#pricing" class="btn btn-outline-light">View Packages</a>
         </div>
-        
+
         <div class="hero-trust">
-          <div class="hero-trust-item"><i class="ph-fill ph-check-circle"></i> Police Verified</div>
-          <div class="hero-trust-item"><i class="ph-fill ph-check-circle"></i> 1-Year Guarantee</div>
-          <div class="hero-trust-item"><i class="ph-fill ph-star"></i> 4.9/5 Rating</div>
+          <div class="hero-trust-item"><i class="ph-fill ph-shield-check"></i> 100% Police Verified</div>
+          <div class="hero-trust-item"><i class="ph-fill ph-arrows-clockwise"></i> 1-Year Free Replacement</div>
+          <div class="hero-trust-item"><i class="ph-fill ph-star"></i> 4.9/5 — 500+ Reviews</div>
+        </div>
+
+        <div class="hero-pricing-anchor">
+          <i class="ph-bold ph-tag"></i>
+          Starting at <strong>₹2,499</strong> one-time fee &bull; Monthly salary paid directly to helper
         </div>
       </div>
       
       <div class="hero-visual reveal" style="transition-delay: 0.15s;">
-        <img src="hero1.jpg" alt="Professional home care provider">
+        <img src="hero1.jpg" alt="Indian family with professional home helper in a modern living room">
         <div class="hero-float-card">
           <div class="hero-float-icon"><i class="ph-bold ph-users"></i></div>
           <div>
@@ -596,6 +602,7 @@
               <select class="form-control" id="bookCity" required>
                 <option value="">Select City</option>
                 <option>Delhi NCR</option>
+                <option>Ludhiana</option>
                 <option>Mumbai</option>
                 <option>Bangalore</option>
                 <option>Hyderabad</option>
@@ -783,6 +790,16 @@
   <a href="https://wa.me/919599390188" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
     <i class="ph-fill ph-whatsapp-logo"></i>
   </a>
+
+  <!-- Sticky Mobile CTA Bar -->
+  <div class="sticky-cta-bar" id="stickyCta">
+    <button class="sticky-cta-book" data-open-booking>
+      <i class="ph-bold ph-calendar-check"></i> Book Now
+    </button>
+    <a href="https://wa.me/919599390188" target="_blank" class="sticky-cta-whatsapp">
+      <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp
+    </a>
+  </div>
 
   <script src="script.js"></script>
 </body>

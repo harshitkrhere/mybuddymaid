@@ -251,6 +251,17 @@ p { color: var(--text-secondary); line-height: 1.7; }
   box-shadow: var(--shadow-xs);
 }
 
+/* Navbar CTA Button */
+.btn-nav-cta {
+  display: none;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8125rem;
+  border-radius: var(--r-full);
+}
+@media (min-width: 992px) {
+  .btn-nav-cta { display: inline-flex; }
+}
+
 /* Hero section has dark bg, so navbar text should be light by default */
 .navbar:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.75); }
 .navbar:not(.scrolled) .nav-links a:hover { color: var(--mint); background: rgba(255,255,255,0.06); }
@@ -435,15 +446,30 @@ p { color: var(--text-secondary); line-height: 1.7; }
   display: flex;
   flex-wrap: wrap;
   gap: 0.875rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Hero primary CTA — larger, with pulse glow */
+.btn-hero-cta {
+  font-size: 1.0625rem;
+  padding: 1rem 2.5rem;
+  min-height: 52px;
+  animation: cta-pulse 2.5s ease-in-out infinite;
+}
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(52, 211, 153, 0); }
+}
+.btn-hero-cta:hover {
+  animation: none;
 }
 
 .hero-trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 0.75rem;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border-dark);
 }
 .hero-trust-item {
@@ -453,10 +479,34 @@ p { color: var(--text-secondary); line-height: 1.7; }
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-inverse-muted);
+  background: rgba(255,255,255,0.06);
+  padding: 0.4rem 0.875rem;
+  border-radius: var(--r-full);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 .hero-trust-item i {
   color: var(--mint);
   font-size: 1.125rem;
+}
+
+/* Pricing Anchor */
+.hero-pricing-anchor {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
+.hero-pricing-anchor strong {
+  color: var(--mint);
+  font-weight: 800;
+  font-size: 1rem;
+}
+.hero-pricing-anchor i {
+  color: var(--mint);
+  font-size: 1rem;
 }
 
 .hero-visual {
@@ -1543,9 +1593,77 @@ p { color: var(--text-secondary); line-height: 1.7; }
   font-size: 1.75rem;
   box-shadow: 0 4px 16px rgba(37,211,102,0.35);
   z-index: 900;
-  transition: transform 0.25s var(--ease);
+  transition: transform 0.25s var(--ease), bottom 0.3s var(--ease);
 }
 .whatsapp-float:hover { transform: scale(1.1); }
+
+/* ─── STICKY CTA BAR (Mobile) ──────────────────────────────────────── */
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 0;
+  background: var(--obsidian);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  z-index: 950;
+  transform: translateY(100%);
+  transition: transform 0.35s var(--ease-out);
+  padding: 0.625rem 0.75rem;
+  padding-bottom: calc(0.625rem + env(safe-area-inset-bottom, 0px));
+  gap: 0.5rem;
+}
+.sticky-cta-bar.visible {
+  transform: translateY(0);
+}
+
+.sticky-cta-book {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  background: var(--mint);
+  color: var(--obsidian);
+  border: none;
+  border-radius: var(--r-sm);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sticky-cta-book:hover { background: var(--mint-hover); }
+
+.sticky-cta-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.25rem;
+  background: #25D366;
+  color: #FFFFFF;
+  border-radius: var(--r-sm);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.sticky-cta-whatsapp:hover { background: #1DA851; }
+
+/* Hide WhatsApp float when sticky bar is visible (mobile) */
+.sticky-cta-bar.visible ~ .whatsapp-float,
+body:has(.sticky-cta-bar.visible) .whatsapp-float {
+  bottom: 5.5rem;
+}
+
+/* On desktop, hide sticky bar entirely (desktop has navbar CTA) */
+@media (min-width: 992px) {
+  .sticky-cta-bar { display: none; }
+}
 
 /* ─── RESPONSIVE ────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -1561,7 +1679,8 @@ p { color: var(--text-secondary); line-height: 1.7; }
 @media (max-width: 480px) {
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn { width: 100%; }
-  .hero-trust { gap: 1rem; }
+  .hero-trust { gap: 0.5rem; }
+  .hero-pricing-anchor { flex-wrap: wrap; font-size: 0.8125rem; }
   .pay-plan-card { flex-direction: column; text-align: center; }
   .pay-plan-price { margin-left: 0; }
 }
