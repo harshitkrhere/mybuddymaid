@@ -390,33 +390,53 @@ document.addEventListener('DOMContentLoaded', () => {
       paySubmitBtn.innerHTML = 'Connecting to Secure Server...';
       paySubmitBtn.disabled = true;
 
+      // Build Razorpay options
       const rzpOptions = {
         key: RZP_KEY,
-        amount: amount * 100,
+        amount: amount * 100,   // paise
         currency: 'INR',
         name: 'MyBuddyMaid',
         description: plan + ' Enrollment',
         image: 'logo.png',
         prefill: { name, email, contact: phone },
-        notes: { name, package: plan, type: 'enrollment' },
+        // Pass real data in notes so the backend webhook can use them
+        notes: { name: name, email: email, package: plan, type: 'enrollment' },
         theme: { color: '#0F0F0F' },
         handler: async (response) => {
-          // Payment success — log to sheets
-          const data = {
-            type: 'enrollment',
-            timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-            name, email, phone,
-            package: plan,
-            amount,
-            utr: response.razorpay_payment_id,
+          // ── Razorpay success handler ──
+          // response = { razorpay_payment_id, razorpay_order_id, razorpay_signature }
+
+          // Determine payment method label from Razorpay's response
+          // (Razorpay JS SDK doesn't expose method directly in the handler,
+          //  so we mark it as 'Razorpay' — the Apps Script server webhook
+          //  will have the exact method if it fires first)
+          const paymentMethod = 'Razorpay';
+
+          // Format timestamp in IST
+          const now = new Date();
+          const istOffset = 5.5 * 60 * 60 * 1000;
+          const ist = new Date(now.getTime() + istOffset);
+          const pad = n => String(n).padStart(2, '0');
+          const timestamp = `${pad(ist.getUTCDate())}/${pad(ist.getUTCMonth() + 1)}/${ist.getUTCFullYear()}, ${pad(ist.getUTCHours())}:${pad(ist.getUTCMinutes())}:${pad(ist.getUTCSeconds())}`;
+
+          const enrollmentData = {
+            type:           'enrollment',
+            timestamp:      timestamp,
+            name:           name,
+            email:          email,
+            phone:          phone,
+            package:        plan,          // e.g. "Gold Package"
+            amount:         amount,        // numeric rupees, e.g. 3999
+            utr:            response.razorpay_payment_id,
+            payment_method: paymentMethod,
           };
 
           try {
             await fetch(SHEETS_URL, {
               method: 'POST',
-              mode: 'no-cors',
+              mode:   'no-cors',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(data),
+              body:   JSON.stringify(enrollmentData),
             });
           } catch (err) {
             console.error('Enrollment logging error:', err);
@@ -435,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
             payTncCheck.checked = false;
             paySubmitBtn.disabled = true;
           }, 6000);
-        }
+        },
       };
 
       const rzp = new Razorpay(rzpOptions);
@@ -445,13 +465,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       rzp.open();
 
-      // Reset button if user dismisses Razorpay
+      // Reset button if user closes Razorpay without paying
       setTimeout(() => {
         if (payStep1Content.style.display !== 'none') {
           paySubmitBtn.innerHTML = origBtnHtml;
           paySubmitBtn.disabled = !payTncCheck.checked;
         }
-      }, 1000);
+      }, 1500);
     });
   }
 });
