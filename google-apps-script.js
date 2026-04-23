@@ -17,6 +17,8 @@ const FROM_EMAIL     = 'info@mybuddymaid.in';
 const FROM_NAME      = 'MyBuddyMaid Team';
 const RESEND_API_KEY = 're_P6zS4ejg_9sUCC78YN1KRD5GwHfSBUwZC';
 
+
+
 /* ──────────────────────────────────────────────── *
  *  PLAN CONFIG — amount-based lookup (for webhook)
  * ──────────────────────────────────────────────── */
@@ -116,6 +118,8 @@ function jsonResponse(obj) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
+
+
 /* ──────────────────────────────────────────────── *
  *  doPost — Main entry point
  * ──────────────────────────────────────────────── */
@@ -163,8 +167,11 @@ function handleRazorpayWebhook(ss, data) {
     return jsonResponse({ status: 'duplicate' });
   }
 
-  sheet.appendRow([nowIST(), name, email, phone, pkgName, amount, paymentId, paymentMethod, 'Verified']);
+  var ts = nowIST();
+  sheet.appendRow([ts, name, email, phone, pkgName, amount, paymentId, paymentMethod, 'Verified']);
   Logger.log('[WEBHOOK] Row written: ' + pkgName + ', ' + amount);
+
+
 
   try {
     sendEnrollmentEmail({ name: name, email: email, phone: phone, package: pkgName, amount: amount, utr: paymentId });
@@ -201,6 +208,8 @@ function handleFrontendEnrollment(ss, data) {
   sheet.appendRow([ts, name, email, phone, pkgName, amount, paymentId, paymentMethod, 'Verified']);
   Logger.log('[FRONTEND] Row written: ' + pkgName + ', ' + amount);
 
+
+
   if (email && email !== 'N/A') {
     try {
       sendEnrollmentEmail({ name: name, email: email, phone: phone, package: pkgName, amount: amount, utr: paymentId });
@@ -217,17 +226,22 @@ function handleBooking(ss, data) {
   var sheet = ss.getSheetByName('Bookings');
   if (!sheet) return jsonResponse({ status: 'error', message: 'Bookings sheet not found' });
 
-  sheet.appendRow([
-    data.timestamp || nowIST(),
-    data.name    || 'Customer',
-    resolveEmail(data.email, ''),
-    formatPhone(data.phone),
-    data.city    || '',
-    data.service || '',
-    data.notes   || '',
-  ]);
+  var name    = data.name    || 'Customer';
+  var email   = resolveEmail(data.email, '');
+  var phone   = formatPhone(data.phone);
+  var city    = data.city    || '';
+  var service = data.service || '';
+  var notes   = data.notes   || '';
+  var ts      = data.timestamp || nowIST();
+
+  sheet.appendRow([ts, name, email, phone, city, service, notes]);
+  Logger.log('[BOOKING] Row written: ' + name + ', ' + service);
+
+
+
   return jsonResponse({ status: 'success' });
 }
+
 
 /* ══════════════════════════════════════════════════
  *  EMAIL SYSTEM
