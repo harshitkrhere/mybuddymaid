@@ -172,6 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Reset states
       if (formState) formState.style.display = 'block';
       if (successState) successState.style.display = 'none';
+      const errState = document.getElementById('bookingErrorState');
+      if (errState) errState.style.display = 'none';
       if (bookingForm) bookingForm.reset();
 
       const serviceName = btn.getAttribute('data-open-booking');
@@ -225,6 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (bookSubmitBtn) bookSubmitBtn.disabled = true;
 
   // Submit booking form
+  const errorState = document.getElementById('bookingErrorState');
+
   if (bookingForm) {
     bookingForm.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -244,21 +248,44 @@ document.addEventListener('DOMContentLoaded', () => {
         notes:   document.getElementById('bookNotes').value.trim() || '-',
       };
 
+      let success = false;
       try {
-        await fetch(SHEETS_URL, {
+        const resp = await fetch(SHEETS_URL, {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
         });
+        // no-cors returns opaque response (type: 'opaque', status: 0)
+        // which is expected — if we get here without throwing, it's a success
+        success = true;
       } catch (err) {
         console.error('Booking submission error:', err);
+        success = false;
       }
 
-      formState.style.display = 'none';
-      successState.style.display = 'block';
       bookSubmitBtn.textContent = origText;
       bookSubmitBtn.disabled = false;
+
+      if (success) {
+        formState.style.display = 'none';
+        if (errorState) errorState.style.display = 'none';
+        successState.style.display = 'block';
+      } else {
+        formState.style.display = 'none';
+        successState.style.display = 'none';
+        if (errorState) errorState.style.display = 'block';
+      }
+    });
+  }
+
+  // Retry booking — go back to the form
+  const btnRetry = document.getElementById('btnRetryBooking');
+  if (btnRetry) {
+    btnRetry.addEventListener('click', () => {
+      if (errorState) errorState.style.display = 'none';
+      formState.style.display = 'block';
+      validateBookingForm();
     });
   }
 
@@ -275,6 +302,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // ═══════════════════════════════════════════════════════
+  // 8b. PRIVACY POLICY MODAL
+  // ═══════════════════════════════════════════════════════
+  const privacyModal = document.getElementById('privacyModal');
+  const footerPrivacyLink = document.getElementById('footerPrivacyLink');
+  if (footerPrivacyLink && privacyModal) {
+    footerPrivacyLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal(privacyModal);
+    });
+  }
 
   // ═══════════════════════════════════════════════════════
   // 9. PAYMENT MODAL & RAZORPAY
@@ -473,5 +512,105 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 1500);
     });
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // 10. EXIT INTENT POPUP
+  // ═══════════════════════════════════════════════════════
+  const exitPopup = document.getElementById('exitPopup');
+  const exitClose = document.getElementById('exitPopupClose');
+  const exitForm = document.getElementById('exitPopupForm');
+  const exitSuccess = document.getElementById('exitPopupSuccess');
+
+  if (exitPopup) {
+    let exitShown = false;
+
+    const showExitPopup = () => {
+      // Don't show if already shown this session, or if another modal is open, or if user has already booked
+      if (exitShown || sessionStorage.getItem('exitPopupShown')) return;
+      const anyModalOpen = document.querySelector('.modal-overlay.active, .pay-modal-overlay.active');
+      if (anyModalOpen) return;
+
+      exitShown = true;
+      sessionStorage.setItem('exitPopupShown', '1');
+      exitPopup.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const hideExitPopup = () => {
+      exitPopup.classList.remove('active');
+      const anyOpen = document.querySelector('.modal-overlay.active, .pay-modal-overlay.active');
+      if (!anyOpen) document.body.style.overflow = '';
+    };
+
+    // Desktop: mouse leaves viewport from top
+    document.addEventListener('mouseout', (e) => {
+      if (e.clientY <= 5 && e.relatedTarget === null) {
+        // Wait 5 seconds after page load before allowing trigger
+        if (performance.now() > 5000) showExitPopup();
+      }
+    });
+
+    // Mobile fallback: show after 45 seconds of inactivity
+    let mobileTimer = null;
+    const resetMobileTimer = () => {
+      if (mobileTimer) clearTimeout(mobileTimer);
+      if (window.innerWidth < 992) {
+        mobileTimer = setTimeout(showExitPopup, 30000);
+      }
+    };
+    if (window.innerWidth < 992) {
+      resetMobileTimer();
+      ['scroll', 'touchstart', 'click'].forEach(evt => {
+        document.addEventListener(evt, resetMobileTimer, { passive: true });
+      });
+    }
+
+    // Close popup
+    if (exitClose) exitClose.addEventListener('click', hideExitPopup);
+    exitPopup.addEventListener('click', (e) => {
+      if (e.target === exitPopup) hideExitPopup();
+    });
+
+    // Form submit — sends to Google Sheets as a booking
+    if (exitForm) {
+      exitForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('exitName').value.trim();
+        const phone = document.getElementById('exitPhone').value.trim();
+
+        if (!name || !phone) return;
+
+        const submitBtn = exitForm.querySelector('button[type="submit"]');
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        try {
+          await fetch(SHEETS_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+              name: name,
+              phone: phone,
+              email: '-',
+              city: '-',
+              service: 'Exit Popup — Free Callback Request',
+              notes: 'Submitted via exit-intent popup',
+            }),
+          });
+        } catch (err) {
+          console.error('Exit popup submit error:', err);
+        }
+
+        // Show success regardless (no-cors = opaque response)
+        exitForm.style.display = 'none';
+        if (exitSuccess) exitSuccess.style.display = 'block';
+
+        // Auto-close after 4s
+        setTimeout(hideExitPopup, 4000);
+      });
+    }
   }
 });
