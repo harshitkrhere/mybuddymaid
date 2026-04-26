@@ -12,10 +12,19 @@
  * ═══════════════════════════════════════════════════════════
  */
 
-const SPREADSHEET_ID = '1ODgmpFNlJNR92BlbZrmy2MJOnC9sGovHYUSILqIVWhg';
-const FROM_EMAIL     = 'info@mybuddymaid.in';
-const FROM_NAME      = 'MyBuddyMaid Team';
-const RESEND_API_KEY = 're_P6zS4ejg_9sUCC78YN1KRD5GwHfSBUwZC';
+const FROM_EMAIL = 'info@mybuddymaid.in';
+const FROM_NAME  = 'MyBuddyMaid Team';
+
+/**
+ * Load secrets from Script Properties (never hardcode in source).
+ * Set these in Apps Script Editor > Project Settings > Script Properties:
+ *   SPREADSHEET_ID    - Your Google Sheet ID
+ *   RESEND_API_KEY    - Resend API key for transactional emails
+ *   FRONTEND_TOKEN    - Shared token sent by the website to authenticate requests
+ */
+function getSecret_(key) {
+  return PropertiesService.getScriptProperties().getProperty(key);
+}
 
 
 
@@ -125,11 +134,23 @@ function jsonResponse(obj) {
  * ──────────────────────────────────────────────── */
 function doPost(e) {
   try {
-    var ss   = SpreadsheetApp.openById(SPREADSHEET_ID);
     var raw  = e.postData ? e.postData.contents : '{}';
     var data = JSON.parse(raw);
 
-    if (data.event === 'payment.captured') return handleRazorpayWebhook(ss, data);
+    // Razorpay webhooks have their own signature auth - skip token check
+    if (data.event === 'payment.captured') {
+      var ss = SpreadsheetApp.openById(getSecret_('SPREADSHEET_ID'));
+      return handleRazorpayWebhook(ss, data);
+    }
+
+    // All frontend requests must include a valid auth token
+    var expectedToken = getSecret_('FRONTEND_TOKEN');
+    if (expectedToken && data._token !== expectedToken) {
+      Logger.log('[AUTH] Rejected - invalid or missing token.');
+      return jsonResponse({ status: 'error', message: 'Unauthorized' });
+    }
+
+    var ss = SpreadsheetApp.openById(getSecret_('SPREADSHEET_ID'));
     if (data.type  === 'enrollment')       return handleFrontendEnrollment(ss, data);
     return handleBooking(ss, data);
 
@@ -585,7 +606,7 @@ function sendEnrollmentEmail(data) {
     Logger.log('[EMAIL] Sending | to=' + email + ' | subject=' + cfg.subject);
     var resp = UrlFetchApp.fetch('https://api.resend.com/emails', {
       method: 'post', contentType: 'application/json',
-      headers: { 'Authorization': 'Bearer ' + RESEND_API_KEY },
+      headers: { 'Authorization': 'Bearer ' + getSecret_('RESEND_API_KEY') },
       payload: JSON.stringify(payload), muteHttpExceptions: true,
     });
     var code = resp.getResponseCode();
@@ -603,7 +624,7 @@ function sendEnrollmentEmail(data) {
  *  SETUP — Run once to create sheet tabs & headers
  * ──────────────────────────────────────────────── */
 function setupSheets() {
-  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var ss = SpreadsheetApp.openById(getSecret_('SPREADSHEET_ID'));
 
   var bookings = ss.getSheetByName('Bookings') || ss.insertSheet('Bookings');
   if (bookings.getLastRow() === 0) {
@@ -628,7 +649,7 @@ function setupSheets() {
  *  FIX EXISTING DATA — Run once to repair old rows
  * ──────────────────────────────────────────────── */
 function fixExistingEnrollments() {
-  var ss    = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var ss    = SpreadsheetApp.openById(getSecret_('SPREADSHEET_ID'));
   var sheet = ss.getSheetByName('Enrollments');
   if (!sheet) { Logger.log('No Enrollments sheet.'); return; }
 

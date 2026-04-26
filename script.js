@@ -7,8 +7,46 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyHzevpz4xDPbBkS8vKTZuuiHZFQkx2H4nEzKLiK7HDTX7a0J-eI3l5X7cc9Yq9id3Y/exec';
-  const RZP_KEY   = 'rzp_live_SVW7I4Fu5WQpAt';
+  const SHEETS_URL  = 'https://script.google.com/macros/s/AKfycbyHzevpz4xDPbBkS8vKTZuuiHZFQkx2H4nEzKLiK7HDTX7a0J-eI3l5X7cc9Yq9id3Y/exec';
+  const RZP_KEY     = 'rzp_live_SVW7I4Fu5WQpAt'; // Razorpay publishable key (safe for client-side per Razorpay docs)
+  const AUTH_TOKEN  = 'mbm_v1_T8kP3nR9xL2m';     // Must match FRONTEND_TOKEN in Apps Script properties
+
+  /**
+   * POST data to Google Apps Script with reliable error detection.
+   * Tries CORS mode first (text/plain avoids preflight), falls back to no-cors.
+   * Returns { ok: boolean, data: object|null }
+   */
+  async function postToSheets(payload) {
+    const body = JSON.stringify(payload);
+    try {
+      // Try CORS — text/plain avoids preflight, lets us read the response
+      const resp = await fetch(SHEETS_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain' },
+        body: body,
+        redirect: 'follow',
+      });
+      if (resp.ok) {
+        const result = await resp.json();
+        return { ok: ['success', 'ok', 'duplicate'].includes(result.status), data: result };
+      }
+      return { ok: false, data: null };
+    } catch (_corsErr) {
+      // CORS blocked — fallback to no-cors (fire-and-forget)
+      try {
+        await fetch(SHEETS_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: body,
+        });
+        return { ok: true, data: null }; // Assume success — can't verify with opaque response
+      } catch (fetchErr) {
+        console.error('postToSheets failed:', fetchErr);
+        return { ok: false, data: null };
+      }
+    }
+  }
 
   // ═══════════════════════════════════════════════════════
   // 1. STICKY NAVBAR
@@ -239,6 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bookSubmitBtn.disabled = true;
 
       const data = {
+        _token:  AUTH_TOKEN,
         timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
         name:    document.getElementById('bookName').value.trim(),
         phone:   document.getElementById('bookPhone').value.trim(),
@@ -250,15 +289,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let success = false;
       try {
-        const resp = await fetch(SHEETS_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        });
-        // no-cors returns opaque response (type: 'opaque', status: 0)
-        // which is expected — if we get here without throwing, it's a success
-        success = true;
+        const result = await postToSheets(data);
+        success = result.ok;
       } catch (err) {
         console.error('Booking submission error:', err);
         success = false;
@@ -391,11 +423,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const errEl = document.getElementById(errorId);
     if (errEl) errEl.style.display = 'block';
   };
-  const clearError = (inputId, errorId) => {
-    document.getElementById(inputId)?.classList.remove('input-error');
-    const errEl = document.getElementById(errorId);
-    if (errEl) errEl.style.display = 'none';
-  };
   const clearPayErrors = () => {
     ['payName', 'payEmail', 'payPhone'].forEach(id => {
       document.getElementById(id)?.classList.remove('input-error');
@@ -451,14 +478,11 @@ document.addEventListener('DOMContentLoaded', () => {
           //  will have the exact method if it fires first)
           const paymentMethod = 'Razorpay';
 
-          // Format timestamp in IST
-          const now = new Date();
-          const istOffset = 5.5 * 60 * 60 * 1000;
-          const ist = new Date(now.getTime() + istOffset);
-          const pad = n => String(n).padStart(2, '0');
-          const timestamp = `${pad(ist.getUTCDate())}/${pad(ist.getUTCMonth() + 1)}/${ist.getUTCFullYear()}, ${pad(ist.getUTCHours())}:${pad(ist.getUTCMinutes())}:${pad(ist.getUTCSeconds())}`;
+          // Format timestamp in IST (consistent with booking form)
+          const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
           const enrollmentData = {
+            _token:         AUTH_TOKEN,
             type:           'enrollment',
             timestamp:      timestamp,
             name:           name,
@@ -471,12 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
           };
 
           try {
-            await fetch(SHEETS_URL, {
-              method: 'POST',
-              mode:   'no-cors',
-              headers: { 'Content-Type': 'application/json' },
-              body:   JSON.stringify(enrollmentData),
-            });
+            await postToSheets(enrollmentData);
           } catch (err) {
             console.error('Enrollment logging error:', err);
           }
@@ -495,6 +514,13 @@ document.addEventListener('DOMContentLoaded', () => {
             paySubmitBtn.disabled = true;
           }, 6000);
         },
+        modal: {
+          ondismiss: () => {
+            // User closed Razorpay popup without paying
+            paySubmitBtn.innerHTML = origBtnHtml;
+            paySubmitBtn.disabled = !payTncCheck.checked;
+          }
+        },
       };
 
       const rzp = new Razorpay(rzpOptions);
@@ -503,14 +529,6 @@ document.addEventListener('DOMContentLoaded', () => {
         paySubmitBtn.disabled = !payTncCheck.checked;
       });
       rzp.open();
-
-      // Reset button if user closes Razorpay without paying
-      setTimeout(() => {
-        if (payStep1Content.style.display !== 'none') {
-          paySubmitBtn.innerHTML = origBtnHtml;
-          paySubmitBtn.disabled = !payTncCheck.checked;
-        }
-      }, 1500);
     });
   }
 
@@ -586,25 +604,21 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = true;
 
         try {
-          await fetch(SHEETS_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-              name: name,
-              phone: phone,
-              email: '-',
-              city: '-',
-              service: 'Exit Popup — Free Callback Request',
-              notes: 'Submitted via exit-intent popup',
-            }),
+          await postToSheets({
+            _token: AUTH_TOKEN,
+            timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+            name: name,
+            phone: phone,
+            email: '-',
+            city: '-',
+            service: 'Exit Popup — Free Callback Request',
+            notes: 'Submitted via exit-intent popup',
           });
         } catch (err) {
           console.error('Exit popup submit error:', err);
         }
 
-        // Show success regardless (no-cors = opaque response)
+        // Show success
         exitForm.style.display = 'none';
         if (exitSuccess) exitSuccess.style.display = 'block';
 

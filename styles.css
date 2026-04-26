@@ -3,7 +3,7 @@
    Palette: Obsidian + Emerald Mint  |  Aesthetic: Ultra-modern, Apple-like
    ========================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+/* Fonts loaded via <link> in index.html — do NOT duplicate with @import */
 
 /* ─── DESIGN TOKENS ─────────────────────────────────────────────────── */
 :root {
