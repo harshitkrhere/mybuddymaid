@@ -236,32 +236,85 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Booking form validation — enable submit only when all fields filled + T&C checked
+  // Booking form validation — with inline error feedback
   const bookSubmitBtn = document.getElementById('bookSubmitBtn');
   const bookTncCheck  = document.getElementById('bookTncCheck');
   const bookRequiredFields = ['bookName', 'bookPhone', 'bookEmail', 'bookCity', 'bookService'];
 
-  const validateBookingForm = () => {
-    if (!bookSubmitBtn) return;
-    const allFilled = bookRequiredFields.every(id => {
-      const el = document.getElementById(id);
-      return el && el.value.trim() !== '';
-    });
-    const tncChecked = bookTncCheck ? bookTncCheck.checked : false;
-    bookSubmitBtn.disabled = !(allFilled && tncChecked);
+  const PHONE_REGEX = /^[6-9]\d{9}$/;
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const showBookError = (inputId, errorId) => {
+    document.getElementById(inputId)?.classList.add('input-error');
+    const el = document.getElementById(errorId);
+    if (el) el.style.display = 'block';
+  };
+  const hideBookError = (inputId, errorId) => {
+    document.getElementById(inputId)?.classList.remove('input-error');
+    const el = document.getElementById(errorId);
+    if (el) el.style.display = 'none';
   };
 
-  // Attach listeners to all required fields + checkbox
-  bookRequiredFields.forEach(id => {
+  const validateBookingForm = () => {
+    if (!bookSubmitBtn) return;
+    let valid = true;
+
+    // Name: non-empty, at least 2 chars
+    const name = document.getElementById('bookName')?.value.trim();
+    if (!name || name.length < 2) { valid = false; }
+
+    // Phone: 10-digit Indian mobile
+    const phone = (document.getElementById('bookPhone')?.value || '').replace(/[\s\-+]/g, '').replace(/^91/, '');
+    if (!PHONE_REGEX.test(phone)) { valid = false; }
+
+    // Email: basic format
+    const email = document.getElementById('bookEmail')?.value.trim();
+    if (!EMAIL_REGEX.test(email)) { valid = false; }
+
+    // City & Service: selected
+    const city = document.getElementById('bookCity')?.value;
+    const service = document.getElementById('bookService')?.value;
+    if (!city) valid = false;
+    if (!service) valid = false;
+
+    const tncChecked = bookTncCheck ? bookTncCheck.checked : false;
+    bookSubmitBtn.disabled = !(valid && tncChecked);
+  };
+
+  // Real-time inline error display on blur
+  const bookNameEl = document.getElementById('bookName');
+  const bookPhoneEl = document.getElementById('bookPhone');
+  const bookEmailEl = document.getElementById('bookEmail');
+
+  if (bookNameEl) {
+    bookNameEl.addEventListener('blur', () => {
+      if (!bookNameEl.value.trim() || bookNameEl.value.trim().length < 2) showBookError('bookName', 'bookNameError');
+      else hideBookError('bookName', 'bookNameError');
+    });
+    bookNameEl.addEventListener('input', () => { hideBookError('bookName', 'bookNameError'); validateBookingForm(); });
+  }
+  if (bookPhoneEl) {
+    bookPhoneEl.addEventListener('blur', () => {
+      const digits = bookPhoneEl.value.replace(/[\s\-+]/g, '').replace(/^91/, '');
+      if (!PHONE_REGEX.test(digits)) showBookError('bookPhone', 'bookPhoneError');
+      else hideBookError('bookPhone', 'bookPhoneError');
+    });
+    bookPhoneEl.addEventListener('input', () => { hideBookError('bookPhone', 'bookPhoneError'); validateBookingForm(); });
+  }
+  if (bookEmailEl) {
+    bookEmailEl.addEventListener('blur', () => {
+      if (!EMAIL_REGEX.test(bookEmailEl.value.trim())) showBookError('bookEmail', 'bookEmailError');
+      else hideBookError('bookEmail', 'bookEmailError');
+    });
+    bookEmailEl.addEventListener('input', () => { hideBookError('bookEmail', 'bookEmailError'); validateBookingForm(); });
+  }
+
+  // Dropdown & checkbox listeners
+  ['bookCity', 'bookService'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener('input', validateBookingForm);
-      el.addEventListener('change', validateBookingForm);
-    }
+    if (el) el.addEventListener('change', validateBookingForm);
   });
   if (bookTncCheck) bookTncCheck.addEventListener('change', validateBookingForm);
-
-  // Initial state
   if (bookSubmitBtn) bookSubmitBtn.disabled = true;
 
   // Submit booking form
@@ -574,7 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetMobileTimer = () => {
       if (mobileTimer) clearTimeout(mobileTimer);
       if (window.innerWidth < 992) {
-        mobileTimer = setTimeout(showExitPopup, 30000);
+        mobileTimer = setTimeout(showExitPopup, 60000);
       }
     };
     if (window.innerWidth < 992) {
