@@ -1929,3 +1929,22 @@ body:has(.sticky-cta-bar.visible) .whatsapp-float {
   .exit-popup-stats { gap: 0.75rem; }
   .exit-popup-stat strong { font-size: 1.125rem; }
 }
+
+/* ─── UTILITY CLASSES (replaces inline styles) ────────────────────── */
+.delay-1  { transition-delay: 0.1s; }
+.delay-15 { transition-delay: 0.15s; }
+.delay-2  { transition-delay: 0.2s; }
+.delay-25 { transition-delay: 0.25s; }
+.delay-3  { transition-delay: 0.3s; }
+.w-full   { width: 100%; }
+.text-center { text-align: center; }
+.mt-05    { margin-top: 0.5rem; }
+.mt-1     { margin-top: 1rem; }
+.mt-2     { margin-top: 2rem; }
+.mb-sm    { margin-bottom: 0.375rem; }
+.mb-lg    { margin-bottom: 1.75rem; }
+.d-none   { display: none; }
+.error-icon-red {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+}
