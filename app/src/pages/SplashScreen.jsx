@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
@@ -6,19 +6,10 @@ export default function SplashScreen() {
   const navigate = useNavigate();
   const location = useLocation();
   const { isAuthenticated, loading } = useAuth();
-  const [minTimeElapsed, setMinTimeElapsed] = useState(false);
 
-  // Show splash for at least 1.2s for branding
   useEffect(() => {
-    const t = setTimeout(() => setMinTimeElapsed(true), 1200);
-    return () => clearTimeout(t);
-  }, []);
+    if (loading) return;
 
-  // Redirect once auth is resolved AND min time elapsed
-  useEffect(() => {
-    if (loading || !minTimeElapsed) return;
-
-    // If not authenticated, go to auth
     if (!isAuthenticated) {
       navigate('/auth', { replace: true });
       return;
@@ -33,17 +24,13 @@ export default function SplashScreen() {
       const serviceIds = ['part-time', 'full-time', 'elderly-care', 'cook', 'nanny', 'postnatal'];
       const planNames = ['silver', 'gold', 'diamond', 'platinum'];
 
-      if (ctx === 'book') {
-        destination = '/services';
-      } else if (serviceIds.includes(ctx)) {
-        destination = `/services/${ctx}`;
-      } else if (planNames.includes(ctx)) {
-        destination = '/profile?tab=packages';
-      }
+      if (ctx === 'book') destination = '/services';
+      else if (serviceIds.includes(ctx)) destination = `/services/${ctx}`;
+      else if (planNames.includes(ctx)) destination = '/profile?tab=packages';
     }
 
     navigate(destination, { replace: true });
-  }, [loading, isAuthenticated, minTimeElapsed, navigate, location.state]);
+  }, [loading, isAuthenticated, navigate, location.state]);
 
   return (
     <div className="splash-screen">

@@ -72,13 +72,14 @@ export function AuthProvider({ children }) {
   }, [fetchProfile, fetchUserPlan, fetchBookings]);
 
   useEffect(() => {
+    // Get session first — this determines auth state and unblocks the app
     supabase.auth.getSession().then(({ data: { session } }) => {
       const currentUser = session?.user ?? null;
       setUser(currentUser);
+      setLoading(false); // Unblock immediately
       if (currentUser) {
-        loadUserData(currentUser.id).finally(() => setLoading(false));
-      } else {
-        setLoading(false);
+        // Load user data in background — pages will update when ready
+        loadUserData(currentUser.id);
       }
     });
 
@@ -86,7 +87,7 @@ export function AuthProvider({ children }) {
       const currentUser = session?.user ?? null;
       setUser(currentUser);
       if (currentUser) {
-        await loadUserData(currentUser.id);
+        loadUserData(currentUser.id);
       } else {
         setProfile(null);
         setUserPlan(null);
