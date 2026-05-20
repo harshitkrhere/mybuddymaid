@@ -6,6 +6,7 @@
     { "source": "/auth", "destination": "/_app.html" },
     { "source": "/splash", "destination": "/_app.html" },
     { "source": "/onboarding", "destination": "/_app.html" },
+    { "source": "/terms", "destination": "/_app.html" },
     { "source": "/home", "destination": "/_app.html" },
     { "source": "/services", "destination": "/_app.html" },
     { "source": "/services/:id", "destination": "/_app.html" },

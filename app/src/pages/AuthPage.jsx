@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 export default function AuthPage() {
@@ -116,6 +116,10 @@ export default function AuthPage() {
       <button type="button" className="btn-auth" onClick={handleEmailSignIn} disabled={loading || !email || !password}>
         {loading ? 'Signing in...' : 'Sign In'}
       </button>
+
+      <p className="auth-terms">
+        By signing in, you agree to our <Link to="/terms">Terms & Conditions</Link>.
+      </p>
     </div>
   );
 
@@ -154,6 +158,10 @@ export default function AuthPage() {
       <button type="button" className="btn-auth" onClick={handleEmailSignUp} disabled={loading || !email || !password}>
         {loading ? 'Creating account...' : 'Sign Up'}
       </button>
+
+      <p className="auth-terms">
+        By signing up, you agree to our <Link to="/terms">Terms & Conditions</Link>.
+      </p>
     </div>
   );
 
