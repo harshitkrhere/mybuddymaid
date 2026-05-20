@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
@@ -6,16 +6,23 @@ export default function SplashScreen() {
   const navigate = useNavigate();
   const location = useLocation();
   const { isAuthenticated, loading } = useAuth();
+  const [ready, setReady] = useState(false);
 
+  // Show splash for 4 seconds
   useEffect(() => {
-    if (loading) return;
+    const t = setTimeout(() => setReady(true), 4000);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Navigate once 4s elapsed AND auth resolved
+  useEffect(() => {
+    if (!ready || loading) return;
 
     if (!isAuthenticated) {
       navigate('/auth', { replace: true });
       return;
     }
 
-    // Resolve destination from context
     const ctx = location.state?.redirectContext || sessionStorage.getItem('mbm_redirect_context');
     sessionStorage.removeItem('mbm_redirect_context');
 
@@ -30,7 +37,7 @@ export default function SplashScreen() {
     }
 
     navigate(destination, { replace: true });
-  }, [loading, isAuthenticated, navigate, location.state]);
+  }, [ready, loading, isAuthenticated, navigate, location.state]);
 
   return (
     <div className="splash-screen">
