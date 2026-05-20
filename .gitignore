@@ -1,0 +1,26 @@
+# Dependencies
+node_modules
+
+# Build output
+app/dist
+
+# Environment files (API keys)
+.env
+.env.*
+app/.env
+app/.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode
+.idea
+*.sw?
+
+# Supabase temp
+supabase/.temp
+
+# Nested git
+mybuddymaid/.git

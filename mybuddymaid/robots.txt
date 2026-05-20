@@ -1,0 +1,10 @@
+# MyBuddyMaid — robots.txt
+User-agent: *
+Allow: /
+Disallow: /_vercel/
+
+# Sitemap
+Sitemap: https://mybuddymaid.in/sitemap.xml
+
+# Crawl-delay (be polite)
+Crawl-delay: 1
