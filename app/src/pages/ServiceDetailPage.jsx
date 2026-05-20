@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { SERVICES } from '../lib/constants';
 import { SERVICE_ICONS, SERVICE_COLORS } from '../components/ServiceIcons';
-import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone } from 'lucide-react';
 
 export default function ServiceDetailPage() {
   const { serviceId } = useParams();
@@ -15,6 +15,8 @@ export default function ServiceDetailPage() {
   const bgColor = SERVICE_COLORS[serviceId];
 
   const [showBookingForm, setShowBookingForm] = useState(false);
+  const [bookEmail, setBookEmail] = useState(profile?.email || '');
+  const [bookPhone, setBookPhone] = useState(profile?.phone || '');
   const [city, setCity] = useState(profile?.city || '');
   const [notes, setNotes] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -34,15 +36,18 @@ export default function ServiceDetailPage() {
 
   const handleBooking = async (e) => {
     e.preventDefault();
-    if (!city.trim()) {
-      setError('Please select your city');
-      return;
+    if (!bookEmail.trim()) { setError('Please enter your email'); return; }
+    if (!bookPhone.trim() || bookPhone.replace(/\D/g, '').length < 10) {
+      setError('Please enter a valid 10-digit mobile number'); return;
     }
+    if (!city.trim()) { setError('Please select your city'); return; }
     setSubmitting(true);
     setError('');
     try {
       await createBooking({
         service_type: service.id,
+        email: bookEmail.trim(),
+        phone: bookPhone.trim(),
         city: city.trim(),
         notes: notes.trim(),
       });
@@ -94,7 +99,15 @@ export default function ServiceDetailPage() {
                 <h3 className="booking-sheet-title">Book {service.name}</h3>
                 <form onSubmit={handleBooking} className="booking-form">
                   <div className="booking-field">
-                    <label><MapPin size={14} /> City</label>
+                    <label><Mail size={14} /> Email *</label>
+                    <input type="email" value={bookEmail} onChange={e => setBookEmail(e.target.value)} placeholder="you@example.com" required />
+                  </div>
+                  <div className="booking-field">
+                    <label><Phone size={14} /> Mobile Number *</label>
+                    <input type="tel" value={bookPhone} onChange={e => setBookPhone(e.target.value)} placeholder="+91 XXXXX XXXXX" required />
+                  </div>
+                  <div className="booking-field">
+                    <label><MapPin size={14} /> City *</label>
                     <select value={city} onChange={e => setCity(e.target.value)} required>
                       <option value="">Select your city</option>
                       <option value="Delhi NCR">Delhi NCR</option>

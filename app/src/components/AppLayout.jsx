@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from 'react-router-dom';
-import { Home, Grid, CalendarDays, User, MapPin, Bell, Search, Sparkles } from 'lucide-react';
+import { Home, Grid, CalendarDays, User, MapPin, Bell, Search, Sparkles, Crown } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 export default function AppLayout() {
@@ -26,6 +26,9 @@ export default function AppLayout() {
           </NavLink>
           <NavLink to="/bookings" className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}>
             <CalendarDays size={18} /> <span>My Bookings</span>
+          </NavLink>
+          <NavLink to="/pricing" className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}>
+            <Crown size={18} /> <span>Pricing</span>
           </NavLink>
           <NavLink to="/profile" className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}>
             <User size={18} /> <span>Account</span>
@@ -83,6 +86,9 @@ export default function AppLayout() {
         </NavLink>
         <NavLink to="/bookings" className={({ isActive }) => `tab-item ${isActive ? 'active' : ''}`}>
           <CalendarDays size={22} /><span>Bookings</span>
+        </NavLink>
+        <NavLink to="/pricing" className={({ isActive }) => `tab-item ${isActive ? 'active' : ''}`}>
+          <Crown size={22} /><span>Pricing</span>
         </NavLink>
         <NavLink to="/profile" className={({ isActive }) => `tab-item ${isActive ? 'active' : ''}`}>
           <User size={22} /><span>Profile</span>

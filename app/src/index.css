@@ -419,14 +419,17 @@ ul { list-style: none; }
   font-size: 0.82rem; font-weight: 600; color: var(--text-sec); margin-bottom: 8px;
 }
 .booking-field select,
-.booking-field textarea {
+.booking-field textarea,
+.booking-field input {
   width: 100%; padding: 14px 16px; border-radius: var(--r-md);
   background: var(--bg); border: 1px solid var(--border);
   color: var(--text); font-size: 0.9rem; font-family: var(--font-b);
   transition: border-color 0.2s;
 }
 .booking-field select:focus,
-.booking-field textarea:focus { border-color: var(--primary); outline: none; }
+.booking-field textarea:focus,
+.booking-field input:focus { border-color: var(--primary); outline: none; }
+.booking-field input::placeholder { color: var(--text-muted); }
 .booking-field textarea { resize: vertical; min-height: 80px; }
 .booking-error { color: var(--error); font-size: 0.82rem; margin: 0; }
 .booking-submit { width: 100%; justify-content: center; padding: 16px; font-size: 0.95rem; }
@@ -950,3 +953,99 @@ ul { list-style: none; }
 
 /* Profile tab content animation */
 .profile-tab-content { animation: fadeIn 0.3s ease; }
+
+
+/* ═══════════════════════════════════════════
+   PRICING PAGE
+   ═══════════════════════════════════════════ */
+.pricing-page { padding: 20px 24px calc(var(--tab-h) + 24px); }
+.pricing-title { font-size: 1.6rem; font-weight: 800; font-family: var(--font-d); letter-spacing: -0.03em; margin-bottom: 6px; }
+.pricing-subtitle { font-size: 0.88rem; color: var(--text-sec); margin-bottom: 24px; }
+
+.pricing-contact {
+  display: flex; flex-direction: column; gap: 14px;
+  margin-bottom: 24px; padding: 20px;
+  background: var(--bg-card); border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+}
+.pricing-contact .booking-field input {
+  width: 100%; padding: 14px 16px; border-radius: var(--r-md);
+  background: var(--bg); border: 1px solid var(--border);
+  color: var(--text); font-size: 0.9rem; font-family: var(--font-b);
+  transition: border-color 0.2s;
+}
+.pricing-contact .booking-field input:focus { border-color: var(--primary); outline: none; }
+.pricing-contact .booking-field input::placeholder { color: var(--text-muted); }
+
+@media (min-width: 768px) {
+  .pricing-page { padding-bottom: 40px !important; }
+}
+
+
+/* ═══════════════════════════════════════════
+   ONBOARDING PAGE
+   ═══════════════════════════════════════════ */
+.onboarding-page {
+  min-height: 100dvh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg);
+  padding: 24px;
+}
+.onboarding-card {
+  width: 100%; max-width: 480px;
+  background: var(--bg-card);
+  border-radius: var(--r-xl);
+  padding: 40px 32px;
+  border: 1px solid var(--border);
+  box-shadow: var(--sh-lg);
+  text-align: center;
+}
+.onboarding-icon {
+  width: 64px; height: 64px; margin: 0 auto 20px;
+  background: var(--primary); border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  color: #0F0F0F;
+}
+.onboarding-title {
+  font-size: 1.6rem; font-weight: 800; font-family: var(--font-d);
+  margin-bottom: 6px; letter-spacing: -0.03em;
+}
+.onboarding-subtitle {
+  font-size: 0.92rem; color: var(--text-sec); margin-bottom: 32px;
+}
+
+.onboarding-form {
+  display: flex; flex-direction: column; gap: 18px; text-align: left;
+}
+.onboarding-field label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.82rem; font-weight: 600; color: var(--primary);
+  margin-bottom: 8px;
+}
+.onboarding-field input,
+.onboarding-field select {
+  width: 100%; padding: 14px 16px; border-radius: var(--r-md);
+  background: var(--bg); border: 1px solid var(--border);
+  color: var(--text); font-size: 0.92rem; font-family: var(--font-b);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.onboarding-field input:focus,
+.onboarding-field select:focus {
+  border-color: var(--primary); outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.12);
+}
+.onboarding-field input::placeholder { color: var(--text-muted); }
+
+.onboarding-error {
+  color: var(--error); font-size: 0.82rem; text-align: center;
+  padding: 10px 14px; border-radius: var(--r-sm);
+  background: rgba(239,68,68,0.1); margin: 0;
+}
+.onboarding-submit {
+  width: 100%; justify-content: center; padding: 16px;
+  font-size: 1rem; margin-top: 8px;
+}
+.onboarding-hint {
+  font-size: 0.78rem; color: var(--text-muted); text-align: center;
+  margin: 0;
+}

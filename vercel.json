@@ -5,10 +5,12 @@
   "rewrites": [
     { "source": "/auth", "destination": "/_app.html" },
     { "source": "/splash", "destination": "/_app.html" },
+    { "source": "/onboarding", "destination": "/_app.html" },
     { "source": "/home", "destination": "/_app.html" },
     { "source": "/services", "destination": "/_app.html" },
     { "source": "/services/:id", "destination": "/_app.html" },
     { "source": "/bookings", "destination": "/_app.html" },
+    { "source": "/pricing", "destination": "/_app.html" },
     { "source": "/profile", "destination": "/_app.html" }
   ]
 }

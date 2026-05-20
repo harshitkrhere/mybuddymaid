@@ -151,6 +151,8 @@ export function AuthProvider({ children }) {
       .insert({
         user_id: user.id,
         service: bookingData.service_type,
+        email: bookingData.email || '',
+        phone: bookingData.phone || '',
         city: bookingData.city || profile?.city || 'Delhi NCR',
         notes: bookingData.notes || '',
         status: 'pending',
@@ -175,6 +177,8 @@ export function AuthProvider({ children }) {
         replacements_used: 0,
         expires_at: planData.expires_at,
         is_active: true,
+        email: planData.email || '',
+        phone: planData.phone || '',
       })
       .select()
       .single();

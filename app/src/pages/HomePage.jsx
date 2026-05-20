@@ -68,12 +68,12 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-            <Link to="/profile?tab=packages" className="home-plan-link">
+            <Link to="/pricing" className="home-plan-link">
               View Plan Details <ChevronRight size={16} />
             </Link>
           </div>
         ) : (
-          <Link to="/profile?tab=packages" className="home-plan-cta">
+          <Link to="/pricing" className="home-plan-cta">
             <div className="home-plan-cta-content">
               <Crown size={28} />
               <div>
