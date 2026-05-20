@@ -6,19 +6,20 @@ export default function SplashScreen() {
   const navigate = useNavigate();
   const location = useLocation();
   const { isAuthenticated, loading } = useAuth();
-  const [ready, setReady] = useState(false);
+  const [timerDone, setTimerDone] = useState(false);
 
-  // Show splash for 4 seconds
+  // 4-second branding timer
   useEffect(() => {
-    const t = setTimeout(() => setReady(true), 4000);
+    const t = setTimeout(() => setTimerDone(true), 4000);
     return () => clearTimeout(t);
   }, []);
 
-  // Navigate once 4s elapsed AND auth resolved
+  // Navigate after timer — don't get stuck waiting for auth
   useEffect(() => {
-    if (!ready || loading) return;
+    if (!timerDone) return;
 
-    if (!isAuthenticated) {
+    // If auth is still loading after 4s, just go to /home — ProtectedRoute handles the rest
+    if (!isAuthenticated && !loading) {
       navigate('/auth', { replace: true });
       return;
     }
@@ -30,14 +31,13 @@ export default function SplashScreen() {
     if (ctx) {
       const serviceIds = ['part-time', 'full-time', 'elderly-care', 'cook', 'nanny', 'postnatal'];
       const planNames = ['silver', 'gold', 'diamond', 'platinum'];
-
       if (ctx === 'book') destination = '/services';
       else if (serviceIds.includes(ctx)) destination = `/services/${ctx}`;
       else if (planNames.includes(ctx)) destination = '/profile?tab=packages';
     }
 
     navigate(destination, { replace: true });
-  }, [ready, loading, isAuthenticated, navigate, location.state]);
+  }, [timerDone]);
 
   return (
     <div className="splash-screen">
