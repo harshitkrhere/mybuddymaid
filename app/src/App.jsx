@@ -20,9 +20,10 @@ function ProtectedRoute({ children }) {
 }
 
 function OnboardingGuard({ children }) {
-  const { profile, loading } = useAuth();
-  if (loading) return <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',background:'#0F0F0F'}}><div className="loading-spinner"></div></div>;
-  // If profile has no name, redirect to onboarding
+  const { profile, loading, profileLoaded } = useAuth();
+  // Show spinner until profile data has actually loaded
+  if (loading || !profileLoaded) return <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',background:'#0F0F0F'}}><div className="loading-spinner"></div></div>;
+  // Only redirect to onboarding if profile fetch completed and there's no name
   if (!profile?.full_name) return <Navigate to="/onboarding" replace />;
   return children;
 }

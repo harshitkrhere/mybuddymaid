@@ -11,6 +11,7 @@ export function AuthProvider({ children }) {
   const [userPlan, setUserPlan] = useState(null);
   const [userBookings, setUserBookings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [profileLoaded, setProfileLoaded] = useState(false);
 
   const fetchProfile = useCallback(async (userId) => {
     try {
@@ -64,11 +65,13 @@ export function AuthProvider({ children }) {
   }, []);
 
   const loadUserData = useCallback(async (userId) => {
-    await Promise.all([
+    const [profileData] = await Promise.all([
       fetchProfile(userId),
       fetchUserPlan(userId),
       fetchBookings(userId),
     ]);
+    setProfileLoaded(true);
+    return profileData;
   }, [fetchProfile, fetchUserPlan, fetchBookings]);
 
   useEffect(() => {
@@ -92,6 +95,7 @@ export function AuthProvider({ children }) {
         setProfile(null);
         setUserPlan(null);
         setUserBookings([]);
+        setProfileLoaded(true);
       }
       setLoading(false);
     });
@@ -201,6 +205,7 @@ export function AuthProvider({ children }) {
     userPlan,
     userBookings,
     loading,
+    profileLoaded,
     isAuthenticated: !!user,
     signInWithGoogle,
     signUpWithEmail,
