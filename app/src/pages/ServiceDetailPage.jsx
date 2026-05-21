@@ -8,14 +8,14 @@ import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone 
 export default function ServiceDetailPage() {
   const { serviceId } = useParams();
   const navigate = useNavigate();
-  const { profile, createBooking } = useAuth();
+  const { user, profile, createBooking } = useAuth();
 
   const service = SERVICES.find(s => s.id === serviceId);
   const Icon = SERVICE_ICONS[serviceId];
   const bgColor = SERVICE_COLORS[serviceId];
 
   const [showBookingForm, setShowBookingForm] = useState(false);
-  const [bookEmail, setBookEmail] = useState(profile?.email || '');
+  const [bookEmail] = useState(user?.email || '');
   const [bookPhone, setBookPhone] = useState(profile?.phone || '');
   const [city, setCity] = useState(profile?.city || '');
   const [notes, setNotes] = useState('');
@@ -36,7 +36,7 @@ export default function ServiceDetailPage() {
 
   const handleBooking = async (e) => {
     e.preventDefault();
-    if (!bookEmail.trim()) { setError('Please enter your email'); return; }
+
     if (!bookPhone.trim() || bookPhone.replace(/\D/g, '').length < 10) {
       setError('Please enter a valid 10-digit mobile number'); return;
     }
@@ -100,7 +100,7 @@ export default function ServiceDetailPage() {
                 <form onSubmit={handleBooking} className="booking-form">
                   <div className="booking-field">
                     <label><Mail size={14} /> Email *</label>
-                    <input type="email" value={bookEmail} onChange={e => setBookEmail(e.target.value)} placeholder="you@example.com" required />
+                    <input type="email" value={bookEmail} readOnly className="input-locked" />
                   </div>
                   <div className="booking-field">
                     <label><Phone size={14} /> Mobile Number *</label>

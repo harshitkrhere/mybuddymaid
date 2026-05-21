@@ -7,8 +7,8 @@ export default function ProfilePage() {
 
   const [fullName, setFullName] = useState(profile?.full_name || '');
   const [phone, setPhone] = useState(profile?.phone || '');
-  const [email, setEmail] = useState(profile?.email || user?.email || '');
   const [city, setCity] = useState(profile?.city || '');
+  const authEmail = user?.email || '';
   const [saving, setSaving] = useState(false);
   const [saveMsg, setSaveMsg] = useState('');
 
@@ -16,7 +16,6 @@ export default function ProfilePage() {
     if (profile) {
       setFullName(profile.full_name || '');
       setPhone(profile.phone || '');
-      setEmail(profile.email || user?.email || '');
       setCity(profile.city || '');
     }
   }, [profile, user]);
@@ -26,7 +25,7 @@ export default function ProfilePage() {
     setSaving(true);
     setSaveMsg('');
     try {
-      await updateProfile({ full_name: fullName, phone, email, city });
+      await updateProfile({ full_name: fullName, phone, email: authEmail, city });
       setSaveMsg('Profile saved!');
       setTimeout(() => setSaveMsg(''), 3000);
     } catch (err) {
@@ -63,7 +62,7 @@ export default function ProfilePage() {
         </div>
         <div className="profile-field">
           <label><Mail size={14} /> Email</label>
-          <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" />
+          <input type="email" value={authEmail} readOnly className="input-locked" />
         </div>
         <div className="profile-field">
           <label><MapPin size={14} /> City</label>

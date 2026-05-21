@@ -54,7 +54,7 @@ export default function PricingPage() {
   const { user, profile, userPlan, purchasePlan, refreshUserPlan } = useAuth();
   const [purchasing, setPurchasing] = useState(null);
   const [payError, setPayError] = useState('');
-  const [buyEmail, setBuyEmail] = useState(profile?.email || user?.email || '');
+  const buyEmail = user?.email || '';
   const [buyPhone, setBuyPhone] = useState(profile?.phone || '');
   const [contactError, setContactError] = useState('');
   const [selectedPlan, setSelectedPlan] = useState('gold');
@@ -77,8 +77,8 @@ export default function PricingPage() {
       setPayError('Payment service unavailable. Please try again later.');
       return;
     }
-    if (!buyEmail.trim() || !buyPhone.trim()) {
-      setContactError('Please enter your email and mobile number before purchasing.');
+    if (!buyPhone.trim()) {
+      setContactError('Please enter your mobile number before purchasing.');
       return;
     }
     if (buyPhone.replace(/\D/g, '').length < 10) {
@@ -238,8 +238,8 @@ export default function PricingPage() {
                   <input
                     type="email"
                     value={buyEmail}
-                    onChange={e => setBuyEmail(e.target.value)}
-                    placeholder="Your email"
+                    readOnly
+                    className="input-locked"
                   />
                 </div>
                 <div className="pricing-input-row">

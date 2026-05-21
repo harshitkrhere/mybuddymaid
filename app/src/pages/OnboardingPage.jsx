@@ -9,8 +9,8 @@ export default function OnboardingPage() {
 
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState(user?.email || '');
   const [city, setCity] = useState('');
+  const authEmail = user?.email || '';
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
 
@@ -20,7 +20,7 @@ export default function OnboardingPage() {
     if (!phone.trim() || phone.replace(/\D/g, '').length < 10) {
       setError('Please enter a valid 10-digit mobile number'); return;
     }
-    if (!email.trim()) { setError('Please enter your email'); return; }
+
     if (!city) { setError('Please select your city'); return; }
 
     setSaving(true);
@@ -29,7 +29,7 @@ export default function OnboardingPage() {
       await updateProfile({
         full_name: fullName.trim(),
         phone: phone.trim(),
-        email: email.trim(),
+        email: authEmail,
         city,
       });
       navigate('/home', { replace: true });
@@ -74,9 +74,9 @@ export default function OnboardingPage() {
             <label><Mail size={14} /> Email</label>
             <input
               type="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              placeholder="you@example.com"
+              value={authEmail}
+              readOnly
+              className="input-locked"
             />
           </div>
 
