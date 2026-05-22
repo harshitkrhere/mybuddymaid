@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { SERVICES } from '../lib/constants';
 import { SERVICE_ICONS, SERVICE_COLORS } from '../components/ServiceIcons';
-import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone } from 'lucide-react';
+import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone, Headphones, X, MessageCircle } from 'lucide-react';
 
 export default function ServiceDetailPage() {
   const { serviceId } = useParams();
@@ -22,6 +22,9 @@ export default function ServiceDetailPage() {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [showSupport, setShowSupport] = useState(false);
+
+  const SUPPORT_PHONE = '9599390188';
 
   if (!service) {
     return (
@@ -140,10 +143,47 @@ export default function ServiceDetailPage() {
       )}
 
       <div className="detail-cta-bar">
+        <button className="detail-support-btn" onClick={() => setShowSupport(true)}>
+          <Headphones size={18} />
+          Support
+        </button>
         <button className="btn-primary-app detail-cta-btn" onClick={() => setShowBookingForm(true)}>
           Book Now — {service.price}
         </button>
       </div>
+
+      {/* Support popup */}
+      {showSupport && (
+        <div className="support-overlay" onClick={() => setShowSupport(false)}>
+          <div className="support-popup" onClick={e => e.stopPropagation()}>
+            <button className="support-close" onClick={() => setShowSupport(false)}><X size={18} /></button>
+            <h3 className="support-title">Contact Support</h3>
+            <p className="support-sub">Choose how you'd like to reach us</p>
+            <a
+              href={`tel:+91${SUPPORT_PHONE}`}
+              className="support-option support-call"
+            >
+              <Phone size={20} />
+              <div>
+                <span className="support-option-label">Call Us</span>
+                <span className="support-option-sub">+91 {SUPPORT_PHONE}</span>
+              </div>
+            </a>
+            <a
+              href={`https://wa.me/91${SUPPORT_PHONE}?text=${encodeURIComponent(`Hi MyBuddyMaid, I need help with ${service.name} service. Please assist me.`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="support-option support-wa"
+            >
+              <MessageCircle size={20} />
+              <div>
+                <span className="support-option-label">WhatsApp</span>
+                <span className="support-option-sub">Chat with us instantly</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
