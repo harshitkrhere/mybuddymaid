@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { INDIAN_STATES } from '../lib/constants';
 import { User, Phone, Mail, MapPin, LogOut, Loader2 } from 'lucide-react';
 
 export default function ProfilePage() {
@@ -7,7 +8,7 @@ export default function ProfilePage() {
 
   const [fullName, setFullName] = useState(profile?.full_name || '');
   const [phone, setPhone] = useState(profile?.phone || '');
-  const [city, setCity] = useState(profile?.city || '');
+  const [state, setState] = useState(profile?.city || '');
   const authEmail = user?.email || '';
   const [saving, setSaving] = useState(false);
   const [saveMsg, setSaveMsg] = useState('');
@@ -16,7 +17,7 @@ export default function ProfilePage() {
     if (profile) {
       setFullName(profile.full_name || '');
       setPhone(profile.phone || '');
-      setCity(profile.city || '');
+      setState(profile.city || '');
     }
   }, [profile, user]);
 
@@ -25,7 +26,7 @@ export default function ProfilePage() {
     setSaving(true);
     setSaveMsg('');
     try {
-      await updateProfile({ full_name: fullName, phone, email: authEmail, city });
+      await updateProfile({ full_name: fullName, phone, email: authEmail, city: state });
       setSaveMsg('Profile saved!');
       setTimeout(() => setSaveMsg(''), 3000);
     } catch (err) {
@@ -65,16 +66,10 @@ export default function ProfilePage() {
           <input type="email" value={authEmail} readOnly className="input-locked" />
         </div>
         <div className="profile-field">
-          <label><MapPin size={14} /> City</label>
-          <select value={city} onChange={e => setCity(e.target.value)}>
-            <option value="">Select city</option>
-            <option value="Delhi NCR">Delhi NCR</option>
-            <option value="Mumbai">Mumbai</option>
-            <option value="Bangalore">Bangalore</option>
-            <option value="Hyderabad">Hyderabad</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Pune">Pune</option>
-            <option value="Kolkata">Kolkata</option>
+          <label><MapPin size={14} /> State</label>
+          <select value={state} onChange={e => setState(e.target.value)}>
+            <option value="">Select state</option>
+            {INDIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
           </select>
         </div>
         <button type="submit" className="btn-primary-app profile-save" disabled={saving}>

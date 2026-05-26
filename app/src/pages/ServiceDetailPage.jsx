@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
-import { SERVICES } from '../lib/constants';
+import { SERVICES, INDIAN_STATES } from '../lib/constants';
 import { SERVICE_ICONS, SERVICE_COLORS } from '../components/ServiceIcons';
 import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone, Headphones, X, MessageCircle } from 'lucide-react';
 
@@ -44,7 +44,7 @@ export default function ServiceDetailPage() {
     if (!bookPhone.trim() || bookPhone.replace(/\D/g, '').length < 10) {
       setError('Please enter a valid 10-digit mobile number'); return;
     }
-    if (!city.trim()) { setError('Please select your city'); return; }
+    if (!city.trim()) { setError('Please select your state'); return; }
     setSubmitting(true);
     setError('');
     try {
@@ -128,16 +128,10 @@ export default function ServiceDetailPage() {
                     <input type="tel" value={bookPhone} onChange={e => setBookPhone(e.target.value)} placeholder="+91 XXXXX XXXXX" required />
                   </div>
                   <div className="booking-field">
-                    <label><MapPin size={14} /> City *</label>
+                    <label><MapPin size={14} /> State *</label>
                     <select value={city} onChange={e => setCity(e.target.value)} required>
-                      <option value="">Select your city</option>
-                      <option value="Delhi NCR">Delhi NCR</option>
-                      <option value="Mumbai">Mumbai</option>
-                      <option value="Bangalore">Bangalore</option>
-                      <option value="Hyderabad">Hyderabad</option>
-                      <option value="Chennai">Chennai</option>
-                      <option value="Pune">Pune</option>
-                      <option value="Kolkata">Kolkata</option>
+                      <option value="">Select your state</option>
+                      {INDIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
                     </select>
                   </div>
                   <div className="booking-field">

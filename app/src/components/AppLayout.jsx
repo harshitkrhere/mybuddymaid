@@ -58,7 +58,7 @@ export default function AppLayout() {
           <div className="app-header-left">
             <button className="app-header-location" style={{ background: '#1A1A1A', borderColor: 'rgba(255,255,255,0.08)', color: '#F1F5F9' }}>
               <MapPin size={14} style={{ color: '#34D399' }} />
-              <span>{profile?.city || 'Delhi NCR'}</span>
+              <span>{profile?.city || 'Delhi'}</span>
             </button>
           </div>
           

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { INDIAN_STATES } from '../lib/constants';
 import { User, Phone, Mail, MapPin, ArrowRight, Loader2, Home as HomeIcon } from 'lucide-react';
 
 export default function OnboardingPage() {
@@ -9,7 +10,7 @@ export default function OnboardingPage() {
 
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
-  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
   const authEmail = user?.email || '';
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
@@ -21,7 +22,7 @@ export default function OnboardingPage() {
       setError('Please enter a valid 10-digit mobile number'); return;
     }
 
-    if (!city) { setError('Please select your city'); return; }
+    if (!state) { setError('Please select your state'); return; }
 
     setSaving(true);
     setError('');
@@ -30,7 +31,7 @@ export default function OnboardingPage() {
         full_name: fullName.trim(),
         phone: phone.trim(),
         email: authEmail,
-        city,
+        city: state,
       });
       navigate('/home', { replace: true });
     } catch (err) {
@@ -81,16 +82,10 @@ export default function OnboardingPage() {
           </div>
 
           <div className="onboarding-field">
-            <label><MapPin size={14} /> City</label>
-            <select value={city} onChange={e => setCity(e.target.value)}>
-              <option value="">Select your city</option>
-              <option value="Delhi NCR">Delhi NCR</option>
-              <option value="Mumbai">Mumbai</option>
-              <option value="Bangalore">Bangalore</option>
-              <option value="Hyderabad">Hyderabad</option>
-              <option value="Chennai">Chennai</option>
-              <option value="Pune">Pune</option>
-              <option value="Kolkata">Kolkata</option>
+            <label><MapPin size={14} /> State</label>
+            <select value={state} onChange={e => setState(e.target.value)}>
+              <option value="">Select your state</option>
+              {INDIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
           </div>
 

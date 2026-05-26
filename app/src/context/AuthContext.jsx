@@ -157,7 +157,7 @@ export function AuthProvider({ children }) {
         service: bookingData.service_type,
         email: bookingData.email || '',
         phone: bookingData.phone || '',
-        city: bookingData.city || profile?.city || 'Delhi NCR',
+        city: bookingData.city || profile?.city || 'Delhi',
         notes: bookingData.notes || '',
         status: 'pending',
       })
