@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { supabase } from '../lib/supabase';
 import { SERVICES } from '../lib/constants';
 import { SERVICE_ICONS, SERVICE_COLORS } from '../components/ServiceIcons';
 import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone, Headphones, X, MessageCircle } from 'lucide-react';
@@ -47,7 +48,7 @@ export default function ServiceDetailPage() {
     setSubmitting(true);
     setError('');
     try {
-      await createBooking({
+      const result = await createBooking({
         service_type: service.id,
         email: bookEmail.trim(),
         phone: bookPhone.trim(),
@@ -55,6 +56,23 @@ export default function ServiceDetailPage() {
         notes: notes.trim(),
       });
       setSuccess(true);
+      // Send booking confirmation email (non-blocking)
+      try {
+        await supabase.functions.invoke('send-booking-email', {
+          body: {
+            user_id: user?.id,
+            user_name: profile?.full_name || 'Valued Customer',
+            user_email: bookEmail || user?.email,
+            service_type: service.id,
+            city: city.trim(),
+            notes: notes.trim(),
+            booking_id: result?.id || null,
+            created_at: new Date().toISOString(),
+          },
+        });
+      } catch (emailErr) {
+        console.warn('[MyBuddyMaid] Booking email failed:', emailErr);
+      }
       setTimeout(() => navigate('/bookings'), 2000);
     } catch (err) {
       setError(err.message || 'Failed to create booking. Please try again.');

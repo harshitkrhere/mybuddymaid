@@ -114,15 +114,19 @@ export default function PricingPage() {
           });
           await refreshUserPlan();
           setPurchasing(null);
-          supabase.functions.invoke('send-plan-email', {
+          supabase.functions.invoke('send-package-email', {
             body: {
-              user_email: buyEmail,
+              user_id: user?.id,
               user_name: profile?.full_name || 'Valued Customer',
+              user_email: buyEmail,
               plan_name: planKey,
               amount_paid: p.pricePaise,
-              payment_id: response.razorpay_payment_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              purchased_at: new Date().toISOString(),
+              replacements_total: p.replacementsTotal,
+              expires_at: expiresAt.toISOString(),
             },
-          }).catch(err => console.warn('Email send failed:', err));
+          }).catch(err => console.warn('[MyBuddyMaid] Package email failed:', err));
         } catch (err) {
           setPayError('Payment recorded but plan activation failed. Contact support.');
           setPurchasing(null);

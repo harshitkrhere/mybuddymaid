@@ -132,3 +132,24 @@ CREATE INDEX IF NOT EXISTS idx_user_plans_active ON user_plans(is_active);
 -- Add assigned_helper column to bookings if not present
 ALTER TABLE bookings ADD COLUMN IF NOT EXISTS assigned_helper TEXT;
 
+-- ═══════════════════════════════════════════════════════════════
+-- EMAIL LOGS TABLE — Internal logging for transactional emails
+-- ═══════════════════════════════════════════════════════════════
+
+CREATE TABLE IF NOT EXISTS email_logs (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID,
+  email_type TEXT,
+  recipient_email TEXT,
+  status TEXT,
+  resend_response JSONB,
+  error_message TEXT,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+-- No RLS — this is internal server-side logging, not user-facing
+ALTER TABLE email_logs DISABLE ROW LEVEL SECURITY;
+
+CREATE INDEX IF NOT EXISTS idx_email_logs_user_id ON email_logs(user_id);
+CREATE INDEX IF NOT EXISTS idx_email_logs_status ON email_logs(status);
+CREATE INDEX IF NOT EXISTS idx_email_logs_created_at ON email_logs(created_at DESC);
