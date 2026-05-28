@@ -1,0 +1,1249 @@
+[
+  {
+    "id": "maid-service",
+    "slug": "maid-service",
+    "name": "Maid Service",
+    "shortName": "Maid",
+    "providerTitle": "Maid",
+    "icon": "🧹",
+    "heroImage": "part time buddy.jpg",
+    "priceFrom": "₹5,000/mo",
+    "metaTitle": "Hire Verified Maid Service in India — Trusted Home Help | MyBuddyMaid",
+    "metaDescription": "Book 100% police-verified maids for cleaning, laundry & household management. Part-time, full-time & live-in options. 1-year replacement guarantee. Starting ₹5,000/mo.",
+    "metaKeywords": "maid service, hire maid, domestic help, house help, cleaning service, part time maid, home cleaning, house cleaning, maid near me, verified maid, kaamwali bai, safai wali, domestic worker",
+    "h1": "Hire Verified Maid Service in India",
+    "heroSubtitle": "100% police-verified maids for cleaning, laundry, and complete household management. Deployed within 24 hours.",
+    "intro": "Managing a household in India today is nothing like it was a generation ago. Both partners in most urban families now work full-time jobs, often commuting two or three hours a day in cities like Mumbai, Bengaluru, and Delhi NCR. When you finally get home in the evening, the last thing you want is a mountain of unwashed dishes, dusty floors, and laundry piling up in the corner. That is exactly where a professional maid service steps in — taking the daily burden of housekeeping off your shoulders so you can focus on your career, your family, and your own well-being.\n\nFor decades, Indian families relied on informal word-of-mouth networks to find domestic help. A neighbour would recommend someone, or a building watchman would bring in a relative from his village. While this occasionally worked, it also came with enormous risks: no background checks, no accountability, and no replacement if the maid suddenly stopped showing up — which, as every Indian household knows, happens far too often, especially around festivals or harvest season. The result? You are left scrambling, calling every contact you have, while dirty utensils pile up and the house descends into chaos.\n\nMyBuddyMaid was built to solve this exact problem. We operate a structured, technology-driven maid placement service that connects Indian families with police-verified, trained domestic helpers. Every maid on our platform undergoes a thorough background check — including Aadhaar verification, police records screening, and reference calls to previous employers. We do not just send you the first person available; we match you with a maid whose skills, language, and schedule align with your household's specific needs.\n\nWhether you live in a 1 BHK apartment in Pune or a sprawling villa in Hyderabad, whether you are a young couple who just needs someone for a few hours in the morning or a joint family that requires all-day support — we have a plan that fits. Our part-time maids can handle daily cleaning, utensil washing, and laundry in as little as two to four hours. And if your maid does not work out, our one-year replacement guarantee ensures you get a new match at no extra cost. No more begging neighbours for contacts. No more compromising on trust. Just a clean home, every single day.",
+    "whatTheyDo": {
+      "heading": "What Does a Professional Maid Do?",
+      "description": "A professional maid from MyBuddyMaid handles every aspect of daily housekeeping so that your home stays spotless without you lifting a finger. Our maids are trained in systematic cleaning routines, proper use of cleaning agents on different surfaces, and efficient time management to ensure every task gets done within the agreed hours. Here is a detailed breakdown of what our maids take care of:",
+      "tasks": [
+        {
+          "task": "Daily Sweeping & Mopping",
+          "detail": "Thorough sweeping and wet-mopping of all rooms, hallways, and balconies using appropriate cleaners for marble, vitrified tiles, wooden flooring, and mosaic surfaces. Includes moving lightweight furniture to clean underneath."
+        },
+        {
+          "task": "Dusting & Surface Wiping",
+          "detail": "Dusting all furniture, shelves, window sills, photo frames, showpieces, TV units, and electronic appliances using microfibre cloths to avoid scratches. Ceiling fans and light fixtures are dusted on a weekly rotation."
+        },
+        {
+          "task": "Utensil Washing & Kitchen Cleanup",
+          "detail": "Washing all cooking vessels, plates, glasses, and cutlery after meals. Cleaning the kitchen platform, gas stove, chimney exterior, and sink area. Wiping down the fridge exterior and microwave."
+        },
+        {
+          "task": "Laundry — Washing, Drying & Folding",
+          "detail": "Hand-washing delicate garments, loading and unloading the washing machine, hanging clothes to dry on the balcony or terrace, and neatly folding and organizing dried clothes in wardrobes."
+        },
+        {
+          "task": "Bathroom & Toilet Cleaning",
+          "detail": "Scrubbing toilet bowls, wash basins, shower areas, and bathroom tiles with disinfectant. Cleaning mirrors, replacing toiletries, and ensuring bathroom floors are dry to prevent slipping."
+        },
+        {
+          "task": "Bed Making & Linen Change",
+          "detail": "Making beds every morning, fluffing pillows, and changing bed sheets, pillow covers, and mattress protectors on a weekly schedule or as needed."
+        },
+        {
+          "task": "Ironing & Wardrobe Organization",
+          "detail": "Pressing clothes using a steam or dry iron, hanging formal wear on hangers, folding casual clothing, and organizing wardrobes seasonally — packing away winter or summer clothes as appropriate."
+        },
+        {
+          "task": "Trash Segregation & Disposal",
+          "detail": "Collecting garbage from all rooms, segregating wet and dry waste as per municipal guidelines, and handing over trash to the building's collection system or municipal pickup."
+        },
+        {
+          "task": "Grocery Receiving & Pantry Stocking",
+          "detail": "Receiving grocery deliveries from BigBasket, Zepto, or Blinkit, checking items against the order list, and stocking them properly in the pantry, fridge, or designated storage areas."
+        },
+        {
+          "task": "Pooja Room & Special Area Maintenance",
+          "detail": "Cleaning the pooja room or mandir area, wiping idols gently, replacing old flowers, and maintaining the cleanliness of prayer items — handled with appropriate cultural sensitivity."
+        },
+        {
+          "task": "Guest-Ready Deep Cleaning",
+          "detail": "Preparing the home before guests arrive — extra mopping, arranging guest bedrooms, cleaning the guest bathroom, laying out fresh towels, and a general tidying of common areas."
+        },
+        {
+          "task": "Pet Area Cleaning",
+          "detail": "For homes with pets — cleaning pet feeding bowls, sweeping pet hair from sofas and floors, wiping paw prints from entryways, and maintaining the pet sleeping area."
+        }
+      ]
+    },
+    "serviceTypes": [
+      {
+        "type": "Part-Time Maid (2-4 Hours/Day)",
+        "description": "Our most popular option for nuclear families and working couples. A part-time maid visits your home daily for 2 to 4 hours, handling core tasks like sweeping, mopping, utensil washing, and laundry. She works on a fixed morning or evening slot that suits your schedule. Perfect for apartments and smaller homes where daily upkeep is all that is needed.",
+        "idealFor": "Working couples, bachelor flatshares, 1-2 BHK apartments, families with minimal cooking at home"
+      },
+      {
+        "type": "Full-Time Maid (8-12 Hours/Day)",
+        "description": "A full-time maid stays at your home for the entire day but returns to her own residence at night. She handles all cleaning, cooking assistance, laundry, ironing, and any ad-hoc household tasks. This option is ideal for larger families or homes where there is always something that needs attention — from receiving deliveries to managing vendors.",
+        "idealFor": "Joint families, 3+ BHK homes, families with young children, homes with frequent guests"
+      },
+      {
+        "type": "Live-In Maid (24/7 Availability)",
+        "description": "A live-in maid resides at your home and is available throughout the day and for light duties in the evening. She gets her own room or designated sleeping area, meals, and weekly off. This arrangement works best for large households, NRI families visiting India periodically, and families who need round-the-clock domestic support without managing multiple part-time helpers.",
+        "idealFor": "NRI families, bungalows/villas, large joint families, households needing 24/7 availability, families with elderly members"
+      }
+    ],
+    "salaryGuide": {
+      "heading": "Maid Salary in India (2026 Updated)",
+      "intro": "Maid salaries in India vary significantly depending on the city, type of employment (part-time vs. live-in), the maid's experience, and the number of tasks expected. Metro cities like Mumbai, Delhi, and Bengaluru command higher salaries due to the higher cost of living. Tier-2 cities like Jaipur, Lucknow, and Chandigarh are relatively more affordable. Below are realistic salary ranges you can expect when hiring through MyBuddyMaid in 2026.",
+      "note": "Salaries listed are indicative monthly figures. Actual costs depend on working hours, number of tasks, family size, and the maid's experience level. Festive bonuses (Diwali, Eid, Pongal) are customary and typically equal to one month's salary."
+    },
+    "whyUs": {
+      "heading": "Why Choose MyBuddyMaid Over Local Placement Agencies",
+      "points": [
+        {
+          "title": "100% Police Verification & Background Check",
+          "detail": "Every maid undergoes Aadhaar-based identity verification, police records screening, and reference checks with at least two previous employers. We verify home addresses and maintain a digital trail so you always know who is entering your home."
+        },
+        {
+          "title": "1-Year Free Replacement Guarantee",
+          "detail": "If your maid leaves, underperforms, or is not the right fit for any reason within one year of placement, we send a replacement at absolutely no additional cost. No local agency offers this level of commitment."
+        },
+        {
+          "title": "24-Hour Deployment in Most Cities",
+          "detail": "Urgent requirement? We maintain a ready pool of pre-verified maids in all major Indian cities. In most cases, we can deploy a trained maid to your home within 24 hours of your request."
+        },
+        {
+          "title": "Trained in Modern Cleaning Methods",
+          "detail": "Our maids receive structured training on using vacuum cleaners, steam mops, dishwashers, and modern cleaning products. They know which cleaner works on marble vs. granite vs. wooden surfaces — no more damaged flooring."
+        },
+        {
+          "title": "Transparent Pricing with No Hidden Fees",
+          "detail": "We quote a clear, all-inclusive monthly fee upfront. There are no surprise charges, no annual renewal fees, and no commissions deducted from the maid's salary. What you see on the quote is what you pay."
+        },
+        {
+          "title": "Multilingual Maid Matching",
+          "detail": "India is linguistically diverse, and communication matters. We match you with maids who speak your preferred language — Hindi, Tamil, Telugu, Kannada, Bengali, Marathi, or Malayalam — so instructions are understood clearly from day one."
+        }
+      ]
+    },
+    "howToHire": {
+      "heading": "How to Hire a Maid Through MyBuddyMaid",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Tell Us Your Needs",
+          "detail": "Fill out our quick online form or call us directly. Share your city, home size, preferred working hours, language preference, and the specific tasks you need help with. The more details you provide, the better we can match."
+        },
+        {
+          "step": 2,
+          "title": "We Shortlist & Verify",
+          "detail": "Based on your requirements, our team shortlists 2-3 maids from our verified pool. Each candidate has already passed police verification, identity checks, and skill assessments. We share their profiles with you for review."
+        },
+        {
+          "step": 3,
+          "title": "Meet & Trial",
+          "detail": "You meet the shortlisted candidates — either in person or via a video call. If you like someone, we arrange a 1-2 day paid trial so you can evaluate their work quality, punctuality, and compatibility with your household."
+        },
+        {
+          "step": 4,
+          "title": "Confirm & Onboard",
+          "detail": "Once you are satisfied, confirm the hiring. We handle all paperwork, set clear expectations with the maid regarding duties and timings, and provide you with a welcome kit that includes emergency contacts and escalation procedures."
+        },
+        {
+          "step": 5,
+          "title": "Ongoing Support & Check-Ins",
+          "detail": "Our relationship does not end at placement. We conduct periodic check-ins with both you and the maid to ensure everything is running smoothly. If any issues arise — attendance, performance, behaviour — our support team steps in to mediate and resolve."
+        }
+      ]
+    },
+    "redFlags": {
+      "heading": "Red Flags When Hiring a Maid",
+      "items": [
+        "Reluctance to share identity documents such as Aadhaar card or voter ID — genuine candidates have nothing to hide",
+        "Frequent job changes with gaps that cannot be explained — may indicate reliability issues or conflicts with previous employers",
+        "Refusing a trial period or insisting on advance salary before starting work",
+        "No verifiable references from previous employers — always call at least one reference",
+        "Agencies that charge the maid a hefty commission, which often leads to the maid quitting within weeks to avoid repayment",
+        "Unwillingness to agree to fixed working hours or specific task lists — leads to misunderstandings later",
+        "Agencies that refuse to provide a written agreement or placement receipt",
+        "Candidates who are evasive about their permanent home address or provide inconsistent personal details"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much does a maid cost in India in 2026?",
+        "a": "Part-time maid salaries in India range from ₹5,000 to ₹15,000 per month depending on the city and working hours. In metro cities like Mumbai, Delhi, and Bengaluru, expect to pay ₹8,000-₹15,000 for 2-4 hours daily. In tier-2 cities like Jaipur, Lucknow, and Chandigarh, the range is ₹5,000-₹10,000. Full-time and live-in maids cost significantly more — ₹15,000 to ₹30,000 per month in metros."
+      },
+      {
+        "q": "Are MyBuddyMaid maids police verified?",
+        "a": "Yes, 100%. Every maid listed on MyBuddyMaid undergoes a comprehensive background check that includes Aadhaar-based identity verification, police records screening through authorized channels, and reference verification with at least two previous employers. We also verify their permanent home address. You receive a verification certificate upon placement."
+      },
+      {
+        "q": "What if the maid stops coming or quits suddenly?",
+        "a": "This is the number one frustration Indian families face, and we have a solution. Our 1-year replacement guarantee means that if your maid quits, goes on unannounced leave, or is not the right fit, we deploy a replacement within 48 hours at no extra charge. We also maintain a backup pool specifically for emergencies."
+      },
+      {
+        "q": "Can I hire a maid for just 2 hours a day?",
+        "a": "Absolutely. Our part-time plans start from as little as 2 hours per day. This is our most popular option for working couples and small apartments. The maid will handle core tasks like sweeping, mopping, utensil washing, and laundry within the agreed time window. You choose the morning or evening slot that works best for you."
+      },
+      {
+        "q": "Do I need to provide food to a part-time maid?",
+        "a": "For part-time maids working 2-4 hours, providing food is optional but appreciated — a cup of tea and a snack is a common courtesy in most Indian households. For full-time maids working 8+ hours, providing lunch is standard practice. For live-in maids, all meals must be provided as part of the arrangement."
+      },
+      {
+        "q": "Is it safe to hire a maid online?",
+        "a": "It is actually safer than the traditional method of hiring through a local broker or watchman referral. When you hire through MyBuddyMaid, every candidate is police-verified, identity-checked, and skill-assessed before being listed. You get a verification certificate, a written agreement, and ongoing support. Compare this to a random referral where you know nothing about the person entering your home."
+      },
+      {
+        "q": "What tasks can I expect a part-time maid to do?",
+        "a": "A part-time maid from MyBuddyMaid handles sweeping, mopping, dusting, utensil washing, bathroom cleaning, laundry (washing, drying, folding), bed making, and basic kitchen cleanup. The exact task list is agreed upon before placement and can be adjusted during the trial period. Tasks like cooking, ironing, and deep cleaning are typically add-ons or require extended hours."
+      },
+      {
+        "q": "How quickly can I get a maid?",
+        "a": "In most metro and tier-2 cities, we can deploy a verified maid within 24 hours of receiving your request. In tier-3 cities or for very specific requirements (e.g., a maid who speaks a particular language or has experience with pets), it may take 48-72 hours. We always prioritize speed without compromising on verification quality."
+      },
+      {
+        "q": "What is the difference between a maid and a domestic helper?",
+        "a": "In practical terms, there is no difference — both refer to someone who helps with household chores. The term 'domestic helper' is increasingly preferred as it is more respectful. At MyBuddyMaid, we use both terms interchangeably. Regardless of the title, our helpers are trained professionals who take pride in their work and deserve to be treated with dignity."
+      },
+      {
+        "q": "Do I need to give a maid weekly off and festivals off?",
+        "a": "Yes. As per fair employment practices and the guidelines recommended by domestic worker welfare organizations, part-time maids should receive at least 4 days off per month (typically Sundays). Full-time and live-in maids must get one weekly off and all major national and regional festival holidays. Diwali, Eid, Pongal, Durga Puja, and Christmas are standard offs. A festival bonus equal to one month's salary is customary."
+      }
+    ],
+    "relatedServices": ["full-time-maid-service", "cook-service", "nanny-service"],
+    "cityContextTemplates": {
+      "demand": "With {{city}}'s fast-paced lifestyle and rapidly growing number of dual-income households, the demand for reliable, verified maid services has surged dramatically in recent years.",
+      "lifestyle": "Whether you live in a compact apartment or a sprawling independent house in {{city}}, finding trustworthy domestic help who shows up on time and works sincerely remains one of the biggest daily challenges for families."
+    }
+  },
+
+  {
+    "id": "full-time-maid-service",
+    "slug": "full-time-maid-service",
+    "name": "Full-Time Live-In Maid Service",
+    "shortName": "Live-In Maid",
+    "providerTitle": "Live-In Maid",
+    "icon": "🏠",
+    "heroImage": "full time buddy.jpg",
+    "priceFrom": "₹15,000/mo",
+    "metaTitle": "Hire Full-Time Live-In Maid in India — 24/7 Household Help | MyBuddyMaid",
+    "metaDescription": "Hire experienced, police-verified live-in maids for complete 24/7 household management. Cooking, cleaning, childcare support & more. Free replacement guarantee.",
+    "metaKeywords": "full time maid, live-in maid, 24 hour maid, live in domestic help, full day maid, residential maid, live-in house help, permanent maid, full time domestic worker, live-in bai",
+    "h1": "Hire Full-Time Live-In Maid in India",
+    "heroSubtitle": "Experienced, police-verified live-in maids for round-the-clock household management. Cooking, cleaning, laundry & more — all handled.",
+    "intro": "Running a large Indian household is a full-time job in itself. Between managing daily meals for a joint family, keeping a 3 BHK or larger home spotless, handling the laundry of six or seven family members, and ensuring the house is always guest-ready — the list of chores never ends. For decades, Indian families solved this by having a trusted live-in helper, often someone from their native village or a relative of an existing employee. But times have changed. The old networks have dried up, migration patterns have shifted, and finding a dependable live-in maid through informal channels has become extraordinarily difficult.\n\nThe challenge is especially acute for certain types of families. NRI families who maintain homes in India but visit only a few times a year need someone to manage the property, keep it clean, and ensure everything is in order when they arrive. Large joint families with elderly grandparents, young children, and working adults need all-day support that a part-time maid simply cannot provide. High-net-worth families living in bungalows and villas require not just cleaning but comprehensive household management — from receiving deliveries and managing vendors to overseeing other domestic staff.\n\nA full-time live-in maid from MyBuddyMaid is not just a cleaner — she is a household manager. She lives in a designated room in your home, eats meals with or separately from the family as you prefer, and is available throughout the day for any household task. From preparing morning tea at 6 AM to ensuring the kitchen is clean after dinner at 10 PM, she keeps the home running like clockwork.\n\nWhat sets MyBuddyMaid apart is our rigorous selection process for live-in placements. Because this person will be living in your home, we go beyond standard police verification. We conduct detailed interviews to assess temperament, adaptability, and long-term commitment. We check medical fitness to ensure the candidate is healthy for sustained work. And we provide cultural sensitivity training so that the maid respects your family's customs, dietary preferences, and religious practices. Whether you are a Jain family that maintains a strictly vegetarian kitchen or a Muslim household that requires halal food preparation awareness — we match accordingly.",
+    "whatTheyDo": {
+      "heading": "What Does a Full-Time Live-In Maid Do?",
+      "description": "A live-in maid from MyBuddyMaid is trained to handle the complete spectrum of household management. Unlike a part-time helper who focuses on specific tasks, a live-in maid integrates into your household rhythm and manages everything from morning routines to evening wrap-up. She is the backbone of a well-run home.",
+      "tasks": [
+        {
+          "task": "Complete Daily Housekeeping",
+          "detail": "All sweeping, mopping, dusting, and surface cleaning across every room in the house — including rarely used guest rooms, storage areas, and terraces. A thorough deep clean of one room is done on rotation each day."
+        },
+        {
+          "task": "Meal Preparation & Kitchen Management",
+          "detail": "Preparing breakfast, lunch, evening snacks, and dinner for the entire family. Managing the pantry, tracking supplies that are running low, and coordinating grocery orders. Cleaning the kitchen thoroughly after every meal."
+        },
+        {
+          "task": "Full Laundry Cycle Management",
+          "detail": "Sorting clothes by fabric and colour, loading the washing machine, hand-washing delicates, drying, ironing, and organizing pressed clothes back into wardrobes. Managing seasonal clothing storage and dry cleaning pickups."
+        },
+        {
+          "task": "Childcare Assistance",
+          "detail": "Supervising young children during the day, preparing their meals and snacks, helping with school uniform preparation, accompanying children to the school bus stop, and engaging them in age-appropriate activities when parents are busy."
+        },
+        {
+          "task": "Elderly Family Member Support",
+          "detail": "Assisting elderly family members with daily needs — serving meals on time, reminding them about medications, helping with mobility within the house, and providing companionship during the day when other family members are at work."
+        },
+        {
+          "task": "Vendor & Delivery Management",
+          "detail": "Receiving all deliveries — groceries, courier packages, water cans, gas cylinders. Coordinating with the dhobi, plumber, electrician, and other service providers. Managing interactions with the building maintenance staff."
+        },
+        {
+          "task": "Guest Preparation & Hospitality",
+          "detail": "Preparing guest bedrooms with fresh linen, cleaning guest bathrooms, arranging refreshments and snacks for visitors, serving tea and meals to guests, and ensuring the home is in impeccable condition when company is expected."
+        },
+        {
+          "task": "Festival & Event Preparation",
+          "detail": "Deep cleaning the home before festivals like Diwali, Navratri, Eid, or Pongal. Helping with rangoli preparation, decorating the pooja room, and supporting the family during events like housewarming ceremonies, birthday parties, or puja gatherings."
+        },
+        {
+          "task": "Garden & Outdoor Maintenance",
+          "detail": "Watering plants, sweeping the porch, driveway, and garden pathways. Maintaining balcony gardens, wiping outdoor furniture, and ensuring the car parking area stays clean."
+        },
+        {
+          "task": "Pet Care",
+          "detail": "Feeding household pets on schedule, cleaning food and water bowls, sweeping pet hair, taking dogs for short walks within the society compound, and maintaining pet bedding and play areas."
+        },
+        {
+          "task": "Nighttime Duties & Security Awareness",
+          "detail": "Locking all doors and windows at night, switching off unnecessary lights and fans, ensuring the gas stove is turned off, and checking that water purifiers and filters are refilled for the morning."
+        },
+        {
+          "task": "Property Caretaking (For NRI Families)",
+          "detail": "For absentee homeowners: maintaining the home in lived-in condition, running taps and faucets regularly to prevent pipe corrosion, airing out rooms, managing society maintenance payments, and coordinating with property managers."
+        }
+      ]
+    },
+    "serviceTypes": [
+      {
+        "type": "Full-Time Day Maid (8-12 Hours)",
+        "description": "A maid who arrives early morning and stays until evening but goes to her own home at night. She handles all daytime household tasks including cooking, cleaning, laundry, and childcare assistance. This option works well for families who want extensive help during the day but prefer privacy at night.",
+        "idealFor": "Working couples with children, medium-sized families, homes without a separate servant quarter"
+      },
+      {
+        "type": "Live-In Maid (24/7 Residential)",
+        "description": "A maid who lives on your premises full-time, available throughout the day and for essential tasks in the evening. She gets a designated room, all meals, and one weekly off. This is the most comprehensive household support option and works best when you need someone always available.",
+        "idealFor": "Large joint families, bungalows/villas, NRI property management, families with elderly members needing night-time assistance"
+      },
+      {
+        "type": "Couple Placement (Husband-Wife Team)",
+        "description": "A married couple is placed together — typically the wife handles indoor duties (cooking, cleaning, laundry) while the husband manages outdoor tasks (gardening, driving, security, vendor management). They share a room on your premises. This is the gold standard for large, well-staffed households.",
+        "idealFor": "Farmhouses, luxury villas, large bungalows, families needing both indoor and outdoor help"
+      }
+    ],
+    "salaryGuide": {
+      "heading": "Full-Time & Live-In Maid Salary in India (2026 Updated)",
+      "intro": "Live-in maid salaries are higher than part-time rates because the maid dedicates her entire day to your household. The salary covers work duties only — you are expected to provide accommodation and meals separately. In metros like Mumbai and Delhi, experienced live-in maids command premium salaries, especially those who can cook well and speak English. Tier-2 cities offer more affordable options without sacrificing quality.",
+      "note": "These are monthly cash-in-hand salary ranges. Accommodation and meals are provided by the employer and are not included in the salary figure. Festival bonuses (typically one month's salary at Diwali or Eid) and annual salary increments of 10-15% are standard practice."
+    },
+    "whyUs": {
+      "heading": "Why Choose MyBuddyMaid for Live-In Maid Placement",
+      "points": [
+        {
+          "title": "Enhanced Verification for Live-In Placements",
+          "detail": "Since a live-in maid resides in your home, we go beyond standard police checks. We verify medical fitness, conduct temperament assessments, and run extended background screening including permanent address verification through our on-ground network."
+        },
+        {
+          "title": "Cultural & Dietary Compatibility Matching",
+          "detail": "We match live-in maids based on your family's specific cultural needs — vegetarian or non-vegetarian kitchen, regional cuisine expertise, language compatibility, and comfort with religious practices. A Brahmin family in Chennai gets a different match than a Punjabi family in Gurugram."
+        },
+        {
+          "title": "Dedicated Relationship Manager",
+          "detail": "Every live-in placement gets a dedicated MyBuddyMaid relationship manager who conducts monthly check-ins, mediates any disputes, and ensures both the family and the maid are satisfied. Think of them as your HR department for domestic staff."
+        },
+        {
+          "title": "Emergency Backup Pool",
+          "detail": "If your live-in maid goes on leave or has a family emergency, we provide a temporary replacement from our emergency backup pool within 24 hours. Your household does not skip a beat."
+        },
+        {
+          "title": "Structured Onboarding Process",
+          "detail": "We do not just drop the maid at your doorstep. Our team conducts a structured onboarding — walking the maid through your home, explaining your family's routine, setting clear expectations for both parties, and providing a written task agreement."
+        },
+        {
+          "title": "Fair Treatment Advocacy",
+          "detail": "We believe that a well-treated maid stays longer and works better. We advocate for fair wages, rest breaks, weekly offs, and dignified accommodation. This approach results in lower attrition — our live-in placements average 14 months of retention compared to the industry average of 4-6 months."
+        }
+      ]
+    },
+    "howToHire": {
+      "heading": "How to Hire a Live-In Maid Through MyBuddyMaid",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Share Your Household Details",
+          "detail": "Tell us about your family size, home type (apartment/villa/bungalow), the room available for the maid, your dietary preferences, language requirements, and the full list of duties you expect. The more specific you are, the better we match."
+        },
+        {
+          "step": 2,
+          "title": "We Curate & Screen Candidates",
+          "detail": "Our team identifies 2-3 candidates who match your requirements. Each has completed enhanced verification including medical fitness, police records check, extended reference calls, and a face-to-face interview at our office. We share their profiles, photographs, and skill summaries."
+        },
+        {
+          "step": 3,
+          "title": "Personal Interview & Home Visit",
+          "detail": "You interview the shortlisted candidates at your home or via video call. We recommend showing the maid her proposed room, explaining the daily routine, and discussing expectations regarding weekly offs, leaves, and festivals."
+        },
+        {
+          "step": 4,
+          "title": "7-Day Trial Period",
+          "detail": "The selected maid starts a 7-day paid trial. During this week, observe her work quality, initiative, punctuality, behaviour with family members (especially children and elders), and overall compatibility. We check in on day 3 and day 7."
+        },
+        {
+          "step": 5,
+          "title": "Confirmation & Long-Term Support",
+          "detail": "If the trial goes well, confirm the placement. We provide a task agreement document, set up monthly check-in calls, and activate your 1-year replacement guarantee. Our relationship manager remains available for any concerns throughout the engagement."
+        }
+      ]
+    },
+    "redFlags": {
+      "heading": "Red Flags When Hiring a Live-In Maid",
+      "items": [
+        "Candidate has left three or more live-in positions in the past year — indicates possible compatibility or commitment issues",
+        "Unwillingness to undergo a medical check-up — essential for someone living in your home",
+        "Demanding advance salary equivalent to two or more months before starting work",
+        "Reluctance to share details about family members or permanent address for verification",
+        "Agencies that do not offer any replacement guarantee for live-in placements",
+        "Candidate is unable or unwilling to provide contact details of previous employers for reference checks",
+        "No clear agreement on weekly offs, festival holidays, or annual leave — leads to conflicts later",
+        "Agencies that pressure you into immediate placement without allowing a proper trial period"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much does a live-in maid cost in India in 2026?",
+        "a": "Live-in maid salaries in India range from ₹15,000 to ₹35,000 per month depending on the city, experience, and scope of duties. In Mumbai and Delhi NCR, experienced live-in maids who can also cook charge ₹22,000-₹35,000. In cities like Pune, Ahmedabad, and Hyderabad, the range is ₹15,000-₹25,000. This is the cash salary — accommodation and meals are provided separately by the employer."
+      },
+      {
+        "q": "What facilities should I provide to a live-in maid?",
+        "a": "At minimum, you should provide a separate, clean room with a bed, fan (or AC in extremely hot cities), and a lockable cupboard for personal belongings. Three meals a day, access to a bathroom, and basic toiletries should also be provided. Many families also provide a basic mobile phone for communication, a TV in the maid's room, and new clothes during festivals as a goodwill gesture."
+      },
+      {
+        "q": "How many days off should a live-in maid get?",
+        "a": "A live-in maid should receive at least 4 days off per month — typically every Sunday. Additionally, all major national holidays (Republic Day, Independence Day, Gandhi Jayanti) and regional festivals (Diwali, Eid, Pongal, Durga Puja, Onam, Christmas) should be given as paid holidays. Many families allow 7-10 days of annual leave for the maid to visit her hometown, usually around major festivals."
+      },
+      {
+        "q": "Can a live-in maid cook as well?",
+        "a": "Many of our live-in maids can handle basic Indian cooking — dal, rice, sabzi, roti, and South Indian staples like sambar and rasam. However, if you need an expert cook who can prepare elaborate meals, we recommend pairing a live-in maid with our dedicated Cook Service. Alternatively, we can match you with a live-in maid who has specific culinary skills — though these candidates command higher salaries."
+      },
+      {
+        "q": "Is it safe to have a live-in maid when I have young children?",
+        "a": "With proper verification, absolutely. All our live-in maids undergo enhanced background checks specifically designed for households with children. We screen for any criminal history, conduct behavioural assessments, and check references specifically asking about interactions with kids. That said, a live-in maid is household help, not a dedicated nanny. If you need focused childcare, we recommend adding our Nanny Service."
+      },
+      {
+        "q": "What if my live-in maid wants to leave suddenly?",
+        "a": "Our placement agreement requires a 15-day notice period from both parties. If a maid leaves without notice, our 1-year replacement guarantee kicks in — we deploy a replacement within 48-72 hours at no extra charge. We also maintain an emergency backup pool of pre-verified candidates for exactly these situations."
+      },
+      {
+        "q": "I am an NRI — can I hire a live-in maid to manage my empty house in India?",
+        "a": "Yes, this is one of our most popular use cases. We place live-in caretakers for NRI-owned properties across India. The maid maintains the home, keeps it clean and aired out, manages society maintenance payments, coordinates with property managers, and ensures the house is move-in ready whenever you visit. We provide monthly photo/video reports and your relationship manager conducts regular inspections."
+      },
+      {
+        "q": "How do I handle salary for a live-in maid — cash or bank transfer?",
+        "a": "We strongly recommend monthly bank transfers. It creates a transparent financial trail for both parties, helps the maid build a banking history, and simplifies any future disputes about pending payments. Most of our maids have bank accounts — if they do not, we help them open one during onboarding. You can also use UPI for salary transfers."
+      },
+      {
+        "q": "Can I set CCTV cameras in my home with a live-in maid?",
+        "a": "You can install CCTV cameras in common areas like the living room, kitchen, and children's playroom. However, cameras should never be placed in the maid's room, bathroom, or changing areas — this is a violation of privacy and potentially illegal. We recommend informing the maid about camera placement during onboarding. Transparency builds trust and helps both parties feel secure."
+      },
+      {
+        "q": "What is the ideal room setup for a live-in maid?",
+        "a": "The room should have a proper bed (not a floor mattress), a fan or cooler, a lockable wardrobe or cupboard, adequate lighting, and ideally a small window for ventilation. Access to a separate or shared bathroom is essential. Many families set up a small shelf or table for personal items. A happy maid with dignified living conditions is far more likely to stay long-term and perform well."
+      }
+    ],
+    "relatedServices": ["maid-service", "cook-service", "elderly-care-service"],
+    "cityContextTemplates": {
+      "demand": "As {{city}} grows into one of India's most expensive real estate markets, families in premium housing complexes increasingly seek full-time live-in maids to manage their expansive homes and demanding lifestyles.",
+      "lifestyle": "Whether you own a villa in a gated community or a large apartment in {{city}}, a live-in maid ensures your home runs seamlessly — from morning tea to nighttime lockup."
+    }
+  },
+
+  {
+    "id": "cook-service",
+    "slug": "cook-service",
+    "name": "Cook Service",
+    "shortName": "Cook",
+    "providerTitle": "Cook",
+    "icon": "👨‍🍳",
+    "heroImage": "cook buddy.jpg",
+    "priceFrom": "₹8,000/mo",
+    "metaTitle": "Hire Verified Cook in India — Home Chef for Daily Meals | MyBuddyMaid",
+    "metaDescription": "Hire experienced, police-verified cooks for daily home-cooked meals. North Indian, South Indian, Continental & diet-specific cuisine. Starting ₹8,000/mo.",
+    "metaKeywords": "cook service, hire cook, home cook, personal chef, Indian cook, maharaj, bawarchi, cook near me, home chef, tiffin cook, diet cook, cook for hire India",
+    "h1": "Hire Verified Cook for Home in India",
+    "heroSubtitle": "Experienced, police-verified cooks who prepare fresh, hygienic meals tailored to your family's taste. North Indian, South Indian, Continental & more.",
+    "intro": "There is a reason why food is so central to Indian family life. Our culture revolves around meals — from the elaborate Sunday lunch that brings the entire joint family together to the quick weekday dinners that working couples squeeze in between late office calls. But here is the uncomfortable truth that many Indian households face today: nobody has the time or energy to cook three meals a day, seven days a week. The romanticised image of a home-cooked thali with six items, fresh roti, and homemade pickle is wonderful — but who is actually making it when both spouses leave for work at 8 AM and return at 8 PM?\n\nFor years, the fallback was ordering food from Swiggy or Zomato. And while food delivery is convenient, it is also expensive, unpredictable in quality, and — let us be honest — not something you want to feed your children or elderly parents every single day. Restaurant food is loaded with oil, salt, and flavour enhancers that are fine occasionally but terrible for long-term health. Indian families are increasingly aware of this, which is why the demand for personal home cooks has skyrocketed.\n\nBut finding a good cook in India is harder than finding a good maid. A maid's work is visible — you can see if the floor is clean. A cook's work involves hygiene practices you cannot always see, taste preferences that are deeply personal, and nutritional awareness that matters for your family's health. A bad cook does not just mean bad food — it means wasted groceries, an unhappy family, and potential health issues.\n\nMyBuddyMaid's Cook Service addresses all of these challenges. We maintain a curated roster of cooks who specialize in different cuisines — from the rich gravies and rotis of North Indian cooking to the dosas, idlis, and sambars of South Indian kitchens. We have cooks who specialize in Jain cooking (no onion, no garlic, no root vegetables), Marwari thalis, Bengali fish curries, Gujarati farsan, and even Continental and Chinese fusion. Every cook is police-verified, hygiene-trained, and matched to your family's specific dietary needs. Whether you need someone for just dinner preparation or all three meals, we have a plan that fits your kitchen and your budget.",
+    "whatTheyDo": {
+      "heading": "What Does a Professional Home Cook Do?",
+      "description": "A cook from MyBuddyMaid does much more than just prepare food. They manage your entire meal cycle — from planning menus and managing ingredients to cooking, plating, and cleaning up the kitchen. Our cooks are trained in food safety, proper storage techniques, and efficient kitchen management to minimize waste and maximize nutrition.",
+      "tasks": [
+        {
+          "task": "Daily Meal Preparation (Breakfast, Lunch & Dinner)",
+          "detail": "Preparing complete meals including rice, dal, roti/paratha/naan, 2-3 sabzis, salad, and accompaniments like raita, chutney, or pickle. Menu is planned weekly in consultation with the family to ensure variety."
+        },
+        {
+          "task": "Cuisine-Specific Cooking",
+          "detail": "Specializing in the cuisine of your choice — Punjabi, Rajasthani, South Indian, Bengali, Gujarati, Maharashtrian, or Continental. Many of our cooks are proficient in multiple regional cuisines and can rotate styles throughout the week."
+        },
+        {
+          "task": "Tiffin & Lunchbox Preparation",
+          "detail": "Preparing packed lunches for working adults and school-going children. Ensuring tiffin is ready and packed before the family leaves in the morning, with attention to items that stay fresh for hours — parathas, rice dishes, sandwiches, and fruits."
+        },
+        {
+          "task": "Diet & Health-Specific Meal Prep",
+          "detail": "Cooking as per dietary restrictions — diabetic-friendly low-sugar meals, low-oil heart-healthy food, high-protein gym diets, pregnancy nutrition plans, Jain cooking, sattvic food, or gluten-free preparations. Menus are designed with inputs from your nutritionist or doctor."
+        },
+        {
+          "task": "Grocery & Ingredient Management",
+          "detail": "Monitoring pantry stock levels, creating weekly grocery lists, checking freshness of vegetables and dairy, and coordinating orders from local vendors or delivery apps. Ensuring spice boxes (masala dabba) and staples are always stocked."
+        },
+        {
+          "task": "Kitchen Hygiene & Cleanup",
+          "detail": "Cleaning the kitchen platform, gas stove, chimney, and sink after every cooking session. Sanitizing cutting boards, washing all utensils used during cooking, and mopping the kitchen floor. Ensuring dustbin is emptied and waste is segregated."
+        },
+        {
+          "task": "Snack & Chai Preparation",
+          "detail": "Preparing morning and evening tea or coffee as per family preference — masala chai, filter coffee, green tea, or herbal infusions. Making snacks like poha, upma, sandwiches, sprout chaat, or pakodas for teatime."
+        },
+        {
+          "task": "Festival & Occasion Cooking",
+          "detail": "Preparing special meals for festivals — Diwali sweets like gulab jamun and ladoo, Eid biryani and sewaiyaan, Pongal and payasam, Navratri fasting food (kuttu ki puri, sabudana khichdi), and Christmas cake. Also managing cooking for small family gatherings of 15-25 guests."
+        },
+        {
+          "task": "Preservation & Storage",
+          "detail": "Properly storing cooked food in airtight containers, managing fridge organization to prevent cross-contamination, making weekly batches of chutneys, pickles, masala pastes, and frozen chapati dough to save time during busy weeks."
+        },
+        {
+          "task": "Baby Food Preparation",
+          "detail": "For families with toddlers — preparing age-appropriate, nutrient-rich meals like mashed dal-rice, ragi porridge, vegetable purees, soft khichdi, and fresh fruit mixes. All baby food is prepared with extra attention to hygiene and allergen avoidance."
+        }
+      ]
+    },
+    "serviceTypes": [
+      {
+        "type": "Part-Time Cook (1-2 Meals/Day)",
+        "description": "A cook visits your home for 2-3 hours daily to prepare one or two meals — typically lunch and dinner, or breakfast and lunch. This is our most affordable option and works great for working couples who eat out for one meal but want home-cooked food for the rest.",
+        "idealFor": "Working couples, bachelors/bachelorettes, small families with 2-4 members"
+      },
+      {
+        "type": "Full-Time Cook (All Meals + Snacks)",
+        "description": "A cook who works 6-8 hours in your kitchen, handling all three meals, morning/evening tea, snacks, tiffin packing, grocery management, and kitchen cleanup. This is ideal for larger families where the volume of cooking is substantial and variety is important.",
+        "idealFor": "Joint families, families with 5+ members, homes with diverse dietary needs (elders need different food from children)"
+      },
+      {
+        "type": "Live-In Cook (Residential)",
+        "description": "A cook who lives on your premises and is available for all meals, guest entertaining, and special requests. Live-in cooks often double as kitchen managers, handling grocery shopping, pantry organization, and vendor relationships. They are typically experienced professionals with 10+ years in the field.",
+        "idealFor": "HNI families, farmhouses, large bungalows, families that entertain frequently, NRI homes during extended visits"
+      }
+    ],
+    "salaryGuide": {
+      "heading": "Cook Salary in India (2026 Updated)",
+      "intro": "Cook salaries are generally higher than maid salaries because cooking is a specialized skill. A cook who can make excellent rotis, diverse sabzis, and handle multiple cuisines is in high demand. Cooks who specialize in diet-specific cooking (diabetic, keto, Jain) or can prepare Continental and Chinese dishes command a premium. The salary also depends on the number of meals, family size, and whether non-veg cooking is required.",
+      "note": "These are monthly salary ranges. Part-time cooks who prepare 1 meal cost less than those preparing 2 meals. Festive bonuses, annual increments, and festival-day cooking duties should be discussed upfront during hiring."
+    },
+    "whyUs": {
+      "heading": "Why Hire a Cook Through MyBuddyMaid",
+      "points": [
+        {
+          "title": "Cuisine-Matched Placement",
+          "detail": "We do not send a random cook — we match based on the cuisine your family eats daily. Need a cook who makes authentic Chettinad food? Or one who can nail a Marwari dal-baati? We have specialists for every regional Indian cuisine."
+        },
+        {
+          "title": "Hygiene & Food Safety Training",
+          "detail": "All our cooks undergo hygiene training — proper handwashing, clean uniform/apron usage, correct food storage temperatures, and avoiding cross-contamination between raw and cooked food. This is especially critical for families with young children or immune-compromised members."
+        },
+        {
+          "title": "Taste Test Before Confirmation",
+          "detail": "We arrange a cooking trial where the cook prepares 2-3 dishes of your choice in your kitchen. You taste the food, evaluate cleanliness, speed, and presentation before making any commitment. If the taste does not match your expectations, we send the next candidate."
+        },
+        {
+          "title": "Dietary Customization",
+          "detail": "We brief the cook on your family's specific dietary needs — low salt for grandfather's blood pressure, no dairy for a lactose-intolerant child, extra protein for the gym-going teenager. These details are documented and followed consistently."
+        },
+        {
+          "title": "Zero Grocery Pilferage",
+          "detail": "Grocery theft is a common concern with home cooks. We establish a system — a grocery register maintained by the cook, weekly budget reconciliation, and periodic spot checks — to ensure complete transparency in kitchen spending."
+        },
+        {
+          "title": "Replacement If Taste Standards Drop",
+          "detail": "Tastes change, and sometimes a cook who was great initially starts cutting corners. If food quality drops and does not improve after feedback, our replacement guarantee ensures you get a new cook matched to your preferences — no extra charge within the guarantee period."
+        }
+      ]
+    },
+    "howToHire": {
+      "heading": "How to Hire a Cook Through MyBuddyMaid",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Share Your Kitchen Requirements",
+          "detail": "Tell us your family size, preferred cuisines, dietary restrictions (veg/non-veg/Jain/eggetarian), number of meals needed, and any health-specific dietary requirements. Mention if you need tiffin packing, baby food, or guest-level cooking capability."
+        },
+        {
+          "step": 2,
+          "title": "We Match Cuisine Specialists",
+          "detail": "Our culinary matching team identifies 2-3 cooks who specialize in your preferred cuisine and have experience cooking for families of similar size. Each candidate profile includes their specialty dishes, experience years, and previous employer feedback."
+        },
+        {
+          "step": 3,
+          "title": "Cooking Trial in Your Kitchen",
+          "detail": "The shortlisted cook visits your kitchen and prepares 2-3 dishes of your choice — using your utensils, your stove, and your ingredients. This ensures you are evaluating the cook in real conditions, not a controlled environment. You judge taste, hygiene, speed, and cleanup."
+        },
+        {
+          "step": 4,
+          "title": "Finalize Terms & Menu Planning",
+          "detail": "Once you approve the cook, we help establish a weekly rotating menu, set clear expectations for grocery management, and document all dietary requirements. The cook starts on a confirmed basis with a monthly salary agreement."
+        },
+        {
+          "step": 5,
+          "title": "Monthly Taste Check-Ins",
+          "detail": "Our team conducts monthly check-ins to ensure food quality, hygiene standards, and family satisfaction are maintained. If you want the cook to learn a new dish or cuisine style, we can arrange additional training through our network."
+        }
+      ]
+    },
+    "redFlags": {
+      "heading": "Red Flags When Hiring a Home Cook",
+      "items": [
+        "Cook arrives for the trial without washing hands or wearing a clean apron — hygiene habits are ingrained, not taught on the job",
+        "Claims to cook 'everything' but cannot name specific dishes from any regional cuisine — jack of all trades, master of none",
+        "Uses excessive oil, salt, or MSG-based flavour enhancers to make food taste better quickly",
+        "Refuses to cook non-vegetarian food if your family eats it, or vice versa — dietary compatibility must be established upfront",
+        "History of pilfering groceries or inflating grocery bills at previous employment — ask references specifically about this",
+        "Cannot prepare basic staples like round rotis, properly cooked rice, or a balanced dal — the fundamentals must be strong",
+        "Insists on using only their own recipes and refuses to adapt to your family's taste preferences",
+        "Leaves the kitchen dirty after cooking and considers cleanup someone else's job"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much does a home cook cost in India?",
+        "a": "Part-time cook salaries range from ₹8,000 to ₹18,000 per month for 1-2 meals daily. Full-time cooks handling all meals cost ₹15,000 to ₹30,000 depending on the city and cuisine expertise. Specialized diet cooks (diabetic, keto, Jain) and those proficient in Continental or Chinese cooking charge a 20-30% premium. In metro cities like Mumbai and Delhi, expect to be at the higher end of these ranges."
+      },
+      {
+        "q": "Can I hire a cook who makes only vegetarian food?",
+        "a": "Absolutely. We have a large pool of cooks who specialize exclusively in vegetarian and Jain cooking. Many come from backgrounds where they have only cooked vegetarian food their entire career. We can also match you with cooks who specialize in sattvic cooking for families that follow strict dietary codes based on Ayurvedic principles."
+      },
+      {
+        "q": "What cuisines do your cooks specialize in?",
+        "a": "Our cook network includes specialists in North Indian (Punjabi, Rajasthani, UP, Kashmiri), South Indian (Tamil, Kerala, Andhra, Karnataka), East Indian (Bengali, Odia, Assamese), West Indian (Gujarati, Maharashtrian, Goan), as well as Continental, Chinese, and fusion cuisines. We also have cooks trained in specific dietary cooking — keto, high-protein, diabetic-friendly, and pregnancy nutrition."
+      },
+      {
+        "q": "Will the cook also clean the kitchen after cooking?",
+        "a": "Yes. Our standard agreement includes complete kitchen cleanup after every cooking session — washing all cooking utensils, cleaning the gas stove and platform, mopping the kitchen floor, and organizing leftover ingredients. The kitchen should be cleaner after the cook leaves than before they started."
+      },
+      {
+        "q": "Can the cook prepare meals for guests or small parties?",
+        "a": "Our full-time and live-in cooks can comfortably handle meals for gatherings of up to 15-25 guests. For larger events, we recommend hiring additional temporary kitchen help through our network. If you frequently entertain, let us know during the matching process — we will prioritize cooks with catering experience."
+      },
+      {
+        "q": "How do I ensure the cook is not wasting or stealing groceries?",
+        "a": "We establish a simple grocery management system — the cook maintains a daily register of items used, and a weekly grocery budget is agreed upon. You can verify quantities against actual dishes prepared. Our monthly check-ins specifically cover grocery management. Over time, most families develop a trusted routine where these checks become routine but effective."
+      },
+      {
+        "q": "Can the cook prepare baby food and toddler meals?",
+        "a": "Yes. We have cooks experienced in preparing age-appropriate meals for infants and toddlers — from ragi porridge and mashed vegetables for 6-month-olds to finger foods, mini parathas, and mild curries for toddlers. If your paediatrician has provided a diet chart, the cook will follow it precisely."
+      },
+      {
+        "q": "What if I don't like the cook's food after a few weeks?",
+        "a": "First, provide specific feedback — is it too oily, too spicy, too bland? Our team will convey this to the cook and give them a chance to adjust. If the food quality still does not match your expectations after a reasonable adjustment period, our replacement guarantee allows you to get a new cook at no additional charge."
+      },
+      {
+        "q": "Does the cook buy groceries or do I have to provide them?",
+        "a": "This is flexible. Some families prefer to order groceries themselves through BigBasket or Blinkit and have the cook work with what is available. Others give the cook a weekly budget and let them shop from local vendors for the freshest vegetables, meat, and dairy. We recommend starting with family-provided groceries and transitioning to cook-managed shopping once trust is established."
+      },
+      {
+        "q": "Can I hire a cook just for weekends?",
+        "a": "Yes, we offer weekend-only cook placements. This is popular with working professionals who manage quick weekday meals themselves but want elaborate, home-cooked meals on Saturday and Sunday — think full thalis, special dishes, and meals for the extended family. Weekend cook rates are typically ₹4,000-₹8,000 per month for Saturday-Sunday service."
+      }
+    ],
+    "relatedServices": ["maid-service", "full-time-maid-service", "nanny-service"],
+    "cityContextTemplates": {
+      "demand": "{{city}}'s demanding work culture means long commutes and late evenings — leaving little time for home cooking. The demand for skilled, reliable home cooks has never been higher across the city.",
+      "lifestyle": "From traditional thalis to fusion experiments, {{city}} families take their food seriously. A professional cook ensures fresh, hygienic, home-style meals without the daily hassle of meal prep."
+    }
+  },
+
+  {
+    "id": "nanny-service",
+    "slug": "nanny-service",
+    "name": "Nanny & Babysitting Service",
+    "shortName": "Nanny",
+    "providerTitle": "Nanny",
+    "icon": "👶",
+    "heroImage": "nanny buddy.jpg",
+    "priceFrom": "₹12,000/mo",
+    "metaTitle": "Hire Verified Nanny & Babysitter in India — Child Care | MyBuddyMaid",
+    "metaDescription": "Hire trained, police-verified nannies & babysitters for infants, toddlers & school-age children. CPR-trained, development-focused care. Starting ₹12,000/mo.",
+    "metaKeywords": "nanny service, babysitter, hire nanny, child care, baby care, aaya, babysitting service, nanny near me, infant care, toddler care, child minder, daycare alternative",
+    "h1": "Hire Verified Nanny & Babysitter in India",
+    "heroSubtitle": "Trained, police-verified nannies for infants, toddlers, and school-age children. Development-focused care with safety-first approach.",
+    "intro": "Leaving your child with someone else is one of the hardest decisions any parent makes. It does not matter if you are the CEO of a company or a first-time freelancer working from home — the anxiety of trusting another human being with your most precious person is universal. In India, this anxiety is compounded by a childcare landscape that offers few reliable options. Daycare centres are expensive, have rigid timing, and often involve leaving your child with strangers in an unfamiliar environment. Family support — the traditional Indian safety net of grandparents and joint families — is increasingly unavailable as nuclear families become the norm in metro cities.\n\nThe result is a painfully common scenario: one parent (almost always the mother) is forced to quit her career or go part-time because there is simply no trustworthy childcare option available. India loses millions of skilled women from the workforce every year due to the childcare gap. And even families where grandparents are available often find that aging grandparents cannot keep up with the energy of a toddler or handle the physical demands of carrying, bathing, and chasing a young child all day.\n\nThis is where a professional nanny changes everything. A trained nanny from MyBuddyMaid is not a babysitter who parks your child in front of a screen. She is a childcare professional who engages your child in age-appropriate developmental activities, maintains a structured daily routine, ensures proper nutrition and hygiene, and provides the emotional warmth and security that young children need to thrive. Our nannies are trained in infant handling, toddler safety, first aid basics, and early childhood development milestones.\n\nWe understand that entrusting your child to a nanny requires a level of trust that goes beyond any other domestic hiring decision. That is why our verification process for nannies is the most rigorous in our entire service lineup. Every nanny undergoes police verification, detailed background screening, medical fitness certification, and a child safety orientation program. We also check for patience, temperament, and genuine affection for children — qualities that cannot be taught but can be assessed. Whether you need a nanny for a 3-month-old infant, a hyperactive 3-year-old toddler, or a 7-year-old who needs after-school supervision, we match you with someone who has specific experience with that age group.",
+    "whatTheyDo": {
+      "heading": "What Does a Professional Nanny Do?",
+      "description": "A nanny from MyBuddyMaid provides comprehensive childcare that goes far beyond watching over your child. She is trained to actively contribute to your child's physical, cognitive, and emotional development while ensuring their safety and well-being throughout the day. Here is a detailed breakdown of nanny responsibilities:",
+      "tasks": [
+        {
+          "task": "Feeding & Nutrition Management",
+          "detail": "Preparing and serving age-appropriate meals and snacks — bottle feeding for infants, purees and mashed foods for babies, and balanced meals for toddlers and older children. Following the paediatrician's diet chart, tracking feeding times, and ensuring proper hydration throughout the day."
+        },
+        {
+          "task": "Bathing & Personal Hygiene",
+          "detail": "Bathing the child safely using appropriate water temperature, baby-safe soaps and shampoos. Maintaining hygiene routines — regular handwashing, nail trimming, hair combing, diaper changes for infants, and toilet training assistance for toddlers."
+        },
+        {
+          "task": "Sleep Routine & Nap Management",
+          "detail": "Establishing and maintaining consistent sleep schedules — putting the baby down for naps, soothing fussy infants, reading bedtime stories to toddlers, and ensuring the sleeping environment is safe (no loose blankets, proper crib positioning for infants)."
+        },
+        {
+          "task": "Developmental Play & Activities",
+          "detail": "Engaging children in age-appropriate activities — tummy time for infants, building blocks and puzzles for toddlers, drawing and colouring for preschoolers, and educational games for older children. Activities are designed to develop motor skills, cognitive abilities, and social awareness."
+        },
+        {
+          "task": "School & Homework Support",
+          "detail": "For school-age children: ensuring they are dressed and ready for school on time, packing school bags, helping with homework and revision after school, coordinating with parents about school circulars, and managing extracurricular activity schedules."
+        },
+        {
+          "task": "Outdoor Supervision & Physical Activity",
+          "detail": "Taking children for walks in the park or society compound, supervising playground time, organizing outdoor games, and ensuring sun protection and hydration during outdoor activities. Teaching basic road safety when walking outside."
+        },
+        {
+          "task": "Safety & First Aid Readiness",
+          "detail": "Childproofing awareness — ensuring sharp objects, medicines, and cleaning chemicals are out of reach. Knowledge of basic first aid — handling minor cuts, falls, and bumps. Awareness of choking hazards for infants and toddlers. Emergency protocol knowledge including nearest hospital details."
+        },
+        {
+          "task": "Health Monitoring & Medication",
+          "detail": "Monitoring the child's health — checking for fever, rashes, unusual behaviour, or signs of illness. Administering prescribed medications at correct times and dosages. Maintaining a health log that parents can review daily."
+        },
+        {
+          "task": "Sibling Management",
+          "detail": "For families with multiple children: managing the needs of children of different ages simultaneously, mediating sibling conflicts, ensuring equitable attention, and coordinating different meal and nap schedules."
+        },
+        {
+          "task": "Communication & Reporting to Parents",
+          "detail": "Providing daily updates to parents — what the child ate, nap times, activities done, any behavioural observations, and milestones achieved. Sharing photos and videos during the day via WhatsApp. Being transparent about any incidents or concerns."
+        },
+        {
+          "task": "Travel & Outing Support",
+          "detail": "Accompanying the family on vacations, weekend outings, or family events. Managing the child's needs during travel — packing baby bags, handling feeding and napping on the go, and keeping the child entertained during long journeys."
+        }
+      ]
+    },
+    "serviceTypes": [
+      {
+        "type": "Part-Time Nanny (4-6 Hours/Day)",
+        "description": "A nanny who comes for a fixed window — typically while parents are at work or during specific hours like morning school routine and after-school supervision. Perfect for families where one parent works from home and needs support during meetings or focused work hours.",
+        "idealFor": "Work-from-home parents, families with school-going children, supplemental care when grandparents need a break"
+      },
+      {
+        "type": "Full-Time Nanny (10-12 Hours/Day)",
+        "description": "A dedicated nanny who is present from morning until the parents return from work, handling all aspects of childcare throughout the day. She manages the child's complete routine — feeding, bathing, napping, playing, and school support. This is our most comprehensive day-nanny option.",
+        "idealFor": "Dual-income families, parents with demanding corporate jobs, families with infants or toddlers under 3"
+      },
+      {
+        "type": "Live-In Nanny (24/7 Residential)",
+        "description": "A nanny who resides in your home and is available round the clock, including nighttime duties for infants who need night feeds and diaper changes. She gets a separate room, meals, and weekly off. This is the premium option for families who need complete peace of mind.",
+        "idealFor": "Families with newborns, single parents, parents with night shifts or frequent travel, NRI families visiting India with children"
+      }
+    ],
+    "salaryGuide": {
+      "heading": "Nanny & Babysitter Salary in India (2026 Updated)",
+      "intro": "Nanny salaries in India are higher than general maid salaries because childcare demands specialized skills, greater responsibility, and a higher trust threshold. Nannies experienced with newborns and infants command the highest salaries due to the intensity of care required. Those with formal childcare training, CPR certification, or early childhood education backgrounds earn even more. City, child's age, number of children, and whether night duties are required also affect pricing.",
+      "note": "Salaries shown are monthly cash-in-hand figures. For live-in nannies, accommodation and meals are provided by the family. Many families also provide a dedicated mobile phone for the nanny to share daily updates, photos, and videos of the child."
+    },
+    "whyUs": {
+      "heading": "Why Choose MyBuddyMaid for Nanny Placement",
+      "points": [
+        {
+          "title": "Child-Safety-First Verification",
+          "detail": "Our nanny verification goes beyond standard police checks. We conduct detailed background screening, check for any history of child-related complaints, verify medical fitness (including communicable diseases screening), and assess emotional temperament through structured interviews."
+        },
+        {
+          "title": "Age-Specific Matching",
+          "detail": "A nanny experienced with newborns has very different skills than one who handles toddlers or school-age children. We match based on your child's age group — infant specialists for 0-1 year, toddler experts for 1-3 years, and activity-oriented nannies for 3-8 years."
+        },
+        {
+          "title": "Basic First Aid & Safety Training",
+          "detail": "All our nannies receive training on infant CPR basics, choking response, fall and injury first aid, and emergency protocols. They know the nearest hospital route, have your paediatrician's number, and are briefed on your child's allergies or health conditions."
+        },
+        {
+          "title": "Daily Photo & Video Updates",
+          "detail": "We encourage all nannies to share daily updates with parents via WhatsApp — photos of meals, play activities, and nap times. This transparency helps working parents stay connected with their child's day and builds trust over time."
+        },
+        {
+          "title": "Patience & Temperament Assessment",
+          "detail": "Not everyone is cut out for childcare. We specifically assess patience, empathy, and warmth through scenario-based interviews. Candidates who show frustration, impatience, or lack of genuine affection for children are not placed, regardless of experience."
+        },
+        {
+          "title": "Flexible Plans for Changing Needs",
+          "detail": "Children's needs change rapidly. A nanny hired for a 6-month-old will need to adapt as the baby starts crawling, walking, and talking. We support transitions — upgrading from infant care to toddler management, adjusting hours as children start school, or adding a second child to the care arrangement."
+        }
+      ]
+    },
+    "howToHire": {
+      "heading": "How to Hire a Nanny Through MyBuddyMaid",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Share Your Child's Details",
+          "detail": "Tell us your child's age, any health conditions or allergies, your daily routine, preferred language, and specific requirements — do you need help with night feeds? School pickup? Special needs support? The more we know about your child, the better we match."
+        },
+        {
+          "step": 2,
+          "title": "We Shortlist Child-Experienced Nannies",
+          "detail": "Our team identifies 2-3 nannies with specific experience in your child's age group. Each has passed our enhanced child-safety verification. We share their profiles including experience details, language skills, and feedback from previous families with children."
+        },
+        {
+          "step": 3,
+          "title": "Meet the Nanny with Your Child Present",
+          "detail": "We arrange a meeting where the nanny interacts with your child while you observe. Watch how she holds the baby, how she talks to a toddler, how the child responds to her. A child's instinctive reaction is often the best indicator of a good match."
+        },
+        {
+          "step": 4,
+          "title": "Supervised Trial Period",
+          "detail": "The nanny starts a 3-5 day trial. During the first two days, we recommend that one parent stay home to observe the nanny's routines, feeding practices, and interaction style. By day 3-5, you can step back and let the nanny manage independently while monitoring."
+        },
+        {
+          "step": 5,
+          "title": "Ongoing Monitoring & Milestone Tracking",
+          "detail": "After confirmation, our team provides a simple milestone tracker for your child's age group. The nanny reports on developmental milestones — first crawl, first word, first step. We conduct monthly check-ins focused specifically on childcare quality and child well-being."
+        }
+      ]
+    },
+    "redFlags": {
+      "heading": "Red Flags When Hiring a Nanny",
+      "items": [
+        "Candidate shows impatience or irritability when interacting with children during the interview — this only gets worse behind closed doors",
+        "Unwilling to share previous employer references who have children — you must speak to at least one family they worked with",
+        "Excessive reliance on screen time (TV/phone) to manage children — a professional nanny engages actively, not passively",
+        "Cannot describe age-appropriate activities or developmental milestones — indicates lack of childcare knowledge",
+        "Refuses medical fitness certification — non-negotiable for someone who will hold, feed, and bathe your child",
+        "History of job changes every few months — nannies need time to bond with children, and frequent changes are disruptive",
+        "Unable to demonstrate proper infant holding technique or basic feeding practices during the trial",
+        "Shows signs of being on their phone constantly rather than being attentive to the child's needs"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much does a nanny cost in India?",
+        "a": "Nanny salaries in India range from ₹12,000 to ₹35,000 per month depending on the city, child's age, number of children, and working hours. Infant care (0-1 year) commands the highest salary — ₹18,000-₹35,000 in metros. Toddler nannies charge ₹15,000-₹28,000. After-school babysitters for older children cost ₹12,000-₹18,000. Live-in nannies are at the premium end of these ranges."
+      },
+      {
+        "q": "What is the difference between a nanny and a babysitter?",
+        "a": "A babysitter provides short-term, temporary care — typically for a few hours while parents go out. A nanny is a long-term, dedicated childcare professional who works set hours daily and is responsible for the child's complete routine including meals, hygiene, education support, and development. MyBuddyMaid provides both — regular nanny placements and on-demand babysitting for occasional needs."
+      },
+      {
+        "q": "Can I hire a nanny for a newborn?",
+        "a": "Yes, and we highly recommend it. Our newborn nannies specialize in infant care — proper latching support for breastfeeding mothers, bottle sterilization, burping techniques, swaddling, recognizing hunger and discomfort cues, and managing sleep cycles. They are experienced in handling the fragile 0-3 month period and gradually transition to more active care as the baby grows."
+      },
+      {
+        "q": "Is it safe to leave my child alone with a nanny?",
+        "a": "With proper verification, yes. Our nannies undergo the most thorough screening in our service lineup — police verification, child-safety background checks, medical fitness certification, and temperament assessment. We also recommend installing CCTV cameras in common areas (living room, children's room) and reviewing footage initially to build confidence. Most parents find that after 2-3 weeks with a good nanny, the anxiety significantly reduces."
+      },
+      {
+        "q": "What qualifications should a good nanny have?",
+        "a": "While formal qualifications like early childhood education degrees are a bonus, the most important qualities are genuine warmth towards children, patience, alertness, hygiene awareness, and experience with children of your child's age. Many of our best nannies are experienced mothers themselves who bring practical, real-world childcare knowledge that no textbook can teach."
+      },
+      {
+        "q": "Can the nanny help with school homework?",
+        "a": "Yes. For school-age children (5+), our nannies assist with homework, ensure school bags are packed, manage school project supplies, and help with basic revision. However, if you need dedicated academic tutoring for specific subjects, that goes beyond a nanny's scope and you may need a separate tutor."
+      },
+      {
+        "q": "Will the nanny follow my parenting style?",
+        "a": "Absolutely. During onboarding, we conduct a detailed discussion about your parenting preferences — discipline approach, screen time rules, food choices, sleep training philosophy, and outdoor play preferences. The nanny is briefed and expected to follow your guidelines consistently. Our relationship manager helps mediate if any alignment issues arise."
+      },
+      {
+        "q": "I work from home — do I still need a nanny?",
+        "a": "More than ever. Working from home with a young child is an impossible juggling act — you cannot type emails while a toddler demands your attention. A nanny allows you to focus on work during business hours while knowing your child is safe, fed, and engaged in the next room. Many work-from-home parents hire part-time nannies for 4-6 hours during their peak work hours."
+      },
+      {
+        "q": "Can the nanny handle two or more children?",
+        "a": "Yes. Many of our nannies have experience managing multiple children of different ages simultaneously. However, if both children are under 2, we strongly recommend a dedicated nanny for each — infants require constant attention and dividing it between two babies compromises care quality. For a toddler plus a school-age child, one experienced nanny can usually manage both."
+      },
+      {
+        "q": "What if my child does not like the nanny?",
+        "a": "This is actually common in the initial days — children, especially toddlers, may resist a new caregiver. We recommend a 5-7 day adjustment period where the parent is present and gradually steps back. However, if after a reasonable adjustment period the child consistently shows distress, clinginess, or behavioural changes, we will immediately replace the nanny. Your child's emotional well-being is the top priority."
+      }
+    ],
+    "relatedServices": ["maid-service", "postnatal-care-service", "elderly-care-service"],
+    "cityContextTemplates": {
+      "demand": "With nuclear families becoming the norm in {{city}} and grandparents often living in different cities, the demand for professional, trustworthy nannies has grown exponentially among the city's young, working parents.",
+      "lifestyle": "In {{city}}'s fast-paced environment where both parents often work demanding jobs, a professional nanny ensures your child receives dedicated, development-focused care throughout the day."
+    }
+  },
+
+  {
+    "id": "elderly-care-service",
+    "slug": "elderly-care-service",
+    "name": "Elderly Care Service",
+    "shortName": "Elderly Care",
+    "providerTitle": "Elderly Caregiver",
+    "icon": "🧓",
+    "heroImage": "elderly care buddy.jpg",
+    "priceFrom": "₹15,000/mo",
+    "metaTitle": "Hire Elderly Care Service in India — Senior Home Care | MyBuddyMaid",
+    "metaDescription": "Hire trained, verified elderly caregivers for senior home care. Mobility assistance, medication management, companionship & daily care. Starting ₹15,000/mo.",
+    "metaKeywords": "elderly care, senior care, old age care, elderly caregiver, home nurse for elderly, old age home care, senior home care, elderly companion, patient care attendant, elderly care near me",
+    "h1": "Hire Verified Elderly Care Service in India",
+    "heroSubtitle": "Trained, compassionate caregivers for your elderly loved ones. Mobility assistance, medication management, companionship, and daily care at home.",
+    "intro": "India is ageing. By 2026, there are over 150 million people above the age of 60 in the country, and this number is growing faster than the infrastructure to support them. The traditional Indian safety net for elderly parents — living with their children in a joint family, surrounded by grandchildren and familiar routines — is rapidly disappearing. Today's reality is starkly different. Adult children work in Bengaluru while their parents live in Lucknow. NRI children are settled in the US, Canada, or the Gulf while their aging parents manage alone in India. Even families that live in the same city often find that both working spouses cannot provide the constant attention that an elderly parent with mobility issues, diabetes, heart conditions, or early-stage dementia requires.\n\nThe consequences of inadequate elderly care are heartbreaking and all too common. A senior citizen falls in the bathroom at 3 AM and lies there for hours because no one heard. An 80-year-old grandmother forgets to take her blood pressure medication for three consecutive days. A retired father stops eating properly because he lives alone and cannot cook for himself. A mother with knee replacement surgery needs daily physiotherapy exercises but has no one to assist her. These are not hypothetical scenarios — they happen in lakhs of Indian households every single day.\n\nOld age homes are not the answer for most Indian families. The cultural stigma is real, and more importantly, most elderly parents want to stay in their own homes — surrounded by their own furniture, their own kitchen, their own neighbourhood, and their own memories. What they need is not institutionalization — they need a caring, attentive human being who can assist them with daily activities, ensure their medications are taken on time, accompany them to doctor appointments, and simply be there as a companion during the long, quiet hours of the day.\n\nMyBuddyMaid's Elderly Care Service provides exactly this. Our caregivers are trained in geriatric care basics — safe mobility assistance, medication scheduling, emergency response, and compassionate companionship. We match caregivers based on the senior's specific needs, health conditions, language preferences, and personality. Whether your parent needs help getting out of bed, a companion for their morning walk, someone to cook their favourite diabetic-friendly meals, or round-the-clock care after a surgery — we have trained, verified caregivers ready to step in.",
+    "whatTheyDo": {
+      "heading": "What Does an Elderly Caregiver Do?",
+      "description": "An elderly caregiver from MyBuddyMaid provides holistic senior care that addresses physical needs, health management, emotional well-being, and daily routine support. Our caregivers are trained to balance assistance with dignity — helping seniors maintain their independence wherever possible while ensuring safety and comfort.",
+      "tasks": [
+        {
+          "task": "Morning & Evening Routine Assistance",
+          "detail": "Helping the senior get out of bed, assisting with bathroom visits, supporting brushing and bathing (including sponge baths for bedridden patients), helping with clothing, and setting up the senior comfortably for their morning chai and newspaper routine."
+        },
+        {
+          "task": "Medication Management & Health Monitoring",
+          "detail": "Organizing and administering prescribed medications at correct times and dosages. Maintaining a medication log. Monitoring vital signs like blood pressure, blood sugar (using home kits), and body temperature. Alerting family members and doctors if readings are abnormal."
+        },
+        {
+          "task": "Mobility Assistance & Fall Prevention",
+          "detail": "Supporting the senior during walking — inside the home and during outdoor walks. Assisting with wheelchair transfers, staircase navigation, and getting in and out of cars. Maintaining a fall-safe environment — removing tripping hazards, ensuring bathroom grab bars are used, and staying close during movements."
+        },
+        {
+          "task": "Meal Preparation & Diet Management",
+          "detail": "Preparing meals tailored to the senior's health requirements — low-salt food for hypertension, diabetic-friendly meals, soft food for dental issues, high-calcium diets for osteoporosis. Ensuring the senior eats on time and stays hydrated throughout the day."
+        },
+        {
+          "task": "Doctor Visit & Hospital Accompaniment",
+          "detail": "Accompanying the senior to scheduled doctor appointments, diagnostic labs, physiotherapy sessions, and hospital visits. Managing appointment scheduling, carrying medical files, and communicating with doctors about the senior's daily health observations."
+        },
+        {
+          "task": "Companionship & Mental Engagement",
+          "detail": "Spending quality time with the senior — conversing, reading the newspaper aloud, watching TV together, playing simple card or board games, accompanying on evening walks, and ensuring the senior does not feel isolated or lonely. Social engagement is crucial for preventing depression in elderly individuals."
+        },
+        {
+          "task": "Physiotherapy Exercise Support",
+          "detail": "Assisting with prescribed physiotherapy exercises — post-surgery rehabilitation movements, joint flexibility exercises, breathing exercises, and gentle strength-building routines as directed by the physiotherapist. Ensuring exercises are done correctly and consistently."
+        },
+        {
+          "task": "Night Care & Emergency Readiness",
+          "detail": "For seniors needing night care: assisting with bathroom visits at night, repositioning bedridden patients to prevent pressure sores, responding to calls for help, and being alert to emergencies. Keeping emergency contacts, hospital details, and first-aid supplies readily accessible."
+        },
+        {
+          "task": "Personal Grooming & Hygiene",
+          "detail": "Maintaining the senior's personal hygiene — regular bathing, hair care, nail trimming, oral hygiene, skin moisturizing, and changing into clean clothes. For bedridden seniors: sponge baths, bed linen changes, and bedsore prevention through regular repositioning and skin care."
+        },
+        {
+          "task": "Household Coordination on Behalf of Senior",
+          "detail": "Managing the senior's household needs — paying utility bills, coordinating with domestic staff if applicable, receiving visitors and deliveries, making phone calls on behalf of the senior, and ensuring the home environment remains comfortable and safe."
+        }
+      ]
+    },
+    "serviceTypes": [
+      {
+        "type": "Part-Time Caregiver (4-6 Hours/Day)",
+        "description": "A caregiver visits during specific hours — typically morning (bathing, breakfast, medication) and/or evening (dinner, bedtime routine). This is suitable for seniors who are largely independent but need assistance with specific daily tasks and someone to check in on them regularly.",
+        "idealFor": "Semi-independent seniors, post-surgery recovery support, seniors living alone who need daily check-ins"
+      },
+      {
+        "type": "Full-Time Caregiver (12 Hours/Day)",
+        "description": "A caregiver present throughout the day to manage all aspects of the senior's daily routine — meals, medication, mobility, hygiene, doctor visits, and companionship. She returns to her own home at night. Ideal for seniors who need constant daytime supervision but can manage with family support at night.",
+        "idealFor": "Seniors with chronic conditions (diabetes, hypertension), elderly couples where one spouse is the primary carer and needs support, families where adult children work all day"
+      },
+      {
+        "type": "Live-In Caregiver (24/7 Residential)",
+        "description": "A caregiver who lives with the senior full-time, providing round-the-clock care including nighttime assistance. This is essential for seniors with severe mobility limitations, dementia, post-stroke care, or those recovering from major surgery. The caregiver provides continuous monitoring and immediate response to any need.",
+        "idealFor": "Bedridden seniors, dementia/Alzheimer's patients, post-surgery/post-stroke recovery, seniors living alone (especially NRI parents in India)"
+      }
+    ],
+    "salaryGuide": {
+      "heading": "Elderly Caregiver Salary in India (2026 Updated)",
+      "intro": "Elderly caregiver salaries are determined by the level of care required. Basic companionship and daily assistance costs less than specialized medical support care. Caregivers trained in handling dementia patients, bedridden care, or post-surgical rehabilitation command premium rates. The caregiver-to-senior ratio also matters — caring for a single senior is less demanding than managing an elderly couple with different health needs.",
+      "note": "These are monthly salary ranges. For live-in caregivers, accommodation and meals are provided by the family. If the senior requires medical-grade nursing (catheter management, injections, wound dressing), a qualified nurse may be needed in addition to or instead of a caregiver."
+    },
+    "whyUs": {
+      "heading": "Why Choose MyBuddyMaid for Elderly Care",
+      "points": [
+        {
+          "title": "Geriatric Care Training",
+          "detail": "Our caregivers receive training in elderly-specific care — safe patient handling and transfers, fall prevention, medication management, recognizing signs of stroke and cardiac events, and understanding the emotional needs of seniors. This is not generic domestic help — it is specialized care."
+        },
+        {
+          "title": "Empathy & Patience Assessment",
+          "detail": "Caring for the elderly requires extraordinary patience. Seniors can be forgetful, repetitive, stubborn about food, and resistant to help. We specifically assess candidates for emotional maturity, patience, and genuine empathy through scenario-based evaluations."
+        },
+        {
+          "title": "Health Condition Matching",
+          "detail": "We match caregivers based on the senior's specific health conditions. A Parkinson's patient needs a different skillset than a post-knee-replacement recovery case. Dementia care requires specialized understanding. We ensure the caregiver has relevant experience."
+        },
+        {
+          "title": "Regular Family Updates & Reports",
+          "detail": "For NRI families or adult children living in other cities, we provide regular updates — daily medication logs, weekly health summaries, photos, and video calls. You stay connected to your parent's well-being no matter where in the world you are."
+        },
+        {
+          "title": "Doctor & Hospital Coordination",
+          "detail": "Our caregivers accompany seniors to all medical appointments, maintain organized medical files, communicate the senior's daily observations to doctors, and ensure prescriptions are filled promptly. They act as the bridge between your parent and their healthcare providers."
+        },
+        {
+          "title": "Dignity & Independence Preservation",
+          "detail": "We train our caregivers to assist without taking over. The goal is to help seniors maintain as much independence as possible — encouraging them to do what they can, assisting only where needed, and preserving their dignity in every interaction, especially during personal care tasks."
+        }
+      ]
+    },
+    "howToHire": {
+      "heading": "How to Hire an Elderly Caregiver Through MyBuddyMaid",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Share Your Parent's Health Profile",
+          "detail": "Tell us about your parent's age, health conditions, medications, mobility level, dietary needs, language preference, and daily routine. Share any doctor-prescribed care instructions. If you are an NRI, we can conduct this consultation via video call."
+        },
+        {
+          "step": 2,
+          "title": "We Match Condition-Specific Caregivers",
+          "detail": "Based on the health profile, we shortlist 2-3 caregivers with experience in managing similar conditions. Each has passed geriatric care training, police verification, and medical fitness certification. We share their profiles and experience summaries."
+        },
+        {
+          "step": 3,
+          "title": "Introduction Meeting with Your Parent",
+          "detail": "The caregiver meets your parent in person. This is as much about the senior's comfort as it is about skill assessment. Elderly individuals can be particular about who they let into their personal space — the caregiver must earn their trust through warmth and respect."
+        },
+        {
+          "step": 4,
+          "title": "Gradual Transition & Trial",
+          "detail": "The caregiver starts with a 5-7 day trial. During the first few days, a family member should be present to help the senior adjust. The caregiver learns the senior's preferences — favourite foods, preferred TV channels, morning chai routine, and personal quirks that matter."
+        },
+        {
+          "step": 5,
+          "title": "Long-Term Care Plan & Regular Reviews",
+          "detail": "After confirmation, we create a long-term care plan covering daily routines, medication schedules, doctor visit calendar, and emergency protocols. Monthly reviews with the family ensure the care plan evolves as the senior's needs change."
+        }
+      ]
+    },
+    "redFlags": {
+      "heading": "Red Flags When Hiring an Elderly Caregiver",
+      "items": [
+        "Caregiver is rough or impatient during the initial meeting — elderly care demands tenderness, and first impressions matter",
+        "Inability to demonstrate basic patient handling skills — safe lifting, wheelchair transfers, and fall response",
+        "No experience with the senior's specific health condition — a generic helper cannot manage diabetes, dementia, or post-surgical care effectively",
+        "Reluctance to maintain medication logs or health records — this accountability is essential for the senior's safety",
+        "Previous employer references that mention the caregiver was inattentive or left the senior unattended for long periods",
+        "Overriding the senior's wishes or being domineering — good caregivers guide, they do not dictate",
+        "Agencies that do not offer emergency replacement — what happens if your parent's caregiver falls sick?",
+        "Candidate who cannot communicate in a language the senior understands — communication is critical for companionship and emergency response"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much does elderly care at home cost in India?",
+        "a": "Elderly caregiver costs range from ₹15,000 to ₹35,000 per month depending on the city, care level, and working hours. Part-time caregivers (4-6 hours) cost ₹15,000-₹20,000 in metros. Full-time caregivers (12 hours) range from ₹20,000-₹30,000. Live-in caregivers for 24/7 care cost ₹25,000-₹35,000. Specialized care for dementia or bedridden patients is at the higher end."
+      },
+      {
+        "q": "Is home care better than an old age home for my parents?",
+        "a": "For most Indian families, yes. Home care allows seniors to stay in familiar surroundings — their own bed, their own neighbourhood, their own memories. Studies consistently show that seniors who age at home have better mental health outcomes than those in institutional care. With a trained caregiver from MyBuddyMaid, your parent gets personalized, one-on-one attention that old age homes with their high resident-to-staff ratios simply cannot provide."
+      },
+      {
+        "q": "I live abroad — how can I arrange care for my parents in India?",
+        "a": "This is one of our most common use cases. NRI families can contact us via video call or our website. We handle the entire process — needs assessment, caregiver matching, police verification, trial period management, and ongoing monitoring. We provide daily/weekly photo and health updates via WhatsApp and a dedicated relationship manager who acts as your eyes and ears on the ground."
+      },
+      {
+        "q": "Can the caregiver help with dementia patients?",
+        "a": "Yes. We have caregivers specifically trained in dementia care — managing confusion, wandering tendencies, repetitive behaviour, sundowning (evening agitation), and maintaining a calm, structured environment. Dementia care requires extraordinary patience and specialized techniques, which is why we match only experienced caregivers for these cases."
+      },
+      {
+        "q": "What is the difference between a caregiver and a home nurse?",
+        "a": "A caregiver handles daily living assistance — bathing, feeding, medication reminders, mobility support, companionship, and light medical monitoring (blood pressure, sugar checks). A home nurse is a medically qualified professional who can administer injections, manage catheters, handle wound dressing, and provide clinical care. For most elderly care needs, a trained caregiver is sufficient. For medical-grade needs, we can arrange qualified nursing staff."
+      },
+      {
+        "q": "My father had a hip replacement — can you provide post-surgery care?",
+        "a": "Absolutely. Post-surgical care is one of our specialties. Our caregivers assist with prescribed physiotherapy exercises, ensure medication compliance, manage wound hygiene (under nurse supervision if needed), help with mobility using walkers or crutches, and provide the constant monitoring that the critical first 3-6 months of recovery demand."
+      },
+      {
+        "q": "Will the caregiver accompany my parent to hospital and doctor visits?",
+        "a": "Yes. Our caregivers accompany seniors to all scheduled doctor appointments, diagnostic labs (blood tests, scans), physiotherapy sessions, and hospital visits. They carry the senior's medical file, communicate daily observations to the doctor, fill prescriptions at the pharmacy, and report back to the family with a summary of the visit."
+      },
+      {
+        "q": "How do you handle nighttime emergencies?",
+        "a": "For live-in caregivers, they are on-call throughout the night for bathroom assistance, medication, or emergencies. They keep emergency contact numbers (family, doctor, nearest hospital, ambulance) readily accessible. Our caregivers are trained to recognize signs of stroke, cardiac events, and severe diabetic episodes and know to call emergency services immediately while alerting the family."
+      },
+      {
+        "q": "Can one caregiver look after both my elderly parents?",
+        "a": "If both parents are relatively independent and primarily need companionship and light assistance, one caregiver can manage. However, if either parent has significant health issues — mobility limitations, dementia, or post-surgical needs — we strongly recommend a dedicated caregiver for each. Dividing attention between two seniors with serious care needs compromises the quality of care for both."
+      },
+      {
+        "q": "My mother is very particular and difficult to please — will the caregiver cope?",
+        "a": "We understand — many seniors are set in their ways, and that is perfectly fine. During matching, we look for caregivers with the temperament to handle strong personalities with grace. We also brief the caregiver about the senior's preferences, quirks, and things that irritate them. Patience and adaptability are key traits we assess for. If a particular match does not work out, we replace until we find the right fit."
+      }
+    ],
+    "relatedServices": ["full-time-maid-service", "postnatal-care-service", "nanny-service"],
+    "cityContextTemplates": {
+      "demand": "With {{city}}'s aging population and the increasing number of NRI families with parents living alone, the need for professional, compassionate elderly care services has become one of the city's most pressing household challenges.",
+      "lifestyle": "Whether your parents live in a quiet residential colony or a high-rise apartment in {{city}}, a dedicated caregiver ensures they receive the attentive, dignified care they deserve in the comfort of their own home."
+    }
+  },
+
+  {
+    "id": "postnatal-care-service",
+    "slug": "postnatal-care-service",
+    "name": "Postnatal Care Service",
+    "shortName": "Postnatal Care",
+    "providerTitle": "Postnatal Caregiver",
+    "icon": "🤱",
+    "heroImage": "postnatal care buddy.jpg",
+    "priceFrom": "₹20,000/mo",
+    "metaTitle": "Hire Postnatal Care Service in India — Mother & Newborn Care | MyBuddyMaid",
+    "metaDescription": "Hire experienced postnatal caregivers for new mothers & newborns. Breastfeeding support, newborn care, traditional massage & recovery assistance. Starting ₹20,000/mo.",
+    "metaKeywords": "postnatal care, post delivery care, newborn care, japa maid, dai maa, confinement nanny, postpartum care, mother care after delivery, newborn caretaker, maternity nurse, post pregnancy care",
+    "h1": "Hire Postnatal Care Service for Mother & Newborn in India",
+    "heroSubtitle": "Experienced postnatal caregivers for new mothers and newborns. Traditional massage, breastfeeding support, baby care, and recovery assistance during the critical first 40 days.",
+    "intro": "The first 40 days after childbirth — known as the 'confinement period' or 'japa' in many Indian cultures — are among the most demanding and overwhelming weeks a woman will ever experience. Your body is recovering from the physical trauma of delivery (whether vaginal or C-section), your hormones are in complete upheaval, you are surviving on fragmented sleep with a newborn who needs feeding every two hours, and you are expected to figure out breastfeeding, swaddling, burping, and a dozen other newborn care skills — all while dealing with post-delivery pain, stitches, and emotional vulnerability.\n\nIn traditional Indian families, this period was managed by the extended family. The new mother's mother or mother-in-law would move in, take charge of the kitchen, manage the newborn's bath and massage, prepare special postpartum foods (gond ke laddu, ajwain water, haldi milk), and ensure the new mother rested and recovered. This support system was the backbone of postpartum recovery for centuries. But today, this safety net is fraying. Nuclear families mean the new mother's parents may live in a different city. Working mothers-in-law may not be able to take extended time off. And even well-meaning family members may rely on outdated practices that conflict with modern paediatric advice.\n\nThe consequences of inadequate postnatal support are serious. Postpartum depression affects nearly 1 in 5 Indian mothers, and the risk is significantly higher when the mother feels unsupported, overwhelmed, and isolated. Breastfeeding failure rates are high in the first few weeks when new mothers do not have proper latching guidance. Newborns are vulnerable to infections, colic, and jaundice — conditions that need early detection by someone experienced. And C-section recovery requires careful wound management and restricted movement that is nearly impossible to maintain when you are also the primary caretaker of a newborn.\n\nMyBuddyMaid's Postnatal Care Service bridges this gap with trained, experienced caregivers who specialize exclusively in postpartum mother and newborn care. Our postnatal caregivers — many of whom are experienced mothers themselves — handle everything from traditional oil massage (maalish) for the mother and baby, to breastfeeding position guidance, to preparing nutritious recovery meals, to managing the newborn's complete daily routine. They bring the wisdom of traditional Indian postnatal practices combined with awareness of modern medical guidelines. Whether you need someone for just the first 40 days or an extended 3-month support period, we ensure that both mother and baby are cared for with expertise and warmth.",
+    "whatTheyDo": {
+      "heading": "What Does a Postnatal Caregiver Do?",
+      "description": "A postnatal caregiver from MyBuddyMaid provides dual care — supporting the new mother's physical and emotional recovery while managing the newborn's daily needs. This is a specialized role that combines traditional Indian postpartum wisdom with modern infant care practices. Here is everything our postnatal caregivers handle:",
+      "tasks": [
+        {
+          "task": "Newborn Bathing & Massage (Baby Maalish)",
+          "detail": "Daily oil massage for the baby using warm coconut, almond, or sesame oil — promoting bone strength, improving circulation, and aiding digestion. Followed by a warm water bath with gentle baby soap. Our caregivers are trained in safe infant handling techniques during bathing to prevent slipping."
+        },
+        {
+          "task": "Mother's Traditional Massage & Recovery",
+          "detail": "Daily full-body oil massage for the new mother to relieve muscle soreness, improve blood circulation, reduce water retention, and promote uterine recovery. Special attention to the abdominal area for post-C-section mothers (after doctor clearance). Using traditional techniques passed down through generations."
+        },
+        {
+          "task": "Breastfeeding Support & Latching Assistance",
+          "detail": "Helping the new mother with correct breastfeeding positions (cradle hold, football hold, side-lying), assisting with latching, recognizing signs of good vs. poor latch, managing breast engorgement with warm compresses, and establishing a sustainable feeding schedule. Guidance on pumping and storing breast milk for working mothers."
+        },
+        {
+          "task": "Newborn Feeding Schedule Management",
+          "detail": "Maintaining a consistent 2-3 hour feeding schedule for the newborn. Tracking feeding duration, wet and soiled diapers (key indicators of adequate nutrition), and weight gain patterns. If formula supplementation is needed, preparing bottles with proper sterilization and correct formula-to-water ratios."
+        },
+        {
+          "task": "Diaper Changing & Umbilical Cord Care",
+          "detail": "Regular diaper changes using proper techniques to prevent rashes and infections. Cleaning and caring for the umbilical cord stump until it falls off naturally (usually 1-2 weeks) — keeping it dry, watching for signs of infection, and reporting any concerns to the paediatrician."
+        },
+        {
+          "task": "Postpartum Nutrition & Meal Preparation",
+          "detail": "Preparing traditional postpartum recovery foods — gond ke laddu, methi paratha, dink laddu, ajwain water, turmeric milk, dry fruit halwa, and iron-rich meals. For C-section mothers: easily digestible foods in the first week, gradually introducing regular diet. Ensuring adequate hydration and galactagogue foods to support milk production."
+        },
+        {
+          "task": "Newborn Sleep Management",
+          "detail": "Establishing a day-night sleep pattern, swaddling the baby for comfort, soothing fussy or colicky babies with gentle rocking and patting, managing nighttime feeds and diaper changes so the mother can rest, and maintaining a safe sleep environment (firm mattress, no loose blankets)."
+        },
+        {
+          "task": "Mother's Emotional Support",
+          "detail": "Being a calm, reassuring presence during the emotionally volatile postpartum period. Recognizing signs of baby blues (mood swings, tearfulness) vs. postpartum depression (persistent sadness, inability to bond with baby) and alerting the family if professional help is needed. Simply listening, encouraging, and normalizing the new mother's experiences."
+        },
+        {
+          "task": "Baby Laundry & Hygiene",
+          "detail": "Washing baby clothes separately using mild, baby-safe detergents. Sterilizing feeding bottles, pump parts, and pacifiers. Maintaining a clean, dust-free nursery environment. Changing crib sheets regularly and ensuring all baby items are sanitized."
+        },
+        {
+          "task": "Vaccination & Paediatrician Visit Coordination",
+          "detail": "Tracking the newborn vaccination schedule, reminding parents about upcoming vaccines, accompanying the mother and baby to paediatrician visits, and maintaining a detailed health record of the baby's weight, height, and developmental observations."
+        },
+        {
+          "task": "C-Section Wound Care Support",
+          "detail": "For C-section mothers: assisting with careful movement to avoid strain on the incision, helping the mother get in and out of bed safely, monitoring the wound for signs of infection (redness, swelling, discharge), and ensuring prescribed medications are taken on time."
+        }
+      ]
+    },
+    "serviceTypes": [
+      {
+        "type": "Daytime Postnatal Caregiver (10-12 Hours)",
+        "description": "A caregiver who works during the day — handling baby massage and bath in the morning, managing feeds throughout the day, preparing the mother's recovery meals, and ensuring both mother and baby are comfortable. The mother or family handles nighttime duties. This is suitable when the mother has nighttime support from a partner or family.",
+        "idealFor": "Families where the father or grandparent handles night feeds, mothers recovering from normal delivery with good support at night"
+      },
+      {
+        "type": "24/7 Live-In Postnatal Caregiver",
+        "description": "A dedicated caregiver who lives with the family for the entire postnatal period (typically 40 days to 3 months). She handles all newborn duties including nighttime feeds, diaper changes, and soothing — allowing the mother to get proper rest. This is our most comprehensive and popular postnatal care option.",
+        "idealFor": "First-time mothers, C-section recovery, mothers without family support, twin births, NRI families visiting India for delivery"
+      },
+      {
+        "type": "Extended Postnatal Support (3-6 Months)",
+        "description": "For mothers who need support beyond the traditional 40-day period — especially those returning to work, dealing with breastfeeding challenges, or managing postpartum health issues. The caregiver transitions from intensive newborn care to more of a nanny role as the baby grows, while still supporting the mother's ongoing recovery.",
+        "idealFor": "Working mothers returning to office, mothers with postpartum complications, families transitioning to a long-term nanny arrangement"
+      }
+    ],
+    "salaryGuide": {
+      "heading": "Postnatal Caregiver Salary in India (2026 Updated)",
+      "intro": "Postnatal care is one of the most specialized and demanding domestic services, which is reflected in the salary range. A good postnatal caregiver (often called a 'japa maid' or 'dai maa') is in extremely high demand, especially in metro cities where nuclear families dominate. Experienced caregivers with a strong track record of newborn and mother care command premium rates. The salary also depends on whether night duties are required, whether the birth was a C-section (more intensive care), and whether it is a single baby or twins.",
+      "note": "These are monthly salary ranges for the postnatal period. Most postnatal engagements are 40 days to 3 months. For live-in caregivers, accommodation and all meals are provided by the family. A completion bonus at the end of the engagement is customary and appreciated."
+    },
+    "whyUs": {
+      "heading": "Why Choose MyBuddyMaid for Postnatal Care",
+      "points": [
+        {
+          "title": "Traditional + Modern Care Approach",
+          "detail": "Our caregivers combine the best of traditional Indian postnatal practices (oil massage, special recovery foods, binding) with modern paediatric guidelines (safe sleep practices, WHO breastfeeding recommendations, evidence-based newborn care). You get grandmother's wisdom verified by science."
+        },
+        {
+          "title": "Experienced Mother-Caregivers",
+          "detail": "Many of our postnatal caregivers are experienced mothers themselves with 5-15 years of newborn care experience. They have handled hundreds of babies — they can calm a colicky infant, manage a jaundiced newborn, and support a struggling breastfeeding mother with the confidence that only comes from experience."
+        },
+        {
+          "title": "Breastfeeding Specialist Support",
+          "detail": "Breastfeeding is the biggest challenge for most new mothers, and inadequate support in the first two weeks is the primary reason mothers give up. Our caregivers are trained in lactation support — correct positioning, latch assessment, engorgement management, and maintaining supply through proper nutrition and pumping schedules."
+        },
+        {
+          "title": "C-Section Recovery Expertise",
+          "detail": "Nearly 30% of deliveries in urban India are C-sections. Our caregivers are experienced in C-section recovery care — gentle mobility assistance, wound monitoring, pain management support, and modified daily routines that protect the incision while allowing gradual recovery."
+        },
+        {
+          "title": "Postpartum Mental Health Awareness",
+          "detail": "Our caregivers are trained to recognize signs of postpartum depression and anxiety — not just 'baby blues.' They know when to alert the family, when to suggest professional help, and how to provide the emotional support and reassurance that new mothers desperately need during this vulnerable period."
+        },
+        {
+          "title": "Seamless Transition to Nanny Service",
+          "detail": "When the postnatal period ends, the transition can be jarring if you lose your support suddenly. MyBuddyMaid offers a seamless transition — your postnatal caregiver can continue as a nanny, or we match you with a dedicated nanny who is briefed on your baby's routine and preferences. No starting from scratch."
+        }
+      ]
+    },
+    "howToHire": {
+      "heading": "How to Hire a Postnatal Caregiver Through MyBuddyMaid",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Book Before Your Due Date",
+          "detail": "We recommend booking 4-6 weeks before your expected delivery date. Tell us your due date, delivery type (vaginal/C-section if known), whether you are a first-time mother, any specific health concerns, and your preferences for traditional vs. modern care approach. We begin shortlisting immediately."
+        },
+        {
+          "step": 2,
+          "title": "We Match Experienced Postnatal Specialists",
+          "detail": "Based on your needs, we identify 2-3 caregivers with extensive newborn care experience. Each is verified, medically fit, and has strong references from previous postnatal placements. We prioritize caregivers who speak your language and are familiar with your cultural postnatal traditions."
+        },
+        {
+          "step": 3,
+          "title": "Pre-Delivery Meeting",
+          "detail": "You meet the caregiver before delivery — either at home or via video call. Discuss your expectations, birthing plan, feeding preferences (breast, formula, combination), and any family traditions you want followed. This ensures the caregiver is aligned and ready before the baby arrives."
+        },
+        {
+          "step": 4,
+          "title": "Immediate Post-Delivery Deployment",
+          "detail": "The caregiver arrives at your home (or hospital, if needed) within hours of delivery. She takes charge of the newborn's immediate needs — first bath, first feeding support, cord care — while allowing the mother to rest and recover. For C-sections, she assists with the first careful movements out of bed."
+        },
+        {
+          "step": 5,
+          "title": "Daily Routine & Graduation Support",
+          "detail": "Over the 40-day to 3-month period, the caregiver establishes and maintains a structured routine for both mother and baby. As the mother recovers and gains confidence, the caregiver gradually transfers skills and routines. By the end of the engagement, you are confident in handling your baby independently — or we transition you to our Nanny Service."
+        }
+      ]
+    },
+    "redFlags": {
+      "heading": "Red Flags When Hiring a Postnatal Caregiver",
+      "items": [
+        "Caregiver insists on outdated practices that contradict your paediatrician's advice — e.g., giving honey to newborns, applying kajal, or using pillow for infant sleep",
+        "Cannot demonstrate proper newborn holding, burping, or swaddling techniques — these are fundamental skills",
+        "Dismissive of the mother's emotional state or tells her to 'stop overreacting' — postnatal emotional distress is real and needs sensitivity",
+        "Reluctance to follow the paediatrician's feeding plan, preferring to impose their own traditional methods without medical backing",
+        "History of handling newborns roughly or without adequate gentleness — a newborn's body is extremely fragile",
+        "Unwilling to maintain a feeding and diaper log — tracking is critical for monitoring newborn health in the first weeks",
+        "No experience with C-section recovery — C-section aftercare requires specific knowledge about wound management and mobility restrictions",
+        "Caregiver who prioritizes household chores over mother and baby care — her primary duty is maternal and infant well-being, not cleaning the house"
+      ]
+    },
+    "faqs": [
+      {
+        "q": "How much does postnatal care cost in India?",
+        "a": "Postnatal caregiver salaries range from ₹20,000 to ₹45,000 per month depending on the city and level of care. Daytime-only caregivers cost ₹20,000-₹30,000 in metros. 24/7 live-in postnatal caregivers — the most popular option — cost ₹28,000-₹45,000. In tier-2 cities, expect 20-30% lower rates. Most postnatal engagements last 40 days to 3 months."
+      },
+      {
+        "q": "When should I book a postnatal caregiver?",
+        "a": "Book 4-6 weeks before your due date. Good postnatal caregivers are in extremely high demand, and last-minute bookings may result in limited options. For twins or high-risk pregnancies where early delivery is possible, booking 8 weeks in advance is recommended. We keep your caregiver on standby so she can arrive within hours of delivery."
+      },
+      {
+        "q": "Will the caregiver help with breastfeeding?",
+        "a": "Yes, breastfeeding support is a core part of our postnatal care service. Our caregivers assist with correct positioning and latching, help manage engorgement using warm compresses, establish a feeding schedule, track feeding duration and frequency, and provide encouragement during the challenging first two weeks when most mothers feel like giving up."
+      },
+      {
+        "q": "What is the difference between a postnatal caregiver and a nurse?",
+        "a": "A postnatal caregiver handles day-to-day newborn care (bathing, feeding support, massage, diaper changes) and mother care (massage, recovery meals, emotional support). A postnatal nurse is medically qualified and handles clinical tasks like wound dressing, catheter management, administering injections, and medical monitoring. For normal deliveries, a caregiver is usually sufficient. For complicated deliveries, you may need both."
+      },
+      {
+        "q": "Can the caregiver handle C-section recovery care?",
+        "a": "Yes. Our caregivers experienced in C-section recovery assist with careful getting in and out of bed, support during the first walks (critical for recovery), monitor the incision area for signs of infection, ensure pain medications are taken on time, and manage the newborn's needs so the mother can focus entirely on healing. C-section recovery typically takes 6-8 weeks, and our caregivers are prepared for this extended timeline."
+      },
+      {
+        "q": "Does the postnatal caregiver also do household chores?",
+        "a": "The postnatal caregiver's primary focus is mother and newborn care — not general housekeeping. However, she will handle baby-related tasks like washing baby clothes, sterilizing bottles, and keeping the nursery clean. She also prepares the mother's recovery meals and snacks. For general housekeeping, we recommend pairing the postnatal caregiver with our Maid Service."
+      },
+      {
+        "q": "I am a first-time mother and very nervous — will the caregiver guide me?",
+        "a": "Absolutely — this is one of the most important roles of a postnatal caregiver. She teaches you how to hold, feed, burp, swaddle, and bathe your baby. She helps you understand your newborn's cries (hunger vs. discomfort vs. tiredness), guides you on breastfeeding, and gradually builds your confidence. By the time the engagement ends, you will feel like an expert."
+      },
+      {
+        "q": "What traditional postnatal practices do your caregivers follow?",
+        "a": "Our caregivers are experienced in traditional Indian postnatal practices — daily oil massage (maalish) for mother and baby, preparing traditional recovery foods (gond laddu, dink laddu, ajwain water, panjiri), abdominal binding for uterine recovery, and warm water baths with herbal additions. However, we ensure all practices are safe and aligned with your doctor's recommendations — no outdated practices that could harm mother or baby."
+      },
+      {
+        "q": "Can I hire a postnatal caregiver for twins?",
+        "a": "Yes, but for twins we strongly recommend either two caregivers or a caregiver plus a nanny. Managing two newborns simultaneously — feeding every 2 hours, double the diaper changes, and coordinating sleep schedules — is extremely demanding. A single caregiver cannot provide optimal care for two babies and a recovering mother simultaneously."
+      },
+      {
+        "q": "What happens after the postnatal period ends?",
+        "a": "You have three options: (1) Extend the postnatal caregiver's engagement if you still need support, (2) Transition the same caregiver into a nanny role for continued baby care, or (3) We match you with a dedicated nanny from our Nanny Service who is briefed on your baby's established routine. We ensure a smooth handover so your baby's routine is not disrupted."
+      }
+    ],
+    "relatedServices": ["nanny-service", "maid-service", "cook-service"],
+    "cityContextTemplates": {
+      "demand": "With {{city}}'s high C-section rates and the growing number of nuclear families without extended family support, professional postnatal care has become essential for new mothers navigating the overwhelming first 40 days after delivery.",
+      "lifestyle": "In {{city}}, where most couples manage without joint family support, a trained postnatal caregiver bridges the gap — providing the traditional care and modern expertise that every new mother deserves during her recovery."
+    }
+  }
+]
