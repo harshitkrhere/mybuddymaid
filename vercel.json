@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "buildCommand": "npm run build",
   "outputDirectory": "app/dist",
   "installCommand": "cd app && npm install",
