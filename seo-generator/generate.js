@@ -617,7 +617,7 @@ function generateBestOfPages() {
   console.log('\n🏆 Generating best-of pages...');
   let count = 0;
 
-  const topCities = cities.filter(c => c.tier <= 2).slice(0, 15);
+  const topCities = cities;
 
   topCities.forEach(city => {
     services.forEach(svc => {
@@ -954,7 +954,7 @@ function generateCityIndexPages() {
       <div class="hub-link-grid">
         <a href="/domestic-help-salary-in-${city.slug}-2026.html">💰 Salary Guide — ${city.name}</a>
         <a href="/best-maid-service-in-${city.slug}.html">🏆 Best Maid Service</a>
-        <a href="/blog/domestic-help-guide-${city.slug}-2026.html">📝 City Guide</a>
+        ${blogPosts.find(b => b.slug === 'domestic-help-guide-' + city.slug + '-2026') ? `<a href="/blog/domestic-help-guide-${city.slug}-2026.html">📝 City Guide</a>` : ''}
       </div>
 
       ${nearbyLinks ? `<h2>Nearby Cities</h2><div class="hub-link-grid">${nearbyLinks}</div>` : ''}
