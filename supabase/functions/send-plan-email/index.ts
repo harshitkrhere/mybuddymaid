@@ -1,8 +1,9 @@
 // Supabase Edge Function: send-plan-email
 // Sends a branded confirmation email via Resend after a plan purchase.
 
+const ALLOWED_ORIGIN = 'https://mybuddymaid.in';
 const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 

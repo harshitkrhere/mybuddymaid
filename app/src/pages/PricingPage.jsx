@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
-import { PLAN_DETAILS, RZP_KEY } from '../lib/constants';
+import { PLAN_DETAILS } from '../lib/constants';
 import {
   Crown, Check, Loader2, AlertCircle, Shield, Clock, Users,
   Star, ChevronRight, Zap, Award, HeartHandshake, Mail, Phone,
@@ -71,7 +71,7 @@ export default function PricingPage() {
     return () => clearInterval(interval);
   }, []);
 
-  const handleBuyPlan = (planKey) => {
+  const handleBuyPlan = async (planKey) => {
     const p = PLAN_DETAILS[planKey];
     if (!p || !window.Razorpay) {
       setPayError('Payment service unavailable. Please try again later.');
@@ -90,57 +90,90 @@ export default function PricingPage() {
     setPayError('');
     setContactError('');
 
-    const options = {
-      key: RZP_KEY,
-      amount: p.pricePaise,
-      currency: 'INR',
-      name: 'MyBuddyMaid',
-      description: `${p.name} Package — ${p.duration} days`,
-      image: '/logo.png',
-      prefill: { name: profile?.full_name || '', email: buyEmail, contact: buyPhone },
-      theme: { color: '#34D399' },
-      handler: async (response) => {
-        try {
-          const expiresAt = new Date();
-          expiresAt.setDate(expiresAt.getDate() + p.duration);
-          await purchasePlan({
+    try {
+      // Step 1: Create Razorpay order server-side (price is set by server)
+      const { data: orderData, error: orderError } = await supabase.functions.invoke(
+        'create-razorpay-order',
+        {
+          body: {
             plan_name: planKey,
-            amount_paid: p.pricePaise,
-            razorpay_payment_id: response.razorpay_payment_id,
-            replacements_total: p.replacementsTotal,
-            expires_at: expiresAt.toISOString(),
             email: buyEmail.trim(),
             phone: buyPhone.trim(),
-          });
-          await refreshUserPlan();
-          setPurchasing(null);
-          supabase.functions.invoke('send-package-email', {
-            body: {
-              user_id: user?.id,
-              user_name: profile?.full_name || 'Valued Customer',
-              user_email: buyEmail,
-              plan_name: planKey,
-              amount_paid: p.pricePaise,
-              razorpay_payment_id: response.razorpay_payment_id,
-              purchased_at: new Date().toISOString(),
-              replacements_total: p.replacementsTotal,
-              expires_at: expiresAt.toISOString(),
-            },
-          }).catch(err => console.warn('[MyBuddyMaid] Package email failed:', err));
-        } catch (err) {
-          setPayError('Payment recorded but plan activation failed. Contact support.');
-          setPurchasing(null);
-        }
-      },
-      modal: { ondismiss: () => setPurchasing(null) },
-    };
+          },
+        },
+      );
 
-    try {
+      if (orderError || !orderData?.order_id) {
+        setPayError(orderData?.error || 'Failed to create payment order. Please try again.');
+        setPurchasing(null);
+        return;
+      }
+
+      // Step 2: Open Razorpay checkout with server-generated order
+      const options = {
+        key: orderData.key_id,
+        amount: orderData.amount,
+        currency: orderData.currency,
+        name: 'MyBuddyMaid',
+        description: `${orderData.plan_display_name} Package — ${orderData.plan_duration} days`,
+        image: '/logo.png',
+        order_id: orderData.order_id,
+        prefill: { name: profile?.full_name || '', email: buyEmail, contact: buyPhone },
+        theme: { color: '#34D399' },
+        handler: async (response) => {
+          try {
+            // Step 3: Verify payment server-side (signature + amount check)
+            const { data: verifyData, error: verifyError } = await supabase.functions.invoke(
+              'verify-razorpay-payment',
+              {
+                body: {
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                  plan_name: planKey,
+                  email: buyEmail.trim(),
+                  phone: buyPhone.trim(),
+                },
+              },
+            );
+
+            if (verifyError || !verifyData?.success) {
+              setPayError(verifyData?.error || 'Payment verification failed. Contact support if amount was deducted.');
+              setPurchasing(null);
+              return;
+            }
+
+            // Plan activated successfully by server
+            await refreshUserPlan();
+            setPurchasing(null);
+
+            // Send confirmation email (fire-and-forget)
+            supabase.functions.invoke('send-package-email', {
+              body: {
+                user_id: user?.id,
+                user_name: profile?.full_name || 'Valued Customer',
+                user_email: buyEmail,
+                plan_name: planKey,
+                amount_paid: orderData.amount,
+                razorpay_payment_id: response.razorpay_payment_id,
+                purchased_at: new Date().toISOString(),
+                replacements_total: p.replacementsTotal,
+                expires_at: verifyData.plan?.expires_at || new Date().toISOString(),
+              },
+            }).catch(() => {});
+          } catch {
+            setPayError('Payment recorded but plan activation failed. Contact support.');
+            setPurchasing(null);
+          }
+        },
+        modal: { ondismiss: () => setPurchasing(null) },
+      };
+
       const rzp = new window.Razorpay(options);
       rzp.on('payment.failed', () => { setPayError('Payment failed.'); setPurchasing(null); });
       rzp.open();
-    } catch (err) {
-      setPayError('Could not open payment gateway.');
+    } catch {
+      setPayError('Could not initiate payment. Please try again.');
       setPurchasing(null);
     }
   };

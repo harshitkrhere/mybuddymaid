@@ -51,10 +51,13 @@ function serveLandingPage() {
 
         // Serve static website files (styles.css, script.js, images, blogs)
         const filePath = path.join(WEBSITE_DIR, url)
-        if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+        const resolved = path.resolve(filePath)
+        // Security: prevent path traversal (H5 fix)
+        if (!resolved.startsWith(WEBSITE_DIR)) return next()
+        if (fs.existsSync(resolved) && fs.statSync(resolved).isFile()) {
           const ext = path.extname(url).toLowerCase()
           if (MIME[ext]) res.setHeader('Content-Type', MIME[ext])
-          res.end(fs.readFileSync(filePath))
+          res.end(fs.readFileSync(resolved))
           return
         }
 

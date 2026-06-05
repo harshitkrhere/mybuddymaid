@@ -173,7 +173,7 @@ export const PLAN_DETAILS = {
   },
 };
 
-export const RZP_KEY = 'rzp_live_SVW7I4Fu5WQpAt';
+export const RZP_KEY = import.meta.env.VITE_RZP_KEY || '';
 
 // All 28 States + 8 Union Territories of India (alphabetical)
 export const INDIAN_STATES = [
