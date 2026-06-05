@@ -57,6 +57,17 @@ if (fs.existsSync(partialsDir)) {
   });
 }
 
+// ═══════════════ HTML ESCAPING (M3 Security Fix) ═══════════════
+function escapeHtml(str) {
+  if (typeof str !== 'string') return str;
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // ═══════════════ TEMPLATE ENGINE ═══════════════
 function render(template, data) {
   let html = template;
@@ -86,11 +97,19 @@ function render(template, data) {
   });
 
   // 4. Replace {{variable}} and {{nested.variable}} placeholders
-  html = html.replace(/\{\{([a-zA-Z0-9_.]+)\}\}/g, (_, key) => {
+  // Use {{{variable}}} (triple braces) for raw/unescaped output (e.g. pre-built HTML)
+  html = html.replace(/\{\{\{([a-zA-Z0-9_.]+)\}\}\}/g, (_, key) => {
     const val = resolveValue(data, key);
     if (val === undefined || val === null) return '';
     if (typeof val === 'object') return JSON.stringify(val);
-    return String(val);
+    return String(val); // raw, no escaping
+  });
+
+  html = html.replace(/\{\{([a-zA-Z0-9_.]+)\}\}/g, (_, key) => {
+    const val = resolveValue(data, key);
+    if (val === undefined || val === null) return '';
+    if (typeof val === 'object') return escapeHtml(JSON.stringify(val));
+    return escapeHtml(String(val));
   });
 
   return html;

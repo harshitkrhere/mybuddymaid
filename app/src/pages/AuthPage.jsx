@@ -1,6 +1,28 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+
+// M2: Map raw Supabase errors to user-friendly messages (L2 fix)
+const FRIENDLY_ERRORS = {
+  'Invalid login credentials': 'Incorrect email or password. Please try again.',
+  'Email not confirmed': 'Please verify your email before signing in. Check your inbox.',
+  'User already registered': 'An account with this email already exists. Try signing in.',
+  'Signup requires a valid password': 'Please enter a valid password.',
+  'Password should be at least 6 characters': 'Password must be at least 8 characters.',
+  'For security purposes, you can only request this after': 'Too many attempts. Please wait a moment before trying again.',
+};
+
+function friendlyError(rawMsg) {
+  if (!rawMsg) return 'Something went wrong. Please try again.';
+  for (const [key, friendly] of Object.entries(FRIENDLY_ERRORS)) {
+    if (rawMsg.includes(key)) return friendly;
+  }
+  // Fallback: strip technical details, return generic message
+  if (rawMsg.includes('fetch') || rawMsg.includes('network') || rawMsg.includes('Failed')) {
+    return 'Network error. Please check your connection and try again.';
+  }
+  return 'Something went wrong. Please try again.';
+}
 
 export default function AuthPage() {
   const { signInWithGoogle, signUpWithEmail, signInWithEmail, isAuthenticated } = useAuth();
@@ -12,6 +34,16 @@ export default function AuthPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+
+  // M2: Rate limiting — cooldown after failed attempts
+  const failCountRef = useRef(0);
+  const [cooldown, setCooldown] = useState(0);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const timer = setTimeout(() => setCooldown(c => c - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [cooldown]);
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -34,23 +66,30 @@ export default function AuthPage() {
     try {
       await signInWithGoogle();
     } catch (err) {
-      setError(err.message || 'Google sign-in failed');
+      setError(friendlyError(err.message));
     }
   };
 
   const handleEmailSignIn = async (e) => {
     e?.preventDefault();
+    if (cooldown > 0) return;
     if (!email || !password) { setError('Please enter email and password'); return; }
     setError('');
     setSuccessMsg('');
     setLoading(true);
     try {
       await signInWithEmail(email, password);
+      failCountRef.current = 0;
       const ctx = sessionStorage.getItem('mbm_redirect_context');
       sessionStorage.removeItem('mbm_redirect_context');
       navigate('/splash', { state: { redirectContext: ctx }, replace: true });
     } catch (err) {
-      setError(err.message || 'Sign in failed');
+      failCountRef.current += 1;
+      // Progressive cooldown: 5s after 3 fails, 15s after 5, 30s after 7
+      if (failCountRef.current >= 7) setCooldown(30);
+      else if (failCountRef.current >= 5) setCooldown(15);
+      else if (failCountRef.current >= 3) setCooldown(5);
+      setError(friendlyError(err.message));
     } finally {
       setLoading(false);
     }
@@ -59,7 +98,7 @@ export default function AuthPage() {
   const handleEmailSignUp = async (e) => {
     e?.preventDefault();
     if (!email || !password) { setError('Please enter email and password'); return; }
-    if (password.length < 6) { setError('Password must be at least 6 characters'); return; }
+    if (password.length < 8) { setError('Password must be at least 8 characters'); return; }
     setError('');
     setSuccessMsg('');
     setLoading(true);
@@ -67,7 +106,7 @@ export default function AuthPage() {
       await signUpWithEmail(email, password);
       setSuccessMsg('Verification link sent to your email! Please check your inbox and verify before signing in.');
     } catch (err) {
-      setError(err.message || 'Sign up failed');
+      setError(friendlyError(err.message));
     } finally {
       setLoading(false);
     }
@@ -113,8 +152,8 @@ export default function AuthPage() {
         onKeyDown={(e) => e.key === 'Enter' && handleEmailSignIn()}
       />
 
-      <button type="button" className="btn-auth" onClick={handleEmailSignIn} disabled={loading || !email || !password}>
-        {loading ? 'Signing in...' : 'Sign In'}
+      <button type="button" className="btn-auth" onClick={handleEmailSignIn} disabled={loading || !email || !password || cooldown > 0}>
+        {loading ? 'Signing in...' : cooldown > 0 ? `Wait ${cooldown}s...` : 'Sign In'}
       </button>
 
       <p className="auth-terms">
@@ -149,7 +188,7 @@ export default function AuthPage() {
       <input
         type="password"
         className="auth-input-field"
-        placeholder="Password (min 6 characters)"
+        placeholder="Password (min 8 characters)"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         onKeyDown={(e) => e.key === 'Enter' && handleEmailSignUp()}

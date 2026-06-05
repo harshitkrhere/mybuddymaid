@@ -752,7 +752,6 @@ Deno.serve(async (req: Request): Promise<Response> => {
     return jsonResponse(
       {
         error: 'Internal server error',
-        detail: err instanceof Error ? err.message : 'Unknown error',
       },
       500,
     );

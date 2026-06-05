@@ -30,7 +30,7 @@ export default function ProfilePage() {
       setSaveMsg('Profile saved!');
       setTimeout(() => setSaveMsg(''), 3000);
     } catch (err) {
-      setSaveMsg('Error saving: ' + (err.message || 'Please try again'));
+      setSaveMsg('Unable to save. Please try again.');
     } finally {
       setSaving(false);
     }

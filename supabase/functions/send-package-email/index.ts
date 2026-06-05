@@ -548,6 +548,6 @@ Deno.serve(async (req: Request): Promise<Response> => {
       }
     }
 
-    return jsonResponse({ error: 'Internal server error', message: errorMsg }, 500);
+    return jsonResponse({ error: 'Internal server error' }, 500);
   }
 });
