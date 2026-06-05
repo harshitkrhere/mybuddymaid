@@ -159,6 +159,11 @@ export default function AuthPage() {
       <p className="auth-terms">
         By signing in, you agree to our <Link to="/terms">Terms & Conditions</Link>.
       </p>
+
+      <div className="auth-mobile-toggle">
+        Don't have an account?
+        <button type="button" onClick={() => handleModeSwitch(true)}>Sign Up</button>
+      </div>
     </div>
   );
 
@@ -201,6 +206,11 @@ export default function AuthPage() {
       <p className="auth-terms">
         By signing up, you agree to our <Link to="/terms">Terms & Conditions</Link>.
       </p>
+
+      <div className="auth-mobile-toggle">
+        Already have an account?
+        <button type="button" onClick={() => handleModeSwitch(false)}>Sign In</button>
+      </div>
     </div>
   );
 

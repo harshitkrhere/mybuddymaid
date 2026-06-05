@@ -1036,6 +1036,9 @@ ul { list-style: none; }
   font-size: 0.82rem; text-align: center;
 }
 
+/* Hide mobile toggle on desktop — overlay handles it */
+.auth-mobile-toggle { display: none; }
+
 /* Auth Mobile — Stack panels vertically */
 @media (max-width: 767px) {
   .auth-container { min-height: auto; max-width: 420px; }
@@ -1053,6 +1056,7 @@ ul { list-style: none; }
 
   /* Mobile auth toggle */
   .auth-mobile-toggle {
+    display: block;
     text-align: center; padding: 16px; font-size: 0.85rem; color: var(--text-sec);
   }
   .auth-mobile-toggle button {
