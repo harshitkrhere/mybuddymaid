@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { supabase } from '../lib/supabase';
 import { INDIAN_STATES } from '../lib/constants';
-import { User, Phone, Mail, MapPin, LogOut, Loader2 } from 'lucide-react';
+import { User, Phone, Mail, MapPin, LogOut, Loader2, Trash2, AlertTriangle } from 'lucide-react';
 
 export default function ProfilePage() {
   const { user, profile, signOut, updateProfile } = useAuth();
@@ -12,6 +13,12 @@ export default function ProfilePage() {
   const authEmail = user?.email || '';
   const [saving, setSaving] = useState(false);
   const [saveMsg, setSaveMsg] = useState('');
+
+  // Delete account state
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [deleteConfirmText, setDeleteConfirmText] = useState('');
+  const [deleting, setDeleting] = useState(false);
+  const [deleteError, setDeleteError] = useState('');
 
   useEffect(() => {
     if (profile) {
@@ -38,6 +45,27 @@ export default function ProfilePage() {
 
   const handleSignOut = async () => {
     await signOut();
+  };
+
+  const handleDeleteAccount = async () => {
+    if (deleteConfirmText !== 'DELETE') return;
+    setDeleting(true);
+    setDeleteError('');
+    try {
+      const { data, error } = await supabase.functions.invoke('delete-account', {
+        body: { confirm: 'DELETE_MY_ACCOUNT' },
+      });
+      if (error || !data?.success) {
+        setDeleteError(data?.message || 'Deletion failed. Please contact support.');
+        setDeleting(false);
+        return;
+      }
+      // Account deleted — sign out and redirect
+      await signOut();
+    } catch {
+      setDeleteError('Something went wrong. Please contact support.');
+      setDeleting(false);
+    }
   };
 
   const initials = (profile?.full_name || user?.email || '?')[0].toUpperCase();
@@ -81,6 +109,50 @@ export default function ProfilePage() {
       <button className="profile-signout" onClick={handleSignOut}>
         <LogOut size={16} /> Sign Out
       </button>
+
+      {/* Delete Account — DPDP Act Compliance */}
+      <div className="profile-danger-zone">
+        {!showDeleteConfirm ? (
+          <button
+            className="profile-delete-btn"
+            onClick={() => setShowDeleteConfirm(true)}
+          >
+            <Trash2 size={16} /> Delete My Account
+          </button>
+        ) : (
+          <div className="profile-delete-confirm">
+            <div className="profile-delete-warning">
+              <AlertTriangle size={18} />
+              <span>This will permanently delete all your data including bookings, plans, and profile. This action cannot be undone.</span>
+            </div>
+            <p className="profile-delete-instruction">Type <strong>DELETE</strong> to confirm:</p>
+            <input
+              type="text"
+              value={deleteConfirmText}
+              onChange={e => setDeleteConfirmText(e.target.value)}
+              placeholder="Type DELETE"
+              className="profile-delete-input"
+            />
+            {deleteError && <p className="profile-delete-error">{deleteError}</p>}
+            <div className="profile-delete-actions">
+              <button
+                className="profile-delete-cancel"
+                onClick={() => { setShowDeleteConfirm(false); setDeleteConfirmText(''); setDeleteError(''); }}
+                disabled={deleting}
+              >
+                Cancel
+              </button>
+              <button
+                className="profile-delete-confirm-btn"
+                onClick={handleDeleteAccount}
+                disabled={deleteConfirmText !== 'DELETE' || deleting}
+              >
+                {deleting ? <><Loader2 size={14} className="spin" /> Deleting...</> : 'Permanently Delete'}
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

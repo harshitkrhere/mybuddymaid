@@ -15,7 +15,7 @@ const BRAND = {
   supportEmail: 'info@mybuddymaid.in',
   supportPhone: '+91 9599390188',
   website: 'https://mybuddymaid.in',
-  from: 'MyBuddyMaid <info@mybuddymaid.in>',
+  from: 'MyBuddyMaid <noreply@mybuddymaid.in>',
 };
 
 // ─── CORS Headers ────────────────────────────────────────────────────────────

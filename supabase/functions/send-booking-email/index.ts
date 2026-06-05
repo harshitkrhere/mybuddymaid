@@ -17,7 +17,7 @@ const BRAND = {
   supportEmail: 'info@mybuddymaid.in',
   supportPhone: '+91 9599390188',
   website: 'https://mybuddymaid.in',
-  fromEmail: 'MyBuddyMaid <info@mybuddymaid.in>',
+  fromEmail: 'MyBuddyMaid <noreply@mybuddymaid.in>',
   replyTo: 'info@mybuddymaid.in',
 } as const;
 
