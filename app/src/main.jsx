@@ -2,8 +2,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import App from './App';
 import './index.css';
+
+injectSpeedInsights();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
