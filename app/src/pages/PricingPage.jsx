@@ -5,8 +5,13 @@ import { PLAN_DETAILS } from '../lib/constants';
 import {
   Crown, Check, Loader2, AlertCircle, Shield, Clock, Users,
   Star, ChevronRight, Zap, Award, HeartHandshake, Mail, Phone,
-  Sparkles
+  Sparkles, MessageCircle, X, PhoneCall
 } from 'lucide-react';
+
+// ── TEMPORARY: Set to true to pause purchases ──
+const PURCHASES_PAUSED = true;
+const SUPPORT_PHONE = '+919599390188';
+const SUPPORT_WHATSAPP = `https://wa.me/919599390188?text=${encodeURIComponent('Hi MyBuddyMaid! I\'m interested in purchasing a package. Please help me with the details.')}`;
 
 const TESTIMONIALS = [
   {
@@ -59,6 +64,8 @@ export default function PricingPage() {
   const [contactError, setContactError] = useState('');
   const [selectedPlan, setSelectedPlan] = useState('gold');
   const [testimonialIdx, setTestimonialIdx] = useState(0);
+  const [showPausedModal, setShowPausedModal] = useState(false);
+  const [pausedPlanName, setPausedPlanName] = useState('');
 
   const activePlanDetails = userPlan ? PLAN_DETAILS[userPlan.plan_name] : null;
   const plan = PLAN_DETAILS[selectedPlan];
@@ -72,6 +79,14 @@ export default function PricingPage() {
   }, []);
 
   const handleBuyPlan = async (planKey) => {
+    // ── TEMPORARY PAUSE: Show contact modal instead of payment ──
+    if (PURCHASES_PAUSED) {
+      const p = PLAN_DETAILS[planKey];
+      setPausedPlanName(p?.name || planKey);
+      setShowPausedModal(true);
+      return;
+    }
+
     const p = PLAN_DETAILS[planKey];
     if (!p || !window.Razorpay) {
       setPayError('Payment service unavailable. Please try again later.');
@@ -91,7 +106,6 @@ export default function PricingPage() {
     setContactError('');
 
     try {
-      // Step 1: Create Razorpay order server-side (price is set by server)
       const { data: orderData, error: orderError } = await supabase.functions.invoke(
         'create-razorpay-order',
         {
@@ -109,7 +123,6 @@ export default function PricingPage() {
         return;
       }
 
-      // Step 2: Open Razorpay checkout with server-generated order
       const options = {
         key: orderData.key_id,
         amount: orderData.amount,
@@ -122,7 +135,6 @@ export default function PricingPage() {
         theme: { color: '#34D399' },
         handler: async (response) => {
           try {
-            // Step 3: Verify payment server-side (signature + amount check)
             const { data: verifyData, error: verifyError } = await supabase.functions.invoke(
               'verify-razorpay-payment',
               {
@@ -143,11 +155,9 @@ export default function PricingPage() {
               return;
             }
 
-            // Plan activated successfully by server
             await refreshUserPlan();
             setPurchasing(null);
 
-            // Send confirmation email (fire-and-forget)
             supabase.functions.invoke('send-package-email', {
               body: {
                 user_id: user?.id,
@@ -182,6 +192,58 @@ export default function PricingPage() {
 
   return (
     <div className="pricing-page">
+
+      {/* ── Purchases Paused Modal ── */}
+      {showPausedModal && (
+        <div className="paused-modal-overlay" onClick={() => setShowPausedModal(false)}>
+          <div className="paused-modal" onClick={e => e.stopPropagation()}>
+            <button className="paused-modal-close" onClick={() => setShowPausedModal(false)}>
+              <X size={20} />
+            </button>
+
+            <div className="paused-modal-icon">
+              <Shield size={32} />
+            </div>
+
+            <h2 className="paused-modal-title">Online Purchases Temporarily on Hold</h2>
+
+            <p className="paused-modal-desc">
+              We're upgrading our systems to serve you better. To purchase the
+              <strong> {pausedPlanName}</strong> package, please reach out to our team directly — we'll get you set up instantly.
+            </p>
+
+            <div className="paused-modal-actions">
+              <a
+                href={SUPPORT_WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="paused-modal-btn paused-btn-whatsapp"
+              >
+                <MessageCircle size={20} />
+                <div>
+                  <span className="paused-btn-label">Chat on WhatsApp</span>
+                  <span className="paused-btn-sub">Instant response · Available 24/7</span>
+                </div>
+              </a>
+
+              <a
+                href={`tel:${SUPPORT_PHONE}`}
+                className="paused-modal-btn paused-btn-phone"
+              >
+                <PhoneCall size={20} />
+                <div>
+                  <span className="paused-btn-label">Call Us Now</span>
+                  <span className="paused-btn-sub">+91 95993 90188 · Mon–Sun 9AM–9PM</span>
+                </div>
+              </a>
+            </div>
+
+            <p className="paused-modal-footer">
+              We apologise for the inconvenience. Our team is ready to assist you personally.
+            </p>
+          </div>
+        </div>
+      )}
       {/* Hero section */}
       <div className="pricing-hero">
         <div className="pricing-hero-badge">
