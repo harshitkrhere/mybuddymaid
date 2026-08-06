@@ -1,10 +1,23 @@
-# MyBuddyMaid — robots.txt
+# robots.txt for mybuddymaid.in
+# Last updated: 2026-08-03
+
 User-agent: *
 Allow: /
-Disallow: /_vercel/
+
+# Block app routes (require authentication, no SEO value)
+Disallow: /home
+Disallow: /auth
+Disallow: /profile
+Disallow: /bookings
+Disallow: /onboarding
+Disallow: /pricing
+Disallow: /splash
+Disallow: /services
+
+# Block internal assets
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*.json$
 
 # Sitemap
 Sitemap: https://mybuddymaid.in/sitemap.xml
-
-# Crawl-delay (be polite)
-Crawl-delay: 1
