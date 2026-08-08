@@ -16,7 +16,7 @@ export function organizationSchema() {
     logo: `${SITE_URL}/logo.png`,
     description:
       "India's premier network of police-verified maids, cooks, nannies & elderly care professionals.",
-    telephone: '+919599390188',
+    telephone: '+919318429135',
     email: 'info@mybuddymaid.in',
     foundingDate: '2021',
     sameAs: [
@@ -46,7 +46,7 @@ export function localBusinessSchema(cityName: string, lat: number, lng: number) 
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     image: `${SITE_URL}/hero-new.png`,
-    telephone: '+919599390188',
+    telephone: '+919318429135',
     email: 'info@mybuddymaid.in',
     priceRange: '₹2,499 - ₹8,999',
     address: {
