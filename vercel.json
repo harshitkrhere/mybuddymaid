@@ -1,8 +1,8 @@
 {
-  "cleanUrls": true,
-  "buildCommand": "npm run build",
-  "outputDirectory": "app/dist",
-  "installCommand": "cd app && npm install",
+  "framework": "nextjs",
+  "installCommand": "cd next-app && npm install",
+  "buildCommand": "cd next-app && npm run build",
+  "outputDirectory": "next-app/.next",
   "headers": [
     {
       "source": "/(.*)",
@@ -16,35 +16,17 @@
       ]
     },
     {
-      "source": "/(.*)\\.(jpg|jpeg|png|gif|webp|avif|svg|ico)",
+      "source": "/(.*)\\.(?:jpg|jpeg|png|gif|webp|avif|svg|ico)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/(.*)\\.(css|js|woff|woff2)",
+      "source": "/(.*)\\.(?:css|js|woff|woff2)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/auth", "destination": "/_app" },
-    { "source": "/splash", "destination": "/_app" },
-    { "source": "/onboarding", "destination": "/_app" },
-    { "source": "/terms", "destination": "/_app" },
-    { "source": "/home", "destination": "/_app" },
-    { "source": "/services", "destination": "/_app" },
-    { "source": "/services/:id", "destination": "/_app" },
-    { "source": "/bookings", "destination": "/_app" },
-    { "source": "/pricing", "destination": "/_app" },
-    { "source": "/profile", "destination": "/_app" }
   ],
   "redirects": [
     {
