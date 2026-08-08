@@ -18,30 +18,12 @@ import {
 import { MAINTENANCE_CONFIG } from '../../lib/maintenance';
 
 export default function MaintenancePage() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
   const [bypassed, setBypassed] = useState(false);
 
   useEffect(() => {
     // Check if bypass cookie exists on mount
     setBypassed(document.cookie.includes('maintenance_bypass=true'));
   }, []);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    setErrorMsg('');
-    if (!email || !email.includes('@')) {
-      setErrorMsg('Please enter a valid email address.');
-      return;
-    }
-    setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubscribed(true);
-    }, 800);
-  };
 
   const handleToggleBypass = () => {
     const nextState = !bypassed;
@@ -121,38 +103,27 @@ export default function MaintenancePage() {
             </div>
           </div>
 
-          {/* Subscribe for Notification */}
-          <div className="maint-notify-box">
-            <div className="maint-notify-heading">Get Notified When We're Back Online</div>
-            <div className="maint-notify-sub">Enter your email to receive an instant message the second our services resume.</div>
+          {/* Prominent WhatsApp Contact CTA */}
+          <div className="maint-notify-box" style={{ textAlign: 'center', padding: '2rem' }}>
+            <div className="maint-notify-heading" style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>
+              Need Immediate Services?
+            </div>
+            <div className="maint-notify-sub" style={{ fontSize: '0.95rem', marginBottom: '1.5rem' }}>
+              Contact us directly for fast, professional maid matching and booking assistance while our systems upgrade.
+            </div>
             
-            {subscribed ? (
-              <div className="maint-success-msg">
-                <CheckCircle2 size={18} /> You're on the priority notification list! We'll ping you immediately upon launch.
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="maint-notify-form">
-                <input
-                  type="email"
-                  placeholder="Enter your email address..."
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="maint-notify-input"
-                />
-                <button type="submit" className="maint-notify-btn" disabled={submitting}>
-                  {submitting ? 'Registering...' : (
-                    <>
-                      Notify Me <Send size={15} />
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
-            {errorMsg && (
-              <div style={{ color: '#EF4444', fontSize: '0.78rem', marginTop: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
-                <AlertCircle size={14} /> {errorMsg}
-              </div>
-            )}
+            <a 
+              href={MAINTENANCE_CONFIG.emergencyContact.whatsapp} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="maint-notify-btn"
+              style={{ display: 'inline-flex', padding: '0.875rem 2rem', fontSize: '1rem', margin: '0 auto' }}
+            >
+              <Send size={18} /> Message us on WhatsApp
+            </a>
+            <div style={{ marginTop: '1rem', fontSize: '0.875rem', color: 'var(--text-inverse-muted)' }}>
+              Or call us directly at <strong>{MAINTENANCE_CONFIG.emergencyContact.phone}</strong>
+            </div>
           </div>
         </div>
 
