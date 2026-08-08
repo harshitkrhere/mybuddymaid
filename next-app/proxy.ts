@@ -3,10 +3,7 @@ import type { NextRequest } from 'next/server';
 import { MAINTENANCE_CONFIG } from './lib/maintenance';
 
 export function proxy(request: NextRequest) {
-  // Check if admin bypass cookie is set
-  const isBypassed = request.cookies.get('maintenance_bypass')?.value === 'true';
-
-  if (MAINTENANCE_CONFIG.isMaintenanceActive && !isBypassed) {
+  if (MAINTENANCE_CONFIG.isMaintenanceActive) {
     const url = request.nextUrl.clone();
     
     // Do not intercept the maintenance page itself, or Next.js internal/static assets
@@ -25,8 +22,8 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
   
-  // If user tries to visit /maintenance directly when it's off or bypassed, redirect to home
-  if (request.nextUrl.pathname === '/maintenance' && (!MAINTENANCE_CONFIG.isMaintenanceActive || isBypassed)) {
+  // If user tries to visit /maintenance directly when it's off, redirect to home
+  if (request.nextUrl.pathname === '/maintenance' && !MAINTENANCE_CONFIG.isMaintenanceActive) {
     return NextResponse.redirect(new URL('/', request.url));
   }
   
