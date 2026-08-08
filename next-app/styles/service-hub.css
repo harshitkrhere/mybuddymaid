@@ -1,0 +1,118 @@
+/* Service hub page styles (/cook-service, /maid-service, etc.) */
+
+.service-hub-hero {
+  padding: 140px 0 60px;
+  background: linear-gradient(135deg, var(--obsidian) 0%, #171717 100%);
+  color: var(--text-inverse);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-hub-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: var(--mint-glow);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.service-hub-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.service-hub-hero h1 {
+  color: var(--text-inverse);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-hub-hero p {
+  color: var(--text-inverse-muted);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  z-index: 1;
+  line-height: 1.7;
+}
+
+.service-hub-price {
+  color: var(--mint);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.service-hub-content {
+  padding: 60px 0;
+}
+
+.service-hub-content h2 {
+  font-size: 1.6rem;
+  margin: 2.5rem 0 1rem;
+  color: var(--text);
+}
+
+.service-hub-content h3 {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  border-color: var(--mint);
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.primary-city-link {
+  font-weight: 600 !important;
+  border-color: rgba(52, 211, 153, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  .service-hub-hero { padding: 120px 0 40px; }
+  .features-grid { grid-template-columns: 1fr; }
+}

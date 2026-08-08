@@ -1,5 +1,9 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
+import { Analytics } from '@/components/shared/Analytics';
+import { Analytics as VercelAnalytics, SpeedInsights } from '@/components/shared/VercelAnalytics';
 import './globals.css';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -56,7 +60,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <Analytics />
+        <VercelAnalytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

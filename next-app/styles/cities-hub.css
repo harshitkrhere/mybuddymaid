@@ -1,0 +1,167 @@
+.cities-hub-page {
+  --obsidian: #0F0F0F;
+  --mint: #34D399;
+  --mint-hover: #10B981;
+  --bg: #FAFAFA;
+  --text: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --border: #E2E8F0;
+  
+  background-color: var(--bg);
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.cities-hub-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.cities-hero {
+  background-color: var(--obsidian);
+  color: white;
+  padding: 5rem 0 4rem;
+  text-align: center;
+}
+
+.cities-hero h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.cities-hero p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cities-section {
+  padding: 4rem 0 2rem;
+}
+
+.cities-section h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.section-desc {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .cities-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.city-card {
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: var(--mint);
+}
+
+.city-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.city-header h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.city-state {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.status-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.status-badge.active {
+  background-color: rgba(52, 211, 153, 0.15);
+  color: #059669;
+}
+
+.status-badge.expanding {
+  background-color: var(--border);
+  color: var(--text-secondary);
+}
+
+.city-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.service-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.service-link:hover {
+  background-color: var(--obsidian);
+  color: white;
+  border-color: var(--obsidian);
+}
