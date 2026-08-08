@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useAuth } from './context/AuthContext';
 import AppLayout from './components/AppLayout';
 import SplashScreen from './pages/SplashScreen';
@@ -30,31 +31,34 @@ function OnboardingGuard({ children }) {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/auth" element={<AuthPage />} />
-      <Route path="/terms" element={<TermsPage />} />
-      <Route path="/splash" element={<SplashScreen />} />
-      <Route path="/onboarding" element={
-        <ProtectedRoute>
-          <OnboardingPage />
-        </ProtectedRoute>
-      } />
-      <Route path="/" element={
-        <ProtectedRoute>
-          <OnboardingGuard>
-            <AppLayout />
-          </OnboardingGuard>
-        </ProtectedRoute>
-      }>
-        <Route path="home" element={<HomePage />} />
-        <Route path="services" element={<ServicesPage />} />
-        <Route path="services/:serviceId" element={<ServiceDetailPage />} />
-        <Route path="bookings" element={<BookingsPage />} />
-        <Route path="pricing" element={<PricingPage />} />
-        <Route path="profile" element={<ProfilePage />} />
-      </Route>
-      <Route path="*" element={<Navigate to="/home" replace />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/splash" element={<SplashScreen />} />
+        <Route path="/onboarding" element={
+          <ProtectedRoute>
+            <OnboardingPage />
+          </ProtectedRoute>
+        } />
+        <Route path="/" element={
+          <ProtectedRoute>
+            <OnboardingGuard>
+              <AppLayout />
+            </OnboardingGuard>
+          </ProtectedRoute>
+        }>
+          <Route path="home" element={<HomePage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="services/:serviceId" element={<ServiceDetailPage />} />
+          <Route path="bookings" element={<BookingsPage />} />
+          <Route path="pricing" element={<PricingPage />} />
+          <Route path="profile" element={<ProfilePage />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/home" replace />} />
+      </Routes>
+      <SpeedInsights />
+    </>
   );
 }
 
