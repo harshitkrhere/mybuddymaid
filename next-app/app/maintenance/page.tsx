@@ -18,8 +18,6 @@ import {
 import { MAINTENANCE_CONFIG } from '../../lib/maintenance';
 
 export default function MaintenancePage() {
-  // Countdown Timer calculation (in seconds)
-  const [timeLeft, setTimeLeft] = useState(MAINTENANCE_CONFIG.targetCompletionMinutes * 60);
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -29,17 +27,7 @@ export default function MaintenancePage() {
   useEffect(() => {
     // Check if bypass cookie exists on mount
     setBypassed(document.cookie.includes('maintenance_bypass=true'));
-    
-    const timer = setInterval(() => {
-      setTimeLeft(prev => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-    return () => clearInterval(timer);
   }, []);
-
-  const formatDigits = (num: number) => String(num).padStart(2, '0');
-  const hours = formatDigits(Math.floor(timeLeft / 3600));
-  const minutes = formatDigits(Math.floor((timeLeft % 3600) / 60));
-  const seconds = formatDigits(timeLeft % 60);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -94,28 +82,6 @@ export default function MaintenancePage() {
             {MAINTENANCE_CONFIG.subtitle}
           </p>
 
-          {/* Countdown Section */}
-          <div className="maint-timer-section">
-            <div className="maint-timer-label">Estimated System Uptime In</div>
-            <div className="maint-timer-grid">
-              <div className="maint-timer-box">
-                <span className="maint-timer-num">00</span>
-                <span className="maint-timer-unit">Days</span>
-              </div>
-              <div className="maint-timer-box">
-                <span className="maint-timer-num">{hours}</span>
-                <span className="maint-timer-unit">Hours</span>
-              </div>
-              <div className="maint-timer-box">
-                <span className="maint-timer-num">{minutes}</span>
-                <span className="maint-timer-unit">Minutes</span>
-              </div>
-              <div className="maint-timer-box">
-                <span className="maint-timer-num">{seconds}</span>
-                <span className="maint-timer-unit">Seconds</span>
-              </div>
-            </div>
-          </div>
 
           {/* Upgrade Progress Bar */}
           <div className="maint-progress-wrap">
