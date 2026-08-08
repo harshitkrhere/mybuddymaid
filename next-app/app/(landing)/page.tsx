@@ -1,8 +1,6 @@
-// Serves the existing static landing page (the polished one from mybuddymaid/).
-// This is a thin wrapper that renders the original HTML/CSS/JS landing page
-// inside Next.js while keeping all the SEO metadata.
-
 import type { Metadata } from 'next';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import { generatePageMetadata } from '@/lib/seo/metadata';
 import { organizationSchema, JsonLd } from '@/lib/seo/schema';
 import LandingPageContent from '@/components/LandingPageContent';
@@ -14,10 +12,16 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default function HomePage() {
+  // Read the original landing page HTML at build time (SSG)
+  const bodyHtml = readFileSync(
+    join(process.cwd(), 'public', '_landing', 'body.html'),
+    'utf-8'
+  );
+
   return (
     <>
       <JsonLd data={organizationSchema()} />
-      <LandingPageContent />
+      <LandingPageContent bodyHtml={bodyHtml} />
     </>
   );
 }
