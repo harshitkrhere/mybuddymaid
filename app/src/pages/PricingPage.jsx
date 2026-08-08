@@ -233,7 +233,7 @@ export default function PricingPage() {
                 <PhoneCall size={20} />
                 <div>
                   <span className="paused-btn-label">Call Us Now</span>
-                  <span className="paused-btn-sub">+91 95993 90188 · Mon–Sun 9AM–9PM</span>
+                  <span className="paused-btn-sub">+91 93184 29135 · Mon–Sun 9AM–9PM</span>
                 </div>
               </a>
             </div>
