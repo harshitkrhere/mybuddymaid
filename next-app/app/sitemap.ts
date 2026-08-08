@@ -20,10 +20,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Service hub pages
+  const serviceHubPages: MetadataRoute.Sitemap = SERVICES.map(service => ({
+    url: `${SITE_URL}/${service.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
   // Hub pages
   const hubPages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/cities`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${SITE_URL}/about-us`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/contact-us`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/privacy-policy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
@@ -56,5 +63,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return [...homepage, ...hubPages, ...cityServicePages];
+  return [...homepage, ...serviceHubPages, ...hubPages, ...cityServicePages];
 }
