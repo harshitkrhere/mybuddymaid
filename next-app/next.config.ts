@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       // SPA app routes — all rewrite to the embedded SPA index.html
       { source: '/home', destination: '/_spa/index.html' },
       { source: '/home/:path*', destination: '/_spa/index.html' },
+      { source: '/auth', destination: '/_spa/index.html' },
       { source: '/auth/:path*', destination: '/_spa/index.html' },
       { source: '/splash', destination: '/_spa/index.html' },
       { source: '/bookings', destination: '/_spa/index.html' },
