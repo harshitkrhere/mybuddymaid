@@ -19,10 +19,13 @@ import { MAINTENANCE_CONFIG } from '../../lib/maintenance';
 
 export default function MaintenancePage() {
   const [bypassed, setBypassed] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     // Check if bypass cookie exists on mount
-    setBypassed(document.cookie.includes('maintenance_bypass=true'));
+    const isCurrentlyBypassed = document.cookie.includes('maintenance_bypass=true');
+    setBypassed(isCurrentlyBypassed);
+    setIsAdmin(window.location.search.includes('admin=true') || isCurrentlyBypassed);
   }, []);
 
   const handleToggleBypass = () => {
@@ -140,14 +143,16 @@ export default function MaintenancePage() {
           </a>
         </div>
 
-        {/* Floating Admin Bypass Switch for testing */}
-        <div className="maint-admin-floating">
-          {bypassed ? <Unlock size={14} color="#34D399" /> : <Lock size={14} color="#94A3B8" />}
-          <span>Admin Preview Mode: {bypassed ? 'ENABLED' : 'DISABLED'}</span>
-          <button onClick={handleToggleBypass}>
-            {bypassed ? 'Re-enable Maintenance' : 'Bypass & View Site'}
-          </button>
-        </div>
+        {/* Floating Admin Bypass Switch for testing - Hidden from public */}
+        {isAdmin && (
+          <div className="maint-admin-floating">
+            {bypassed ? <Unlock size={14} color="#34D399" /> : <Lock size={14} color="#94A3B8" />}
+            <span>Admin Preview Mode: {bypassed ? 'ENABLED' : 'DISABLED'}</span>
+            <button onClick={handleToggleBypass}>
+              {bypassed ? 'Re-enable Maintenance' : 'Bypass & View Site'}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
