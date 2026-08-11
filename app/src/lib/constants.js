@@ -23,7 +23,7 @@ export const SERVICES = [
     icon: '🏠',
     color: '#FFF3E0',
     image: '/images/full-time.jpg',
-    price: '₹12,000/mo',
+    price: '₹19,000/mo',
     description: 'Complete 24x7 household management. A dedicated professional who stays with your family for ultimate convenience.',
     features: [
       { title: '24/7 Availability', desc: 'Lives with your family full-time' },
@@ -39,7 +39,7 @@ export const SERVICES = [
     icon: '❤️',
     color: '#FDE8E8',
     image: '/images/eldercare.jpg',
-    price: '₹14,000/mo',
+    price: '₹17,000/mo',
     description: 'Compassionate, patient companions trained for senior needs — mobility support, medication reminders, and loving care.',
     features: [
       { title: 'Trained Caregivers', desc: 'Specialized in elderly needs' },
@@ -55,7 +55,7 @@ export const SERVICES = [
     icon: '👨‍🍳',
     color: '#E8F5E9',
     image: '/images/cook.jpg',
-    price: '₹8,000/mo',
+    price: '₹12,000/mo',
     description: 'Expert chefs for North Indian, South Indian, or Continental cuisine. Hygienic, healthy, and tailored to your dietary needs.',
     features: [
       { title: 'Multi-Cuisine', desc: 'North, South Indian, Continental & more' },
@@ -71,7 +71,7 @@ export const SERVICES = [
     icon: '👶',
     color: '#EDE7F6',
     image: '/images/nanny.jpg',
-    price: '₹10,000/mo',
+    price: '₹16,000/mo',
     description: 'Verified, loving caretakers who engage your children safely. Focus on nutrition, hygiene, and developmental activities.',
     features: [
       { title: 'Child Development', desc: 'Age-appropriate activities & learning' },
