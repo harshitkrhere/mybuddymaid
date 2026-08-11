@@ -605,27 +605,38 @@
         
         <div class="estimator-grid">
           <div class="form-group">
-            <label>Service Category</label>
+            <label>Service Type</label>
             <select class="form-control" id="calcType">
-              <option value="part-time-4hr">Part-Time Maid (Up to 4 hrs)</option>
-              <option value="part-time-12hr">Part-Time Maid (Up to 12 hrs)</option>
-              <option value="full-time">24hrs Live-In Maid</option>
+              <option value="maid">Maid / Cleaning</option>
               <option value="cook">Specialized Cook</option>
               <option value="nanny">Babysitter / Nanny</option>
               <option value="elderly">Elderly Care</option>
             </select>
           </div>
           <div class="form-group">
-            <label>Location Profile</label>
+            <label>City</label>
             <select class="form-control" id="calcCity">
               <option value="metro">Delhi NCR / Mumbai / Bangalore</option>
+              <option value="tier2">Hyderabad / Pune / Chennai / Other</option>
             </select>
           </div>
         </div>
-        
+
+        <div class="form-group" id="hoursGroup">
+          <label>Working Hours per Day: <strong id="hoursLabel">4 hrs</strong></label>
+          <input type="range" id="calcHours" min="2" max="24" value="4" step="1" class="salary-slider">
+          <div class="slider-labels">
+            <span>2 hrs</span>
+            <span>8 hrs</span>
+            <span>12 hrs</span>
+            <span>Live-in (24 hrs)</span>
+          </div>
+        </div>
+
         <div class="estimator-result">
-          <div class="label">Estimated Market Salary</div>
-          <div class="amount" id="calcResult">₹5,000 - ₹7,000 / mo</div>
+          <div class="label">Estimated Monthly Salary</div>
+          <div class="amount" id="calcResult">₹5,000 – ₹7,000 / mo</div>
+          <div class="estimator-note" id="calcNote">Part-time • Metro city rates</div>
         </div>
       </div>
     </div>

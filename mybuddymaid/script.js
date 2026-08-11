@@ -100,25 +100,96 @@ document.addEventListener('DOMContentLoaded', () => {
   // ═══════════════════════════════════════════════════════
   const calcType   = document.getElementById('calcType');
   const calcCity   = document.getElementById('calcCity');
+  const calcHours  = document.getElementById('calcHours');
   const calcResult = document.getElementById('calcResult');
+  const calcNote   = document.getElementById('calcNote');
+  const hoursLabel = document.getElementById('hoursLabel');
+  const hoursGroup = document.getElementById('hoursGroup');
 
-  const rates = {
-    'part-time-4hr':  { metro: '₹5,000 - ₹7,000',   tier2: '₹4,000 - ₹6,000' },
-    'part-time-12hr': { metro: '₹13,000 - ₹16,000',  tier2: '₹10,000 - ₹13,000' },
-    'full-time':      { metro: '₹19,000 - ₹24,000',  tier2: '₹15,000 - ₹20,000' },
-    'cook':           { metro: '₹12,000 - ₹17,000',  tier2: '₹9,000 - ₹12,000' },
-    'nanny':          { metro: '₹16,000 - ₹22,000',  tier2: '₹12,000 - ₹17,000' },
-    'elderly':        { metro: '₹17,000 - ₹24,000',  tier2: '₹14,000 - ₹20,000' }
+  // Salary data points for maids (metro): interpolated by hours
+  // Reference: 4hrs=5-7K, 8hrs=10-13K, 12hrs=13-16K, 24hrs(live-in)=19-24K
+  const maidRatesMetro = [
+    { hrs: 2,  min: 3000,  max: 4500  },
+    { hrs: 4,  min: 5000,  max: 7000  },
+    { hrs: 6,  min: 7500,  max: 10000 },
+    { hrs: 8,  min: 10000, max: 13000 },
+    { hrs: 10, min: 11500, max: 14500 },
+    { hrs: 12, min: 13000, max: 16000 },
+    { hrs: 16, min: 15000, max: 19000 },
+    { hrs: 20, min: 17000, max: 22000 },
+    { hrs: 24, min: 19000, max: 24000 },
+  ];
+  const maidRatesTier2 = [
+    { hrs: 2,  min: 2000,  max: 3500  },
+    { hrs: 4,  min: 4000,  max: 6000  },
+    { hrs: 6,  min: 6000,  max: 8000  },
+    { hrs: 8,  min: 8000,  max: 10500 },
+    { hrs: 10, min: 9500,  max: 12000 },
+    { hrs: 12, min: 10500, max: 13000 },
+    { hrs: 16, min: 12500, max: 16000 },
+    { hrs: 20, min: 14000, max: 19000 },
+    { hrs: 24, min: 15000, max: 20000 },
+  ];
+
+  // Fixed rates for specialist roles
+  const specialistRates = {
+    cook:    { metro: [12000, 17000], tier2: [9000, 12000] },
+    nanny:   { metro: [16000, 22000], tier2: [12000, 17000] },
+    elderly: { metro: [17000, 24000], tier2: [14000, 20000] },
   };
 
-  const updateSalary = () => {
-    if (!calcType || !calcCity || !calcResult) return;
-    calcResult.textContent = `${rates[calcType.value][calcCity.value]} / mo`;
-  };
+  function interpolate(points, hrs) {
+    if (hrs <= points[0].hrs) return { min: points[0].min, max: points[0].max };
+    if (hrs >= points[points.length - 1].hrs) return { min: points[points.length - 1].min, max: points[points.length - 1].max };
+    for (let i = 0; i < points.length - 1; i++) {
+      if (hrs >= points[i].hrs && hrs <= points[i + 1].hrs) {
+        const t = (hrs - points[i].hrs) / (points[i + 1].hrs - points[i].hrs);
+        return {
+          min: Math.round((points[i].min + t * (points[i + 1].min - points[i].min)) / 500) * 500,
+          max: Math.round((points[i].max + t * (points[i + 1].max - points[i].max)) / 500) * 500,
+        };
+      }
+    }
+    return { min: points[0].min, max: points[0].max };
+  }
 
-  if (calcType && calcCity) {
+  function fmt(n) { return '₹' + n.toLocaleString('en-IN'); }
+
+  function updateSalary() {
+    if (!calcType || !calcResult) return;
+    const type = calcType.value;
+    const city = calcCity ? calcCity.value : 'metro';
+    const hours = calcHours ? parseInt(calcHours.value) : 4;
+
+    // Show/hide hours slider based on service type
+    if (hoursGroup) hoursGroup.style.display = type === 'maid' ? 'block' : 'none';
+    if (hoursLabel) hoursLabel.textContent = hours >= 24 ? 'Live-in (24 hrs)' : hours + ' hrs';
+
+    let minSal, maxSal, note;
+
+    if (type === 'maid') {
+      const pts = city === 'metro' ? maidRatesMetro : maidRatesTier2;
+      const result = interpolate(pts, hours);
+      minSal = result.min;
+      maxSal = result.max;
+      note = hours >= 20 ? 'Live-in' : hours <= 4 ? 'Part-time' : hours <= 12 ? 'Half-day / Full-day' : 'Extended hours';
+    } else {
+      const rates = specialistRates[type];
+      const r = city === 'metro' ? rates.metro : rates.tier2;
+      minSal = r[0];
+      maxSal = r[1];
+      note = type === 'cook' ? 'Full-time cook' : type === 'nanny' ? 'Full-time nanny' : 'Full-time elderly care';
+    }
+
+    note += city === 'metro' ? ' • Metro city rates' : ' • Tier-2 city rates';
+    calcResult.textContent = `${fmt(minSal)} – ${fmt(maxSal)} / mo`;
+    if (calcNote) calcNote.textContent = note;
+  }
+
+  if (calcType) {
     calcType.addEventListener('change', updateSalary);
-    calcCity.addEventListener('change', updateSalary);
+    if (calcCity) calcCity.addEventListener('change', updateSalary);
+    if (calcHours) calcHours.addEventListener('input', updateSalary);
     updateSalary();
   }
 
