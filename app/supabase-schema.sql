@@ -98,7 +98,7 @@ CREATE INDEX IF NOT EXISTS idx_bookings_created_at ON bookings(created_at DESC);
 CREATE TABLE IF NOT EXISTS user_plans (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   user_id UUID REFERENCES auth.users NOT NULL,
-  plan_name TEXT NOT NULL CHECK (plan_name IN ('silver', 'gold', 'diamond', 'platinum')),
+  plan_name TEXT NOT NULL CHECK (plan_name IN ('silver', 'gold', 'diamond', 'platinum')), -- platinum kept for historical records only
   amount_paid INTEGER NOT NULL,
   razorpay_payment_id TEXT,
   email TEXT,

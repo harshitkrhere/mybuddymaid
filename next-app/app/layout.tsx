@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s — MyBuddyMaid',
   },
   description:
-    'Book 100% police-verified maids, cooks, nannies & elderly care helpers in Delhi NCR, Mumbai & Bangalore. 1-year free replacement guarantee. Trusted by 12,000+ families. Starting ₹2,499.',
+    'Book 100% police-verified maids, cooks, nannies & elderly care helpers in Delhi NCR, Mumbai & Bangalore. 1-year free replacement guarantee. Trusted by 12,000+ families. Starting ₹3,999.',
   keywords: [
     'maid service Delhi NCR',
     'maid service Mumbai',

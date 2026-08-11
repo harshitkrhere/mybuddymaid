@@ -54,7 +54,7 @@ export default function TermsPage() {
           <h3>4. Fee & Replacement Policy</h3>
           <ul>
             <li>The platform fee guarantees access to our verified pool and replacement timelines.</li>
-            <li>If unsuited, up to 3 replacements are provided within the scope of your selected package term (Silver: 90 days, Gold: 180 days, Diamond: 365 days, Platinum: 456 days with up to 15 replacements).</li>
+            <li>If unsuited, up to 3 replacements are provided within the scope of your selected package term (Silver: 10 months / 3 replacements, Gold: 12 months / 5 replacements, Diamond: 18 months / 10 replacements).</li>
           </ul>
 
           <h3>5. Refund Policy</h3>
@@ -116,7 +116,7 @@ export default function TermsPage() {
           </ul>
 
           <h3>7. Data Retention</h3>
-          <p>We retain your personal data for as long as your service engagement is active, plus an additional 12 months for support and replacement guarantee purposes. Payment records are retained for 7 years as required by Indian tax regulations.</p>
+          <p>We retain your personal data for as long as your service engagement is active, plus an additional 18 months for support and replacement guarantee purposes. Payment records are retained for 7 years as required by Indian tax regulations.</p>
 
           <h3>8. Your Rights</h3>
           <p>Under applicable Indian data protection laws, you have the right to:</p>

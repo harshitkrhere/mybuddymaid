@@ -34,14 +34,7 @@ const TESTIMONIALS = [
     city: 'Mumbai',
     content: 'The postnatal care helper we got was trained and compassionate. The replacement guarantee gave us confidence to commit.',
     rating: 5,
-  },
-  {
-    name: 'Vikram Singh',
-    role: 'IT Manager',
-    city: 'Hyderabad',
-    content: 'Upgraded from Silver to Platinum for the VIP concierge. Worth every rupee — they handled everything end-to-end.',
-    rating: 4,
-  },
+  }
 ];
 
 const PLATFORM_FEATURES = [
@@ -303,7 +296,7 @@ export default function PricingPage() {
 
               <h2 className="pricing-card-plan-name">{plan.emoji} {plan.name} Plan</h2>
               <p className="pricing-card-plan-sub">
-                {plan.duration}-day coverage with {plan.replacementsTotal} replacement{plan.replacementsTotal > 1 ? 's' : ''}
+                {plan.durationLabel} coverage with {plan.replacementsTotal} replacement{plan.replacementsTotal > 1 ? 's' : ''}
               </p>
 
               <div className="pricing-card-price">
@@ -314,7 +307,7 @@ export default function PricingPage() {
               <div className="pricing-card-benefits">
                 <div className="pricing-benefit">
                   <Shield size={16} />
-                  <span>{plan.duration}-day replacement guarantee</span>
+                  <span>{plan.durationLabel} replacement guarantee</span>
                 </div>
                 <div className="pricing-benefit">
                   <Users size={16} />
@@ -322,7 +315,7 @@ export default function PricingPage() {
                 </div>
                 <div className="pricing-benefit">
                   <Clock size={16} />
-                  <span>Valid for {plan.duration} days</span>
+                  <span>Valid for {plan.durationLabel}</span>
                 </div>
                 <div className="pricing-benefit">
                   <HeartHandshake size={16} />
@@ -455,7 +448,7 @@ export default function PricingPage() {
                 <span className="pricing-compare-emoji">{p.emoji}</span>
                 <h4>{p.name}</h4>
                 <div className="pricing-compare-price">₹{p.price.toLocaleString()}</div>
-                <div className="pricing-compare-meta">{p.duration} days • {p.replacementsTotal} replacement{p.replacementsTotal > 1 ? 's' : ''}</div>
+                <div className="pricing-compare-meta">{p.durationLabel} • {p.replacementsTotal} replacement{p.replacementsTotal > 1 ? 's' : ''}</div>
                 <ul className="pricing-compare-benefits">
                   {p.benefits.map((b, i) => (
                     <li key={i}><Check size={12} style={{ color: p.color }} /> {b}</li>

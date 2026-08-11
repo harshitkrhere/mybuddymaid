@@ -29,7 +29,7 @@ export default function TermsPage() {
             <h2>3. Booking & Payments</h2>
             <p>Bookings are confirmed upon payment. All payments are processed securely through Razorpay. Prices are displayed in Indian Rupees (INR).</p>
             <h2>4. Replacement Guarantee</h2>
-            <p>We offer free replacements within the guarantee period of your plan (90–456 days depending on the plan). Replacement requests must be made through the platform or by contacting support.</p>
+            <p>We offer free replacements within the guarantee period of your plan (10–18 months depending on the plan). Replacement requests must be made through the platform or by contacting support.</p>
             <h2>5. Cancellation & Refunds</h2>
             <p>Cancellation requests are processed within 7 business days. Refund eligibility depends on the stage of service and is assessed on a case-by-case basis.</p>
             <h2>6. Liability</h2>

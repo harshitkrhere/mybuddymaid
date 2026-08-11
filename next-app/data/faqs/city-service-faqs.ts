@@ -30,7 +30,7 @@ export function generateFAQs(serviceName: string, cityName: string, price: strin
     },
     {
       question: `What if the ${serviceName.toLowerCase()} professional doesn't work out?`,
-      answer: `MyBuddyMaid offers a free replacement guarantee. If you're unsatisfied with the professional's performance, we provide a free replacement within 24-48 hours. Guarantee periods range from 90 days (Silver) to 456 days (Platinum) depending on your plan.`,
+      answer: `MyBuddyMaid offers a free replacement guarantee. If you're unsatisfied with the professional's performance, we provide a free replacement within 24-48 hours. Guarantee periods range from 10 months (Silver) to 18 months (Diamond) depending on your plan.`,
     },
   ];
 }

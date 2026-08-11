@@ -81,8 +81,8 @@ const PLAN_META: Record<string, PlanMeta> = {
     opening: (n) =>
       `Congratulations ${n}, you've just taken the first step toward effortless home management.`,
     benefits: [
-      '90-day free replacement guarantee',
-      'Verified professional from standard pool',
+      '10-month free replacement guarantee',
+      '3 free replacements',
       '1 curated profile delivered within 24 hours',
       'Background-checked and trained helper',
     ],
@@ -129,8 +129,8 @@ const PLAN_META: Record<string, PlanMeta> = {
     opening: (n) =>
       `Welcome to the Gold experience, ${n}. You're among our most popular choice — and for good reason.`,
     benefits: [
-      '180-day free replacement guarantee',
-      'Access to premium verified pool',
+      '12-month free replacement guarantee',
+      '5 free replacements',
       '3 curated profiles to choose from',
       'Enhanced background + reference checks',
       'Dedicated account manager',
@@ -166,8 +166,8 @@ const PLAN_META: Record<string, PlanMeta> = {
     opening: (n) =>
       `You've chosen our elite tier, ${n}. Expect nothing less than the best — hand-picked professionals, lightning-fast delivery, and white-glove support.`,
     benefits: [
-      '365-day replacement guarantee',
-      'Hand-picked elite pool of professionals',
+      '18-month replacement guarantee',
+      '10 free replacements',
       '5 curated profiles to choose from',
       'Full police verification for every candidate',
       'Guaranteed deployment within 24 hours',
@@ -197,38 +197,16 @@ const PLAN_META: Record<string, PlanMeta> = {
   // ║  PLATINUM                                                       ║
   // ╚═══════════════════════════════════════════════════════════════════╝
   platinum: {
-    subject: 'Platinum Plan Live — Welcome to Concierge-Level Home Care 👑',
+    subject: 'Legacy Plan (Platinum)',
     badgeColor: '#A855F7',
-    badgeLabel: 'PLATINUM',
+    badgeLabel: 'LEGACY',
     headerBg: '#1A1A2E',
-    opening: (n) =>
-      `Welcome to Platinum, ${n}. This is our highest tier — reserved for families who demand the very best in home care.`,
+    opening: (n) => `Hello ${n}, this is a receipt for a legacy plan (Platinum).`,
     benefits: [
-      '456-day replacement guarantee — longest in the industry',
-      'Up to 15 free replacements during your plan',
-      'Exclusive VIP concierge pool of professionals',
-      'Police + medical verification for every candidate',
-      '24×7 dedicated account manager',
-      'Same-day emergency replacement',
-      'Priority onboarding with white-glove support',
+      'Legacy plan features',
     ],
     buildExtras: (_p) => {
-      return `
-        <tr><td style="padding:0 0 8px;">
-          <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background:#F5F3FF;border-left:4px solid #A855F7;border-radius:10px;">
-            <tr><td style="padding:22px 24px;font-family:${BRAND.font};">
-              <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
-                <tr>
-                  <td width="40" valign="top" style="font-size:28px;padding-right:14px;">👑</td>
-                  <td>
-                    <span style="font-size:15px;font-weight:700;color:#6B21A8;display:block;margin-bottom:4px;">Your Personal Concierge</span>
-                    <span style="font-size:14px;color:#7C3AED;line-height:1.5;">A senior concierge manager will personally call you within <strong>1 hour</strong> of purchase to understand your needs in detail and begin the matching process immediately.</span>
-                  </td>
-                </tr>
-              </table>
-            </td></tr>
-          </table>
-        </td></tr>`;
+      return ``;
     },
   },
 };

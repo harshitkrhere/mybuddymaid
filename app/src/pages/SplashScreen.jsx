@@ -30,7 +30,7 @@ export default function SplashScreen() {
     let destination = '/home';
     if (ctx) {
       const serviceIds = ['part-time', 'full-time', 'elderly-care', 'cook', 'nanny', 'postnatal'];
-      const planNames = ['silver', 'gold', 'diamond', 'platinum'];
+      const planNames = ['silver', 'gold', 'diamond'];
       if (ctx === 'book') destination = '/services';
       else if (serviceIds.includes(ctx)) destination = `/services/${ctx}`;
       else if (planNames.includes(ctx)) destination = '/profile?tab=packages';

@@ -20,11 +20,10 @@ function jsonResponse(body: Record<string, unknown>, status = 200): Response {
 }
 
 // Server-side plan definitions — client cannot override these
-const PLAN_DETAILS: Record<string, { name: string; pricePaise: number; duration: number; replacementsTotal: number }> = {
-  silver:   { name: 'Silver',   pricePaise: 249900,  duration: 90,  replacementsTotal: 1 },
-  gold:     { name: 'Gold',     pricePaise: 399900,  duration: 180, replacementsTotal: 3 },
-  diamond:  { name: 'Diamond',  pricePaise: 599900,  duration: 365, replacementsTotal: 5 },
-  platinum: { name: 'Platinum', pricePaise: 899900,  duration: 456, replacementsTotal: 15 },
+const PLAN_DETAILS: Record<string, { name: string; pricePaise: number; durationMonths: number; replacementsTotal: number }> = {
+  silver:   { name: 'Silver',   pricePaise: 399900,  durationMonths: 10,  replacementsTotal: 3 },
+  gold:     { name: 'Gold',     pricePaise: 499900,  durationMonths: 12,  replacementsTotal: 5 },
+  diamond:  { name: 'Diamond',  pricePaise: 699900,  durationMonths: 18,  replacementsTotal: 10 },
 };
 
 Deno.serve(async (req: Request): Promise<Response> => {
@@ -113,7 +112,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
       key_id: rzpKeyId,
       plan_name: plan_name,
       plan_display_name: plan.name,
-      plan_duration: plan.duration,
+      plan_duration: plan.durationMonths,
     });
 
   } catch (err: unknown) {

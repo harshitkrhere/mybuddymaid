@@ -48,7 +48,7 @@ export function localBusinessSchema(cityName: string, lat: number, lng: number) 
     image: `${SITE_URL}/hero-new.png`,
     telephone: '+919318429135',
     email: 'info@mybuddymaid.in',
-    priceRange: '₹2,499 - ₹8,999',
+    priceRange: '₹3,999 - ₹6,999',
     address: {
       '@type': 'PostalAddress',
       addressLocality: cityName,
@@ -99,7 +99,7 @@ export function serviceSchema(
       : undefined,
     offers: {
       '@type': 'Offer',
-      price: price.replace(/[^0-9]/g, '') || '2499',
+      price: price.replace(/[^0-9]/g, '') || '3999',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
     },

@@ -9,7 +9,7 @@ import LandingPageContent from '@/components/LandingPageContent';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Verified Maid Service in Delhi NCR, Mumbai & Bangalore — MyBuddyMaid | Book Online',
-  description: 'Book 100% police-verified maids, cooks, nannies & elderly care helpers in Delhi NCR, Mumbai & Bangalore. 1-year free replacement guarantee. Trusted by 12,000+ families. Starting ₹2,499.',
+  description: 'Book 100% police-verified maids, cooks, nannies & elderly care helpers in Delhi NCR, Mumbai & Bangalore. 1-year free replacement guarantee. Trusted by 12,000+ families. Starting ₹3,999.',
   path: '/',
 });
 

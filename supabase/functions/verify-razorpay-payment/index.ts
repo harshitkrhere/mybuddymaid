@@ -20,11 +20,10 @@ function jsonResponse(body: Record<string, unknown>, status = 200): Response {
 }
 
 // Server-side plan definitions (same as create-razorpay-order)
-const PLAN_DETAILS: Record<string, { name: string; pricePaise: number; duration: number; replacementsTotal: number }> = {
-  silver:   { name: 'Silver',   pricePaise: 249900,  duration: 90,  replacementsTotal: 1 },
-  gold:     { name: 'Gold',     pricePaise: 399900,  duration: 180, replacementsTotal: 3 },
-  diamond:  { name: 'Diamond',  pricePaise: 599900,  duration: 365, replacementsTotal: 5 },
-  platinum: { name: 'Platinum', pricePaise: 899900,  duration: 456, replacementsTotal: 15 },
+const PLAN_DETAILS: Record<string, { name: string; pricePaise: number; durationMonths: number; replacementsTotal: number }> = {
+  silver:   { name: 'Silver',   pricePaise: 399900,  durationMonths: 10,  replacementsTotal: 3 },
+  gold:     { name: 'Gold',     pricePaise: 499900,  durationMonths: 12,  replacementsTotal: 5 },
+  diamond:  { name: 'Diamond',  pricePaise: 699900,  durationMonths: 18,  replacementsTotal: 10 },
 };
 
 // HMAC SHA256 verification using Web Crypto API (Deno-native)
@@ -154,7 +153,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
     // ── Create the plan (using service_role, bypasses RLS) ──
     const plan = PLAN_DETAILS[plan_name];
     const expiresAt = new Date();
-    expiresAt.setDate(expiresAt.getDate() + plan.duration);
+    expiresAt.setMonth(expiresAt.getMonth() + plan.durationMonths);
 
     const { data: newPlan, error: insertError } = await supabaseAdmin
       .from('user_plans')

@@ -84,7 +84,7 @@ export function generateCityServiceMetadata(
   citySlug: string,
 ): Metadata {
   const title = `Best ${serviceName} in ${cityName}`;
-  const description = `Book verified ${serviceName.toLowerCase()} in ${cityName}. Police-verified professionals, 1-year replacement guarantee. Trusted by 12,000+ families. Starting ₹2,499.`;
+  const description = `Book verified ${serviceName.toLowerCase()} in ${cityName}. Police-verified professionals, 1-year replacement guarantee. Trusted by 12,000+ families. Starting ₹3,999.`;
   const path = `/best-${serviceSlug}-in-${citySlug}`;
 
   return generatePageMetadata({ title, description, path });

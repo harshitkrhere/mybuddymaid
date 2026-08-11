@@ -8,41 +8,36 @@ const CORS_HEADERS = {
 };
 
 const PLAN_CONFIG = {
-  silver:   { emoji: '🥈', label: 'Silver Package',   color: '#475569', bg: '#1e293b', badge: 'SILVER MEMBER',   validity: '90 Days',  contacts: '1 Verified Profile',       replacements: '3 Free Replacements' },
-  gold:     { emoji: '🥇', label: 'Gold Package',     color: '#b45309', bg: '#1c1007', badge: 'GOLD MEMBER',     validity: '180 Days', contacts: '3 Verified Profiles',      replacements: '5 Free Replacements' },
-  diamond:  { emoji: '💎', label: 'Diamond Package',   color: '#0f766e', bg: '#042f2e', badge: 'DIAMOND MEMBER',  validity: '365 Days', contacts: '5 Verified Profiles',      replacements: '10 Free Replacements' },
-  platinum: { emoji: '👑', label: 'Platinum Package',  color: '#7c3aed', bg: '#1e0a3c', badge: 'PLATINUM VIP',    validity: '456 Days', contacts: 'Up to 15 Replacements',    replacements: '15 Free Replacements' },
+  silver:   { emoji: '🥈', label: 'Silver Package',   color: '#475569', bg: '#1e293b', badge: 'SILVER MEMBER',   validity: '10 Months',  contacts: '1 Verified Profile',       replacements: '3 Free Replacements' },
+  gold:     { emoji: '🥇', label: 'Gold Package',     color: '#b45309', bg: '#1c1007', badge: 'GOLD MEMBER',     validity: '12 Months', contacts: '3 Verified Profiles',      replacements: '5 Free Replacements' },
+  diamond:  { emoji: '💎', label: 'Diamond Package',   color: '#0f766e', bg: '#042f2e', badge: 'DIAMOND MEMBER',  validity: '18 Months', contacts: '5 Verified Profiles',      replacements: '10 Free Replacements' },
+  platinum: { emoji: '👑', label: 'Legacy Package',  color: '#7c3aed', bg: '#1e0a3c', badge: 'LEGACY VIP',    validity: 'Legacy Plan', contacts: 'Legacy',    replacements: 'Legacy' },
 };
 
 const PLAN_FEATURES = {
   silver: [
-    '90-Day Free Replacement Guarantee',
-    'Access to Standard Verified Buddy Pool',
+    '10-Month Free Replacement Guarantee',
+    '3 Free Replacements',
     'Aadhaar & Basic Background Verification',
     '1 Curated Buddy Profile Shared',
     'Refund Policy Applicable (T&C Apply)',
   ],
   gold: [
-    '180-Day Free Replacement Guarantee',
-    'Access to Premium Verified Buddy Pool',
+    '12-Month Free Replacement Guarantee',
+    '5 Free Replacements',
     'Enhanced Reference & Background Checks',
     '3 Curated Buddy Profiles Shared',
     'Dedicated Account Manager Assigned',
   ],
   diamond: [
-    '365-Day Free Replacement Guarantee',
-    'Access to Elite Verified Buddy Pool',
+    '18-Month Free Replacement Guarantee',
+    '10 Free Replacements',
     'Comprehensive Police & Background Check',
     '5 Curated Buddy Profiles Shared',
     'Priority 24hr Deployment',
   ],
   platinum: [
-    '456-Day Free Replacement Guarantee',
-    'Up to 15 Complimentary Replacements',
-    'VIP Concierge Verified Buddy Pool',
-    'Full Police + Medical Background Screening',
-    '24×7 Priority Concierge Account Manager',
-    'Same-Day Emergency Deployment',
+    'Legacy Plan Features',
   ],
 };
 

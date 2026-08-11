@@ -50,7 +50,7 @@ export default function AboutPage() {
               <li><strong>100% Police Verification</strong> — Every professional undergoes Aadhaar validation and police background checks.</li>
               <li><strong>1-Year Replacement Guarantee</strong> — Free replacement if a professional doesn&apos;t meet expectations.</li>
               <li><strong>24-Hour Deployment</strong> — Pre-verified candidates for rapid placement.</li>
-              <li><strong>Transparent Pricing</strong> — No hidden fees. Plans starting at ₹2,499.</li>
+              <li><strong>Transparent Pricing</strong> — No hidden fees. Plans starting at ₹3,999.</li>
               <li><strong>Dedicated Support</strong> — Every family gets a relationship manager.</li>
             </ul>
 
