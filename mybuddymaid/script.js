@@ -106,9 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'part-time-4hr':  { metro: '₹5,000 - ₹7,000',   tier2: '₹4,000 - ₹6,000' },
     'part-time-12hr': { metro: '₹13,000 - ₹16,000',  tier2: '₹10,000 - ₹13,000' },
     'full-time':      { metro: '₹19,000 - ₹24,000',  tier2: '₹15,000 - ₹20,000' },
-    'cook':           { metro: '₹10,000 - ₹15,000',  tier2: '₹7,000 - ₹10,000' },
-    'nanny':          { metro: '₹14,000 - ₹20,000',  tier2: '₹10,000 - ₹15,000' },
-    'elderly':        { metro: '₹15,000 - ₹22,000',  tier2: '₹12,000 - ₹18,000' }
+    'cook':           { metro: '₹12,000 - ₹17,000',  tier2: '₹9,000 - ₹12,000' },
+    'nanny':          { metro: '₹16,000 - ₹22,000',  tier2: '₹12,000 - ₹17,000' },
+    'elderly':        { metro: '₹17,000 - ₹24,000',  tier2: '₹14,000 - ₹20,000' }
   };
 
   const updateSalary = () => {
