@@ -898,7 +898,7 @@ p { color: var(--text-secondary); line-height: 1.7; }
 .pricing-card .btn { width: 100%; }
 
 @media (min-width: 640px)  { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
 
 /* ─── SALARY ESTIMATOR ──────────────────────────────────────────────── */
 .estimator-card {

@@ -1168,7 +1168,7 @@ ul { list-style: none; }
 
 /* Plan selector tabs */
 .pricing-selector {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 24px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px;
 }
 .pricing-selector-tab {
   display: flex; flex-direction: column; align-items: center; gap: 4px;
@@ -1353,7 +1353,7 @@ ul { list-style: none; }
   .pricing-card-inner { flex-direction: row; }
   .pricing-card-left { flex: 1; padding: 36px 32px; }
   .pricing-card-right { flex: 1; padding: 36px 32px; border-top: none; border-left: 1px solid var(--border); }
-  .pricing-compare-grid { grid-template-columns: repeat(4, 1fr); }
+  .pricing-compare-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 
