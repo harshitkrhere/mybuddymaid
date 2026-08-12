@@ -10,8 +10,8 @@ import {
 
 // ── TEMPORARY: Set to true to pause purchases ──
 const PURCHASES_PAUSED = true;
-const SUPPORT_PHONE = '+919318429135';
-const SUPPORT_WHATSAPP = `https://wa.me/919318429135?text=${encodeURIComponent('Hi MyBuddyMaid! I\'m interested in purchasing a package. Please help me with the details.')}`;
+const SUPPORT_PHONE = '+919355114869';
+const SUPPORT_WHATSAPP = `https://wa.me/919355114869?text=${encodeURIComponent('Hi MyBuddyMaid! I\'m interested in purchasing a package. Please help me with the details.')}`;
 
 const TESTIMONIALS = [
   {

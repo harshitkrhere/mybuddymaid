@@ -13,7 +13,7 @@ const BRAND = {
   white: '#FFFFFF',
   font: "'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif",
   supportEmail: 'info@mybuddymaid.in',
-  supportPhone: '+91 9599390188',
+  supportPhone: '+91 9355114869',
   website: 'https://mybuddymaid.in',
   from: 'MyBuddyMaid <noreply@mybuddymaid.in>',
 };

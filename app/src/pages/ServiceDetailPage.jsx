@@ -25,7 +25,7 @@ export default function ServiceDetailPage() {
   const [error, setError] = useState('');
   const [showSupport, setShowSupport] = useState(false);
 
-  const SUPPORT_PHONE = '9318429135';
+  const SUPPORT_PHONE = '9355114869';
 
   if (!service) {
     return (

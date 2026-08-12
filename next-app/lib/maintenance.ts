@@ -22,8 +22,8 @@ export const MAINTENANCE_CONFIG = {
 
   // Support contacts during maintenance
   emergencyContact: {
-    phone: "+91 9318429135",
-    whatsapp: "https://wa.me/919318429135?text=Hi%20MyBuddyMaid%20Support,%20I%20need%20urgent%20assistance",
+    phone: "+91 9355114869",
+    whatsapp: "https://wa.me/919355114869?text=Hi%20MyBuddyMaid%20Support,%20I%20need%20urgent%20assistance",
     email: "support@mybuddymaid.com"
   }
 };

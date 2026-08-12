@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <h2>6. Your Rights</h2>
             <p>You may request access to, correction of, or deletion of your personal data by contacting us at info@mybuddymaid.in.</p>
             <h2>7. Contact</h2>
-            <p>For privacy-related questions, email us at <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a> or call +91 9318429135.</p>
+            <p>For privacy-related questions, email us at <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a> or call +91 9355114869.</p>
           </article>
         </div>
       </section>

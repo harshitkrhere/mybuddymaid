@@ -37,7 +37,7 @@ export default function TermsPage() {
             <h2>7. Governing Law</h2>
             <p>These terms are governed by the laws of India. Any disputes shall be resolved through arbitration in Bengaluru, Karnataka.</p>
             <h2>8. Contact</h2>
-            <p>Questions about these terms? Contact us at <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a> or +91 9318429135.</p>
+            <p>Questions about these terms? Contact us at <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a> or +91 9355114869.</p>
           </article>
         </div>
       </section>

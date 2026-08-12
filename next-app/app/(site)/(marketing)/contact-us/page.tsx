@@ -6,7 +6,7 @@ import '@/styles/static-pages.css';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Contact Us',
-  description: 'Get in touch with MyBuddyMaid. Call +91 9318429135, email info@mybuddymaid.in, or WhatsApp us for verified maid, cook, nanny & elderly care services.',
+  description: 'Get in touch with MyBuddyMaid. Call +91 9355114869, email info@mybuddymaid.in, or WhatsApp us for verified maid, cook, nanny & elderly care services.',
   path: '/contact-us',
 });
 
@@ -39,13 +39,13 @@ export default function ContactPage() {
               <div className="contact-card">
                 <div className="contact-icon">📞</div>
                 <h3>Phone</h3>
-                <a href="tel:+919318429135">+91 9318429135</a>
+                <a href="tel:+919355114869">+91 9355114869</a>
                 <p>Mon–Sun, 8 AM – 9 PM IST</p>
               </div>
               <div className="contact-card">
                 <div className="contact-icon">💬</div>
                 <h3>WhatsApp</h3>
-                <a href="https://wa.me/919318429135" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                <a href="https://wa.me/919355114869" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
                 <p>Fastest response — usually within 5 minutes</p>
               </div>
               <div className="contact-card">

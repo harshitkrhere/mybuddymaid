@@ -52,12 +52,12 @@ export default function Footer() {
           <h3>Company</h3>
           <p>MyBuddyMaid is your trusted partner for reliable, background-verified domestic help services across India.</p>
           <div className="footer-contact-item">
-            <span>📞</span> +91 9318429135
+            <span>📞</span> +91 9355114869
           </div>
           <div className="footer-contact-item">
             <span>✉️</span> info@mybuddymaid.in
           </div>
-          <a href="https://wa.me/919318429135" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+          <a href="https://wa.me/919355114869" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
             Chat on WhatsApp
           </a>
         </div>
