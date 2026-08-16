@@ -22,16 +22,16 @@ export default function Footer() {
         <div className="footer-column">
           <h3>Top Cities</h3>
           <ul>
-            <li><Link href="/maid-service-in-delhi" className="footer-link">Delhi</Link></li>
-            <li><Link href="/maid-service-in-mumbai" className="footer-link">Mumbai</Link></li>
-            <li><Link href="/maid-service-in-bangalore" className="footer-link">Bangalore</Link></li>
-            <li><Link href="/maid-service-in-hyderabad" className="footer-link">Hyderabad</Link></li>
-            <li><Link href="/maid-service-in-pune" className="footer-link">Pune</Link></li>
-            <li><Link href="/maid-service-in-chennai" className="footer-link">Chennai</Link></li>
-            <li><Link href="/maid-service-in-kolkata" className="footer-link">Kolkata</Link></li>
-            <li><Link href="/maid-service-in-gurugram" className="footer-link">Gurugram</Link></li>
-            <li><Link href="/maid-service-in-noida" className="footer-link">Noida</Link></li>
-            <li><Link href="/maid-service-in-ahmedabad" className="footer-link">Ahmedabad</Link></li>
+            <li><Link href="/best-maid-service-in-delhi" className="footer-link">Delhi</Link></li>
+            <li><Link href="/best-maid-service-in-mumbai" className="footer-link">Mumbai</Link></li>
+            <li><Link href="/best-maid-service-in-bangalore" className="footer-link">Bangalore</Link></li>
+            <li><Link href="/best-maid-service-in-hyderabad" className="footer-link">Hyderabad</Link></li>
+            <li><Link href="/best-maid-service-in-pune" className="footer-link">Pune</Link></li>
+            <li><Link href="/best-maid-service-in-chennai" className="footer-link">Chennai</Link></li>
+            <li><Link href="/best-maid-service-in-kolkata" className="footer-link">Kolkata</Link></li>
+            <li><Link href="/best-maid-service-in-gurugram" className="footer-link">Gurugram</Link></li>
+            <li><Link href="/best-maid-service-in-noida" className="footer-link">Noida</Link></li>
+            <li><Link href="/best-maid-service-in-ahmedabad" className="footer-link">Ahmedabad</Link></li>
           </ul>
         </div>
 

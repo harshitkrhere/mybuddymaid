@@ -2,7 +2,7 @@ import { PRIMARY_CITIES, EXPANSION_CITIES } from '@/data/cities'
 import { SERVICES } from '@/data/services'
 import { generatePageMetadata } from '@/lib/seo/metadata'
 import { organizationSchema, breadcrumbSchema, JsonLd } from '@/lib/seo/schema'
-import { SERVICE_SLUG_TO_PREFIX } from '@/lib/seo/slug-parser'
+import { generateSlug } from '@/lib/seo/slug-parser'
 import Link from 'next/link'
 import '@/styles/cities-hub.css'
 import { Metadata } from 'next'
@@ -47,18 +47,15 @@ export default function CitiesHubPage() {
                     <span className="status-badge active">⭐ Active</span>
                   </div>
                   <div className="city-services">
-                    {SERVICES.map(service => {
-                      const servicePrefix = SERVICE_SLUG_TO_PREFIX[service.slug] || service.slug
-                      return (
-                        <Link 
-                          key={service.slug} 
-                          href={`/${servicePrefix}-in-${city.slug}`}
-                          className="service-link"
-                        >
-                          {service.name}
-                        </Link>
-                      )
-                    })}
+                    {SERVICES.map(service => (
+                      <Link 
+                        key={service.slug} 
+                        href={`/${generateSlug(service.slug, city.slug)}`}
+                        className="service-link"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -81,18 +78,15 @@ export default function CitiesHubPage() {
                     <span className="status-badge expanding">Expanding</span>
                   </div>
                   <div className="city-services">
-                    {SERVICES.map(service => {
-                      const servicePrefix = SERVICE_SLUG_TO_PREFIX[service.slug] || service.slug
-                      return (
-                        <Link 
-                          key={service.slug} 
-                          href={`/${servicePrefix}-in-${city.slug}`}
-                          className="service-link"
-                        >
-                          {service.name}
-                        </Link>
-                      )
-                    })}
+                    {SERVICES.map(service => (
+                      <Link 
+                        key={service.slug} 
+                        href={`/${generateSlug(service.slug, city.slug)}`}
+                        className="service-link"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               ))}
