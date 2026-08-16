@@ -65,13 +65,6 @@ export function localBusinessSchema(cityName: string, lat: number, lng: number) 
       opens: '08:00',
       closes: '21:00',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      ratingCount: '500',
-      reviewCount: '500',
-    },
   };
 }
 
