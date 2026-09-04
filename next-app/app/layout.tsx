@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
   },
   icons: {
-    icon: '/logo.png',
-    apple: '/logo.png',
+    icon: '/favicon-32.png',
+    apple: '/apple-touch-icon.png',
   },
 };
 

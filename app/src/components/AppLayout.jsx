@@ -10,10 +10,8 @@ export default function AppLayout() {
       {/* Desktop Sidebar */}
       <aside className="app-sidebar" style={{ background: '#0F0F0F', borderRight: '1px solid rgba(255,255,255,0.06)' }}>
         <div className="sidebar-header">
-          <div className="sidebar-logo-icon" style={{ background: '#34D399', color: '#0F0F0F' }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-            </svg>
+          <div className="sidebar-logo-icon">
+            <img src="/logo.png" alt="MyBuddyMaid" />
           </div>
           <span style={{ color: '#F1F5F9' }}>MyBuddyMaid</span>
         </div>

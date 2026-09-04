@@ -810,9 +810,10 @@ ul { list-style: none; }
   animation: pulse-ring 2s ease-in-out infinite;
 }
 .splash-logo-inner {
-  width: 64px; height: 64px; border-radius: 50%; background: var(--primary);
+  width: 64px; height: 64px; border-radius: 14px;
   display: flex; align-items: center; justify-content: center; color: #0F0F0F;
 }
+.splash-logo-inner img { width: 100%; height: 100%; object-fit: contain; display: block; }
 @keyframes pulse-ring { 0%, 100% { border-color: rgba(52,211,153,0.3); transform: scale(1); } 50% { border-color: rgba(52,211,153,0.6); transform: scale(1.05); } }
 
 .splash-text { font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 6px; font-family: var(--font-d); letter-spacing: -0.03em; }
@@ -874,6 +875,7 @@ ul { list-style: none; }
     width: 36px; height: 36px; border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
   }
+  .sidebar-logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .sidebar-header span { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.02em; }
   .sidebar-nav { display: flex; flex-direction: column; gap: 4px; flex: 1; }
   .sidebar-item {

@@ -48,9 +48,7 @@ export default function SplashScreen() {
       <div className="splash-content">
         <div className="splash-logo-ring">
           <div className="splash-logo-inner">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-            </svg>
+            <img src="/logo.png" alt="MyBuddyMaid" />
           </div>
         </div>
         <h1 className="splash-text">MyBuddyMaid</h1>
