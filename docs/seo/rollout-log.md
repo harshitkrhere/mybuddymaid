@@ -8,7 +8,7 @@ One row per publishing batch. The policy is in [README.md §6](README.md): batch
 
 | Batch | Date | URLs | Sitemap shards | Status |
 |---|---|---|---|---|
-| core-launch | *pending cutover* | 2,489 indexable of 2,513 composed | `global-core-*`, `<city>-hubs-*`, `<city>-services-*`, `pincodes-*` | Built and verified locally; not yet deployed |
+| core-launch | **2026-09-07** | 2,489 indexable of 2,513 composed | `global-core-*`, `<city>-hubs-*`, `<city>-services-*`, `pincodes-*` | **LIVE.** `main` fast-forwarded to `3c8718f6`; production verified after deploy: `/gurgaon/dlf-phase-1` 200, `/best-cook-service-in-agra` 410, `www` 308 → apex, `robots.txt` / `sitemap.xml` / IndexNow key 200; `check-redirects` GREEN (1,970 301s, 5,696 410s, 0 chains) and `crawl` GREEN (2,557 pages, 0 broken, 0 orphans) against `https://mybuddymaid.in` |
 
 The core estate is published in one go because it replaces an existing 3,846-page indexed
 site one-for-one through the redirect map. It is not new long-tail surface: every URL
@@ -26,8 +26,18 @@ either replaces a legacy URL that already ranked, or is a hub that consolidates 
 | `seo:check-redirects` | green — 1,970 single-hop 301s, 5,696 410s, 0 chains, 0 loops |
 | `seo:crawl` | green — 2,557 pages, 0 broken links, 0 orphans, click depth ≤ 3 |
 
-**After deploy, record here:** deploy date, GSC submission date, and indexed counts at
-weeks 1, 3 and 8. The brief's target is ≥ 80 % of core pages indexed within 8 weeks.
+**Post-deploy record.** Deployed 2026-09-07 (IST, early hours). GSC: Domain property
+`mybuddymaid.in`, DNS-verified 2026-09-07; legacy baseline ~10,486 clicks over the prior
+16 months. Sitemap index submission in GSC and the Bing import are the owner's next two
+clicks. Record indexed counts here at weeks 1, 3 and 8 — the brief's target is ≥ 80 % of
+core pages indexed within 8 weeks.
+
+| Week | Date | GSC indexed (core) | Bing indexed | Notes |
+|---|---|---|---|---|
+| 0 | 2026-09-07 | — | — | deployed; IndexNow submitted (see ship-checklist §E) |
+| 1 | | | | |
+| 3 | | | | |
+| 8 | | | | |
 
 ## Phase 5 entity batches
 

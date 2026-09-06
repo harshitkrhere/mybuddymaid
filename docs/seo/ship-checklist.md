@@ -25,7 +25,12 @@ until this list is done. Owner-only items are marked **[owner]**.
 
 Merge only when every row is true. Nothing in A can be waived by a later fix.
 
-## B. Deploy day, in order
+## B. Deploy day, in order — DONE 2026-09-07
+
+Steps 1–3 completed and verified (see §E). Remaining for the owner: step 4 is already
+done for Google (DNS Domain property), step 5 (submit `https://mybuddymaid.in/sitemap.xml`
+in GSC, then Bing via Import from GSC), and step 7 (watch Coverage; fill the week 1/3/8
+table in `rollout-log.md`).
 
 1. Merge `seo-rebuild` → `main` (fast-forward; the branch is linear).
 2. Vercel builds production. Confirm `https://mybuddymaid.in/gurgaon/dlf-phase-1` is 200
@@ -94,7 +99,13 @@ curl.exe -s https://mybuddymaid.in/$env:INDEXNOW_KEY.txt     # must print the ke
 npm run seo:indexnow                                          # all indexable URLs, ≤10,000 per request
 Remove-Item Env:\INDEXNOW_KEY
 ```
-That first run submits every indexable core URL (2,487 today). Expect HTTP 200 or 202.
+That first run submits every indexable core URL (2,496 today). Expect HTTP 200 or 202.
+
+**First attempt, 2026-09-07, minutes after the deploy:** HTTP 403
+`SiteVerificationNotCompleted` — "Site Verification is not completed. Please wait for
+some time for the verification to complete and try again." The key file was already
+serving 200 with the right content; IndexNow verifies it asynchronously and needs time
+after a brand-new host/key. Retry the same command; a 200/202 closes this row.
 
 **After any later deploy that changes content:**
 ```powershell
@@ -121,4 +132,5 @@ Recorded by the session that closes this checklist:
 | geocode audit (A8) | 0 localities on a sibling's point; 22 without coordinates (curated neighbours); Sector 150 ↔ Sector 18 link gone | same |
 | `seo:crawl` (local `next start`) | GREEN — 2,557 pages crawled, 2,496 indexable URLs expected, 0 broken links, 0 orphans, 0 redirecting internal links, click depth ≤ 3 | 2026-09-07, against the build that carries the geocoding fix |
 | `seo:check-redirects` (local `next start`) | GREEN — 1,970 single-hop 301s, 5,696 410s, 0 chains, 0 loops | same |
+| production, after the merge (`main` → `3c8718f6`) | live after ~4.5 min: `/gurgaon/dlf-phase-1` 200 · `/best-cook-service-in-agra` 410 · `www` 308 → apex · `/noida/sector-150` 200 · `robots.txt`, `sitemap.xml`, IndexNow key file 200 · `check-redirects` GREEN (1,970 / 5,696 / 0 chains) · `crawl` GREEN (2,557 pages, 0 broken, 0 orphans) | 2026-09-07 |
 | `seo:crawl` / `seo:check-redirects` (preview) | both GREEN — see A9/A10. One wrapper fix was needed first: `_fetch.ts` also sent `x-vercel-set-bypass-cookie`, which Vercel answers with a 307 to set the cookie, and with `redirect: 'manual'` the scripts read that 307 as the site's response. The bypass header alone is stateless and returns 200; the cookie request is gone | 2026-09-07 |
