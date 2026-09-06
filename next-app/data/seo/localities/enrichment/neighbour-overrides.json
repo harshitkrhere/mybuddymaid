@@ -1,0 +1,119 @@
+{
+  "noida/sector-142": {
+    "remove": [
+      "sector-144",
+      "sector-18",
+      "sector-37",
+      "sector-110"
+    ]
+  },
+  "noida/sector-77": {
+    "remove": [
+      "sector-110",
+      "sector-136"
+    ],
+    "add": [
+      "sector-76"
+    ]
+  },
+  "noida/sector-136": {
+    "remove": [
+      "sector-75",
+      "sector-74",
+      "sector-79",
+      "sector-78",
+      "sector-77",
+      "sector-37"
+    ]
+  },
+  "noida/sector-140": {
+    "remove": [
+      "sector-18",
+      "sector-15",
+      "sector-16",
+      "sector-28",
+      "sector-29"
+    ]
+  },
+  "noida/sector-141": {
+    "remove": [
+      "sector-18",
+      "sector-15",
+      "sector-16"
+    ]
+  },
+  "noida/sector-145": {
+    "remove": [
+      "sector-18"
+    ]
+  },
+  "noida/sector-147": {
+    "remove": [
+      "sector-18"
+    ]
+  },
+  "noida/sector-148": {
+    "remove": [
+      "sector-18"
+    ]
+  },
+  "noida/sector-149": {
+    "remove": [
+      "sector-63",
+      "sector-72",
+      "sector-62",
+      "sector-71"
+    ]
+  },
+  "noida/sector-150": {
+    "remove": [
+      "sector-18"
+    ]
+  },
+  "noida/sector-151": {
+    "remove": [
+      "sector-18"
+    ]
+  },
+  "noida/sector-152": {
+    "remove": [
+      "sector-18"
+    ]
+  },
+  "noida/sector-110": {
+    "remove": [
+      "sector-37",
+      "sector-146"
+    ]
+  },
+  "noida/sector-144": {
+    "remove": [
+      "sector-21",
+      "sector-20",
+      "sector-12",
+      "sector-22",
+      "sector-56",
+      "sector-19",
+      "sector-27",
+      "sector-15",
+      "sector-16"
+    ]
+  },
+  "noida/sector-37": {
+    "remove": [
+      "sector-144",
+      "sector-77",
+      "sector-108",
+      "sector-100",
+      "sector-93"
+    ],
+    "add": [
+      "sector-44",
+      "sector-45",
+      "sector-41",
+      "sector-29",
+      "sector-30",
+      "sector-104"
+    ]
+  }
+}

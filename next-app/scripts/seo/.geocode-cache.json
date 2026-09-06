@@ -4,11 +4,6 @@
     "lng": 77.2193804,
     "display": "Connaught Place, New Delhi, Delhi, 110001, India"
   },
-  "delhi/lodi-road": {
-    "lat": 28.5800535,
-    "lng": 77.2217923,
-    "display": "Bank of India, Najaf Khan Road, Khanna Market, Kidwai Nagar, New Delhi, Delhi, 110003, India"
-  },
   "delhi/karol-bagh": {
     "lat": 28.6529982,
     "lng": 77.1890227,
@@ -471,11 +466,6 @@
     "lng": 77.3391732,
     "display": "Sector 30, Nithari, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
   },
-  "noida/sector-37": {
-    "lat": 28.4698857,
-    "lng": 77.5317922,
-    "display": "37, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
-  },
   "noida/sector-41": {
     "lat": 28.5662237,
     "lng": 77.3617456,
@@ -541,50 +531,15 @@
     "lng": 77.3643493,
     "display": "Sector 62, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201309, India"
   },
-  "noida/sector-63": {
-    "lat": 28.6120749,
-    "lng": 77.3778122,
-    "display": "63, B Block Road, Sector 64, Mamura, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
-  },
   "noida/sector-71": {
     "lat": 28.5942367,
     "lng": 77.3761378,
     "display": "Sector 71, Mamura, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
   },
-  "noida/sector-72": {
-    "lat": 28.6114861,
-    "lng": 77.3777821,
-    "display": "Tyagi Service Center, 72, B Block Road, Sector 64, Mamura, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
-  },
-  "noida/sector-74": {
-    "lat": 28.4716585,
-    "lng": 77.5312807,
-    "display": "74, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
-  },
-  "noida/sector-75": {
-    "lat": 28.4716932,
-    "lng": 77.5313411,
-    "display": "75, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
-  },
   "noida/sector-76": {
     "lat": 28.5653305,
     "lng": 77.3796581,
     "display": "Noida Sector 76, Vishwakarma Road, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
-  },
-  "noida/sector-77": {
-    "lat": 28.4711991,
-    "lng": 77.5307605,
-    "display": "77, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
-  },
-  "noida/sector-78": {
-    "lat": 28.4712338,
-    "lng": 77.5308209,
-    "display": "78, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
-  },
-  "noida/sector-79": {
-    "lat": 28.4712685,
-    "lng": 77.5308813,
-    "display": "79, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
   },
   "noida/sector-93": {
     "lat": 28.5229507,
@@ -596,11 +551,6 @@
     "lng": 77.3650963,
     "display": "Sector 100, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
   },
-  "noida/sector-104": {
-    "lat": 28.6158648,
-    "lng": 77.3785392,
-    "display": "ANR Software Private Limited, B 103-104, B Block Road, Sector 64, Sector 62, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
-  },
   "noida/sector-107": {
     "lat": 28.545932,
     "lng": 77.376561,
@@ -611,90 +561,20 @@
     "lng": 77.3767936,
     "display": "Sector 108, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
   },
-  "noida/sector-110": {
-    "lat": 28.4714645,
-    "lng": 77.5301239,
-    "display": "110, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
-  },
   "noida/sector-135": {
     "lat": 28.4980047,
     "lng": 77.4000326,
     "display": "Sector 135, Bajidpur, Noida, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-136": {
-    "lat": 28.4713237,
-    "lng": 77.5319706,
-    "display": "136, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
   },
   "noida/sector-137": {
     "lat": 28.5087875,
     "lng": 77.4104388,
     "display": "Sector 137, Shahdara, Noida, Gautam Buddha Nagar, Uttar Pradesh, India"
   },
-  "noida/sector-140": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-141": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-142": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
   "noida/sector-143": {
     "lat": 28.5026633,
     "lng": 77.4262557,
     "display": "Sector 143, Shahdara, Noida, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-144": {
-    "lat": 28.5887004,
-    "lng": 77.3318752,
-    "display": "AMPM Fashions Private Limited, B-144, Sector 10, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
-  },
-  "noida/sector-145": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-146": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-147": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-148": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-149": {
-    "lat": 28.6151098,
-    "lng": 77.3777107,
-    "display": "Trignodev Softwares Pvt Ltd., B- 149, B Block Road, Sector 64, Sector 62, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
-  },
-  "noida/sector-150": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-151": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
-  },
-  "noida/sector-152": {
-    "lat": 28.5705399,
-    "lng": 77.3228931,
-    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
   },
   "greater-noida/gaur-city": {
     "lat": 28.6054205,
@@ -767,16 +647,6 @@
     "lng": 77.0937804,
     "display": "Central Bank of India, U-4, DLF Phase 3-U Block, Sector 24, Gurgaon, Gurugram, Haryana, 122010, India"
   },
-  "gurgaon/dlf-phase-4": {
-    "lat": 28.4919048,
-    "lng": 77.0937804,
-    "display": "Central Bank of India, U-4, DLF Phase 3-U Block, Sector 24, Gurgaon, Gurugram, Haryana, 122010, India"
-  },
-  "gurgaon/dlf-phase-5": {
-    "lat": 28.503445,
-    "lng": 77.0952048,
-    "display": "DLF Downtown Gurugram, Commercial Site, Block 5 , DLF City Phase 3, Sector 25A, Sector 24, Gurgaon, Gurugram, Haryana, 122002, India"
-  },
   "gurgaon/golf-course-road": {
     "lat": 28.4495292,
     "lng": 77.0995152,
@@ -841,11 +711,6 @@
     "lat": 28.4597391,
     "lng": 77.0612091,
     "display": "South City, South City I, Sector 41, Gurgaon, Gurugram, Haryana, 122022, India"
-  },
-  "gurgaon/south-city-2": {
-    "lat": 28.4188806,
-    "lng": 77.0439211,
-    "display": "2, Sector 47, Gurgaon, Gurugram, Haryana, India"
   },
   "gurgaon/sohna-road": {
     "lat": 28.4115053,
@@ -1046,11 +911,6 @@
     "lat": 18.9492575,
     "lng": 72.8279382,
     "display": "Kalbadevi, C Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400002, India"
-  },
-  "mumbai/girgaon": {
-    "lat": 18.9609893,
-    "lng": 72.813628,
-    "display": "J Shankarsheth Marg, Gamdevi, D Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400036, India"
   },
   "mumbai/grant-road": {
     "lat": 18.9633549,
@@ -1372,11 +1232,6 @@
     "lng": 73.8913189,
     "display": "Dhanori, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
   },
-  "pune/lohegaon": {
-    "lat": 18.5803749,
-    "lng": 73.9182265,
-    "display": "Pune International Airport, Airport Road, Viman Nagar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411014, India"
-  },
   "pune/wanowrie": {
     "lat": 18.4883683,
     "lng": 73.8986672,
@@ -1552,11 +1407,6 @@
     "lng": 77.6248577,
     "display": "Nagawara (Proposed), Thanisandra Main Road, Fatima Layout, Kempapura, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560045, India"
   },
-  "bangalore/fraser-town": {
-    "lat": 13.0027542,
-    "lng": 77.6157507,
-    "display": "Clarence High School, Pottery Road, Sagayapura, Richards Town, Sagayapuram, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560005, India"
-  },
   "bangalore/rajajinagar": {
     "lat": 13.0005232,
     "lng": 77.5496166,
@@ -1654,11 +1504,6 @@
     "lng": 74.86606,
     "display": "West Gate Centre, D. No 7-49/6, Kankanady, Pumpwell,, NH73, Nethravati Nagara, Kankanady, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575002, India"
   },
-  "mangalore/surathkal": {
-    "lat": 12.9798673,
-    "lng": 74.8246658,
-    "display": "BASF India Ltd, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575030, India"
-  },
   "mangalore/panambur": {
     "lat": 12.945576,
     "lng": 74.8078986,
@@ -1688,5 +1533,92 @@
     "lat": 12.8036462,
     "lng": 74.9617128,
     "display": "Mudipu, Ullala taluk, Dakshina Kannada, Karnataka, 574153, India"
-  }
+  },
+  "noida/sector-74": {
+    "lat": 28.5719845,
+    "lng": 77.3903287,
+    "display": "Sector 74 Road, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201316, India"
+  },
+  "noida/sector-75": {
+    "lat": 28.5775093,
+    "lng": 77.3790155,
+    "display": "Sector 75 Internal Road, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201316, India"
+  },
+  "noida/sector-78": {
+    "lat": 28.5644275,
+    "lng": 77.3865932,
+    "display": "Sector 78 Main Road, Kakrala, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
+  },
+  "noida/sector-79": {
+    "lat": 28.5590585,
+    "lng": 77.3962738,
+    "display": "sector 79 cricket field, Sector 116 Main Road, Kakrala, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
+  },
+  "noida/sector-142": {
+    "lat": 28.4990465,
+    "lng": 77.4127522,
+    "display": "Noida Sector 142, Noida-Greater Noida Expressway, Garhi, Noida, Gautam Buddha Nagar, Uttar Pradesh, 210305, India"
+  },
+  "noida/sector-146": {
+    "lat": 28.4688192,
+    "lng": 77.4552077,
+    "display": "Noida Sector 146, Noida-Greater Noida Expressway, Knowledge Park III, Shafipur, Noida, Gautam Buddha Nagar, Uttar Pradesh, 110020, India"
+  },
+  "gurgaon/dlf-phase-4": {
+    "lat": 28.4640865,
+    "lng": 77.0836441,
+    "display": "DLF City Phase 4, IFFCO Chowk, Sector 27, Gurgaon, Gurugram, Haryana, 122009, India"
+  },
+  "delhi/lodi-road": {
+    "lat": 28.5916376,
+    "lng": 77.2312423,
+    "display": "Lodhi Road, Central, Delhi, South East Delhi, Delhi, 110003, India"
+  },
+  "noida/sector-110": {
+    "lat": 28.5311931,
+    "lng": 77.3851697,
+    "display": "Sector 110 Park Road, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201304, India"
+  },
+  "noida/sector-144": {
+    "lat": 28.4862877,
+    "lng": 77.433077,
+    "display": "Noida Sector 144, Noida-Greater Noida Expressway, Garhi, Noida, Gautam Buddha Nagar, Uttar Pradesh, 210305, India"
+  },
+  "mumbai/girgaon": {
+    "lat": 18.9543165,
+    "lng": 72.8179082,
+    "display": "Girgaon, D Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400004, India"
+  },
+  "pune/lohegaon": {
+    "lat": 18.5958799,
+    "lng": 73.9247019,
+    "display": "Lohgaon, Lohgaon - Shinde Vadgaon Road, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "bangalore/fraser-town": {
+    "lat": 12.9975851,
+    "lng": 77.6136744,
+    "display": "Frazer Town, Pulakeshi Nagar, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560005, India"
+  },
+  "mangalore/surathkal": {
+    "lat": 12.9902433,
+    "lng": 74.8053518,
+    "display": "Surathkal, Krishnapura Road, Krishnapura, Surathkal, Mangaluru taluk, Dakshina Kannada, Karnataka, 575014, India"
+  },
+  "noida/sector-63": null,
+  "noida/sector-72": null,
+  "noida/sector-77": null,
+  "noida/sector-104": null,
+  "noida/sector-136": null,
+  "noida/sector-140": null,
+  "noida/sector-141": null,
+  "noida/sector-145": null,
+  "noida/sector-147": null,
+  "noida/sector-148": null,
+  "noida/sector-149": null,
+  "noida/sector-150": null,
+  "noida/sector-151": null,
+  "noida/sector-152": null,
+  "gurgaon/dlf-phase-5": null,
+  "gurgaon/south-city-2": null,
+  "noida/sector-37": null
 }

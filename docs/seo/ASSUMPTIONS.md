@@ -233,3 +233,41 @@ editing one data file unless noted.
     the facts the worksheet asks for (towers, entry process, who issues the helper ID
     card) are already in the CRM and WhatsApp history for those societies, so every
     published fact is verifiable, and those are the societies that actually convert.
+45. **Geocoder guards, after eleven Noida sectors inherited Sector 18's point.** Nominatim
+    answered "Sector 150, Noida" with Sector 18 (28.5705, 77.3229) and the geocoder took it,
+    so sectors 140, 141, 142, 145, 146, 147, 148, 150, 151 and 152 all carried Sector 18's
+    coordinates; `refine-neighbours` then listed central-Noida sectors 15 km away as their
+    neighbours, and the meta-description template advertised them. A retroactive audit of
+    the whole cache with the new guards found 20 more hits that did not name their locality:
+    Noida sectors 37, 63, 72, 74, 75, 77, 78, 79, 104, 110, 136, 144, 149 had resolved to
+    house numbers on "Sector 31 B Block Road, Greater Noida" or "B Block Road, Sector 64",
+    DLF Phase 4 to DLF Phase 3, DLF Phase 5 to a DLF Phase 3 commercial block, South City 2
+    to "2, Sector 47". `scripts/seo/geocode.ts` now rejects, in this order: a result whose
+    display name does not contain the locality's name or an alt name; one that names a
+    *different* city in the data layer ("Sector 37 Rho 2, Greater Noida" for Noida);
+    one within 50 m of a sibling locality's point (reported as "a sibling's point"); and
+    the existing > 60 km check. Query forms gained the district ("Gautam Buddh Nagar") and
+    the "Noida Sector 150" single-phrase form. When Nominatim has nothing, an Overpass
+    fallback looks for a `place=*` node or a named `landuse=residential` polygon **inside
+    the city's OSM administrative boundary** — a radius is not enough: Faridabad's Sector 37
+    is 10 km from Noida's centre and was returned for Noida's. `--redo <city/slug,…>`
+    clears the cache and stored coordinates for named localities. Net result: 10 localities
+    re-resolved to genuine points (Noida 74, 75, 78, 79, 110, 142, 144, 146; DLF Phase 4;
+    Lodhi Road, Girgaon, Lohgaon, Frazer Town, Surathkal to better points), and **22 are
+    now without coordinates instead of 5** (Noida 37, 63, 72, 77, 104, 136, 140, 141, 145,
+    147, 148, 149, 150, 151, 152; DLF Phase 5; South City 2; plus the original five). A
+    locality without coordinates keeps its curated neighbours, which is right; inheriting a
+    wrong point is not. Nominatim and OSM simply have no entry for those sectors.
+46. **Wrong-point residue removed through `neighbour-overrides.json`, not a blanket rule.**
+    The lists `refine-neighbours` had built from the wrong points were the only "curated"
+    lists those localities had. A first attempt filtered coordinate-less localities to
+    same-zone neighbours, which also cut legitimate cross-zone neighbours in Delhi and
+    Mangalore, so it was reverted. Instead the documented overrides mechanism removes the
+    exact residue (e.g. `sector-150: remove sector-18`; `sector-144: remove` the nine
+    central sectors 14–16 km away), and adds one true adjacency each for the two
+    localities whose lists were *entirely* residue: Sector 37 (neighbours 44, 45, 41, 29,
+    30, 104 — administrative adjacency, not an estimate) and Sector 77 (+ Sector 76).
+    Verified: `validate` GREEN, `gate` 2,489 indexable / 24 noindexed / 0 duplicate pairs
+    — the same counts as before the fix, with **0 verdict flips** and 282 pages whose
+    measured content changed (the neighbour names in their prose and descriptions). Sector
+    150 no longer lists Sector 18; Sector 18 no longer lists any Expressway sector.

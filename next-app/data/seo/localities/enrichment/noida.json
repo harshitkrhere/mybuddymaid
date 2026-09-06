@@ -9,8 +9,10 @@
       "sector-19",
       "sector-15",
       "sector-16",
-      "sector-144",
-      "sector-30"
+      "sector-30",
+      "sector-27",
+      "sector-61",
+      "sector-62"
     ],
     "landmarks": [
       "Metro Hospital & Heart Institute",
@@ -78,8 +80,8 @@
       "sector-21",
       "sector-27",
       "sector-22",
-      "sector-140",
-      "sector-141"
+      "sector-28",
+      "sector-29"
     ],
     "landmarks": [
       "Noida Sector 15 Metro Station",
@@ -147,8 +149,8 @@
       "sector-28",
       "sector-29",
       "sector-12",
-      "sector-140",
-      "sector-141"
+      "sector-21",
+      "sector-30"
     ],
     "landmarks": [
       "Noida Sector 16 Metro Station",
@@ -218,17 +220,7 @@
       "sector-30",
       "sector-21",
       "sector-22",
-      "sector-44",
-      "sector-140",
-      "sector-141",
-      "sector-142",
-      "sector-145",
-      "sector-146",
-      "sector-147",
-      "sector-148",
-      "sector-150",
-      "sector-151",
-      "sector-152"
+      "sector-44"
     ],
     "landmarks": [
       "DLF Mall of India",
@@ -298,7 +290,8 @@
       "sector-28",
       "sector-12",
       "sector-29",
-      "sector-30"
+      "sector-30",
+      "sector-56"
     ],
     "landmarks": [
       "Atta Market (Sector 18)",
@@ -367,8 +360,9 @@
       "sector-27",
       "sector-12",
       "sector-28",
-      "sector-144",
-      "sector-30"
+      "sector-30",
+      "sector-55",
+      "sector-56"
     ],
     "landmarks": [
       "Sector 20 Market",
@@ -436,9 +430,11 @@
       "sector-27",
       "sector-15",
       "sector-28",
-      "sector-144",
       "sector-30",
-      "sector-55"
+      "sector-16",
+      "sector-55",
+      "sector-56",
+      "sector-62"
     ],
     "landmarks": [
       "Jalvayu Vihar",
@@ -507,9 +503,12 @@
       "sector-18",
       "sector-27",
       "sector-15",
-      "sector-144",
       "sector-52",
-      "sector-61"
+      "sector-61",
+      "sector-62",
+      "sector-63",
+      "sector-71",
+      "sector-72"
     ],
     "landmarks": [
       "Sector 22 Market",
@@ -579,7 +578,8 @@
       "sector-20",
       "sector-15",
       "sector-21",
-      "sector-22"
+      "sector-22",
+      "sector-12"
     ],
     "landmarks": [
       "Kailash Hospital",
@@ -648,8 +648,8 @@
       "sector-20",
       "sector-21",
       "sector-41",
-      "sector-140",
       "sector-43",
+      "sector-15",
       "sector-44"
     ],
     "landmarks": [
@@ -719,8 +719,9 @@
       "sector-16",
       "sector-43",
       "sector-44",
-      "sector-140",
-      "sector-45"
+      "sector-45",
+      "sector-15",
+      "sector-37"
     ],
     "landmarks": [
       "Brahmaputra Shopping Complex",
@@ -791,7 +792,9 @@
       "sector-45",
       "sector-20",
       "sector-12",
-      "sector-21"
+      "sector-16",
+      "sector-21",
+      "sector-37"
     ],
     "landmarks": [
       "Child PGI (Super Speciality Paediatric Hospital & PG Teaching Institute)",
@@ -851,13 +854,12 @@
   },
   "sector-37": {
     "neighbours": [
-      "sector-136",
-      "sector-78",
-      "sector-77",
-      "sector-79",
-      "sector-74",
-      "sector-75",
-      "sector-110"
+      "sector-44",
+      "sector-45",
+      "sector-41",
+      "sector-29",
+      "sector-30",
+      "sector-104"
     ],
     "landmarks": [
       "Arun Vihar",
@@ -912,9 +914,7 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.46989,
-    "lng": 77.53179
+    "reviewed": false
   },
   "sector-41": {
     "neighbours": [
@@ -928,6 +928,11 @@
       "sector-47",
       "sector-50",
       "sector-76",
+      "sector-37",
+      "sector-74",
+      "sector-75",
+      "sector-78",
+      "sector-79",
       "sector-100"
     ],
     "landmarks": [
@@ -1068,7 +1073,8 @@
       "sector-29",
       "sector-93",
       "sector-28",
-      "sector-18"
+      "sector-18",
+      "sector-37"
     ],
     "landmarks": [
       "Chhalera village",
@@ -1140,6 +1146,7 @@
       "sector-100",
       "sector-107",
       "sector-29",
+      "sector-37",
       "sector-108"
     ],
     "landmarks": [
@@ -1213,6 +1220,8 @@
       "sector-100",
       "sector-107",
       "sector-76",
+      "sector-78",
+      "sector-79",
       "sector-93",
       "sector-108"
     ],
@@ -1285,8 +1294,14 @@
       "sector-107",
       "sector-100",
       "sector-76",
+      "sector-74",
+      "sector-78",
+      "sector-79",
       "sector-93",
-      "sector-108"
+      "sector-108",
+      "sector-110",
+      "sector-135",
+      "sector-142"
     ],
     "landmarks": [
       "Noida Golf Course",
@@ -1356,7 +1371,11 @@
       "sector-61",
       "sector-45",
       "sector-41",
-      "sector-43"
+      "sector-43",
+      "sector-74",
+      "sector-75",
+      "sector-78",
+      "sector-79"
     ],
     "landmarks": [
       "Sector 50 Metro Station (Aqua Line)",
@@ -1423,13 +1442,17 @@
       "sector-61",
       "sector-71",
       "sector-47",
-      "sector-72",
       "sector-55",
       "sector-46",
       "sector-56",
       "sector-62",
+      "sector-74",
       "sector-63",
-      "sector-76"
+      "sector-72",
+      "sector-75",
+      "sector-76",
+      "sector-78",
+      "sector-79"
     ],
     "landmarks": [
       "Sector 51 Metro Station (Aqua Line interchange)",
@@ -1496,11 +1519,13 @@
       "sector-71",
       "sector-55",
       "sector-50",
-      "sector-72",
       "sector-62",
       "sector-56",
-      "sector-63",
       "sector-22",
+      "sector-74",
+      "sector-75",
+      "sector-63",
+      "sector-72",
       "sector-76"
     ],
     "landmarks": [
@@ -1569,11 +1594,12 @@
       "sector-51",
       "sector-62",
       "sector-71",
-      "sector-72",
       "sector-12",
       "sector-22",
       "sector-21",
-      "sector-63"
+      "sector-20",
+      "sector-63",
+      "sector-72"
     ],
     "landmarks": [
       "Sector 61 Metro Station (Blue Line)",
@@ -1640,11 +1666,13 @@
       "sector-62",
       "sector-52",
       "sector-51",
-      "sector-63",
-      "sector-72",
       "sector-12",
       "sector-22",
-      "sector-144"
+      "sector-21",
+      "sector-20",
+      "sector-19",
+      "sector-63",
+      "sector-72"
     ],
     "landmarks": [
       "Sector 61 Metro Station (Blue Line)",
@@ -1712,10 +1740,12 @@
       "sector-71",
       "sector-56",
       "sector-55",
-      "sector-72",
-      "sector-63",
       "sector-50",
       "sector-22",
+      "sector-75",
+      "sector-12",
+      "sector-63",
+      "sector-72",
       "sector-104"
     ],
     "landmarks": [
@@ -1779,15 +1809,18 @@
   },
   "sector-62": {
     "neighbours": [
-      "sector-63",
       "sector-61",
       "sector-56",
       "sector-55",
       "sector-52",
-      "sector-72",
       "sector-71",
       "sector-51",
-      "sector-149",
+      "sector-22",
+      "sector-12",
+      "sector-21",
+      "sector-75",
+      "sector-63",
+      "sector-72",
       "sector-104"
     ],
     "landmarks": [
@@ -1858,10 +1891,10 @@
       "sector-71",
       "sector-56",
       "sector-52",
-      "sector-149",
       "sector-104",
       "sector-55",
-      "sector-51"
+      "sector-51",
+      "sector-22"
     ],
     "landmarks": [
       "Noida Electronic City Metro Station (Blue Line)",
@@ -1919,22 +1952,23 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.61207,
-    "lng": 77.37781
+    "reviewed": false
   },
   "sector-71": {
     "neighbours": [
-      "sector-72",
       "sector-52",
       "sector-51",
       "sector-61",
       "sector-50",
       "sector-62",
       "sector-55",
-      "sector-63",
       "sector-76",
-      "sector-149"
+      "sector-75",
+      "sector-74",
+      "sector-22",
+      "sector-63",
+      "sector-72",
+      "sector-104"
     ],
     "landmarks": [
       "Sector 71 Chowk and underpass",
@@ -2003,8 +2037,8 @@
       "sector-51",
       "sector-55",
       "sector-56",
-      "sector-149",
-      "sector-104"
+      "sector-104",
+      "sector-22"
     ],
     "landmarks": [
       "Sarfabad village",
@@ -2059,19 +2093,21 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.61149,
-    "lng": 77.37778
+    "reviewed": false
   },
   "sector-74": {
     "neighbours": [
       "sector-75",
-      "sector-77",
       "sector-78",
       "sector-79",
-      "sector-136",
-      "sector-110",
-      "sector-37"
+      "sector-76",
+      "sector-51",
+      "sector-50",
+      "sector-52",
+      "sector-71",
+      "sector-41",
+      "sector-47",
+      "sector-77"
     ],
     "landmarks": [
       "Supertech Cape Town",
@@ -2127,18 +2163,23 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.47166,
-    "lng": 77.53128
+    "lat": 28.57198,
+    "lng": 77.39033
   },
   "sector-75": {
     "neighbours": [
       "sector-74",
-      "sector-77",
       "sector-78",
       "sector-79",
-      "sector-136",
-      "sector-110",
-      "sector-37"
+      "sector-51",
+      "sector-50",
+      "sector-76",
+      "sector-52",
+      "sector-71",
+      "sector-41",
+      "sector-61",
+      "sector-62",
+      "sector-77"
     ],
     "landmarks": [
       "Spectrum Metro mall",
@@ -2194,8 +2235,8 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.47169,
-    "lng": 77.53134
+    "lat": 28.57751,
+    "lng": 77.37902
   },
   "sector-76": {
     "neighbours": [
@@ -2208,7 +2249,12 @@
       "sector-46",
       "sector-52",
       "sector-43",
-      "sector-100"
+      "sector-100",
+      "sector-74",
+      "sector-75",
+      "sector-78",
+      "sector-79",
+      "sector-77"
     ],
     "landmarks": [
       "Sector 76 Metro Station (Aqua Line)",
@@ -2271,9 +2317,7 @@
       "sector-75",
       "sector-79",
       "sector-74",
-      "sector-110",
-      "sector-136",
-      "sector-37"
+      "sector-76"
     ],
     "landmarks": [
       "Prateek Wisteria",
@@ -2326,19 +2370,21 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.4712,
-    "lng": 77.53076
+    "reviewed": false
   },
   "sector-78": {
     "neighbours": [
-      "sector-77",
       "sector-79",
       "sector-75",
       "sector-74",
-      "sector-110",
-      "sector-136",
-      "sector-37"
+      "sector-76",
+      "sector-50",
+      "sector-107",
+      "sector-47",
+      "sector-41",
+      "sector-51",
+      "sector-46",
+      "sector-77"
     ],
     "landmarks": [
       "Mahagun Moderne",
@@ -2395,18 +2441,25 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.47123,
-    "lng": 77.53082
+    "lat": 28.56443,
+    "lng": 77.38659
   },
   "sector-79": {
     "neighbours": [
       "sector-78",
-      "sector-77",
       "sector-75",
       "sector-74",
+      "sector-76",
+      "sector-107",
+      "sector-47",
+      "sector-50",
+      "sector-41",
+      "sector-51",
+      "sector-46",
+      "sector-77",
       "sector-110",
-      "sector-136",
-      "sector-37"
+      "sector-142",
+      "sector-143"
     ],
     "landmarks": [
       "Mahagun Moderne, Sector 78",
@@ -2462,21 +2515,25 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.47127,
-    "lng": 77.53088
+    "lat": 28.55906,
+    "lng": 77.39627
   },
   "sector-93": {
     "neighbours": [
       "sector-100",
       "sector-108",
-      "sector-104",
       "sector-107",
       "sector-137",
       "sector-44",
       "sector-135",
       "sector-47",
       "sector-46",
-      "sector-143"
+      "sector-143",
+      "sector-142",
+      "sector-104",
+      "sector-110",
+      "sector-144",
+      "sector-146"
     ],
     "landmarks": [
       "ATS Greens Village",
@@ -2538,7 +2595,6 @@
   },
   "sector-100": {
     "neighbours": [
-      "sector-104",
       "sector-93",
       "sector-108",
       "sector-107",
@@ -2548,7 +2604,12 @@
       "sector-45",
       "sector-43",
       "sector-41",
-      "sector-76"
+      "sector-76",
+      "sector-104",
+      "sector-110",
+      "sector-135",
+      "sector-142",
+      "sector-143"
     ],
     "landmarks": [
       "Lotus Boulevard",
@@ -2612,11 +2673,13 @@
       "sector-108",
       "sector-93",
       "sector-137",
-      "sector-149",
       "sector-63",
       "sector-72",
       "sector-62",
-      "sector-61"
+      "sector-61",
+      "sector-71",
+      "sector-149",
+      "sector-37"
     ],
     "landmarks": [
       "Hazipur village",
@@ -2671,14 +2734,11 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.61586,
-    "lng": 77.37854
+    "reviewed": false
   },
   "sector-107": {
     "neighbours": [
       "sector-108",
-      "sector-104",
       "sector-100",
       "sector-93",
       "sector-137",
@@ -2686,7 +2746,13 @@
       "sector-47",
       "sector-46",
       "sector-76",
-      "sector-45"
+      "sector-45",
+      "sector-78",
+      "sector-79",
+      "sector-104",
+      "sector-110",
+      "sector-142",
+      "sector-143"
     ],
     "landmarks": [
       "Sunworld Vanalika",
@@ -2750,13 +2816,17 @@
       "sector-93",
       "sector-107",
       "sector-100",
-      "sector-104",
       "sector-135",
       "sector-137",
       "sector-47",
       "sector-46",
       "sector-45",
-      "sector-43"
+      "sector-43",
+      "sector-142",
+      "sector-104",
+      "sector-110",
+      "sector-143",
+      "sector-144"
     ],
     "landmarks": [
       "Noida–Greater Noida Expressway",
@@ -2819,13 +2889,15 @@
     "neighbours": [
       "sector-137",
       "sector-135",
-      "sector-136",
-      "sector-77",
-      "sector-78",
+      "sector-143",
+      "sector-93",
+      "sector-108",
+      "sector-107",
+      "sector-100",
+      "sector-47",
       "sector-79",
-      "sector-74",
-      "sector-75",
-      "sector-37"
+      "sector-144",
+      "sector-136"
     ],
     "landmarks": [
       "Yatharth Super Speciality Hospital",
@@ -2881,21 +2953,25 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.47146,
-    "lng": 77.53012
+    "lat": 28.53119,
+    "lng": 77.38517
   },
   "sector-135": {
     "neighbours": [
-      "sector-136",
       "sector-137",
       "sector-108",
       "sector-110",
       "sector-107",
-      "sector-140",
       "sector-142",
-      "sector-141",
       "sector-143",
-      "sector-93"
+      "sector-93",
+      "sector-100",
+      "sector-146",
+      "sector-47",
+      "sector-136",
+      "sector-140",
+      "sector-141",
+      "sector-144"
     ],
     "landmarks": [
       "Assotech Business Cresterra",
@@ -2959,13 +3035,7 @@
       "sector-137",
       "sector-135",
       "sector-110",
-      "sector-143",
-      "sector-75",
-      "sector-74",
-      "sector-79",
-      "sector-78",
-      "sector-77",
-      "sector-37"
+      "sector-143"
     ],
     "landmarks": [
       "Sector 137 Metro Station (Aqua Line)",
@@ -3020,25 +3090,24 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.47132,
-    "lng": 77.53197
+    "reviewed": false
   },
   "sector-137": {
     "neighbours": [
-      "sector-136",
       "sector-135",
       "sector-142",
-      "sector-140",
       "sector-143",
-      "sector-141",
       "sector-108",
       "sector-110",
       "sector-93",
       "sector-100",
-      "sector-104",
       "sector-107",
-      "sector-144"
+      "sector-144",
+      "sector-146",
+      "sector-104",
+      "sector-136",
+      "sector-140",
+      "sector-141"
     ],
     "landmarks": [
       "Sector 137 Metro Station (Aqua Line)",
@@ -3106,15 +3175,10 @@
       "sector-142",
       "sector-135",
       "sector-143",
-      "sector-18",
       "sector-145",
       "sector-146",
       "sector-147",
       "sector-148",
-      "sector-15",
-      "sector-16",
-      "sector-28",
-      "sector-29",
       "sector-150",
       "sector-151",
       "sector-152"
@@ -3169,9 +3233,7 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "reviewed": false
   },
   "sector-141": {
     "neighbours": [
@@ -3181,12 +3243,9 @@
       "sector-143",
       "sector-135",
       "sector-144",
-      "sector-18",
       "sector-145",
       "sector-146",
       "sector-147",
-      "sector-15",
-      "sector-16",
       "sector-148",
       "sector-150",
       "sector-151",
@@ -3243,21 +3302,23 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "reviewed": false
   },
   "sector-142": {
     "neighbours": [
       "sector-143",
       "sector-137",
-      "sector-141",
-      "sector-140",
-      "sector-144",
       "sector-135",
-      "sector-145",
-      "sector-18",
       "sector-146",
+      "sector-93",
+      "sector-108",
+      "sector-107",
+      "sector-100",
+      "sector-79",
+      "sector-47",
+      "sector-140",
+      "sector-141",
+      "sector-145",
       "sector-147",
       "sector-150",
       "sector-151",
@@ -3315,21 +3376,26 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "lat": 28.49905,
+    "lng": 77.41275
   },
   "sector-143": {
     "neighbours": [
       "sector-142",
       "sector-144",
       "sector-137",
-      "sector-141",
-      "sector-140",
-      "sector-145",
-      "sector-136",
       "sector-146",
       "sector-135",
-      "sector-93"
+      "sector-93",
+      "sector-108",
+      "sector-107",
+      "sector-79",
+      "sector-100",
+      "sector-110",
+      "sector-136",
+      "sector-140",
+      "sector-141",
+      "sector-145"
     ],
     "landmarks": [
       "Sector 143 Metro Station (Aqua Line)",
@@ -3390,17 +3456,15 @@
   "sector-144": {
     "neighbours": [
       "sector-143",
-      "sector-145",
-      "sector-142",
-      "sector-146",
-      "sector-141",
       "sector-137",
-      "sector-147",
-      "sector-21",
-      "sector-20",
-      "sector-12",
-      "sector-22",
-      "sector-56"
+      "sector-146",
+      "sector-135",
+      "sector-93",
+      "sector-110",
+      "sector-108",
+      "sector-141",
+      "sector-145",
+      "sector-147"
     ],
     "landmarks": [
       "Sector 144 Metro Station (Aqua Line)",
@@ -3454,8 +3518,8 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.5887,
-    "lng": 77.33188
+    "lat": 28.48629,
+    "lng": 77.43308
   },
   "sector-145": {
     "neighbours": [
@@ -3465,7 +3529,6 @@
       "sector-147",
       "sector-142",
       "sector-148",
-      "sector-18",
       "sector-140",
       "sector-141",
       "sector-150"
@@ -3520,25 +3583,25 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "reviewed": false
   },
   "sector-146": {
     "neighbours": [
-      "sector-145",
-      "sector-147",
-      "sector-144",
-      "sector-148",
       "sector-143",
-      "sector-150",
-      "sector-149",
-      "sector-151",
-      "sector-152",
-      "sector-18",
+      "sector-142",
+      "sector-137",
+      "sector-135",
+      "sector-144",
+      "sector-93",
       "sector-140",
       "sector-141",
-      "sector-142"
+      "sector-145",
+      "sector-147",
+      "sector-148",
+      "sector-149",
+      "sector-150",
+      "sector-151",
+      "sector-152"
     ],
     "landmarks": [
       "Sector 146 Metro Station (Aqua Line)",
@@ -3592,8 +3655,8 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "lat": 28.46882,
+    "lng": 77.45521
   },
   "sector-147": {
     "neighbours": [
@@ -3605,7 +3668,6 @@
       "sector-144",
       "sector-151",
       "sector-152",
-      "sector-18",
       "sector-140",
       "sector-141",
       "sector-142"
@@ -3661,9 +3723,7 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "reviewed": false
   },
   "sector-148": {
     "neighbours": [
@@ -3674,7 +3734,6 @@
       "sector-151",
       "sector-152",
       "sector-145",
-      "sector-18",
       "sector-140",
       "sector-141"
     ],
@@ -3729,9 +3788,7 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "reviewed": false
   },
   "sector-149": {
     "neighbours": [
@@ -3741,11 +3798,7 @@
       "sector-147",
       "sector-152",
       "sector-146",
-      "sector-104",
-      "sector-63",
-      "sector-72",
-      "sector-62",
-      "sector-71"
+      "sector-104"
     ],
     "landmarks": [
       "Noida Sports City (Sector 150)",
@@ -3798,9 +3851,7 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.61511,
-    "lng": 77.37771
+    "reviewed": false
   },
   "sector-150": {
     "neighbours": [
@@ -3810,7 +3861,6 @@
       "sector-152",
       "sector-147",
       "sector-146",
-      "sector-18",
       "sector-140",
       "sector-141",
       "sector-142",
@@ -3869,9 +3919,7 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "reviewed": false
   },
   "sector-151": {
     "neighbours": [
@@ -3881,7 +3929,6 @@
       "sector-148",
       "sector-147",
       "sector-146",
-      "sector-18",
       "sector-140",
       "sector-141",
       "sector-142"
@@ -3937,9 +3984,7 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "reviewed": false
   },
   "sector-152": {
     "neighbours": [
@@ -3949,7 +3994,6 @@
       "sector-148",
       "sector-147",
       "sector-146",
-      "sector-18",
       "sector-140",
       "sector-141",
       "sector-142"
@@ -4006,8 +4050,6 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.57054,
-    "lng": 77.32289
+    "reviewed": false
   }
 }

@@ -109,8 +109,8 @@ Run from `next-app/`. All are `npm run <name>`.
 | `seo:gate` | The quality engine: MinHash + LSH near-duplicate detection, local-token ratio, word floors, required sections, `[VERIFY]` markers. Covers core **and** Phase 5 entity pages. Writes `quality/gate.json` and `quality-report.md`. |
 | `seo:redirects` | Rebuilds the legacy redirect map from the real legacy filenames plus the data layer. Writes `redirects.csv` and `redirect-map.json`. |
 | `seo:merge` | Merges drafting fragments into the enrichment files, re-applies cached coordinates, symmetrises neighbours, regenerates FAQ modules. |
-| `seo:geocode` | One-off OpenStreetMap Nominatim geocoder, 1 req/s, cached. **Never runs at build or request time.** |
-| `seo:neighbours` | Refines neighbours to the 6–10 closest within ~8 km, with geography guards, keeping curated picks. |
+| `seo:geocode` | One-off OpenStreetMap Nominatim geocoder, 1 req/s, cached; Overpass fallback inside the city's admin boundary. Rejects a hit that does not name the locality, names another city, or sits within 50 m of a sibling's point (ASSUMPTIONS.md #45). `-- --redo <city/slug,…>` re-geocodes named localities. **Never runs at build or request time.** |
+| `seo:neighbours` | Refines neighbours to the 6–10 closest within ~8 km, with geography guards, keeping curated picks; hand corrections live in `localities/enrichment/neighbour-overrides.json` (`{"city/slug": {add, remove}}`, applied symmetrically). |
 | `seo:jsonld` | Validates every page's structured data offline; rejects AggregateRating, Review and per-locality LocalBusiness outright. |
 | `seo:crawl` | Crawls a running build: broken links, orphans, redirecting internal links, canonical/robots correctness, click depth per page type. |
 | `seo:check-redirects` | Requests every old URL and its `.html` variant; asserts exactly one 301 hop to a 200, or a deliberate 410. No chains, no loops. |

@@ -219,13 +219,13 @@
       "kulur",
       "kavoor",
       "bejai",
-      "surathkal",
       "panambur",
       "katipalla",
       "kadri",
       "bajpe",
+      "bondel",
       "kodialbail",
-      "bondel"
+      "surathkal"
     ],
     "landmarks": [
       "Kottara Chowki",
@@ -370,6 +370,7 @@
       "nantoor",
       "hampankatta",
       "kodialbail",
+      "surathkal",
       "panambur"
     ],
     "landmarks": [
@@ -930,9 +931,9 @@
       "urwa",
       "panambur",
       "nantoor",
-      "surathkal",
       "katipalla",
-      "bejai"
+      "bejai",
+      "surathkal"
     ],
     "landmarks": [
       "Kavoor Mahalingeshwara Temple",
@@ -1002,7 +1003,6 @@
       "urwa",
       "pumpwell",
       "kulshekar",
-      "surathkal",
       "panambur"
     ],
     "landmarks": [
@@ -1279,10 +1279,9 @@
       "katipalla",
       "panambur",
       "kulur",
-      "kavoor",
-      "bajpe",
       "kottara",
-      "bondel"
+      "kavoor",
+      "derebail"
     ],
     "landmarks": [
       "NITK Surathkal",
@@ -1338,8 +1337,8 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 12.97987,
-    "lng": 74.82467
+    "lat": 12.99024,
+    "lng": 74.80535
   },
   "panambur": {
     "neighbours": [
@@ -1481,7 +1480,6 @@
       "katipalla",
       "derebail",
       "panambur",
-      "surathkal",
       "nantoor",
       "kadri",
       "bejai",

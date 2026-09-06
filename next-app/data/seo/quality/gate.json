@@ -4652,44 +4652,44 @@
     "/noida/sector-37": {
       "index": true,
       "reasons": [],
-      "words": 1178,
-      "localRatio": 0.571
+      "words": 1173,
+      "localRatio": 0.592
     },
     "/noida/sector-37/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1189,
-      "localRatio": 0.5
+      "words": 1183,
+      "localRatio": 0.506
     },
     "/noida/sector-37/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1133,
-      "localRatio": 0.519
+      "words": 1127,
+      "localRatio": 0.526
     },
     "/noida/sector-37/cook": {
       "index": true,
       "reasons": [],
-      "words": 1130,
-      "localRatio": 0.506
+      "words": 1126,
+      "localRatio": 0.512
     },
     "/noida/sector-37/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1154,
-      "localRatio": 0.5
+      "words": 1149,
+      "localRatio": 0.506
     },
     "/noida/sector-37/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1124,
-      "localRatio": 0.506
+      "words": 1119,
+      "localRatio": 0.512
     },
     "/noida/sector-37/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1112,
-      "localRatio": 0.512
+      "words": 1107,
+      "localRatio": 0.519
     },
     "/noida/sector-41": {
       "index": true,
@@ -5368,86 +5368,86 @@
     "/noida/sector-74": {
       "index": true,
       "reasons": [],
-      "words": 1210,
-      "localRatio": 0.592
+      "words": 1225,
+      "localRatio": 0.62
     },
     "/noida/sector-74/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1222,
-      "localRatio": 0.518
+      "words": 1240,
+      "localRatio": 0.547
     },
     "/noida/sector-74/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1172,
-      "localRatio": 0.537
+      "words": 1190,
+      "localRatio": 0.566
     },
     "/noida/sector-74/cook": {
       "index": true,
       "reasons": [],
-      "words": 1133,
-      "localRatio": 0.531
+      "words": 1145,
+      "localRatio": 0.56
     },
     "/noida/sector-74/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1188,
-      "localRatio": 0.518
+      "words": 1203,
+      "localRatio": 0.547
     },
     "/noida/sector-74/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1166,
-      "localRatio": 0.531
+      "words": 1181,
+      "localRatio": 0.56
     },
     "/noida/sector-74/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1138,
-      "localRatio": 0.544
+      "words": 1153,
+      "localRatio": 0.573
     },
     "/noida/sector-75": {
       "index": true,
       "reasons": [],
-      "words": 1199,
-      "localRatio": 0.587
+      "words": 1214,
+      "localRatio": 0.615
     },
     "/noida/sector-75/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1241,
-      "localRatio": 0.512
+      "words": 1259,
+      "localRatio": 0.529
     },
     "/noida/sector-75/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1185,
-      "localRatio": 0.531
+      "words": 1203,
+      "localRatio": 0.548
     },
     "/noida/sector-75/cook": {
       "index": true,
       "reasons": [],
-      "words": 1157,
-      "localRatio": 0.524
+      "words": 1169,
+      "localRatio": 0.541
     },
     "/noida/sector-75/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1203,
-      "localRatio": 0.518
+      "words": 1218,
+      "localRatio": 0.535
     },
     "/noida/sector-75/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1181,
-      "localRatio": 0.531
+      "words": 1196,
+      "localRatio": 0.548
     },
     "/noida/sector-75/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1178,
-      "localRatio": 0.537
+      "words": 1193,
+      "localRatio": 0.554
     },
     "/noida/sector-76": {
       "index": true,
@@ -5494,128 +5494,128 @@
     "/noida/sector-77": {
       "index": true,
       "reasons": [],
-      "words": 1176,
-      "localRatio": 0.573
+      "words": 1166,
+      "localRatio": 0.562
     },
     "/noida/sector-77/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1208,
-      "localRatio": 0.512
+      "words": 1196,
+      "localRatio": 0.5
     },
     "/noida/sector-77/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1135,
-      "localRatio": 0.538
+      "words": 1123,
+      "localRatio": 0.526
     },
     "/noida/sector-77/cook": {
       "index": true,
       "reasons": [],
-      "words": 1120,
-      "localRatio": 0.519
+      "words": 1112,
+      "localRatio": 0.506
     },
     "/noida/sector-77/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1157,
-      "localRatio": 0.512
+      "words": 1147,
+      "localRatio": 0.5
     },
     "/noida/sector-77/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1135,
-      "localRatio": 0.525
+      "words": 1125,
+      "localRatio": 0.513
     },
     "/noida/sector-77/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1110,
-      "localRatio": 0.525
+      "words": 1100,
+      "localRatio": 0.513
     },
     "/noida/sector-78": {
       "index": true,
       "reasons": [],
-      "words": 1197,
-      "localRatio": 0.61
+      "words": 1212,
+      "localRatio": 0.637
     },
     "/noida/sector-78/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1209,
-      "localRatio": 0.524
+      "words": 1227,
+      "localRatio": 0.552
     },
     "/noida/sector-78/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1164,
-      "localRatio": 0.543
+      "words": 1182,
+      "localRatio": 0.571
     },
     "/noida/sector-78/cook": {
       "index": true,
       "reasons": [],
-      "words": 1112,
-      "localRatio": 0.557
+      "words": 1124,
+      "localRatio": 0.585
     },
     "/noida/sector-78/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1163,
-      "localRatio": 0.53
+      "words": 1178,
+      "localRatio": 0.558
     },
     "/noida/sector-78/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1137,
-      "localRatio": 0.543
+      "words": 1152,
+      "localRatio": 0.571
     },
     "/noida/sector-78/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1128,
-      "localRatio": 0.557
+      "words": 1143,
+      "localRatio": 0.585
     },
     "/noida/sector-79": {
       "index": true,
       "reasons": [],
-      "words": 1152,
-      "localRatio": 0.622
+      "words": 1167,
+      "localRatio": 0.636
     },
     "/noida/sector-79/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1188,
-      "localRatio": 0.536
+      "words": 1206,
+      "localRatio": 0.552
     },
     "/noida/sector-79/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1172,
-      "localRatio": 0.556
+      "words": 1190,
+      "localRatio": 0.571
     },
     "/noida/sector-79/cook": {
       "index": true,
       "reasons": [],
-      "words": 1123,
-      "localRatio": 0.563
+      "words": 1135,
+      "localRatio": 0.578
     },
     "/noida/sector-79/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1189,
-      "localRatio": 0.549
+      "words": 1204,
+      "localRatio": 0.565
     },
     "/noida/sector-79/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1154,
-      "localRatio": 0.556
+      "words": 1169,
+      "localRatio": 0.571
     },
     "/noida/sector-79/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1172,
-      "localRatio": 0.556
+      "words": 1187,
+      "localRatio": 0.571
     },
     "/noida/sector-93": {
       "index": true,
@@ -5830,44 +5830,44 @@
     "/noida/sector-110": {
       "index": true,
       "reasons": [],
-      "words": 1184,
-      "localRatio": 0.598
+      "words": 1189,
+      "localRatio": 0.627
     },
     "/noida/sector-110/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1203,
-      "localRatio": 0.558
+      "words": 1209,
+      "localRatio": 0.575
     },
     "/noida/sector-110/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1157,
-      "localRatio": 0.578
+      "words": 1163,
+      "localRatio": 0.595
     },
     "/noida/sector-110/cook": {
       "index": true,
       "reasons": [],
-      "words": 1133,
-      "localRatio": 0.565
+      "words": 1137,
+      "localRatio": 0.581
     },
     "/noida/sector-110/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1152,
-      "localRatio": 0.565
+      "words": 1157,
+      "localRatio": 0.581
     },
     "/noida/sector-110/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1153,
-      "localRatio": 0.565
+      "words": 1158,
+      "localRatio": 0.581
     },
     "/noida/sector-110/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1135,
-      "localRatio": 0.565
+      "words": 1140,
+      "localRatio": 0.581
     },
     "/noida/sector-135": {
       "index": true,
@@ -5914,44 +5914,44 @@
     "/noida/sector-136": {
       "index": true,
       "reasons": [],
-      "words": 1176,
-      "localRatio": 0.617
+      "words": 1146,
+      "localRatio": 0.587
     },
     "/noida/sector-136/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1224,
-      "localRatio": 0.552
+      "words": 1188,
+      "localRatio": 0.519
     },
     "/noida/sector-136/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1136,
-      "localRatio": 0.578
+      "words": 1100,
+      "localRatio": 0.545
     },
     "/noida/sector-136/cook": {
       "index": true,
       "reasons": [],
-      "words": 1139,
-      "localRatio": 0.565
+      "words": 1115,
+      "localRatio": 0.532
     },
     "/noida/sector-136/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1144,
-      "localRatio": 0.545
+      "words": 1114,
+      "localRatio": 0.512
     },
     "/noida/sector-136/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1126,
-      "localRatio": 0.565
+      "words": 1096,
+      "localRatio": 0.532
     },
     "/noida/sector-136/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1128,
-      "localRatio": 0.571
+      "words": 1098,
+      "localRatio": 0.538
     },
     "/noida/sector-137": {
       "index": true,
@@ -6083,43 +6083,43 @@
       "index": true,
       "reasons": [],
       "words": 1133,
-      "localRatio": 0.625
+      "localRatio": 0.613
     },
     "/noida/sector-142/full-time-maid": {
       "index": true,
       "reasons": [],
       "words": 1150,
-      "localRatio": 0.548
+      "localRatio": 0.536
     },
     "/noida/sector-142/part-time-maid": {
       "index": true,
       "reasons": [],
       "words": 1104,
-      "localRatio": 0.568
+      "localRatio": 0.556
     },
     "/noida/sector-142/cook": {
       "index": true,
       "reasons": [],
       "words": 1084,
-      "localRatio": 0.554
+      "localRatio": 0.542
     },
     "/noida/sector-142/babysitter-nanny": {
       "index": true,
       "reasons": [],
       "words": 1127,
-      "localRatio": 0.541
+      "localRatio": 0.529
     },
     "/noida/sector-142/elder-care": {
       "index": true,
       "reasons": [],
       "words": 1112,
-      "localRatio": 0.554
+      "localRatio": 0.542
     },
     "/noida/sector-142/domestic-help": {
       "index": true,
       "reasons": [],
       "words": 1086,
-      "localRatio": 0.561
+      "localRatio": 0.549
     },
     "/noida/sector-143": {
       "index": true,
@@ -6208,86 +6208,86 @@
     "/noida/sector-145": {
       "index": true,
       "reasons": [],
-      "words": 1165,
-      "localRatio": 0.62
+      "words": 1160,
+      "localRatio": 0.615
     },
     "/noida/sector-145/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1195,
-      "localRatio": 0.529
+      "words": 1189,
+      "localRatio": 0.524
     },
     "/noida/sector-145/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1126,
-      "localRatio": 0.549
+      "words": 1120,
+      "localRatio": 0.543
     },
     "/noida/sector-145/cook": {
       "index": true,
       "reasons": [],
-      "words": 1071,
-      "localRatio": 0.556
+      "words": 1067,
+      "localRatio": 0.55
     },
     "/noida/sector-145/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1118,
-      "localRatio": 0.523
+      "words": 1113,
+      "localRatio": 0.518
     },
     "/noida/sector-145/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1100,
-      "localRatio": 0.542
+      "words": 1095,
+      "localRatio": 0.537
     },
     "/noida/sector-145/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1124,
-      "localRatio": 0.542
+      "words": 1119,
+      "localRatio": 0.537
     },
     "/noida/sector-146": {
       "index": true,
       "reasons": [],
       "words": 1151,
-      "localRatio": 0.646
+      "localRatio": 0.633
     },
     "/noida/sector-146/full-time-maid": {
       "index": true,
       "reasons": [],
       "words": 1160,
-      "localRatio": 0.548
+      "localRatio": 0.536
     },
     "/noida/sector-146/part-time-maid": {
       "index": true,
       "reasons": [],
       "words": 1116,
-      "localRatio": 0.561
+      "localRatio": 0.549
     },
     "/noida/sector-146/cook": {
       "index": true,
       "reasons": [],
       "words": 1097,
-      "localRatio": 0.561
+      "localRatio": 0.549
     },
     "/noida/sector-146/babysitter-nanny": {
       "index": true,
       "reasons": [],
       "words": 1143,
-      "localRatio": 0.541
+      "localRatio": 0.529
     },
     "/noida/sector-146/elder-care": {
       "index": true,
       "reasons": [],
       "words": 1109,
-      "localRatio": 0.561
+      "localRatio": 0.549
     },
     "/noida/sector-146/domestic-help": {
       "index": true,
       "reasons": [],
       "words": 1092,
-      "localRatio": 0.561
+      "localRatio": 0.549
     },
     "/noida/sector-147": {
       "index": true,
@@ -6334,86 +6334,86 @@
     "/noida/sector-148": {
       "index": true,
       "reasons": [],
-      "words": 1166,
-      "localRatio": 0.637
+      "words": 1161,
+      "localRatio": 0.633
     },
     "/noida/sector-148/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1186,
-      "localRatio": 0.553
+      "words": 1180,
+      "localRatio": 0.548
     },
     "/noida/sector-148/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1134,
-      "localRatio": 0.566
+      "words": 1128,
+      "localRatio": 0.561
     },
     "/noida/sector-148/cook": {
       "index": true,
       "reasons": [],
-      "words": 1101,
-      "localRatio": 0.573
+      "words": 1097,
+      "localRatio": 0.568
     },
     "/noida/sector-148/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1136,
-      "localRatio": 0.56
+      "words": 1131,
+      "localRatio": 0.554
     },
     "/noida/sector-148/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1124,
-      "localRatio": 0.566
+      "words": 1119,
+      "localRatio": 0.561
     },
     "/noida/sector-148/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1094,
-      "localRatio": 0.573
+      "words": 1089,
+      "localRatio": 0.568
     },
     "/noida/sector-149": {
       "index": true,
       "reasons": [],
-      "words": 1153,
-      "localRatio": 0.658
+      "words": 1138,
+      "localRatio": 0.645
     },
     "/noida/sector-149/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1190,
-      "localRatio": 0.553
+      "words": 1172,
+      "localRatio": 0.537
     },
     "/noida/sector-149/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1117,
-      "localRatio": 0.58
+      "words": 1099,
+      "localRatio": 0.564
     },
     "/noida/sector-149/cook": {
       "index": true,
       "reasons": [],
-      "words": 1080,
-      "localRatio": 0.566
+      "words": 1068,
+      "localRatio": 0.55
     },
     "/noida/sector-149/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1110,
-      "localRatio": 0.547
+      "words": 1095,
+      "localRatio": 0.53
     },
     "/noida/sector-149/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1117,
-      "localRatio": 0.566
+      "words": 1102,
+      "localRatio": 0.55
     },
     "/noida/sector-149/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1116,
-      "localRatio": 0.566
+      "words": 1101,
+      "localRatio": 0.55
     },
     "/noida/sector-150": {
       "index": true,
@@ -6460,86 +6460,86 @@
     "/noida/sector-151": {
       "index": true,
       "reasons": [],
-      "words": 1145,
-      "localRatio": 0.65
+      "words": 1140,
+      "localRatio": 0.646
     },
     "/noida/sector-151/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1157,
-      "localRatio": 0.553
+      "words": 1151,
+      "localRatio": 0.548
     },
     "/noida/sector-151/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1112,
-      "localRatio": 0.573
+      "words": 1106,
+      "localRatio": 0.568
     },
     "/noida/sector-151/cook": {
       "index": true,
       "reasons": [],
-      "words": 1085,
-      "localRatio": 0.566
+      "words": 1081,
+      "localRatio": 0.561
     },
     "/noida/sector-151/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1133,
-      "localRatio": 0.553
+      "words": 1128,
+      "localRatio": 0.548
     },
     "/noida/sector-151/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1107,
-      "localRatio": 0.573
+      "words": 1102,
+      "localRatio": 0.568
     },
     "/noida/sector-151/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1092,
-      "localRatio": 0.573
+      "words": 1087,
+      "localRatio": 0.568
     },
     "/noida/sector-152": {
       "index": true,
       "reasons": [],
-      "words": 1188,
-      "localRatio": 0.646
+      "words": 1183,
+      "localRatio": 0.641
     },
     "/noida/sector-152/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1166,
-      "localRatio": 0.547
+      "words": 1160,
+      "localRatio": 0.541
     },
     "/noida/sector-152/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1144,
-      "localRatio": 0.56
+      "words": 1138,
+      "localRatio": 0.554
     },
     "/noida/sector-152/cook": {
       "index": true,
       "reasons": [],
-      "words": 1118,
-      "localRatio": 0.553
+      "words": 1114,
+      "localRatio": 0.548
     },
     "/noida/sector-152/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1166,
-      "localRatio": 0.553
+      "words": 1161,
+      "localRatio": 0.548
     },
     "/noida/sector-152/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1131,
-      "localRatio": 0.56
+      "words": 1126,
+      "localRatio": 0.554
     },
     "/noida/sector-152/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1106,
-      "localRatio": 0.573
+      "words": 1101,
+      "localRatio": 0.568
     },
     "/greater-noida/gaur-city": {
       "index": true,
@@ -7050,134 +7050,134 @@
     "/gurgaon/dlf-phase-1": {
       "index": true,
       "reasons": [],
-      "words": 1222,
+      "words": 1221,
       "localRatio": 0.63
     },
     "/gurgaon/dlf-phase-1/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1254,
+      "words": 1253,
       "localRatio": 0.552
     },
     "/gurgaon/dlf-phase-1/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1210,
+      "words": 1209,
       "localRatio": 0.565
     },
     "/gurgaon/dlf-phase-1/cook": {
       "index": true,
       "reasons": [],
-      "words": 1201,
+      "words": 1200,
       "localRatio": 0.552
     },
     "/gurgaon/dlf-phase-1/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1198,
+      "words": 1197,
       "localRatio": 0.558
     },
     "/gurgaon/dlf-phase-1/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1196,
+      "words": 1195,
       "localRatio": 0.565
     },
     "/gurgaon/dlf-phase-1/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1177,
+      "words": 1176,
       "localRatio": 0.571
     },
     "/gurgaon/dlf-phase-2": {
       "index": true,
       "reasons": [],
-      "words": 1232,
+      "words": 1231,
       "localRatio": 0.65
     },
     "/gurgaon/dlf-phase-2/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1268,
+      "words": 1267,
       "localRatio": 0.558
     },
     "/gurgaon/dlf-phase-2/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1200,
+      "words": 1199,
       "localRatio": 0.578
     },
     "/gurgaon/dlf-phase-2/cook": {
       "index": true,
       "reasons": [],
-      "words": 1161,
+      "words": 1160,
       "localRatio": 0.571
     },
     "/gurgaon/dlf-phase-2/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1222,
+      "words": 1221,
       "localRatio": 0.552
     },
     "/gurgaon/dlf-phase-2/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1203,
+      "words": 1202,
       "localRatio": 0.565
     },
     "/gurgaon/dlf-phase-2/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1175,
+      "words": 1174,
       "localRatio": 0.571
     },
     "/gurgaon/dlf-phase-3": {
       "index": true,
       "reasons": [],
-      "words": 1270,
+      "words": 1269,
       "localRatio": 0.63
     },
     "/gurgaon/dlf-phase-3/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1292,
+      "words": 1291,
       "localRatio": 0.545
     },
     "/gurgaon/dlf-phase-3/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1242,
+      "words": 1241,
       "localRatio": 0.571
     },
     "/gurgaon/dlf-phase-3/cook": {
       "index": true,
       "reasons": [],
-      "words": 1202,
+      "words": 1201,
       "localRatio": 0.565
     },
     "/gurgaon/dlf-phase-3/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1243,
+      "words": 1242,
       "localRatio": 0.558
     },
     "/gurgaon/dlf-phase-3/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1232,
+      "words": 1231,
       "localRatio": 0.571
     },
     "/gurgaon/dlf-phase-3/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1178,
+      "words": 1177,
       "localRatio": 0.585
     },
     "/gurgaon/dlf-phase-4": {
       "index": true,
       "reasons": [],
       "words": 1242,
-      "localRatio": 0.646
+      "localRatio": 0.671
     },
     "/gurgaon/dlf-phase-4/full-time-maid": {
       "index": true,
@@ -7260,85 +7260,85 @@
     "/gurgaon/golf-course-road": {
       "index": true,
       "reasons": [],
-      "words": 1278,
+      "words": 1277,
       "localRatio": 0.615
     },
     "/gurgaon/golf-course-road/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1273,
+      "words": 1271,
       "localRatio": 0.536
     },
     "/gurgaon/golf-course-road/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1223,
+      "words": 1221,
       "localRatio": 0.563
     },
     "/gurgaon/golf-course-road/cook": {
       "index": true,
       "reasons": [],
-      "words": 1188,
+      "words": 1186,
       "localRatio": 0.556
     },
     "/gurgaon/golf-course-road/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1247,
+      "words": 1245,
       "localRatio": 0.529
     },
     "/gurgaon/golf-course-road/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1221,
+      "words": 1219,
       "localRatio": 0.536
     },
     "/gurgaon/golf-course-road/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1222,
+      "words": 1220,
       "localRatio": 0.549
     },
     "/gurgaon/sector-42": {
       "index": true,
       "reasons": [],
-      "words": 1226,
+      "words": 1225,
       "localRatio": 0.615
     },
     "/gurgaon/sector-42/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1271,
+      "words": 1268,
       "localRatio": 0.529
     },
     "/gurgaon/sector-42/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1199,
+      "words": 1196,
       "localRatio": 0.548
     },
     "/gurgaon/sector-42/cook": {
       "index": true,
       "reasons": [],
-      "words": 1165,
+      "words": 1162,
       "localRatio": 0.541
     },
     "/gurgaon/sector-42/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1194,
+      "words": 1191,
       "localRatio": 0.548
     },
     "/gurgaon/sector-42/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1197,
+      "words": 1194,
       "localRatio": 0.548
     },
     "/gurgaon/sector-42/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1174,
+      "words": 1171,
       "localRatio": 0.548
     },
     "/gurgaon/sector-43": {
@@ -7386,169 +7386,169 @@
     "/gurgaon/sector-53": {
       "index": true,
       "reasons": [],
-      "words": 1241,
+      "words": 1240,
       "localRatio": 0.625
     },
     "/gurgaon/sector-53/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1274,
+      "words": 1271,
       "localRatio": 0.552
     },
     "/gurgaon/sector-53/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1202,
+      "words": 1199,
       "localRatio": 0.571
     },
     "/gurgaon/sector-53/cook": {
       "index": true,
       "reasons": [],
-      "words": 1174,
+      "words": 1171,
       "localRatio": 0.558
     },
     "/gurgaon/sector-53/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1220,
+      "words": 1217,
       "localRatio": 0.552
     },
     "/gurgaon/sector-53/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1207,
+      "words": 1204,
       "localRatio": 0.558
     },
     "/gurgaon/sector-53/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1151,
+      "words": 1148,
       "localRatio": 0.578
     },
     "/gurgaon/sector-54": {
       "index": true,
       "reasons": [],
-      "words": 1225,
+      "words": 1224,
       "localRatio": 0.613
     },
     "/gurgaon/sector-54/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1247,
+      "words": 1244,
       "localRatio": 0.529
     },
     "/gurgaon/sector-54/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1196,
+      "words": 1193,
       "localRatio": 0.542
     },
     "/gurgaon/sector-54/cook": {
       "index": true,
       "reasons": [],
-      "words": 1138,
+      "words": 1135,
       "localRatio": 0.556
     },
     "/gurgaon/sector-54/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1201,
+      "words": 1198,
       "localRatio": 0.536
     },
     "/gurgaon/sector-54/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1194,
+      "words": 1191,
       "localRatio": 0.536
     },
     "/gurgaon/sector-54/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1160,
+      "words": 1157,
       "localRatio": 0.549
     },
     "/gurgaon/sector-55": {
       "index": true,
       "reasons": [],
-      "words": 1195,
-      "localRatio": 0.603
+      "words": 1194,
+      "localRatio": 0.59
     },
     "/gurgaon/sector-55/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1245,
-      "localRatio": 0.535
+      "words": 1244,
+      "localRatio": 0.523
     },
     "/gurgaon/sector-55/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1157,
-      "localRatio": 0.561
+      "words": 1156,
+      "localRatio": 0.549
     },
     "/gurgaon/sector-55/cook": {
       "index": true,
       "reasons": [],
-      "words": 1151,
-      "localRatio": 0.541
+      "words": 1150,
+      "localRatio": 0.529
     },
     "/gurgaon/sector-55/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1184,
-      "localRatio": 0.529
+      "words": 1183,
+      "localRatio": 0.517
     },
     "/gurgaon/sector-55/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1176,
-      "localRatio": 0.535
+      "words": 1175,
+      "localRatio": 0.523
     },
     "/gurgaon/sector-55/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1155,
-      "localRatio": 0.554
+      "words": 1154,
+      "localRatio": 0.542
     },
     "/gurgaon/sector-56": {
       "index": true,
       "reasons": [],
-      "words": 1216,
+      "words": 1215,
       "localRatio": 0.608
     },
     "/gurgaon/sector-56/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1177,
+      "words": 1176,
       "localRatio": 0.536
     },
     "/gurgaon/sector-56/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1138,
+      "words": 1137,
       "localRatio": 0.556
     },
     "/gurgaon/sector-56/cook": {
       "index": true,
       "reasons": [],
-      "words": 1143,
+      "words": 1142,
       "localRatio": 0.542
     },
     "/gurgaon/sector-56/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1195,
+      "words": 1194,
       "localRatio": 0.529
     },
     "/gurgaon/sector-56/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1136,
+      "words": 1135,
       "localRatio": 0.549
     },
     "/gurgaon/sector-56/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1123,
+      "words": 1122,
       "localRatio": 0.563
     },
     "/gurgaon/sector-57": {
@@ -7765,43 +7765,43 @@
       "index": true,
       "reasons": [],
       "words": 1218,
-      "localRatio": 0.615
+      "localRatio": 0.59
     },
     "/gurgaon/south-city-1/full-time-maid": {
       "index": true,
       "reasons": [],
       "words": 1278,
-      "localRatio": 0.539
+      "localRatio": 0.517
     },
     "/gurgaon/south-city-1/part-time-maid": {
       "index": true,
       "reasons": [],
       "words": 1232,
-      "localRatio": 0.558
+      "localRatio": 0.535
     },
     "/gurgaon/south-city-1/cook": {
       "index": true,
       "reasons": [],
       "words": 1166,
-      "localRatio": 0.571
+      "localRatio": 0.548
     },
     "/gurgaon/south-city-1/babysitter-nanny": {
       "index": true,
       "reasons": [],
       "words": 1231,
-      "localRatio": 0.552
+      "localRatio": 0.529
     },
     "/gurgaon/south-city-1/elder-care": {
       "index": true,
       "reasons": [],
       "words": 1225,
-      "localRatio": 0.558
+      "localRatio": 0.535
     },
     "/gurgaon/south-city-1/domestic-help": {
       "index": true,
       "reasons": [],
       "words": 1197,
-      "localRatio": 0.571
+      "localRatio": 0.548
     },
     "/gurgaon/south-city-2": {
       "index": true,
@@ -7848,253 +7848,253 @@
     "/gurgaon/sohna-road": {
       "index": true,
       "reasons": [],
-      "words": 1218,
+      "words": 1217,
       "localRatio": 0.608
     },
     "/gurgaon/sohna-road/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1268,
+      "words": 1265,
       "localRatio": 0.511
     },
     "/gurgaon/sohna-road/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1191,
+      "words": 1188,
       "localRatio": 0.529
     },
     "/gurgaon/sohna-road/cook": {
       "index": true,
       "reasons": [],
-      "words": 1166,
+      "words": 1163,
       "localRatio": 0.529
     },
     "/gurgaon/sohna-road/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1213,
+      "words": 1210,
       "localRatio": 0.523
     },
     "/gurgaon/sohna-road/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1189,
+      "words": 1186,
       "localRatio": 0.536
     },
     "/gurgaon/sohna-road/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1193,
+      "words": 1190,
       "localRatio": 0.536
     },
     "/gurgaon/sector-47": {
       "index": true,
       "reasons": [],
-      "words": 1192,
+      "words": 1191,
       "localRatio": 0.65
     },
     "/gurgaon/sector-47/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1229,
+      "words": 1226,
       "localRatio": 0.563
     },
     "/gurgaon/sector-47/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1161,
+      "words": 1158,
       "localRatio": 0.583
     },
     "/gurgaon/sector-47/cook": {
       "index": true,
       "reasons": [],
-      "words": 1126,
+      "words": 1123,
       "localRatio": 0.583
     },
     "/gurgaon/sector-47/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1162,
+      "words": 1159,
       "localRatio": 0.576
     },
     "/gurgaon/sector-47/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1149,
+      "words": 1146,
       "localRatio": 0.59
     },
     "/gurgaon/sector-47/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1125,
+      "words": 1122,
       "localRatio": 0.59
     },
     "/gurgaon/sector-49": {
       "index": true,
       "reasons": [],
-      "words": 1178,
-      "localRatio": 0.692
+      "words": 1177,
+      "localRatio": 0.679
     },
     "/gurgaon/sector-49/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1178,
-      "localRatio": 0.566
+      "words": 1176,
+      "localRatio": 0.554
     },
     "/gurgaon/sector-49/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1131,
-      "localRatio": 0.58
+      "words": 1129,
+      "localRatio": 0.568
     },
     "/gurgaon/sector-49/cook": {
       "index": true,
       "reasons": [],
-      "words": 1112,
-      "localRatio": 0.58
+      "words": 1110,
+      "localRatio": 0.568
     },
     "/gurgaon/sector-49/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1131,
-      "localRatio": 0.566
+      "words": 1129,
+      "localRatio": 0.554
     },
     "/gurgaon/sector-49/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1124,
-      "localRatio": 0.58
+      "words": 1122,
+      "localRatio": 0.568
     },
     "/gurgaon/sector-49/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1129,
-      "localRatio": 0.58
+      "words": 1127,
+      "localRatio": 0.568
     },
     "/gurgaon/sector-50": {
       "index": true,
       "reasons": [],
-      "words": 1207,
+      "words": 1205,
       "localRatio": 0.671
     },
     "/gurgaon/sector-50/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1216,
+      "words": 1213,
       "localRatio": 0.553
     },
     "/gurgaon/sector-50/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1146,
+      "words": 1143,
       "localRatio": 0.573
     },
     "/gurgaon/sector-50/cook": {
       "index": true,
       "reasons": [],
-      "words": 1110,
+      "words": 1107,
       "localRatio": 0.58
     },
     "/gurgaon/sector-50/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1183,
+      "words": 1180,
       "localRatio": 0.553
     },
     "/gurgaon/sector-50/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1142,
+      "words": 1139,
       "localRatio": 0.566
     },
     "/gurgaon/sector-50/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1112,
+      "words": 1109,
       "localRatio": 0.588
     },
     "/gurgaon/sector-51": {
       "index": true,
       "reasons": [],
-      "words": 1157,
+      "words": 1156,
       "localRatio": 0.65
     },
     "/gurgaon/sector-51/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1187,
+      "words": 1186,
       "localRatio": 0.57
     },
     "/gurgaon/sector-51/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1125,
+      "words": 1124,
       "localRatio": 0.598
     },
     "/gurgaon/sector-51/cook": {
       "index": true,
       "reasons": [],
-      "words": 1094,
+      "words": 1093,
       "localRatio": 0.59
     },
     "/gurgaon/sector-51/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1131,
+      "words": 1130,
       "localRatio": 0.563
     },
     "/gurgaon/sector-51/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1117,
+      "words": 1116,
       "localRatio": 0.576
     },
     "/gurgaon/sector-51/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1100,
+      "words": 1099,
       "localRatio": 0.583
     },
     "/gurgaon/sector-65": {
       "index": true,
       "reasons": [],
-      "words": 1191,
+      "words": 1190,
       "localRatio": 0.608
     },
     "/gurgaon/sector-65/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1239,
+      "words": 1237,
       "localRatio": 0.54
     },
     "/gurgaon/sector-65/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1159,
+      "words": 1157,
       "localRatio": 0.566
     },
     "/gurgaon/sector-65/cook": {
       "index": true,
       "reasons": [],
-      "words": 1117,
+      "words": 1115,
       "localRatio": 0.573
     },
     "/gurgaon/sector-65/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1174,
+      "words": 1172,
       "localRatio": 0.54
     },
     "/gurgaon/sector-65/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1160,
+      "words": 1158,
       "localRatio": 0.553
     },
     "/gurgaon/sector-65/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1143,
+      "words": 1141,
       "localRatio": 0.566
     },
     "/gurgaon/sector-66": {
@@ -8184,43 +8184,43 @@
     "/gurgaon/sector-68": {
       "index": true,
       "reasons": [],
-      "words": 1196,
+      "words": 1195,
       "localRatio": 0.65
     },
     "/gurgaon/sector-68/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1215,
+      "words": 1214,
       "localRatio": 0.552
     },
     "/gurgaon/sector-68/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1175,
+      "words": 1174,
       "localRatio": 0.565
     },
     "/gurgaon/sector-68/cook": {
       "index": true,
       "reasons": [],
-      "words": 1142,
+      "words": 1141,
       "localRatio": 0.565
     },
     "/gurgaon/sector-68/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1174,
+      "words": 1173,
       "localRatio": 0.545
     },
     "/gurgaon/sector-68/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1173,
+      "words": 1172,
       "localRatio": 0.558
     },
     "/gurgaon/sector-68/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1121,
+      "words": 1120,
       "localRatio": 0.578
     },
     "/gurgaon/sector-69": {
@@ -8352,127 +8352,127 @@
     "/gurgaon/sector-72": {
       "index": true,
       "reasons": [],
-      "words": 1247,
+      "words": 1246,
       "localRatio": 0.613
     },
     "/gurgaon/sector-72/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1219,
+      "words": 1218,
       "localRatio": 0.54
     },
     "/gurgaon/sector-72/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1195,
+      "words": 1194,
       "localRatio": 0.56
     },
     "/gurgaon/sector-72/cook": {
       "index": true,
       "reasons": [],
-      "words": 1146,
+      "words": 1145,
       "localRatio": 0.573
     },
     "/gurgaon/sector-72/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1227,
+      "words": 1226,
       "localRatio": 0.54
     },
     "/gurgaon/sector-72/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1168,
+      "words": 1167,
       "localRatio": 0.56
     },
     "/gurgaon/sector-72/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1185,
+      "words": 1184,
       "localRatio": 0.573
     },
     "/gurgaon/sector-73": {
       "index": true,
       "reasons": [],
-      "words": 1207,
+      "words": 1206,
       "localRatio": 0.667
     },
     "/gurgaon/sector-73/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1205,
+      "words": 1204,
       "localRatio": 0.536
     },
     "/gurgaon/sector-73/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1151,
+      "words": 1150,
       "localRatio": 0.556
     },
     "/gurgaon/sector-73/cook": {
       "index": true,
       "reasons": [],
-      "words": 1115,
+      "words": 1114,
       "localRatio": 0.549
     },
     "/gurgaon/sector-73/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1180,
+      "words": 1179,
       "localRatio": 0.536
     },
     "/gurgaon/sector-73/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1156,
+      "words": 1155,
       "localRatio": 0.536
     },
     "/gurgaon/sector-73/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1157,
+      "words": 1156,
       "localRatio": 0.549
     },
     "/gurgaon/sector-74": {
       "index": true,
       "reasons": [],
-      "words": 1193,
+      "words": 1192,
       "localRatio": 0.62
     },
     "/gurgaon/sector-74/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1160,
+      "words": 1159,
       "localRatio": 0.53
     },
     "/gurgaon/sector-74/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1147,
+      "words": 1146,
       "localRatio": 0.543
     },
     "/gurgaon/sector-74/cook": {
       "index": true,
       "reasons": [],
-      "words": 1126,
+      "words": 1125,
       "localRatio": 0.537
     },
     "/gurgaon/sector-74/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1151,
+      "words": 1150,
       "localRatio": 0.53
     },
     "/gurgaon/sector-74/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1136,
+      "words": 1135,
       "localRatio": 0.537
     },
     "/gurgaon/sector-74/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1127,
+      "words": 1126,
       "localRatio": 0.55
     },
     "/gurgaon/sector-75": {
@@ -9066,85 +9066,85 @@
     "/gurgaon/sector-46": {
       "index": true,
       "reasons": [],
-      "words": 1192,
+      "words": 1191,
       "localRatio": 0.615
     },
     "/gurgaon/sector-46/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1241,
+      "words": 1240,
       "localRatio": 0.547
     },
     "/gurgaon/sector-46/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1188,
+      "words": 1187,
       "localRatio": 0.566
     },
     "/gurgaon/sector-46/cook": {
       "index": true,
       "reasons": [],
-      "words": 1145,
+      "words": 1144,
       "localRatio": 0.56
     },
     "/gurgaon/sector-46/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1201,
+      "words": 1200,
       "localRatio": 0.547
     },
     "/gurgaon/sector-46/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1177,
+      "words": 1176,
       "localRatio": 0.566
     },
     "/gurgaon/sector-46/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1133,
+      "words": 1132,
       "localRatio": 0.58
     },
     "/gurgaon/sector-52": {
       "index": true,
       "reasons": [],
-      "words": 1232,
+      "words": 1231,
       "localRatio": 0.671
     },
     "/gurgaon/sector-52/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1245,
+      "words": 1244,
       "localRatio": 0.565
     },
     "/gurgaon/sector-52/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1177,
+      "words": 1176,
       "localRatio": 0.585
     },
     "/gurgaon/sector-52/cook": {
       "index": true,
       "reasons": [],
-      "words": 1162,
+      "words": 1161,
       "localRatio": 0.585
     },
     "/gurgaon/sector-52/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1181,
+      "words": 1180,
       "localRatio": 0.571
     },
     "/gurgaon/sector-52/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1155,
+      "words": 1154,
       "localRatio": 0.585
     },
     "/gurgaon/sector-52/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1179,
+      "words": 1178,
       "localRatio": 0.585
     },
     "/mumbai/fort": {
@@ -12186,44 +12186,44 @@
     "/pune/hadapsar": {
       "index": true,
       "reasons": [],
-      "words": 1158,
-      "localRatio": 0.61
+      "words": 1154,
+      "localRatio": 0.605
     },
     "/pune/hadapsar/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1202,
-      "localRatio": 0.53
+      "words": 1197,
+      "localRatio": 0.524
     },
     "/pune/hadapsar/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1105,
-      "localRatio": 0.557
+      "words": 1100,
+      "localRatio": 0.551
     },
     "/pune/hadapsar/cook": {
       "index": true,
       "reasons": [],
-      "words": 1112,
+      "words": 1109,
       "localRatio": 0.5
     },
     "/pune/hadapsar/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1139,
-      "localRatio": 0.53
+      "words": 1135,
+      "localRatio": 0.524
     },
     "/pune/hadapsar/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1137,
-      "localRatio": 0.537
+      "words": 1133,
+      "localRatio": 0.531
     },
     "/pune/hadapsar/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1125,
-      "localRatio": 0.55
+      "words": 1121,
+      "localRatio": 0.544
     },
     "/pune/dhanori": {
       "index": true,
@@ -12270,44 +12270,44 @@
     "/pune/lohegaon": {
       "index": true,
       "reasons": [],
-      "words": 1130,
-      "localRatio": 0.649
+      "words": 1126,
+      "localRatio": 0.645
     },
     "/pune/lohegaon/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1129,
-      "localRatio": 0.524
+      "words": 1123,
+      "localRatio": 0.519
     },
     "/pune/lohegaon/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1082,
-      "localRatio": 0.551
+      "words": 1076,
+      "localRatio": 0.545
     },
     "/pune/lohegaon/cook": {
       "index": true,
       "reasons": [],
-      "words": 1050,
+      "words": 1046,
       "localRatio": 0.514
     },
     "/pune/lohegaon/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1099,
-      "localRatio": 0.537
+      "words": 1094,
+      "localRatio": 0.532
     },
     "/pune/lohegaon/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1075,
-      "localRatio": 0.537
+      "words": 1070,
+      "localRatio": 0.532
     },
     "/pune/lohegaon/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1068,
-      "localRatio": 0.558
+      "words": 1063,
+      "localRatio": 0.553
     },
     "/pune/wanowrie": {
       "index": true,
@@ -14507,7 +14507,7 @@
       "index": true,
       "reasons": [],
       "words": 1110,
-      "localRatio": 0.641
+      "localRatio": 0.628
     },
     "/mangalore/kavoor/full-time-maid": {
       "index": true,
@@ -14716,44 +14716,44 @@
     "/mangalore/surathkal": {
       "index": true,
       "reasons": [],
-      "words": 1116,
-      "localRatio": 0.627
+      "words": 1112,
+      "localRatio": 0.622
     },
     "/mangalore/surathkal/full-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1101,
-      "localRatio": 0.531
+      "words": 1096,
+      "localRatio": 0.525
     },
     "/mangalore/surathkal/part-time-maid": {
       "index": true,
       "reasons": [],
-      "words": 1083,
-      "localRatio": 0.551
+      "words": 1078,
+      "localRatio": 0.545
     },
     "/mangalore/surathkal/cook": {
       "index": true,
       "reasons": [],
-      "words": 1033,
+      "words": 1030,
       "localRatio": 0.507
     },
     "/mangalore/surathkal/babysitter-nanny": {
       "index": true,
       "reasons": [],
-      "words": 1112,
-      "localRatio": 0.524
+      "words": 1108,
+      "localRatio": 0.519
     },
     "/mangalore/surathkal/elder-care": {
       "index": true,
       "reasons": [],
-      "words": 1088,
-      "localRatio": 0.537
+      "words": 1084,
+      "localRatio": 0.532
     },
     "/mangalore/surathkal/domestic-help": {
       "index": true,
       "reasons": [],
-      "words": 1016,
-      "localRatio": 0.566
+      "words": 1012,
+      "localRatio": 0.56
     },
     "/mangalore/panambur": {
       "index": true,

@@ -136,8 +136,8 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.58005,
-    "lng": 77.22179
+    "lat": 28.59164,
+    "lng": 77.23124
   },
   "karol-bagh": {
     "neighbours": [
@@ -1115,8 +1115,8 @@
       "vasundhara-enclave",
       "seelampur",
       "bhajanpura",
-      "mayur-vihar-phase-3",
-      "karawal-nagar"
+      "karawal-nagar",
+      "mayur-vihar-phase-3"
     ],
     "landmarks": [
       "Preet Vihar Metro Station",

@@ -233,12 +233,12 @@
       "aundh",
       "kothrud",
       "dhanori",
-      "lohegaon",
       "karve-nagar",
       "pashan",
       "warje",
       "anandnagar",
       "viman-nagar",
+      "lohegaon",
       "kondhwa"
     ],
     "landmarks": [
@@ -881,8 +881,7 @@
       "kondhwa",
       "viman-nagar",
       "pune-camp",
-      "bibwewadi",
-      "lohegaon"
+      "bibwewadi"
     ],
     "landmarks": [
       "Magarpatta City",
@@ -1012,10 +1011,9 @@
       "dhanori",
       "viman-nagar",
       "kharadi",
+      "deccan",
       "pune-camp",
-      "hadapsar",
-      "shivajinagar",
-      "deccan"
+      "shivajinagar"
     ],
     "landmarks": [
       "Pune Airport",
@@ -1070,8 +1068,8 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 18.58037,
-    "lng": 73.91823
+    "lat": 18.59588,
+    "lng": 73.9247
   },
   "wanowrie": {
     "neighbours": [

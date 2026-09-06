@@ -7,10 +7,11 @@
       "dlf-phase-4",
       "dlf-phase-3",
       "sector-42",
-      "dlf-phase-5",
       "sector-44",
       "sector-21",
-      "south-city-1"
+      "south-city-1",
+      "sector-53",
+      "dlf-phase-5"
     ],
     "landmarks": [
       "Sikanderpur Metro Station",
@@ -79,10 +80,11 @@
       "golf-course-road",
       "sector-43",
       "sector-42",
-      "dlf-phase-5",
       "sector-44",
       "sector-21",
-      "south-city-1"
+      "south-city-1",
+      "sector-45",
+      "dlf-phase-5"
     ],
     "landmarks": [
       "Sikanderpur Metro Station",
@@ -149,10 +151,11 @@
       "golf-course-road",
       "sector-43",
       "sector-42",
-      "dlf-phase-5",
       "sector-21",
       "south-city-1",
-      "sector-44"
+      "sector-44",
+      "sector-53",
+      "dlf-phase-5"
     ],
     "landmarks": [
       "DLF Cyber City",
@@ -219,13 +222,14 @@
       "sector-43",
       "sector-42",
       "dlf-phase-2",
-      "dlf-phase-5",
       "sector-54",
       "sector-53",
       "sector-44",
       "dlf-phase-3",
       "south-city-1",
-      "sector-21"
+      "dlf-phase-5",
+      "sector-21",
+      "sector-45"
     ],
     "landmarks": [
       "Galleria Market",
@@ -282,8 +286,8 @@
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
     "reviewed": false,
-    "lat": 28.4919,
-    "lng": 77.09378
+    "lat": 28.46409,
+    "lng": 77.08364
   },
   "dlf-phase-5": {
     "neighbours": [
@@ -355,13 +359,10 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.50344,
-    "lng": 77.0952
+    "reviewed": false
   },
   "golf-course-road": {
     "neighbours": [
-      "dlf-phase-5",
       "sector-42",
       "sector-43",
       "sector-53",
@@ -373,9 +374,11 @@
       "sector-57",
       "dlf-phase-2",
       "dlf-phase-3",
+      "dlf-phase-5",
       "sector-58",
       "sector-59",
       "sector-60",
+      "sector-21",
       "sector-52"
     ],
     "landmarks": [
@@ -439,7 +442,6 @@
     "neighbours": [
       "golf-course-road",
       "sector-43",
-      "dlf-phase-5",
       "sector-54",
       "sector-53",
       "dlf-phase-4",
@@ -447,7 +449,8 @@
       "sector-44",
       "dlf-phase-2",
       "dlf-phase-3",
-      "sector-21"
+      "sector-21",
+      "dlf-phase-5"
     ],
     "landmarks": [
       "DLF Golf & Country Club",
@@ -513,11 +516,11 @@
       "dlf-phase-4",
       "sector-53",
       "sector-46",
-      "dlf-phase-5",
       "sector-54",
       "dlf-phase-1",
       "dlf-phase-2",
       "dlf-phase-3",
+      "dlf-phase-5",
       "south-city-1",
       "sector-21"
     ],
@@ -583,7 +586,6 @@
     "neighbours": [
       "sector-54",
       "golf-course-road",
-      "dlf-phase-5",
       "sector-52",
       "sector-43",
       "sector-56",
@@ -592,6 +594,9 @@
       "dlf-phase-4",
       "sector-45",
       "sector-58",
+      "dlf-phase-1",
+      "dlf-phase-3",
+      "dlf-phase-5",
       "sector-59"
     ],
     "landmarks": [
@@ -654,7 +659,6 @@
   "sector-54": {
     "neighbours": [
       "sector-53",
-      "dlf-phase-5",
       "golf-course-road",
       "sector-42",
       "sector-55",
@@ -663,7 +667,8 @@
       "dlf-phase-4",
       "sector-58",
       "sector-52",
-      "sector-59"
+      "sector-59",
+      "dlf-phase-5"
     ],
     "landmarks": [
       "Sector 54 Chowk Rapid Metro Station",
@@ -727,13 +732,13 @@
       "golf-course-road",
       "sector-54",
       "sector-53",
-      "dlf-phase-5",
       "sector-57",
       "sector-58",
       "sector-52",
       "sector-59",
       "sector-61",
-      "sector-60"
+      "sector-60",
+      "dlf-phase-5"
     ],
     "landmarks": [
       "Sector 55-56 Rapid Metro Station",
@@ -798,11 +803,11 @@
       "sector-58",
       "sector-54",
       "sector-53",
-      "dlf-phase-5",
       "sector-59",
       "sector-52",
       "sector-60",
       "sector-61",
+      "dlf-phase-5",
       "sector-50",
       "sector-51"
     ],
@@ -874,6 +879,7 @@
       "sector-49",
       "sector-60",
       "sector-61",
+      "sector-46",
       "sector-52"
     ],
     "landmarks": [
@@ -1216,8 +1222,9 @@
       "sector-75",
       "sector-49",
       "sohna-road",
+      "sector-47",
       "south-city-2",
-      "sector-47"
+      "sector-68"
     ],
     "landmarks": [
       "Southern Peripheral Road",
@@ -1288,6 +1295,7 @@
       "sector-69",
       "sector-77",
       "sohna-road",
+      "sector-49",
       "south-city-2"
     ],
     "landmarks": [
@@ -1356,8 +1364,8 @@
       "sector-70",
       "sohna-road",
       "sector-69",
-      "south-city-2",
-      "sector-88"
+      "sector-88",
+      "south-city-2"
     ],
     "landmarks": [
       "Southern Peripheral Road",
@@ -2197,8 +2205,9 @@
       "sector-43",
       "sector-44",
       "sector-45",
-      "dlf-phase-5",
-      "south-city-1"
+      "south-city-1",
+      "golf-course-road",
+      "dlf-phase-5"
     ],
     "landmarks": [
       "Udyog Vihar",
@@ -2343,6 +2352,8 @@
       "sector-43",
       "sector-53",
       "sector-21",
+      "dlf-phase-4",
+      "dlf-phase-2",
       "south-city-2"
     ],
     "landmarks": [
@@ -2414,6 +2425,7 @@
       "sector-50",
       "sector-49",
       "sector-43",
+      "sector-57",
       "south-city-2"
     ],
     "landmarks": [
@@ -2483,10 +2495,10 @@
       "sector-45",
       "sector-54",
       "sector-55",
-      "dlf-phase-5",
       "golf-course-road",
       "sector-44",
       "sector-58",
+      "dlf-phase-5",
       "sector-61",
       "south-city-1",
       "sector-51"
@@ -2557,7 +2569,6 @@
       "sector-46",
       "sector-47",
       "dlf-phase-4",
-      "south-city-2",
       "sector-49",
       "sector-50",
       "sector-43",
@@ -2565,6 +2576,7 @@
       "dlf-phase-1",
       "dlf-phase-2",
       "dlf-phase-3",
+      "south-city-2",
       "sector-21"
     ],
     "landmarks": [
@@ -2695,15 +2707,12 @@
       "general-knowledge-2026",
       "OpenStreetMap Nominatim (ODbL 1.0)"
     ],
-    "reviewed": false,
-    "lat": 28.41888,
-    "lng": 77.04392
+    "reviewed": false
   },
   "sohna-road": {
     "neighbours": [
       "sector-49",
       "sector-47",
-      "south-city-2",
       "sector-50",
       "sector-65",
       "sector-66",
@@ -2712,6 +2721,7 @@
       "sector-69",
       "sector-70",
       "sector-71",
+      "south-city-2",
       "sector-72",
       "sector-73",
       "sector-74"
@@ -2780,14 +2790,15 @@
     "neighbours": [
       "sector-46",
       "sector-49",
-      "south-city-2",
       "sohna-road",
       "sector-45",
       "sector-50",
       "south-city-1",
       "sector-44",
       "sector-51",
-      "sector-72"
+      "sector-72",
+      "sector-66",
+      "south-city-2"
     ],
     "landmarks": [
       "Park Hospital",
@@ -2850,7 +2861,6 @@
   },
   "sector-49": {
     "neighbours": [
-      "south-city-2",
       "sector-50",
       "sector-47",
       "sohna-road",
@@ -2861,9 +2871,11 @@
       "sector-57",
       "sector-72",
       "south-city-1",
+      "south-city-2",
       "sector-67",
       "sector-68",
-      "sector-69"
+      "sector-69",
+      "sector-73"
     ],
     "landmarks": [
       "Uppal Southend",
@@ -2924,7 +2936,6 @@
   "sector-50": {
     "neighbours": [
       "sector-49",
-      "south-city-2",
       "sector-51",
       "sector-57",
       "sector-56",
@@ -2934,6 +2945,7 @@
       "sector-46",
       "south-city-1",
       "sector-66",
+      "south-city-2",
       "sector-68"
     ],
     "landmarks": [
@@ -2999,11 +3011,12 @@
       "sector-57",
       "sector-56",
       "sector-49",
-      "south-city-2",
       "sector-46",
       "sector-45",
       "sector-47",
-      "sector-44"
+      "sector-44",
+      "sector-65",
+      "south-city-2"
     ],
     "landmarks": [
       "Artemis Hospital",
@@ -3068,7 +3081,6 @@
       "sector-66",
       "sector-49",
       "sohna-road",
-      "south-city-2",
       "sector-50",
       "sector-67",
       "sector-61",
@@ -3076,6 +3088,8 @@
       "sector-60",
       "sector-68",
       "sector-69",
+      "south-city-2",
+      "sector-51",
       "sector-71"
     ],
     "landmarks": [
@@ -3148,6 +3162,7 @@
       "sector-50",
       "sector-60",
       "sector-61",
+      "sector-47",
       "sector-69"
     ],
     "landmarks": [
@@ -3290,8 +3305,9 @@
       "sector-71",
       "sector-49",
       "sector-65",
-      "south-city-2",
-      "sector-50"
+      "sector-50",
+      "sector-72",
+      "south-city-2"
     ],
     "landmarks": [
       "Airia Mall",
