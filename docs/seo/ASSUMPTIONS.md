@@ -67,3 +67,67 @@ editing one data file unless noted.
 17. **Greater Noida pincode prefixes**: Appendix B's validator rule (Greater Noida
     `2013xx`/`2032xx`) is applied as written; legacy rows 203207 (Dadri) and 203201 map to
     the `2032xx` allowance.
+
+## Decisions made during implementation (Phases 2–4)
+
+18. **Zone consolidation.** The brief's suggested zone map listed a few zones that would
+    have had fewer than three localities once Appendix B was normalised, which the
+    validator forbids. Merged: Greater Noida "outskirts" into `greater-noida-central`
+    (Dadri and the 203201 belt), and Gurgaon `manesar` into `new-gurgaon` (Manesar and
+    IMT Manesar). Pimple Saudagar was placed in `pcmc` rather than `pune-west` because it
+    is in Pimpri-Chinchwad; Fraser Town moved to `bangalore-north` and Malleswaram to
+    `bangalore-west` so both zones clear the three-locality minimum. Result: 35 zones.
+19. **Green Park vs Safdarjung Enclave (Appendix B.9.5).** Applied the brief's own
+    proposal: `green-park` at 110016 alongside Hauz Khas, and `safdarjung-enclave` at
+    110029 with "Green Park belt" and "AIIMS area" as alt names. Confirm if you prefer a
+    single record.
+20. **Rashtrapati Bhawan (110004) and Central Delhi (110011)** carry no locality hub, per
+    Appendix B.9.7. They are attached as city- and zone-level pincodes so the areas stay
+    serviceable without generating a page for a non-residential market. Same treatment for
+    Mangalore 575001/575036 and Greater Noida 203201.
+21. **Service × zone pages are not enabled.** The brief makes them optional, gated on a
+    zone carrying 500+ words of zone-specific content. No zone has that data yet, so zone
+    hubs link straight to service × locality pages. Turning them on later is a routing
+    change only; the data layer already supports it.
+22. **Four localities have no coordinates.** Nominatim could not resolve Shakur Basti
+    (Delhi), Kasna (Greater Noida), Kodialbail and Kulshekar (Mangalore) after three query
+    forms each. They keep their hand-curated neighbour lists, which pass the validator's
+    minimum, and are excluded from distance refinement. Re-run `npm run seo:geocode` if
+    better source data appears.
+23. **`[VERIFY]` sentences are dropped, not published.** Sixty-three localities carry at
+    least one drafted sentence marked `[VERIFY]` (mostly metro-proximity and helper-origin
+    claims). Rather than noindex those pages wholesale, the composer removes the marked
+    sentence at render time: the claim is withheld, never asserted. The localities stay
+    flagged for review. Confirm or correct them and the sentences can be restored.
+24. **Analytics load on first interaction or after 4 seconds.** gtag.js is ~190KB and cost
+    roughly 560ms of main-thread blocking when loaded eagerly, which was the single
+    largest Core Web Vitals cost. Click events queue into `dataLayer` and flush when it
+    loads, so no lead attribution is lost. The trade-off is a missing `page_view` for a
+    visitor who leaves within a few seconds without interacting at all.
+25. **One font family.** Plus Jakarta Sans was dropped in favour of Inter alone. The
+    second family cost ~28KB and an extra preload on the critical path and moved First
+    Contentful Paint from 0.9s to 2.8s.
+26. **CTA buttons are server-rendered.** They are plain anchors tagged with `data-mbm-*`
+    attributes, with one delegated listener converting clicks into GA4 events. This
+    removes the React client boundary from every SEO page. Bulk in-content links are plain
+    `<a>` elements rather than `next/link`, per the brief's internal-linking rule, which
+    also stops Next.js prefetching ~40 RSC payloads per page.
+27. **Legacy blog content is ported verbatim.** All 35 posts (25 `blog/*`, 3 flat
+    `blog-*`, 7 comparison guides) moved to `/blog/[slug]` with their content preserved;
+    only the wrapper chrome, the old CTA blocks and `.html`/`/home` links were rewritten.
+    Editorial review of these posts is outstanding — several contain the pre-rebuild
+    "police verified" and salary claims that should be checked against current policy.
+28. **`/services` is a real page again.** The booking SPA moved to `/app/*`, so
+    `/services` and `/services/[service]` are indexable hubs. The old robots.txt disallow
+    on `/services` is gone.
+29. **AdSense remains only on blog pages.** It is loaded lazily there and nowhere else.
+30. **The lead form ships disabled.** `LEADS_ENABLED` and `NEXT_PUBLIC_LEADS_ENABLED`
+    default to unset, because the `leads` table and its RLS policy need a Supabase
+    migration this repository cannot apply. Until then the CTAs are WhatsApp, phone and
+    the booking app, all of which are live. The API route validates every location value
+    against the data layer, so nothing outside the footprint can ever be submitted.
+31. **A cross-city slug collision was found and fixed.** `sector-50` exists in both Noida
+    and Gurgaon. The first version of the enrichment merger keyed fragments by slug alone,
+    which silently wrote 18 Noida sectors into Gurgaon's file. Fragments are now keyed by
+    batch → city explicitly, and the merger rejects any slug that is not a locality of the
+    named city. Worth remembering for any future importer.

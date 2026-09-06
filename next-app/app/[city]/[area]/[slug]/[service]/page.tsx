@@ -1,4 +1,4 @@
-// /[city]/[area]/[entity]/[service] — Phase 5 long-tail entity × service pages.
+// /[city]/[area]/[slug]/[service] — Phase 5 long-tail entity × service pages.
 // ISR with generateStaticParams limited to ready/live entities; unknown slugs 404.
 // A `draft` entity has no URL at all, so nothing thin is ever served.
 import type { Metadata } from 'next';
@@ -28,9 +28,9 @@ function resolve(city: string, area: string, entity: string, service: string) {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ city: string; area: string; entity: string; service: string }>;
+  params: Promise<{ city: string; area: string; slug: string; service: string }>;
 }): Promise<Metadata> {
-  const { city, area, entity, service } = await params;
+  const { city, area, slug: entity, service } = await params;
   const m = resolve(city, area, entity, service);
   return m ? metadataFor(m) : {};
 }
@@ -38,9 +38,9 @@ export async function generateMetadata({
 export default async function EntityServicePage({
   params,
 }: {
-  params: Promise<{ city: string; area: string; entity: string; service: string }>;
+  params: Promise<{ city: string; area: string; slug: string; service: string }>;
 }) {
-  const { city, area, entity, service } = await params;
+  const { city, area, slug: entity, service } = await params;
   const m = resolve(city, area, entity, service);
   if (!m) notFound();
   return (

@@ -47,6 +47,15 @@ const BATCH_CITY: Record<string, string> = {
   'bangalore-east-se': 'bangalore',
   'bangalore-rest': 'bangalore',
   mangalore: 'mangalore',
+  // redraft batches produced by scripts/seo/draft-copy.ts
+  'delhi-redraft': 'delhi',
+  'noida-redraft': 'noida',
+  'greater-noida-redraft': 'greater-noida',
+  'gurgaon-redraft': 'gurgaon',
+  'mumbai-redraft': 'mumbai',
+  'pune-redraft': 'pune',
+  'bangalore-redraft': 'bangalore',
+  'mangalore-redraft': 'mangalore',
 };
 
 const readJson = (p: string) => JSON.parse(fs.readFileSync(p, 'utf8'));

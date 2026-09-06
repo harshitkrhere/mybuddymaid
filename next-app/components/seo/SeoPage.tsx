@@ -1,7 +1,6 @@
 // components/seo/SeoPage.tsx — renders any PageModel (server component). Everything
 // SEO-relevant is in the HTML response: content, links, JSON-LD. Only the CTA buttons
 // and the lead form are client components.
-import Link from 'next/link';
 import type { PageModel } from '@/lib/seo-engine/compose';
 import { inr } from '@/lib/seo-engine/compose';
 import { CITIES, ALL_LOCALITIES, SERVICES } from '@/data/seo';
@@ -35,7 +34,7 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
         <ol>
           {m.crumbs.map((c, i) => (
             <li key={c.path}>
-              {i < m.crumbs.length - 1 ? <Link href={c.path}>{c.name}</Link> : <span aria-current="page">{c.name}</span>}
+              {i < m.crumbs.length - 1 ? <a href={c.path}>{c.name}</a> : <span aria-current="page">{c.name}</span>}
             </li>
           ))}
         </ol>
@@ -66,7 +65,7 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
               {m.serviceCards.map((c) => (
                 <li key={c.path} className="card">
                   <h3>
-                    <Link href={c.path}>{c.service.name}</Link>
+                    <a href={c.path}>{c.service.name}</a>
                   </h3>
                   <p>{c.service.shortDescription}</p>
                   <p className="card__price">from {inr(c.from)}/month</p>
@@ -94,7 +93,7 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
                 <tbody>
                   {m.pricing.rows.map((r) => (
                     <tr key={r.service.slug}>
-                      <td>{r.path ? <Link href={r.path}>{r.service.name}</Link> : r.service.name}</td>
+                      <td>{r.path ? <a href={r.path}>{r.service.name}</a> : r.service.name}</td>
                       <td>
                         {inr(r.from)} – {inr(r.to)} / {r.unit}
                       </td>
@@ -111,7 +110,7 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
               ))}
             </ul>
             <p>
-              See the full <Link href="/pricing">pricing page</Link> for plans.
+              See the full <a href="/pricing">pricing page</a> for plans.
             </p>
           </section>
         )}
@@ -134,7 +133,7 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
             <ul className="link-list">
               {m.nearby.map((n) => (
                 <li key={n.path}>
-                  <Link href={n.path}>{n.anchor}</Link>
+                  <a href={n.path}>{n.anchor}</a>
                 </li>
               ))}
             </ul>
@@ -147,7 +146,7 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
             <ul className="link-list">
               {m.related.map((n) => (
                 <li key={n.path}>
-                  <Link href={n.path}>{n.anchor}</Link>
+                  <a href={n.path}>{n.anchor}</a>
                 </li>
               ))}
             </ul>
@@ -159,7 +158,7 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
           <ul className="link-list">
             {TRUST_LINKS.map((t) => (
               <li key={t.href}>
-                <Link href={t.href}>{t.label}</Link>
+                <a href={t.href}>{t.label}</a>
               </li>
             ))}
           </ul>

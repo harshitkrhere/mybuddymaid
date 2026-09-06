@@ -1,5 +1,4 @@
 // components/shared/Footer.tsx — data-driven footer: cities, services, trust, legal.
-import Link from 'next/link';
 import { CITIES, SERVICES } from '@/data/seo';
 import { PHONE_DISPLAY, TEL_URL, whatsappUrl } from '@/lib/seo-engine/links';
 
@@ -12,7 +11,7 @@ export function Footer() {
           <ul>
             {CITIES.map((c) => (
               <li key={c.slug}>
-                <Link href={`/${c.slug}`}>Maid service in {c.name}</Link>
+                <a href={`/${c.slug}`}>Maid service in {c.name}</a>
               </li>
             ))}
           </ul>
@@ -21,11 +20,11 @@ export function Footer() {
           <h3>Services</h3>
           <ul>
             <li>
-              <Link href="/services/maid-service">Maid service</Link>
+              <a href="/services/maid-service">Maid service</a>
             </li>
             {SERVICES.map((s) => (
               <li key={s.slug}>
-                <Link href={`/services/${s.slug}`}>{s.name}</Link>
+                <a href={`/services/${s.slug}`}>{s.name}</a>
               </li>
             ))}
           </ul>
@@ -34,22 +33,22 @@ export function Footer() {
           <h3>Trust</h3>
           <ul>
             <li>
-              <Link href="/how-we-verify">How we verify</Link>
+              <a href="/how-we-verify">How we verify</a>
             </li>
             <li>
-              <Link href="/replacement-policy">Replacement policy</Link>
+              <a href="/replacement-policy">Replacement policy</a>
             </li>
             <li>
-              <Link href="/pricing">Pricing &amp; plans</Link>
+              <a href="/pricing">Pricing &amp; plans</a>
             </li>
             <li>
-              <Link href="/about">About MyBuddyMaid</Link>
+              <a href="/about">About MyBuddyMaid</a>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <a href="/contact">Contact</a>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <a href="/blog">Blog</a>
             </li>
           </ul>
         </div>
@@ -71,10 +70,10 @@ export function Footer() {
           </ul>
           <ul className="legal">
             <li>
-              <Link href="/privacy-policy">Privacy policy</Link>
+              <a href="/privacy-policy">Privacy policy</a>
             </li>
             <li>
-              <Link href="/terms-of-service">Terms of service</Link>
+              <a href="/terms-of-service">Terms of service</a>
             </li>
           </ul>
         </div>

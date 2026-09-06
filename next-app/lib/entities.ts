@@ -31,7 +31,7 @@ export function entityPages(): Map<string, EntityUrl[]> {
 }
 
 export function entityParams() {
-  const out: { city: string; area: string; entity: string; service: string }[] = [];
-  for (const e of LIVE_ENTITIES) for (const s of SERVICES) out.push({ city: e.city, area: e.locality, entity: e.slug, service: s.slug });
+  const out: { city: string; area: string; slug: string; service: string }[] = [];
+  for (const e of LIVE_ENTITIES) for (const s of SERVICES) out.push({ city: e.city, area: e.locality, slug: e.slug, service: s.slug });
   return out;
 }

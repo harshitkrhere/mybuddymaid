@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/shared/Header';
 import { Footer } from '@/components/shared/Footer';
@@ -9,7 +9,8 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { organizationLd } from '@/lib/seo-engine/jsonld';
 import { SITE_URL, BRAND } from '@/lib/seo-engine/meta';
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display', display: 'swap', weight: ['600', '700', '800'] });
+// One self-hosted variable family for body and headings: a second family cost ~28KB
+// and an extra preload on the critical path, which showed up directly in FCP.
 const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${jakarta.variable} ${inter.variable}`}>
+    <html lang="en-IN" className={inter.variable}>
       <body>
         <JsonLd data={[organizationLd()]} />
         <Header />

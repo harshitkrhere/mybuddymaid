@@ -19,7 +19,10 @@
     "seo:check-redirects": "tsx scripts/seo/check-redirects.ts",
     "seo:indexnow": "tsx scripts/seo/indexnow.ts",
     "seo:entities": "tsx scripts/seo/import-entities.ts",
-    "prebuild": "npm run seo:validate && npm run seo:redirects && npm run seo:gate"
+    "prebuild": "npm run seo:validate && npm run seo:redirects && npm run seo:gate",
+    "seo:keywords": "tsx scripts/seo/gen-keywords.ts",
+    "seo:draft": "tsx scripts/seo/draft-copy.ts",
+    "seo:gsc": "tsx scripts/seo/gsc-report.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
@@ -32,6 +35,7 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

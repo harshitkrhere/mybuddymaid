@@ -3,7 +3,7 @@
 // from the data layer (passed by the server page) so nothing outside the footprint can
 // be submitted. Rendered only when NEXT_PUBLIC_LEADS_ENABLED=true (ASSUMPTIONS.md #12).
 import { useState } from 'react';
-import { track, type CtaContext } from './CtaButtons';
+import type { CtaContext } from './CtaButtons';
 
 export interface LeadFormOptions {
   cities: { slug: string; name: string }[];
@@ -32,7 +32,7 @@ export function LeadForm({ ctx, options }: { ctx: CtaContext; options: LeadFormO
         body: JSON.stringify({ name, phone, city, locality, service, pincode: ctx.pincode, page: window.location.pathname }),
       });
       if (!res.ok) throw new Error(String(res.status));
-      track('lead_submit', { ...ctx, city, locality, service });
+      window.gtag?.('event', 'lead_submit', { city, locality, service, pincode: ctx.pincode ?? '(none)', page_path: window.location.pathname });
       setState('done');
     } catch {
       setState('error');
@@ -82,4 +82,10 @@ export function LeadForm({ ctx, options }: { ctx: CtaContext; options: LeadFormO
       {state === 'error' && <p className="lead-form__error">Could not send — please use WhatsApp or call instead.</p>}
     </form>
   );
+}
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
 }

@@ -1,5 +1,4 @@
 // components/shared/Header.tsx — server-rendered header; CSS-only mobile menu.
-import Link from 'next/link';
 import Image from 'next/image';
 import { CITIES } from '@/data/seo';
 
@@ -7,23 +6,23 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link href="/" className="brand" aria-label="MyBuddyMaid home">
+        <a href="/" className="brand" aria-label="MyBuddyMaid home">
           <Image src="/logo.png" alt="MyBuddyMaid" width={32} height={32} priority />
           <span>MyBuddyMaid</span>
-        </Link>
+        </a>
         <details className="nav-toggle">
           <summary aria-label="Menu">Menu</summary>
           <nav className="nav" aria-label="Primary">
-            <Link href="/services/maid-service">Maid service</Link>
-            <Link href="/services">Services</Link>
+            <a href="/services/maid-service">Maid service</a>
+            <a href="/services">Services</a>
             {CITIES.map((c) => (
-              <Link key={c.slug} href={`/${c.slug}`}>
+              <a key={c.slug} href={`/${c.slug}`}>
                 {c.name}
-              </Link>
+              </a>
             ))}
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/how-we-verify">Verification</Link>
-            <Link href="/blog">Blog</Link>
+            <a href="/pricing">Pricing</a>
+            <a href="/how-we-verify">Verification</a>
+            <a href="/blog">Blog</a>
             <a href="/app" className="btn btn-primary btn-sm">
               Open app
             </a>
