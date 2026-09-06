@@ -15,13 +15,40 @@ const BYPASS = process.env.VERCEL_AUTOMATION_BYPASS_SECRET ?? '';
 
 export const hasBypass = Boolean(BYPASS);
 
-export function siteFetch(url: string, init: RequestInit = {}): Promise<Response> {
-  if (!BYPASS) return fetch(url, init);
-  const headers = new Headers(init.headers);
-  headers.set('x-vercel-protection-bypass', BYPASS);
-  // Ask Vercel to set the bypass cookie too, so redirect targets stay reachable.
-  headers.set('x-vercel-set-bypass-cookie', 'true');
-  return fetch(url, { ...init, headers });
+const RETRIES = Number(process.env.FETCH_RETRIES ?? 3);
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Transient transport failures — a reset connection says nothing about the site. */
+function isTransient(e: unknown): boolean {
+  const code = (e as { cause?: { code?: string } })?.cause?.code ?? (e as { code?: string })?.code ?? '';
+  return ['ECONNRESET', 'ETIMEDOUT', 'ECONNREFUSED', 'EPIPE', 'UND_ERR_SOCKET', 'UND_ERR_CONNECT_TIMEOUT'].includes(code);
+}
+
+/**
+ * Fetch with the bypass header (when set) and a short retry on transport errors.
+ * Thousands of TLS requests against a preview will drop a connection sooner or later;
+ * without the retry a single reset aborts a run that says nothing about the site.
+ */
+export async function siteFetch(url: string, init: RequestInit = {}): Promise<Response> {
+  let options = init;
+  if (BYPASS) {
+    const headers = new Headers(init.headers);
+    headers.set('x-vercel-protection-bypass', BYPASS);
+    // Ask Vercel to set the bypass cookie too, so redirect targets stay reachable.
+    headers.set('x-vercel-set-bypass-cookie', 'true');
+    options = { ...init, headers };
+  }
+  let lastError: unknown;
+  for (let attempt = 0; attempt <= RETRIES; attempt++) {
+    try {
+      return await fetch(url, options);
+    } catch (e) {
+      lastError = e;
+      if (!isTransient(e) || attempt === RETRIES) break;
+      await sleep(250 * 2 ** attempt);
+    }
+  }
+  throw lastError;
 }
 
 /**

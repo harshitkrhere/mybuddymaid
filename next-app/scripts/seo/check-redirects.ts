@@ -71,7 +71,13 @@ async function check(row: Row) {
       continue;
     }
     // second hop must be a terminal 200 — no chains
-    const final = await siteFetch(dest.toString(), { redirect: 'manual' });
+    let final: Response;
+    try {
+      final = await siteFetch(dest.toString(), { redirect: 'manual' });
+    } catch (e) {
+      errors.push(`${variant}: 301 -> ${dest.pathname}, but that target failed to load (${(e as Error).message})`);
+      continue;
+    }
     if (final.status !== 200) {
       errors.push(`${variant}: 301 -> ${dest.pathname} which returned ${final.status} (chain or dead target)`);
       continue;
