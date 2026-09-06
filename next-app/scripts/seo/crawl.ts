@@ -6,6 +6,7 @@
 //   npx next build && npx next start &
 //   npx tsx scripts/seo/crawl.ts                  # defaults to http://localhost:3000
 //   BASE_URL=https://preview.example npx tsx scripts/seo/crawl.ts
+import { assertReachable, hasBypass, siteFetch } from './_fetch';
 import { allIndexableUrls } from '../../lib/seo-engine/sitemaps';
 import { gateFor, hasGateVerdict } from '../../lib/seo-engine/gate';
 import { SITE_URL } from '../../lib/seo-engine/meta';
@@ -51,7 +52,7 @@ function normalisePath(href: string, from: string): string | null {
 const attr = (html: string, re: RegExp) => html.match(re)?.[1] ?? null;
 
 async function fetchPage(path: string, depth: number): Promise<PageInfo> {
-  const res = await fetch(`${BASE}${path}`, { redirect: 'manual' });
+  const res = await siteFetch(`${BASE}${path}`, { redirect: 'manual' });
   if (res.status >= 300 && res.status < 400) {
     return { path, status: res.status, depth, links: [], canonical: null, robots: null, title: null, redirectedTo: res.headers.get('location') ?? '' };
   }
@@ -96,6 +97,8 @@ async function crawl() {
 }
 
 async function main() {
+  await assertReachable(BASE);
+  if (hasBypass) console.log('  using the Vercel protection-bypass secret');
   await crawl();
 
   // ---------------------------------------------------------------------------

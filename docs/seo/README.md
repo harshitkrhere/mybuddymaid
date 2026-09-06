@@ -202,8 +202,24 @@ data in `legacy-data/`, so the redirect map stays reproducible without those fil
    `next-app/public/_spa` (it is served under `/app/*`).
 3. Point the Vercel project at `next-app/`. **Provision the `www` certificate** — it is
    currently expired, so `https://www.mybuddymaid.in` is unreachable.
-4. Deploy to a preview URL, then run against it:
-   `BASE_URL=<preview> npm run seo:check-redirects` and `BASE_URL=<preview> npm run seo:crawl`.
+4. Deploy to a preview URL, then run both checks against it. Preview deployments sit
+   behind Vercel Deployment Protection, which 302s every request to Vercel SSO — the
+   scripts detect that and refuse to run rather than reporting phantom redirects. Create a
+   secret under **Project Settings → Deployment Protection → Protection Bypass for
+   Automation** and pass it in (PowerShell):
+
+   ```powershell
+   cd next-app
+   $env:VERCEL_AUTOMATION_BYPASS_SECRET = '<secret>'
+   $env:BASE_URL = 'https://<preview>.vercel.app'
+   npm run seo:check-redirects
+   npm run seo:crawl
+   Remove-Item Env:\BASE_URL, Env:\VERCEL_AUTOMATION_BYPASS_SECRET
+   ```
+
+   This is the only environment that exercises the `vercel.json` layer: platform redirects
+   run *before* middleware, and `next start` does not apply them at all. A `.html` redirect
+   chain hid in exactly that gap during the rebuild, so do not skip this step.
 5. Promote to production, submit the sitemap index in Google Search Console and Bing
    Webmaster Tools, then `INDEXNOW_KEY=<key> npm run seo:indexnow -- --write-key`,
    deploy the key file, and run `npm run seo:indexnow`.

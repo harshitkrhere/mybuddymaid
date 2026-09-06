@@ -168,3 +168,12 @@ editing one data file unless noted.
     page and the point prices and `PLAN_DETAILS` in `app/src/lib/constants.js` are gone;
     only presentation (colours, emoji, feature bullets) stays local. The booking app's
     `postnatal` service has no band in the data layer, so it displays "Premium" as before.
+37. **Deployment-protection bypass for automated checks.** Vercel preview deployments are
+    protected by default: every request 302s to `vercel.com/sso-api`, so `check-redirects`
+    and `crawl` would measure Vercel's login flow rather than the site. Both scripts now
+    route through `scripts/seo/_fetch.ts`, which sends the
+    `x-vercel-protection-bypass` header when `VERCEL_AUTOMATION_BYPASS_SECRET` is set and
+    otherwise fails fast with instructions. Running them against production needs no
+    secret. This matters because the preview is the *only* environment that exercises the
+    `vercel.json` layer — platform redirects run before middleware, and `next start`
+    ignores them entirely.

@@ -8,6 +8,7 @@
 //   SAMPLE=200 npx tsx scripts/seo/check-redirects.ts   # spot-check instead of all
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { assertReachable, hasBypass, siteFetch } from './_fetch';
 
 const BASE = (process.env.BASE_URL ?? 'http://localhost:3000').replace(/\/$/, '');
 const CONCURRENCY = Number(process.env.CHECK_CONCURRENCY ?? 16);
@@ -43,7 +44,7 @@ async function check(row: Row) {
   for (const variant of [row.old, row.old === '/' ? null : `${row.old}.html`].filter(Boolean) as string[]) {
     let res: Response;
     try {
-      res = await fetch(`${BASE}${variant}`, { redirect: 'manual' });
+      res = await siteFetch(`${BASE}${variant}`, { redirect: 'manual' });
     } catch (e) {
       errors.push(`${variant}: request failed (${(e as Error).message})`);
       continue;
@@ -70,7 +71,7 @@ async function check(row: Row) {
       continue;
     }
     // second hop must be a terminal 200 — no chains
-    const final = await fetch(dest.toString(), { redirect: 'manual' });
+    const final = await siteFetch(dest.toString(), { redirect: 'manual' });
     if (final.status !== 200) {
       errors.push(`${variant}: 301 -> ${dest.pathname} which returned ${final.status} (chain or dead target)`);
       continue;
@@ -80,7 +81,10 @@ async function check(row: Row) {
 }
 
 async function main() {
-  console.log(`checking ${sampled.length} of ${rows.length} redirect rows against ${BASE}`);
+  await assertReachable(BASE);
+  console.log(
+    `checking ${sampled.length} of ${rows.length} redirect rows against ${BASE}${hasBypass ? ' (using the protection-bypass secret)' : ''}`,
+  );
   for (let i = 0; i < sampled.length; i += CONCURRENCY) {
     await Promise.all(sampled.slice(i, i + CONCURRENCY).map(check));
     checked = Math.min(i + CONCURRENCY, sampled.length);
