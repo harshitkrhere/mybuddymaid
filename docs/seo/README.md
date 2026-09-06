@@ -106,7 +106,7 @@ Run from `next-app/`. All are `npm run <name>`.
 |---|---|
 | `seo:validate` | Zod schema, slug/reserved-word/collision rules, pincode prefixes per city, structure minimums, neighbour symmetry, metadata uniqueness, count diff vs the last run. **Fails the build on any data error.** |
 | `seo:stats` | Page counts per type and the total indexable count. |
-| `seo:gate` | The quality engine: MinHash + LSH near-duplicate detection, local-token ratio, word floors, required sections, `[VERIFY]` markers. Writes `quality/gate.json` and `quality-report.md`. |
+| `seo:gate` | The quality engine: MinHash + LSH near-duplicate detection, local-token ratio, word floors, required sections, `[VERIFY]` markers. Covers core **and** Phase 5 entity pages. Writes `quality/gate.json` and `quality-report.md`. |
 | `seo:redirects` | Rebuilds the legacy redirect map from the real legacy filenames plus the data layer. Writes `redirects.csv` and `redirect-map.json`. |
 | `seo:merge` | Merges drafting fragments into the enrichment files, re-applies cached coordinates, symmetrises neighbours, regenerates FAQ modules. |
 | `seo:geocode` | One-off OpenStreetMap Nominatim geocoder, 1 req/s, cached. **Never runs at build or request time.** |
@@ -116,7 +116,7 @@ Run from `next-app/`. All are `npm run <name>`.
 | `seo:check-redirects` | Requests every old URL and its `.html` variant; asserts exactly one 301 hop to a 200, or a deliberate 410. No chains, no loops. |
 | `seo:keywords` | Regenerates `keywords.csv`, the rank-tracking set. |
 | `seo:indexnow` | Submits new or changed URLs to IndexNow in batches of ≤10,000. |
-| `seo:entities` | Phase 5 entity importer (CSV or OpenStreetMap) and readiness gate. |
+| `seo:entities` | Phase 5 entity importer (`--csv` / `--osm`), operator worksheet export (`--export-worksheet <file>`) and readiness gate (`--promote`). |
 | `seo:export-spa` | Exports the footprint, service price bands and plans into `app/src/lib/serviceability.json`, so the booking app reads the same data layer. Re-run before `node scripts/build-spa.mjs`. |
 | `seo:draft` | Drafts locality prose through the Anthropic API. Run manually; output is committed. |
 | `seo:gsc` | Weekly Search Console export, broken down by city, locality and service. |
@@ -236,17 +236,41 @@ Do **not** use the Google Indexing API for these pages: it is only for `JobPosti
 The system can generate 100,000+ entity × service pages, but capacity is the deliverable,
 not volume. A page is generated only when it deserves to exist.
 
-- Import candidates with `npm run seo:entities -- --csv <file>` or
-  `-- --osm --city <city> --locality <locality>`. Everything lands as `draft`.
-- **A `draft` entity has no URL at all** — not a noindexed page, no page.
-- `npm run seo:entities -- --promote` moves entities with **≥ 5 entity-specific facts**
-  to `ready`. Ready entities get ISR pages and the same quality gate as core pages.
-- Publish in batches of **≤ 2,000 URLs per city per week**. Record each batch in
-  `data/seo/quality/rollout.json`; it becomes its own sitemap shard and its own IndexNow
-  submission (`npm run seo:indexnow -- --batch <shard>`).
-- **Before releasing the next batch, check GSC: continue only if ≥ 60 % of the previous
-  batch is indexed after 3 weeks.** Otherwise stop, improve that batch, and re-evaluate.
-- Log every batch in [rollout-log.md](rollout-log.md).
+**What OpenStreetMap can and cannot give you.** The 2026-09-06 pilot measured it: a
+1,200 m sweep of Sector 76 returned 400 elements, 7 named, and only 3 with more than four
+tags — all three metro stations. Indian residential areas carry a name and a position and
+nothing else. So `--osm` builds the *candidate list*; every fact that makes a page worth
+serving comes from the operator. See [rollout-log.md](rollout-log.md) for the full pilot
+findings.
+
+The loop:
+
+1. `npm run seo:entities -- --osm --city <city> --locality <locality>` (or
+   `-- --csv <file>`). Everything lands as `draft`. Candidates are attributed to the
+   **nearest** Appendix-B locality, not the one that was queried — a 1,200 m radius also
+   sweeps the neighbours, and claiming a society sits in the wrong locality is a
+   fabricated fact. Sectors, plot codes and names identical to the parent are rejected.
+2. **A `draft` entity has no URL at all** — not a noindexed page, no page.
+3. `npm run seo:entities -- --export-worksheet ../docs/seo/entity-worksheet.csv` → give
+   it to the operator → re-import with `--csv`.
+4. `npm run seo:entities -- --promote` moves entities with **≥ 5 entity-specific facts**
+   to `ready`. Facts inherited from the parent locality (`Parent locality`, `Pincode`,
+   `Housing type`, `Nearest landmark`) are identical for every entity under that parent,
+   so they are rendered but **do not count** — see `INHERITED_FACT_KEYS`.
+5. `npm run seo:gate` is **required after every promotion**. Entity pages face the same
+   uniqueness gate as core pages, and `gateFor()` fails closed on the entity route: a
+   `ready` entity the gate has not yet seen renders `noindex` until it has.
+6. Publish in batches of **≤ 2,000 URLs per city per week**. Record each batch in
+   `data/seo/quality/rollout.json`; it becomes its own sitemap shard and its own IndexNow
+   submission (`npm run seo:indexnow -- --batch <shard>`).
+7. **Before releasing the next batch, check GSC: continue only if ≥ 60 % of the previous
+   batch is indexed after 3 weeks.** Otherwise stop, improve that batch, and re-evaluate.
+8. Log every batch in [rollout-log.md](rollout-log.md).
+
+**Known limit, unresolved:** the six service variants of one entity measured 0.72–0.76
+Jaccard against each other in the pilot, so the gate noindexes five of six. Until
+entity × service pages carry genuinely service-specific content, the realistic ceiling is
+**one indexable page per entity**, not six. Do not plan a page count on the six.
 
 ---
 

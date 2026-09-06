@@ -18,8 +18,29 @@ for (const e of LIVE_ENTITIES) {
   ENTITIES_BY_LOCALITY.set(key, [...(ENTITIES_BY_LOCALITY.get(key) ?? []), e]);
 }
 
+/**
+ * Facts every entity in a locality inherits from that locality. They are true, and they
+ * are rendered, but they are identical for every entity under the same parent — so they
+ * say nothing about *this* society and must not count toward the readiness gate. Without
+ * this exclusion an entity with a single operator-supplied fact would pass a "5 facts"
+ * check on four borrowed ones, and the facts block would be near-duplicate across every
+ * page in the locality.
+ */
+export const INHERITED_FACT_KEYS = new Set([
+  'Parent locality',
+  'Pincode',
+  'Housing type',
+  'Nearest landmark',
+  'Zone',
+]);
+
+/** The facts that describe this entity and nothing else. */
+export function entitySpecificFacts(e: Entity): [string, string][] {
+  return Object.entries(e.facts ?? {}).filter(([k, v]) => v.trim() !== '' && !INHERITED_FACT_KEYS.has(k));
+}
+
 /** An entity is `ready` only with >= 5 entity-specific facts (brief §7.2). */
 export const MIN_ENTITY_FACTS = 5;
 export function meetsReadinessGate(e: Entity): boolean {
-  return Object.keys(e.facts ?? {}).length >= MIN_ENTITY_FACTS;
+  return entitySpecificFacts(e).length >= MIN_ENTITY_FACTS;
 }

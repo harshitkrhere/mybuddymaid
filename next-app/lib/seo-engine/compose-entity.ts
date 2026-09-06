@@ -3,7 +3,7 @@
 // facts block is always substantive; a `draft` entity has no URL at all.
 import type { Entity, Service } from '@/data/seo/types';
 import { CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICES, ZONES, getNearby } from '@/data/seo';
-import { ENTITIES_BY_LOCALITY } from '@/data/seo/entities';
+import { ENTITIES_BY_LOCALITY, LIVE_ENTITIES, MIN_ENTITY_FACTS, entitySpecificFacts } from '@/data/seo/entities';
 import { serviceLocalityFaqs } from './faqs';
 import { paths } from './links';
 import { breadcrumbLd, faqLd, serviceLd } from './jsonld';
@@ -15,7 +15,8 @@ export function composeEntityService(svc: Service, entity: Entity): PageModel {
   const loc = LOCALITY_BY_PATH.get(`${entity.city}/${entity.locality}`)!;
   const zone = ZONES.find((z) => z.city === loc.city && z.slug === loc.zone)!;
   const band = svc.pricing[city.pricingTier];
-  const factEntries = Object.entries(entity.facts ?? {});
+  const factEntries = Object.entries(entity.facts ?? {}).filter(([, v]) => v.trim() !== '');
+  const ownFacts = entitySpecificFacts(entity);
   const path = `/${entity.city}/${entity.locality}/${entity.slug}/${svc.slug}`;
 
   const title = `${svc.name} in ${entity.name}, ${loc.name} | ${BRAND}`;
@@ -134,7 +135,10 @@ export function composeEntityService(svc: Service, entity: Entity): PageModel {
       faqLd(faqs),
     ],
     localTokens: [entity.name, ...entity.altNames, entity.pincode, loc.name, ...loc.landmarks, zone.name, ...nearbyLocs.map((n) => n.name)],
-    missingRequired: factEntries.length >= 5 ? [] : [`entity facts (${factEntries.length} < 5)`],
+    missingRequired:
+      ownFacts.length >= MIN_ENTITY_FACTS
+        ? []
+        : [`entity-specific facts (${ownFacts.length} < ${MIN_ENTITY_FACTS})`],
     wordFloor: 350,
     localRatioFloor: 0.5,
     updatedAt: entity.updatedAt,
@@ -160,3 +164,12 @@ export function composeEntityService(svc: Service, entity: Entity): PageModel {
 }
 
 export const ENTITY_SITE_URL = SITE_URL;
+
+/**
+ * Every page a `ready`/`live` entity produces. The uniqueness gate and the JSON-LD
+ * validator must see these: an entity page that is never composed by the gate gets no
+ * verdict in quality/gate.json, and an ungated page would ship indexable (rule 8).
+ */
+export function* allEntityPages(): Generator<PageModel> {
+  for (const e of LIVE_ENTITIES) for (const s of SERVICES) yield composeEntityService(s, e);
+}

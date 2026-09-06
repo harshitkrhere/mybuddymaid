@@ -19,9 +19,18 @@ export function hasGateVerdict(path: string): boolean {
   return Object.prototype.hasOwnProperty.call(VERDICTS, path);
 }
 
+/** /<city>/<area>/<entity>/<service> — the Phase 5 entity pages, and only those. */
+const ENTITY_PATH = /^\/[a-z0-9-]+\/[a-z0-9-]+\/[a-z0-9-]+\/[a-z0-9-]+$/;
+
 export function gateFor(path: string): GateVerdict {
   const v = VERDICTS[path];
   if (v) return v;
+  // Entity pages are ISR: an entity promoted to `ready` after the last `seo:gate` run has
+  // no verdict yet. Fail closed, or a page nothing has checked for near-duplication would
+  // be served indexable (rule 8). Re-run `npm run seo:gate` to index it.
+  if (GATE_PRESENT && ENTITY_PATH.test(path)) {
+    return { index: false, reasons: ['not gated yet: run npm run seo:gate'], words: 0, localRatio: 0 };
+  }
   // Hand-written pages (trust pages, blog posts) are not composed from the data layer,
   // so the uniqueness gate never sees them; they are reviewed by a human and indexable.
   return { index: true, reasons: GATE_PRESENT ? ['not gated: hand-written page'] : [], words: 0, localRatio: 0 };

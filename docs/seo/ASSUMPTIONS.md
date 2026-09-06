@@ -177,3 +177,46 @@ editing one data file unless noted.
     secret. This matters because the preview is the *only* environment that exercises the
     `vercel.json` layer — platform redirects run before middleware, and `next start`
     ignores them entirely.
+38. **OpenStreetMap is a candidate source for Phase 5, not a fact source.** Measured in
+    the 2026-09-06 pilot: a 1,200 m Overpass sweep of Sector 76 returned 400 elements, 7
+    of them named, and only 3 with more than four tags — all three metro stations. No
+    residential way carried `building:levels`, `operator`, `start_date` or `units`. So
+    `--osm` produces names, positions and parent localities; every entity-specific fact
+    comes from the operator through `--export-worksheet` → `--csv`. The eight worksheet
+    columns (towers or blocks, approximate homes, builder, possession year, typical flat
+    sizes, helper entry process, who issues the helper ID card, service lift) were chosen
+    as things an agency placing maids already knows and a household actually asks about.
+    Nothing about them is inferred or generated.
+39. **Entity candidates are attributed to the nearest Appendix-B locality, not the one
+    queried.** A radius search around one centroid also sweeps its neighbours: 5 of 22
+    pilot candidates landed under the wrong parent, the worst being `DLF Phase 3-U Block`
+    at 1,761 m from DLF Phase 1 and 233 m from DLF Phase 3. Publishing "…is a society in
+    DLF Phase 1" would have been a fabricated fact (rule 3). Candidates further than
+    2,000 m from every Appendix-B locality are rejected rather than attached to the least
+    bad parent. Sector names, plot codes and names identical to the parent locality are
+    rejected too — a sector belongs in Appendix B or nowhere, and an entity named after
+    its parent restates the locality page's intent (rule 2).
+40. **The readiness gate counts entity-specific facts only.** It previously counted every
+    key in `facts`, including the four inherited from the parent locality, which are
+    identical for every entity under that parent — so a single operator fact plus four
+    borrowed ones passed a "5 facts" check and produced a facts block that repeated across
+    the whole locality. `INHERITED_FACT_KEYS` in `data/seo/entities.ts` now excludes them
+    from the count; they are still rendered, because they are true and useful.
+41. **Entity pages are gated, and the gate fails closed for them.** `seo:gate` and
+    `seo:jsonld` composed `allCorePages()` only, so no entity path ever received a verdict
+    — and `gateFor()` treats an unknown path as a reviewed hand-written page and returns
+    `index: true`. Every `ready` entity would have shipped indexable without a duplicate
+    check, against rule 8. Both scripts now compose entity pages, and `gateFor()` returns
+    `noindex` for an ungated path on the 4-segment entity route. Entity pages are ISR, so
+    an entity promoted after the last gate run would otherwise be served unchecked.
+42. **Open: entity × service produces near-duplicates, so plan on one page per entity.**
+    A round-trip test promoted one entity and the gate noindexed 5 of its 6 service pages
+    at 0.72–0.76 Jaccard: the facts block, the access paragraph, the verification section
+    and two of five FAQs are identical across services, and ~480 words leaves no room to
+    separate them. The ~100,000-page projection behind the 200-leads/day model assumed six
+    pages per entity; the realistic figure is closer to 17,000 unless each service page
+    gains genuinely service-specific content. **This is the owner's call and is not
+    settled here** — the alternatives are (a) one entity page at
+    `/<city>/<area>/<entity>` covering all six services, or (b) keeping entity × service
+    and writing real per-service content. Whichever is chosen, the gate decides what
+    indexes; the page count is never the target.

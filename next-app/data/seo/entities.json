@@ -1,1 +1,470 @@
-[]
+[
+  {
+    "slug": "dlf-hamilton-court",
+    "city": "gurgaon",
+    "locality": "dlf-phase-1",
+    "kind": "society",
+    "name": "DLF Hamilton Court",
+    "altNames": [],
+    "pincode": "122002",
+    "lat": 28.4678557,
+    "lng": 77.0843509,
+    "facts": {
+      "Parent locality": "DLF Phase 1, Gurgaon",
+      "Pincode": "122002",
+      "Housing type": "independent houses",
+      "Nearest landmark": "Sikanderpur Metro Station"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "dlf-phase-1-a-block",
+    "city": "gurgaon",
+    "locality": "dlf-phase-1",
+    "kind": "society",
+    "name": "DLF Phase 1-A Block",
+    "altNames": [],
+    "pincode": "122002",
+    "lat": 28.474632,
+    "lng": 77.0878484,
+    "facts": {
+      "Parent locality": "DLF Phase 1, Gurgaon",
+      "Pincode": "122002",
+      "Housing type": "independent houses",
+      "Nearest landmark": "Sikanderpur Metro Station"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "perch-arbor-golf-course-road",
+    "city": "gurgaon",
+    "locality": "dlf-phase-1",
+    "kind": "society",
+    "name": "Perch Arbor Golf Course Road",
+    "altNames": [],
+    "pincode": "122002",
+    "lat": 28.472739,
+    "lng": 77.0932299,
+    "facts": {
+      "Parent locality": "DLF Phase 1, Gurgaon",
+      "Pincode": "122002",
+      "Housing type": "independent houses",
+      "Nearest landmark": "Sikanderpur Metro Station"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "sikanderpur",
+    "city": "gurgaon",
+    "locality": "dlf-phase-1",
+    "kind": "metro-station",
+    "name": "Sikanderpur",
+    "altNames": [],
+    "pincode": "122002",
+    "lat": 28.4812716,
+    "lng": 77.0930017,
+    "facts": {
+      "Parent locality": "DLF Phase 1, Gurgaon",
+      "Pincode": "122002",
+      "Housing type": "independent houses",
+      "Nearest landmark": "Sikanderpur Metro Station"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "sikanderpur-rmrg-station",
+    "city": "gurgaon",
+    "locality": "dlf-phase-1",
+    "kind": "metro-station",
+    "name": "Sikanderpur RMRG Station",
+    "altNames": [],
+    "pincode": "122002",
+    "lat": 28.4809969,
+    "lng": 77.0944367,
+    "facts": {
+      "Parent locality": "DLF Phase 1, Gurgaon",
+      "Pincode": "122002",
+      "Housing type": "independent houses",
+      "Nearest landmark": "Sikanderpur Metro Station"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "m-g-road",
+    "city": "gurgaon",
+    "locality": "dlf-phase-2",
+    "kind": "metro-station",
+    "name": "M G Road",
+    "altNames": [],
+    "pincode": "122002",
+    "lat": 28.4795543,
+    "lng": 77.0798926,
+    "facts": {
+      "Parent locality": "DLF Phase 2, Gurgaon",
+      "Pincode": "122002",
+      "Housing type": "mixed",
+      "Nearest landmark": "Sikanderpur Metro Station"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "dlf-phase-3-u-block",
+    "city": "gurgaon",
+    "locality": "dlf-phase-3",
+    "kind": "society",
+    "name": "DLF Phase 3-U Block",
+    "altNames": [],
+    "pincode": "122010",
+    "lat": 28.4914814,
+    "lng": 77.0961111,
+    "facts": {
+      "Parent locality": "DLF Phase 3, Gurgaon",
+      "Pincode": "122010",
+      "Housing type": "builder floors",
+      "Nearest landmark": "DLF Cyber City"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "kohli-vihar",
+    "city": "noida",
+    "locality": "sector-47",
+    "kind": "society",
+    "name": "Kohli Vihar",
+    "altNames": [],
+    "pincode": "201303",
+    "lat": 28.5584343,
+    "lng": 77.3725819,
+    "facts": {
+      "Parent locality": "Sector 47, Noida",
+      "Pincode": "201303",
+      "Housing type": "independent houses",
+      "Nearest landmark": "Noida Golf Course"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "meghdootam",
+    "city": "noida",
+    "locality": "sector-51",
+    "kind": "society",
+    "name": "Meghdootam",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5754179,
+    "lng": 77.3761364,
+    "facts": {
+      "Parent locality": "Sector 51, Noida",
+      "Pincode": "201301",
+      "Housing type": "mixed",
+      "Nearest landmark": "Sector 51 Metro Station (Aqua Line interchange)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "antriksh-golf-view-1",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Antriksh Golf View 1",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5589293,
+    "lng": 77.3864637,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "block-d-jm-orchid",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Block D, JM Orchid",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5709902,
+    "lng": 77.3847508,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "brahm-colony",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Brahm Colony",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5675422,
+    "lng": 77.3756503,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "hindon-vihar",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Hindon Vihar",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5579359,
+    "lng": 77.3760071,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "iitl-nimbus-the-hyde-park",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "IITL Nimbus the Hyde Park",
+    "altNames": [
+      "IITL NIMBUS THE HYDE PARK"
+    ],
+    "pincode": "201301",
+    "lat": 28.563238,
+    "lng": 77.3894368,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "mahagun-mezzaria",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Mahagun Mezzaria",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5629109,
+    "lng": 77.3829451,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "mahagun-moderne",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Mahagun Moderne",
+    "altNames": [
+      "MAHAGUN MODERNE"
+    ],
+    "pincode": "201301",
+    "lat": 28.5626766,
+    "lng": 77.3866551,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "marvella",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Marvella",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.561433,
+    "lng": 77.3863345,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "panchsheel-pratishta",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Panchsheel Pratishta",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5741234,
+    "lng": 77.383946,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "princely-estate",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Princely Estate",
+    "altNames": [
+      "PRINCELY ESTATE"
+    ],
+    "pincode": "201301",
+    "lat": 28.5653815,
+    "lng": 77.3823376,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "rainbow-metro-station",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "metro-station",
+    "name": "Rainbow Metro Station",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5743583,
+    "lng": 77.3782348,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "sunshine-helios",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Sunshine Helios",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5603348,
+    "lng": 77.3854087,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "supertech-north-eye",
+    "city": "noida",
+    "locality": "sector-76",
+    "kind": "society",
+    "name": "Supertech North Eye",
+    "altNames": [],
+    "pincode": "201301",
+    "lat": 28.5726784,
+    "lng": 77.3882095,
+    "facts": {
+      "Parent locality": "Sector 76, Noida",
+      "Pincode": "201301",
+      "Housing type": "gated societies",
+      "Nearest landmark": "Sector 76 Metro Station (Aqua Line)"
+    },
+    "source": "OpenStreetMap via Overpass API",
+    "licence": "ODbL 1.0 — © OpenStreetMap contributors",
+    "status": "draft",
+    "updatedAt": "2026-09-06"
+  }
+]

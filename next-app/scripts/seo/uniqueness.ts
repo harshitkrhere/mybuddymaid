@@ -14,6 +14,7 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { createHash } from 'node:crypto';
 import { allCorePages, type PageModel } from '../../lib/seo-engine/compose';
+import { allEntityPages } from '../../lib/seo-engine/compose-entity';
 
 const ROOT = process.cwd();
 const REPO = path.resolve(ROOT, '..');
@@ -120,9 +121,17 @@ interface Row {
   set: Set<number>;
 }
 
+// Phase 5 entity pages are gated with the core pages: a path with no verdict in
+// gate.json is treated as ungated, so an entity page that skipped this pass would ship
+// indexable without ever being checked for near-duplication (rule 8).
+function* pagesToGate(): Generator<PageModel> {
+  yield* allCorePages();
+  yield* allEntityPages();
+}
+
 const rows: Row[] = [];
 let composed = 0;
-for (const page of allCorePages()) {
+for (const page of pagesToGate()) {
   composed++;
   const text = page.mainText;
   const words = wordCount(text);

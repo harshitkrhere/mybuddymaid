@@ -12,6 +12,7 @@
 //      is kept for machine-readability, not for a rich result.
 // Run: npx tsx scripts/seo/validate-jsonld.ts
 import { allCorePages } from '../../lib/seo-engine/compose';
+import { allEntityPages } from '../../lib/seo-engine/compose-entity';
 import { organizationLd, serializeLd } from '../../lib/seo-engine/jsonld';
 import { SITE_URL } from '../../lib/seo-engine/meta';
 
@@ -114,7 +115,7 @@ function checkBlock(path: string, block: unknown) {
 checkBlock('(root layout)', organizationLd());
 
 let pages = 0;
-for (const page of allCorePages()) {
+for (const page of [...allCorePages(), ...allEntityPages()]) {
   pages++;
   if (!page.jsonld.length) err(`${page.path}: page emits no JSON-LD`);
   const types = new Set<string>();
