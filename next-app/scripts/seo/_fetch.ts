@@ -34,8 +34,10 @@ export async function siteFetch(url: string, init: RequestInit = {}): Promise<Re
   if (BYPASS) {
     const headers = new Headers(init.headers);
     headers.set('x-vercel-protection-bypass', BYPASS);
-    // Ask Vercel to set the bypass cookie too, so redirect targets stay reachable.
-    headers.set('x-vercel-set-bypass-cookie', 'true');
+    // Do NOT also send x-vercel-set-bypass-cookie: Vercel answers that with a 307 to set
+    // the cookie, and with redirect: 'manual' every script then reads that 307 as the
+    // site's own response (the first preview run on 2026-09-07 failed exactly so). The
+    // header is sent on every request anyway, so no cookie is needed.
     options = { ...init, headers };
   }
   let lastError: unknown;
