@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TrustPage } from '@/components/seo/TrustPage';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
+import { PLANS, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD } from '@/data/seo';
 
 export const dynamic = 'force-static';
 
@@ -31,24 +32,14 @@ export default function ReplacementPolicyPage() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Silver</td>
-              <td>10 months</td>
-              <td>3</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>Gold</td>
-              <td>12 months</td>
-              <td>5</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Diamond</td>
-              <td>18 months</td>
-              <td>10</td>
-              <td>5</td>
-            </tr>
+            {PLANS.map((p) => (
+              <tr key={p.key}>
+                <td>{p.name}</td>
+                <td>{p.termMonths} months</td>
+                <td>{p.replacements}</td>
+                <td>{p.verifiedProfiles}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -70,7 +61,8 @@ export default function ReplacementPolicyPage() {
 
       <h2>Refunds</h2>
       <p>
-        The platform fee is refundable, minus a processing fee, only if we are unable to provide three suitable verified profiles matching your original stated requirements within 60 days of payment.
+        The platform fee is refundable, minus a processing fee, only if we are unable to provide {REFUND_PROFILE_THRESHOLD} suitable verified profiles matching your original stated requirements within{' '}
+        {REFUND_WINDOW_DAYS} days of payment.
         Refunds are not issued once a candidate has been successfully hired, or where the client becomes unresponsive. The full terms are in our{' '}
         <Link href="/terms-of-service">terms of service</Link>.
       </p>

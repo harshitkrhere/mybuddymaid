@@ -1,5 +1,12 @@
-// Service data used across the app
-export const SERVICES = [
+// Service data used across the app.
+//
+// Presentation only: names, icons, colours and feature bullets live here, but the
+// PRICE of every service and the plan fees come from the SEO data layer via
+// serviceability.json (regenerate with `npm run seo:export-spa` in next-app/), so
+// there is exactly one source of truth for pricing across the whole repo.
+import { priceLabelForServiceId, planDetails } from './serviceability';
+
+const SERVICE_DEFS = [
   {
     id: 'part-time',
     name: 'Part-Time Buddy',
@@ -7,7 +14,6 @@ export const SERVICES = [
     icon: '🧹',
     color: '#E8F5F6',
     image: '/images/part-time.jpg',
-    price: '₹5,000/mo',
     description: 'Flexible daily help for 4-12 hours. Ideal for working professionals needing daily cleaning, laundry, and kitchen management.',
     features: [
       { title: 'Flexible Hours', desc: 'Choose 4 to 12 hours daily' },
@@ -23,7 +29,6 @@ export const SERVICES = [
     icon: '🏠',
     color: '#FFF3E0',
     image: '/images/full-time.jpg',
-    price: '₹19,000/mo',
     description: 'Complete 24x7 household management. A dedicated professional who stays with your family for ultimate convenience.',
     features: [
       { title: '24/7 Availability', desc: 'Lives with your family full-time' },
@@ -39,7 +44,6 @@ export const SERVICES = [
     icon: '❤️',
     color: '#FDE8E8',
     image: '/images/eldercare.jpg',
-    price: '₹17,000/mo',
     description: 'Compassionate, patient companions trained for senior needs — mobility support, medication reminders, and loving care.',
     features: [
       { title: 'Trained Caregivers', desc: 'Specialized in elderly needs' },
@@ -55,7 +59,6 @@ export const SERVICES = [
     icon: '👨‍🍳',
     color: '#E8F5E9',
     image: '/images/cook.jpg',
-    price: '₹12,000/mo',
     description: 'Expert chefs for North Indian, South Indian, or Continental cuisine. Hygienic, healthy, and tailored to your dietary needs.',
     features: [
       { title: 'Multi-Cuisine', desc: 'North, South Indian, Continental & more' },
@@ -71,7 +74,6 @@ export const SERVICES = [
     icon: '👶',
     color: '#EDE7F6',
     image: '/images/nanny.jpg',
-    price: '₹16,000/mo',
     description: 'Verified, loving caretakers who engage your children safely. Focus on nutrition, hygiene, and developmental activities.',
     features: [
       { title: 'Child Development', desc: 'Age-appropriate activities & learning' },
@@ -87,7 +89,6 @@ export const SERVICES = [
     icon: '🤱',
     color: '#FCE4EC',
     image: '/images/postnatal.jpg',
-    price: 'Premium',
     description: 'Premium care inspired by global standards. Specialized infant handling, mother wellness, and holistic postpartum recovery.',
     features: [
       { title: 'Newborn Care', desc: 'Specialized infant handling & bathing' },
@@ -98,64 +99,36 @@ export const SERVICES = [
   },
 ];
 
-export const PLAN_DETAILS = {
+/** The exported list, with each service's indicative price resolved from the data layer. */
+export const SERVICES = SERVICE_DEFS.map((s) => ({
+  ...s,
+  // postnatal has no band in the data layer (it is sold as a premium bespoke service)
+  price: priceLabelForServiceId(s.id) ?? 'Premium',
+}));
+
+
+// Presentation only — money and contractual terms come from the data layer.
+const PLAN_PRESENTATION = {
   silver: {
-    name: 'Silver',
-    price: 3999,
-    pricePaise: 399900,
-    durationMonths: 10,
-    durationLabel: '10 Months',
-    replacementsTotal: 3,
-    profiles: 1,
     color: '#94A3B8',
     gradient: 'linear-gradient(135deg, #94A3B8, #CBD5E1)',
-    emoji: '🥈',
-    popular: false,
-    benefits: [
-      '10-month replacement guarantee',
-      '1 verified profile',
-      'Basic background verification',
-    ],
+    emoji: '\u{1F948}',
   },
   gold: {
-    name: 'Gold',
-    price: 4999,
-    pricePaise: 499900,
-    durationMonths: 12,
-    durationLabel: '12 Months',
-    replacementsTotal: 5,
-    profiles: 3,
     color: '#F59E0B',
     gradient: 'linear-gradient(135deg, #F59E0B, #FBBF24)',
-    emoji: '🥇',
-    popular: true,
-    benefits: [
-      '12-month replacement guarantee',
-      '3 verified profiles',
-      'Enhanced background checks',
-      'Dedicated relationship manager',
-    ],
+    emoji: '\u{1F947}',
+    extraBenefits: ['Dedicated relationship manager'],
   },
   diamond: {
-    name: 'Diamond',
-    price: 6999,
-    pricePaise: 699900,
-    durationMonths: 18,
-    durationLabel: '18 Months',
-    replacementsTotal: 10,
-    profiles: 5,
     color: '#3B82F6',
     gradient: 'linear-gradient(135deg, #3B82F6, #60A5FA)',
-    emoji: '💎',
-    popular: false,
-    benefits: [
-      '18-month replacement guarantee',
-      '5 verified profiles',
-      'Police verification',
-      '24-hour deployment',
-    ],
+    emoji: '\u{1F48E}',
+    extraBenefits: ['24-hour deployment'],
   },
 };
+
+export const PLAN_DETAILS = planDetails(PLAN_PRESENTATION);
 
 export const RZP_KEY = import.meta.env.VITE_RZP_KEY || '';
 

@@ -90,7 +90,10 @@ zone's `localities` array is derived, so the two can never drift. A zone needs a
 three localities or the validator fails.
 
 ### Change pricing
-Edit the `pricing` block in `data/seo/services.ts`. Bands are indicative and render as
+Edit the `pricing` block in `data/seo/services.ts` for helper salary bands, or
+`data/seo/plans.ts` for the platform plans. Both feed the SEO pages, the `/pricing`
+and `/replacement-policy` trust pages **and** the booking app (via
+`npm run seo:export-spa`), so there is one source of truth for money in the repo. Bands are indicative and render as
 "from ₹X/month" everywhere; nothing else needs touching.
 
 ---
@@ -114,6 +117,9 @@ Run from `next-app/`. All are `npm run <name>`.
 | `seo:keywords` | Regenerates `keywords.csv`, the rank-tracking set. |
 | `seo:indexnow` | Submits new or changed URLs to IndexNow in batches of ≤10,000. |
 | `seo:entities` | Phase 5 entity importer (CSV or OpenStreetMap) and readiness gate. |
+| `seo:export-spa` | Exports the footprint, service price bands and plans into `app/src/lib/serviceability.json`, so the booking app reads the same data layer. Re-run before `node scripts/build-spa.mjs`. |
+| `seo:draft` | Drafts locality prose through the Anthropic API. Run manually; output is committed. |
+| `seo:gsc` | Weekly Search Console export, broken down by city, locality and service. |
 
 `prebuild` runs `seo:validate`, `seo:redirects` and `seo:gate`, so `npm run build`
 cannot ship stale data or an unevaluated quality gate.
@@ -181,6 +187,14 @@ maintenance mode (`MAINTENANCE_MODE=true`, off by default — it must never be h
 on again).
 
 ### Cutover checklist
+
+**The repository no longer builds the old site.** The root `vercel.json`, the merge
+build script and the 3,846-page `mybuddymaid/` folder are deleted, and the root
+`package.json` now delegates to `next-app`. Vercel must be pointed at it:
+**set the project's Root Directory to `next-app`.** The exact set of URLs the legacy
+site published is preserved in [legacy-urls.txt](legacy-urls.txt) and its generator
+data in `legacy-data/`, so the redirect map stays reproducible without those files.
+
 1. Set env vars: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`,
    `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`, `NEXT_PUBLIC_BING_SITE_VERIFICATION`.
    Leave `MAINTENANCE_MODE` unset.
@@ -228,7 +242,9 @@ not volume. A page is generated only when it deserves to exist.
 - **Analytics**: GA4 `G-R24QC81J4P` plus Umami. Clicks on WhatsApp, call and app CTAs
   fire `whatsapp_click`, `call_click` and `app_click` with `city`, `zone`, `locality`,
   `service` and `pincode`, so every lead is attributable to the page that produced it.
-  The lead form fires `lead_submit` with the same parameters.
+  The lead form would fire `lead_submit` with the same parameters, but it ships
+  disabled (see the cutover checklist), so that event is dormant until the Supabase
+  `leads` migration is applied.
 - **Analytics loading**: gtag.js is ~190KB and cost ~560ms of main-thread blocking when
   loaded eagerly. It now loads on first interaction or after 4 seconds, whichever comes
   first. Events fired before it loads are queued and flushed, so no click attribution is

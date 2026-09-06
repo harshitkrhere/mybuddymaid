@@ -4,7 +4,7 @@ import { supabase } from '../lib/supabase';
 import { PLAN_DETAILS } from '../lib/constants';
 import {
   Crown, Check, Loader2, AlertCircle, Shield, Clock, Users,
-  Star, ChevronRight, Zap, Award, HeartHandshake, Mail, Phone,
+  ChevronRight, Zap, Award, HeartHandshake, Mail, Phone,
   Sparkles, MessageCircle, X, PhoneCall
 } from 'lucide-react';
 
@@ -13,36 +13,14 @@ const PURCHASES_PAUSED = true;
 const SUPPORT_PHONE = '+919355114869';
 const SUPPORT_WHATSAPP = `https://wa.me/919355114869?text=${encodeURIComponent('Hi MyBuddyMaid! I\'m interested in purchasing a package. Please help me with the details.')}`;
 
-const TESTIMONIALS = [
-  {
-    name: 'Priya Sharma',
-    role: 'Working Professional',
-    city: 'Delhi NCR',
-    content: 'Found an amazing full-time maid through MyBuddyMaid within 3 days. The verification process gave us complete peace of mind. Highly recommend!',
-    rating: 5,
-  },
-  {
-    name: 'Rajesh Kumar',
-    role: 'Business Owner',
-    city: 'Bangalore',
-    content: 'We needed a cook urgently and the Gold plan delivered 3 verified profiles. Selected one on the same day. Excellent service!',
-    rating: 5,
-  },
-  {
-    name: 'Anita Desai',
-    role: 'New Mother',
-    city: 'Mumbai',
-    content: 'The postnatal care helper we got was trained and compassionate. The replacement guarantee gave us confidence to commit.',
-    rating: 5,
-  }
-];
-
+// Testimonials removed: the three entries here were invented names with 5-star
+// ratings. We publish real reviews or none at all.
 const PLATFORM_FEATURES = [
   'Aadhaar & KYC verified professionals',
   'Police verification on premium plans',
   'Free replacement if unsatisfied',
   'Dedicated relationship manager',
-  'Pan-India coverage (7+ cities)',
+  'Coverage across Delhi NCR, Mumbai, Pune, Bangalore & Mangalore',
   '24/7 support via WhatsApp',
   'Secure Razorpay payments',
   'No hidden charges — ever',
@@ -56,20 +34,11 @@ export default function PricingPage() {
   const [buyPhone, setBuyPhone] = useState(profile?.phone || '');
   const [contactError, setContactError] = useState('');
   const [selectedPlan, setSelectedPlan] = useState('gold');
-  const [testimonialIdx, setTestimonialIdx] = useState(0);
   const [showPausedModal, setShowPausedModal] = useState(false);
   const [pausedPlanName, setPausedPlanName] = useState('');
 
   const activePlanDetails = userPlan ? PLAN_DETAILS[userPlan.plan_name] : null;
   const plan = PLAN_DETAILS[selectedPlan];
-
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTestimonialIdx(prev => (prev + 1) % TESTIMONIALS.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   const handleBuyPlan = async (planKey) => {
     // ── TEMPORARY PAUSE: Show contact modal instead of payment ──
@@ -181,7 +150,6 @@ export default function PricingPage() {
     }
   };
 
-  const testimonial = TESTIMONIALS[testimonialIdx];
 
   return (
     <div className="pricing-page">
@@ -364,7 +332,7 @@ export default function PricingPage() {
               </button>
             </div>
 
-            {/* Right column — Features + testimonial */}
+            {/* Right column — platform features */}
             <div className="pricing-card-right">
               <div className="pricing-features-header">
                 <Sparkles size={16} />
@@ -392,35 +360,6 @@ export default function PricingPage() {
                 ))}
               </div>
 
-              {/* Testimonial */}
-              <div className="pricing-testimonial">
-                <div className="pricing-testimonial-content" key={testimonialIdx}>
-                  <div className="pricing-testimonial-header">
-                    <div className="pricing-testimonial-avatar">
-                      {testimonial.name[0]}
-                    </div>
-                    <div className="pricing-testimonial-info">
-                      <span className="pricing-testimonial-name">{testimonial.name}</span>
-                      <span className="pricing-testimonial-role">{testimonial.role}, {testimonial.city}</span>
-                    </div>
-                    <div className="pricing-testimonial-stars">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} size={12} fill="currentColor" />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="pricing-testimonial-text">"{testimonial.content}"</p>
-                </div>
-                <div className="pricing-testimonial-dots">
-                  {TESTIMONIALS.map((_, i) => (
-                    <button
-                      key={i}
-                      className={`pricing-dot ${i === testimonialIdx ? 'active' : ''}`}
-                      onClick={() => setTestimonialIdx(i)}
-                    />
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>

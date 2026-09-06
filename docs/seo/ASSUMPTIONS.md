@@ -142,3 +142,29 @@ editing one data file unless noted.
     Any previously saved profile value that is not a served city stays selectable so it
     is never silently lost. Re-run `seo:export-spa` and `node scripts/build-spa.mjs`
     whenever the footprint changes.
+33. **The legacy site and its build pipeline are deleted.** `mybuddymaid/` (3,846 generated
+    pages), `seo-generator/`, `scripts/merge-build.js`, `inject-head-scripts.ps1` and the
+    root `vercel.json` are gone, and the root `package.json` now delegates to `next-app`.
+    Leaving them in place meant a deploy from the repo root would still ship the retired
+    static site, and its rewrites of `/services` and `/pricing` collided with two new
+    indexable pages. The exact URL set the legacy site published is preserved in
+    `docs/seo/legacy-urls.txt` and its generator data in `docs/seo/legacy-data/`, and
+    `gen-redirects.ts` reads those, so the redirect map is still reproducible byte for
+    byte (verified: identical output before and after the deletion). **Vercel's project
+    Root Directory must be set to `next-app`.**
+34. **`.html` redirects removed from `next-app/vercel.json`.** Platform redirects run
+    before middleware, so those rules turned every legacy `.html` URL into a two-hop chain
+    (`.html` → clean → 301/410). `proxy.ts` already normalises the extension itself and
+    resolves in one hop. The local redirect check ran against `next start`, where
+    vercel.json redirects do not apply, which is why it did not catch this. The deprecated
+    `X-XSS-Protection` header was dropped at the same time.
+35. **Fabricated testimonials removed from the booking app.** `app/src/pages/PricingPage.jsx`
+    carried three invented named reviewers with 5-star ratings, and a "Pan-India coverage
+    (7+ cities)" claim. Both are gone; the coverage line now names the cities we actually
+    serve. Real reviews can be added when they exist.
+36. **Pricing has one source.** `data/seo/services.ts` (salary bands) and the new
+    `data/seo/plans.ts` (platform plans) now feed the trust pages and, through
+    `seo:export-spa`, the booking app. The hard-coded plan table in the Next.js pricing
+    page and the point prices and `PLAN_DETAILS` in `app/src/lib/constants.js` are gone;
+    only presentation (colours, emoji, feature bullets) stays local. The booking app's
+    `postnatal` service has no band in the data layer, so it displays "Premium" as before.

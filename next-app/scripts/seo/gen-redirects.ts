@@ -15,6 +15,36 @@ import { ALL_LOCALITIES, ZONES } from '../../data/seo';
 const ROOT = process.cwd(); // next-app/
 const REPO = path.resolve(ROOT, '..');
 const LEGACY = path.join(REPO, 'mybuddymaid');
+/**
+ * The legacy static site is deleted at cutover, so the exact set of URLs it published is
+ * snapshotted here. That keeps the redirect map reproducible - and byte-identical -
+ * without keeping 3,846 dead HTML files in the repo. Regenerate only from a checkout that
+ * still has mybuddymaid/.
+ */
+const LEGACY_URL_LIST = path.join(REPO, 'docs', 'seo', 'legacy-urls.txt');
+
+/** Legacy paths, from the snapshot if present, else read from the live legacy folder. */
+function legacyPaths(): string[] {
+  if (fs.existsSync(LEGACY_URL_LIST)) {
+    return fs
+      .readFileSync(LEGACY_URL_LIST, 'utf8')
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .filter(Boolean);
+  }
+  if (!fs.existsSync(LEGACY)) {
+    console.error(`No legacy URL snapshot at ${LEGACY_URL_LIST} and no ${LEGACY} folder — cannot build the redirect map.`);
+    process.exit(1);
+  }
+  const out: string[] = [];
+  for (const f of fs.readdirSync(LEGACY)) if (f.endsWith('.html')) out.push(`/${f.replace(/\.html$/, '')}`);
+  for (const sub of ['blog', 'cities', 'state']) {
+    const dir = path.join(LEGACY, sub);
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir)) if (f.endsWith('.html')) out.push(`/${sub}/${f.replace(/\.html$/, '')}`);
+  }
+  return out.sort();
+}
 
 // ---------------- legacy vocab ----------------
 const LEGACY_SERVICES = ['full-time-maid', 'elderly-care', 'postnatal-care', 'maid', 'cook', 'nanny'] as const; // longest-first matters
@@ -26,8 +56,9 @@ const NEW_SERVICE: Record<string, string | null> = {
   'elderly-care': 'elder-care',
   'postnatal-care': 'babysitter-nanny',
 };
+// The legacy generator's city list, archived when seo-generator/ was deleted.
 const legacyCities: string[] = JSON.parse(
-  fs.readFileSync(path.join(REPO, 'seo-generator', 'data', 'cities.json'), 'utf8'),
+  fs.readFileSync(path.join(REPO, 'docs', 'seo', 'legacy-data', 'cities.json'), 'utf8'),
 ).map((c: { slug: string }) => c.slug);
 // longest-first so 'navi-mumbai' beats 'mumbai'
 legacyCities.sort((a, b) => b.length - a.length);
@@ -136,11 +167,11 @@ function mapLocality(legacySvc: string, base: string, legacyCity: string, old: s
   add(old, `/services/${ns}/${nc}`, 301, 'unmatched locality → service×city (ASSUMPTIONS #5)');
 }
 
-// ---------------- walk legacy files ----------------
-const top = fs.readdirSync(LEGACY).filter((f) => f.endsWith('.html'));
-for (const f of top) {
-  const name = f.replace(/\.html$/, '');
-  const old = `/${name}`;
+// ---------------- walk the legacy URL set ----------------
+const ALL_LEGACY = legacyPaths();
+const top = ALL_LEGACY.filter((p) => p.split('/').length === 2);
+for (const old of top) {
+  const name = old.slice(1);
 
   // best-{svc}-service-in-{city}
   let m = name.match(/^best-(.+)-service-in-(.+)$/);
@@ -205,14 +236,14 @@ for (const f of top) {
 }
 
 // subfolders
-for (const f of fs.readdirSync(path.join(LEGACY, 'cities')).filter((f2) => f2.endsWith('.html'))) {
-  const city = f.replace(/\.html$/, '');
+for (const p of ALL_LEGACY.filter((x) => x.startsWith('/cities/'))) {
+  const city = p.slice('/cities/'.length);
   const nc = NEW_CITY[city];
-  if (nc) add(`/cities/${city}`, `/${nc}`, 301, 'city hub moved');
-  else add(`/cities/${city}`, '', 410, 'city hub outside footprint');
+  if (nc) add(p, `/${nc}`, 301, 'city hub moved');
+  else add(p, '', 410, 'city hub outside footprint');
 }
-for (const f of fs.readdirSync(path.join(LEGACY, 'state')).filter((f2) => f2.endsWith('.html'))) {
-  add(`/state/${f.replace(/\.html$/, '')}`, '', 410, 'state pages retired (never in sitemap)');
+for (const p of ALL_LEGACY.filter((x) => x.startsWith('/state/'))) {
+  add(p, '', 410, 'state pages retired (never in sitemap)');
 }
 // blog/* is KEPT at the same URLs (ported route) — no redirect rows needed.
 

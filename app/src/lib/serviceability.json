@@ -3353,29 +3353,87 @@
   "services": [
     {
       "slug": "full-time-maid",
-      "name": "Full-Time Maid"
+      "name": "Full-Time Maid",
+      "shortDescription": "A dedicated helper for 8–12 hours a day (or live-in) who handles all daily household chores.",
+      "from": 16000,
+      "to": 26000
     },
     {
       "slug": "part-time-maid",
-      "name": "Part-Time Maid"
+      "name": "Part-Time Maid",
+      "shortDescription": "Task-based help for 1–4 hours a day — sweeping-mopping, utensils, dusting and laundry on a fixed daily slot.",
+      "from": 4500,
+      "to": 9000
     },
     {
       "slug": "cook",
-      "name": "Cook"
+      "name": "Cook",
+      "shortDescription": "A home cook for one or more daily meal slots, matched to your cuisine and diet preferences.",
+      "from": 10000,
+      "to": 18000
     },
     {
       "slug": "babysitter-nanny",
-      "name": "Babysitter / Nanny"
+      "name": "Babysitter / Nanny",
+      "shortDescription": "Trained childcare help for infants, toddlers and school-age children — including japa/postnatal support for newborns and mothers.",
+      "from": 14000,
+      "to": 24000
     },
     {
       "slug": "elder-care",
-      "name": "Elder Care"
+      "name": "Elder Care",
+      "shortDescription": "Non-medical companionship and daily assistance for senior citizens at home — mobility support, meals, medication reminders and company.",
+      "from": 15000,
+      "to": 25000
     },
     {
       "slug": "domestic-help",
-      "name": "Domestic Help"
+      "name": "Domestic Help",
+      "shortDescription": "An all-rounder housekeeping helper — cleaning, utensils, laundry and dusting combined, part-time or full-time.",
+      "from": 5000,
+      "to": 19000
     }
   ],
+  "plans": [
+    {
+      "key": "silver",
+      "name": "Silver",
+      "fee": 3999,
+      "feePaise": 399900,
+      "termMonths": 10,
+      "replacements": 3,
+      "verifiedProfiles": 1,
+      "policeVerification": false
+    },
+    {
+      "key": "gold",
+      "name": "Gold",
+      "fee": 4999,
+      "feePaise": 499900,
+      "termMonths": 12,
+      "replacements": 5,
+      "verifiedProfiles": 3,
+      "policeVerification": true,
+      "popular": true
+    },
+    {
+      "key": "diamond",
+      "name": "Diamond",
+      "fee": 6999,
+      "feePaise": 699900,
+      "termMonths": 18,
+      "replacements": 10,
+      "verifiedProfiles": 5,
+      "policeVerification": true
+    }
+  ],
+  "spaServiceMap": {
+    "part-time": "part-time-maid",
+    "full-time": "full-time-maid",
+    "cook": "cook",
+    "nanny": "babysitter-nanny",
+    "elderly-care": "elder-care"
+  },
   "pincodes": {
     "110001": {
       "city": "delhi",

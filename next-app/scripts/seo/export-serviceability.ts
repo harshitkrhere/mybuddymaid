@@ -6,7 +6,7 @@
 // Run: npx tsx scripts/seo/export-serviceability.ts
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { ALL_LOCALITIES, CITIES, PINCODES, SERVICES, ZONES } from '../../data/seo';
+import { ALL_LOCALITIES, CITIES, PINCODES, PLANS, SERVICES, ZONES } from '../../data/seo';
 
 const ROOT = process.cwd();
 const OUT = path.resolve(ROOT, '..', 'app', 'src', 'lib', 'serviceability.json');
@@ -23,12 +23,28 @@ const payload = {
     pincodes: l.pincodes,
   })).sort((a, b) => a.city.localeCompare(b.city) || a.name.localeCompare(b.name)),
   zones: ZONES.map((z) => ({ slug: z.slug, city: z.city, name: z.name })),
-  services: SERVICES.map((s) => ({ slug: s.slug, name: s.name })),
+  services: SERVICES.map((s) => ({
+    slug: s.slug,
+    name: s.name,
+    shortDescription: s.shortDescription,
+    /** Indicative monthly band for the metro tier — the booking app shows "from". */
+    from: s.pricing.metro.from,
+    to: s.pricing.metro.to,
+  })),
+  plans: PLANS,
+  /** Booking-app service id -> data/seo service slug. */
+  spaServiceMap: {
+    'part-time': 'part-time-maid',
+    'full-time': 'full-time-maid',
+    cook: 'cook',
+    nanny: 'babysitter-nanny',
+    'elderly-care': 'elder-care',
+  } as Record<string, string>,
   /** pincode -> locality slugs, for the serviceability check. */
   pincodes: Object.fromEntries(PINCODES.map((p) => [p.pin, { city: p.city, localities: p.localities }])),
 };
 
 fs.writeFileSync(OUT, JSON.stringify(payload, null, 2) + '\n');
 console.log(
-  `export-serviceability: ${payload.cities.length} cities, ${payload.localities.length} localities, ${Object.keys(payload.pincodes).length} pincodes -> ${path.relative(path.resolve(ROOT, '..'), OUT)}`,
+  `export-serviceability: ${payload.cities.length} cities, ${payload.localities.length} localities, ${Object.keys(payload.pincodes).length} pincodes, ${payload.services.length} services, ${payload.plans.length} plans -> ${path.relative(path.resolve(ROOT, '..'), OUT)}`,
 );

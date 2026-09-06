@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TrustPage } from '@/components/seo/TrustPage';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
-import { SERVICES, CITIES } from '@/data/seo';
+import { SERVICES, CITIES, PLANS, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD } from '@/data/seo';
 import { inr } from '@/lib/seo-engine/compose';
 
 export const dynamic = 'force-static';
@@ -13,12 +13,6 @@ export const metadata: Metadata = staticMetadata({
     'MyBuddyMaid platform plans (Silver, Gold, Diamond) and indicative monthly salary bands for maids, cooks, nannies and elder-care helpers across the cities we serve.',
   path: '/pricing',
 });
-
-const PLANS = [
-  { name: 'Silver', fee: 3999, term: '10 months', replacements: 3, profiles: 1 },
-  { name: 'Gold', fee: 4999, term: '12 months', replacements: 5, profiles: 3 },
-  { name: 'Diamond', fee: 6999, term: '18 months', replacements: 10, profiles: 5 },
-];
 
 export default function PricingPage() {
   return (
@@ -45,12 +39,12 @@ export default function PricingPage() {
           </thead>
           <tbody>
             {PLANS.map((p) => (
-              <tr key={p.name}>
+              <tr key={p.key}>
                 <td>{p.name}</td>
                 <td>{inr(p.fee)}</td>
-                <td>{p.term}</td>
+                <td>{p.termMonths} months</td>
                 <td>{p.replacements}</td>
-                <td>{p.profiles}</td>
+                <td>{p.verifiedProfiles}</td>
               </tr>
             ))}
           </tbody>

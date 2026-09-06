@@ -1,10 +1,14 @@
 {
   "name": "mybuddymaid",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "description": "MyBuddyMaid — Next.js marketing/SEO site (next-app) plus the Vite booking app (app), served together under one origin.",
   "scripts": {
-    "dev": "cd app && npm run dev",
-    "build": "cd app && npm run build && node ../scripts/merge-build.js",
-    "preview": "cd app && npm run preview"
-  }
+    "dev": "cd next-app && npm run dev",
+    "build": "cd next-app && npm run build",
+    "start": "cd next-app && npm start",
+    "build:spa": "node scripts/build-spa.mjs",
+    "dev:app": "cd app && npm run dev"
+  },
+  "//deploy": "Vercel must build next-app: set the project's Root Directory to 'next-app'. There is deliberately no root vercel.json — the old one deployed the retired static site from app/dist. Run `npm run build:spa` whenever app/ changes, so the booking app embedded at next-app/public/_spa (served under /app/*) is current."
 }

@@ -8,7 +8,7 @@
 //      SEO page needs a React client boundary;
 //   3. loads gtag.js and Umami on the first user interaction, or after a short timeout.
 //
-// Trade-off (documented in docs/seo/ASSUMPTIONS.md #18): gtag.js is ~190KB and cost
+// Trade-off (documented in docs/seo/ASSUMPTIONS.md #24): gtag.js is ~190KB and cost
 // roughly 560ms of main-thread blocking when loaded eagerly. Deferring it keeps the page
 // responsive during the window INP measures. Clicks are queued and still recorded; the
 // only loss is a page_view for a visitor who leaves within a few seconds without

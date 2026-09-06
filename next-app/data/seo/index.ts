@@ -17,6 +17,7 @@ import { MANGALORE_LOCALITIES } from './localities/mangalore';
 
 export * from './types';
 export { SERVICES, SERVICE_BY_SLUG } from './services';
+export { PLANS, PLAN_BY_KEY, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD } from './plans';
 export { GLOBAL_FAQS, HOUSING_FAQ_POOLS } from './faqs/shared-faqs';
 
 const cityIntros = (cityContent as { intros?: Record<string, string> }).intros ?? {};
