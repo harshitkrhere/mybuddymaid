@@ -128,6 +128,83 @@ placements.** The facts the worksheet asks for are already in the CRM and WhatsA
 history for those societies, so every published fact is verifiable, and those are the
 societies that convert best. Candidates with no placement history stay `draft`.
 
+### Wide candidate run — 2026-09-06, Greater Noida + Gurgaon + Noida (119 localities)
+
+Owner's instruction: run `--osm` wide first, for recall, expecting zero promotable. The value
+is turning "list every society you serve from memory" into "tick the ones you serve from
+this list". Result: **614 draft candidates, 0 ready, 0 pages** — as intended.
+
+| City | Localities | Drafts | Localities with ≥ 1 | Top localities |
+|---|---|---|---|---|
+| Greater Noida | 12 | 156 | 9 | Gaur City 45 · Jaypee Greens 40 · Techzone 40 |
+| Gurgaon | 50 | 352 | 46 | Golf Course Road 20 · Sector 86 20 · DLF Phase 1 17 · Sector 44 17 |
+| Noida | 57 | 106 | 33 | Sector 76 14 · Sector 62 13 · Sector 50 7 · Sector 51 7 |
+
+By kind: 568 societies, 31 landmarks, 15 metro stations. Worksheet:
+[`entity-worksheet.csv`](entity-worksheet.csv), `serve?` column first, sorted by locality.
+
+**Tower-level guard, verified on the brief's own example.** The parent-locality rule is an
+exact match on the whole normalised name (`slugify(name minus city) === slugify(locality)`
+or one of its alt names); nothing prefix- or substring-based. Gaur City, run alone with
+`--verbose`: 72 candidates, **8 rejected, every one of them named** —
+
+| Reason | Names |
+|---|---|
+| generic tower/block label, no society name | Tower A · tower A · Tower B · Tower C · Tower H |
+| private house | vipin's appartment · Manral's Home |
+| sector name | Sector 122 |
+| exactly the parent locality | *(none in this run)* |
+
+`12th Avenue Gaur City 2` and `16th Avenue` both survived — they are the only two avenues
+OSM has mapped; the other fourteen must come from the operator. The 16 parent-locality
+rejections in the first Greater Noida pass predate name logging; by construction they can
+only be a name equal to `Gaur City`, `Gaur City 1`, `Gaur City 2`, `Jaypee Greens`,
+`Alpha`, `Beta`… — the `place=suburb` / `boundary=place` nodes and relations that *are*
+the locality. Rejected names now print under every reason with `--verbose`, after every
+locality in an `--all` run, and the parent-locality reason always prints its names.
+
+**Rejection tallies** (the same rules everywhere; numbers per city):
+
+| Reason | Greater Noida | Gurgaon (sectors 65+) | Noida |
+|---|---|---|---|
+| tower within a society that is itself a candidate | 86 (Kosmos 01–80, …) | – | – |
+| generic tower/block label, no society name | 35 | 28 | 9 (Block K–O, Site, Pocket 7) |
+| name is exactly the parent locality | 16 | – | – |
+| name is a sector, not an entity | 11 | 2 | 83 |
+| slug collides with a locality | – | – | 65 (a sector we already serve) |
+| plot/house code | 9 | 3 | 10 (A1, A5, Pi) |
+| private house | 3 | – | – |
+| too far from any Appendix-B locality | 1 | – | – |
+
+Noida's rejections are almost all sector names — the Overpass `place=neighbourhood`
+layer in Noida is sectors, which are localities in this model, not entities. That is
+correct behaviour, not lost recall.
+
+**Three things the run exposed:**
+
+1. **11 Noida localities are geocoded to the city centre.** Sectors 140, 141, 142, 145,
+   146, 147, 148, 150, 151, 152 (and one more) all carry `28.57054, 77.32289`, the Noida
+   centroid Nominatim returns when the sector query fails; sector-136 and sector-149 also
+   look wrong. Their neighbour lists therefore point at central Noida, and the entity
+   sweep found nothing near them (identical "10 rejected, 10 attributed" every time —
+   the same query point). This is a core-estate data defect, not a Phase 5 one; queued
+   as its own task. Until it is fixed those sectors will have no candidates.
+2. **Overpass reliability.** The public API returned 429/504 and connect timeouts across
+   all three mirrors for about an hour. The importer now rotates mirrors, backs off up to
+   180 s, aborts a hung request at 120 s, prefers IPv4, and treats a `remark` (a partial
+   result on HTTP 200) as a failed attempt rather than silently under-counting.
+3. **A process-management failure, mine.** Stopping a background shell on Windows did
+   not stop its `node` child, so for about an hour two importers ran in parallel — the
+   one thing the owner said not to do — and overwrote each other's `entities.json`; a
+   dozen Gurgaon sectors were logged as imported and then lost. Re-run from Sector 65
+   recovered them. Guards now: a pid lockfile refuses a second instance, every write
+   merges with what is on disk and lands by atomic rename, and `--from <slug>` resumes a
+   city without re-fetching. Recorded so nobody repeats it.
+
+**Next:** the owner marks `serve? = y` on societies with existing placements and fills
+≥ 5 `fact:` columns for each; `--csv ... --promote` then `seo:gate`. Everything else in
+the worksheet is dropped on that import.
+
 ### How to release the first real batch
 
 1. `npm run seo:entities -- --osm --city <city> --locality <locality>` for each pilot

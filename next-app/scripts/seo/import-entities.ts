@@ -21,8 +21,10 @@
 // with >= 5 *entity-specific* facts to "ready" (facts inherited from the parent locality
 // do not count); the operator approves the rest by hand.
 //   npx tsx scripts/seo/import-entities.ts --promote
+import * as dns from 'node:dns';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+dns.setDefaultResultOrder('ipv4first');
 import { ALL_LOCALITIES, CITY_BY_SLUG, LOCALITY_BY_PATH, RESERVED_SLUGS } from '../../data/seo';
 import { MIN_ENTITY_FACTS, meetsReadinessGate } from '../../data/seo/entities';
 import type { Entity, EntityKind, Locality } from '../../data/seo/types';
@@ -35,8 +37,17 @@ const argValue = (f: string) => {
   return i >= 0 ? args[i + 1] : undefined;
 };
 
+/**
+ * Search radius per locality kind. A sector is ~1 km across; a township like Gaur City or
+ * Jaypee Greens is 3-4 km across and its avenues/phases sit 1.5-2.6 km from the centroid
+ * (measured 2026-09-06: "12th Avenue Gaur City 2" 1,648 m, "16th Avenue" 2,036 m, "Apex
+ * Golf Avenue" 2,583 m; Jaypee's Kosmos 1.4-1.9 km). At 1,200 m they are never queried.
+ */
+function searchRadius(loc: Locality): number {
+  return loc.kind === 'township' ? 3000 : 1200;
+}
 /** Beyond this an OSM hit is closer to somewhere we do not serve than to a locality we do. */
-const MAX_ASSIGN_RADIUS_M = 2000;
+const assignCap = (loc: Locality) => searchRadius(loc) + 500;
 
 /** Fact columns the operator fills in; the ones a household actually asks about. */
 const WORKSHEET_FACTS = [
@@ -81,10 +92,16 @@ function normaliseName(raw: string): string {
     .join(' ');
 }
 
-/** "Sector 48", "Noida Sector 101", "Sector-62" — administrative areas, never entities. */
-function looksLikeSectorName(name: string): boolean {
-  return /(^|\s)sector[\s-]*\d+[a-z]?$/i.test(name.trim());
+/**
+ * "Sector 48", "Noida Sector 101", "Sector-62A" — administrative areas, never entities.
+ * Whole-name match only, after stripping the city name: "Amrapali Sapphire Sector 45" is
+ * a society and must survive.
+ */
+function looksLikeSectorName(name: string, cityName: string): boolean {
+  const stripped = name.replace(new RegExp(escapeRe(cityName), 'ig'), '').trim();
+  return /^sector[\s-]*\d+[a-z]?$/i.test(stripped);
 }
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 /**
  * OSM carries plot and house codes as names ("H3/2", "C-14"). Nobody searches for those
@@ -92,6 +109,20 @@ function looksLikeSectorName(name: string): boolean {
  */
 function looksLikeCode(name: string): boolean {
   return !/[A-Za-z]{3}/.test(name.replace(/\s+/g, ''));
+}
+
+/**
+ * "Tower 12", "tower A", "Block C", "Site", "Pocket 7" — a generic label with no society
+ * name attached. OSM mappers label individual buildings this way inside a complex whose
+ * own name is on a different way. Nobody searches for "maid in Tower 12".
+ */
+function looksLikeGenericLabel(name: string): boolean {
+  return /^(tower|block|wing|phase|building|site|pocket|plot|gate|type)(\s*-?\s*[a-z0-9]{1,3})?$/i.test(name.trim());
+}
+
+/** "vipin's appartment", "Manral's Home" — a private house, not a place. */
+function looksLikePrivateHouse(name: string): boolean {
+  return /['\u2019]s\s/i.test(name) || /\b(home|house|residence|villa|flat|apartment|appartment)\s*$/i.test(name) && /['\u2019]/.test(name);
 }
 
 const R = 6_371_000;
@@ -128,29 +159,74 @@ function inheritedFacts(loc: Locality): Record<string, string> {
   };
 }
 
+// Only one importer may run at a time. Two instances each hold their own copy of the
+// store and overwrite each other's per-locality writes (this happened on 2026-09-06 when
+// a stopped background shell left its node child running: a dozen Gurgaon sectors were
+// logged as imported and then lost). The lock records the pid so a stale lock from a
+// killed process can be identified and removed.
+const LOCK = path.join(ROOT, 'data', 'seo', '.entities.lock');
+function acquireLock() {
+  if (fs.existsSync(LOCK)) {
+    const holder = fs.readFileSync(LOCK, 'utf8').trim();
+    let alive = false;
+    try {
+      process.kill(Number(holder), 0);
+      alive = true;
+    } catch {
+      alive = false;
+    }
+    if (alive) {
+      console.error(`another importer (pid ${holder}) is running — refusing to start. Never run two in parallel.`);
+      process.exit(2);
+    }
+    console.log(`removing stale lock from pid ${holder}`);
+  }
+  fs.writeFileSync(LOCK, String(process.pid));
+  const release = () => {
+    try {
+      if (fs.existsSync(LOCK) && fs.readFileSync(LOCK, 'utf8').trim() === String(process.pid)) fs.unlinkSync(LOCK);
+    } catch {
+      /* best effort */
+    }
+  };
+  process.on('exit', release);
+  for (const sig of ['SIGINT', 'SIGTERM', 'SIGHUP'] as const) process.on(sig, () => process.exit(130));
+}
+acquireLock();
+
 const existing: Entity[] = fs.existsSync(STORE) ? JSON.parse(fs.readFileSync(STORE, 'utf8')) : [];
 const byKey = new Map(existing.map((e) => [`${e.city}/${e.locality}/${e.slug}`, e]));
 const TODAY = process.env.IMPORT_DATE ?? new Date().toISOString().slice(0, 10);
+const droppedKeys = new Set<string>();
 const rejections = new Map<string, number>();
-const reject = (reason: string) => {
+const rejectedNames = new Map<string, string[]>();
+const VERBOSE = args.includes('--verbose');
+const reject = (reason: string, name = '') => {
   rejections.set(reason, (rejections.get(reason) ?? 0) + 1);
+  if (name) rejectedNames.set(reason, [...(rejectedNames.get(reason) ?? []), name]);
   return 'rejected' as const;
 };
 
 function add(e: Entity): 'added' | 'updated' | 'rejected' {
   const loc = LOCALITY_BY_PATH.get(`${e.city}/${e.locality}`);
   if (!loc) return reject('parent locality not in Appendix B');
-  if (RESERVED_SLUGS.has(e.slug)) return reject('slug is reserved');
+  if (RESERVED_SLUGS.has(e.slug)) return reject('slug is reserved', e.name);
   // an entity slug must not collide with a service slug or a sibling locality
-  if (ALL_LOCALITIES.some((l) => l.city === e.city && l.slug === e.slug)) return reject('slug collides with a locality');
+  if (ALL_LOCALITIES.some((l) => l.city === e.city && l.slug === e.slug)) return reject('slug collides with a locality', e.name);
   // a sector is a locality-level unit in this data model: if it is serviceable it belongs
   // in Appendix B, and if it is not, it must not get a page under another sector's URL
-  if (looksLikeSectorName(e.name)) return reject('name is a sector, not an entity');
-  if (looksLikeCode(e.name)) return reject('name is a plot/house code, not a place');
-  // an entity whose name is just the parent restates the locality page's intent (rule 2)
-  const bare = (s: string) => slugify(s.replace(new RegExp(CITY_BY_SLUG.get(e.city)!.name, 'ig'), ''));
+  const cityName = CITY_BY_SLUG.get(e.city)!.name;
+  if (looksLikeSectorName(e.name, cityName)) return reject('name is a sector, not an entity', e.name);
+  if (looksLikeCode(e.name)) return reject('name is a plot/house code, not a place', e.name);
+  if (looksLikeGenericLabel(e.name)) return reject('generic tower/block label with no society name', e.name);
+  if (looksLikePrivateHouse(e.name)) return reject('private house, not a place', e.name);
+  // An entity whose name IS the parent restates the locality page's intent (rule 2).
+  // EXACT match on the whole normalised name only — never prefix or substring. "Gaur City
+  // 7th Avenue" under Gaur City is a distinct tower-level entity and is the brief's own
+  // example of the long-tail this system exists for.
+  const bare = (s: string) => slugify(s.replace(new RegExp(escapeRe(cityName), 'ig'), ''));
   if (bare(e.name) === bare(loc.name) || loc.altNames.some((a) => bare(e.name) === bare(a))) {
-    return reject('name duplicates the parent locality');
+    return reject('name is exactly the parent locality', e.name);
   }
   const key = `${e.city}/${e.locality}/${e.slug}`;
   const prev = byKey.get(key);
@@ -178,6 +254,10 @@ function importCsv(file: string) {
   let added = 0;
   let updated = 0;
   let rejected = 0;
+  let dropped = 0;
+  let untriaged = 0;
+  const triage = header.includes('serve?');
+  const keepUntriaged = args.includes('--keep-untriaged');
   for (const line of lines.slice(1)) {
     const cells =
       line
@@ -191,6 +271,26 @@ function importCsv(file: string) {
       rejected++;
       reject('CSV row missing name/city/locality');
       continue;
+    }
+    if (triage) {
+      const serve = (row['serve?'] ?? '').trim().toLowerCase();
+      const yes = serve === 'y' || serve === 'yes';
+      if (!yes) {
+        const explicitNo = serve === 'n' || serve === 'no';
+        if (explicitNo || !keepUntriaged) {
+          // drop the candidate — drafts only; a ready/live entity is never deleted by a CSV
+          const key = `${city}/${locality}/${slugify(normaliseName(row.name))}`;
+          const prev = byKey.get(key);
+          if (prev && prev.status === 'draft') {
+            byKey.delete(key);
+            droppedKeys.add(key);
+            dropped++;
+          }
+        } else {
+          untriaged++;
+        }
+        continue;
+      }
     }
     const facts: Record<string, string> = {};
     for (const h of header) if (h.startsWith('fact:') && row[h]?.trim()) facts[h.slice(5)] = row[h].trim();
@@ -221,7 +321,63 @@ function importCsv(file: string) {
     else if (r === 'updated') updated++;
     else rejected++;
   }
-  console.log(`CSV import: ${added} added, ${updated} updated, ${rejected} rejected`);
+  console.log(
+    `CSV import: ${added} added, ${updated} updated, ${rejected} rejected` +
+      (triage ? `, ${dropped} dropped (serve? not y)` + (untriaged ? `, ${untriaged} left untriaged` : '') : ''),
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Overpass transport — the public API rate-limits, so one request at a time, a pause
+// between them, and a backoff retry on 429/502/503/504. Never fire localities in parallel.
+// ---------------------------------------------------------------------------
+type OverpassResult = {
+  elements: { tags?: Record<string, string>; lat?: number; lon?: number; center?: { lat: number; lon: number } }[];
+};
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const OVERPASS_GAP_MS = Number(process.env.OVERPASS_GAP_MS ?? 3000);
+// Public mirrors, tried in turn when the previous one is unreachable or rate-limited.
+const OVERPASS_MIRRORS = [
+  'https://overpass-api.de/api/interpreter',
+  'https://overpass.kumi.systems/api/interpreter',
+  'https://overpass.private.coffee/api/interpreter',
+];
+let mirror = 0;
+let lastOverpassAt = 0;
+async function overpass(query: string): Promise<OverpassResult> {
+  const waits = [10_000, 30_000, 60_000, 120_000, 180_000];
+  for (let attempt = 0; ; attempt++) {
+    const since = Date.now() - lastOverpassAt;
+    if (since < OVERPASS_GAP_MS) await sleep(OVERPASS_GAP_MS - since);
+    lastOverpassAt = Date.now();
+    let res: Response | null = null;
+    try {
+      res = await fetch(OVERPASS_MIRRORS[mirror], {
+        method: 'POST',
+        headers: { 'content-type': 'application/x-www-form-urlencoded', 'User-Agent': 'MyBuddyMaid-SEO/1.0 (info@mybuddymaid.in)' },
+        body: `data=${encodeURIComponent(query)}`,
+        // a mirror that accepts the connection and never answers must count as a failure,
+        // or one hung request stalls the whole city
+        signal: AbortSignal.timeout(120_000),
+      });
+    } catch (err) {
+      if (attempt >= waits.length) throw err;
+      res = null; // transport error — retried below
+    }
+    let status: number | string = res?.status ?? 'network error';
+    if (res?.ok) {
+      const data = (await res.json()) as OverpassResult & { remark?: string };
+      if (!data.remark) return data;
+      status = `partial result (${data.remark.slice(0, 60)})`;
+    }
+    if (attempt >= waits.length || (res && !res.ok && ![429, 502, 503, 504].includes(res.status))) {
+      throw new Error(`Overpass returned ${status}`);
+    }
+    // switch mirror on every failure; the wait still grows so a global outage backs off
+    mirror = (mirror + 1) % OVERPASS_MIRRORS.length;
+    process.stdout.write(`  overpass ${status}, retrying on ${new URL(OVERPASS_MIRRORS[mirror]).host} in ${waits[attempt] / 1000}s\n`);
+    await sleep(waits[attempt]);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -237,31 +393,25 @@ async function importOsm(city: string, localitySlug: string) {
     console.error(`${city}/${localitySlug} has no coordinates — run scripts/seo/geocode.ts first`);
     process.exit(1);
   }
-  const r = 1200; // metres
-  const query = `[out:json][timeout:60];
+  const r = searchRadius(loc); // metres
+  const around = `(around:${r},${loc.lat},${loc.lng})`;
+  // nwr = node|way|relation. Large townships are often relations, and their avenues and
+  // phases are ways inside them — both must come back or the tower-level long tail is lost.
+  const query = `[out:json][timeout:90];
 (
-  way["landuse"="residential"]["name"](around:${r},${loc.lat},${loc.lng});
-  way["building"="residential"]["name"](around:${r},${loc.lat},${loc.lng});
-  way["building"="apartments"]["name"](around:${r},${loc.lat},${loc.lng});
-  node["place"="neighbourhood"]["name"](around:${r},${loc.lat},${loc.lng});
-  node["railway"="station"]["station"="subway"]["name"](around:${r},${loc.lat},${loc.lng});
+  nwr["landuse"="residential"]["name"]${around};
+  nwr["building"="residential"]["name"]${around};
+  nwr["building"="apartments"]["name"]${around};
+  nwr["residential"]["name"]${around};
+  nwr["place"~"^(neighbourhood|quarter)$"]["name"]${around};
+  node["railway"="station"]["station"="subway"]["name"]${around};
 );
-out center tags 200;`;
-  const res = await fetch('https://overpass-api.de/api/interpreter', {
-    method: 'POST',
-    headers: { 'content-type': 'application/x-www-form-urlencoded', 'User-Agent': 'MyBuddyMaid-SEO/1.0 (info@mybuddymaid.in)' },
-    body: `data=${encodeURIComponent(query)}`,
-  });
-  if (!res.ok) {
-    console.error(`Overpass returned ${res.status}`);
-    process.exit(1);
-  }
-  const data = (await res.json()) as {
-    elements: { tags?: Record<string, string>; lat?: number; lon?: number; center?: { lat: number; lon: number } }[];
-  };
+out center tags 400;`;
+  const data = await overpass(query);
   let added = 0;
   let rejected = 0;
   let reassigned = 0;
+  const stems = new Set(data.elements.map((el) => el.tags?.name).filter((n): n is string => !!n).map((n) => normaliseName(n).toLowerCase()));
   for (const el of data.elements) {
     const raw = el.tags?.name;
     if (!raw) continue;
@@ -270,9 +420,18 @@ out center tags 200;`;
     const point = el.center ?? { lat: el.lat!, lon: el.lon! };
     // the search radius overlaps neighbouring localities — attribute to the nearest one
     const nearest = nearestLocality(city, { lat: point.lat, lng: point.lon });
-    if (!nearest || nearest.d > MAX_ASSIGN_RADIUS_M) {
+    if (!nearest || nearest.d > assignCap(nearest.loc)) {
       rejected++;
-      reject(`> ${MAX_ASSIGN_RADIUS_M} m from any Appendix-B locality`);
+      reject('too far from any Appendix-B locality', raw);
+      continue;
+    }
+    // Individual towers ("Kosmos 43" when "Kosmos" is itself a candidate) are buildings,
+    // not places anyone searches for; the society is the entity. Folded, never published.
+    // "12th Avenue Gaur City 2" survives: its stem is not a candidate.
+    const stem = raw.trim().match(/^(.+?)\s+\d+[A-Za-z]?$/)?.[1];
+    if (stem && stems.has(normaliseName(stem).toLowerCase())) {
+      rejected++;
+      reject('tower within a society that is itself a candidate', raw);
       continue;
     }
     const parent = nearest.loc;
@@ -310,20 +469,24 @@ out center tags 200;`;
 // operator worksheet
 // ---------------------------------------------------------------------------
 function exportWorksheet(file: string) {
-  const drafts = [...byKey.values()].filter((e) => e.status === 'draft' && !meetsReadinessGate(e));
-  // source and licence round-trip so re-importing an OSM candidate through the worksheet
-  // does not strip its ODbL attribution (README §9).
-  const header = ['name', 'locality', 'city', 'kind', 'pincode', 'source', 'licence', ...WORKSHEET_FACTS.map((f) => `fact:${f}`)];
+  const drafts = [...byKey.values()]
+    .filter((e) => e.status === 'draft' && !meetsReadinessGate(e))
+    .sort((a, b) => a.city.localeCompare(b.city) || a.locality.localeCompare(b.locality) || a.name.localeCompare(b.name));
+  // `serve?` comes first so the operator can triage top-to-bottom: y = we place helpers
+  // here, anything else = drop on re-import. source and licence round-trip so an OSM
+  // candidate does not lose its ODbL attribution (README §9).
+  const header = ['serve?', 'name', 'locality', 'city', 'kind', 'pincode', 'source', 'licence', ...WORKSHEET_FACTS.map((f) => `fact:${f}`)];
   const q = (s: string) => (/[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s);
   const rows = drafts.map((e) =>
-    [e.name, e.locality, e.city, e.kind, e.pincode, e.source, e.licence, ...WORKSHEET_FACTS.map((f) => e.facts?.[f] ?? '')]
+    ['', e.name, e.locality, e.city, e.kind, e.pincode, e.source, e.licence, ...WORKSHEET_FACTS.map((f) => e.facts?.[f] ?? '')]
       .map(q)
       .join(','),
   );
   fs.writeFileSync(file, [header.join(','), ...rows].join('\n') + '\n');
   console.log(
-    `worksheet: ${drafts.length} drafts written to ${file} — fill the fact: columns ` +
-      `(>= ${MIN_ENTITY_FACTS} per row) and re-import with --csv ${path.basename(file)} --promote`,
+    `worksheet: ${drafts.length} drafts written to ${file} — mark serve? = y on the societies we place in, ` +
+      `fill their fact: columns (>= ${MIN_ENTITY_FACTS} per row), then --csv ${path.basename(file)} --promote; ` +
+      `rows not marked y are dropped (add --keep-untriaged to drop only explicit n)`,
   );
 }
 
@@ -348,31 +511,100 @@ function promote() {
   );
 }
 
+function writeStore(): Entity[] {
+  // Merge with whatever is on disk first: anything another writer persisted that this
+  // process never saw is kept; this process's own view wins for keys it holds. Rows this
+  // run deliberately dropped (serve? triage) are tracked so the merge does not resurrect them.
+  if (fs.existsSync(STORE)) {
+    const onDisk: Entity[] = JSON.parse(fs.readFileSync(STORE, 'utf8'));
+    for (const e of onDisk) {
+      const key = `${e.city}/${e.locality}/${e.slug}`;
+      if (!byKey.has(key) && !droppedKeys.has(key)) byKey.set(key, e);
+    }
+  }
+  const out = [...byKey.values()].sort((a, b) =>
+    `${a.city}/${a.locality}/${a.slug}`.localeCompare(`${b.city}/${b.locality}/${b.slug}`),
+  );
+  const tmp = `${STORE}.${process.pid}.tmp`;
+  fs.writeFileSync(tmp, JSON.stringify(out, null, 2) + '\n');
+  fs.renameSync(tmp, STORE);
+  return out;
+}
+
 async function main() {
   const csv = argValue('--csv');
   const worksheet = argValue('--export-worksheet');
   if (csv) importCsv(csv);
-  if (args.includes('--osm')) await importOsm(argValue('--city') ?? '', argValue('--locality') ?? '');
+  if (args.includes('--osm')) {
+    const city = argValue('--city') ?? '';
+    if (args.includes('--all')) {
+      const locs = ALL_LOCALITIES.filter((l) => l.city === city);
+      if (!locs.length) {
+        console.error(`Unknown city ${city}`);
+        process.exit(1);
+      }
+      const from = argValue('--from');
+      const failed: string[] = [];
+      let started = !from;
+      let i = 0;
+      for (const l of locs) {
+        i++;
+        if (!started && l.slug !== from) continue;
+        started = true;
+        if (!l.lat || !l.lng) {
+          console.log(`[${i}/${locs.length}] ${city}/${l.slug}: skipped, no coordinates`);
+          continue;
+        }
+        process.stdout.write(`[${i}/${locs.length}] `);
+        try {
+          await importOsm(city, l.slug);
+        } catch (err) {
+          // Overpass exhausted its retries for this one locality: skip it, keep going, and
+          // list it at the end so `--from <slug>` (or a single --locality run) can fill it
+          failed.push(l.slug);
+          console.log(`${city}/${l.slug}: FAILED after retries (${(err as Error).message}) — continuing`);
+        }
+        // persist after every locality so a rate-limit failure mid-run loses nothing
+        writeStore();
+        if (VERBOSE) printRejections(`${city}/${l.slug}`);
+      }
+      if (failed.length) console.log(`\nlocalities that failed and need a re-run: ${failed.join(' ')}`);
+    } else {
+      await importOsm(city, argValue('--locality') ?? '');
+    }
+  }
   if (args.includes('--promote')) promote();
   if (!csv && !worksheet && !args.includes('--osm') && !args.includes('--promote')) {
     console.log(
-      'Usage: --csv <file> | --osm --city <city> --locality <locality> | --export-worksheet <file> | --promote',
+      'Usage: --csv <file> [--keep-untriaged] | --osm --city <city> (--locality <locality> | --all [--from <slug>]) [--verbose] | --export-worksheet <file> | --promote',
     );
     process.exit(0);
   }
 
-  const out = [...byKey.values()].sort((a, b) =>
-    `${a.city}/${a.locality}/${a.slug}`.localeCompare(`${b.city}/${b.locality}/${b.slug}`),
-  );
-  fs.writeFileSync(STORE, JSON.stringify(out, null, 2) + '\n');
+  const out = writeStore();
   if (worksheet) exportWorksheet(worksheet);
   const counts = { draft: 0, ready: 0, live: 0 } as Record<string, number>;
   for (const e of out) counts[e.status]++;
   console.log(`entities.json: ${out.length} total — ${counts.draft} draft, ${counts.ready} ready, ${counts.live} live`);
-  if (rejections.size) {
-    console.log('rejected:');
-    for (const [reason, n] of [...rejections].sort((a, b) => b[1] - a[1])) console.log(`  ${n} x ${reason}`);
+  if (rejections.size) printRejections('total');
+}
+
+/**
+ * Per-reason tally, with names. The parent-locality rule is the one that could silently
+ * eat tower-level entities, so its names are always listed; the rest only under --verbose.
+ * Called per locality in verbose --all runs so a crash later cannot lose the evidence.
+ */
+function printRejections(scope: string) {
+  console.log(`rejected (${scope}):`);
+  for (const [reason, n] of [...rejections].sort((a, b) => b[1] - a[1])) {
+    console.log(`  ${n} x ${reason}`);
+    const names = rejectedNames.get(reason) ?? [];
+    if (names.length && (VERBOSE || reason === 'name is exactly the parent locality')) {
+      console.log(`      ${[...new Set(names)].join(' | ')}`);
+    }
   }
+  rejections.clear();
+  rejectedNames.clear();
 }
 
 main().catch((e) => {

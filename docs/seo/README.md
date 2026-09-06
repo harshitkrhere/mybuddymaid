@@ -116,7 +116,7 @@ Run from `next-app/`. All are `npm run <name>`.
 | `seo:check-redirects` | Requests every old URL and its `.html` variant; asserts exactly one 301 hop to a 200, or a deliberate 410. No chains, no loops. |
 | `seo:keywords` | Regenerates `keywords.csv`, the rank-tracking set. |
 | `seo:indexnow` | Submits new or changed URLs to IndexNow in batches of ≤10,000. |
-| `seo:entities` | Phase 5 entity importer (`--csv` / `--osm`), operator worksheet export (`--export-worksheet <file>`) and readiness gate (`--promote`). |
+| `seo:entities` | Phase 5 entity importer: `--osm --city <c> --locality <l>` or `--osm --city <c> --all [--from <slug>]` (one request at a time, mirror rotation + backoff, 120 s request timeout, persisted per locality, a locality that exhausts retries is skipped and listed for re-run; `--verbose` prints rejected names per locality; a pid lockfile refuses a second instance), `--export-worksheet <file>` (triage sheet with a `serve?` column first), `--csv <file>` (rows marked `y` are imported, the rest dropped; `--keep-untriaged` drops only explicit `n`) and `--promote` (readiness gate). |
 | `seo:export-spa` | Exports the footprint, service price bands and plans into `app/src/lib/serviceability.json`, so the booking app reads the same data layer. Re-run before `node scripts/build-spa.mjs`. |
 | `seo:draft` | Drafts locality prose through the Anthropic API. Run manually; output is committed. |
 | `seo:gsc` | Weekly Search Console export, broken down by city, locality and service. |
@@ -245,14 +245,29 @@ findings.
 
 The loop:
 
-1. `npm run seo:entities -- --osm --city <city> --locality <locality>` (or
-   `-- --csv <file>`). Everything lands as `draft`. Candidates are attributed to the
-   **nearest** Appendix-B locality, not the one that was queried — a 1,200 m radius also
-   sweeps the neighbours, and claiming a society sits in the wrong locality is a
-   fabricated fact. Sectors, plot codes and names identical to the parent are rejected.
+1. `npm run seo:entities -- --osm --city <city> --all` — every locality in the city,
+   one Overpass request at a time with a 2 s gap and backoff on 429/5xx (the public API
+   rate-limits; never run cities in parallel). The store is written after each locality,
+   so a failure mid-run loses nothing. Everything lands as `draft`. Search radius is
+   1,200 m for a sector or locality and **3,000 m for a `township`** — Gaur City's
+   avenues and Jaypee's Kosmos sit 1.5–2.6 km from the centroid and a 1,200 m sweep never
+   queries them. Candidates are attributed to the **nearest** Appendix-B locality, not the
+   one that was queried, because a radius also sweeps the neighbours and claiming a
+   society sits in the wrong locality is a fabricated fact.
+   Rejected, with a per-reason tally printed at the end: sector names (whole-name match
+   only — "Amrapali Sapphire Sector 45" survives), plot codes, generic labels with no
+   society name ("Tower 12", "Block C", "Site"), possessive private houses, individual
+   towers of a society that is itself a candidate ("Kosmos 43" when "Kosmos" is present),
+   and a name that is **exactly** the parent locality. That last rule is exact-match only,
+   never prefix or substring: "Gaur City 7th Avenue" under Gaur City is a distinct
+   tower-level entity and the brief's own example of the target long-tail.
 2. **A `draft` entity has no URL at all** — not a noindexed page, no page.
-3. `npm run seo:entities -- --export-worksheet ../docs/seo/entity-worksheet.csv` → give
-   it to the operator → re-import with `--csv`.
+3. `npm run seo:entities -- --export-worksheet ../docs/seo/entity-worksheet.csv` — one
+   row per candidate, sorted by locality, `serve?` first. The operator marks `y` on the
+   societies we actually place in and fills their `fact:` columns; on re-import with
+   `--csv`, rows not marked `y` are dropped from the store (drafts only; a `ready`/`live`
+   entity is never deleted by a CSV). Listing societies from memory is impossible; ticking
+   from a list is easy.
 4. `npm run seo:entities -- --promote` moves entities with **≥ 5 entity-specific facts**
    to `ready`. Facts inherited from the parent locality (`Parent locality`, `Pincode`,
    `Housing type`, `Nearest landmark`) are identical for every entity under that parent,

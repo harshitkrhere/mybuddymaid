@@ -24,3 +24,7 @@ supabase/.temp
 
 # Nested git
 mybuddymaid/.git
+
+# importer single-instance lock and atomic-write temp
+next-app/data/seo/.entities.lock
+next-app/data/seo/entities.json.*.tmp
