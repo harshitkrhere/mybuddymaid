@@ -22,7 +22,8 @@
     "prebuild": "npm run seo:validate && npm run seo:redirects && npm run seo:gate",
     "seo:keywords": "tsx scripts/seo/gen-keywords.ts",
     "seo:draft": "tsx scripts/seo/draft-copy.ts",
-    "seo:gsc": "tsx scripts/seo/gsc-report.ts"
+    "seo:gsc": "tsx scripts/seo/gsc-report.ts",
+    "seo:export-spa": "tsx scripts/seo/export-serviceability.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",

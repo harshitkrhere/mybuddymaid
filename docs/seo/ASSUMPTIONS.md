@@ -131,3 +131,14 @@ editing one data file unless noted.
     which silently wrote 18 Noida sectors into Gurgaon's file. Fragments are now keyed by
     batch → city explicitly, and the merger rejects any slug that is not a locality of the
     named city. Worth remembering for any future importer.
+32. **The booking app now reads the data layer.** `npm run seo:export-spa` writes
+    `app/src/lib/serviceability.json` from `data/seo`, and the Vite app consumes it
+    through `app/src/lib/serviceability.js`. The booking form's single "State" dropdown
+    (29 hard-coded Indian states) is replaced by City → Area selects listing only served
+    localities with their pincodes; the onboarding and profile pages now offer the eight
+    served cities. `INDIAN_STATES` is deleted from `app/src/lib/constants.js`. The
+    `bookings.city` column is free text and needs no migration: it now receives
+    "Locality, City" instead of a state name, which is what operations actually need.
+    Any previously saved profile value that is not a served city stays selectable so it
+    is never silently lost. Re-run `seo:export-spa` and `node scripts/build-spa.mjs`
+    whenever the footprint changes.

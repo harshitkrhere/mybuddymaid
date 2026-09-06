@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
-import { INDIAN_STATES } from '../lib/constants';
+import { CITIES } from '../lib/serviceability';
 import { User, Phone, Mail, MapPin, LogOut, Loader2, Trash2, AlertTriangle } from 'lucide-react';
 
 export default function ProfilePage() {
@@ -94,10 +94,12 @@ export default function ProfilePage() {
           <input type="email" value={authEmail} readOnly className="input-locked" />
         </div>
         <div className="profile-field">
-          <label><MapPin size={14} /> State</label>
+          <label><MapPin size={14} /> City</label>
           <select value={state} onChange={e => setState(e.target.value)}>
-            <option value="">Select state</option>
-            {INDIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
+            <option value="">Select city</option>
+            {CITIES.map(c => <option key={c.slug} value={c.name}>{c.name}</option>)}
+            {/* keep a previously saved value selectable even if it is not a served city */}
+            {state && !CITIES.some(c => c.name === state) && <option value={state}>{state}</option>}
           </select>
         </div>
         <button type="submit" className="btn-primary-app profile-save" disabled={saving}>

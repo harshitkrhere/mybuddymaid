@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { INDIAN_STATES } from '../lib/constants';
+import { CITIES } from '../lib/serviceability';
 import { User, Phone, Mail, MapPin, ArrowRight, Loader2, Home as HomeIcon } from 'lucide-react';
 
 export default function OnboardingPage() {
@@ -82,10 +82,12 @@ export default function OnboardingPage() {
           </div>
 
           <div className="onboarding-field">
-            <label><MapPin size={14} /> State</label>
+            <label><MapPin size={14} /> City</label>
             <select value={state} onChange={e => setState(e.target.value)}>
-              <option value="">Select your state</option>
-              {INDIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
+              <option value="">Select your city</option>
+              {CITIES.map(c => <option key={c.slug} value={c.name}>{c.name}</option>)}
+              {/* keep a previously saved value selectable even if it is not a served city */}
+              {state && !CITIES.some(c => c.name === state) && <option value={state}>{state}</option>}
             </select>
           </div>
 

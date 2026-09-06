@@ -160,34 +160,6 @@ export const PLAN_DETAILS = {
 export const RZP_KEY = import.meta.env.VITE_RZP_KEY || '';
 
 // All 28 States + 8 Union Territories of India (alphabetical)
-export const INDIAN_STATES = [
-  'Andhra Pradesh',
-  'Arunachal Pradesh',
-  'Assam',
-  'Bihar',
-  'Chhattisgarh',
-  'Delhi',
-  'Goa',
-  'Gujarat',
-  'Haryana',
-  'Himachal Pradesh',
-  'Jharkhand',
-  'Karnataka',
-  'Kerala',
-  'Madhya Pradesh',
-  'Maharashtra',
-  'Manipur',
-  'Meghalaya',
-  'Mizoram',
-  'Nagaland',
-  'Odisha',
-  'Punjab',
-  'Rajasthan',
-  'Sikkim',
-  'Tamil Nadu',
-  'Telangana',
-  'Tripura',
-  'Uttar Pradesh',
-  'Uttarakhand',
-  'West Bengal',
-];
+// INDIAN_STATES was removed in the SEO rebuild: location options now come from the
+// data layer via app/src/lib/serviceability.js, so the app can only ever offer areas
+// we actually serve. Regenerate with `npm run seo:export-spa` in next-app/.

@@ -1,0 +1,5080 @@
+{
+  "generatedBy": "next-app/scripts/seo/export-serviceability.ts",
+  "note": "Generated from next-app/data/seo — do not edit by hand.",
+  "cities": [
+    {
+      "slug": "delhi",
+      "name": "Delhi",
+      "altNames": [
+        "New Delhi"
+      ],
+      "state": "Delhi"
+    },
+    {
+      "slug": "noida",
+      "name": "Noida",
+      "altNames": [],
+      "state": "Uttar Pradesh"
+    },
+    {
+      "slug": "greater-noida",
+      "name": "Greater Noida",
+      "altNames": [
+        "Greater Noida West",
+        "Noida Extension"
+      ],
+      "state": "Uttar Pradesh"
+    },
+    {
+      "slug": "gurgaon",
+      "name": "Gurgaon",
+      "altNames": [
+        "Gurugram"
+      ],
+      "state": "Haryana"
+    },
+    {
+      "slug": "mumbai",
+      "name": "Mumbai",
+      "altNames": [
+        "Bombay"
+      ],
+      "state": "Maharashtra"
+    },
+    {
+      "slug": "pune",
+      "name": "Pune",
+      "altNames": [],
+      "state": "Maharashtra"
+    },
+    {
+      "slug": "bangalore",
+      "name": "Bangalore",
+      "altNames": [
+        "Bengaluru"
+      ],
+      "state": "Karnataka"
+    },
+    {
+      "slug": "mangalore",
+      "name": "Mangalore",
+      "altNames": [
+        "Mangaluru"
+      ],
+      "state": "Karnataka"
+    }
+  ],
+  "localities": [
+    {
+      "slug": "adugodi",
+      "city": "bangalore",
+      "name": "Adugodi",
+      "zone": "bangalore-south",
+      "pincodes": [
+        "560030"
+      ]
+    },
+    {
+      "slug": "banashankari",
+      "city": "bangalore",
+      "name": "Banashankari",
+      "zone": "bangalore-south",
+      "pincodes": [
+        "560050",
+        "560085"
+      ]
+    },
+    {
+      "slug": "bannerghatta-road",
+      "city": "bangalore",
+      "name": "Bannerghatta Road",
+      "zone": "bangalore-south",
+      "pincodes": [
+        "560076",
+        "560083"
+      ]
+    },
+    {
+      "slug": "basavanagudi",
+      "city": "bangalore",
+      "name": "Basavanagudi",
+      "zone": "bangalore-south",
+      "pincodes": [
+        "560004"
+      ]
+    },
+    {
+      "slug": "begur",
+      "city": "bangalore",
+      "name": "Begur",
+      "zone": "bangalore-south-east",
+      "pincodes": [
+        "560114"
+      ]
+    },
+    {
+      "slug": "bellandur",
+      "city": "bangalore",
+      "name": "Bellandur",
+      "zone": "bangalore-south-east",
+      "pincodes": [
+        "560103"
+      ]
+    },
+    {
+      "slug": "bommanahalli",
+      "city": "bangalore",
+      "name": "Bommanahalli",
+      "zone": "bangalore-south-east",
+      "pincodes": [
+        "560068"
+      ]
+    },
+    {
+      "slug": "chickpet",
+      "city": "bangalore",
+      "name": "Chickpet",
+      "zone": "bangalore-central",
+      "pincodes": [
+        "560053"
+      ]
+    },
+    {
+      "slug": "domlur",
+      "city": "bangalore",
+      "name": "Domlur",
+      "zone": "bangalore-central",
+      "pincodes": [
+        "560017"
+      ]
+    },
+    {
+      "slug": "electronic-city",
+      "city": "bangalore",
+      "name": "Electronic City",
+      "zone": "bangalore-south-east",
+      "pincodes": [
+        "560100"
+      ]
+    },
+    {
+      "slug": "fraser-town",
+      "city": "bangalore",
+      "name": "Fraser Town",
+      "zone": "bangalore-north",
+      "pincodes": [
+        "560005"
+      ]
+    },
+    {
+      "slug": "hoodi",
+      "city": "bangalore",
+      "name": "Hoodi",
+      "zone": "bangalore-east",
+      "pincodes": [
+        "560048"
+      ]
+    },
+    {
+      "slug": "hsr-layout",
+      "city": "bangalore",
+      "name": "HSR Layout",
+      "zone": "bangalore-south-east",
+      "pincodes": [
+        "560102"
+      ]
+    },
+    {
+      "slug": "indiranagar",
+      "city": "bangalore",
+      "name": "Indiranagar",
+      "zone": "bangalore-central",
+      "pincodes": [
+        "560008",
+        "560038"
+      ]
+    },
+    {
+      "slug": "jayanagar",
+      "city": "bangalore",
+      "name": "Jayanagar",
+      "zone": "bangalore-south",
+      "pincodes": [
+        "560011"
+      ]
+    },
+    {
+      "slug": "jp-nagar",
+      "city": "bangalore",
+      "name": "JP Nagar",
+      "zone": "bangalore-south",
+      "pincodes": [
+        "560078"
+      ]
+    },
+    {
+      "slug": "kalyan-nagar",
+      "city": "bangalore",
+      "name": "Kalyan Nagar",
+      "zone": "bangalore-north",
+      "pincodes": [
+        "560043"
+      ]
+    },
+    {
+      "slug": "koramangala",
+      "city": "bangalore",
+      "name": "Koramangala",
+      "zone": "bangalore-south-east",
+      "pincodes": [
+        "560029",
+        "560034",
+        "560095"
+      ]
+    },
+    {
+      "slug": "malleswaram",
+      "city": "bangalore",
+      "name": "Malleswaram",
+      "zone": "bangalore-west",
+      "pincodes": [
+        "560022"
+      ]
+    },
+    {
+      "slug": "marathahalli",
+      "city": "bangalore",
+      "name": "Marathahalli",
+      "zone": "bangalore-east",
+      "pincodes": [
+        "560037"
+      ]
+    },
+    {
+      "slug": "nagawara",
+      "city": "bangalore",
+      "name": "Nagawara",
+      "zone": "bangalore-north",
+      "pincodes": [
+        "560045"
+      ]
+    },
+    {
+      "slug": "rajajinagar",
+      "city": "bangalore",
+      "name": "Rajajinagar",
+      "zone": "bangalore-west",
+      "pincodes": [
+        "560010"
+      ]
+    },
+    {
+      "slug": "ramamurthy-nagar",
+      "city": "bangalore",
+      "name": "Ramamurthy Nagar",
+      "zone": "bangalore-east",
+      "pincodes": [
+        "560016"
+      ]
+    },
+    {
+      "slug": "richmond-town",
+      "city": "bangalore",
+      "name": "Richmond Town",
+      "zone": "bangalore-central",
+      "pincodes": [
+        "560025"
+      ]
+    },
+    {
+      "slug": "sarjapur-road",
+      "city": "bangalore",
+      "name": "Sarjapur Road",
+      "zone": "bangalore-south-east",
+      "pincodes": [
+        "560035"
+      ]
+    },
+    {
+      "slug": "seshadripuram",
+      "city": "bangalore",
+      "name": "Seshadripuram",
+      "zone": "bangalore-central",
+      "pincodes": [
+        "560020"
+      ]
+    },
+    {
+      "slug": "vasanth-nagar",
+      "city": "bangalore",
+      "name": "Vasanth Nagar",
+      "zone": "bangalore-central",
+      "pincodes": [
+        "560003"
+      ]
+    },
+    {
+      "slug": "vijayanagar",
+      "city": "bangalore",
+      "name": "Vijayanagar",
+      "zone": "bangalore-west",
+      "pincodes": [
+        "560040"
+      ]
+    },
+    {
+      "slug": "viveknagar",
+      "city": "bangalore",
+      "name": "Viveknagar",
+      "zone": "bangalore-central",
+      "pincodes": [
+        "560047"
+      ]
+    },
+    {
+      "slug": "whitefield",
+      "city": "bangalore",
+      "name": "Whitefield",
+      "zone": "bangalore-east",
+      "pincodes": [
+        "560049",
+        "560066"
+      ]
+    },
+    {
+      "slug": "wilson-garden",
+      "city": "bangalore",
+      "name": "Wilson Garden",
+      "zone": "bangalore-south",
+      "pincodes": [
+        "560027"
+      ]
+    },
+    {
+      "slug": "alipur",
+      "city": "delhi",
+      "name": "Alipur",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110036"
+      ]
+    },
+    {
+      "slug": "andrews-ganj",
+      "city": "delhi",
+      "name": "Andrews Ganj",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110049"
+      ]
+    },
+    {
+      "slug": "arjun-garh",
+      "city": "delhi",
+      "name": "Arjun Garh",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110047"
+      ]
+    },
+    {
+      "slug": "ashok-vihar",
+      "city": "delhi",
+      "name": "Ashok Vihar",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110052"
+      ]
+    },
+    {
+      "slug": "azadpur",
+      "city": "delhi",
+      "name": "Azadpur",
+      "zone": "north-delhi",
+      "pincodes": [
+        "110033"
+      ]
+    },
+    {
+      "slug": "badarpur",
+      "city": "delhi",
+      "name": "Badarpur",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110044"
+      ]
+    },
+    {
+      "slug": "bawana",
+      "city": "delhi",
+      "name": "Bawana",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110039"
+      ]
+    },
+    {
+      "slug": "bhajanpura",
+      "city": "delhi",
+      "name": "Bhajanpura",
+      "zone": "north-east-delhi",
+      "pincodes": [
+        "110053"
+      ]
+    },
+    {
+      "slug": "burari",
+      "city": "delhi",
+      "name": "Burari",
+      "zone": "north-delhi",
+      "pincodes": [
+        "110084"
+      ]
+    },
+    {
+      "slug": "chanakyapuri",
+      "city": "delhi",
+      "name": "Chanakyapuri",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110021"
+      ]
+    },
+    {
+      "slug": "chhatarpur",
+      "city": "delhi",
+      "name": "Chhatarpur",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110074"
+      ]
+    },
+    {
+      "slug": "chhawla",
+      "city": "delhi",
+      "name": "Chhawla",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110071"
+      ]
+    },
+    {
+      "slug": "civil-lines",
+      "city": "delhi",
+      "name": "Civil Lines",
+      "zone": "north-delhi",
+      "pincodes": [
+        "110054"
+      ]
+    },
+    {
+      "slug": "connaught-place",
+      "city": "delhi",
+      "name": "Connaught Place",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110001"
+      ]
+    },
+    {
+      "slug": "daryaganj",
+      "city": "delhi",
+      "name": "Daryaganj",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110002"
+      ]
+    },
+    {
+      "slug": "defence-colony",
+      "city": "delhi",
+      "name": "Defence Colony",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110024"
+      ]
+    },
+    {
+      "slug": "delhi-cantt",
+      "city": "delhi",
+      "name": "Delhi Cantt",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110010"
+      ]
+    },
+    {
+      "slug": "dwarka",
+      "city": "delhi",
+      "name": "Dwarka",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110075",
+        "110078"
+      ]
+    },
+    {
+      "slug": "east-of-kailash",
+      "city": "delhi",
+      "name": "East of Kailash",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110065"
+      ]
+    },
+    {
+      "slug": "gandhi-nagar",
+      "city": "delhi",
+      "name": "Gandhi Nagar",
+      "zone": "east-delhi",
+      "pincodes": [
+        "110031"
+      ]
+    },
+    {
+      "slug": "greater-kailash",
+      "city": "delhi",
+      "name": "Greater Kailash",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110048"
+      ]
+    },
+    {
+      "slug": "green-park",
+      "city": "delhi",
+      "name": "Green Park",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110016"
+      ]
+    },
+    {
+      "slug": "hari-nagar",
+      "city": "delhi",
+      "name": "Hari Nagar",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110064"
+      ]
+    },
+    {
+      "slug": "hauz-khas",
+      "city": "delhi",
+      "name": "Hauz Khas",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110016"
+      ]
+    },
+    {
+      "slug": "janakpuri",
+      "city": "delhi",
+      "name": "Janakpuri",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110058"
+      ]
+    },
+    {
+      "slug": "jangpura",
+      "city": "delhi",
+      "name": "Jangpura",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110014"
+      ]
+    },
+    {
+      "slug": "kalkaji",
+      "city": "delhi",
+      "name": "Kalkaji",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110019"
+      ]
+    },
+    {
+      "slug": "kamla-nagar",
+      "city": "delhi",
+      "name": "Kamla Nagar",
+      "zone": "north-delhi",
+      "pincodes": [
+        "110007"
+      ]
+    },
+    {
+      "slug": "kanjhawala",
+      "city": "delhi",
+      "name": "Kanjhawala",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110081"
+      ]
+    },
+    {
+      "slug": "karawal-nagar",
+      "city": "delhi",
+      "name": "Karawal Nagar",
+      "zone": "north-east-delhi",
+      "pincodes": [
+        "110094"
+      ]
+    },
+    {
+      "slug": "karol-bagh",
+      "city": "delhi",
+      "name": "Karol Bagh",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110005"
+      ]
+    },
+    {
+      "slug": "lajpat-nagar",
+      "city": "delhi",
+      "name": "Lajpat Nagar",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110024"
+      ]
+    },
+    {
+      "slug": "laxmi-nagar",
+      "city": "delhi",
+      "name": "Laxmi Nagar",
+      "zone": "east-delhi",
+      "pincodes": [
+        "110092"
+      ]
+    },
+    {
+      "slug": "lodi-road",
+      "city": "delhi",
+      "name": "Lodi Road",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110003"
+      ]
+    },
+    {
+      "slug": "mahavir-enclave",
+      "city": "delhi",
+      "name": "Mahavir Enclave",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110077"
+      ]
+    },
+    {
+      "slug": "mahipalpur",
+      "city": "delhi",
+      "name": "Mahipalpur",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110037"
+      ]
+    },
+    {
+      "slug": "malviya-nagar",
+      "city": "delhi",
+      "name": "Malviya Nagar",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110017"
+      ]
+    },
+    {
+      "slug": "mayur-vihar",
+      "city": "delhi",
+      "name": "Mayur Vihar",
+      "zone": "east-delhi",
+      "pincodes": [
+        "110091"
+      ]
+    },
+    {
+      "slug": "mayur-vihar-phase-3",
+      "city": "delhi",
+      "name": "Mayur Vihar Phase III",
+      "zone": "east-delhi",
+      "pincodes": [
+        "110096"
+      ]
+    },
+    {
+      "slug": "mehrauli",
+      "city": "delhi",
+      "name": "Mehrauli",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110030"
+      ]
+    },
+    {
+      "slug": "model-town",
+      "city": "delhi",
+      "name": "Model Town",
+      "zone": "north-delhi",
+      "pincodes": [
+        "110009"
+      ]
+    },
+    {
+      "slug": "munirka",
+      "city": "delhi",
+      "name": "Munirka",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110067"
+      ]
+    },
+    {
+      "slug": "najafgarh",
+      "city": "delhi",
+      "name": "Najafgarh",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110043",
+        "110073"
+      ]
+    },
+    {
+      "slug": "nangal-raya",
+      "city": "delhi",
+      "name": "Nangal Raya",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110046"
+      ]
+    },
+    {
+      "slug": "nangloi",
+      "city": "delhi",
+      "name": "Nangloi",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110041"
+      ]
+    },
+    {
+      "slug": "naraina",
+      "city": "delhi",
+      "name": "Naraina",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110028"
+      ]
+    },
+    {
+      "slug": "narela",
+      "city": "delhi",
+      "name": "Narela",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110040"
+      ]
+    },
+    {
+      "slug": "new-friends-colony",
+      "city": "delhi",
+      "name": "New Friends Colony",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110025"
+      ]
+    },
+    {
+      "slug": "nizamuddin",
+      "city": "delhi",
+      "name": "Nizamuddin",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110013"
+      ]
+    },
+    {
+      "slug": "okhla",
+      "city": "delhi",
+      "name": "Okhla",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110020",
+        "110025"
+      ]
+    },
+    {
+      "slug": "old-delhi",
+      "city": "delhi",
+      "name": "Old Delhi",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110006"
+      ]
+    },
+    {
+      "slug": "paharganj",
+      "city": "delhi",
+      "name": "Paharganj",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110055"
+      ]
+    },
+    {
+      "slug": "palam",
+      "city": "delhi",
+      "name": "Palam",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110045",
+        "110061"
+      ]
+    },
+    {
+      "slug": "paschim-vihar",
+      "city": "delhi",
+      "name": "Paschim Vihar",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110063"
+      ]
+    },
+    {
+      "slug": "patel-nagar",
+      "city": "delhi",
+      "name": "Patel Nagar",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110008"
+      ]
+    },
+    {
+      "slug": "pitampura",
+      "city": "delhi",
+      "name": "Pitampura",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110034"
+      ]
+    },
+    {
+      "slug": "preet-vihar",
+      "city": "delhi",
+      "name": "Preet Vihar",
+      "zone": "east-delhi",
+      "pincodes": [
+        "110092"
+      ]
+    },
+    {
+      "slug": "punjabi-bagh",
+      "city": "delhi",
+      "name": "Punjabi Bagh",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110026"
+      ]
+    },
+    {
+      "slug": "pusa",
+      "city": "delhi",
+      "name": "Pusa",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110012"
+      ]
+    },
+    {
+      "slug": "pushp-vihar",
+      "city": "delhi",
+      "name": "Pushp Vihar",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110062"
+      ]
+    },
+    {
+      "slug": "rk-puram",
+      "city": "delhi",
+      "name": "R.K. Puram",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110022",
+        "110066"
+      ]
+    },
+    {
+      "slug": "rajinder-nagar",
+      "city": "delhi",
+      "name": "Rajinder Nagar",
+      "zone": "central-delhi",
+      "pincodes": [
+        "110060"
+      ]
+    },
+    {
+      "slug": "rajokari",
+      "city": "delhi",
+      "name": "Rajokari",
+      "zone": "south-west-delhi",
+      "pincodes": [
+        "110038"
+      ]
+    },
+    {
+      "slug": "rajouri-garden",
+      "city": "delhi",
+      "name": "Rajouri Garden",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110027"
+      ]
+    },
+    {
+      "slug": "ramesh-nagar",
+      "city": "delhi",
+      "name": "Ramesh Nagar",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110015"
+      ]
+    },
+    {
+      "slug": "rohini",
+      "city": "delhi",
+      "name": "Rohini",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110085",
+        "110086",
+        "110089"
+      ]
+    },
+    {
+      "slug": "safdarjung-enclave",
+      "city": "delhi",
+      "name": "Safdarjung Enclave",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110029"
+      ]
+    },
+    {
+      "slug": "saket",
+      "city": "delhi",
+      "name": "Saket",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110068"
+      ]
+    },
+    {
+      "slug": "samaypur-badli",
+      "city": "delhi",
+      "name": "Samaypur Badli",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110042"
+      ]
+    },
+    {
+      "slug": "sangam-vihar",
+      "city": "delhi",
+      "name": "Sangam Vihar",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110080"
+      ]
+    },
+    {
+      "slug": "sarita-vihar",
+      "city": "delhi",
+      "name": "Sarita Vihar",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110076"
+      ]
+    },
+    {
+      "slug": "sarojini-nagar",
+      "city": "delhi",
+      "name": "Sarojini Nagar",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110023"
+      ]
+    },
+    {
+      "slug": "seelampur",
+      "city": "delhi",
+      "name": "Seelampur",
+      "zone": "north-east-delhi",
+      "pincodes": [
+        "110093"
+      ]
+    },
+    {
+      "slug": "shahdara",
+      "city": "delhi",
+      "name": "Shahdara",
+      "zone": "north-east-delhi",
+      "pincodes": [
+        "110032",
+        "110095"
+      ]
+    },
+    {
+      "slug": "shakur-basti",
+      "city": "delhi",
+      "name": "Shakur Basti",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110056"
+      ]
+    },
+    {
+      "slug": "shakurpur",
+      "city": "delhi",
+      "name": "Shakurpur",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110035"
+      ]
+    },
+    {
+      "slug": "shalimar-bagh",
+      "city": "delhi",
+      "name": "Shalimar Bagh",
+      "zone": "north-west-delhi",
+      "pincodes": [
+        "110088"
+      ]
+    },
+    {
+      "slug": "tagore-garden",
+      "city": "delhi",
+      "name": "Tagore Garden",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110027"
+      ]
+    },
+    {
+      "slug": "tilak-nagar",
+      "city": "delhi",
+      "name": "Tilak Nagar",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110018"
+      ]
+    },
+    {
+      "slug": "uttam-nagar",
+      "city": "delhi",
+      "name": "Uttam Nagar",
+      "zone": "west-delhi",
+      "pincodes": [
+        "110059"
+      ]
+    },
+    {
+      "slug": "vasant-kunj",
+      "city": "delhi",
+      "name": "Vasant Kunj",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110070",
+        "110072"
+      ]
+    },
+    {
+      "slug": "vasant-vihar",
+      "city": "delhi",
+      "name": "Vasant Vihar",
+      "zone": "south-delhi",
+      "pincodes": [
+        "110057"
+      ]
+    },
+    {
+      "slug": "vasundhara-enclave",
+      "city": "delhi",
+      "name": "Vasundhara Enclave",
+      "zone": "east-delhi",
+      "pincodes": [
+        "110096"
+      ]
+    },
+    {
+      "slug": "vivek-vihar",
+      "city": "delhi",
+      "name": "Vivek Vihar",
+      "zone": "north-east-delhi",
+      "pincodes": [
+        "110095"
+      ]
+    },
+    {
+      "slug": "alpha",
+      "city": "greater-noida",
+      "name": "Alpha",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "201310"
+      ]
+    },
+    {
+      "slug": "beta",
+      "city": "greater-noida",
+      "name": "Beta",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "201310"
+      ]
+    },
+    {
+      "slug": "dadri",
+      "city": "greater-noida",
+      "name": "Dadri",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "203207"
+      ]
+    },
+    {
+      "slug": "delta",
+      "city": "greater-noida",
+      "name": "Delta",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "201310"
+      ]
+    },
+    {
+      "slug": "gamma",
+      "city": "greater-noida",
+      "name": "Gamma",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "201310"
+      ]
+    },
+    {
+      "slug": "gaur-city",
+      "city": "greater-noida",
+      "name": "Gaur City",
+      "zone": "greater-noida-west",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "jaypee-greens",
+      "city": "greater-noida",
+      "name": "Jaypee Greens",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "201310"
+      ]
+    },
+    {
+      "slug": "kasna",
+      "city": "greater-noida",
+      "name": "Kasna",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "201310"
+      ]
+    },
+    {
+      "slug": "knowledge-park",
+      "city": "greater-noida",
+      "name": "Knowledge Park",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "201310"
+      ]
+    },
+    {
+      "slug": "pari-chowk",
+      "city": "greater-noida",
+      "name": "Pari Chowk",
+      "zone": "greater-noida-central",
+      "pincodes": [
+        "201310"
+      ]
+    },
+    {
+      "slug": "surajpur",
+      "city": "greater-noida",
+      "name": "Surajpur",
+      "zone": "greater-noida-west",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "techzone",
+      "city": "greater-noida",
+      "name": "Techzone",
+      "zone": "greater-noida-west",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "dlf-phase-1",
+      "city": "gurgaon",
+      "name": "DLF Phase 1",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122002"
+      ]
+    },
+    {
+      "slug": "dlf-phase-2",
+      "city": "gurgaon",
+      "name": "DLF Phase 2",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122002"
+      ]
+    },
+    {
+      "slug": "dlf-phase-3",
+      "city": "gurgaon",
+      "name": "DLF Phase 3",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122010"
+      ]
+    },
+    {
+      "slug": "dlf-phase-4",
+      "city": "gurgaon",
+      "name": "DLF Phase 4",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122009"
+      ]
+    },
+    {
+      "slug": "dlf-phase-5",
+      "city": "gurgaon",
+      "name": "DLF Phase 5",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "golf-course-road",
+      "city": "gurgaon",
+      "name": "Golf Course Road",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122002",
+        "122011"
+      ]
+    },
+    {
+      "slug": "imt-manesar",
+      "city": "gurgaon",
+      "name": "IMT Manesar",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122052"
+      ]
+    },
+    {
+      "slug": "manesar",
+      "city": "gurgaon",
+      "name": "Manesar",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122051"
+      ]
+    },
+    {
+      "slug": "sector-21",
+      "city": "gurgaon",
+      "name": "Sector 21",
+      "zone": "old-gurgaon",
+      "pincodes": [
+        "122016"
+      ]
+    },
+    {
+      "slug": "sector-42",
+      "city": "gurgaon",
+      "name": "Sector 42",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-43",
+      "city": "gurgaon",
+      "name": "Sector 43",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-44",
+      "city": "gurgaon",
+      "name": "Sector 44",
+      "zone": "old-gurgaon",
+      "pincodes": [
+        "122003"
+      ]
+    },
+    {
+      "slug": "sector-45",
+      "city": "gurgaon",
+      "name": "Sector 45",
+      "zone": "old-gurgaon",
+      "pincodes": [
+        "122003"
+      ]
+    },
+    {
+      "slug": "sector-46",
+      "city": "gurgaon",
+      "name": "Sector 46",
+      "zone": "old-gurgaon",
+      "pincodes": [
+        "122003"
+      ]
+    },
+    {
+      "slug": "sector-47",
+      "city": "gurgaon",
+      "name": "Sector 47",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122018"
+      ]
+    },
+    {
+      "slug": "sector-49",
+      "city": "gurgaon",
+      "name": "Sector 49",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122018"
+      ]
+    },
+    {
+      "slug": "sector-50",
+      "city": "gurgaon",
+      "name": "Sector 50",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122018"
+      ]
+    },
+    {
+      "slug": "sector-51",
+      "city": "gurgaon",
+      "name": "Sector 51",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122018"
+      ]
+    },
+    {
+      "slug": "sector-52",
+      "city": "gurgaon",
+      "name": "Sector 52",
+      "zone": "old-gurgaon",
+      "pincodes": [
+        "122003"
+      ]
+    },
+    {
+      "slug": "sector-53",
+      "city": "gurgaon",
+      "name": "Sector 53",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-54",
+      "city": "gurgaon",
+      "name": "Sector 54",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-55",
+      "city": "gurgaon",
+      "name": "Sector 55",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-56",
+      "city": "gurgaon",
+      "name": "Sector 56",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-57",
+      "city": "gurgaon",
+      "name": "Sector 57",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-58",
+      "city": "gurgaon",
+      "name": "Sector 58",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-59",
+      "city": "gurgaon",
+      "name": "Sector 59",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-60",
+      "city": "gurgaon",
+      "name": "Sector 60",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-61",
+      "city": "gurgaon",
+      "name": "Sector 61",
+      "zone": "dlf-golf-course-road",
+      "pincodes": [
+        "122011"
+      ]
+    },
+    {
+      "slug": "sector-65",
+      "city": "gurgaon",
+      "name": "Sector 65",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122018"
+      ]
+    },
+    {
+      "slug": "sector-66",
+      "city": "gurgaon",
+      "name": "Sector 66",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122018"
+      ]
+    },
+    {
+      "slug": "sector-67",
+      "city": "gurgaon",
+      "name": "Sector 67",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122101"
+      ]
+    },
+    {
+      "slug": "sector-68",
+      "city": "gurgaon",
+      "name": "Sector 68",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122101"
+      ]
+    },
+    {
+      "slug": "sector-69",
+      "city": "gurgaon",
+      "name": "Sector 69",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122101"
+      ]
+    },
+    {
+      "slug": "sector-70",
+      "city": "gurgaon",
+      "name": "Sector 70",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122101"
+      ]
+    },
+    {
+      "slug": "sector-71",
+      "city": "gurgaon",
+      "name": "Sector 71",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122101"
+      ]
+    },
+    {
+      "slug": "sector-72",
+      "city": "gurgaon",
+      "name": "Sector 72",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-73",
+      "city": "gurgaon",
+      "name": "Sector 73",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-74",
+      "city": "gurgaon",
+      "name": "Sector 74",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-75",
+      "city": "gurgaon",
+      "name": "Sector 75",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-76",
+      "city": "gurgaon",
+      "name": "Sector 76",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-77",
+      "city": "gurgaon",
+      "name": "Sector 77",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-82",
+      "city": "gurgaon",
+      "name": "Sector 82",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-83",
+      "city": "gurgaon",
+      "name": "Sector 83",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-84",
+      "city": "gurgaon",
+      "name": "Sector 84",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-85",
+      "city": "gurgaon",
+      "name": "Sector 85",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-86",
+      "city": "gurgaon",
+      "name": "Sector 86",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sector-88",
+      "city": "gurgaon",
+      "name": "Sector 88",
+      "zone": "new-gurgaon",
+      "pincodes": [
+        "122004"
+      ]
+    },
+    {
+      "slug": "sohna-road",
+      "city": "gurgaon",
+      "name": "Sohna Road",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122102"
+      ]
+    },
+    {
+      "slug": "south-city-1",
+      "city": "gurgaon",
+      "name": "South City 1",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122001"
+      ]
+    },
+    {
+      "slug": "south-city-2",
+      "city": "gurgaon",
+      "name": "South City 2",
+      "zone": "sohna-road-south-city",
+      "pincodes": [
+        "122018"
+      ]
+    },
+    {
+      "slug": "attavar",
+      "city": "mangalore",
+      "name": "Attavar",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575015"
+      ]
+    },
+    {
+      "slug": "bajpe",
+      "city": "mangalore",
+      "name": "Bajpe",
+      "zone": "mangalore-north",
+      "pincodes": [
+        "575025"
+      ]
+    },
+    {
+      "slug": "bejai",
+      "city": "mangalore",
+      "name": "Bejai",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575006"
+      ]
+    },
+    {
+      "slug": "bolar",
+      "city": "mangalore",
+      "name": "Bolar",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575010"
+      ]
+    },
+    {
+      "slug": "bondel",
+      "city": "mangalore",
+      "name": "Bondel",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575028"
+      ]
+    },
+    {
+      "slug": "derebail",
+      "city": "mangalore",
+      "name": "Derebail",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575007"
+      ]
+    },
+    {
+      "slug": "hampankatta",
+      "city": "mangalore",
+      "name": "Hampankatta",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575002"
+      ]
+    },
+    {
+      "slug": "jeppu",
+      "city": "mangalore",
+      "name": "Jeppu",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575011"
+      ]
+    },
+    {
+      "slug": "kadri",
+      "city": "mangalore",
+      "name": "Kadri",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575004"
+      ]
+    },
+    {
+      "slug": "kankanady",
+      "city": "mangalore",
+      "name": "Kankanady",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575013"
+      ]
+    },
+    {
+      "slug": "katipalla",
+      "city": "mangalore",
+      "name": "Katipalla",
+      "zone": "mangalore-north",
+      "pincodes": [
+        "575020"
+      ]
+    },
+    {
+      "slug": "kavoor",
+      "city": "mangalore",
+      "name": "Kavoor",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575017"
+      ]
+    },
+    {
+      "slug": "kodialbail",
+      "city": "mangalore",
+      "name": "Kodialbail",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575003"
+      ]
+    },
+    {
+      "slug": "konaje",
+      "city": "mangalore",
+      "name": "Konaje",
+      "zone": "mangalore-south",
+      "pincodes": [
+        "575022"
+      ]
+    },
+    {
+      "slug": "kottara",
+      "city": "mangalore",
+      "name": "Kottara",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575005"
+      ]
+    },
+    {
+      "slug": "kulshekar",
+      "city": "mangalore",
+      "name": "Kulshekar",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575008"
+      ]
+    },
+    {
+      "slug": "kulur",
+      "city": "mangalore",
+      "name": "Kulur",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575029"
+      ]
+    },
+    {
+      "slug": "mudipu",
+      "city": "mangalore",
+      "name": "Mudipu",
+      "zone": "mangalore-south",
+      "pincodes": [
+        "575023"
+      ]
+    },
+    {
+      "slug": "nantoor",
+      "city": "mangalore",
+      "name": "Nantoor",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575030"
+      ]
+    },
+    {
+      "slug": "panambur",
+      "city": "mangalore",
+      "name": "Panambur",
+      "zone": "mangalore-north",
+      "pincodes": [
+        "575019"
+      ]
+    },
+    {
+      "slug": "pumpwell",
+      "city": "mangalore",
+      "name": "Pumpwell",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575031"
+      ]
+    },
+    {
+      "slug": "surathkal",
+      "city": "mangalore",
+      "name": "Surathkal",
+      "zone": "mangalore-north",
+      "pincodes": [
+        "575018"
+      ]
+    },
+    {
+      "slug": "ullal",
+      "city": "mangalore",
+      "name": "Ullal",
+      "zone": "mangalore-south",
+      "pincodes": [
+        "575021"
+      ]
+    },
+    {
+      "slug": "urwa",
+      "city": "mangalore",
+      "name": "Urwa",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575016"
+      ]
+    },
+    {
+      "slug": "valencia",
+      "city": "mangalore",
+      "name": "Valencia",
+      "zone": "mangalore-city",
+      "pincodes": [
+        "575009"
+      ]
+    },
+    {
+      "slug": "airoli",
+      "city": "mumbai",
+      "name": "Airoli",
+      "zone": "navi-mumbai",
+      "pincodes": [
+        "400708"
+      ]
+    },
+    {
+      "slug": "andheri",
+      "city": "mumbai",
+      "name": "Andheri",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400058"
+      ]
+    },
+    {
+      "slug": "andheri-east",
+      "city": "mumbai",
+      "name": "Andheri East",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400059",
+        "400093"
+      ]
+    },
+    {
+      "slug": "andheri-west",
+      "city": "mumbai",
+      "name": "Andheri West",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400053"
+      ]
+    },
+    {
+      "slug": "antop-hill",
+      "city": "mumbai",
+      "name": "Antop Hill",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400037"
+      ]
+    },
+    {
+      "slug": "bandra-east",
+      "city": "mumbai",
+      "name": "Bandra East",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400051"
+      ]
+    },
+    {
+      "slug": "bandra-west",
+      "city": "mumbai",
+      "name": "Bandra West",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400050"
+      ]
+    },
+    {
+      "slug": "bhandup",
+      "city": "mumbai",
+      "name": "Bhandup",
+      "zone": "eastern-suburbs",
+      "pincodes": [
+        "400083"
+      ]
+    },
+    {
+      "slug": "chembur",
+      "city": "mumbai",
+      "name": "Chembur",
+      "zone": "eastern-suburbs",
+      "pincodes": [
+        "400088"
+      ]
+    },
+    {
+      "slug": "colaba",
+      "city": "mumbai",
+      "name": "Colaba",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400005"
+      ]
+    },
+    {
+      "slug": "cumballa-hill",
+      "city": "mumbai",
+      "name": "Cumballa Hill",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400026"
+      ]
+    },
+    {
+      "slug": "dadar",
+      "city": "mumbai",
+      "name": "Dadar",
+      "zone": "central-mumbai",
+      "pincodes": [
+        "400014",
+        "400028"
+      ]
+    },
+    {
+      "slug": "dahisar",
+      "city": "mumbai",
+      "name": "Dahisar",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400068"
+      ]
+    },
+    {
+      "slug": "fort",
+      "city": "mumbai",
+      "name": "Fort",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400001"
+      ]
+    },
+    {
+      "slug": "ghatkopar",
+      "city": "mumbai",
+      "name": "Ghatkopar",
+      "zone": "eastern-suburbs",
+      "pincodes": [
+        "400086"
+      ]
+    },
+    {
+      "slug": "girgaon",
+      "city": "mumbai",
+      "name": "Girgaon",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400004"
+      ]
+    },
+    {
+      "slug": "goregaon-east",
+      "city": "mumbai",
+      "name": "Goregaon East",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400063",
+        "400065"
+      ]
+    },
+    {
+      "slug": "goregaon-west",
+      "city": "mumbai",
+      "name": "Goregaon West",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400104"
+      ]
+    },
+    {
+      "slug": "grant-road",
+      "city": "mumbai",
+      "name": "Grant Road",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400007"
+      ]
+    },
+    {
+      "slug": "jogeshwari-east",
+      "city": "mumbai",
+      "name": "Jogeshwari East",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400096"
+      ]
+    },
+    {
+      "slug": "jogeshwari-west",
+      "city": "mumbai",
+      "name": "Jogeshwari West",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400102"
+      ]
+    },
+    {
+      "slug": "juhu",
+      "city": "mumbai",
+      "name": "Juhu",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400049"
+      ]
+    },
+    {
+      "slug": "kalbadevi",
+      "city": "mumbai",
+      "name": "Kalbadevi",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400002"
+      ]
+    },
+    {
+      "slug": "kandivali-east",
+      "city": "mumbai",
+      "name": "Kandivali East",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400101"
+      ]
+    },
+    {
+      "slug": "kandivali-west",
+      "city": "mumbai",
+      "name": "Kandivali West",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400067"
+      ]
+    },
+    {
+      "slug": "khar",
+      "city": "mumbai",
+      "name": "Khar",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400052"
+      ]
+    },
+    {
+      "slug": "kurla",
+      "city": "mumbai",
+      "name": "Kurla",
+      "zone": "central-mumbai",
+      "pincodes": [
+        "400070"
+      ]
+    },
+    {
+      "slug": "mahim",
+      "city": "mumbai",
+      "name": "Mahim",
+      "zone": "central-mumbai",
+      "pincodes": [
+        "400016"
+      ]
+    },
+    {
+      "slug": "malabar-hill",
+      "city": "mumbai",
+      "name": "Malabar Hill",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400006"
+      ]
+    },
+    {
+      "slug": "malad-east",
+      "city": "mumbai",
+      "name": "Malad East",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400097"
+      ]
+    },
+    {
+      "slug": "malad-west",
+      "city": "mumbai",
+      "name": "Malad West",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400064"
+      ]
+    },
+    {
+      "slug": "matunga",
+      "city": "mumbai",
+      "name": "Matunga",
+      "zone": "central-mumbai",
+      "pincodes": [
+        "400019"
+      ]
+    },
+    {
+      "slug": "mazgaon",
+      "city": "mumbai",
+      "name": "Mazgaon",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400010"
+      ]
+    },
+    {
+      "slug": "mulund",
+      "city": "mumbai",
+      "name": "Mulund",
+      "zone": "eastern-suburbs",
+      "pincodes": [
+        "400080"
+      ]
+    },
+    {
+      "slug": "mulund-east",
+      "city": "mumbai",
+      "name": "Mulund East",
+      "zone": "eastern-suburbs",
+      "pincodes": [
+        "400081"
+      ]
+    },
+    {
+      "slug": "mumbai-central",
+      "city": "mumbai",
+      "name": "Mumbai Central",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400008"
+      ]
+    },
+    {
+      "slug": "nariman-point",
+      "city": "mumbai",
+      "name": "Nariman Point",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400021"
+      ]
+    },
+    {
+      "slug": "nerul",
+      "city": "mumbai",
+      "name": "Nerul",
+      "zone": "navi-mumbai",
+      "pincodes": [
+        "400703",
+        "400706"
+      ]
+    },
+    {
+      "slug": "parel",
+      "city": "mumbai",
+      "name": "Parel",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400012"
+      ]
+    },
+    {
+      "slug": "powai",
+      "city": "mumbai",
+      "name": "Powai",
+      "zone": "eastern-suburbs",
+      "pincodes": [
+        "400076"
+      ]
+    },
+    {
+      "slug": "prabhadevi",
+      "city": "mumbai",
+      "name": "Prabhadevi",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400025"
+      ]
+    },
+    {
+      "slug": "sanpada",
+      "city": "mumbai",
+      "name": "Sanpada",
+      "zone": "navi-mumbai",
+      "pincodes": [
+        "400705"
+      ]
+    },
+    {
+      "slug": "santacruz-west",
+      "city": "mumbai",
+      "name": "Santacruz West",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400054"
+      ]
+    },
+    {
+      "slug": "sewri",
+      "city": "mumbai",
+      "name": "Sewri",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400015"
+      ]
+    },
+    {
+      "slug": "sion",
+      "city": "mumbai",
+      "name": "Sion",
+      "zone": "central-mumbai",
+      "pincodes": [
+        "400022"
+      ]
+    },
+    {
+      "slug": "tardeo",
+      "city": "mumbai",
+      "name": "Tardeo",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400034"
+      ]
+    },
+    {
+      "slug": "vashi",
+      "city": "mumbai",
+      "name": "Vashi",
+      "zone": "navi-mumbai",
+      "pincodes": [
+        "400701"
+      ]
+    },
+    {
+      "slug": "versova",
+      "city": "mumbai",
+      "name": "Versova",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400061"
+      ]
+    },
+    {
+      "slug": "vikhroli",
+      "city": "mumbai",
+      "name": "Vikhroli",
+      "zone": "eastern-suburbs",
+      "pincodes": [
+        "400078"
+      ]
+    },
+    {
+      "slug": "vile-parle",
+      "city": "mumbai",
+      "name": "Vile Parle",
+      "zone": "western-suburbs",
+      "pincodes": [
+        "400056"
+      ]
+    },
+    {
+      "slug": "wadala",
+      "city": "mumbai",
+      "name": "Wadala",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400031"
+      ]
+    },
+    {
+      "slug": "worli",
+      "city": "mumbai",
+      "name": "Worli",
+      "zone": "south-mumbai",
+      "pincodes": [
+        "400018"
+      ]
+    },
+    {
+      "slug": "sector-100",
+      "city": "noida",
+      "name": "Sector 100",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201304"
+      ]
+    },
+    {
+      "slug": "sector-104",
+      "city": "noida",
+      "name": "Sector 104",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201304"
+      ]
+    },
+    {
+      "slug": "sector-107",
+      "city": "noida",
+      "name": "Sector 107",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201304"
+      ]
+    },
+    {
+      "slug": "sector-108",
+      "city": "noida",
+      "name": "Sector 108",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201304"
+      ]
+    },
+    {
+      "slug": "sector-110",
+      "city": "noida",
+      "name": "Sector 110",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201304"
+      ]
+    },
+    {
+      "slug": "sector-12",
+      "city": "noida",
+      "name": "Sector 12",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-135",
+      "city": "noida",
+      "name": "Sector 135",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201305"
+      ]
+    },
+    {
+      "slug": "sector-136",
+      "city": "noida",
+      "name": "Sector 136",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201305"
+      ]
+    },
+    {
+      "slug": "sector-137",
+      "city": "noida",
+      "name": "Sector 137",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201305"
+      ]
+    },
+    {
+      "slug": "sector-140",
+      "city": "noida",
+      "name": "Sector 140",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201305"
+      ]
+    },
+    {
+      "slug": "sector-141",
+      "city": "noida",
+      "name": "Sector 141",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201305"
+      ]
+    },
+    {
+      "slug": "sector-142",
+      "city": "noida",
+      "name": "Sector 142",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201305",
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-143",
+      "city": "noida",
+      "name": "Sector 143",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-144",
+      "city": "noida",
+      "name": "Sector 144",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-145",
+      "city": "noida",
+      "name": "Sector 145",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-146",
+      "city": "noida",
+      "name": "Sector 146",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-147",
+      "city": "noida",
+      "name": "Sector 147",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-148",
+      "city": "noida",
+      "name": "Sector 148",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-149",
+      "city": "noida",
+      "name": "Sector 149",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-15",
+      "city": "noida",
+      "name": "Sector 15",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-150",
+      "city": "noida",
+      "name": "Sector 150",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306",
+        "201310"
+      ]
+    },
+    {
+      "slug": "sector-151",
+      "city": "noida",
+      "name": "Sector 151",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306"
+      ]
+    },
+    {
+      "slug": "sector-152",
+      "city": "noida",
+      "name": "Sector 152",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201306",
+        "201310"
+      ]
+    },
+    {
+      "slug": "sector-16",
+      "city": "noida",
+      "name": "Sector 16",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-18",
+      "city": "noida",
+      "name": "Sector 18",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-19",
+      "city": "noida",
+      "name": "Sector 19",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-20",
+      "city": "noida",
+      "name": "Sector 20",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-21",
+      "city": "noida",
+      "name": "Sector 21",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-22",
+      "city": "noida",
+      "name": "Sector 22",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-27",
+      "city": "noida",
+      "name": "Sector 27",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-28",
+      "city": "noida",
+      "name": "Sector 28",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-29",
+      "city": "noida",
+      "name": "Sector 29",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-30",
+      "city": "noida",
+      "name": "Sector 30",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-37",
+      "city": "noida",
+      "name": "Sector 37",
+      "zone": "noida-central",
+      "pincodes": [
+        "201303"
+      ]
+    },
+    {
+      "slug": "sector-41",
+      "city": "noida",
+      "name": "Sector 41",
+      "zone": "noida-central",
+      "pincodes": [
+        "201303"
+      ]
+    },
+    {
+      "slug": "sector-43",
+      "city": "noida",
+      "name": "Sector 43",
+      "zone": "noida-central",
+      "pincodes": [
+        "201303"
+      ]
+    },
+    {
+      "slug": "sector-44",
+      "city": "noida",
+      "name": "Sector 44",
+      "zone": "noida-central",
+      "pincodes": [
+        "201303"
+      ]
+    },
+    {
+      "slug": "sector-45",
+      "city": "noida",
+      "name": "Sector 45",
+      "zone": "noida-central",
+      "pincodes": [
+        "201303"
+      ]
+    },
+    {
+      "slug": "sector-46",
+      "city": "noida",
+      "name": "Sector 46",
+      "zone": "noida-central",
+      "pincodes": [
+        "201303"
+      ]
+    },
+    {
+      "slug": "sector-47",
+      "city": "noida",
+      "name": "Sector 47",
+      "zone": "noida-central",
+      "pincodes": [
+        "201303"
+      ]
+    },
+    {
+      "slug": "sector-50",
+      "city": "noida",
+      "name": "Sector 50",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-51",
+      "city": "noida",
+      "name": "Sector 51",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-52",
+      "city": "noida",
+      "name": "Sector 52",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-55",
+      "city": "noida",
+      "name": "Sector 55",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-56",
+      "city": "noida",
+      "name": "Sector 56",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-61",
+      "city": "noida",
+      "name": "Sector 61",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-62",
+      "city": "noida",
+      "name": "Sector 62",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-63",
+      "city": "noida",
+      "name": "Sector 63",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-71",
+      "city": "noida",
+      "name": "Sector 71",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-72",
+      "city": "noida",
+      "name": "Sector 72",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-74",
+      "city": "noida",
+      "name": "Sector 74",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-75",
+      "city": "noida",
+      "name": "Sector 75",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-76",
+      "city": "noida",
+      "name": "Sector 76",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-77",
+      "city": "noida",
+      "name": "Sector 77",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-78",
+      "city": "noida",
+      "name": "Sector 78",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-79",
+      "city": "noida",
+      "name": "Sector 79",
+      "zone": "noida-central",
+      "pincodes": [
+        "201301"
+      ]
+    },
+    {
+      "slug": "sector-93",
+      "city": "noida",
+      "name": "Sector 93",
+      "zone": "noida-expressway",
+      "pincodes": [
+        "201304"
+      ]
+    },
+    {
+      "slug": "anandnagar",
+      "city": "pune",
+      "name": "Anandnagar",
+      "zone": "pune-central",
+      "pincodes": [
+        "411051"
+      ]
+    },
+    {
+      "slug": "aundh",
+      "city": "pune",
+      "name": "Aundh",
+      "zone": "pune-west",
+      "pincodes": [
+        "411007"
+      ]
+    },
+    {
+      "slug": "balewadi",
+      "city": "pune",
+      "name": "Balewadi",
+      "zone": "pune-west",
+      "pincodes": [
+        "411062"
+      ]
+    },
+    {
+      "slug": "baner",
+      "city": "pune",
+      "name": "Baner",
+      "zone": "pune-west",
+      "pincodes": [
+        "411045"
+      ]
+    },
+    {
+      "slug": "bavdhan",
+      "city": "pune",
+      "name": "Bavdhan",
+      "zone": "pune-west",
+      "pincodes": [
+        "411023"
+      ]
+    },
+    {
+      "slug": "bibwewadi",
+      "city": "pune",
+      "name": "Bibwewadi",
+      "zone": "pune-south",
+      "pincodes": [
+        "411043"
+      ]
+    },
+    {
+      "slug": "chinchwad",
+      "city": "pune",
+      "name": "Chinchwad",
+      "zone": "pcmc",
+      "pincodes": [
+        "411019",
+        "411033"
+      ]
+    },
+    {
+      "slug": "deccan",
+      "city": "pune",
+      "name": "Deccan",
+      "zone": "pune-central",
+      "pincodes": [
+        "411004"
+      ]
+    },
+    {
+      "slug": "deccan-gymkhana",
+      "city": "pune",
+      "name": "Deccan Gymkhana",
+      "zone": "pune-central",
+      "pincodes": [
+        "411030"
+      ]
+    },
+    {
+      "slug": "dhanori",
+      "city": "pune",
+      "name": "Dhanori",
+      "zone": "pune-east",
+      "pincodes": [
+        "411036"
+      ]
+    },
+    {
+      "slug": "hadapsar",
+      "city": "pune",
+      "name": "Hadapsar",
+      "zone": "pune-east",
+      "pincodes": [
+        "411013",
+        "411028"
+      ]
+    },
+    {
+      "slug": "hinjawadi",
+      "city": "pune",
+      "name": "Hinjawadi",
+      "zone": "pune-west",
+      "pincodes": [
+        "411057"
+      ]
+    },
+    {
+      "slug": "karve-nagar",
+      "city": "pune",
+      "name": "Karve Nagar",
+      "zone": "pune-central",
+      "pincodes": [
+        "411052"
+      ]
+    },
+    {
+      "slug": "katraj",
+      "city": "pune",
+      "name": "Katraj",
+      "zone": "pune-south",
+      "pincodes": [
+        "411046"
+      ]
+    },
+    {
+      "slug": "kharadi",
+      "city": "pune",
+      "name": "Kharadi",
+      "zone": "pune-east",
+      "pincodes": [
+        "411014"
+      ]
+    },
+    {
+      "slug": "kondhwa",
+      "city": "pune",
+      "name": "Kondhwa",
+      "zone": "pune-south",
+      "pincodes": [
+        "411041",
+        "411048"
+      ]
+    },
+    {
+      "slug": "kothrud",
+      "city": "pune",
+      "name": "Kothrud",
+      "zone": "pune-central",
+      "pincodes": [
+        "411021",
+        "411038"
+      ]
+    },
+    {
+      "slug": "lohegaon",
+      "city": "pune",
+      "name": "Lohegaon",
+      "zone": "pune-east",
+      "pincodes": [
+        "411047"
+      ]
+    },
+    {
+      "slug": "nibm",
+      "city": "pune",
+      "name": "NIBM",
+      "zone": "pune-south",
+      "pincodes": [
+        "411048"
+      ]
+    },
+    {
+      "slug": "pashan",
+      "city": "pune",
+      "name": "Pashan",
+      "zone": "pune-west",
+      "pincodes": [
+        "411061"
+      ]
+    },
+    {
+      "slug": "pimple-saudagar",
+      "city": "pune",
+      "name": "Pimple Saudagar",
+      "zone": "pcmc",
+      "pincodes": [
+        "411027"
+      ]
+    },
+    {
+      "slug": "pimpri",
+      "city": "pune",
+      "name": "Pimpri",
+      "zone": "pcmc",
+      "pincodes": [
+        "411017",
+        "411018",
+        "411034"
+      ]
+    },
+    {
+      "slug": "pune-camp",
+      "city": "pune",
+      "name": "Pune Camp",
+      "zone": "pune-central",
+      "pincodes": [
+        "411001"
+      ]
+    },
+    {
+      "slug": "pune-university-area",
+      "city": "pune",
+      "name": "Pune University Area",
+      "zone": "pune-central",
+      "pincodes": [
+        "411008"
+      ]
+    },
+    {
+      "slug": "sadashiv-peth",
+      "city": "pune",
+      "name": "Sadashiv Peth",
+      "zone": "pune-central",
+      "pincodes": [
+        "411011"
+      ]
+    },
+    {
+      "slug": "shivajinagar",
+      "city": "pune",
+      "name": "Shivajinagar",
+      "zone": "pune-central",
+      "pincodes": [
+        "411005"
+      ]
+    },
+    {
+      "slug": "sus",
+      "city": "pune",
+      "name": "Sus",
+      "zone": "pune-west",
+      "pincodes": [
+        "411060"
+      ]
+    },
+    {
+      "slug": "viman-nagar",
+      "city": "pune",
+      "name": "Viman Nagar",
+      "zone": "pune-east",
+      "pincodes": [
+        "411022"
+      ]
+    },
+    {
+      "slug": "wakad",
+      "city": "pune",
+      "name": "Wakad",
+      "zone": "pune-west",
+      "pincodes": [
+        "411058"
+      ]
+    },
+    {
+      "slug": "wanowrie",
+      "city": "pune",
+      "name": "Wanowrie",
+      "zone": "pune-east",
+      "pincodes": [
+        "411040"
+      ]
+    },
+    {
+      "slug": "warje",
+      "city": "pune",
+      "name": "Warje",
+      "zone": "pune-central",
+      "pincodes": [
+        "411024"
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "slug": "central-delhi",
+      "city": "delhi",
+      "name": "Central Delhi"
+    },
+    {
+      "slug": "south-delhi",
+      "city": "delhi",
+      "name": "South Delhi"
+    },
+    {
+      "slug": "south-west-delhi",
+      "city": "delhi",
+      "name": "South West Delhi"
+    },
+    {
+      "slug": "west-delhi",
+      "city": "delhi",
+      "name": "West Delhi"
+    },
+    {
+      "slug": "north-delhi",
+      "city": "delhi",
+      "name": "North Delhi"
+    },
+    {
+      "slug": "north-west-delhi",
+      "city": "delhi",
+      "name": "North West Delhi"
+    },
+    {
+      "slug": "east-delhi",
+      "city": "delhi",
+      "name": "East Delhi"
+    },
+    {
+      "slug": "north-east-delhi",
+      "city": "delhi",
+      "name": "North East Delhi"
+    },
+    {
+      "slug": "noida-central",
+      "city": "noida",
+      "name": "Noida Central"
+    },
+    {
+      "slug": "noida-expressway",
+      "city": "noida",
+      "name": "Noida Expressway"
+    },
+    {
+      "slug": "greater-noida-west",
+      "city": "greater-noida",
+      "name": "Greater Noida West"
+    },
+    {
+      "slug": "greater-noida-central",
+      "city": "greater-noida",
+      "name": "Greater Noida Central"
+    },
+    {
+      "slug": "dlf-golf-course-road",
+      "city": "gurgaon",
+      "name": "DLF & Golf Course Road"
+    },
+    {
+      "slug": "sohna-road-south-city",
+      "city": "gurgaon",
+      "name": "Sohna Road & South City"
+    },
+    {
+      "slug": "new-gurgaon",
+      "city": "gurgaon",
+      "name": "New Gurgaon"
+    },
+    {
+      "slug": "old-gurgaon",
+      "city": "gurgaon",
+      "name": "Old Gurgaon"
+    },
+    {
+      "slug": "south-mumbai",
+      "city": "mumbai",
+      "name": "South Mumbai"
+    },
+    {
+      "slug": "central-mumbai",
+      "city": "mumbai",
+      "name": "Central Mumbai"
+    },
+    {
+      "slug": "western-suburbs",
+      "city": "mumbai",
+      "name": "Western Suburbs"
+    },
+    {
+      "slug": "eastern-suburbs",
+      "city": "mumbai",
+      "name": "Eastern Suburbs"
+    },
+    {
+      "slug": "navi-mumbai",
+      "city": "mumbai",
+      "name": "Navi Mumbai"
+    },
+    {
+      "slug": "pune-west",
+      "city": "pune",
+      "name": "West Pune"
+    },
+    {
+      "slug": "pune-central",
+      "city": "pune",
+      "name": "Central Pune"
+    },
+    {
+      "slug": "pune-east",
+      "city": "pune",
+      "name": "East Pune"
+    },
+    {
+      "slug": "pune-south",
+      "city": "pune",
+      "name": "South Pune"
+    },
+    {
+      "slug": "pcmc",
+      "city": "pune",
+      "name": "Pimpri-Chinchwad"
+    },
+    {
+      "slug": "bangalore-east",
+      "city": "bangalore",
+      "name": "East Bangalore"
+    },
+    {
+      "slug": "bangalore-south-east",
+      "city": "bangalore",
+      "name": "South East Bangalore"
+    },
+    {
+      "slug": "bangalore-south",
+      "city": "bangalore",
+      "name": "South Bangalore"
+    },
+    {
+      "slug": "bangalore-central",
+      "city": "bangalore",
+      "name": "Central Bangalore"
+    },
+    {
+      "slug": "bangalore-north",
+      "city": "bangalore",
+      "name": "North Bangalore"
+    },
+    {
+      "slug": "bangalore-west",
+      "city": "bangalore",
+      "name": "West Bangalore"
+    },
+    {
+      "slug": "mangalore-city",
+      "city": "mangalore",
+      "name": "Mangalore City"
+    },
+    {
+      "slug": "mangalore-north",
+      "city": "mangalore",
+      "name": "Mangalore North"
+    },
+    {
+      "slug": "mangalore-south",
+      "city": "mangalore",
+      "name": "Mangalore South"
+    }
+  ],
+  "services": [
+    {
+      "slug": "full-time-maid",
+      "name": "Full-Time Maid"
+    },
+    {
+      "slug": "part-time-maid",
+      "name": "Part-Time Maid"
+    },
+    {
+      "slug": "cook",
+      "name": "Cook"
+    },
+    {
+      "slug": "babysitter-nanny",
+      "name": "Babysitter / Nanny"
+    },
+    {
+      "slug": "elder-care",
+      "name": "Elder Care"
+    },
+    {
+      "slug": "domestic-help",
+      "name": "Domestic Help"
+    }
+  ],
+  "pincodes": {
+    "110001": {
+      "city": "delhi",
+      "localities": [
+        "connaught-place"
+      ]
+    },
+    "110002": {
+      "city": "delhi",
+      "localities": [
+        "daryaganj"
+      ]
+    },
+    "110003": {
+      "city": "delhi",
+      "localities": [
+        "lodi-road"
+      ]
+    },
+    "110004": {
+      "city": "delhi",
+      "localities": []
+    },
+    "110005": {
+      "city": "delhi",
+      "localities": [
+        "karol-bagh"
+      ]
+    },
+    "110006": {
+      "city": "delhi",
+      "localities": [
+        "old-delhi"
+      ]
+    },
+    "110007": {
+      "city": "delhi",
+      "localities": [
+        "kamla-nagar"
+      ]
+    },
+    "110008": {
+      "city": "delhi",
+      "localities": [
+        "patel-nagar"
+      ]
+    },
+    "110009": {
+      "city": "delhi",
+      "localities": [
+        "model-town"
+      ]
+    },
+    "110010": {
+      "city": "delhi",
+      "localities": [
+        "delhi-cantt"
+      ]
+    },
+    "110011": {
+      "city": "delhi",
+      "localities": []
+    },
+    "110012": {
+      "city": "delhi",
+      "localities": [
+        "pusa"
+      ]
+    },
+    "110013": {
+      "city": "delhi",
+      "localities": [
+        "nizamuddin"
+      ]
+    },
+    "110014": {
+      "city": "delhi",
+      "localities": [
+        "jangpura"
+      ]
+    },
+    "110015": {
+      "city": "delhi",
+      "localities": [
+        "ramesh-nagar"
+      ]
+    },
+    "110016": {
+      "city": "delhi",
+      "localities": [
+        "hauz-khas",
+        "green-park"
+      ]
+    },
+    "110017": {
+      "city": "delhi",
+      "localities": [
+        "malviya-nagar"
+      ]
+    },
+    "110018": {
+      "city": "delhi",
+      "localities": [
+        "tilak-nagar"
+      ]
+    },
+    "110019": {
+      "city": "delhi",
+      "localities": [
+        "kalkaji"
+      ]
+    },
+    "110020": {
+      "city": "delhi",
+      "localities": [
+        "okhla"
+      ]
+    },
+    "110021": {
+      "city": "delhi",
+      "localities": [
+        "chanakyapuri"
+      ]
+    },
+    "110022": {
+      "city": "delhi",
+      "localities": [
+        "rk-puram"
+      ]
+    },
+    "110023": {
+      "city": "delhi",
+      "localities": [
+        "sarojini-nagar"
+      ]
+    },
+    "110024": {
+      "city": "delhi",
+      "localities": [
+        "lajpat-nagar",
+        "defence-colony"
+      ]
+    },
+    "110025": {
+      "city": "delhi",
+      "localities": [
+        "new-friends-colony",
+        "okhla"
+      ]
+    },
+    "110026": {
+      "city": "delhi",
+      "localities": [
+        "punjabi-bagh"
+      ]
+    },
+    "110027": {
+      "city": "delhi",
+      "localities": [
+        "rajouri-garden",
+        "tagore-garden"
+      ]
+    },
+    "110028": {
+      "city": "delhi",
+      "localities": [
+        "naraina"
+      ]
+    },
+    "110029": {
+      "city": "delhi",
+      "localities": [
+        "safdarjung-enclave"
+      ]
+    },
+    "110030": {
+      "city": "delhi",
+      "localities": [
+        "mehrauli"
+      ]
+    },
+    "110031": {
+      "city": "delhi",
+      "localities": [
+        "gandhi-nagar"
+      ]
+    },
+    "110032": {
+      "city": "delhi",
+      "localities": [
+        "shahdara"
+      ]
+    },
+    "110033": {
+      "city": "delhi",
+      "localities": [
+        "azadpur"
+      ]
+    },
+    "110034": {
+      "city": "delhi",
+      "localities": [
+        "pitampura"
+      ]
+    },
+    "110035": {
+      "city": "delhi",
+      "localities": [
+        "shakurpur"
+      ]
+    },
+    "110036": {
+      "city": "delhi",
+      "localities": [
+        "alipur"
+      ]
+    },
+    "110037": {
+      "city": "delhi",
+      "localities": [
+        "mahipalpur"
+      ]
+    },
+    "110038": {
+      "city": "delhi",
+      "localities": [
+        "rajokari"
+      ]
+    },
+    "110039": {
+      "city": "delhi",
+      "localities": [
+        "bawana"
+      ]
+    },
+    "110040": {
+      "city": "delhi",
+      "localities": [
+        "narela"
+      ]
+    },
+    "110041": {
+      "city": "delhi",
+      "localities": [
+        "nangloi"
+      ]
+    },
+    "110042": {
+      "city": "delhi",
+      "localities": [
+        "samaypur-badli"
+      ]
+    },
+    "110043": {
+      "city": "delhi",
+      "localities": [
+        "najafgarh"
+      ]
+    },
+    "110044": {
+      "city": "delhi",
+      "localities": [
+        "badarpur"
+      ]
+    },
+    "110045": {
+      "city": "delhi",
+      "localities": [
+        "palam"
+      ]
+    },
+    "110046": {
+      "city": "delhi",
+      "localities": [
+        "nangal-raya"
+      ]
+    },
+    "110047": {
+      "city": "delhi",
+      "localities": [
+        "arjun-garh"
+      ]
+    },
+    "110048": {
+      "city": "delhi",
+      "localities": [
+        "greater-kailash"
+      ]
+    },
+    "110049": {
+      "city": "delhi",
+      "localities": [
+        "andrews-ganj"
+      ]
+    },
+    "110052": {
+      "city": "delhi",
+      "localities": [
+        "ashok-vihar"
+      ]
+    },
+    "110053": {
+      "city": "delhi",
+      "localities": [
+        "bhajanpura"
+      ]
+    },
+    "110054": {
+      "city": "delhi",
+      "localities": [
+        "civil-lines"
+      ]
+    },
+    "110055": {
+      "city": "delhi",
+      "localities": [
+        "paharganj"
+      ]
+    },
+    "110056": {
+      "city": "delhi",
+      "localities": [
+        "shakur-basti"
+      ]
+    },
+    "110057": {
+      "city": "delhi",
+      "localities": [
+        "vasant-vihar"
+      ]
+    },
+    "110058": {
+      "city": "delhi",
+      "localities": [
+        "janakpuri"
+      ]
+    },
+    "110059": {
+      "city": "delhi",
+      "localities": [
+        "uttam-nagar"
+      ]
+    },
+    "110060": {
+      "city": "delhi",
+      "localities": [
+        "rajinder-nagar"
+      ]
+    },
+    "110061": {
+      "city": "delhi",
+      "localities": [
+        "palam"
+      ]
+    },
+    "110062": {
+      "city": "delhi",
+      "localities": [
+        "pushp-vihar"
+      ]
+    },
+    "110063": {
+      "city": "delhi",
+      "localities": [
+        "paschim-vihar"
+      ]
+    },
+    "110064": {
+      "city": "delhi",
+      "localities": [
+        "hari-nagar"
+      ]
+    },
+    "110065": {
+      "city": "delhi",
+      "localities": [
+        "east-of-kailash"
+      ]
+    },
+    "110066": {
+      "city": "delhi",
+      "localities": [
+        "rk-puram"
+      ]
+    },
+    "110067": {
+      "city": "delhi",
+      "localities": [
+        "munirka"
+      ]
+    },
+    "110068": {
+      "city": "delhi",
+      "localities": [
+        "saket"
+      ]
+    },
+    "110070": {
+      "city": "delhi",
+      "localities": [
+        "vasant-kunj"
+      ]
+    },
+    "110071": {
+      "city": "delhi",
+      "localities": [
+        "chhawla"
+      ]
+    },
+    "110072": {
+      "city": "delhi",
+      "localities": [
+        "vasant-kunj"
+      ]
+    },
+    "110073": {
+      "city": "delhi",
+      "localities": [
+        "najafgarh"
+      ]
+    },
+    "110074": {
+      "city": "delhi",
+      "localities": [
+        "chhatarpur"
+      ]
+    },
+    "110075": {
+      "city": "delhi",
+      "localities": [
+        "dwarka"
+      ]
+    },
+    "110076": {
+      "city": "delhi",
+      "localities": [
+        "sarita-vihar"
+      ]
+    },
+    "110077": {
+      "city": "delhi",
+      "localities": [
+        "mahavir-enclave"
+      ]
+    },
+    "110078": {
+      "city": "delhi",
+      "localities": [
+        "dwarka"
+      ]
+    },
+    "110080": {
+      "city": "delhi",
+      "localities": [
+        "sangam-vihar"
+      ]
+    },
+    "110081": {
+      "city": "delhi",
+      "localities": [
+        "kanjhawala"
+      ]
+    },
+    "110084": {
+      "city": "delhi",
+      "localities": [
+        "burari"
+      ]
+    },
+    "110085": {
+      "city": "delhi",
+      "localities": [
+        "rohini"
+      ]
+    },
+    "110086": {
+      "city": "delhi",
+      "localities": [
+        "rohini"
+      ]
+    },
+    "110088": {
+      "city": "delhi",
+      "localities": [
+        "shalimar-bagh"
+      ]
+    },
+    "110089": {
+      "city": "delhi",
+      "localities": [
+        "rohini"
+      ]
+    },
+    "110091": {
+      "city": "delhi",
+      "localities": [
+        "mayur-vihar"
+      ]
+    },
+    "110092": {
+      "city": "delhi",
+      "localities": [
+        "preet-vihar",
+        "laxmi-nagar"
+      ]
+    },
+    "110093": {
+      "city": "delhi",
+      "localities": [
+        "seelampur"
+      ]
+    },
+    "110094": {
+      "city": "delhi",
+      "localities": [
+        "karawal-nagar"
+      ]
+    },
+    "110095": {
+      "city": "delhi",
+      "localities": [
+        "vivek-vihar",
+        "shahdara"
+      ]
+    },
+    "110096": {
+      "city": "delhi",
+      "localities": [
+        "mayur-vihar-phase-3",
+        "vasundhara-enclave"
+      ]
+    },
+    "122001": {
+      "city": "gurgaon",
+      "localities": [
+        "south-city-1"
+      ]
+    },
+    "122002": {
+      "city": "gurgaon",
+      "localities": [
+        "dlf-phase-1",
+        "dlf-phase-2",
+        "golf-course-road"
+      ]
+    },
+    "122003": {
+      "city": "gurgaon",
+      "localities": [
+        "sector-44",
+        "sector-45",
+        "sector-46",
+        "sector-52"
+      ]
+    },
+    "122004": {
+      "city": "gurgaon",
+      "localities": [
+        "sector-72",
+        "sector-73",
+        "sector-74",
+        "sector-75",
+        "sector-76",
+        "sector-77",
+        "sector-82",
+        "sector-83",
+        "sector-84",
+        "sector-85",
+        "sector-86",
+        "sector-88"
+      ]
+    },
+    "122009": {
+      "city": "gurgaon",
+      "localities": [
+        "dlf-phase-4"
+      ]
+    },
+    "122010": {
+      "city": "gurgaon",
+      "localities": [
+        "dlf-phase-3"
+      ]
+    },
+    "122011": {
+      "city": "gurgaon",
+      "localities": [
+        "dlf-phase-5",
+        "golf-course-road",
+        "sector-42",
+        "sector-43",
+        "sector-53",
+        "sector-54",
+        "sector-55",
+        "sector-56",
+        "sector-57",
+        "sector-58",
+        "sector-59",
+        "sector-60",
+        "sector-61"
+      ]
+    },
+    "122016": {
+      "city": "gurgaon",
+      "localities": [
+        "sector-21"
+      ]
+    },
+    "122018": {
+      "city": "gurgaon",
+      "localities": [
+        "south-city-2",
+        "sector-47",
+        "sector-49",
+        "sector-50",
+        "sector-51",
+        "sector-65",
+        "sector-66"
+      ]
+    },
+    "122051": {
+      "city": "gurgaon",
+      "localities": [
+        "manesar"
+      ]
+    },
+    "122052": {
+      "city": "gurgaon",
+      "localities": [
+        "imt-manesar"
+      ]
+    },
+    "122101": {
+      "city": "gurgaon",
+      "localities": [
+        "sector-67",
+        "sector-68",
+        "sector-69",
+        "sector-70",
+        "sector-71"
+      ]
+    },
+    "122102": {
+      "city": "gurgaon",
+      "localities": [
+        "sohna-road"
+      ]
+    },
+    "122505": {
+      "city": "gurgaon",
+      "localities": []
+    },
+    "201301": {
+      "city": "noida",
+      "localities": [
+        "sector-12",
+        "sector-15",
+        "sector-16",
+        "sector-18",
+        "sector-19",
+        "sector-20",
+        "sector-21",
+        "sector-22",
+        "sector-27",
+        "sector-28",
+        "sector-29",
+        "sector-30",
+        "sector-50",
+        "sector-51",
+        "sector-52",
+        "sector-55",
+        "sector-56",
+        "sector-61",
+        "sector-62",
+        "sector-63",
+        "sector-71",
+        "sector-72",
+        "sector-74",
+        "sector-75",
+        "sector-76",
+        "sector-77",
+        "sector-78",
+        "sector-79"
+      ]
+    },
+    "201303": {
+      "city": "noida",
+      "localities": [
+        "sector-37",
+        "sector-41",
+        "sector-43",
+        "sector-44",
+        "sector-45",
+        "sector-46",
+        "sector-47"
+      ]
+    },
+    "201304": {
+      "city": "noida",
+      "localities": [
+        "sector-93",
+        "sector-100",
+        "sector-104",
+        "sector-107",
+        "sector-108",
+        "sector-110"
+      ]
+    },
+    "201305": {
+      "city": "noida",
+      "localities": [
+        "sector-135",
+        "sector-136",
+        "sector-137",
+        "sector-140",
+        "sector-141",
+        "sector-142"
+      ]
+    },
+    "201306": {
+      "city": "noida",
+      "localities": [
+        "sector-142",
+        "sector-143",
+        "sector-144",
+        "sector-145",
+        "sector-146",
+        "sector-147",
+        "sector-148",
+        "sector-149",
+        "sector-150",
+        "sector-151",
+        "sector-152",
+        "gaur-city",
+        "techzone",
+        "surajpur"
+      ]
+    },
+    "201310": {
+      "city": "noida",
+      "localities": [
+        "sector-150",
+        "sector-152",
+        "alpha",
+        "beta",
+        "gamma",
+        "delta",
+        "knowledge-park",
+        "pari-chowk",
+        "jaypee-greens",
+        "kasna"
+      ]
+    },
+    "203201": {
+      "city": "greater-noida",
+      "localities": []
+    },
+    "203207": {
+      "city": "greater-noida",
+      "localities": [
+        "dadri"
+      ]
+    },
+    "400001": {
+      "city": "mumbai",
+      "localities": [
+        "fort"
+      ]
+    },
+    "400002": {
+      "city": "mumbai",
+      "localities": [
+        "kalbadevi"
+      ]
+    },
+    "400004": {
+      "city": "mumbai",
+      "localities": [
+        "girgaon"
+      ]
+    },
+    "400005": {
+      "city": "mumbai",
+      "localities": [
+        "colaba"
+      ]
+    },
+    "400006": {
+      "city": "mumbai",
+      "localities": [
+        "malabar-hill"
+      ]
+    },
+    "400007": {
+      "city": "mumbai",
+      "localities": [
+        "grant-road"
+      ]
+    },
+    "400008": {
+      "city": "mumbai",
+      "localities": [
+        "mumbai-central"
+      ]
+    },
+    "400010": {
+      "city": "mumbai",
+      "localities": [
+        "mazgaon"
+      ]
+    },
+    "400012": {
+      "city": "mumbai",
+      "localities": [
+        "parel"
+      ]
+    },
+    "400014": {
+      "city": "mumbai",
+      "localities": [
+        "dadar"
+      ]
+    },
+    "400015": {
+      "city": "mumbai",
+      "localities": [
+        "sewri"
+      ]
+    },
+    "400016": {
+      "city": "mumbai",
+      "localities": [
+        "mahim"
+      ]
+    },
+    "400018": {
+      "city": "mumbai",
+      "localities": [
+        "worli"
+      ]
+    },
+    "400019": {
+      "city": "mumbai",
+      "localities": [
+        "matunga"
+      ]
+    },
+    "400021": {
+      "city": "mumbai",
+      "localities": [
+        "nariman-point"
+      ]
+    },
+    "400022": {
+      "city": "mumbai",
+      "localities": [
+        "sion"
+      ]
+    },
+    "400025": {
+      "city": "mumbai",
+      "localities": [
+        "prabhadevi"
+      ]
+    },
+    "400026": {
+      "city": "mumbai",
+      "localities": [
+        "cumballa-hill"
+      ]
+    },
+    "400028": {
+      "city": "mumbai",
+      "localities": [
+        "dadar"
+      ]
+    },
+    "400031": {
+      "city": "mumbai",
+      "localities": [
+        "wadala"
+      ]
+    },
+    "400034": {
+      "city": "mumbai",
+      "localities": [
+        "tardeo"
+      ]
+    },
+    "400037": {
+      "city": "mumbai",
+      "localities": [
+        "antop-hill"
+      ]
+    },
+    "400049": {
+      "city": "mumbai",
+      "localities": [
+        "juhu"
+      ]
+    },
+    "400050": {
+      "city": "mumbai",
+      "localities": [
+        "bandra-west"
+      ]
+    },
+    "400051": {
+      "city": "mumbai",
+      "localities": [
+        "bandra-east"
+      ]
+    },
+    "400052": {
+      "city": "mumbai",
+      "localities": [
+        "khar"
+      ]
+    },
+    "400053": {
+      "city": "mumbai",
+      "localities": [
+        "andheri-west"
+      ]
+    },
+    "400054": {
+      "city": "mumbai",
+      "localities": [
+        "santacruz-west"
+      ]
+    },
+    "400056": {
+      "city": "mumbai",
+      "localities": [
+        "vile-parle"
+      ]
+    },
+    "400058": {
+      "city": "mumbai",
+      "localities": [
+        "andheri"
+      ]
+    },
+    "400059": {
+      "city": "mumbai",
+      "localities": [
+        "andheri-east"
+      ]
+    },
+    "400061": {
+      "city": "mumbai",
+      "localities": [
+        "versova"
+      ]
+    },
+    "400063": {
+      "city": "mumbai",
+      "localities": [
+        "goregaon-east"
+      ]
+    },
+    "400064": {
+      "city": "mumbai",
+      "localities": [
+        "malad-west"
+      ]
+    },
+    "400065": {
+      "city": "mumbai",
+      "localities": [
+        "goregaon-east"
+      ]
+    },
+    "400067": {
+      "city": "mumbai",
+      "localities": [
+        "kandivali-west"
+      ]
+    },
+    "400068": {
+      "city": "mumbai",
+      "localities": [
+        "dahisar"
+      ]
+    },
+    "400070": {
+      "city": "mumbai",
+      "localities": [
+        "kurla"
+      ]
+    },
+    "400076": {
+      "city": "mumbai",
+      "localities": [
+        "powai"
+      ]
+    },
+    "400078": {
+      "city": "mumbai",
+      "localities": [
+        "vikhroli"
+      ]
+    },
+    "400080": {
+      "city": "mumbai",
+      "localities": [
+        "mulund"
+      ]
+    },
+    "400081": {
+      "city": "mumbai",
+      "localities": [
+        "mulund-east"
+      ]
+    },
+    "400083": {
+      "city": "mumbai",
+      "localities": [
+        "bhandup"
+      ]
+    },
+    "400086": {
+      "city": "mumbai",
+      "localities": [
+        "ghatkopar"
+      ]
+    },
+    "400088": {
+      "city": "mumbai",
+      "localities": [
+        "chembur"
+      ]
+    },
+    "400093": {
+      "city": "mumbai",
+      "localities": [
+        "andheri-east"
+      ]
+    },
+    "400096": {
+      "city": "mumbai",
+      "localities": [
+        "jogeshwari-east"
+      ]
+    },
+    "400097": {
+      "city": "mumbai",
+      "localities": [
+        "malad-east"
+      ]
+    },
+    "400101": {
+      "city": "mumbai",
+      "localities": [
+        "kandivali-east"
+      ]
+    },
+    "400102": {
+      "city": "mumbai",
+      "localities": [
+        "jogeshwari-west"
+      ]
+    },
+    "400104": {
+      "city": "mumbai",
+      "localities": [
+        "goregaon-west"
+      ]
+    },
+    "400701": {
+      "city": "mumbai",
+      "localities": [
+        "vashi"
+      ]
+    },
+    "400703": {
+      "city": "mumbai",
+      "localities": [
+        "nerul"
+      ]
+    },
+    "400705": {
+      "city": "mumbai",
+      "localities": [
+        "sanpada"
+      ]
+    },
+    "400706": {
+      "city": "mumbai",
+      "localities": [
+        "nerul"
+      ]
+    },
+    "400708": {
+      "city": "mumbai",
+      "localities": [
+        "airoli"
+      ]
+    },
+    "411001": {
+      "city": "pune",
+      "localities": [
+        "pune-camp"
+      ]
+    },
+    "411004": {
+      "city": "pune",
+      "localities": [
+        "deccan"
+      ]
+    },
+    "411005": {
+      "city": "pune",
+      "localities": [
+        "shivajinagar"
+      ]
+    },
+    "411007": {
+      "city": "pune",
+      "localities": [
+        "aundh"
+      ]
+    },
+    "411008": {
+      "city": "pune",
+      "localities": [
+        "pune-university-area"
+      ]
+    },
+    "411011": {
+      "city": "pune",
+      "localities": [
+        "sadashiv-peth"
+      ]
+    },
+    "411013": {
+      "city": "pune",
+      "localities": [
+        "hadapsar"
+      ]
+    },
+    "411014": {
+      "city": "pune",
+      "localities": [
+        "kharadi"
+      ]
+    },
+    "411017": {
+      "city": "pune",
+      "localities": [
+        "pimpri"
+      ]
+    },
+    "411018": {
+      "city": "pune",
+      "localities": [
+        "pimpri"
+      ]
+    },
+    "411019": {
+      "city": "pune",
+      "localities": [
+        "chinchwad"
+      ]
+    },
+    "411021": {
+      "city": "pune",
+      "localities": [
+        "kothrud"
+      ]
+    },
+    "411022": {
+      "city": "pune",
+      "localities": [
+        "viman-nagar"
+      ]
+    },
+    "411023": {
+      "city": "pune",
+      "localities": [
+        "bavdhan"
+      ]
+    },
+    "411024": {
+      "city": "pune",
+      "localities": [
+        "warje"
+      ]
+    },
+    "411027": {
+      "city": "pune",
+      "localities": [
+        "pimple-saudagar"
+      ]
+    },
+    "411028": {
+      "city": "pune",
+      "localities": [
+        "hadapsar"
+      ]
+    },
+    "411030": {
+      "city": "pune",
+      "localities": [
+        "deccan-gymkhana"
+      ]
+    },
+    "411033": {
+      "city": "pune",
+      "localities": [
+        "chinchwad"
+      ]
+    },
+    "411034": {
+      "city": "pune",
+      "localities": [
+        "pimpri"
+      ]
+    },
+    "411036": {
+      "city": "pune",
+      "localities": [
+        "dhanori"
+      ]
+    },
+    "411038": {
+      "city": "pune",
+      "localities": [
+        "kothrud"
+      ]
+    },
+    "411040": {
+      "city": "pune",
+      "localities": [
+        "wanowrie"
+      ]
+    },
+    "411041": {
+      "city": "pune",
+      "localities": [
+        "kondhwa"
+      ]
+    },
+    "411043": {
+      "city": "pune",
+      "localities": [
+        "bibwewadi"
+      ]
+    },
+    "411045": {
+      "city": "pune",
+      "localities": [
+        "baner"
+      ]
+    },
+    "411046": {
+      "city": "pune",
+      "localities": [
+        "katraj"
+      ]
+    },
+    "411047": {
+      "city": "pune",
+      "localities": [
+        "lohegaon"
+      ]
+    },
+    "411048": {
+      "city": "pune",
+      "localities": [
+        "nibm",
+        "kondhwa"
+      ]
+    },
+    "411051": {
+      "city": "pune",
+      "localities": [
+        "anandnagar"
+      ]
+    },
+    "411052": {
+      "city": "pune",
+      "localities": [
+        "karve-nagar"
+      ]
+    },
+    "411057": {
+      "city": "pune",
+      "localities": [
+        "hinjawadi"
+      ]
+    },
+    "411058": {
+      "city": "pune",
+      "localities": [
+        "wakad"
+      ]
+    },
+    "411060": {
+      "city": "pune",
+      "localities": [
+        "sus"
+      ]
+    },
+    "411061": {
+      "city": "pune",
+      "localities": [
+        "pashan"
+      ]
+    },
+    "411062": {
+      "city": "pune",
+      "localities": [
+        "balewadi"
+      ]
+    },
+    "560001": {
+      "city": "bangalore",
+      "localities": []
+    },
+    "560003": {
+      "city": "bangalore",
+      "localities": [
+        "vasanth-nagar"
+      ]
+    },
+    "560004": {
+      "city": "bangalore",
+      "localities": [
+        "basavanagudi"
+      ]
+    },
+    "560005": {
+      "city": "bangalore",
+      "localities": [
+        "fraser-town"
+      ]
+    },
+    "560008": {
+      "city": "bangalore",
+      "localities": [
+        "indiranagar"
+      ]
+    },
+    "560010": {
+      "city": "bangalore",
+      "localities": [
+        "rajajinagar"
+      ]
+    },
+    "560011": {
+      "city": "bangalore",
+      "localities": [
+        "jayanagar"
+      ]
+    },
+    "560016": {
+      "city": "bangalore",
+      "localities": [
+        "ramamurthy-nagar"
+      ]
+    },
+    "560017": {
+      "city": "bangalore",
+      "localities": [
+        "domlur"
+      ]
+    },
+    "560020": {
+      "city": "bangalore",
+      "localities": [
+        "seshadripuram"
+      ]
+    },
+    "560022": {
+      "city": "bangalore",
+      "localities": [
+        "malleswaram"
+      ]
+    },
+    "560025": {
+      "city": "bangalore",
+      "localities": [
+        "richmond-town"
+      ]
+    },
+    "560027": {
+      "city": "bangalore",
+      "localities": [
+        "wilson-garden"
+      ]
+    },
+    "560029": {
+      "city": "bangalore",
+      "localities": [
+        "koramangala"
+      ]
+    },
+    "560030": {
+      "city": "bangalore",
+      "localities": [
+        "adugodi"
+      ]
+    },
+    "560034": {
+      "city": "bangalore",
+      "localities": [
+        "koramangala"
+      ]
+    },
+    "560035": {
+      "city": "bangalore",
+      "localities": [
+        "sarjapur-road"
+      ]
+    },
+    "560037": {
+      "city": "bangalore",
+      "localities": [
+        "marathahalli"
+      ]
+    },
+    "560038": {
+      "city": "bangalore",
+      "localities": [
+        "indiranagar"
+      ]
+    },
+    "560040": {
+      "city": "bangalore",
+      "localities": [
+        "vijayanagar"
+      ]
+    },
+    "560043": {
+      "city": "bangalore",
+      "localities": [
+        "kalyan-nagar"
+      ]
+    },
+    "560045": {
+      "city": "bangalore",
+      "localities": [
+        "nagawara"
+      ]
+    },
+    "560047": {
+      "city": "bangalore",
+      "localities": [
+        "viveknagar"
+      ]
+    },
+    "560048": {
+      "city": "bangalore",
+      "localities": [
+        "hoodi"
+      ]
+    },
+    "560049": {
+      "city": "bangalore",
+      "localities": [
+        "whitefield"
+      ]
+    },
+    "560050": {
+      "city": "bangalore",
+      "localities": [
+        "banashankari"
+      ]
+    },
+    "560053": {
+      "city": "bangalore",
+      "localities": [
+        "chickpet"
+      ]
+    },
+    "560066": {
+      "city": "bangalore",
+      "localities": [
+        "whitefield"
+      ]
+    },
+    "560068": {
+      "city": "bangalore",
+      "localities": [
+        "bommanahalli"
+      ]
+    },
+    "560076": {
+      "city": "bangalore",
+      "localities": [
+        "bannerghatta-road"
+      ]
+    },
+    "560078": {
+      "city": "bangalore",
+      "localities": [
+        "jp-nagar"
+      ]
+    },
+    "560083": {
+      "city": "bangalore",
+      "localities": [
+        "bannerghatta-road"
+      ]
+    },
+    "560085": {
+      "city": "bangalore",
+      "localities": [
+        "banashankari"
+      ]
+    },
+    "560095": {
+      "city": "bangalore",
+      "localities": [
+        "koramangala"
+      ]
+    },
+    "560100": {
+      "city": "bangalore",
+      "localities": [
+        "electronic-city"
+      ]
+    },
+    "560102": {
+      "city": "bangalore",
+      "localities": [
+        "hsr-layout"
+      ]
+    },
+    "560103": {
+      "city": "bangalore",
+      "localities": [
+        "bellandur"
+      ]
+    },
+    "560114": {
+      "city": "bangalore",
+      "localities": [
+        "begur"
+      ]
+    },
+    "575001": {
+      "city": "mangalore",
+      "localities": []
+    },
+    "575002": {
+      "city": "mangalore",
+      "localities": [
+        "hampankatta"
+      ]
+    },
+    "575003": {
+      "city": "mangalore",
+      "localities": [
+        "kodialbail"
+      ]
+    },
+    "575004": {
+      "city": "mangalore",
+      "localities": [
+        "kadri"
+      ]
+    },
+    "575005": {
+      "city": "mangalore",
+      "localities": [
+        "kottara"
+      ]
+    },
+    "575006": {
+      "city": "mangalore",
+      "localities": [
+        "bejai"
+      ]
+    },
+    "575007": {
+      "city": "mangalore",
+      "localities": [
+        "derebail"
+      ]
+    },
+    "575008": {
+      "city": "mangalore",
+      "localities": [
+        "kulshekar"
+      ]
+    },
+    "575009": {
+      "city": "mangalore",
+      "localities": [
+        "valencia"
+      ]
+    },
+    "575010": {
+      "city": "mangalore",
+      "localities": [
+        "bolar"
+      ]
+    },
+    "575011": {
+      "city": "mangalore",
+      "localities": [
+        "jeppu"
+      ]
+    },
+    "575013": {
+      "city": "mangalore",
+      "localities": [
+        "kankanady"
+      ]
+    },
+    "575015": {
+      "city": "mangalore",
+      "localities": [
+        "attavar"
+      ]
+    },
+    "575016": {
+      "city": "mangalore",
+      "localities": [
+        "urwa"
+      ]
+    },
+    "575017": {
+      "city": "mangalore",
+      "localities": [
+        "kavoor"
+      ]
+    },
+    "575018": {
+      "city": "mangalore",
+      "localities": [
+        "surathkal"
+      ]
+    },
+    "575019": {
+      "city": "mangalore",
+      "localities": [
+        "panambur"
+      ]
+    },
+    "575020": {
+      "city": "mangalore",
+      "localities": [
+        "katipalla"
+      ]
+    },
+    "575021": {
+      "city": "mangalore",
+      "localities": [
+        "ullal"
+      ]
+    },
+    "575022": {
+      "city": "mangalore",
+      "localities": [
+        "konaje"
+      ]
+    },
+    "575023": {
+      "city": "mangalore",
+      "localities": [
+        "mudipu"
+      ]
+    },
+    "575025": {
+      "city": "mangalore",
+      "localities": [
+        "bajpe"
+      ]
+    },
+    "575028": {
+      "city": "mangalore",
+      "localities": [
+        "bondel"
+      ]
+    },
+    "575029": {
+      "city": "mangalore",
+      "localities": [
+        "kulur"
+      ]
+    },
+    "575030": {
+      "city": "mangalore",
+      "localities": [
+        "nantoor"
+      ]
+    },
+    "575031": {
+      "city": "mangalore",
+      "localities": [
+        "pumpwell"
+      ]
+    },
+    "575036": {
+      "city": "mangalore",
+      "localities": []
+    }
+  }
+}

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
-import { SERVICES, INDIAN_STATES } from '../lib/constants';
+import { SERVICES } from '../lib/constants';
+import { CITIES, localitiesForCity, bookingLocationLabel } from '../lib/serviceability';
 import { SERVICE_ICONS, SERVICE_COLORS } from '../components/ServiceIcons';
 import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone, Headphones, X, MessageCircle } from 'lucide-react';
 
@@ -18,7 +19,10 @@ export default function ServiceDetailPage() {
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [bookEmail] = useState(user?.email || '');
   const [bookPhone, setBookPhone] = useState(profile?.phone || '');
-  const [city, setCity] = useState(profile?.city || '');
+  // Location comes from the SEO data layer (app/src/lib/serviceability.json), so the
+  // form can only ever offer areas we actually serve.
+  const [citySlug, setCitySlug] = useState('');
+  const [localitySlug, setLocalitySlug] = useState('');
   const [notes, setNotes] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -44,15 +48,17 @@ export default function ServiceDetailPage() {
     if (!bookPhone.trim() || bookPhone.replace(/\D/g, '').length < 10) {
       setError('Please enter a valid 10-digit mobile number'); return;
     }
-    if (!city.trim()) { setError('Please select your state'); return; }
+    if (!citySlug) { setError('Please select your city'); return; }
+    if (!localitySlug) { setError('Please select your area'); return; }
     setSubmitting(true);
     setError('');
     try {
+      const locationLabel = bookingLocationLabel(citySlug, localitySlug);
       const result = await createBooking({
         service_type: service.id,
         email: bookEmail.trim(),
         phone: bookPhone.trim(),
-        city: city.trim(),
+        city: locationLabel,
         notes: notes.trim(),
       });
       setSuccess(true);
@@ -64,7 +70,7 @@ export default function ServiceDetailPage() {
             user_name: profile?.full_name || 'Valued Customer',
             user_email: bookEmail || user?.email,
             service_type: service.id,
-            city: city.trim(),
+            city: locationLabel,
             notes: notes.trim(),
             booking_id: result?.id || null,
             created_at: new Date().toISOString(),
@@ -128,10 +134,30 @@ export default function ServiceDetailPage() {
                     <input type="tel" value={bookPhone} onChange={e => setBookPhone(e.target.value)} placeholder="+91 XXXXX XXXXX" required />
                   </div>
                   <div className="booking-field">
-                    <label><MapPin size={14} /> State *</label>
-                    <select value={city} onChange={e => setCity(e.target.value)} required>
-                      <option value="">Select your state</option>
-                      {INDIAN_STATES.map(s => <option key={s} value={s}>{s}</option>)}
+                    <label><MapPin size={14} /> City *</label>
+                    <select
+                      value={citySlug}
+                      onChange={e => { setCitySlug(e.target.value); setLocalitySlug(''); }}
+                      required
+                    >
+                      <option value="">Select your city</option>
+                      {CITIES.map(c => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+                    </select>
+                  </div>
+                  <div className="booking-field">
+                    <label><MapPin size={14} /> Area *</label>
+                    <select
+                      value={localitySlug}
+                      onChange={e => setLocalitySlug(e.target.value)}
+                      required
+                      disabled={!citySlug}
+                    >
+                      <option value="">{citySlug ? 'Select your area' : 'Select a city first'}</option>
+                      {localitiesForCity(citySlug).map(l => (
+                        <option key={l.slug} value={l.slug}>
+                          {l.name} ({l.pincodes.join(', ')})
+                        </option>
+                      ))}
                     </select>
                   </div>
                   <div className="booking-field">
