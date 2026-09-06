@@ -11,7 +11,7 @@ until this list is done. Owner-only items are marked **[owner]**.
 | A1 | `www.mybuddymaid.in` TLS certificate valid | Vercel → Project → Domains: `www` shows a valid cert; `curl -I https://www.mybuddymaid.in` returns 308 to apex | **DONE 2026-09-07** — the domain had never been attached to the Vercel project, so nothing renewed it; re-added as a 308 to apex. Verified `https://www.mybuddymaid.in` → 308 → `https://mybuddymaid.in` → 200, cert valid |
 | A2 | Vercel Root Directory = `next-app` | Project Settings → General → Root Directory | done (preview built) |
 | A3 | Production env vars set | Required: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`; `MAINTENANCE_MODE` unset; `LEADS_ENABLED` / `NEXT_PUBLIC_LEADS_ENABLED` unset until the `leads` migration is applied. Not required: `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (GSC is a DNS-verified Domain property — no meta tag needed). Pending, not blocking: `NEXT_PUBLIC_BING_SITE_VERIFICATION` (Bing will be created by importing from GSC, which needs no tag) | **[owner]** — Supabase vars |
-| A4 | `tsc --noEmit` clean, `next build` green | `cd next-app; npx tsc --noEmit; npm run build` | run before merge |
+| A4 | `tsc --noEmit` clean, `next build` green | `cd next-app; npx tsx --version; npx tsc --noEmit; npm run build` | done 2026-09-07 on the code at `17d82642`; only docs and `public/` changed since. Vercel rebuilds on merge regardless |
 | A5 | `seo:validate` GREEN | `npm run seo:validate` | see §C |
 | A6 | `seo:gate` — 0 duplicate pairs, indexable count recorded | `npm run seo:gate` | see §C |
 | A7 | `seo:jsonld` GREEN — no AggregateRating / Review / per-locality LocalBusiness | `npm run seo:jsonld` | see §C |
