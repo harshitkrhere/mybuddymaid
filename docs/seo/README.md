@@ -255,16 +255,18 @@ not volume. A page is generated only when it deserves to exist.
 
 | Page | Perf | SEO | A11y | Best practices | FCP | LCP | CLS | TBT |
 |---|---|---|---|---|---|---|---|---|
-| `/` | 96 | 100 | 100 | 96 | 0.9 s | 2.6 s | 0 | 130 ms |
-| `/gurgaon` | 89 | 100 | 100 | 96 | 1.1 s | 3.0 s | 0 | 280 ms |
-| `/gurgaon/dlf-phase-1` | 89 | 100 | 100 | 96 | 1.0 s | 2.9 s | 0 | 290 ms |
-| `/noida/sector-50/cook` | 87 | 100 | 100 | 96 | 0.9 s | 2.7 s | 0 | 410 ms |
-| `/pincode/122011` | 90 | 100 | 100 | 96 | 0.9 s | 2.8 s | 0 | 280 ms |
-| `/blog` | 90 | 100 | 100 | 96 | 1.2 s | 2.9 s | 0 | 280 ms |
+| `/` | 96 | 100 | 100 | 96 | 0.8 s | 2.6 s | 0 | 110 ms |
+| `/gurgaon` | 95 | 100 | 100 | 96 | 0.9 s | 2.7 s | 0 | 140 ms |
+| `/gurgaon/dlf-phase-1` | 95 | 100 | 100 | 96 | 0.9 s | 2.6 s | 0 | 160 ms |
+| `/noida/sector-50/cook` | 93 | 100 | 100 | 96 | 0.9 s | 2.5 s | 0 | 240 ms |
+| `/pincode/122011` | 97 | 100 | 100 | 96 | 0.8 s | 2.5 s | 0 | 100 ms |
+| `/pricing` | 98 | 100 | 100 | 96 | 0.8 s | 2.3 s | 0 | 80 ms |
+| `/blog` | 93 | 100 | 100 | 96 | 1.1 s | 2.8 s | 0 | 200 ms |
 
-  CLS is 0 everywhere and SEO and accessibility are 100 everywhere. LCP is 2.6–3.0 s
-  locally against a target of < 2.5 s; confirm in the field with CrUX after deploy before
-  treating that target as met.
+  CLS is 0 and SEO and accessibility are 100 on every page type. LCP lands at 2.3–2.8 s
+  locally against a target of < 2.5 s, so the fastest pages meet it and the heaviest sit
+  just above. These are simulated-4G numbers from a local Node server with no CDN;
+  confirm in the field with CrUX after deploy before treating the target as met.
 
 ---
 
