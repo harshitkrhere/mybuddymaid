@@ -150,8 +150,11 @@ console.log(`  composed ${composed} pages`);
 // ---------------------------------------------------------------------------
 // pass 2 — LSH candidate pairs within each page type, then exact Jaccard
 // ---------------------------------------------------------------------------
+// Entity pages are compared against locality pages, not only against each other: the
+// failure mode worth catching is an entity page that is a re-skin of its parent locality.
+const bucketOf = (t: PageModel['type']) => (t === 'entity' ? 'locality' : t);
 const byType = new Map<string, Row[]>();
-for (const r of rows) byType.set(r.type, [...(byType.get(r.type) ?? []), r]);
+for (const r of rows) byType.set(bucketOf(r.type), [...(byType.get(bucketOf(r.type)) ?? []), r]);
 
 interface Pair {
   a: string;

@@ -1,8 +1,8 @@
-// lib/entities.ts — entity × service page support (Phase 5). Entity pages are ISR with
-// generateStaticParams limited to ready/live entities; unknown slugs 404. Sitemap shards
-// are emitted per rollout batch so each batch can be submitted to IndexNow on its own.
+// lib/entities.ts — entity page support (Phase 5). One page per entity at
+// /<city>/<area>/<entity>, prerendered with the service × locality pages on the same
+// route. Sitemap shards are emitted per rollout batch so each batch can be submitted to
+// IndexNow on its own.
 import { LIVE_ENTITIES } from '@/data/seo/entities';
-import { SERVICES } from '@/data/seo';
 import rollout from '@/data/seo/quality/rollout.json';
 
 export interface EntityUrl {
@@ -15,14 +15,12 @@ const BATCHES = (rollout as { batches?: Record<string, string[]> }).batches ?? {
 /** Sitemap shards per rollout batch: Map<batchName, EntityUrl[]>. */
 export function entityPages(): Map<string, EntityUrl[]> {
   const out = new Map<string, EntityUrl[]>();
-  const assigned = new Set<string>();
-  for (const [batch, slugs] of Object.entries(BATCHES)) {
+  for (const [batch, keys] of Object.entries(BATCHES)) {
     const urls: EntityUrl[] = [];
-    for (const key of slugs) {
+    for (const key of keys) {
       const e = LIVE_ENTITIES.find((x) => `${x.city}/${x.locality}/${x.slug}` === key);
       if (!e) continue;
-      assigned.add(key);
-      for (const s of SERVICES) urls.push({ loc: `/${e.city}/${e.locality}/${e.slug}/${s.slug}`, lastmod: e.updatedAt });
+      urls.push({ loc: `/${e.city}/${e.locality}/${e.slug}`, lastmod: e.updatedAt });
     }
     if (urls.length) out.set(batch, urls);
   }
@@ -31,7 +29,5 @@ export function entityPages(): Map<string, EntityUrl[]> {
 }
 
 export function entityParams() {
-  const out: { city: string; area: string; slug: string; service: string }[] = [];
-  for (const e of LIVE_ENTITIES) for (const s of SERVICES) out.push({ city: e.city, area: e.locality, slug: e.slug, service: s.slug });
-  return out;
+  return LIVE_ENTITIES.map((e) => ({ city: e.city, area: e.locality, slug: e.slug }));
 }

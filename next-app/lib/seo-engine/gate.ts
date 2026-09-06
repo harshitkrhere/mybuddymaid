@@ -3,6 +3,7 @@
 // (near-duplicate, low local-token ratio, under word floor, missing required section,
 // [VERIFY] marker) renders `noindex, follow`; the build never fails on content gaps.
 import gate from '@/data/seo/quality/gate.json';
+import { LIVE_ENTITIES } from '@/data/seo/entities';
 
 export interface GateVerdict {
   index: boolean;
@@ -19,16 +20,15 @@ export function hasGateVerdict(path: string): boolean {
   return Object.prototype.hasOwnProperty.call(VERDICTS, path);
 }
 
-/** /<city>/<area>/<entity>/<service> — the Phase 5 entity pages, and only those. */
-const ENTITY_PATH = /^\/[a-z0-9-]+\/[a-z0-9-]+\/[a-z0-9-]+\/[a-z0-9-]+$/;
+const ENTITY_PATHS = new Set(LIVE_ENTITIES.map((e) => `/${e.city}/${e.locality}/${e.slug}`));
 
 export function gateFor(path: string): GateVerdict {
   const v = VERDICTS[path];
   if (v) return v;
-  // Entity pages are ISR: an entity promoted to `ready` after the last `seo:gate` run has
-  // no verdict yet. Fail closed, or a page nothing has checked for near-duplication would
-  // be served indexable (rule 8). Re-run `npm run seo:gate` to index it.
-  if (GATE_PRESENT && ENTITY_PATH.test(path)) {
+  // An entity promoted to `ready` after the last `seo:gate` run has no verdict yet. Fail
+  // closed, or a page nothing has checked for near-duplication would be served indexable
+  // (rule 8). Re-run `npm run seo:gate` to index it.
+  if (GATE_PRESENT && ENTITY_PATHS.has(path)) {
     return { index: false, reasons: ['not gated yet: run npm run seo:gate'], words: 0, localRatio: 0 };
   }
   // Hand-written pages (trust pages, blog posts) are not composed from the data layer,

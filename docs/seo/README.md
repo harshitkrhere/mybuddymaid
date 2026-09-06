@@ -30,7 +30,7 @@ data/seo/                         the single source of truth
 
 lib/seo-engine/                   composition and output
   compose.ts        every page model, built from data only
-  compose-entity.ts Phase 5 entity x service pages
+  compose-entity.ts Phase 5 entity pages (one per entity, all six services)
   meta.ts           Appendix D title/description templates + length fitting
   faqs.ts           FAQ assembly (3 local + housing + service/city + global)
   jsonld.ts         Organization, BreadcrumbList, Service+Offer, FAQPage
@@ -267,10 +267,20 @@ The loop:
    batch is indexed after 3 weeks.** Otherwise stop, improve that batch, and re-evaluate.
 8. Log every batch in [rollout-log.md](rollout-log.md).
 
-**Known limit, unresolved:** the six service variants of one entity measured 0.72–0.76
-Jaccard against each other in the pilot, so the gate noindexes five of six. Until
-entity × service pages carry genuinely service-specific content, the realistic ceiling is
-**one indexable page per entity**, not six. Do not plan a page count on the six.
+**One page per entity, not six.** The original design gave each entity a page per
+service. The pilot measured those six at 0.72–0.76 Jaccard against each other and the gate
+noindexed five of six — the facts block, the access paragraph, the verification section
+and two of five FAQs are identical across services. Entity pages now live at
+`/<city>/<area>/<entity>` and cover all six services on one page, with the service cards
+and the pricing table pointing at the locality money pages. The realistic Phase 5 ceiling
+is therefore ~17,000 pages, not ~100,000; the gap to the lead target comes from more
+entities per locality, the Google Business Profile and paid search, never from more URLs
+per entity.
+
+Entity pages are **prerendered, not ISR** — an entity only changes when `entities.json` is
+committed, which already needs a deploy. They share `generateStaticParams` with the
+service × locality pages on the same route; a slug can never be both, because every
+service slug is in `RESERVED_SLUGS` and the importer rejects reserved slugs.
 
 ---
 

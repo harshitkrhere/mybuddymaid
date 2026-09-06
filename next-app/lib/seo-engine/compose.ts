@@ -17,6 +17,7 @@ import {
   GLOBAL_FAQS,
   getNearby,
 } from '@/data/seo';
+import { ENTITIES_BY_LOCALITY } from '@/data/seo/entities';
 import { cityFaqs, localityFaqs, serviceCityFaqs, serviceHubFaqs, serviceLocalityFaqs, zoneFaqs } from './faqs';
 import { paths } from './links';
 import {
@@ -70,6 +71,7 @@ export type PageType =
   | 'zone'
   | 'locality'
   | 'service-locality'
+  | 'entity'
   | 'service-city'
   | 'service-hub'
   | 'pincode';
@@ -124,24 +126,24 @@ export function hasUnverified(loc: Locality): boolean {
 }
 
 /** FAQ list with any `[VERIFY]` sentences removed from the answers. */
-function cleanFaqs(faqs: FAQ[]): FAQ[] {
+export function cleanFaqs(faqs: FAQ[]): FAQ[] {
   return faqs
     .map((f) => (f.a.includes('[VERIFY]') ? { ...f, a: dropUnverified(f.a) } : f))
     .filter((f) => f.a.length > 30);
 }
-const PRICE_FACTORS = [
+export const PRICE_FACTORS = [
   'Hours per day and days per week',
   'Tasks included (cooking, laundry, childcare add-ons)',
   'Household size and home size',
 ];
-const PRICE_NOTE =
+export const PRICE_NOTE =
   'Indicative monthly bands, not quotes. The exact salary is agreed with the helper after the interview.';
 
-function tierRows(city: City): PricingRow[] {
+export function tierRows(city: City): PricingRow[] {
   return SERVICES.map((s) => ({ service: s, ...s.pricing[city.pricingTier], path: paths.serviceHub(s.slug) }));
 }
 
-function joinNames(names: string[], max = 3): string {
+export function joinNames(names: string[], max = 3): string {
   const n = names.slice(0, max);
   if (n.length <= 1) return n.join('');
   return `${n.slice(0, -1).join(', ')} and ${n[n.length - 1]}`;
@@ -238,6 +240,13 @@ export function composeLocality(loc: Locality): PageModel {
     faqs,
     nearby,
     related: [
+      // Phase 5 entity pages hang off their parent locality; without these links they
+      // would be orphans and seo:crawl would fail.
+      ...(ENTITIES_BY_LOCALITY.get(key) ?? []).map((e) => ({
+        name: e.name,
+        path: `/${e.city}/${e.locality}/${e.slug}`,
+        anchor: `maid service in ${e.name}`,
+      })),
       { name: zone.name, path: paths.zone(city.slug, zone.slug), anchor: `all areas in ${zone.name}` },
       { name: city.name, path: paths.city(city.slug), anchor: `maid service in ${city.name}` },
       // pincode pages exist only for pins shared by 2+ localities; link the ones this
@@ -341,7 +350,7 @@ function helperTravelParagraphs(loc: Locality, nearby: string[]): string[] {
   return out;
 }
 
-function trustSections(placeName: string): TextSection[] {
+export function trustSections(placeName: string): TextSection[] {
   return [
     {
       id: 'verify',

@@ -3,6 +3,8 @@
 // from the Appendix D templates, and prints a count diff vs the previous run.
 // Run: npx tsx scripts/seo/validate.ts
 import { z } from 'zod';
+import { LIVE_ENTITIES } from '../../data/seo/entities';
+import { composeEntity } from '../../lib/seo-engine/compose-entity';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import {
@@ -173,6 +175,9 @@ for (const s of SERVICES) {
 for (const p of PINCODES.filter((p2) => p2.localities.length >= 2)) {
   metas.push(pincodeMeta(p, p.localities.map(titleCaseSlug)));
 }
+// Phase 5 entity pages share the /<city>/<area>/<slug> namespace with the service ×
+// locality pages, so their titles and descriptions belong in the same uniqueness check.
+for (const e of LIVE_ENTITIES) metas.push(composeEntity(e).meta);
 const seenTitle = new Map<string, string>();
 const seenDesc = new Map<string, string>();
 for (const m of metas) {

@@ -85,7 +85,7 @@ gate now counts **entity-specific facts only** (`INHERITED_FACT_KEYS` in
 `data/seo/entities.ts`), and `compose-entity.ts` uses the same definition for
 `missingRequired`.
 
-### Open question: the entity × service model produces near-duplicates
+### Decided: one page per entity, not entity × service
 
 With one entity promoted to `ready` as a round-trip test, the gate composed its 6 service
 pages and **noindexed 5 of them**:
@@ -97,19 +97,36 @@ pages and **noindexed 5 of them**:
 | `.../mahagun-moderne/full-time-maid` vs `.../part-time-maid` | 0.746 |
 | *(10 more pairs, all 0.72–0.74)* | |
 
-The six pages differ only in the service name and the pricing band; the facts block, the
-access paragraph, the verification section and two of five FAQs are identical. At ~480
-words per page there is not enough service-specific material to separate them.
+The six pages differed only in the service name and the pricing band; the facts block, the
+access paragraph, the verification section and two of five FAQs were identical, and ~480
+words left no room to separate them. The five extra URLs would have existed only as
+noindexed filler.
 
-**This means the effective ceiling is one indexable page per entity, not six.** The
-~100,000-page projection behind the 200-leads/day model assumed six. The realistic
-number is closer to 17,000 unless the entity × service pages gain genuinely
-service-specific content. The gate is already enforcing this — the other five URLs would
-exist only as noindexed pages.
+**The owner's decision (2026-09-06): one page per entity at `/<city>/<area>/<entity>`,
+covering all six services.** Service cards and the pricing table link to the locality money
+pages, so deeper service intent lands where the depth is; the parent locality page links
+its entities, so no entity page is an orphan. Entity pages are prerendered alongside the
+service × locality pages on the same route rather than ISR.
 
-The decision (entity-only pages at `/<city>/<area>/<entity>` versus keeping
-entity × service and giving each service real content) is recorded as an open item in
-[ASSUMPTIONS.md](ASSUMPTIONS.md) and is not settled here.
+Re-measured after the change, on the same test entity:
+
+| Check | Result |
+|---|---|
+| Words | 906 |
+| Local-token ratio | 0.64 (floor 0.50) |
+| Verdict | `index, follow` |
+| Duplicate pairs in the whole estate | 0 |
+
+This lowers the Phase 5 projection from ~100,000 pages to **~17,000**. The gap to 200
+leads/day comes from more entities per locality, the Google Business Profile and local
+pack, and paid search — not from more URLs per entity.
+
+### First batch scope
+
+The owner's decision: **the first batch covers only societies where we already have
+placements.** The facts the worksheet asks for are already in the CRM and WhatsApp
+history for those societies, so every published fact is verifiable, and those are the
+societies that convert best. Candidates with no placement history stay `draft`.
 
 ### How to release the first real batch
 
@@ -122,7 +139,8 @@ entity × service and giving each service real content) is recorded as an open i
 3. `npm run seo:entities -- --csv ../docs/seo/entity-worksheet.csv --promote` — only rows
    with ≥ 5 filled `fact:` columns become `ready`. Inherited facts do not count.
 4. Add the batch to `data/seo/quality/rollout.json`:
-   `{"batches": {"gurgaon-pilot-1": ["gurgaon/dlf-phase-1/<entity-slug>", "..."]}}`
+   `{"batches": {"gurgaon-pilot-1": ["gurgaon/dlf-phase-1/<entity-slug>", "..."]}}` — one
+   URL per entity, so a 2,000-URL weekly cap is 2,000 entities, not 333.
 5. `npm run seo:gate` — required, not optional: an ungated entity page is `noindex`.
 6. Build, deploy, then `npm run seo:indexnow -- --batch entities-gurgaon-pilot-1`.
 7. Record the batch below and check GSC after 3 weeks before releasing the next.

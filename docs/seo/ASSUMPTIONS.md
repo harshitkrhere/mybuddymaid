@@ -209,14 +209,27 @@ editing one data file unless noted.
     check, against rule 8. Both scripts now compose entity pages, and `gateFor()` returns
     `noindex` for an ungated path on the 4-segment entity route. Entity pages are ISR, so
     an entity promoted after the last gate run would otherwise be served unchecked.
-42. **Open: entity × service produces near-duplicates, so plan on one page per entity.**
+42. **One page per entity, not entity × service — decided by the owner, 2026-09-06.**
     A round-trip test promoted one entity and the gate noindexed 5 of its 6 service pages
     at 0.72–0.76 Jaccard: the facts block, the access paragraph, the verification section
     and two of five FAQs are identical across services, and ~480 words leaves no room to
-    separate them. The ~100,000-page projection behind the 200-leads/day model assumed six
-    pages per entity; the realistic figure is closer to 17,000 unless each service page
-    gains genuinely service-specific content. **This is the owner's call and is not
-    settled here** — the alternatives are (a) one entity page at
-    `/<city>/<area>/<entity>` covering all six services, or (b) keeping entity × service
-    and writing real per-service content. Whichever is chosen, the gate decides what
-    indexes; the page count is never the target.
+    separate them. The five extra URLs would have existed only as noindexed filler, so
+    entity pages moved to `/<city>/<area>/<entity>`, covering all six services on one
+    page; the service cards and the pricing table link to the locality money pages, which
+    is also what keeps those linked from every entity page. The parent locality page links
+    its entities so they are never orphans. Re-measured after the change: 906 words, 0.64
+    local-token ratio, indexable, no duplicate pair anywhere in the estate. This lowers the
+    Phase 5 projection from ~100,000 pages to ~17,000, which the owner accepted — the gap
+    to 200 leads/day comes from more entities per locality, the Google Business Profile
+    and paid search, not from more URLs per entity.
+43. **Entity pages are prerendered, not ISR.** The original route used
+    `dynamicParams = true` with a 24-hour revalidate. An entity only changes when
+    `entities.json` is committed, which already requires a deploy, so ISR bought nothing
+    and would have served pages the quality gate had not seen. They are now built with the
+    service × locality pages from the same `generateStaticParams`. `gateFor()` still fails
+    closed for a `ready` entity with no verdict, as a second guard.
+44. **The first entity batch covers only societies where we already have placements.**
+    The owner's decision, and the same fulfilment-bound logic as the eight-city footprint:
+    the facts the worksheet asks for (towers, entry process, who issues the helper ID
+    card) are already in the CRM and WhatsApp history for those societies, so every
+    published fact is verifiable, and those are the societies that actually convert.
