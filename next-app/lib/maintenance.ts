@@ -1,6 +1,7 @@
 export const MAINTENANCE_CONFIG = {
-  // Toggle this to true/false to enable or disable maintenance mode across the app
-  isMaintenanceActive: true,
+  // Env-gated (MAINTENANCE_MODE=true). Never hard-code this on: with it active every
+  // route serves the maintenance page, which is fatal for indexing.
+  isMaintenanceActive: process.env.MAINTENANCE_MODE === 'true',
 
   // Display details
   title: "We're Upgrading MyBuddyMaid",
@@ -24,6 +25,6 @@ export const MAINTENANCE_CONFIG = {
   emergencyContact: {
     phone: "+91 9355114869",
     whatsapp: "https://wa.me/919355114869?text=Hi%20MyBuddyMaid%20Support,%20I%20need%20urgent%20assistance",
-    email: "support@mybuddymaid.com"
+    email: "info@mybuddymaid.in"
   }
 };

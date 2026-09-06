@@ -10,7 +10,7 @@ injectSpeedInsights();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/app">
       <AuthProvider>
         <App />
       </AuthProvider>

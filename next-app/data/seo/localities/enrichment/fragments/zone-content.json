@@ -1,0 +1,601 @@
+{
+  "intros": {
+    "central-delhi": "Central Delhi is the administrative and commercial core of the capital, taking in the New Delhi district around Connaught Place and Lodi Road as well as the older, denser neighbourhoods to its north and west. The zone hub covers Connaught Place, Lodi Road, Karol Bagh, Patel Nagar, Pusa, Rajinder Nagar, Daryaganj, Old Delhi and Paharganj, together with the zone-level pincodes 110011 and 110004. Housing here is unusually varied. Lodi Road and the surrounding Lutyens' area are dominated by government bungalows and official residences, while Karol Bagh, Patel Nagar and Rajinder Nagar are largely builder floors and older plotted colonies with families and paying-guest tenants. Old Delhi and Daryaganj are dense mixed-use streets where homes sit above shops, and Paharganj combines residential lanes with a large budget-hotel trade. Households range from long-settled joint families and government officers on transfer to students and young professionals in shared accommodation. Demand for domestic help in Central Delhi is therefore a mix of full-day cooks and maids for larger family homes and part-time cleaning support for smaller flats and shared houses. Most member localities are served by the Delhi Metro, and helpers commonly travel in by metro and bus from adjoining parts of the city.",
+    "south-delhi": "South Delhi is the largest of the Delhi zones in this directory and the one with the widest spread of housing types. The zone hub covers established colonies such as Greater Kailash, Defence Colony, Vasant Vihar, Hauz Khas, Green Park, Safdarjung Enclave, Lajpat Nagar, New Friends Colony, East of Kailash, Saket and Malviya Nagar, the diplomatic and government quarters of Chanakyapuri and R.K. Puram, the DDA flat clusters of Vasant Kunj, Sarita Vihar, Pushp Vihar and Kalkaji, and denser or peripheral areas including Munirka, Okhla, Mehrauli, Chhatarpur, Sangam Vihar and Badarpur. Housing across the zone is mixed: plotted colonies with independent houses and builder floors dominate the older neighbourhoods, while Vasant Kunj, Sarita Vihar and Saket have large gated apartment complexes and DDA societies. Chanakyapuri and R.K. Puram are largely government housing. Households range from multi-generational families in bungalows and builder floors to working professionals in flats and students around Hauz Khas and Munirka. Demand for domestic help is correspondingly broad, from full-day cooks and live-in help in larger homes to hourly cleaning in smaller apartments. The Yellow, Magenta and Violet metro lines serve most of the zone, and helpers often commute from adjoining urban villages.",
+    "south-west-delhi": "South West Delhi stretches from the planned sub-city of Dwarka out to the semi-rural belt along the Haryana border. The zone hub covers Dwarka, Delhi Cantt, Mahipalpur, Rajokari, Palam, Nangal Raya, Mahavir Enclave, Arjun Garh, Chhawla and Najafgarh. Dwarka is the residential anchor of the zone, made up largely of cooperative group housing societies and DDA flats arranged sector by sector, and it accounts for a large share of the zone's demand for domestic help. Delhi Cantt is a cantonment area with defence housing and controlled access. Mahipalpur and Rajokari, close to the airport, mix village settlements with guest houses and builder floors, while Palam, Nangal Raya and Mahavir Enclave are dense, older colonies of independent houses and builder floors. Najafgarh, Chhawla and Arjun Garh lie further out and retain a more small-town character with plotted homes and farm land nearby. Households in Dwarka are typically nuclear families and working professionals in gated societies, whereas the older colonies have more joint families in self-owned homes. The Blue Line metro serves Dwarka and Janakpuri West, and the Airport Express line stops at Dwarka Sector 21, which shapes how helpers reach the zone.",
+    "west-delhi": "West Delhi is a largely residential zone built around the Blue Line metro corridor and the Outer Ring Road. The zone hub covers Punjabi Bagh, Rajouri Garden, Tagore Garden, Ramesh Nagar, Naraina, Janakpuri, Tilak Nagar, Hari Nagar, Paschim Vihar, Uttam Nagar and Nangloi. Housing is mostly plotted: Punjabi Bagh, Rajouri Garden and Janakpuri are established colonies with independent houses and builder floors, many of them home to long-settled Punjabi families. Paschim Vihar and Tagore Garden are similar in character but slightly newer, while Uttam Nagar and Nangloi towards the western edge are denser, with narrower plots, unauthorised-regularised colonies and a larger population of tenants and first-time home buyers. Naraina combines a residential village and colony with an industrial area. Households across West Delhi lean towards families, often multi-generational, in self-owned homes, which creates steady demand for full-day maids and cooks rather than short hourly visits. The Blue Line runs through Rajouri Garden, Tagore Garden, Janakpuri and Uttam Nagar, and the Green Line serves Punjabi Bagh and Paschim Vihar, so helpers can reach most member localities by metro or by bus along the Ring Road.",
+    "north-delhi": "North Delhi is the historic northern part of the city, centred on the University of Delhi's North Campus and the older residential colonies around it. The zone hub covers Kamla Nagar, Civil Lines, Model Town, Azadpur and Burari. Civil Lines is a colonial-era area of large bungalows, government residences and a few apartment blocks, while Model Town is a planned colony of independent houses and builder floors. Kamla Nagar is a dense market and residential locality that draws a large student population from the nearby university colleges, so shared flats and paying-guest accommodation are common alongside family homes. Azadpur is known for its wholesale fruit and vegetable market and has a mix of older housing and commercial premises, and Burari on the northern edge is a fast-growing, densely built belt of builder floors and unauthorised-regularised colonies with many young families and tenants. The result is a zone where demand for domestic help ranges from full-time cooks and maids in bungalow and builder-floor homes to part-time cleaning for students and small households. The Yellow Line metro serves Civil Lines, Vishwavidyalaya, Model Town and Azadpur, which is the main way helpers commute into the zone.",
+    "north-west-delhi": "North West Delhi is one of the largest zones by area in the city, covering both established planned colonies and the rural-urban belt towards the Haryana border. The zone hub covers Rohini, Pitampura, Shalimar Bagh, Ashok Vihar, Shakurpur, Shakur Basti, Samaypur Badli, Alipur, Bawana, Narela and Kanjhawala. Rohini is a large planned sub-city, built sector by sector with DDA flats, cooperative group housing societies and plotted houses across pincodes 110085, 110086 and 110089. Pitampura, Shalimar Bagh and Ashok Vihar are older planned colonies of independent houses and builder floors with many long-settled families. Shakurpur and Shakur Basti are denser and more mixed, while Samaypur Badli, Alipur, Narela, Bawana and Kanjhawala lie on the periphery and combine village settlements, industrial areas and newer affordable housing. Households in the planned colonies are predominantly families, often with elderly members, which supports demand for full-day help and cooks; the peripheral areas have more nuclear and tenant households. The Red Line metro serves Rohini, Pitampura and Shakurpur, and the Yellow Line extends to Samaypur Badli, forming the main commuting routes for helpers.",
+    "east-delhi": "East Delhi is the compact residential zone across the Yamuna, bounded by the river on one side and the Ghaziabad and Noida borders on the other. The zone hub covers Mayur Vihar, Mayur Vihar Phase III, Vasundhara Enclave, Preet Vihar, Laxmi Nagar and Gandhi Nagar, along with the zone-level pincode 110092. Housing is a clear mix of two types. Mayur Vihar, Mayur Vihar Phase III and Vasundhara Enclave are dominated by cooperative group housing societies and DDA flats, most of them gated with entry registers, and are home to a large number of salaried families and working professionals who commute to central Delhi or Noida. Preet Vihar and Laxmi Nagar, by contrast, are plotted colonies of independent houses and builder floors, with Laxmi Nagar also carrying a large tenant population of students and young professionals attracted by its coaching institutes and affordable rents. Gandhi Nagar is a dense, older locality known for its garment wholesale market, with homes above and behind commercial premises. Demand for domestic help is steady across the zone, split between society flats needing part-time maids and cooks and family homes needing full-day support. The Blue Line and Pink Line metro serve most member localities.",
+    "north-east-delhi": "North East Delhi is a dense, largely working-class and lower-middle-income residential zone on the eastern bank of the Yamuna, north of the Ghaziabad border road. The zone hub covers Vivek Vihar, Shahdara, Bhajanpura, Seelampur and Karawal Nagar, spanning pincodes 110032, 110095, 110053, 110093 and 110094. Vivek Vihar is the most planned of the member localities, with independent houses and builder floors laid out on regular plots and a settled family population. Shahdara is one of the oldest parts of the trans-Yamuna area, with narrow lanes, older houses and a strong commercial character around its markets. Bhajanpura, Seelampur and Karawal Nagar are closely built colonies of self-constructed houses and builder floors, many of them regularised unauthorised colonies, with large joint families and a significant number of home-based businesses. Gated apartment complexes are rare in this zone; most homes open directly onto the street, which means domestic help usually works flexible hours agreed directly with the household. Demand is mainly for daily part-time cleaning and cooking support. The Red Line metro serves Shahdara, Welcome and Seelampur, and the Pink Line runs through Vivek Vihar and Karkardooma, giving helpers direct access to the zone.",
+    "noida-central": "Noida Central covers the older, established sectors of Noida between the Delhi border and the start of the Noida-Greater Noida Expressway, roughly Sectors 12 to 79 under the zone-level pincode 201301. The zone hub takes in Sector 12, Sector 15, Sector 16, Sector 18, Sector 27, Sector 29, Sector 37, Sector 44, Sector 50, Sector 51, Sector 52, Sector 61, Sector 62, Sector 63, Sector 74, Sector 75, Sector 76, Sector 77, Sector 78 and Sector 79, among others. Housing changes noticeably across the zone. The low-numbered sectors such as 12, 15, 27, 29 and 30 are plotted residential sectors of independent houses and kothis, many with long-settled families. Sectors 50, 51, 52 and 61 mix plotted houses with cooperative group housing societies, while Sectors 74 to 79 are almost entirely high-rise gated apartment towers built over the last decade and populated by nuclear families and working professionals. Sectors 16, 18, 62 and 63 are primarily commercial and IT office areas with residential pockets around them. Demand for domestic help ranges from full-day maids and cooks in plotted homes to part-time and hourly support in society flats. The Blue Line and Aqua Line metro serve the zone.",
+    "noida-expressway": "Noida Expressway is the belt of sectors developed along the Noida-Greater Noida Expressway, south of Noida Central, and is one of the newest residential areas in the National Capital Region. The zone hub covers Sector 93, Sector 100, Sector 104, Sector 107, Sector 108, Sector 110, Sector 135, Sector 137, Sector 143, Sector 150 and Sector 152, among others, across pincodes 201304, 201305, 201306 and 201310. Housing here is overwhelmingly gated: large apartment complexes with towers, clubhouses and controlled entry make up almost all of the residential stock, with a smaller number of plotted and villa developments in sectors such as 93 and 150. Households are predominantly nuclear families and working professionals, many of them employed in the IT and corporate office parks along the expressway itself or commuting to Delhi and Noida Central, with a noticeable number of double-income households and young children. Because entry to most societies is controlled by gate passes and resident-management apps, domestic helpers in this zone usually work fixed, pre-registered shifts. Demand is steady for part-time maids, cooks and nannies, with elder-care requests rising in the larger complexes. The Aqua Line metro runs along the expressway with stations at several member sectors.",
+    "greater-noida-west": "Greater Noida West, commonly called Noida Extension, is the high-density residential belt between Noida and Greater Noida that has grown rapidly since the early 2010s. The zone hub covers Gaur City, Techzone and Surajpur, under the zone-level pincode 201306. Gaur City is an integrated township spread over Gaur City 1 and Gaur City 2 with several thousand apartments, its own markets, schools and internal roads, and is one of the largest residential addresses in the zone. Techzone, particularly Techzone 4, is a cluster of large gated apartment complexes along the main Noida Extension road. Surajpur sits at the older end of the zone, closer to the Greater Noida industrial area, and mixes village settlements with newer housing. Housing across the zone is almost entirely high-rise gated societies with controlled entry, and households are typically young nuclear families and working professionals who moved here for comparatively affordable ownership, many commuting daily to Noida or Delhi. This profile creates strong demand for part-time maids, cooks and childcare support, with helpers usually registered with society management before they can enter. Metro connectivity to the zone is still under development, so helpers mostly reach it by bus, shared auto and from nearby villages.",
+    "greater-noida-central": "Greater Noida Central is the planned core of Greater Noida, laid out by the development authority in wide, lettered sectors around Pari Chowk. The zone hub covers Alpha, Beta, Gamma, Delta, Knowledge Park, Pari Chowk, Jaypee Greens, Kasna and Dadri, spanning pincodes 201310, 203207 and the zone-level 203201. The Greek-lettered sectors of Alpha, Beta, Gamma and Delta are primarily plotted residential sectors of independent houses and builder floors on generous plots, with some group housing, and are home to settled families, many of whom work in the nearby institutions and industries. Knowledge Park is the education hub with a concentration of engineering and management colleges, so paying-guest accommodation and hostels sit alongside faculty housing. Jaypee Greens is a large gated township with villas and apartments around a golf course. Kasna and Dadri lie on the industrial and semi-rural edge of the zone with village settlements and worker housing. Demand for domestic help is split between full-day maids and cooks in the plotted sectors, part-time support for student and single-professional households near Knowledge Park, and gated-society shifts in Jaypee Greens. The Aqua Line metro terminates at Depot station near Pari Chowk.",
+    "dlf-golf-course-road": "DLF and Golf Course Road is the established high-end residential belt of Gurgaon, developed largely by DLF from the 1980s onwards along and around Golf Course Road. The zone hub covers DLF Phase 1, DLF Phase 2, DLF Phase 3, DLF Phase 4, DLF Phase 5, Golf Course Road and Sectors 42, 43, 53, 54, 55, 56, 57, 58, 59, 60 and 61, across pincodes 122002, 122009, 122010 and 122011. Housing is mixed but heavily gated: DLF Phases 1, 2 and 4 are plotted colonies of large independent houses and builder floors, while DLF Phase 5, Golf Course Road and Sectors 53 to 61 are dominated by high-rise condominiums with clubhouses and controlled entry. DLF Phase 3 is denser, with many independent houses converted into paying-guest and rental accommodation for young professionals. Households range from long-settled families in bungalows to double-income professional couples and expatriate families in condominiums, which produces steady demand for full-time cooks, live-in help, nannies and elder care as well as part-time cleaning. Helpers commonly commute from the adjoining urban villages such as Chakkarpur, Sikanderpur, Nathupur and Wazirabad, and the Rapid Metro loop connects Sikanderpur to the Golf Course Road sectors.",
+    "sohna-road-south-city": "Sohna Road and South City is the residential corridor running south from central Gurgaon along Sohna Road, together with the South City colonies and the sectors on either side of the road. The zone hub covers South City 1, South City 2, Sohna Road and Sectors 47, 49, 50, 51, 65, 66, 67, 68, 69, 70 and 71, across pincodes 122001, 122018, 122101 and 122102. South City 1 and South City 2 are plotted colonies of independent houses and builder floors with established families, and Sectors 47, 50 and 51 are similar in character. Sector 49 and the sectors from 65 to 71 along Sohna Road are mostly gated apartment complexes and townships built since the mid-2000s, with builder-floor projects in between. Households in the gated societies are largely nuclear families and working professionals commuting to the office parks on Sohna Road, Golf Course Road Extension and Cyber City, while the older colonies have more multi-generational families. Demand for domestic help covers part-time maids and cooks in flats and full-day help in independent houses. Helpers usually commute by shared auto and bus along Sohna Road from villages such as Badshahpur and Islampur, as there is no metro on this corridor.",
+    "new-gurgaon": "New Gurgaon is the belt of sectors developed along the Dwarka Expressway and National Highway 48 towards Manesar, together with the Manesar industrial township at its southern end. The zone hub covers Sectors 72, 73, 74, 75, 76, 77, 82, 83, 84, 85, 86 and 88, plus Manesar and IMT Manesar, across pincodes 122004, 122051, 122052 and the zone-level 122505. The sectors from 72 to 88 are almost entirely gated apartment complexes, many completed in the last decade, with independent floors and plotted developments in between; several sectors still have projects under construction. Households are predominantly young nuclear families and working professionals who commute to Cyber City, Sohna Road or the Manesar industrial area, with a large proportion of first-time home owners. Manesar and IMT Manesar combine industrial units and worker housing with a few older villages and gated townships, and employ many of the helpers who serve the residential sectors. Because entry to most societies runs through gate-pass systems, domestic help in New Gurgaon usually works pre-registered shifts. Demand is mainly for part-time maids and cooks, with nannies in demand among younger families. Access is by road along NH-48 and Pataudi Road.",
+    "old-gurgaon": "Old Gurgaon is the established, pre-DLF side of the city, centred on the original town and its extension sectors, and carries the zone-level pincode 122001 that is often referred to simply as Gurgaon Main. The zone hub covers Sector 21, Sector 44, Sector 45, Sector 46 and Sector 52, across pincodes 122016 and 122003, and represents the older HUDA-planned residential sectors of Gurgaon. Housing in these sectors is predominantly plotted: independent houses and builder floors on HUDA plots, with a smaller number of group housing societies and a growing stock of builder-floor rentals. Sector 21 lies on the north-western side of the city near Palam Vihar and Dundahera, while Sectors 44, 45, 46 and 52 sit close to the Millennium City Centre metro station and the commercial belt around it. Households here are typically long-settled, often multi-generational families in self-owned homes, alongside tenants in builder floors who work in nearby office areas. Domestic help in Old Gurgaon is usually arranged directly with the household rather than through a society gate, so timings tend to be more flexible than in gated complexes. Demand is steady for full-day maids, cooks and elder care. The Yellow Line metro serves Millennium City Centre.",
+    "south-mumbai": "South Mumbai, often shortened to SoBo, is the historic core of the city on the southern tip of the island, home to its oldest residential districts and its original business district. The zone hub covers Fort, Colaba, Malabar Hill, Cumballa Hill, Nariman Point, Worli, Prabhadevi, Tardeo, Kalbadevi, Girgaon, Grant Road, Mumbai Central, Mazgaon, Parel, Sewri, Wadala and Antop Hill. Housing is a distinctive mix of heritage buildings, old-style cooperative housing societies, former mill-land redevelopments and modern high-rise towers. Malabar Hill, Cumballa Hill and Worli have long-established apartment buildings and newer towers, while Kalbadevi, Girgaon and Grant Road retain dense chawls, old buildings and mixed-use streets with homes above shops. Parel, Sewri and Wadala have seen large redevelopments of former mill and industrial land into gated tower complexes. Households range from long-established multi-generational families and business families to single professionals in serviced apartments, and many buildings have concierge or watchman-based entry rather than app-based gate passes. Demand for domestic help spans full-day cooks, live-in staff and elder care in larger apartments to part-time cleaning in smaller flats. Helpers commute in by local train to Churchgate, CSMT, Mumbai Central and Parel and by BEST bus.",
+    "central-mumbai": "Central Mumbai is the band of neighbourhoods between South Mumbai and the western and eastern suburbs, where the island city meets the suburban railway lines. The zone hub covers Dadar, Mahim, Matunga, Sion and Kurla, across pincodes 400014, 400028, 400016, 400019, 400022 and 400070. Dadar and Matunga are established residential areas of older cooperative housing societies and mid-rise buildings, with strong Marathi and South Indian family communities and busy markets around the station. Mahim sits on the western shore beside Bandra and mixes old buildings with newer redevelopments, while Sion is largely older housing societies and government colonies around the hospital and station. Kurla is denser and more varied, with chawls, older buildings and new commercial towers around the Bandra-Kurla Complex edge. Households across the zone are mostly long-settled families, many multi-generational, living in cooperative societies with watchman-based entry, alongside tenants and working professionals attracted by the central location. Demand for domestic help is steady for part-time maids and cooks, with elder care requests common in the older societies. Dadar, Matunga, Sion and Kurla are all major railway stations on the Central and Western lines, making the zone easy for helpers to reach.",
+    "western-suburbs": "The Western Suburbs of Mumbai stretch along the Western Railway line from Bandra to Dahisar and house a large share of the city's population. The zone hub covers Bandra West, Bandra East, Khar, Santacruz West, Juhu, Vile Parle, Andheri, Andheri West, Andheri East, Versova, Jogeshwari East, Jogeshwari West, Goregaon East, Goregaon West, Malad West, Malad East, Kandivali East, Kandivali West and Dahisar. Housing varies with distance from the city. Bandra West, Khar, Juhu and Versova have a mix of older bungalows, low-rise cooperative societies and redeveloped towers, while Andheri, Goregaon, Malad and Kandivali are dominated by cooperative housing societies and, increasingly, large gated complexes with controlled entry. Jogeshwari and parts of Andheri East and Malad East also have dense chawl and older housing pockets. Households range from film and media professionals around Juhu and Andheri West to salaried families and IT and BPO employees in Goregaon, Malad and Kandivali, with many double-income households and nuclear families. Demand for domestic help across the zone is high in volume and skewed towards part-time maids and cooks, with nanny and elder-care requests common. The Western line and Metro Line 1, Line 2A and Line 7 give helpers direct access to most member localities.",
+    "eastern-suburbs": "The Eastern Suburbs of Mumbai run along the Central Railway line from Chembur and Ghatkopar out to Mulund, between the Eastern Express Highway and the Sanjay Gandhi National Park hills. The zone hub covers Powai, Ghatkopar, Chembur, Vikhroli, Bhandup, Mulund and Mulund East, across pincodes 400076, 400086, 400088, 400078, 400083, 400080 and 400081. Housing is a mix of older cooperative societies and large planned townships. Powai is dominated by the Hiranandani Gardens township and neighbouring gated complexes with controlled entry, and its residents are largely working professionals from the nearby IT and corporate offices. Chembur and Mulund are established family neighbourhoods of cooperative housing societies and mid-rise buildings with strong community ties and many elderly residents. Ghatkopar combines older societies with a large Gujarati business community and new towers along the metro corridor, while Vikhroli and Bhandup mix older housing, chawls and newer redevelopments. Demand for domestic help ranges from part-time maids and cooks in society flats to full-day support and elder care in family homes. The Central line stations at Ghatkopar, Vikhroli, Bhandup and Mulund, Metro Line 1 at Ghatkopar and the Harbour line at Chembur carry most helper commutes.",
+    "navi-mumbai": "Navi Mumbai is the planned satellite city across Thane Creek, developed by CIDCO from the 1970s as a series of self-contained nodes along the Harbour railway line. The zone hub covers Vashi, Nerul, Sanpada and Airoli, across pincodes 400701, 400703, 400706, 400705 and 400708. Each node is laid out in numbered sectors with a mix of CIDCO-built apartment blocks, cooperative housing societies, plotted row houses and, more recently, gated high-rise complexes. Vashi is the oldest and most commercial node, with older societies around the market and station and newer towers on Palm Beach Road. Nerul and Sanpada are largely residential, with Sanpada's proximity to Vashi making it popular with working professionals, while Airoli sits at the northern end near the Mulund bridge and houses many employees of the Mindspace IT park. Households are predominantly families in self-owned flats, many of whom moved from Mumbai for more space, with a growing population of young professionals. Wider roads and lower density mean domestic help commutes here differ from Mumbai; most helpers travel by Harbour line train, NMMT bus and shared auto from nearby nodes and villages. Demand is steady for part-time maids, cooks and elder care.",
+    "pune-west": "West Pune is the belt of neighbourhoods along the Mumbai-Bangalore bypass and the road to Hinjawadi, and is the part of the city most closely tied to its IT industry. The zone hub covers Aundh, Baner, Balewadi, Pashan, Sus, Bavdhan, Wakad and Hinjawadi, across pincodes 411007, 411045, 411062, 411061, 411060, 411023, 411058 and 411057. Aundh is the oldest of these, with established bungalows, older housing societies and newer apartment blocks. Baner, Balewadi, Wakad and Bavdhan have grown mostly since the 2000s and are dominated by gated apartment complexes and townships with clubhouses and controlled entry, with a scattering of row houses and bungalow plots in Pashan and Sus. Hinjawadi is the site of the Rajiv Gandhi Infotech Park and combines large residential townships with hostels and paying-guest accommodation for IT employees. Households across the zone lean heavily towards working professionals and young nuclear families, many of them migrants to Pune, with a high proportion of double-income homes. This drives strong demand for part-time maids, cooks and nannies, and helpers usually need to be registered with society management. Helpers commute mainly by PMPML bus and shared auto from surrounding villages and older settlements.",
+    "pune-central": "Central Pune covers the historic core of the city and the established residential neighbourhoods that grew around it on the west bank of the Mutha river. The zone hub covers Pune Camp, Deccan, Deccan Gymkhana, Shivajinagar, Pune University Area, Sadashiv Peth, Kothrud, Karve Nagar, Warje and Anandnagar. Housing here is varied and older on average than elsewhere in the city. Sadashiv Peth and the other peths are dense, traditional neighbourhoods of wadas, old buildings and mid-rise apartment blocks with long-settled Marathi families. Deccan Gymkhana, Shivajinagar and the University Area have bungalows, older cooperative societies and institutional housing near the university and colleges. Pune Camp retains cantonment-era buildings and mixed-use streets. Kothrud, Karve Nagar, Warje and Anandnagar are large residential suburbs of apartment societies and row houses that expanded in the 1990s and 2000s and now house many families and retirees. Households across Central Pune are predominantly families, often multi-generational, alongside students around Deccan and the university, so demand for domestic help leans towards regular daily maids and cooks, with elder care a recurring need. Metro stations on the Vanaz-Ramwadi line at Kothrud, Deccan and Shivajinagar and dense PMPML bus routes carry helper commutes.",
+    "pune-east": "East Pune is the belt of neighbourhoods on the eastern side of the city between the airport, the Nagar Road IT corridor and the Solapur Road, and it has grown rapidly with Pune's IT and services economy. The zone hub covers Kharadi, Viman Nagar, Hadapsar, Dhanori, Lohegaon and Wanowrie, across pincodes 411014, 411022, 411013, 411028, 411036, 411047 and 411040. Kharadi and Viman Nagar sit beside the EON IT Park and the airport and are dominated by gated apartment complexes populated by working professionals and young families, many of them recent arrivals to Pune. Hadapsar combines Magarpatta City and other integrated townships with an older town centre and industrial estate, giving it a wide range of households from IT employees to long-settled local families. Dhanori and Lohegaon to the north are newer, more affordable apartment belts still filling in with infrastructure, while Wanowrie is an established, largely residential area of housing societies and bungalows with a significant number of retirees. Demand for domestic help across the zone is high for part-time maids, cooks and nannies in gated societies, where helpers usually need gate-pass registration. Helpers commute by PMPML bus and shared auto, and the Ramwadi metro terminus serves Viman Nagar.",
+    "pune-south": "South Pune covers the residential belt south of the city centre, stretching from the Kondhwa and NIBM Road area towards the Katraj hills and the Satara Road. The zone hub covers NIBM, Kondhwa, Bibwewadi and Katraj, across pincodes 411048, 411041, 411043 and 411046. NIBM Road takes its name from the National Institute of Bank Management and is lined with gated apartment complexes and row-house projects that attract working professionals and families who value its proximity to Camp and the Hadapsar IT belt. Kondhwa is larger and more mixed, with gated societies alongside older settlements and a diverse community, and has expanded towards the Undri edge in recent years. Bibwewadi is an established residential area of housing societies and independent houses with many long-settled families, and Katraj at the southern end mixes older village housing, newer apartment buildings and the Pune-Satara highway frontage. Households across South Pune are predominantly families, with a noticeable share of joint families in Bibwewadi and Kondhwa and younger nuclear households along NIBM Road. Demand for domestic help is steady for daily maids and cooks, with childcare support common in gated societies. Helpers commute mainly by PMPML bus and shared auto along Satara Road and Kondhwa Road.",
+    "pcmc": "Pimpri-Chinchwad, governed by the Pimpri-Chinchwad Municipal Corporation and widely known as PCMC, is the industrial twin city on the northern side of Pune along the old Mumbai-Pune highway. The zone hub covers Pimpri, Chinchwad and Pimple Saudagar, across pincodes 411017, 411018, 411034, 411019, 411033 and 411027. Pimpri and Chinchwad grew around the automobile and engineering plants of the MIDC industrial area and still have a large population of industrial employees and long-settled families in cooperative housing societies, older bungalows and mid-rise apartment blocks; more recent gated complexes have been added along the highway and near Chinchwad station. Pimple Saudagar, closer to the Aundh and Wakad side, developed mostly after 2000 and is dominated by gated apartment societies popular with IT professionals who commute to Hinjawadi, giving it a younger and more transient population. Households across PCMC therefore range from multi-generational industrial-worker families to double-income professional couples, which shapes demand for domestic help from daily maids and cooks to part-time and nanny support in the newer societies. The Pune Metro's PCMC-Swargate line serves Pimpri and Chinchwad, and PMPML buses and shared autos connect the rest of the zone.",
+    "bangalore-east": "East Bangalore is the IT-driven belt on the eastern side of the city, stretching from the Outer Ring Road at Marathahalli out to Whitefield. The zone hub covers Whitefield, Marathahalli, Hoodi and Ramamurthy Nagar, across pincodes 560049, 560066, 560037, 560048 and 560016. Whitefield grew from a small settlement into a major residential and technology hub around the International Tech Park (ITPL) and the Export Promotion Industrial Park, and is now dominated by large gated apartment complexes, villa communities and townships with controlled entry. Marathahalli sits at the junction of the Outer Ring Road and the airport road and mixes gated societies with dense independent-house layouts and paying-guest accommodation for young IT employees. Hoodi lies between the two with a similar mix of apartment complexes and older village housing, while Ramamurthy Nagar to the north is a more established, largely independent-house area with many long-settled families. Households across East Bangalore are predominantly working professionals and nuclear families, a large share of them from other states, which produces strong demand for part-time maids, cooks and nannies, with elder care requested by families whose parents live with them. The Purple Line metro serves Whitefield and Hoodi, and helpers also commute by BMTC bus.",
+    "bangalore-south-east": "South East Bangalore is the corridor along the Outer Ring Road, Sarjapur Road and Hosur Road that houses much of the city's technology workforce. The zone hub covers Koramangala, HSR Layout, Bellandur, Sarjapur Road, Bommanahalli, Electronic City and Begur, across pincodes 560029, 560034, 560095, 560102, 560103, 560035, 560068, 560100 and 560114. Koramangala and HSR Layout are planned layouts of independent houses, builder floors and mid-rise apartments that have become home to startups, young professionals and established families alike. Bellandur and Sarjapur Road are dominated by large gated apartment complexes and villa communities built along the tech corridor since the 2000s. Bommanahalli and Begur are denser and more mixed, with independent houses, smaller apartment buildings and worker housing, while Electronic City combines the technology park with adjoining gated townships and paying-guest accommodation. Households across the zone are predominantly working professionals, from single tenants in shared flats to double-income families with young children, which drives high demand for part-time maids, cooks and nannies and for helpers who can work fixed society-registered shifts. Metro connectivity is limited to the Yellow Line towards Electronic City, so most helpers commute by BMTC bus from nearby settlements.",
+    "bangalore-south": "South Bangalore is the established residential heart of the city, built around the planned layouts of the mid-20th century and the older neighbourhoods near Lalbagh. The zone hub covers Jayanagar, JP Nagar, Bannerghatta Road, Banashankari, Basavanagudi, Wilson Garden and Adugodi, across pincodes 560011, 560078, 560076, 560083, 560050, 560085, 560004, 560027 and 560030. Basavanagudi and Jayanagar are among the oldest planned residential areas in Bangalore, with independent houses on tree-lined streets, temples, traditional markets and many long-settled Kannada-speaking families. JP Nagar and Banashankari extended this pattern southwards with plotted layouts that now also contain builder floors and apartment buildings. Bannerghatta Road is a newer corridor dominated by gated apartment complexes and townships that attract working professionals, while Wilson Garden and Adugodi, close to the city centre, combine older houses, government quarters and newer apartments. Households across South Bangalore are predominantly families, often multi-generational with elderly members living at home, which supports steady demand for full-day maids, cooks and elder care alongside part-time support in apartments. The Green Line metro serves Jayanagar, Banashankari and JP Nagar, and the Yellow Line runs through Bannerghatta Road.",
+    "bangalore-central": "Central Bangalore is the core of the city around MG Road, Cubbon Park and the old commercial districts, together with the established residential colonies immediately east and north of it. The zone hub covers Indiranagar, Domlur, Richmond Town, Vasanth Nagar, Viveknagar, Seshadripuram and Chickpet, across pincodes 560008, 560038, 560017, 560025, 560003, 560047, 560020 and 560053, with 560001 as the zone-level pincode. Indiranagar is a planned layout of independent houses, builder floors and apartments that has become a major dining and retail district while remaining largely residential in its inner streets. Domlur beside it houses many technology employees near the Embassy Golf Links business park. Richmond Town and Vasanth Nagar are older, leafy colonies with bungalows, apartment buildings and institutional housing. Viveknagar and Seshadripuram are denser, mixed neighbourhoods of independent houses and smaller apartment blocks, and Chickpet is the historic wholesale market district where homes sit above and behind shops. Households range from long-settled families and retirees in the older colonies to working professionals and expatriates in Indiranagar and Domlur. Demand for domestic help spans full-day cooks and elder care in family homes and part-time cleaning in apartments. The Purple Line metro serves Indiranagar, MG Road and Chickpet.",
+    "bangalore-north": "North Bangalore covers the residential neighbourhoods on the northern side of the city between the old cantonment and the Outer Ring Road, on the way towards the airport road. The zone hub covers Fraser Town, Kalyan Nagar and Nagawara, across pincodes 560005, 560043 and 560045. Fraser Town, also known as Pulikeshi Nagar, is one of the oldest cantonment-era residential areas of Bangalore, with colonial-style bungalows, older apartment buildings and a diverse, long-settled community; it remains closely tied to the neighbouring Cox Town and Cooke Town localities. Kalyan Nagar developed later as a planned layout of independent houses and builder floors, and now also contains apartment complexes popular with working professionals employed in the Manyata Tech Park and along the Outer Ring Road. Nagawara sits beside the tech park and the Nagawara lake and is dominated by newer gated apartment complexes alongside older village housing. Households across North Bangalore range from multi-generational families in Fraser Town to nuclear professional households in Kalyan Nagar and Nagawara, so demand for domestic help includes full-day maids and cooks in older homes and part-time, society-registered shifts in gated complexes. Helpers commute mainly by BMTC bus, with Nagawara on the planned Blue and Pink metro lines.",
+    "bangalore-west": "West Bangalore is the older residential side of the city that grew along the roads to Tumkur and Mysore, and is home to some of its most established Kannada-speaking neighbourhoods. The zone hub covers Malleswaram, Rajajinagar and Vijayanagar, across pincodes 560022, 560010 and 560040. Malleswaram is a century-old planned locality of independent houses, traditional markets and temples near the Indian Institute of Science, with many multi-generational families and retirees, and an increasing number of apartment buildings replacing older homes. Rajajinagar was laid out in the 1950s as a large residential extension and combines independent houses and builder floors with a busy commercial spine along its main roads and the Orion Mall and Brigade Gateway complex at its edge. Vijayanagar is a dense, predominantly middle-class residential area of independent houses, smaller apartment blocks and active local markets. Households across West Bangalore are overwhelmingly families, often joint families in self-owned homes, which creates steady demand for full-day maids and cooks and for elder care rather than short hourly visits. The Green Line metro serves Malleswaram and Rajajinagar, and the Purple Line runs through Vijayanagar, giving helpers direct access to all three member localities.",
+    "mangalore-city": "Mangalore City is the urban core of Mangalore, the port city on the Karnataka coast, and covers the neighbourhoods within and immediately around the old town on the hilly ground between the Netravati and Gurupura rivers. The zone hub covers Hampankatta, Kodialbail, Kadri, Kottara, Bejai, Derebail, Kulshekar, Valencia, Bolar, Jeppu, Kankanady, Attavar, Urwa, Kavoor, Bondel, Kulur, Nantoor and Pumpwell, with 575001 and 575036 as zone-level pincodes. Hampankatta, Kodialbail and Bolar form the older commercial and residential centre, while Kadri, Bejai, Kankanady and Attavar are established residential areas of independent houses, older apartment buildings and newer gated complexes near the city's hospitals and colleges. Derebail, Kavoor, Kulur and Bondel on the northern side and Kulshekar, Valencia and Jeppu on the southern side are quieter, largely independent-house neighbourhoods with many long-settled families. Nantoor and Pumpwell sit on the main road junctions and mix commercial frontage with residential lanes. Households across the city are predominantly families, many multi-generational and living in self-owned houses, with a significant number of homes where working-age members are abroad or in other cities and elderly parents remain. This shapes demand towards regular daily maids, cooks and elder care. Helpers commute mainly by city bus and auto.",
+    "mangalore-north": "Mangalore North is the coastal belt running north of the city along the Panambur beach road and National Highway 66 towards Surathkal and the airport at Bajpe. The zone hub covers Surathkal, Panambur, Katipalla and Bajpe, across pincodes 575018, 575019, 575020 and 575025. Surathkal is the largest settlement in the zone and is known for the National Institute of Technology Karnataka campus; its housing is a mix of independent houses, small apartment buildings and paying-guest accommodation for students and institute staff, with an established local population around the market and temple. Panambur is dominated by the New Mangalore Port and the industrial units around it, with worker housing, port colonies and a few residential layouts near the beach. Katipalla is a largely residential area of independent houses and layouts that developed to house families displaced by the port and refinery projects, and Bajpe is the semi-rural settlement around Mangalore International Airport with village housing and newer plotted layouts. Households across Mangalore North are predominantly families in self-owned independent houses, alongside student and institutional tenants at Surathkal, so demand for domestic help centres on regular daily maids and cooks. Helpers travel by city bus along NH-66.",
+    "mangalore-south": "Mangalore South is the belt south of the Netravati river along the coast and the road towards the Kerala border, taking in the coastal town of Ullal and the inland settlements around the Mangalore University campus. The zone hub covers Ullal, Konaje and Mudipu, across pincodes 575021, 575022 and 575023. Ullal is a long-established coastal town with a strong fishing community, a historic dargah and mosque, and dense residential lanes of independent houses close to the beach; newer apartment buildings have appeared along the highway. Konaje is the location of Mangalore University's Mangalagangothri campus and has grown around it with faculty and staff housing, student rentals and independent houses in a still semi-rural setting. Mudipu, further inland, is a small-town settlement of village housing and plotted layouts around its market junction. Households across Mangalore South are predominantly local families in self-owned independent houses, often multi-generational, with students and academic staff at Konaje. Gated apartment complexes are uncommon here, so domestic help is arranged directly with the household and timings are flexible. Demand is mainly for regular daily maids and cooks, with elder care requested by families whose younger members work away. Helpers commute by city bus and auto along NH-66."
+  },
+  "faqs": {
+    "central-delhi": [
+      {
+        "id": "faq-zone-central-delhi-1",
+        "q": "Which areas of Central Delhi do you cover?",
+        "a": "The Central Delhi hub covers Connaught Place, Lodi Road, Karol Bagh, Patel Nagar, Pusa, Rajinder Nagar, Daryaganj, Old Delhi and Paharganj. Each locality has its own page where you can place a request for that specific area.",
+        "scope": "zone",
+        "tags": ["delhi", "central-delhi"]
+      },
+      {
+        "id": "faq-zone-central-delhi-2",
+        "q": "Do you serve government housing and builder floors in Central Delhi differently?",
+        "a": "The booking process is the same across the zone, but the type of help requested tends to differ. Government residences around Lodi Road and family homes in Karol Bagh and Patel Nagar usually ask for full-day cooks and maids, while smaller flats and shared accommodation near Rajinder Nagar more often need part-time cleaning support.",
+        "scope": "zone",
+        "tags": ["delhi", "central-delhi"]
+      }
+    ],
+    "south-delhi": [
+      {
+        "id": "faq-zone-south-delhi-1",
+        "q": "Which areas of South Delhi do you cover?",
+        "a": "The South Delhi hub covers Greater Kailash, Defence Colony, Vasant Vihar, Vasant Kunj, Hauz Khas, Green Park, Safdarjung Enclave, Lajpat Nagar, New Friends Colony, East of Kailash, Saket, Malviya Nagar, Chanakyapuri, R.K. Puram, Kalkaji, Sarita Vihar, Pushp Vihar, Munirka, Okhla, Mehrauli, Chhatarpur, Sangam Vihar, Nizamuddin, Jangpura, Andrews Ganj, Sarojini Nagar and Badarpur.",
+        "scope": "zone",
+        "tags": ["delhi", "south-delhi"]
+      },
+      {
+        "id": "faq-zone-south-delhi-2",
+        "q": "Do helpers in South Delhi need gate passes?",
+        "a": "It depends on the locality. Gated societies in Vasant Kunj, Sarita Vihar and parts of Saket usually require helpers to be registered with the RWA or society office before entry, whereas independent houses and builder floors in Greater Kailash, Defence Colony or Malviya Nagar are arranged directly with the household. We tell you what is needed once a helper is assigned.",
+        "scope": "zone",
+        "tags": ["delhi", "south-delhi"]
+      }
+    ],
+    "south-west-delhi": [
+      {
+        "id": "faq-zone-south-west-delhi-1",
+        "q": "Which areas of South West Delhi do you cover?",
+        "a": "The South West Delhi hub covers Dwarka, Delhi Cantt, Mahipalpur, Rajokari, Palam, Nangal Raya, Mahavir Enclave, Arjun Garh, Chhawla and Najafgarh. Dwarka is served across both of its pincodes, 110075 and 110078.",
+        "scope": "zone",
+        "tags": ["delhi", "south-west-delhi"]
+      },
+      {
+        "id": "faq-zone-south-west-delhi-2",
+        "q": "Is domestic help arranged differently in Dwarka societies compared with the rest of South West Delhi?",
+        "a": "Most Dwarka homes are in cooperative group housing societies with controlled entry, so helpers are usually registered with the society office and work fixed shifts. In Palam, Nangal Raya, Mahavir Enclave and the outer areas such as Najafgarh, homes are mostly independent houses or builder floors and timings are agreed directly with the household.",
+        "scope": "zone",
+        "tags": ["delhi", "south-west-delhi"]
+      }
+    ],
+    "west-delhi": [
+      {
+        "id": "faq-zone-west-delhi-1",
+        "q": "Which areas of West Delhi do you cover?",
+        "a": "The West Delhi hub covers Punjabi Bagh, Rajouri Garden, Tagore Garden, Ramesh Nagar, Naraina, Janakpuri, Tilak Nagar, Hari Nagar, Paschim Vihar, Uttam Nagar and Nangloi. Each of these has its own locality page for placing a request.",
+        "scope": "zone",
+        "tags": ["delhi", "west-delhi"]
+      },
+      {
+        "id": "faq-zone-west-delhi-2",
+        "q": "How do helpers usually reach homes in West Delhi?",
+        "a": "The Blue Line metro runs through Rajouri Garden, Tagore Garden, Janakpuri and Uttam Nagar, and the Green Line serves Punjabi Bagh and Paschim Vihar, so most helpers use the metro or buses along the Ring Road. Because most homes in the zone are independent houses or builder floors, timings are generally agreed directly with the household rather than through a society gate.",
+        "scope": "zone",
+        "tags": ["delhi", "west-delhi"]
+      }
+    ],
+    "north-delhi": [
+      {
+        "id": "faq-zone-north-delhi-1",
+        "q": "Which areas of North Delhi do you cover?",
+        "a": "The North Delhi hub covers Kamla Nagar, Civil Lines, Model Town, Azadpur and Burari. These span pincodes 110007, 110054, 110009, 110033 and 110084 respectively.",
+        "scope": "zone",
+        "tags": ["delhi", "north-delhi"]
+      },
+      {
+        "id": "faq-zone-north-delhi-2",
+        "q": "Can students in shared flats near North Campus book part-time help?",
+        "a": "Yes. Shared flats and paying-guest households in Kamla Nagar and around the University of Delhi's North Campus can request part-time cleaning or cooking support in the same way as family homes in Model Town or Civil Lines. The request is placed on the relevant locality page and the household nominates one point of contact.",
+        "scope": "zone",
+        "tags": ["delhi", "north-delhi"]
+      }
+    ],
+    "north-west-delhi": [
+      {
+        "id": "faq-zone-north-west-delhi-1",
+        "q": "Which areas of North West Delhi do you cover?",
+        "a": "The North West Delhi hub covers Rohini, Pitampura, Shalimar Bagh, Ashok Vihar, Shakurpur, Shakur Basti, Samaypur Badli, Alipur, Bawana, Narela and Kanjhawala. Rohini is covered across pincodes 110085, 110086 and 110089.",
+        "scope": "zone",
+        "tags": ["delhi", "north-west-delhi"]
+      },
+      {
+        "id": "faq-zone-north-west-delhi-2",
+        "q": "Do you serve the outer areas of North West Delhi such as Narela, Bawana and Alipur?",
+        "a": "Yes, Narela, Bawana, Alipur and Kanjhawala are member localities of this zone and each has its own page. These areas are further from the metro network than Rohini or Pitampura, so helper availability and travel time can differ from the inner colonies and are confirmed at the time of booking.",
+        "scope": "zone",
+        "tags": ["delhi", "north-west-delhi"]
+      }
+    ],
+    "east-delhi": [
+      {
+        "id": "faq-zone-east-delhi-1",
+        "q": "Which areas of East Delhi do you cover?",
+        "a": "The East Delhi hub covers Mayur Vihar, Mayur Vihar Phase III, Vasundhara Enclave, Preet Vihar, Laxmi Nagar and Gandhi Nagar, along with the zone-level pincode 110092 that Preet Vihar and Laxmi Nagar share.",
+        "scope": "zone",
+        "tags": ["delhi", "east-delhi"]
+      },
+      {
+        "id": "faq-zone-east-delhi-2",
+        "q": "Do helpers in East Delhi societies need entry registration?",
+        "a": "In the group housing societies of Mayur Vihar, Mayur Vihar Phase III and Vasundhara Enclave, helpers are generally registered at the society gate before they can enter, and many societies keep an entry register or app. In the plotted colonies of Preet Vihar, Laxmi Nagar and Gandhi Nagar, entry is arranged directly with the household.",
+        "scope": "zone",
+        "tags": ["delhi", "east-delhi"]
+      }
+    ],
+    "north-east-delhi": [
+      {
+        "id": "faq-zone-north-east-delhi-1",
+        "q": "Which areas of North East Delhi do you cover?",
+        "a": "The North East Delhi hub covers Vivek Vihar, Shahdara, Bhajanpura, Seelampur and Karawal Nagar. Shahdara is covered across both of its pincodes, 110032 and 110095.",
+        "scope": "zone",
+        "tags": ["delhi", "north-east-delhi"]
+      },
+      {
+        "id": "faq-zone-north-east-delhi-2",
+        "q": "What kind of domestic help is most commonly requested in North East Delhi?",
+        "a": "Because most homes in Shahdara, Bhajanpura, Seelampur and Karawal Nagar are independent houses or builder floors rather than gated societies, households here most often request a regular part-time maid for daily cleaning and utensils, with cooking support the next most common. Timings are agreed directly with the household.",
+        "scope": "zone",
+        "tags": ["delhi", "north-east-delhi"]
+      }
+    ],
+    "noida-central": [
+      {
+        "id": "faq-zone-noida-central-1",
+        "q": "Which sectors of Noida Central do you cover?",
+        "a": "The Noida Central hub covers Sectors 12, 15, 16, 18, 19, 20, 21, 22, 27, 28, 29, 30, 37, 41, 43, 44, 45, 46, 47, 50, 51, 52, 55, 56, 61, 62, 63, 71, 72, 74, 75, 76, 77, 78 and 79, under the zone-level pincode 201301 and its associated pincode 201303. Sectors 1 to 11 fall under the zone-level pincode 201301 and do not yet have individual pages.",
+        "scope": "zone",
+        "tags": ["noida", "noida-central"]
+      },
+      {
+        "id": "faq-zone-noida-central-2",
+        "q": "Is the process different for high-rise societies in Sectors 74 to 79 compared with plotted sectors?",
+        "a": "The request process is the same, but in the high-rise societies of Sectors 74 to 79 helpers typically need to be registered with the society office or resident app before entry and work fixed shifts. In plotted sectors such as 15, 27, 29 or 30, entry and timings are arranged directly with the household.",
+        "scope": "zone",
+        "tags": ["noida", "noida-central"]
+      }
+    ],
+    "noida-expressway": [
+      {
+        "id": "faq-zone-noida-expressway-1",
+        "q": "Which sectors along the Noida Expressway do you cover?",
+        "a": "The Noida Expressway hub covers Sectors 93, 100, 104, 107, 108, 110, 135, 136, 137, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151 and 152, across pincodes 201304, 201305, 201306 and 201310.",
+        "scope": "zone",
+        "tags": ["noida", "noida-expressway"]
+      },
+      {
+        "id": "faq-zone-noida-expressway-2",
+        "q": "Do helpers need society registration to work in Noida Expressway sectors?",
+        "a": "Almost all housing in this zone is in gated apartment complexes, so helpers are normally registered with the society's management office or resident app before their first visit and enter on a gate pass. Once a helper is assigned to you, we share the details needed for that registration.",
+        "scope": "zone",
+        "tags": ["noida", "noida-expressway"]
+      }
+    ],
+    "greater-noida-west": [
+      {
+        "id": "faq-zone-greater-noida-west-1",
+        "q": "Which areas of Greater Noida West (Noida Extension) do you cover?",
+        "a": "The Greater Noida West hub covers Gaur City, including Gaur City 1 and Gaur City 2, Techzone including Techzone 4, and Surajpur, all under pincode 201306.",
+        "scope": "zone",
+        "tags": ["greater-noida", "greater-noida-west"]
+      },
+      {
+        "id": "faq-zone-greater-noida-west-2",
+        "q": "How do helpers reach societies in Greater Noida West?",
+        "a": "Metro connectivity to Noida Extension is still under development, so helpers mostly reach Gaur City, Techzone and Surajpur by bus, shared auto or on foot from nearby villages. Because nearly every society here is gated, the helper is registered with the society office before starting and works agreed shifts.",
+        "scope": "zone",
+        "tags": ["greater-noida", "greater-noida-west"]
+      }
+    ],
+    "greater-noida-central": [
+      {
+        "id": "faq-zone-greater-noida-central-1",
+        "q": "Which areas of Greater Noida Central do you cover?",
+        "a": "The Greater Noida Central hub covers Alpha, Beta, Gamma and Delta sectors, Knowledge Park, Pari Chowk, Jaypee Greens, Kasna and Dadri. Most of these fall under pincode 201310, with Dadri at 203207 and 203201 as the zone-level pincode.",
+        "scope": "zone",
+        "tags": ["greater-noida", "greater-noida-central"]
+      },
+      {
+        "id": "faq-zone-greater-noida-central-2",
+        "q": "Can students and paying-guest households near Knowledge Park book domestic help?",
+        "a": "Yes. Households in paying-guest accommodation or shared flats around Knowledge Park can request part-time cleaning or cooking help in the same way as family homes in Alpha, Beta or Gamma. One resident acts as the point of contact for the booking.",
+        "scope": "zone",
+        "tags": ["greater-noida", "greater-noida-central"]
+      }
+    ],
+    "dlf-golf-course-road": [
+      {
+        "id": "faq-zone-dlf-golf-course-road-1",
+        "q": "Which areas of DLF and Golf Course Road do you cover?",
+        "a": "The DLF and Golf Course Road hub covers DLF Phase 1, DLF Phase 2, DLF Phase 3, DLF Phase 4, DLF Phase 5, Golf Course Road and Sectors 42, 43, 53, 54, 55, 56, 57, 58, 59, 60 and 61, across pincodes 122002, 122009, 122010 and 122011.",
+        "scope": "zone",
+        "tags": ["gurgaon", "dlf-golf-course-road"]
+      },
+      {
+        "id": "faq-zone-dlf-golf-course-road-2",
+        "q": "Do condominiums on Golf Course Road require helper verification before entry?",
+        "a": "Most condominiums in DLF Phase 5, Golf Course Road and Sectors 53 to 61 require helpers to be registered with the society's management and issued a gate pass or app entry before their first visit. Plotted homes in DLF Phase 1, 2 and 4 arrange entry directly with the household.",
+        "scope": "zone",
+        "tags": ["gurgaon", "dlf-golf-course-road"]
+      }
+    ],
+    "sohna-road-south-city": [
+      {
+        "id": "faq-zone-sohna-road-south-city-1",
+        "q": "Which areas of Sohna Road and South City do you cover?",
+        "a": "The Sohna Road and South City hub covers South City 1, South City 2, Sohna Road and Sectors 47, 49, 50, 51, 65, 66, 67, 68, 69, 70 and 71, across pincodes 122001, 122018, 122101 and 122102.",
+        "scope": "zone",
+        "tags": ["gurgaon", "sohna-road-south-city"]
+      },
+      {
+        "id": "faq-zone-sohna-road-south-city-2",
+        "q": "How do helpers commute to societies along Sohna Road?",
+        "a": "There is no metro along Sohna Road, so helpers mostly reach Sectors 49 and 65 to 71 by shared auto and bus from adjoining villages such as Badshahpur and Islampur. Society registration is usually required in the gated complexes, while South City 1 and South City 2 homes arrange entry directly.",
+        "scope": "zone",
+        "tags": ["gurgaon", "sohna-road-south-city"]
+      }
+    ],
+    "new-gurgaon": [
+      {
+        "id": "faq-zone-new-gurgaon-1",
+        "q": "Which areas of New Gurgaon do you cover?",
+        "a": "The New Gurgaon hub covers Sectors 72, 73, 74, 75, 76, 77, 82, 83, 84, 85, 86 and 88, plus Manesar and IMT Manesar, across pincodes 122004, 122051, 122052 and the zone-level 122505.",
+        "scope": "zone",
+        "tags": ["gurgaon", "new-gurgaon"]
+      },
+      {
+        "id": "faq-zone-new-gurgaon-2",
+        "q": "Is domestic help available in newly occupied societies in Sectors 82 to 88?",
+        "a": "Yes, the sectors from 82 to 88 are member localities of this zone and can be booked on their own pages. As many societies here are still filling in, we confirm helper availability and expected travel time for your specific sector at the time of the request rather than in advance.",
+        "scope": "zone",
+        "tags": ["gurgaon", "new-gurgaon"]
+      }
+    ],
+    "old-gurgaon": [
+      {
+        "id": "faq-zone-old-gurgaon-1",
+        "q": "Which areas of Old Gurgaon do you cover?",
+        "a": "The Old Gurgaon hub covers Sector 21, Sector 44, Sector 45, Sector 46 and Sector 52, across pincodes 122016 and 122003, together with the zone-level pincode 122001 that is commonly referred to as Gurgaon Main.",
+        "scope": "zone",
+        "tags": ["gurgaon", "old-gurgaon"]
+      },
+      {
+        "id": "faq-zone-old-gurgaon-2",
+        "q": "Are timings more flexible in Old Gurgaon than in gated societies?",
+        "a": "Generally yes. Most homes in Sectors 21, 44, 45, 46 and 52 are independent houses or builder floors on HUDA plots, so there is no society gate pass and the helper's hours are agreed directly with the household. The few group housing societies in these sectors follow their own entry rules.",
+        "scope": "zone",
+        "tags": ["gurgaon", "old-gurgaon"]
+      }
+    ],
+    "south-mumbai": [
+      {
+        "id": "faq-zone-south-mumbai-1",
+        "q": "Which areas of South Mumbai do you cover?",
+        "a": "The South Mumbai hub covers Fort, Colaba, Malabar Hill, Cumballa Hill, Nariman Point, Worli, Prabhadevi, Tardeo, Kalbadevi, Girgaon, Grant Road, Mumbai Central, Mazgaon, Parel, Sewri, Wadala and Antop Hill.",
+        "scope": "zone",
+        "tags": ["mumbai", "south-mumbai"]
+      },
+      {
+        "id": "faq-zone-south-mumbai-2",
+        "q": "How do helpers reach buildings in South Mumbai?",
+        "a": "Most helpers travel in by local train to Churchgate, CSMT, Mumbai Central, Grant Road or Parel and then by BEST bus or on foot. Entry in older buildings is usually through the watchman or building society, while newer towers in Worli, Parel and Wadala typically use a registration or app-based gate system.",
+        "scope": "zone",
+        "tags": ["mumbai", "south-mumbai"]
+      }
+    ],
+    "central-mumbai": [
+      {
+        "id": "faq-zone-central-mumbai-1",
+        "q": "Which areas of Central Mumbai do you cover?",
+        "a": "The Central Mumbai hub covers Dadar, Mahim, Matunga, Sion and Kurla. Dadar is covered across both of its pincodes, 400014 and 400028.",
+        "scope": "zone",
+        "tags": ["mumbai", "central-mumbai"]
+      },
+      {
+        "id": "faq-zone-central-mumbai-2",
+        "q": "Can I request elder care in Central Mumbai housing societies?",
+        "a": "Yes. Elder care and companion help are commonly requested in the older cooperative societies of Dadar, Matunga and Sion, where many households include elderly members. The request is placed on the relevant locality page and the building society is informed for entry.",
+        "scope": "zone",
+        "tags": ["mumbai", "central-mumbai"]
+      }
+    ],
+    "western-suburbs": [
+      {
+        "id": "faq-zone-western-suburbs-1",
+        "q": "Which areas of the Western Suburbs do you cover?",
+        "a": "The Western Suburbs hub covers Bandra West, Bandra East, Khar, Santacruz West, Juhu, Vile Parle, Andheri, Andheri West, Andheri East, Versova, Jogeshwari East, Jogeshwari West, Goregaon East, Goregaon West, Malad West, Malad East, Kandivali East, Kandivali West and Dahisar.",
+        "scope": "zone",
+        "tags": ["mumbai", "western-suburbs"]
+      },
+      {
+        "id": "faq-zone-western-suburbs-2",
+        "q": "Is East and West of the railway line treated separately when booking?",
+        "a": "Yes. Localities such as Andheri, Goregaon, Malad, Kandivali and Jogeshwari are listed separately for their East and West sides because the railway line divides them and helpers usually work on one side. Choose the page matching your side of the station when placing a request.",
+        "scope": "zone",
+        "tags": ["mumbai", "western-suburbs"]
+      }
+    ],
+    "eastern-suburbs": [
+      {
+        "id": "faq-zone-eastern-suburbs-1",
+        "q": "Which areas of the Eastern Suburbs do you cover?",
+        "a": "The Eastern Suburbs hub covers Powai, Ghatkopar, Chembur, Vikhroli, Bhandup, Mulund and Mulund East, across pincodes 400076, 400086, 400088, 400078, 400083, 400080 and 400081.",
+        "scope": "zone",
+        "tags": ["mumbai", "eastern-suburbs"]
+      },
+      {
+        "id": "faq-zone-eastern-suburbs-2",
+        "q": "Do township complexes in Powai require helper registration?",
+        "a": "Yes. Hiranandani Gardens and the other gated complexes in Powai generally require helpers to be registered with the society office and issued an entry card or app pass before starting. Older cooperative societies in Chembur, Mulund and Ghatkopar usually rely on the building watchman and a simple register.",
+        "scope": "zone",
+        "tags": ["mumbai", "eastern-suburbs"]
+      }
+    ],
+    "navi-mumbai": [
+      {
+        "id": "faq-zone-navi-mumbai-1",
+        "q": "Which areas of Navi Mumbai do you cover?",
+        "a": "The Navi Mumbai hub covers Vashi, Nerul, Sanpada and Airoli. Nerul is covered across both of its pincodes, 400703 and 400706.",
+        "scope": "zone",
+        "tags": ["mumbai", "navi-mumbai"]
+      },
+      {
+        "id": "faq-zone-navi-mumbai-2",
+        "q": "Do you cover other Navi Mumbai nodes such as Kharghar or Belapur?",
+        "a": "At present the Navi Mumbai hub lists Vashi, Nerul, Sanpada and Airoli as its member localities. Households in other nodes can still submit a request through the nearest listed locality page and we will confirm whether a helper can be arranged for that address.",
+        "scope": "zone",
+        "tags": ["mumbai", "navi-mumbai"]
+      }
+    ],
+    "pune-west": [
+      {
+        "id": "faq-zone-pune-west-1",
+        "q": "Which areas of West Pune do you cover?",
+        "a": "The West Pune hub covers Aundh, Baner, Balewadi, Pashan, Sus, Bavdhan, Wakad and Hinjawadi, across pincodes 411007, 411045, 411062, 411061, 411060, 411023, 411058 and 411057.",
+        "scope": "zone",
+        "tags": ["pune", "pune-west"]
+      },
+      {
+        "id": "faq-zone-pune-west-2",
+        "q": "Can IT employees in Hinjawadi paying-guest accommodation book part-time help?",
+        "a": "Yes. Shared flats and paying-guest households in Hinjawadi, Wakad and Baner can request part-time cleaning or cooking support in the same way as families in gated societies. One resident acts as the point of contact, and society or building registration is arranged where the premises require it.",
+        "scope": "zone",
+        "tags": ["pune", "pune-west"]
+      }
+    ],
+    "pune-central": [
+      {
+        "id": "faq-zone-pune-central-1",
+        "q": "Which areas of Central Pune do you cover?",
+        "a": "The Central Pune hub covers Pune Camp, Deccan, Deccan Gymkhana, Shivajinagar, Pune University Area, Sadashiv Peth, Kothrud, Karve Nagar, Warje and Anandnagar. Kothrud is covered across both of its pincodes, 411021 and 411038.",
+        "scope": "zone",
+        "tags": ["pune", "pune-central"]
+      },
+      {
+        "id": "faq-zone-pune-central-2",
+        "q": "Is elder care commonly requested in Central Pune?",
+        "a": "Yes. Many households in Sadashiv Peth, Kothrud, Karve Nagar and Deccan Gymkhana are multi-generational or include retired residents, so elder care and companion help are among the more frequently requested services in this zone alongside regular daily maids and cooks.",
+        "scope": "zone",
+        "tags": ["pune", "pune-central"]
+      }
+    ],
+    "pune-east": [
+      {
+        "id": "faq-zone-pune-east-1",
+        "q": "Which areas of East Pune do you cover?",
+        "a": "The East Pune hub covers Kharadi, Viman Nagar, Hadapsar, Dhanori, Lohegaon and Wanowrie. Hadapsar is covered across both of its pincodes, 411013 and 411028.",
+        "scope": "zone",
+        "tags": ["pune", "pune-east"]
+      },
+      {
+        "id": "faq-zone-pune-east-2",
+        "q": "Do gated societies in Kharadi and Viman Nagar need helper registration?",
+        "a": "Most gated societies in Kharadi, Viman Nagar and the Hadapsar townships require helpers to be registered with the society office or resident app before their first visit. Once a helper is assigned, we provide the details your society needs to complete that registration.",
+        "scope": "zone",
+        "tags": ["pune", "pune-east"]
+      }
+    ],
+    "pune-south": [
+      {
+        "id": "faq-zone-pune-south-1",
+        "q": "Which areas of South Pune do you cover?",
+        "a": "The South Pune hub covers NIBM, Kondhwa, Bibwewadi and Katraj, across pincodes 411048, 411041, 411043 and 411046. NIBM Road and Kondhwa share pincode 411048 and are listed as separate localities.",
+        "scope": "zone",
+        "tags": ["pune", "pune-south"]
+      },
+      {
+        "id": "faq-zone-pune-south-2",
+        "q": "How do helpers reach homes in South Pune?",
+        "a": "Helpers generally commute by PMPML bus and shared auto along Satara Road and Kondhwa Road, as the metro does not currently serve this zone. In gated societies along NIBM Road and in Kondhwa, the helper is registered with the society before starting; in Bibwewadi and Katraj homes, entry is arranged directly with the household.",
+        "scope": "zone",
+        "tags": ["pune", "pune-south"]
+      }
+    ],
+    "pcmc": [
+      {
+        "id": "faq-zone-pcmc-1",
+        "q": "Which areas of Pimpri-Chinchwad do you cover?",
+        "a": "The Pimpri-Chinchwad hub covers Pimpri, Chinchwad and Pimple Saudagar, across pincodes 411017, 411018, 411034, 411019, 411033 and 411027.",
+        "scope": "zone",
+        "tags": ["pune", "pcmc"]
+      },
+      {
+        "id": "faq-zone-pcmc-2",
+        "q": "Is PCMC handled as part of Pune or separately?",
+        "a": "PCMC is listed as its own zone within the Pune city pages because it is governed by a separate municipal corporation, but requests are handled through the same process as the rest of Pune. Choose the Pimpri, Chinchwad or Pimple Saudagar page that matches your address.",
+        "scope": "zone",
+        "tags": ["pune", "pcmc"]
+      }
+    ],
+    "bangalore-east": [
+      {
+        "id": "faq-zone-bangalore-east-1",
+        "q": "Which areas of East Bangalore do you cover?",
+        "a": "The East Bangalore hub covers Whitefield, Marathahalli, Hoodi and Ramamurthy Nagar. Whitefield is covered across both of its pincodes, 560049 and 560066.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-east"]
+      },
+      {
+        "id": "faq-zone-bangalore-east-2",
+        "q": "Do helpers in Whitefield gated communities need society registration?",
+        "a": "Yes, most gated apartment complexes and villa communities in Whitefield, Hoodi and Marathahalli require helpers to be registered with the association office or resident app and issued a pass before entry. Independent houses in Ramamurthy Nagar and the older Marathahalli layouts arrange entry directly with the household.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-east"]
+      }
+    ],
+    "bangalore-south-east": [
+      {
+        "id": "faq-zone-bangalore-south-east-1",
+        "q": "Which areas of South East Bangalore do you cover?",
+        "a": "The South East Bangalore hub covers Koramangala, HSR Layout, Bellandur, Sarjapur Road, Bommanahalli, Electronic City and Begur. Koramangala is covered across pincodes 560029, 560034 and 560095.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-south-east"]
+      },
+      {
+        "id": "faq-zone-bangalore-south-east-2",
+        "q": "Can single professionals in shared flats in Koramangala or HSR Layout book help?",
+        "a": "Yes. Shared flats and paying-guest households in Koramangala, HSR Layout and Electronic City can request part-time cleaning or cooking support in the same way as family households. One resident acts as the point of contact, and building or society registration is arranged where the premises require it.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-south-east"]
+      }
+    ],
+    "bangalore-south": [
+      {
+        "id": "faq-zone-bangalore-south-1",
+        "q": "Which areas of South Bangalore do you cover?",
+        "a": "The South Bangalore hub covers Jayanagar, JP Nagar, Bannerghatta Road, Banashankari, Basavanagudi, Wilson Garden and Adugodi. Bannerghatta Road is covered across pincodes 560076 and 560083, and Banashankari across 560050 and 560085.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-south"]
+      },
+      {
+        "id": "faq-zone-bangalore-south-2",
+        "q": "Is elder care available in South Bangalore family homes?",
+        "a": "Yes. Elder care and companion help are frequently requested in Jayanagar, Basavanagudi, Banashankari and JP Nagar, where many households are multi-generational and include elderly members living at home. The request is placed on the relevant locality page and hours are agreed directly with the household.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-south"]
+      }
+    ],
+    "bangalore-central": [
+      {
+        "id": "faq-zone-bangalore-central-1",
+        "q": "Which areas of Central Bangalore do you cover?",
+        "a": "The Central Bangalore hub covers Indiranagar, Domlur, Richmond Town, Vasanth Nagar, Viveknagar, Seshadripuram and Chickpet, with 560001 as the zone-level pincode. Indiranagar is covered across both of its pincodes, 560008 and 560038.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-central"]
+      },
+      {
+        "id": "faq-zone-bangalore-central-2",
+        "q": "How do helpers reach homes in Central Bangalore?",
+        "a": "The Purple Line metro serves Indiranagar, MG Road and Chickpet, and BMTC buses cover the rest of the zone, so most helpers commute by metro or bus. Because much of the housing in Indiranagar, Richmond Town and Vasanth Nagar is independent houses or small apartment buildings, entry is usually arranged directly with the household.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-central"]
+      }
+    ],
+    "bangalore-north": [
+      {
+        "id": "faq-zone-bangalore-north-1",
+        "q": "Which areas of North Bangalore do you cover?",
+        "a": "The North Bangalore hub covers Fraser Town, Kalyan Nagar and Nagawara, across pincodes 560005, 560043 and 560045. Fraser Town is also known as Frazer Town or Pulikeshi Nagar.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-north"]
+      },
+      {
+        "id": "faq-zone-bangalore-north-2",
+        "q": "Do you serve households near Manyata Tech Park?",
+        "a": "Yes. Nagawara and Kalyan Nagar are the member localities closest to Manyata Tech Park, and gated societies in both are covered. Helpers there are usually registered with the society office before starting, while independent houses in Fraser Town and the older parts of Kalyan Nagar arrange entry directly.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-north"]
+      }
+    ],
+    "bangalore-west": [
+      {
+        "id": "faq-zone-bangalore-west-1",
+        "q": "Which areas of West Bangalore do you cover?",
+        "a": "The West Bangalore hub covers Malleswaram, Rajajinagar and Vijayanagar, across pincodes 560022, 560010 and 560040. Malleswaram is also listed under its alternative spelling Malleshwaram.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-west"]
+      },
+      {
+        "id": "faq-zone-bangalore-west-2",
+        "q": "Can I request a cook familiar with traditional Kannada cooking in West Bangalore?",
+        "a": "You can state a cuisine preference when placing a request for Malleswaram, Rajajinagar or Vijayanagar, and it is used when matching a cook. Whether a cook with that specific experience is available on your preferred timings is confirmed at the time of booking rather than guaranteed in advance.",
+        "scope": "zone",
+        "tags": ["bangalore", "bangalore-west"]
+      }
+    ],
+    "mangalore-city": [
+      {
+        "id": "faq-zone-mangalore-city-1",
+        "q": "Which areas of Mangalore City do you cover?",
+        "a": "The Mangalore City hub covers Hampankatta, Kodialbail, Kadri, Kottara, Bejai, Derebail, Kulshekar, Valencia, Bolar, Jeppu, Kankanady, Attavar, Urwa, Kavoor, Bondel, Kulur, Nantoor and Pumpwell, with 575001 and 575036 as zone-level pincodes.",
+        "scope": "zone",
+        "tags": ["mangalore", "mangalore-city"]
+      },
+      {
+        "id": "faq-zone-mangalore-city-2",
+        "q": "Can families abroad arrange help for elderly parents living in Mangalore City?",
+        "a": "Yes. Requests for daily maids, cooks or elder care in localities such as Kadri, Bejai, Kankanady or Urwa can be placed by a family member living elsewhere, with the resident household as the point of contact for timings and entry. Details are confirmed with the person at the address before a helper starts.",
+        "scope": "zone",
+        "tags": ["mangalore", "mangalore-city"]
+      }
+    ],
+    "mangalore-north": [
+      {
+        "id": "faq-zone-mangalore-north-1",
+        "q": "Which areas of Mangalore North do you cover?",
+        "a": "The Mangalore North hub covers Surathkal, Panambur, Katipalla and Bajpe, across pincodes 575018, 575019, 575020 and 575025. The zone is also referred to as the Surathkal belt.",
+        "scope": "zone",
+        "tags": ["mangalore", "mangalore-north"]
+      },
+      {
+        "id": "faq-zone-mangalore-north-2",
+        "q": "Can students and staff near NITK Surathkal book part-time help?",
+        "a": "Yes. Paying-guest and shared households around the NITK campus in Surathkal can request part-time cleaning or cooking support in the same way as family homes in Katipalla or Bajpe. One resident acts as the point of contact for the booking.",
+        "scope": "zone",
+        "tags": ["mangalore", "mangalore-north"]
+      }
+    ],
+    "mangalore-south": [
+      {
+        "id": "faq-zone-mangalore-south-1",
+        "q": "Which areas of Mangalore South do you cover?",
+        "a": "The Mangalore South hub covers Ullal, Konaje and Mudipu, across pincodes 575021, 575022 and 575023. The zone is also referred to as the Ullal belt.",
+        "scope": "zone",
+        "tags": ["mangalore", "mangalore-south"]
+      },
+      {
+        "id": "faq-zone-mangalore-south-2",
+        "q": "Are timings flexible for domestic help in Mangalore South?",
+        "a": "Generally yes. Most homes in Ullal, Konaje and Mudipu are independent houses rather than gated apartment complexes, so there is no society gate pass and the helper's hours are agreed directly with the household. Travel time from the city can be longer than for Mangalore City localities and is confirmed at booking.",
+        "scope": "zone",
+        "tags": ["mangalore", "mangalore-south"]
+      }
+    ]
+  }
+}

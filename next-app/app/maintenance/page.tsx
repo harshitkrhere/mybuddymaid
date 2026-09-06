@@ -1,4 +1,6 @@
 "use client";
+// NOTE: robots noindex for this route is set by proxy.ts (X-Robots-Tag) because a
+// client component cannot export metadata.
 
 // No React hooks needed anymore
 import { 

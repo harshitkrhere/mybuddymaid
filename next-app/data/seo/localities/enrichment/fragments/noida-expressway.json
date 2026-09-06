@@ -1,0 +1,772 @@
+{
+  "sector-93": {
+    "neighbours": ["sector-100", "sector-108", "sector-104", "sector-107", "sector-110", "sector-137", "sector-44"],
+    "landmarks": ["ATS Greens Village", "Eldeco Utopia", "Amity University (Sector 125)", "Noida–Greater Noida Expressway", "Gejha village"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Gejha"],
+    "localIntro": "Sector 93 sits at the Delhi end of the Noida–Greater Noida Expressway and is split into Sector 93A and Sector 93B, both dominated by large gated townships such as ATS Greens Village, Eldeco Utopia and Parsvnath Prestige. Households here are mostly nuclear families and working couples living in high-rise apartments, many commuting to offices along the expressway or into South Delhi, while Amity University across the expressway in Sector 125 adds faculty families and paying-guest tenants to the mix. The sector falls under pincode 201304 and shares boundaries with Sector 100 and Sector 108 on the expressway side, with Sector 104 and Sector 107 a little further inland. Gejha village adjoins the sector and is where a large share of the area's domestic helpers live. Demand is strongest for full-time and part-time housekeeping, cooks and nannies, since most towers house working parents with young children and society rules require registered, verified staff.",
+    "commuteNotes": "There is no metro station inside Sector 93; Okhla Bird Sanctuary on the Magenta Line and Sector 137 on the Aqua Line are the nearest options, both a short auto ride away. Most helpers walk or cycle in from Gejha village or take shared autos along the internal sector roads.",
+    "housingNotes": "The sector is almost entirely gated high-rise societies, so helpers need society-issued entry passes or app-based visitor registration, and residents usually coordinate timings with the RWA or facility office.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-93-1",
+        "q": "Which areas near Sector 93 do you also serve?",
+        "a": "The same helper network covers Sector 100, Sector 108, Sector 104 and Sector 107 along this stretch of the expressway. Both Sector 93A and Sector 93B fall under this locality's coverage.",
+        "scope": "locality",
+        "tags": ["noida", "sector-93"]
+      },
+      {
+        "id": "faq-noida-sector-93-2",
+        "q": "Do helpers in Sector 93 need society gate passes?",
+        "a": "Yes. Townships such as ATS Greens Village and Eldeco Utopia are gated, so helpers need an entry pass or visitor-app registration from the society office. Households typically complete this once the helper is finalised.",
+        "scope": "locality",
+        "tags": ["noida", "sector-93"]
+      },
+      {
+        "id": "faq-noida-sector-93-3",
+        "q": "Which pincode does the Sector 93 service area cover?",
+        "a": "Sector 93 comes under pincode 201304, which is shared with neighbouring Sector 100, Sector 104 and Sector 108. Gejha village, adjoining the sector, is within the same catchment.",
+        "scope": "locality",
+        "tags": ["noida", "sector-93"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-100": {
+    "neighbours": ["sector-104", "sector-93", "sector-108", "sector-107", "sector-110", "sector-137"],
+    "landmarks": ["Lotus Boulevard", "Noida–Greater Noida Expressway", "Amity University (Sector 125)", "ATS Greens Village (Sector 93A)"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 100 lies just behind Sector 93 on the Noida–Greater Noida Expressway and is best known for Lotus Boulevard, one of the larger gated townships in this part of Noida, along with its extension Lotus Boulevard Espacia. Households here are predominantly young families and dual-income professionals in high-rise apartments, many of whom work in the expressway IT corridor or in South Delhi and rely on regular domestic help to manage the home. The sector is covered by pincode 201304, which it shares with Sector 93, Sector 104 and Sector 108. Sector 104 lies immediately alongside, Sector 93A and 93B sit between the sector and the expressway, and Amity University in Sector 125 is just across the expressway. Families here usually look for full-day or twice-a-day housekeeping, cooks who can handle North Indian home food, and nannies for toddlers, with society verification being a standard requirement before any helper starts work.",
+    "commuteNotes": "No metro station serves Sector 100 directly; the nearest stations are Okhla Bird Sanctuary on the Magenta Line and Sector 137 on the Aqua Line, reached by shared auto. Many helpers come on foot or by cycle from adjoining villages and from the Sector 93 side.",
+    "housingNotes": "Housing is almost entirely gated high-rise, led by Lotus Boulevard, so helpers require society entry passes and gate registration. Timings are usually fixed with the household and logged with security.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-100-1",
+        "q": "Which areas near Sector 100 do you also serve?",
+        "a": "Helpers placed in Sector 100 are drawn from the same pool that serves Sector 104, Sector 93, Sector 108 and Sector 107. Coverage extends across the whole expressway belt from Sector 93 to Sector 137.",
+        "scope": "locality",
+        "tags": ["noida", "sector-100"]
+      },
+      {
+        "id": "faq-noida-sector-100-2",
+        "q": "Do helpers in Lotus Boulevard, Sector 100 need a gate pass?",
+        "a": "Yes. Lotus Boulevard and the other societies in Sector 100 are gated, and security requires helpers to carry a society pass or be registered on the visitor app. Residents generally arrange this through the society office after finalising the helper.",
+        "scope": "locality",
+        "tags": ["noida", "sector-100"]
+      },
+      {
+        "id": "faq-noida-sector-100-3",
+        "q": "Which pincode covers Sector 100, Noida?",
+        "a": "Sector 100 falls under pincode 201304. The same pincode covers the neighbouring Sector 93, Sector 104 and Sector 108, so helpers move easily between these sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-100"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-104": {
+    "neighbours": ["sector-100", "sector-107", "sector-108", "sector-93", "sector-110", "sector-137"],
+    "landmarks": ["Hazipur village", "Lotus Boulevard (Sector 100)", "Noida–Greater Noida Expressway", "Amity University (Sector 125)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Hazipur"],
+    "localIntro": "Sector 104 is an inland sector behind Sector 100 and Sector 93, under pincode 201304, with a more varied housing mix than the expressway-facing townships. Part of the sector is laid out as Noida Authority residential plots with independent houses and builder floors, while the rest is taken up by Hazipur, an old village that has grown into a dense rental settlement housing many of the workers who serve the surrounding sectors. Households range from long-settled families in plotted homes to tenants and paying guests in Hazipur's builder blocks, so demand covers everything from a daily part-time maid to a live-in cook or nanny. Lotus Boulevard in Sector 100 sits on one side and Sector 107 and Sector 108 on the other, with the expressway a few minutes away. Because helpers often live within walking distance in Hazipur, Sector 104 households usually find it easier to fix early-morning or split-shift timings than the high-rise sectors do.",
+    "commuteNotes": "Most helpers walk in from Hazipur, which lies inside the sector, or from neighbouring Sector 100 and Sector 107. There is no metro station in Sector 104; Sector 137 on the Aqua Line is the nearest, reached by shared auto.",
+    "housingNotes": "Plotted independent houses and builder floors sit alongside the Hazipur settlement, so most homes manage helper entry directly without society passes. Timings are flexible, and helpers living nearby can cover multiple short visits a day.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-104-1",
+        "q": "Which areas near Sector 104 do you also serve?",
+        "a": "The same helper pool covers Sector 100, Sector 107, Sector 108 and Sector 93. Hazipur, which lies within Sector 104, is included in this locality's coverage.",
+        "scope": "locality",
+        "tags": ["noida", "sector-104"]
+      },
+      {
+        "id": "faq-noida-sector-104-2",
+        "q": "Do helpers in Sector 104 need society gate passes?",
+        "a": "Most of Sector 104 is plotted housing and builder floors rather than gated towers, so formal society passes are usually not needed. Households deal with entry and timings directly with the helper.",
+        "scope": "locality",
+        "tags": ["noida", "sector-104"]
+      },
+      {
+        "id": "faq-noida-sector-104-3",
+        "q": "Which pincode does Sector 104 fall under?",
+        "a": "Sector 104 and Hazipur come under pincode 201304, shared with Sector 93, Sector 100 and Sector 108. Helpers therefore move between these sectors without long commutes.",
+        "scope": "locality",
+        "tags": ["noida", "sector-104"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-107": {
+    "neighbours": ["sector-108", "sector-110", "sector-104", "sector-100", "sector-93", "sector-137", "sector-135"],
+    "landmarks": ["Sunworld Vanalika", "Great Value Sharanam", "Yatharth Super Speciality Hospital (Sector 110)", "Noida–Greater Noida Expressway"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Bhangel"],
+    "localIntro": "Sector 107 is an inland residential sector under pincode 201304, positioned between Sector 108 on the expressway side and Sector 110 further in. Housing here is a mix of Noida Authority plots with independent houses and builder floors and mid-sized gated societies such as Sunworld Vanalika and Great Value Sharanam, which gives the sector a quieter, more settled feel than the high-rise belt closer to the expressway. Households are largely families, including many multi-generational homes on the plotted side, together with working couples in the societies. Sector 104 and Hazipur lie on one flank, Sector 108 on the other, and Yatharth Super Speciality Hospital in neighbouring Sector 110 is the nearest major hospital. Bhangel village, close by, is home to many of the domestic workers who serve this area. Typical requirements are a daily part-time maid, a cook for two meals, and elder-care support for parents living with their children, with the societies asking for standard gate registration.",
+    "commuteNotes": "Helpers mostly walk or cycle in from Bhangel and Hazipur, or take shared autos along the Sector 107–110 road. There is no metro station in the sector; Sector 137 on the Aqua Line is the closest.",
+    "housingNotes": "Plotted houses and builder floors allow flexible timings and direct arrangements, while the gated societies in the sector require entry passes or visitor-app registration for helpers.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-107-1",
+        "q": "Which areas near Sector 107 do you also serve?",
+        "a": "Sector 108, Sector 110, Sector 104 and Sector 100 are covered by the same nearby helper network. Coverage runs across the inland sectors between the expressway and Bhangel.",
+        "scope": "locality",
+        "tags": ["noida", "sector-107"]
+      },
+      {
+        "id": "faq-noida-sector-107-2",
+        "q": "Do helpers in Sector 107 need society gate passes?",
+        "a": "It depends on the home. Societies such as Sunworld Vanalika and Great Value Sharanam require gate passes or visitor-app registration, while the plotted houses and builder floors in the sector generally do not.",
+        "scope": "locality",
+        "tags": ["noida", "sector-107"]
+      },
+      {
+        "id": "faq-noida-sector-107-3",
+        "q": "Which pincode covers Sector 107, Noida?",
+        "a": "Sector 107 falls under pincode 201304, the same as Sector 93, Sector 100, Sector 104 and Sector 108. Neighbouring Sector 110 also shares this pincode.",
+        "scope": "locality",
+        "tags": ["noida", "sector-107"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-108": {
+    "neighbours": ["sector-93", "sector-107", "sector-100", "sector-104", "sector-110", "sector-135", "sector-137"],
+    "landmarks": ["Noida–Greater Noida Expressway", "ATS Greens Village (Sector 93A)", "Gejha village", "Sunworld Vanalika (Sector 107)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Gejha"],
+    "localIntro": "Sector 108 sits directly on the Noida–Greater Noida Expressway between Sector 93B and Sector 135, and is covered by pincode 201304. Unlike its high-rise neighbour Sector 93, much of Sector 108 is a Noida Authority plotted sector, with independent houses and builder floors on internal roads, alongside a few group-housing pockets, which makes it a mixed and relatively low-density residential area. Residents are largely families who own their homes, including retired couples and joint families, with a growing number of tenants in builder floors who work along the expressway. Gejha village lies close by and supplies many of the domestic helpers who work in the sector, while Sector 107 sits behind it and Sector 100 and Sector 104 are a short drive away. Households here typically want a reliable part-time maid for cleaning and utensils, a cook for daily meals, and in many homes a caregiver for elderly parents, with arrangements usually made directly rather than through a society office.",
+    "commuteNotes": "Helpers largely walk or cycle in from Gejha village, or take shared autos along the expressway service road from the Sector 93 side. The nearest metro stations are Sector 137 on the Aqua Line and Okhla Bird Sanctuary on the Magenta Line, neither within walking distance.",
+    "housingNotes": "The sector is dominated by plotted independent houses and builder floors, so households usually manage helper entry and timings themselves. The few gated pockets require standard society passes.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-108-1",
+        "q": "Which areas near Sector 108 do you also serve?",
+        "a": "Sector 93, Sector 107, Sector 100 and Sector 104 are all covered by the same nearby helper pool. Gejha village, adjoining the sector, is part of this catchment.",
+        "scope": "locality",
+        "tags": ["noida", "sector-108"]
+      },
+      {
+        "id": "faq-noida-sector-108-2",
+        "q": "Do helpers in Sector 108 need society gate passes?",
+        "a": "Most homes in Sector 108 are independent houses or builder floors, so society passes are usually not required. Where a home is inside a gated pocket, the household arranges a pass through the society office.",
+        "scope": "locality",
+        "tags": ["noida", "sector-108"]
+      },
+      {
+        "id": "faq-noida-sector-108-3",
+        "q": "Which pincode does Sector 108 fall under?",
+        "a": "Sector 108 comes under pincode 201304, which also covers Sector 93, Sector 100, Sector 104 and Sector 107. The neighbouring Sector 135 carries pincode 201305.",
+        "scope": "locality",
+        "tags": ["noida", "sector-108"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-110": {
+    "neighbours": ["sector-107", "sector-108", "sector-104", "sector-100", "sector-137", "sector-135", "sector-93"],
+    "landmarks": ["Yatharth Super Speciality Hospital", "Lotus Panache", "Bhangel village", "Noida–Greater Noida Expressway"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Bhangel"],
+    "localIntro": "Sector 110 is an inland sector under pincode 201304, lying beyond Sector 107 and bordered by the Bhangel settlement, one of the older villages in this part of Noida. The sector is best known for Lotus Panache, a large gated township of high-rise towers that houses most of its residents, and for Yatharth Super Speciality Hospital, a major hospital that serves the whole expressway belt. Households are mainly families with school-going children and working couples who commute to offices along the expressway or in Sector 62 and Sector 18, and many homes have elderly parents living with them. Sector 107 and Sector 108 lie between the sector and the expressway, while Sector 104 and Hazipur are a short drive away. Bhangel is where a large share of the area's domestic workers live, so helpers can reach the towers on foot. Demand is heavy for full-day housekeeping, cooks and nannies, and the hospital's presence means there is also steady interest in attendants and elder-care help.",
+    "commuteNotes": "Helpers mostly walk in from Bhangel, which adjoins the sector, or take shared autos from Sector 107 and Sector 108. There is no metro station in Sector 110; Sector 137 on the Aqua Line is the nearest.",
+    "housingNotes": "Lotus Panache and the other societies here are gated high-rise complexes, so helpers need society entry passes or visitor-app registration, and timings are logged at the gate. Homes on the Bhangel side are independent and manage entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-110-1",
+        "q": "Which areas near Sector 110 do you also serve?",
+        "a": "Sector 107, Sector 108, Sector 104 and Sector 100 are covered by the same nearby helper network. Bhangel, adjoining the sector, is also part of this coverage.",
+        "scope": "locality",
+        "tags": ["noida", "sector-110"]
+      },
+      {
+        "id": "faq-noida-sector-110-2",
+        "q": "Do helpers in Lotus Panache, Sector 110 need gate passes?",
+        "a": "Yes. Lotus Panache and the other gated societies in Sector 110 require helpers to hold a society pass or be registered on the visitor app before they can enter. Households arrange this through the society office once the helper is finalised.",
+        "scope": "locality",
+        "tags": ["noida", "sector-110"]
+      },
+      {
+        "id": "faq-noida-sector-110-3",
+        "q": "Which pincode covers Sector 110, Noida?",
+        "a": "Sector 110 falls under pincode 201304, shared with Sector 107, Sector 108, Sector 104, Sector 100 and Sector 93. Yatharth Super Speciality Hospital in the sector uses the same pincode.",
+        "scope": "locality",
+        "tags": ["noida", "sector-110"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-135": {
+    "neighbours": ["sector-136", "sector-137", "sector-108", "sector-110", "sector-107", "sector-140", "sector-142"],
+    "landmarks": ["Assotech Business Cresterra", "Wajidpur village", "Noida–Greater Noida Expressway", "Sector 137 Metro Station (Aqua Line)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Wajidpur"],
+    "localIntro": "Sector 135 faces the Noida–Greater Noida Expressway between Sector 108 and Sector 137 and is covered by pincode 201305. It is a genuinely mixed sector: office and IT complexes such as Assotech Business Cresterra occupy the expressway frontage, Wajidpur village sits inside the sector with its dense rental housing, and group-housing towers and plotted homes make up the rest. Residents are a combination of working professionals who have chosen to live close to their expressway offices, families in the residential pockets, and a large floating population of tenants in Wajidpur. The sector is well placed for domestic help because many helpers live in Wajidpur itself and can walk to work, while Sector 137 and its Aqua Line metro station are next door and Sector 136 lies alongside. Typical requirements are part-time cleaning and cooking for working households, full-day help for families, and occasional deep-cleaning or cooking support for paying-guest accommodation and serviced flats near the office blocks.",
+    "commuteNotes": "Sector 137 Metro Station on the Aqua Line is the nearest station and is within walking distance of much of the sector. Many helpers live in Wajidpur inside the sector and walk to work, with shared autos running along the expressway service road.",
+    "housingNotes": "Group-housing towers in the sector require society passes and gate registration, while plotted homes and the Wajidpur side manage helper entry directly with flexible timings.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-135-1",
+        "q": "Which areas near Sector 135 do you also serve?",
+        "a": "Sector 136, Sector 137, Sector 108 and Sector 110 are covered by the same nearby helper pool. Wajidpur village, which lies inside Sector 135, is included in this locality's coverage.",
+        "scope": "locality",
+        "tags": ["noida", "sector-135"]
+      },
+      {
+        "id": "faq-noida-sector-135-2",
+        "q": "How do helpers reach Sector 135?",
+        "a": "Most helpers live in Wajidpur within the sector and walk to work. Others arrive by the Aqua Line at Sector 137 Metro Station or by shared auto along the expressway service road.",
+        "scope": "locality",
+        "tags": ["noida", "sector-135"]
+      },
+      {
+        "id": "faq-noida-sector-135-3",
+        "q": "Which pincode does Sector 135 fall under?",
+        "a": "Sector 135 comes under pincode 201305, which it shares with Sector 136, Sector 137, Sector 140 and Sector 141. The neighbouring Sector 108 carries pincode 201304.",
+        "scope": "locality",
+        "tags": ["noida", "sector-135"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-136": {
+    "neighbours": ["sector-137", "sector-135", "sector-140", "sector-141", "sector-142", "sector-108", "sector-110"],
+    "landmarks": ["Sector 137 Metro Station (Aqua Line)", "Felix Hospital (Sector 137)", "Noida–Greater Noida Expressway", "Assotech Business Cresterra (Sector 135)"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Wajidpur"],
+    "localIntro": "Sector 136 is a compact sector under pincode 201305, tucked between Sector 135 and Sector 137 on the Noida–Greater Noida Expressway. Its residential stock is mainly group-housing towers built over the last decade, together with some institutional and office plots, and it shares the character of the wider Sector 137 belt: young families and working professionals in gated apartments, most of whom commute to the IT parks along the expressway or to Delhi. Sector 137 Metro Station on the Aqua Line is next door, Felix Hospital in Sector 137 is the nearest major hospital, and the office complexes of Sector 135 lie on the other side. Wajidpur village in Sector 135 is where many of the domestic helpers serving these towers live, which keeps commutes short. Households here typically ask for a part-time maid for cleaning and utensils, a cook for evening meals, and nannies for young children, and every society expects helpers to be registered at the gate before they start.",
+    "commuteNotes": "Sector 137 Metro Station on the Aqua Line is within walking distance of the sector. Helpers also walk in from Wajidpur in Sector 135 or take shared autos along the expressway service road.",
+    "housingNotes": "The sector is largely gated high-rise societies, so helpers require society entry passes or visitor-app registration, with fixed timings recorded at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-136-1",
+        "q": "Which areas near Sector 136 do you also serve?",
+        "a": "Sector 137, Sector 135, Sector 140 and Sector 142 are covered by the same nearby helper network. The whole Sector 135 to Sector 143 stretch of the expressway is served from the same pool.",
+        "scope": "locality",
+        "tags": ["noida", "sector-136"]
+      },
+      {
+        "id": "faq-noida-sector-136-2",
+        "q": "Do helpers in Sector 136 need society gate passes?",
+        "a": "Yes. Homes in Sector 136 are mostly in gated group-housing societies that require helpers to hold a society pass or be registered on the visitor app. Households arrange this through the society office after finalising the helper.",
+        "scope": "locality",
+        "tags": ["noida", "sector-136"]
+      },
+      {
+        "id": "faq-noida-sector-136-3",
+        "q": "Which pincode covers Sector 136, Noida?",
+        "a": "Sector 136 falls under pincode 201305, which also covers Sector 135, Sector 137, Sector 140 and Sector 141. Sector 137 Metro Station lies within the same pincode.",
+        "scope": "locality",
+        "tags": ["noida", "sector-136"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-137": {
+    "neighbours": ["sector-136", "sector-135", "sector-142", "sector-140", "sector-143", "sector-141", "sector-108", "sector-110"],
+    "landmarks": ["Sector 137 Metro Station (Aqua Line)", "Felix Hospital", "Paras Tierea", "Supertech Ecociti", "Logix Blossom County", "Noida–Greater Noida Expressway"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Wajidpur"],
+    "localIntro": "Sector 137 is the densest residential sector on the Noida–Greater Noida Expressway, covered by pincode 201305 and made up almost entirely of large gated societies such as Paras Tierea, Supertech Ecociti, Logix Blossom County, Ajnara Daffodil and Gulshan Vivante. Tens of thousands of residents live here in high-rise apartments, most of them young families and working couples employed in the IT parks along the expressway, in Sector 62 or in Delhi, with a significant number of tenants and paying guests as well. Sector 137 Metro Station on the Aqua Line sits at the sector's edge, Felix Hospital is inside the sector, and Sector 136 and Sector 135 lie on the Delhi side while Sector 142 and Sector 143 continue towards Greater Noida. Wajidpur village in Sector 135 is home to many of the helpers who work in these towers. Demand covers the full range of domestic help, from part-time cleaning and cooking for dual-income homes to full-day nannies and elder-care attendants, and every society requires helpers to be registered with security.",
+    "commuteNotes": "Sector 137 Metro Station on the Aqua Line serves the sector directly, and helpers also walk in from Wajidpur in Sector 135 or arrive by shared auto along the expressway service road.",
+    "housingNotes": "The sector is entirely gated high-rise societies, so helpers need society-issued passes or visitor-app registration, and most societies keep a record of helper entry and exit timings.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-137-1",
+        "q": "Which areas near Sector 137 do you also serve?",
+        "a": "Sector 136, Sector 135, Sector 142 and Sector 143 are covered by the same nearby helper pool. Coverage runs along the expressway from Sector 108 to Sector 143.",
+        "scope": "locality",
+        "tags": ["noida", "sector-137"]
+      },
+      {
+        "id": "faq-noida-sector-137-2",
+        "q": "Do helpers in Sector 137 societies need gate passes?",
+        "a": "Yes. Societies such as Paras Tierea, Supertech Ecociti and Logix Blossom County require helpers to carry a society pass or be registered on the visitor app before entry. Residents arrange this through the society office once the helper is finalised.",
+        "scope": "locality",
+        "tags": ["noida", "sector-137"]
+      },
+      {
+        "id": "faq-noida-sector-137-3",
+        "q": "Which pincode does Sector 137 fall under?",
+        "a": "Sector 137 comes under pincode 201305, shared with Sector 135, Sector 136, Sector 140 and Sector 141. Felix Hospital and Sector 137 Metro Station both fall within this pincode.",
+        "scope": "locality",
+        "tags": ["noida", "sector-137"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-140": {
+    "neighbours": ["sector-141", "sector-137", "sector-142", "sector-136", "sector-135", "sector-143"],
+    "landmarks": ["Sector 142 Metro Station (Aqua Line)", "Sector 137 Metro Station (Aqua Line)", "Advant Navis Business Park (Sector 142)", "Noida–Greater Noida Expressway"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 140, together with Sector 140A, lies just off the Noida–Greater Noida Expressway behind Sector 137 and is covered by pincode 201305. This is primarily an institutional and industrial sector, with IT and office plots and industrial units rather than large housing societies, so the households served here are mostly in the smaller residential pockets, staff quarters and rented flats used by people working in the area. Residents are overwhelmingly working professionals, many of them single tenants or couples without children, who need a part-time helper for cleaning and cooking around office hours rather than full-day help. The sector is well connected: Sector 137 Metro Station and Sector 142 Metro Station on the Aqua Line lie on either side, Advant Navis Business Park in Sector 142 is next door, and the large residential societies of Sector 137 are within walking distance. Sector 141 adjoins the sector inland. Helpers who serve Sector 140 generally come from the same pool that works the Sector 137 towers.",
+    "commuteNotes": "Sector 142 and Sector 137 Metro Stations on the Aqua Line are both close to the sector, and shared autos run along the expressway service road. Helpers typically arrive from the Sector 137 side on foot or by auto.",
+    "housingNotes": "Residential stock is limited and mixed, ranging from staff housing and rented flats to a few gated blocks, so entry rules vary by building. Households usually confirm whether a pass is needed before the helper starts.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-140-1",
+        "q": "Which areas near Sector 140 do you also serve?",
+        "a": "Sector 141, Sector 137, Sector 142 and Sector 136 are covered by the same nearby helper network. Both Sector 140 and Sector 140A fall under this locality's coverage.",
+        "scope": "locality",
+        "tags": ["noida", "sector-140"]
+      },
+      {
+        "id": "faq-noida-sector-140-2",
+        "q": "How do helpers reach Sector 140?",
+        "a": "Sector 142 and Sector 137 Metro Stations on the Aqua Line are both nearby, and most helpers walk or take a shared auto from the Sector 137 residential belt. The expressway service road links the sector to its neighbours.",
+        "scope": "locality",
+        "tags": ["noida", "sector-140"]
+      },
+      {
+        "id": "faq-noida-sector-140-3",
+        "q": "Which pincode covers Sector 140, Noida?",
+        "a": "Sector 140 and Sector 140A fall under pincode 201305, the same as Sector 135, Sector 136, Sector 137 and Sector 141. Neighbouring Sector 142 spans pincodes 201305 and 201306.",
+        "scope": "locality",
+        "tags": ["noida", "sector-140"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-141": {
+    "neighbours": ["sector-140", "sector-142", "sector-137", "sector-136", "sector-143", "sector-135"],
+    "landmarks": ["Sector 142 Metro Station (Aqua Line)", "Advant Navis Business Park (Sector 142)", "Felix Hospital (Sector 137)", "Noida–Greater Noida Expressway"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 141 is a small inland sector under pincode 201305, sitting behind Sector 140 and Sector 142 and away from the expressway frontage. It is a low-key, still-developing part of Noida with a mix of institutional plots, smaller residential pockets and rented accommodation used by people working in the nearby IT parks, rather than the large branded townships found in Sector 137. Households are mostly working professionals, some young families, and tenants who value the short commute to Advant Navis Business Park in Sector 142 and the other office blocks on the expressway. Sector 142 Metro Station on the Aqua Line is the nearest station, Felix Hospital in Sector 137 is the closest major hospital, and the residential belt of Sector 137 is a few minutes away. Because the sector has fewer residents than its neighbours, helpers who serve Sector 141 are generally drawn from the same pool that works in Sector 137 and Sector 142, with part-time cleaning and cooking the most common request.",
+    "commuteNotes": "Sector 142 Metro Station on the Aqua Line is the nearest station, and shared autos connect the sector to Sector 137 and the expressway service road. Helpers usually arrive from the Sector 137 side.",
+    "housingNotes": "Housing is mixed and relatively sparse, with entry arrangements varying between gated blocks that need passes and independent buildings where the household manages access directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-141-1",
+        "q": "Which areas near Sector 141 do you also serve?",
+        "a": "Sector 140, Sector 142, Sector 137 and Sector 136 are covered by the same nearby helper pool. The whole inland stretch between Sector 135 and Sector 143 is served from one network.",
+        "scope": "locality",
+        "tags": ["noida", "sector-141"]
+      },
+      {
+        "id": "faq-noida-sector-141-2",
+        "q": "Which metro station is closest to Sector 141?",
+        "a": "Sector 142 Metro Station on the Aqua Line is the nearest, with Sector 137 Metro Station also close by. Helpers commonly use these stations or shared autos from Sector 137.",
+        "scope": "locality",
+        "tags": ["noida", "sector-141"]
+      },
+      {
+        "id": "faq-noida-sector-141-3",
+        "q": "Which pincode does Sector 141 fall under?",
+        "a": "Sector 141 comes under pincode 201305, which also covers Sector 135, Sector 136, Sector 137 and Sector 140. Neighbouring Sector 142 spans both 201305 and 201306.",
+        "scope": "locality",
+        "tags": ["noida", "sector-141"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-142": {
+    "neighbours": ["sector-143", "sector-137", "sector-141", "sector-140", "sector-144", "sector-136", "sector-135"],
+    "landmarks": ["Sector 142 Metro Station (Aqua Line)", "Advant Navis Business Park", "Noida–Greater Noida Expressway", "Felix Hospital (Sector 137)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 142 fronts the Noida–Greater Noida Expressway immediately after Sector 137 and is served by its own Aqua Line station, Sector 142 Metro Station. The sector spans pincodes 201305 and 201306 and is best known for Advant Navis Business Park, one of the larger office complexes on the expressway, which is matched on the residential side by a mix of group-housing towers, institutional plots and rented flats. Households here are chiefly working professionals employed in the nearby business parks, along with young families who have moved into the newer societies, and demand leans towards part-time cleaning and cooking that fits around office hours, with full-day nannies requested by families with small children. Sector 143 continues along the expressway towards Greater Noida, Sector 137 with Felix Hospital lies on the Delhi side, and Sector 140 and Sector 141 sit inland. Helpers serving the sector typically come from the Sector 137 belt and arrive by metro, shared auto or on foot along the service road.",
+    "commuteNotes": "Sector 142 Metro Station on the Aqua Line serves the sector directly, and shared autos run along the expressway service road from Sector 137. Many helpers walk in from the Sector 137 side.",
+    "housingNotes": "Group-housing towers in the sector require society passes or visitor-app registration, while the smaller independent buildings and rented flats manage helper entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-142-1",
+        "q": "Which areas near Sector 142 do you also serve?",
+        "a": "Sector 143, Sector 137, Sector 141 and Sector 140 are covered by the same nearby helper network. Coverage continues along the expressway to Sector 144 and beyond.",
+        "scope": "locality",
+        "tags": ["noida", "sector-142"]
+      },
+      {
+        "id": "faq-noida-sector-142-2",
+        "q": "Is there a metro station in Sector 142?",
+        "a": "Yes. Sector 142 Metro Station on the Aqua Line lies on the expressway edge of the sector, with Sector 143 and Sector 137 stations on either side. Helpers commonly use it to reach homes in the sector.",
+        "scope": "locality",
+        "tags": ["noida", "sector-142"]
+      },
+      {
+        "id": "faq-noida-sector-142-3",
+        "q": "Which pincodes cover Sector 142, Noida?",
+        "a": "Sector 142 spans pincodes 201305 and 201306. Sector 137 and Sector 141 fall under 201305, while Sector 143 and Sector 144 use 201306.",
+        "scope": "locality",
+        "tags": ["noida", "sector-142"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-143": {
+    "neighbours": ["sector-142", "sector-144", "sector-137", "sector-141", "sector-140", "sector-145", "sector-136"],
+    "landmarks": ["Sector 143 Metro Station (Aqua Line)", "Logix Blossom Greens", "Advant Navis Business Park (Sector 142)", "Noida–Greater Noida Expressway", "Felix Hospital (Sector 137)"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 143, including the Sector 143A and 143B pockets, sits on the Noida–Greater Noida Expressway between Sector 142 and Sector 144 and is covered by pincode 201306. It is one of the newer residential sectors on the expressway, built up largely with gated high-rise societies such as Logix Blossom Greens, and its population is made up of young families and dual-income professionals who work in the business parks nearby or commute to Delhi. Sector 143 Metro Station on the Aqua Line lies on the sector's edge, Advant Navis Business Park in Sector 142 is next door, and Felix Hospital in Sector 137 is the nearest major hospital. Sector 144 continues towards Greater Noida, while Sector 141 and Sector 140 lie inland. Households here usually need a part-time maid for daily cleaning and utensils, a cook for one or two meals, and nannies or full-day help where both parents work, and society rules require every helper to be registered with the gate before starting.",
+    "commuteNotes": "Sector 143 Metro Station on the Aqua Line serves the sector directly, with Sector 142 station a short distance away. Helpers also arrive by shared auto along the expressway service road from the Sector 137 side.",
+    "housingNotes": "The sector is dominated by gated high-rise societies, so helpers need a society pass or visitor-app registration and timings are recorded at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-143-1",
+        "q": "Which areas near Sector 143 do you also serve?",
+        "a": "Sector 142, Sector 144, Sector 137 and Sector 141 are covered by the same nearby helper pool. Sector 143A and Sector 143B are included in this locality's coverage.",
+        "scope": "locality",
+        "tags": ["noida", "sector-143"]
+      },
+      {
+        "id": "faq-noida-sector-143-2",
+        "q": "Do helpers in Sector 143 need society gate passes?",
+        "a": "Yes. Societies such as Logix Blossom Greens are gated and require helpers to carry a society pass or be registered on the visitor app. Residents arrange this through the society office once the helper is finalised.",
+        "scope": "locality",
+        "tags": ["noida", "sector-143"]
+      },
+      {
+        "id": "faq-noida-sector-143-3",
+        "q": "Which pincode covers Sector 143, Noida?",
+        "a": "Sector 143 falls under pincode 201306, which also covers Sector 144, Sector 145 and the sectors further along the expressway. Neighbouring Sector 142 spans 201305 and 201306.",
+        "scope": "locality",
+        "tags": ["noida", "sector-143"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-144": {
+    "neighbours": ["sector-143", "sector-145", "sector-142", "sector-146", "sector-141", "sector-137"],
+    "landmarks": ["Sector 144 Metro Station (Aqua Line)", "Oxygen Boulevard", "Gulshan Botnia", "Noida–Greater Noida Expressway"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 144 lies on the Noida–Greater Noida Expressway beyond Sector 143 and is covered by pincode 201306. It combines a large office presence, led by the Oxygen Boulevard IT and SEZ campus, with a residential side that includes gated societies such as Gulshan Botnia alongside institutional plots and newer developments still filling in. Residents are largely working professionals, many employed within the sector's own business parks, together with young families in the societies who have chosen the area for its metro access and relatively open surroundings. Sector 144 Metro Station on the Aqua Line serves the sector directly, Sector 143 with Logix Blossom Greens lies on the Delhi side, and Sector 145 and Sector 146 continue towards Greater Noida. Domestic-help demand centres on part-time cleaning and cooking arranged around office timings, with full-day help and nannies requested by families, and the societies here follow the usual expressway practice of registering helpers with security before they start.",
+    "commuteNotes": "Sector 144 Metro Station on the Aqua Line serves the sector directly, and shared autos run along the expressway service road. Helpers usually arrive by metro or by auto from the Sector 137 and Sector 143 side.",
+    "housingNotes": "Gated societies such as Gulshan Botnia require society passes or visitor-app registration for helpers, while the smaller buildings and rented flats in the sector manage entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-144-1",
+        "q": "Which areas near Sector 144 do you also serve?",
+        "a": "Sector 143, Sector 145, Sector 142 and Sector 146 are covered by the same nearby helper network. Coverage runs along the expressway from Sector 137 to Sector 152.",
+        "scope": "locality",
+        "tags": ["noida", "sector-144"]
+      },
+      {
+        "id": "faq-noida-sector-144-2",
+        "q": "Is there a metro station in Sector 144?",
+        "a": "Yes. Sector 144 Metro Station on the Aqua Line lies on the expressway edge of the sector, between the Sector 143 and Sector 145 stations. Helpers commonly use it to reach homes and offices here.",
+        "scope": "locality",
+        "tags": ["noida", "sector-144"]
+      },
+      {
+        "id": "faq-noida-sector-144-3",
+        "q": "Which pincode covers Sector 144, Noida?",
+        "a": "Sector 144 falls under pincode 201306, shared with Sector 143, Sector 145, Sector 146 and the other sectors towards Greater Noida. Oxygen Boulevard and Gulshan Botnia both use this pincode.",
+        "scope": "locality",
+        "tags": ["noida", "sector-144"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-145": {
+    "neighbours": ["sector-144", "sector-146", "sector-143", "sector-147", "sector-142", "sector-148"],
+    "landmarks": ["Sector 145 Metro Station (Aqua Line)", "Oxygen Boulevard (Sector 144)", "Noida–Greater Noida Expressway", "Sector 144 Metro Station (Aqua Line)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 145 lies on the Noida–Greater Noida Expressway between Sector 144 and Sector 146 and is covered by pincode 201306. It is largely an industrial and institutional sector, with manufacturing and IT plots along the expressway rather than large housing townships, so the households served here tend to be in staff accommodation, rented flats and the smaller residential pockets used by people working in the area. Residents are mainly working professionals and shift-based employees, often single tenants or couples who want a part-time helper for cleaning and cooking that fits around long working hours. The sector has its own Aqua Line station, Sector 145 Metro Station, with Sector 144 station and the Oxygen Boulevard campus next door on the Delhi side and Sector 146 and Sector 147 continuing towards Greater Noida. Because the resident population is small, helpers who serve Sector 145 are drawn from the same pool that works the Sector 143 and Sector 144 societies and usually arrive by metro or shared auto.",
+    "commuteNotes": "Sector 145 Metro Station on the Aqua Line serves the sector directly, and shared autos run along the expressway service road. Helpers typically come from the Sector 143 and Sector 144 side by metro or auto.",
+    "housingNotes": "Residential stock is limited and mixed, ranging from staff quarters and rented flats to a few gated blocks, so entry rules vary by building and households confirm whether a pass is needed before the helper starts.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-145-1",
+        "q": "Which areas near Sector 145 do you also serve?",
+        "a": "Sector 144, Sector 146, Sector 143 and Sector 147 are covered by the same nearby helper network. Coverage runs along the expressway from Sector 137 to Sector 152.",
+        "scope": "locality",
+        "tags": ["noida", "sector-145"]
+      },
+      {
+        "id": "faq-noida-sector-145-2",
+        "q": "How do helpers reach Sector 145?",
+        "a": "Sector 145 Metro Station on the Aqua Line is inside the sector, with Sector 144 and Sector 146 stations on either side. Most helpers arrive by metro or shared auto from the Sector 143 and Sector 144 residential belt.",
+        "scope": "locality",
+        "tags": ["noida", "sector-145"]
+      },
+      {
+        "id": "faq-noida-sector-145-3",
+        "q": "Which pincode covers Sector 145, Noida?",
+        "a": "Sector 145 falls under pincode 201306, the same as Sector 143, Sector 144, Sector 146, Sector 147 and Sector 148. The pincode covers most of the expressway sectors towards Greater Noida.",
+        "scope": "locality",
+        "tags": ["noida", "sector-145"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-146": {
+    "neighbours": ["sector-145", "sector-147", "sector-144", "sector-148", "sector-143", "sector-150"],
+    "landmarks": ["Sector 146 Metro Station (Aqua Line)", "Noida–Greater Noida Expressway", "Sector 145 Metro Station (Aqua Line)", "Noida Sports City (Sector 150)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 146 sits on the Noida–Greater Noida Expressway between Sector 145 and Sector 147 and falls under pincode 201306. Like its immediate neighbours it is still filling in, with institutional and industrial plots along the expressway and residential pockets, rented flats and newer housing developments inland, rather than the fully built-up townships of Sector 137 or Sector 150. Residents are mainly working professionals employed in the expressway business parks and industrial units, along with a growing number of young families drawn by the metro connection and lower density. Sector 146 Metro Station on the Aqua Line serves the sector directly, Sector 145 station and the Oxygen Boulevard campus in Sector 144 lie on the Delhi side, and the Sports City societies of Sector 150 are a short drive further on. Households here typically ask for a part-time maid for cleaning and cooking arranged around office hours, with full-day help or nannies where both partners work, and helpers are usually drawn from the pool serving Sector 143 to Sector 150.",
+    "commuteNotes": "Sector 146 Metro Station on the Aqua Line serves the sector directly, and shared autos run along the expressway service road. Helpers commonly arrive by metro from the Sector 137 side or by auto from Sector 150.",
+    "housingNotes": "Housing is mixed and still developing, with gated blocks that require society passes alongside independent buildings and rented flats where the household manages helper entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-146-1",
+        "q": "Which areas near Sector 146 do you also serve?",
+        "a": "Sector 145, Sector 147, Sector 144 and Sector 148 are covered by the same nearby helper network. The Sports City societies in Sector 150 are also served from this pool.",
+        "scope": "locality",
+        "tags": ["noida", "sector-146"]
+      },
+      {
+        "id": "faq-noida-sector-146-2",
+        "q": "Is there a metro station in Sector 146?",
+        "a": "Yes. Sector 146 Metro Station on the Aqua Line lies on the expressway edge of the sector, between the Sector 145 and Sector 147 stations. Helpers commonly use it to reach homes here.",
+        "scope": "locality",
+        "tags": ["noida", "sector-146"]
+      },
+      {
+        "id": "faq-noida-sector-146-3",
+        "q": "Which pincode covers Sector 146, Noida?",
+        "a": "Sector 146 falls under pincode 201306, shared with Sector 144, Sector 145, Sector 147, Sector 148 and Sector 149. Sector 150 further on spans 201306 and 201310.",
+        "scope": "locality",
+        "tags": ["noida", "sector-146"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-147": {
+    "neighbours": ["sector-146", "sector-148", "sector-145", "sector-150", "sector-149", "sector-144"],
+    "landmarks": ["Sector 147 Metro Station (Aqua Line)", "Noida Sports City (Sector 150)", "Noida–Greater Noida Expressway", "Sector 148 Metro Station (Aqua Line)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 147 lies on the Noida–Greater Noida Expressway between Sector 146 and Sector 148, under pincode 201306, and is one of the sectors that leads into the Sports City belt of Sector 150. The expressway frontage is taken up by institutional and commercial plots, while the inland side has residential pockets, rented flats and newer housing that is still being built out, giving the sector a mixed and low-density character. Residents are largely working professionals employed along the expressway, together with families who have moved into the newer developments for the open surroundings and metro access. Sector 147 Metro Station on the Aqua Line serves the sector directly, Sector 148 station lies next door, and the large gated societies of Sector 150 such as Tata Eureka Park and Godrej Nest are a short drive away. Households here usually want a part-time maid for cleaning and cooking, with full-day help and nannies for families with young children, and helpers are generally drawn from the pool that serves Sector 146 to Sector 152.",
+    "commuteNotes": "Sector 147 Metro Station on the Aqua Line serves the sector directly, with shared autos running along the expressway service road towards Sector 150. Helpers usually arrive by metro or by auto from the Sector 150 side.",
+    "housingNotes": "Housing is mixed and still developing, so entry rules vary: gated blocks require society passes or visitor-app registration, while independent buildings and rented flats manage helper entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-147-1",
+        "q": "Which areas near Sector 147 do you also serve?",
+        "a": "Sector 146, Sector 148, Sector 145 and Sector 150 are covered by the same nearby helper network. Coverage continues to Sector 151 and Sector 152 at the Greater Noida end.",
+        "scope": "locality",
+        "tags": ["noida", "sector-147"]
+      },
+      {
+        "id": "faq-noida-sector-147-2",
+        "q": "Is there a metro station in Sector 147?",
+        "a": "Yes. Sector 147 Metro Station on the Aqua Line lies on the expressway edge of the sector, between the Sector 146 and Sector 148 stations. Helpers commonly use it to reach homes here.",
+        "scope": "locality",
+        "tags": ["noida", "sector-147"]
+      },
+      {
+        "id": "faq-noida-sector-147-3",
+        "q": "Which pincode covers Sector 147, Noida?",
+        "a": "Sector 147 falls under pincode 201306, the same as Sector 145, Sector 146, Sector 148 and Sector 149. Sector 150 next door spans both 201306 and 201310.",
+        "scope": "locality",
+        "tags": ["noida", "sector-147"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-148": {
+    "neighbours": ["sector-147", "sector-150", "sector-149", "sector-146", "sector-151", "sector-152", "sector-145"],
+    "landmarks": ["Sector 148 Metro Station (Aqua Line)", "Noida Sports City (Sector 150)", "Noida–Greater Noida Expressway", "Sector 147 Metro Station (Aqua Line)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 148 is the last Noida sector with its own Aqua Line station before the line crosses into Greater Noida, sitting on the Noida–Greater Noida Expressway beyond Sector 147 under pincode 201306. The expressway side is given over to institutional and commercial plots, while the inland side borders the Sports City belt of Sector 150 and includes residential pockets, rented flats and housing that is still being developed. Residents are mostly working professionals employed along the expressway and in Greater Noida, together with families who have bought into the newer developments here and in adjoining Sector 149 and Sector 150. Sector 148 Metro Station serves the sector directly, Sector 147 station lies on the Delhi side, and the large gated townships of Sector 150 such as Tata Eureka Park and Eldeco Live by the Greens are within a few minutes. Households here typically need part-time cleaning and cooking help, with full-day maids and nannies for families, and helpers are generally drawn from the pool that serves Sector 146 to Sector 152.",
+    "commuteNotes": "Sector 148 Metro Station on the Aqua Line serves the sector directly, and shared autos run along the expressway service road between Sector 147 and Sector 150. Many helpers who work in Sector 150 also cover Sector 148.",
+    "housingNotes": "Housing is mixed and still developing, so gated blocks require society passes or visitor-app registration while independent buildings and rented flats manage helper entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-148-1",
+        "q": "Which areas near Sector 148 do you also serve?",
+        "a": "Sector 147, Sector 150, Sector 149 and Sector 146 are covered by the same nearby helper network. Sector 151 and Sector 152 at the Greater Noida end are served from the same pool.",
+        "scope": "locality",
+        "tags": ["noida", "sector-148"]
+      },
+      {
+        "id": "faq-noida-sector-148-2",
+        "q": "Is there a metro station in Sector 148?",
+        "a": "Yes. Sector 148 Metro Station on the Aqua Line lies on the expressway edge of the sector, after Sector 147 and before the line enters Greater Noida. It is also the closest Noida station for the Sector 150 societies.",
+        "scope": "locality",
+        "tags": ["noida", "sector-148"]
+      },
+      {
+        "id": "faq-noida-sector-148-3",
+        "q": "Which pincode covers Sector 148, Noida?",
+        "a": "Sector 148 falls under pincode 201306, shared with Sector 146, Sector 147, Sector 149 and Sector 151. Sector 150 and Sector 152 span both 201306 and 201310.",
+        "scope": "locality",
+        "tags": ["noida", "sector-148"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-149": {
+    "neighbours": ["sector-150", "sector-148", "sector-151", "sector-147", "sector-152", "sector-146"],
+    "landmarks": ["Noida Sports City (Sector 150)", "Sector 148 Metro Station (Aqua Line)", "Noida–Greater Noida Expressway", "Tata Eureka Park (Sector 150)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 149 is an inland sector at the Greater Noida end of Noida, lying beside the Sports City belt of Sector 150 and covered by pincode 201306. It is still largely under development, with residential pockets, plotted land and newer housing projects rather than fully occupied townships, and much of its day-to-day life is tied to the established societies of Sector 150 next door. Residents are families and working professionals who have moved into the newer homes here, many of them commuting along the expressway to the Noida IT parks or into Greater Noida. Sector 148 Metro Station on the Aqua Line is the nearest station, Tata Eureka Park and the other Sector 150 societies are within a few minutes, and Sector 151 and Sector 152 lie further towards Greater Noida. Households here typically look for a part-time maid for cleaning and cooking, with full-day help and nannies for families with young children, and helpers are generally drawn from the same pool that serves Sector 150 and Sector 148.",
+    "commuteNotes": "Sector 148 Metro Station on the Aqua Line is the nearest station, and shared autos connect the sector to the expressway service road. Helpers usually come from the Sector 150 side by auto or on foot.",
+    "housingNotes": "Housing is mixed and still being built out, so gated developments require society passes while plotted homes and independent buildings manage helper entry directly with flexible timings.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-149-1",
+        "q": "Which areas near Sector 149 do you also serve?",
+        "a": "Sector 150, Sector 148, Sector 151 and Sector 147 are covered by the same nearby helper network. The Sports City societies in Sector 150 are served from the same pool.",
+        "scope": "locality",
+        "tags": ["noida", "sector-149"]
+      },
+      {
+        "id": "faq-noida-sector-149-2",
+        "q": "Which metro station is closest to Sector 149?",
+        "a": "Sector 148 Metro Station on the Aqua Line is the nearest, with Sector 147 station a little further along the expressway. Helpers typically use these stations or shared autos from Sector 150.",
+        "scope": "locality",
+        "tags": ["noida", "sector-149"]
+      },
+      {
+        "id": "faq-noida-sector-149-3",
+        "q": "Which pincode covers Sector 149, Noida?",
+        "a": "Sector 149 falls under pincode 201306, shared with Sector 147, Sector 148 and Sector 151. Neighbouring Sector 150 and Sector 152 span both 201306 and 201310.",
+        "scope": "locality",
+        "tags": ["noida", "sector-149"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-150": {
+    "neighbours": ["sector-149", "sector-151", "sector-148", "sector-152", "sector-147", "sector-146"],
+    "landmarks": ["Noida Sports City", "Tata Eureka Park", "Godrej Nest", "ATS Pious Hideaways", "Eldeco Live by the Greens", "Sector 148 Metro Station (Aqua Line)"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 150 is Noida's Sports City sector, planned with a large share of green and sports space and built up over the last few years with premium gated townships such as Tata Eureka Park, Godrej Nest, ATS Pious Hideaways, Eldeco Live by the Greens, Prateek Canary and ATS Le Grandiose. It spans pincodes 201306 and 201310 and sits at the Greater Noida end of the Noida–Greater Noida Expressway, with Sector 149 and Sector 151 on either side and Sector 152 beyond. Households are predominantly families with young children and senior professionals who have moved here for larger apartments and quieter surroundings, along with working couples who commute along the expressway to the Noida IT parks or into Greater Noida. The nearest Aqua Line stations are Sector 148 and Sector 147, a short drive away. Demand is strongest for full-day housekeeping, cooks and nannies, with a steady requirement for elder-care attendants, and every society here operates gate registration and visitor-app systems for domestic staff.",
+    "commuteNotes": "Sector 148 and Sector 147 Metro Stations on the Aqua Line are the nearest, with shared autos and society shuttles covering the last stretch along the expressway service road. Helpers also arrive by auto from the surrounding sectors and from the Greater Noida side.",
+    "housingNotes": "The sector is entirely gated high-rise townships, so helpers need society-issued passes or visitor-app registration, and most societies keep a log of helper entry and exit timings.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-150-1",
+        "q": "Which areas near Sector 150 do you also serve?",
+        "a": "Sector 149, Sector 151, Sector 148 and Sector 152 are covered by the same nearby helper network. Coverage runs along the expressway from Sector 146 to the Greater Noida boundary.",
+        "scope": "locality",
+        "tags": ["noida", "sector-150"]
+      },
+      {
+        "id": "faq-noida-sector-150-2",
+        "q": "Do helpers in Sector 150 societies need gate passes?",
+        "a": "Yes. Townships such as Tata Eureka Park, Godrej Nest and Eldeco Live by the Greens require helpers to hold a society pass or be registered on the visitor app before entry. Households arrange this through the society office once the helper is finalised.",
+        "scope": "locality",
+        "tags": ["noida", "sector-150"]
+      },
+      {
+        "id": "faq-noida-sector-150-3",
+        "q": "Which pincodes cover Sector 150, Noida?",
+        "a": "Sector 150 spans pincodes 201306 and 201310. Neighbouring Sector 149 and Sector 151 fall under 201306, while Sector 152 also spans 201306 and 201310.",
+        "scope": "locality",
+        "tags": ["noida", "sector-150"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-151": {
+    "neighbours": ["sector-150", "sector-152", "sector-149", "sector-148", "sector-147", "sector-146"],
+    "landmarks": ["Noida Sports City (Sector 150)", "Ace Starlit (Sector 152)", "Sector 148 Metro Station (Aqua Line)", "Noida–Greater Noida Expressway"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 151 lies between Sector 150 and Sector 152 at the Greater Noida end of Noida and is covered by pincode 201306. It is a developing sector in the Sports City belt, with plotted land, newer residential projects and open green stretches rather than the fully occupied townships of Sector 150, so its resident population is still growing. Households here are mostly families and working professionals who have bought into the newer developments, drawn by the larger homes, the proximity to the Sector 150 societies and the expressway link to the Noida IT parks and Greater Noida. Tata Eureka Park and the other Sector 150 townships are a few minutes away, Ace Starlit in Sector 152 lies on the other side, and Sector 148 Metro Station on the Aqua Line is the nearest station. Domestic-help demand centres on part-time cleaning and cooking, with full-day help and nannies for families with young children, and helpers are typically drawn from the pool that already serves the Sector 150 societies.",
+    "commuteNotes": "Sector 148 Metro Station on the Aqua Line is the nearest station, with shared autos covering the stretch along the expressway service road. Helpers usually come from the Sector 150 side or from Greater Noida by auto.",
+    "housingNotes": "Housing is mixed and still being built out; gated developments require society passes or visitor-app registration, while plotted homes manage helper entry directly with flexible timings.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-151-1",
+        "q": "Which areas near Sector 151 do you also serve?",
+        "a": "Sector 150, Sector 152, Sector 149 and Sector 148 are covered by the same nearby helper network. The Sports City societies of Sector 150 are served from the same pool.",
+        "scope": "locality",
+        "tags": ["noida", "sector-151"]
+      },
+      {
+        "id": "faq-noida-sector-151-2",
+        "q": "Which metro station is closest to Sector 151?",
+        "a": "Sector 148 Metro Station on the Aqua Line is the nearest Noida station, with Knowledge Park II station on the Greater Noida side also within reach. Helpers commonly use these stations or shared autos from Sector 150.",
+        "scope": "locality",
+        "tags": ["noida", "sector-151"]
+      },
+      {
+        "id": "faq-noida-sector-151-3",
+        "q": "Which pincode covers Sector 151, Noida?",
+        "a": "Sector 151 falls under pincode 201306, shared with Sector 148 and Sector 149. Neighbouring Sector 150 and Sector 152 span both 201306 and 201310.",
+        "scope": "locality",
+        "tags": ["noida", "sector-151"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-152": {
+    "neighbours": ["sector-151", "sector-150", "sector-149", "sector-148", "sector-147", "sector-146"],
+    "landmarks": ["Ace Starlit", "ATS Picturesque Reprieves", "Noida Sports City (Sector 150)", "Pari Chowk (Greater Noida)", "Knowledge Park II Metro Station (Aqua Line)"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 152 is the last residential sector at the Greater Noida end of Noida, spanning pincodes 201306 and 201310 and forming part of the Sports City belt alongside Sector 150 and Sector 151. It is built up mainly with gated high-rise societies such as Ace Starlit and ATS Picturesque Reprieves, which attract families and working professionals looking for larger apartments in a low-density, green setting with an easy run along the expressway to the Noida IT parks or into Greater Noida. Pari Chowk and Knowledge Park II Metro Station on the Aqua Line are close by on the Greater Noida side, while Tata Eureka Park and the other Sector 150 townships lie a few minutes away in the other direction. Households here typically need full-day housekeeping, a cook and often a nanny, with elder-care support requested in homes where parents live with their children, and the societies operate gate-pass and visitor-app systems for all domestic staff. Helpers are drawn from the pool that serves Sector 150 and from the Greater Noida side.",
+    "commuteNotes": "Knowledge Park II Metro Station on the Aqua Line on the Greater Noida side and Sector 148 station in Noida are the nearest, with shared autos covering the last stretch. Many helpers arrive by auto from Greater Noida or from the Sector 150 side.",
+    "housingNotes": "The sector is dominated by gated high-rise societies, so helpers need society-issued passes or visitor-app registration, and entry timings are logged at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-152-1",
+        "q": "Which areas near Sector 152 do you also serve?",
+        "a": "Sector 151, Sector 150, Sector 149 and Sector 148 are covered by the same nearby helper network. Coverage runs along the expressway from Sector 146 to the Greater Noida boundary.",
+        "scope": "locality",
+        "tags": ["noida", "sector-152"]
+      },
+      {
+        "id": "faq-noida-sector-152-2",
+        "q": "Do helpers in Sector 152 societies need gate passes?",
+        "a": "Yes. Societies such as Ace Starlit and ATS Picturesque Reprieves require helpers to hold a society pass or be registered on the visitor app before entry. Households arrange this through the society office once the helper is finalised.",
+        "scope": "locality",
+        "tags": ["noida", "sector-152"]
+      },
+      {
+        "id": "faq-noida-sector-152-3",
+        "q": "Which pincodes cover Sector 152, Noida?",
+        "a": "Sector 152 spans pincodes 201306 and 201310, the same pair as Sector 150. Neighbouring Sector 151, Sector 149 and Sector 148 fall under 201306.",
+        "scope": "locality",
+        "tags": ["noida", "sector-152"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

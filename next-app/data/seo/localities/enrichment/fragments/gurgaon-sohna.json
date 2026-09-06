@@ -1,0 +1,492 @@
+{
+  "south-city-1": {
+    "neighbours": ["sector-44", "sector-45", "sector-46", "sector-47", "dlf-phase-4", "south-city-2", "sector-49", "sector-50"],
+    "landmarks": ["Signature Tower", "Millennium City Centre Metro Station", "Leisure Valley Park", "Kingdom of Dreams", "Fortis Memorial Research Institute"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Jharsa", "Kanhai"],
+    "localIntro": "South City 1, under pincode 122001, is one of Gurgaon's older planned townships, laid out by Unitech across the Sector 30, 40 and 41 belt just off the Signature Tower junction on NH-48. It is a plotted colony at heart: rows of independent houses on tree-lined internal roads, with a growing number of plots rebuilt as multi-floor homes and a few apartment blocks along the edges. Residents are mostly long-settled families, senior professionals and retired couples, along with tenants who value the central location. The colony sits within easy reach of Millennium City Centre Metro Station, Leisure Valley Park and the Kingdom of Dreams complex in Sector 29, and Fortis Memorial Research Institute in Sector 44 is a short drive away. Sector 44 and Sector 45 lie immediately to the east, Sector 46 and Sector 47 beyond them, and South City 2 further down towards Sohna Road. Households here usually look for full-day or part-time cleaning and cooking help on stable, long-term arrangements, and many also need elder-care support for older family members living in the larger independent homes.",
+    "commuteNotes": "Millennium City Centre Metro Station on the Yellow Line is the closest metro stop, and city buses run along NH-48 and the Sector 31-40 road. Many helpers walk in from Jharsa and Kanhai villages, which sit close to the colony.",
+    "housingNotes": "Independent houses on private plots dominate, so entry is handled directly by the household rather than a society gate and timings stay flexible. The handful of apartment blocks in the colony run their own visitor registers.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-south-city-1-1",
+        "q": "Which areas near South City 1 do you also serve?",
+        "a": "Sector 44, Sector 45, Sector 46 and Sector 47 are all close by and draw on the same nearby helper pool. South City 2 and the Sohna Road belt further south are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "south-city-1"]
+      },
+      {
+        "id": "faq-gurgaon-south-city-1-2",
+        "q": "Which pincode does the South City 1 service area cover?",
+        "a": "South City 1 falls under pincode 122001, which is the main Gurgaon post office pincode. The adjoining Sectors 44 to 46 come under 122003, and South City 2 near Sohna Road is 122018.",
+        "scope": "locality",
+        "tags": ["gurgaon", "south-city-1"]
+      },
+      {
+        "id": "faq-gurgaon-south-city-1-3",
+        "q": "Do helpers in South City 1 need society gate passes?",
+        "a": "Most homes in South City 1 are independent houses on private plots, so there is no society pass system and households manage entry themselves. Residents of the few apartment blocks in the colony may need to register the helper with their building's security.",
+        "scope": "locality",
+        "tags": ["gurgaon", "south-city-1"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "south-city-2": {
+    "neighbours": ["sector-49", "sector-50", "sector-47", "sohna-road", "sector-51", "sector-46", "sector-65", "sector-45"],
+    "landmarks": ["Good Earth City Centre", "Nirvana Country", "Park Hospital", "Omaxe Celebration Mall", "Sohna Road"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "South City 2 is a Unitech-developed township spread across the Sector 49 and Sector 50 belt on the eastern side of Sohna Road, under pincode 122018. Housing here is a genuine mix: plotted independent houses and builder floors on the older internal streets sit alongside gated apartment complexes, and the neighbouring Nirvana Country and Uniworld Gardens estates blend into the same residential stretch. Residents are largely families and working professionals employed in the Sohna Road office corridor and in the Cyber City and Golf Course Road business districts. Good Earth City Centre in Sector 50 is the everyday shopping and dining hub, Park Hospital on Sohna Road is the nearest large hospital, and Omaxe Celebration Mall stands on the other side of the road in Sector 48. Sector 47 lies to the north-west, Sector 51 to the east and the Sector 65 side of Sohna Road to the south. Households typically look for morning and evening cleaning and cooking slots, live-in help for families with young children, and reliable cover during the working week.",
+    "commuteNotes": "There is no metro station on Sohna Road itself; helpers reach South City 2 by city bus or shared auto along Sohna Road from Subhash Chowk and Rajiv Chowk, or from Millennium City Centre Metro Station a few kilometres away. [VERIFY]",
+    "housingNotes": "Plotted houses and builder floors coexist with gated apartment complexes, so entry rules vary street by street: independent homes handle timings directly, while the gated societies require a registered visitor pass for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-south-city-2-1",
+        "q": "Which areas near South City 2 do you also serve?",
+        "a": "Sector 49, Sector 50, Sector 47 and Sector 51 are all adjacent and share the same nearby helper network. The Sohna Road stretch and Sector 65 across the road are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "south-city-2"]
+      },
+      {
+        "id": "faq-gurgaon-south-city-2-2",
+        "q": "Which pincode does the South City 2 service area cover?",
+        "a": "South City 2 falls under pincode 122018, which also covers Sectors 47, 49, 50 and 51. The Sohna Road corridor itself is listed under 122102.",
+        "scope": "locality",
+        "tags": ["gurgaon", "south-city-2"]
+      },
+      {
+        "id": "faq-gurgaon-south-city-2-3",
+        "q": "Do helpers in South City 2 need society gate passes?",
+        "a": "It depends on the home: the gated apartment complexes in and around South City 2, including Nirvana Country, require domestic staff to be registered with security. Independent houses and builder floors on the plotted streets usually manage entry directly.",
+        "scope": "locality",
+        "tags": ["gurgaon", "south-city-2"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sohna-road": {
+    "neighbours": ["sector-49", "sector-47", "south-city-2", "sector-50", "sector-65", "sector-66", "sector-67", "sector-68", "sector-69", "sector-70"],
+    "landmarks": ["Omaxe Celebration Mall", "Park Hospital", "Airia Mall", "Vatika Business Park", "Spaze Palazo", "Badshahpur"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Badshahpur", "Islampur"],
+    "localIntro": "Sohna Road is the long residential and commercial corridor that runs south-east from Subhash Chowk and Rajiv Chowk towards Badshahpur, taking in Sectors 47, 48, 49 and 50 on its northern half and Sectors 65 to 71 further down. Its core pincode is 122102, though the stretch also touches 122018 and 122101 as it passes the adjoining sectors. Housing along the road is dominated by large gated apartment societies and condominium townships built over the past two decades, home mainly to working professionals from the office parks lining the road and to young families. Park Hospital and Omaxe Celebration Mall anchor the upper stretch, Vatika Business Park is one of several office complexes on the corridor, and Airia Mall and Spaze Palazo serve the lower stretch near Badshahpur. South City 2 and Sector 49 sit on one side of the road near the top, with Sector 65 and Sector 66 on the other side further south. Demand is heavily weighted towards part-time cleaning and cooking on fixed slots, along with live-in help for households where both partners work.",
+    "commuteNotes": "There is no metro on Sohna Road at present; helpers travel by city bus or shared auto along the road itself, with Badshahpur and Islampur villages supplying much of the walk-in workforce for the sectors nearest them.",
+    "housingNotes": "High-rise gated societies with manned gates dominate, so domestic staff are normally registered with the society and issued an entry pass before their first working day. Shift timings tend to be fixed by the family rather than by the society.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sohna-road-1",
+        "q": "Which sectors along Sohna Road do you serve?",
+        "a": "Coverage runs the length of the corridor, from Sector 47, Sector 49, Sector 50 and South City 2 at the northern end down to Sectors 65 to 71 near Badshahpur. Each of these sectors is also listed as its own locality.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sohna-road"]
+      },
+      {
+        "id": "faq-gurgaon-sohna-road-2",
+        "q": "Which pincodes does Sohna Road service cover?",
+        "a": "The Sohna Road locality is listed under pincode 122102. Because the road passes through several sectors, addresses on it may also carry 122018 (Sectors 47 to 50 and 65-66) or 122101 (Sectors 67 to 71), all of which are served.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sohna-road"]
+      },
+      {
+        "id": "faq-gurgaon-sohna-road-3",
+        "q": "Do helpers on Sohna Road need society gate passes?",
+        "a": "Yes in most cases, since the housing along Sohna Road is largely gated apartment societies with security at the entrance. Families usually register the helper's details with the society office or through its visitor app before work begins.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sohna-road"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-47": {
+    "neighbours": ["sector-46", "sector-49", "south-city-2", "sohna-road", "sector-45", "sector-50", "south-city-1", "sector-44"],
+    "landmarks": ["Park Hospital", "Subhash Chowk", "Malibu Towne", "Omaxe Celebration Mall", "Millennium City Centre Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Islampur", "Kanhai"],
+    "localIntro": "Sector 47 sits at the head of the Sohna Road corridor, wedged between Subhash Chowk and the road itself, under pincode 122018. It is a genuinely mixed sector: HUDA-allotted plots have grown into independent houses and builder floors on the inner streets, while the gated Malibu Towne township and newer apartment blocks along Sohna Road bring in a high-rise element. Residents are a blend of long-settled Gurgaon families on the plotted side and working professionals renting builder floors or society flats for the short commute to the Sohna Road and Golf Course Road office belts. Park Hospital on Sohna Road is the sector's best-known landmark, Omaxe Celebration Mall stands just across the road in Sector 48, and Millennium City Centre Metro Station is a few kilometres away. Sector 46 and Sector 45 lie directly to the north, Sector 49 and South City 2 across Sohna Road to the south-east. Households commonly ask for part-time cleaning and cooking on morning and evening slots, with families in the larger plotted homes also looking for full-day help.",
+    "commuteNotes": "City buses and shared autos run along Sohna Road and through Subhash Chowk, and Millennium City Centre Metro Station on the Yellow Line is the nearest metro stop. Helpers from Islampur and Kanhai villages usually walk or take a short auto ride in.",
+    "housingNotes": "Builder floors and independent houses on the plotted streets handle entry directly and keep timings flexible, while Malibu Towne and the apartment societies on Sohna Road require domestic staff to be registered at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-47-1",
+        "q": "Which areas near Sector 47 do you also serve?",
+        "a": "Sector 46, Sector 45, Sector 49 and South City 2 are all within a short distance and served by the same nearby helper pool. The Sohna Road corridor and South City 1 further north are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-47"]
+      },
+      {
+        "id": "faq-gurgaon-sector-47-2",
+        "q": "Which pincode does Sector 47 service cover?",
+        "a": "Sector 47 falls under pincode 122018, which it shares with Sector 49, Sector 50 and South City 2. Neighbouring Sector 45 and Sector 46 come under 122003.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-47"]
+      },
+      {
+        "id": "faq-gurgaon-sector-47-3",
+        "q": "Do helpers in Sector 47 need society gate passes?",
+        "a": "Only in the gated societies such as Malibu Towne and the apartment complexes along Sohna Road, where domestic staff are registered with security. Independent houses and builder floors on the plotted streets of Sector 47 manage entry directly.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-47"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-49": {
+    "neighbours": ["south-city-2", "sector-50", "sector-47", "sohna-road", "sector-65", "sector-66", "sector-51", "sector-46"],
+    "landmarks": ["Uppal Southend", "Vatika Business Park", "Omaxe Celebration Mall", "Park Hospital", "Good Earth City Centre"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 49 lies on the eastern side of Sohna Road, under pincode 122018, and forms the residential heart of the upper Sohna Road belt together with South City 2 and Sector 50. Housing here is mixed: the plotted streets of South City 2 run into the sector, while gated townships such as Uppal Southend and a string of apartment societies fronting Sohna Road make up the larger share of homes. Residents are predominantly working professionals employed in the office parks along the road, including Vatika Business Park, and families who chose the area for its schools and self-contained neighbourhoods. Omaxe Celebration Mall and Park Hospital sit just across Sohna Road, and Good Earth City Centre in adjoining Sector 50 is the nearest large market. Sector 47 lies to the north-west across the road, Sector 50 and Sector 51 to the east, and Sector 65 across the Golf Course Extension Road junction to the south. Demand is mostly for part-time cleaning and cooking on fixed morning and evening slots, plus live-in help for dual-income families in the larger society flats.",
+    "commuteNotes": "Helpers reach Sector 49 by city bus or shared auto along Sohna Road from Subhash Chowk and Rajiv Chowk; there is no metro station on the corridor. [VERIFY]",
+    "housingNotes": "Gated societies and townships like Uppal Southend register domestic staff at the gate and may issue an ID card, while the plotted homes on the South City 2 side manage entry and timings directly.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-49-1",
+        "q": "Which areas near Sector 49 do you also serve?",
+        "a": "South City 2, Sector 50, Sector 47 and Sector 51 are all adjacent and covered by the same nearby helper network. Sector 65 and Sector 66 on the far side of the Golf Course Extension Road junction are also close.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-49"]
+      },
+      {
+        "id": "faq-gurgaon-sector-49-2",
+        "q": "Which pincode does Sector 49 service cover?",
+        "a": "Sector 49 falls under pincode 122018, which also covers South City 2, Sector 47, Sector 50 and Sector 51. The Sohna Road corridor itself is listed under 122102.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-49"]
+      },
+      {
+        "id": "faq-gurgaon-sector-49-3",
+        "q": "Do helpers in Sector 49 need society gate passes?",
+        "a": "In gated townships such as Uppal Southend and the apartment societies on Sohna Road, yes: the helper's details are registered with security before the first visit. Independent houses on the plotted South City 2 side usually do not need a formal pass.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-49"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-50": {
+    "neighbours": ["sector-49", "south-city-2", "sector-51", "sector-57", "sector-56", "sector-47", "sohna-road", "sector-65"],
+    "landmarks": ["Good Earth City Centre", "Nirvana Country", "Uniworld Gardens", "Artemis Hospital", "Sohna Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 50, under pincode 122018, is one of the more established residential sectors east of Sohna Road, best known for the Nirvana Country township and the Uniworld Gardens complexes that give the area its gated, low-traffic character. Housing is overwhelmingly society-based: villas and mid-rise apartments inside Nirvana Country, tower blocks in the surrounding complexes, and only a small share of plotted homes where the sector meets South City 2. Residents are mostly families with school-going children and working professionals commuting to the Sohna Road and Golf Course Road office belts. Good Earth City Centre is the sector's own shopping and dining hub, and Artemis Hospital in neighbouring Sector 51 is the nearest large hospital. Sector 49 and South City 2 lie to the west, Sector 51 to the east, and Sector 56 and Sector 57 across the boundary to the north. Households here typically want cooks and cleaning help on fixed morning and evening slots, live-in help for young families, and occasionally nannies for children whose parents both work long hours.",
+    "commuteNotes": "Helpers reach Sector 50 by city bus or shared auto along Sohna Road and the Sector 50 internal road from Subhash Chowk; there is no metro station within walking distance. [VERIFY]",
+    "housingNotes": "Gated townships such as Nirvana Country and Uniworld Gardens require domestic staff to be registered with security, and many use visitor-management apps for daily entry. Timings are set by the family but must fit the society's entry rules.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-50-1",
+        "q": "Which areas near Sector 50 do you also serve?",
+        "a": "Sector 49, South City 2 and Sector 51 are immediately adjacent and share the same nearby helper pool. Sector 56 and Sector 57 across the northern boundary and Sector 65 across Sohna Road are also covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-50"]
+      },
+      {
+        "id": "faq-gurgaon-sector-50-2",
+        "q": "Which pincode does Sector 50 service cover?",
+        "a": "Sector 50 falls under pincode 122018, the same as Sector 49, Sector 51 and South City 2. Nirvana Country and Uniworld Gardens both come under this pincode.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-50"]
+      },
+      {
+        "id": "faq-gurgaon-sector-50-3",
+        "q": "Do helpers in Sector 50 need society gate passes?",
+        "a": "Yes, almost always. Nirvana Country, Uniworld Gardens and the other gated complexes in Sector 50 register domestic staff at the gate, and several issue an ID card or app-based pass that the helper carries on each visit.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-50"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-51": {
+    "neighbours": ["sector-50", "sector-52", "sector-57", "sector-56", "sector-49", "south-city-2", "sector-46", "sector-45"],
+    "landmarks": ["Artemis Hospital", "Mayfield Garden", "Good Earth City Centre", "Ardee City", "Nirvana Country"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Wazirabad"],
+    "localIntro": "Sector 51 sits between Sector 50 and the Wazirabad side of Sector 52, under pincode 122018, and is known across Gurgaon for Artemis Hospital, one of the city's largest private hospitals. Housing is mixed: HUDA plots developed into independent houses and builder floors make up the older core, while the Mayfield Garden township and a number of gated apartment complexes account for the rest. Residents are a blend of long-settled families in the plotted homes and working professionals and young families in the societies, many of them commuting to the Golf Course Road and Sohna Road office belts. Good Earth City Centre in Sector 50 and Nirvana Country are within walking distance, and Ardee City in Sector 52 adjoins the sector on the east. Sector 50 lies to the west, Sector 52 to the east and Sector 56 and Sector 57 to the north. Households here look for part-time cleaning and cooking on fixed slots, full-day help in the larger independent houses, and elder care for families with older members living nearby.",
+    "commuteNotes": "City buses and shared autos reach Sector 51 via Sohna Road and the Sector 50-52 internal roads; there is no metro station close by. Many helpers walk in from Wazirabad village, which adjoins Sector 52.",
+    "housingNotes": "Builder floors and independent houses on the plotted streets handle entry directly, while Mayfield Garden and the apartment societies register domestic staff with security and issue entry passes.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-51-1",
+        "q": "Which areas near Sector 51 do you also serve?",
+        "a": "Sector 50, Sector 52 and Sector 57 are directly adjacent and share the same nearby helper network. Sector 49, South City 2 and Sector 56 are also close and covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-51"]
+      },
+      {
+        "id": "faq-gurgaon-sector-51-2",
+        "q": "Which pincode does Sector 51 service cover?",
+        "a": "Sector 51, including Mayfield Garden and the area around Artemis Hospital, falls under pincode 122018. Neighbouring Sector 52 and Ardee City come under 122003.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-51"]
+      },
+      {
+        "id": "faq-gurgaon-sector-51-3",
+        "q": "Do helpers in Sector 51 need society gate passes?",
+        "a": "In Mayfield Garden and the gated apartment complexes, yes: domestic staff are registered at the gate before their first visit. Independent houses and builder floors on the plotted streets of Sector 51 usually manage entry directly.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-51"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-65": {
+    "neighbours": ["sector-66", "sector-49", "sohna-road", "south-city-2", "sector-50", "sector-67", "sector-61"],
+    "landmarks": ["Emaar Emerald Hills", "Golf Course Extension Road", "Vatika Chowk", "Omaxe Celebration Mall", "Badshahpur"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Badshahpur"],
+    "localIntro": "Sector 65 lies where Golf Course Extension Road meets Sohna Road at Vatika Chowk, under pincode 122018, and marks the start of the newer residential belt south of the older Sohna Road sectors. Housing is almost entirely gated: the large Emaar Emerald Hills township of villas, plots and apartment towers dominates the sector, with further high-rise societies along Golf Course Extension Road. Residents are largely working professionals from the office parks along both roads and young families who moved into the newer projects over the past decade. Omaxe Celebration Mall and the Sector 49 markets are a short drive up Sohna Road, and Badshahpur village lies just to the south. Sector 66 adjoins the sector along Golf Course Extension Road, Sector 49 and South City 2 sit across Sohna Road to the north, and Sector 67 lies to the south-west. Households here mostly need cooks and cleaning help on fixed morning and evening slots, live-in help for dual-income families, and occasionally nannies for young children.",
+    "commuteNotes": "Helpers reach Sector 65 by city bus or shared auto along Sohna Road and Golf Course Extension Road; there is no metro station serving the sector. Badshahpur village supplies much of the local walk-in workforce.",
+    "housingNotes": "Gated townships and high-rise societies dominate, so domestic staff must be registered with society security and usually carry an entry pass or app-based visitor approval for each visit.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-65-1",
+        "q": "Which areas near Sector 65 do you also serve?",
+        "a": "Sector 66 along Golf Course Extension Road, Sector 49 and South City 2 across Sohna Road, and Sector 67 to the south-west are all covered by the same nearby helper network. The Sohna Road corridor is also listed as its own locality.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-65"]
+      },
+      {
+        "id": "faq-gurgaon-sector-65-2",
+        "q": "Which pincode does Sector 65 service cover?",
+        "a": "Sector 65, including Emaar Emerald Hills, falls under pincode 122018, which it shares with Sector 66 and the Sector 49-50 belt. Sectors 67 to 71 further south come under 122101.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-65"]
+      },
+      {
+        "id": "faq-gurgaon-sector-65-3",
+        "q": "Do helpers in Sector 65 need society gate passes?",
+        "a": "Yes. Emaar Emerald Hills and the other gated societies in Sector 65 require domestic staff to be registered with security, and most families complete this before the helper's first working day.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-65"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-66": {
+    "neighbours": ["sector-65", "sector-67", "sohna-road", "sector-71", "sector-49", "sector-70", "sector-68", "sector-50"],
+    "landmarks": ["AIPL Joy Street", "M3M Cosmopolitan", "Badshahpur", "Golf Course Extension Road", "Sohna Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Badshahpur"],
+    "localIntro": "Sector 66 runs along Golf Course Extension Road between Sector 65 and Badshahpur village, under pincode 122018, and is one of the fastest-growing residential sectors on the southern edge of the Sohna Road belt. Housing is almost entirely gated high-rise: apartment societies and mixed-use developments built over the last decade, with AIPL Joy Street and M3M Cosmopolitan giving the sector its main shopping and dining strip along the road. Residents are chiefly working professionals employed in the office spaces along Golf Course Extension Road and Sohna Road, along with young families drawn by the newer apartment stock. Badshahpur village and its market sit immediately to the south, Sector 65 adjoins to the north, and Sector 67 lies on the far side of Sohna Road towards the Southern Peripheral Road. Sector 71 and Sector 70 continue the residential belt further south. Households typically ask for part-time cooks and cleaning help on fixed slots, and live-in help is common among families where both partners keep office hours.",
+    "commuteNotes": "City buses and shared autos along Sohna Road and Golf Course Extension Road are the main way in; there is no metro station serving Sector 66. Badshahpur, a short walk away, is the main local source of helpers.",
+    "housingNotes": "Gated high-rise societies dominate, so domestic staff are registered with society security and usually enter through a visitor-management app or ID card system.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-66-1",
+        "q": "Which areas near Sector 66 do you also serve?",
+        "a": "Sector 65 to the north and Sector 67 across Sohna Road are immediately adjacent and share the same nearby helper pool. Sector 71, Sector 70 and Sector 68 further along the Southern Peripheral Road are also covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-66"]
+      },
+      {
+        "id": "faq-gurgaon-sector-66-2",
+        "q": "Which pincode does Sector 66 service cover?",
+        "a": "Sector 66 falls under pincode 122018, the same as Sector 65 and the Sector 49-50 belt. The adjoining Badshahpur side and Sectors 67 to 71 come under 122101.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-66"]
+      },
+      {
+        "id": "faq-gurgaon-sector-66-3",
+        "q": "Do helpers in Sector 66 need society gate passes?",
+        "a": "Yes. Nearly all homes in Sector 66 are in gated apartment societies, and domestic staff must be registered with security before their first visit. Most societies here use an app or ID card for daily entry.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-66"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-67": {
+    "neighbours": ["sector-66", "sector-68", "sohna-road", "sector-65", "sector-69", "sector-70", "sector-49", "sector-71"],
+    "landmarks": ["M3M Urbana", "Ansal Esencia", "Airia Mall", "Southern Peripheral Road", "Badshahpur"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Badshahpur"],
+    "localIntro": "Sector 67 sits on the western side of Sohna Road where it meets the Southern Peripheral Road, under pincode 122101, and belongs to the newer belt of sectors that grew up around Badshahpur over the last decade. Housing is dominated by gated societies: the Ansal Esencia township of villas and floors, high-rise apartment complexes, and the M3M Urbana mixed-use development that serves as the sector's main commercial address. Residents are predominantly working professionals and young families who bought or rented in the newer projects for the proximity to the Sohna Road office corridor and the Southern Peripheral Road link to NH-48. Airia Mall in neighbouring Sector 68 is the nearest large mall, and Badshahpur village and its market lie just to the east. Sector 66 is across Sohna Road, Sector 68 adjoins to the west along the Southern Peripheral Road, and Sector 65 sits to the north-east. Households here typically need cooks and cleaning help on fixed morning and evening slots, with live-in help in demand among dual-income families in the larger flats.",
+    "commuteNotes": "Helpers reach Sector 67 by city bus or shared auto along Sohna Road and the Southern Peripheral Road; no metro line serves the sector. Badshahpur village, within walking distance, is the main local source of domestic help.",
+    "housingNotes": "Gated societies and townships such as Ansal Esencia dominate, so domestic staff are registered with security and generally carry a society-issued pass; independent plotted homes are rare here.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-67-1",
+        "q": "Which areas near Sector 67 do you also serve?",
+        "a": "Sector 66 across Sohna Road, Sector 68 along the Southern Peripheral Road and Sector 65 to the north-east are all adjacent and share the same nearby helper network. Sector 69, Sector 70 and Sector 71 are also close and covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-67"]
+      },
+      {
+        "id": "faq-gurgaon-sector-67-2",
+        "q": "Which pincode does Sector 67 service cover?",
+        "a": "Sector 67, including Ansal Esencia and M3M Urbana, falls under pincode 122101, which it shares with Sectors 68 to 71. Neighbouring Sector 65 and Sector 66 come under 122018.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-67"]
+      },
+      {
+        "id": "faq-gurgaon-sector-67-3",
+        "q": "Do helpers in Sector 67 need society gate passes?",
+        "a": "Yes. Homes in Sector 67 are almost all inside gated societies, so domestic staff must be registered with security before starting work. Families usually complete this through the society office or its visitor app.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-67"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-68": {
+    "neighbours": ["sector-67", "sector-69", "sohna-road", "sector-70", "sector-66", "sector-71", "sector-49", "sector-65"],
+    "landmarks": ["Airia Mall", "Southern Peripheral Road", "Sohna Road", "Badshahpur", "M3M Urbana"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Badshahpur"],
+    "localIntro": "Sector 68 lies on the lower stretch of Sohna Road near its junction with the Southern Peripheral Road, under pincode 122101, and is best known for Airia Mall, the main shopping and multiplex destination for the southern Sohna Road belt. Housing is almost entirely gated high-rise: apartment societies built over the past decade line the road and the internal sector streets, and there are very few independent plotted homes. Residents are mostly working professionals commuting along Sohna Road and the Southern Peripheral Road to the office corridors, together with young families who moved into the newer apartment stock. M3M Urbana in adjoining Sector 67 adds a second commercial hub, and Badshahpur village lies a short distance up the road. Sector 67 adjoins to the north-east, Sector 69 and Sector 70 continue along the Southern Peripheral Road to the west, and Sector 66 sits across Sohna Road. Households here typically want cooks and cleaning help on fixed morning and evening slots, and live-in help is common among families where both partners keep office hours.",
+    "commuteNotes": "City buses and shared autos along Sohna Road are the usual way in, with the Southern Peripheral Road linking the sector to the sectors further west; no metro line serves Sector 68. Badshahpur village is the main local source of helpers.",
+    "housingNotes": "Gated apartment societies dominate, so domestic staff are registered with society security and normally enter through an app-based pass or ID card each day.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-68-1",
+        "q": "Which areas near Sector 68 do you also serve?",
+        "a": "Sector 67, Sector 69 and Sector 70 are all adjacent along the Southern Peripheral Road and share the same nearby helper pool. Sector 66 across Sohna Road and Sector 71 near Badshahpur are also covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-68"]
+      },
+      {
+        "id": "faq-gurgaon-sector-68-2",
+        "q": "Which pincode does Sector 68 service cover?",
+        "a": "Sector 68, including the area around Airia Mall, falls under pincode 122101, which it shares with Sectors 67, 69, 70 and 71. The Sohna Road corridor itself is listed under 122102.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-68"]
+      },
+      {
+        "id": "faq-gurgaon-sector-68-3",
+        "q": "Do helpers in Sector 68 need society gate passes?",
+        "a": "Yes. Almost all homes in Sector 68 are in gated apartment societies, and domestic staff must be registered with security before their first visit. Most societies issue an ID card or use a visitor app for daily entry.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-68"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-69": {
+    "neighbours": ["sector-68", "sector-70", "sector-67", "sohna-road", "sector-66", "sector-71", "sector-72", "sector-65"],
+    "landmarks": ["Spaze Palazo", "Tulip Violet", "Southern Peripheral Road", "Airia Mall", "Badshahpur"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Badshahpur"],
+    "localIntro": "Sector 69 sits along the Southern Peripheral Road on the southern fringe of the Sohna Road belt, under pincode 122101, and is one of the newer residential sectors that has filled out over the past decade. Housing is overwhelmingly gated high-rise: apartment societies such as Tulip Violet and its sister projects form dense clusters, while Spaze Palazo on Sohna Road provides the sector's main commercial frontage. Residents are mainly working professionals employed along the Sohna Road and Southern Peripheral Road office corridors, and young families who chose the newer apartment stock for its relative affordability compared with the older sectors. Airia Mall in Sector 68 is the nearest large mall, and Badshahpur village lies a short drive up Sohna Road. Sector 68 adjoins to the east, Sector 70 to the west along the Southern Peripheral Road, and Sector 67 to the north; Sector 72 begins across the road on the New Gurgaon side. Households typically need cooks and cleaning help on fixed morning and evening slots, and many dual-income families look for live-in help.",
+    "commuteNotes": "Helpers reach Sector 69 by city bus or shared auto along Sohna Road and the Southern Peripheral Road; no metro line serves the sector. Badshahpur village is the main local source of domestic help. [VERIFY]",
+    "housingNotes": "Gated apartment societies dominate, so domestic staff are registered with society security and usually carry an app-based pass or ID card for daily entry.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-69-1",
+        "q": "Which areas near Sector 69 do you also serve?",
+        "a": "Sector 68, Sector 70 and Sector 67 are adjacent along the Southern Peripheral Road and share the same nearby helper pool. Sector 66, Sector 71 and Sector 72 across the road are also covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-69"]
+      },
+      {
+        "id": "faq-gurgaon-sector-69-2",
+        "q": "Which pincode does Sector 69 service cover?",
+        "a": "Sector 69, including Tulip Violet and the area around Spaze Palazo, falls under pincode 122101, which it shares with Sectors 67, 68, 70 and 71. Sector 72 on the New Gurgaon side comes under 122004.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-69"]
+      },
+      {
+        "id": "faq-gurgaon-sector-69-3",
+        "q": "Do helpers in Sector 69 need society gate passes?",
+        "a": "Yes. The homes in Sector 69 are almost all inside gated apartment societies, and domestic staff must be registered with security before they start. Most societies here use a visitor app or ID card for daily entry.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-69"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-70": {
+    "neighbours": ["sector-69", "sector-71", "sector-68", "sector-72", "sohna-road", "sector-67", "sector-73", "sector-66"],
+    "landmarks": ["Southern Peripheral Road", "Spaze Palazo", "Airia Mall", "Badshahpur", "Tata Primanti"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Badshahpur"],
+    "localIntro": "Sector 70 lies along the Southern Peripheral Road south of the Sohna Road belt, under pincode 122101, and forms part of the newer residential frontier between Badshahpur and the New Gurgaon sectors. Housing is dominated by gated apartment societies and townships built over the past decade, with a handful of plotted pockets and some projects still being completed. [VERIFY] Residents are mostly working professionals employed along the Sohna Road and Southern Peripheral Road office corridors, together with young families who moved here for newer, more affordable flats. Spaze Palazo and Airia Mall on Sohna Road are the nearest commercial hubs, Badshahpur village lies to the east, and the Tata Primanti township in Sector 72 marks the New Gurgaon side of the road. Sector 69 adjoins to the east, Sector 71 to the south-east near Badshahpur, and Sector 72 and Sector 73 across the Southern Peripheral Road. Households typically look for cooks and cleaning help on fixed morning and evening slots, and live-in help is common among families where both partners work.",
+    "commuteNotes": "Helpers reach Sector 70 by city bus or shared auto along the Southern Peripheral Road and Sohna Road; no metro line serves the sector. Badshahpur village is the main local source of domestic help. [VERIFY]",
+    "housingNotes": "Gated societies dominate, so domestic staff are registered with society security and usually carry a pass or app-based approval for each visit; the few plotted homes handle entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-70-1",
+        "q": "Which areas near Sector 70 do you also serve?",
+        "a": "Sector 69, Sector 71 and Sector 68 are adjacent and share the same nearby helper pool. Sector 72 and Sector 73 across the Southern Peripheral Road are covered as part of the New Gurgaon localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-70"]
+      },
+      {
+        "id": "faq-gurgaon-sector-70-2",
+        "q": "Which pincode does Sector 70 service cover?",
+        "a": "Sector 70 falls under pincode 122101, which it shares with Sectors 67, 68, 69 and 71 around Badshahpur. Sector 72 and Sector 73 on the far side of the Southern Peripheral Road come under 122004.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-70"]
+      },
+      {
+        "id": "faq-gurgaon-sector-70-3",
+        "q": "Do helpers in Sector 70 need society gate passes?",
+        "a": "In the gated societies that make up most of Sector 70, yes: domestic staff are registered with security before the first visit and usually carry an ID card or app-based pass. The few independent plotted homes manage entry directly.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-70"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-71": {
+    "neighbours": ["sector-70", "sector-66", "sohna-road", "sector-69", "sector-72", "sector-67", "sector-68", "sector-65"],
+    "landmarks": ["Badshahpur", "Sohna Road", "Southern Peripheral Road", "Airia Mall", "Spaze Palazo"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Badshahpur"],
+    "localIntro": "Sector 71 sits beside Badshahpur village on the southern end of Sohna Road, under pincode 122101, where the planned sectors of Gurgaon meet the older settlement and its busy market. Housing here is mixed: newer gated apartment societies and townships have come up along the Southern Peripheral Road side, while plotted homes, builder floors and village-edge housing continue closer to Badshahpur. [VERIFY] Residents range from working professionals and young families in the new societies to long-settled households in the older pockets, and the sector remains one of the more affordable addresses on the Sohna Road belt. Airia Mall and Spaze Palazo a short distance up Sohna Road are the nearest commercial hubs, and Badshahpur market handles everyday needs. Sector 70 adjoins to the west along the Southern Peripheral Road, Sector 66 lies across Sohna Road to the north, and Sector 69 and Sector 72 are a short drive further west. Households here typically need part-time cleaning and cooking help on fixed slots, with live-in help in demand among dual-income families in the newer flats.",
+    "commuteNotes": "City buses and shared autos along Sohna Road serve Sector 71, and Badshahpur village is within walking distance, so a large share of helpers simply walk in. No metro line serves the sector.",
+    "housingNotes": "Gated societies on the Southern Peripheral Road side register domestic staff with security and issue passes, while the plotted homes and builder floors near Badshahpur handle entry directly and keep timings flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-71-1",
+        "q": "Which areas near Sector 71 do you also serve?",
+        "a": "Sector 70 along the Southern Peripheral Road and Sector 66 across Sohna Road are immediately adjacent and share the same nearby helper network. Sector 69, Sector 72, Sector 67 and Sector 68 are also close and covered as separate localities.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-71"]
+      },
+      {
+        "id": "faq-gurgaon-sector-71-2",
+        "q": "Which pincode does Sector 71 service cover?",
+        "a": "Sector 71 and the adjoining Badshahpur area fall under pincode 122101, which is shared with Sectors 67 to 70. Sector 66 across Sohna Road comes under 122018.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-71"]
+      },
+      {
+        "id": "faq-gurgaon-sector-71-3",
+        "q": "Do helpers in Sector 71 need society gate passes?",
+        "a": "It depends on the home: the gated societies on the Southern Peripheral Road side register domestic staff with security and issue a pass, while independent houses and builder floors closer to Badshahpur usually manage entry directly.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-71"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

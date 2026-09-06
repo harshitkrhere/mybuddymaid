@@ -1,0 +1,387 @@
+{
+  "mayur-vihar": {
+    "neighbours": ["mayur-vihar-phase-3", "vasundhara-enclave", "laxmi-nagar", "preet-vihar", "gandhi-nagar", "vivek-vihar", "shahdara"],
+    "landmarks": ["Sanjay Lake", "Akshardham Temple", "Mayur Vihar-I Metro Station", "Star City Mall, Mayur Vihar Extension"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Trilokpuri", "Kalyanpuri", "Chilla Village"],
+    "localIntro": "Mayur Vihar is a long-established residential belt of East Delhi, with Phases 1 and 2 falling under pincode 110091. Much of the housing is organised into cooperative group housing societies and DDA pockets, so gated compounds with regulated visitor entry sit alongside older walk-up blocks and a few plotted lanes. Households are a mix of settled families, retired residents and working professionals who ride the Blue Line towards Noida or central Delhi from the Mayur Vihar-I and Mayur Vihar Extension stations; Mayur Vihar-I also connects to the Pink Line. Sanjay Lake and its district park sit beside the Trilokpuri side of the locality, Akshardham Temple is a short drive away across the NH-9 side, and Star City Mall in the Extension covers daily shopping needs. Immediate surroundings include Trilokpuri and Chilla village, while Mayur Vihar Phase III and Vasundhara Enclave lie towards the Noida border and Laxmi Nagar and Preet Vihar sit further up towards Vikas Marg.",
+    "commuteNotes": "The Blue Line's Mayur Vihar-I and Mayur Vihar Extension stations and the Pink Line stop at Mayur Vihar-I connect the area, but most helpers walk in from adjoining Trilokpuri, Kalyanpuri and Chilla village.",
+    "housingNotes": "Cooperative group housing societies and DDA pockets dominate, so most homes sit behind gates with visitor logging; regular helpers are usually registered at the gate by residents, and many societies issue entry passes for daily domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-mayur-vihar-1",
+        "q": "Which areas near Mayur Vihar do you also serve?",
+        "a": "Nearby areas including Mayur Vihar Phase III, Vasundhara Enclave, Preet Vihar and Laxmi Nagar fall in the same East Delhi service belt. Adjoining pockets such as Trilokpuri and Chilla village, from where many helpers commute, are covered as part of the Mayur Vihar area.",
+        "scope": "locality",
+        "tags": ["delhi", "mayur-vihar"]
+      },
+      {
+        "id": "faq-delhi-mayur-vihar-2",
+        "q": "Do helpers in Mayur Vihar need society gate passes?",
+        "a": "Most homes in Mayur Vihar's pincode 110091 are in cooperative group housing societies or DDA pockets where guards log visitors. Regular helpers are usually registered at the gate by the resident, and many societies issue entry passes for domestic staff who come daily.",
+        "scope": "locality",
+        "tags": ["delhi", "mayur-vihar"]
+      },
+      {
+        "id": "faq-delhi-mayur-vihar-3",
+        "q": "Which pincodes does the Mayur Vihar service area cover?",
+        "a": "Mayur Vihar Phases 1 and 2 fall under pincode 110091. Mayur Vihar Phase III and Vasundhara Enclave next door fall under 110096 and are handled as their own localities.",
+        "scope": "locality",
+        "tags": ["delhi", "mayur-vihar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mayur-vihar-phase-3": {
+    "neighbours": ["vasundhara-enclave", "mayur-vihar", "preet-vihar", "laxmi-nagar", "vivek-vihar", "shahdara"],
+    "landmarks": ["Ghazipur Flower Market", "Dharamshila Narayana Superspeciality Hospital, Vasundhara Enclave", "Sanjay Lake"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Khoda Colony", "Kondli", "Gharoli"],
+    "localIntro": "Mayur Vihar Phase III sits at the eastern edge of East Delhi under pincode 110096, hard against the Uttar Pradesh border near Kondli, Gharoli and Khoda Colony. The locality is dominated by DDA housing pockets, clusters of low-rise flats grouped around internal parks, with builder floors and plotted houses filling the newer lanes. Residents are largely young families and working professionals who commute towards Noida, Anand Vihar and central Delhi. The Ghazipur Flower Market operates on the NH-9 side of the locality, and Dharamshila Narayana Superspeciality Hospital in neighbouring Vasundhara Enclave is the area's major medical facility; Sanjay Lake lies further west towards Mayur Vihar proper. Because most homes are compact DDA flats, households typically look for part-time help with cleaning and cooking rather than live-in arrangements. Vasundhara Enclave and Mayur Vihar are the closest named neighbours, with Preet Vihar and Laxmi Nagar reachable along the Vikas Marg corridor.",
+    "commuteNotes": "Bus routes along NH-9 and the Kondli-Gharoli side connect the pockets; the nearest metro stations are New Ashok Nagar on the Blue Line and Trilokpuri Sanjay Lake on the Pink Line, both a short shared-auto ride away [VERIFY]. Many helpers walk in from adjoining Khoda Colony, Kondli and Gharoli.",
+    "housingNotes": "DDA flat pockets dominate, with builder floors filling in; entry is less formal than in gated towers, and individual blocks set their own visitor norms, so families usually coordinate helper entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-mayur-vihar-phase-3-1",
+        "q": "Which areas near Mayur Vihar Phase III do you also serve?",
+        "a": "Vasundhara Enclave directly to the south and Mayur Vihar Phases 1 and 2 to the west are the closest covered localities. Preet Vihar and Laxmi Nagar along the Vikas Marg corridor also fall within the same East Delhi belt.",
+        "scope": "locality",
+        "tags": ["delhi", "mayur-vihar-phase-3"]
+      },
+      {
+        "id": "faq-delhi-mayur-vihar-phase-3-2",
+        "q": "Do helpers need gate passes in Mayur Vihar Phase III's DDA pockets?",
+        "a": "The DDA pockets here are open clusters of flats rather than fully gated towers, so entry is generally less controlled than in society complexes. Individual blocks and resident associations set their own visitor norms, and families simply coordinate entry directly with the helper.",
+        "scope": "locality",
+        "tags": ["delhi", "mayur-vihar-phase-3"]
+      },
+      {
+        "id": "faq-delhi-mayur-vihar-phase-3-3",
+        "q": "Which pincode does Mayur Vihar Phase III service cover?",
+        "a": "Mayur Vihar Phase III falls under pincode 110096, shared with neighbouring Vasundhara Enclave. Adjacent Mayur Vihar Phases 1 and 2 fall under a separate pincode, 110091.",
+        "scope": "locality",
+        "tags": ["delhi", "mayur-vihar-phase-3"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "preet-vihar": {
+    "neighbours": ["laxmi-nagar", "vivek-vihar", "shahdara", "mayur-vihar", "gandhi-nagar", "mayur-vihar-phase-3", "vasundhara-enclave"],
+    "landmarks": ["Preet Vihar Metro Station", "Karkardooma Court Complex", "Cross River Mall", "V3S East Centre Mall, Vikas Marg"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Mandawali"],
+    "localIntro": "Preet Vihar is a planned East Delhi colony on the northern side of Vikas Marg, sharing pincode 110092 with neighbouring Laxmi Nagar. Its lettered blocks were laid out as plotted houses, and over the years most plots have been rebuilt into builder floors of three or four storeys, typically with one family per floor. Residents are predominantly established trading and professional families, many of whom have lived here for decades, and community parks inside each block remain a fixture of daily life. The Preet Vihar Metro Station on the Blue Line's Vaishali branch anchors the locality, with the Karkardooma Court Complex and Cross River Mall just beyond its eastern edge. Laxmi Nagar's commercial bustle begins immediately to the west, Vivek Vihar and Shahdara lie to the north across the Karkardooma side, and Mayur Vihar is a short drive south. Households here commonly engage daily help for cleaning and cooking across their independent floors.",
+    "commuteNotes": "Preet Vihar station on the Blue Line's Vaishali branch sits on Vikas Marg, and buses and e-rickshaws run along the corridor; helpers from adjoining Mandawali typically come on foot or by shared auto.",
+    "housingNotes": "Plotted blocks rebuilt as three- to four-storey builder floors dominate; there are no society gates, so families set timings and entry directly, and one helper often covers multiple floors in the same building.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-preet-vihar-1",
+        "q": "Which areas near Preet Vihar do you also serve?",
+        "a": "Laxmi Nagar, which shares pincode 110092 with Preet Vihar, begins immediately to the west, and Vivek Vihar and Shahdara lie just north across the Karkardooma stretch. Mayur Vihar to the south is also part of the same East Delhi belt.",
+        "scope": "locality",
+        "tags": ["delhi", "preet-vihar"]
+      },
+      {
+        "id": "faq-delhi-preet-vihar-2",
+        "q": "Do helpers in Preet Vihar need society gate passes?",
+        "a": "Preet Vihar is a colony of plotted houses rebuilt as builder floors, so there are no society gates or centralised visitor systems. Entry and timings are agreed directly with each family, and one helper often covers two or three floors of the same building.",
+        "scope": "locality",
+        "tags": ["delhi", "preet-vihar"]
+      },
+      {
+        "id": "faq-delhi-preet-vihar-3",
+        "q": "How do helpers reach homes in Preet Vihar?",
+        "a": "The Preet Vihar Metro Station on the Blue Line's Vaishali branch sits on Vikas Marg, and buses and e-rickshaws ply the corridor. Helpers from adjoining Mandawali usually come on foot or by shared auto.",
+        "scope": "locality",
+        "tags": ["delhi", "preet-vihar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "laxmi-nagar": {
+    "neighbours": ["preet-vihar", "gandhi-nagar", "shahdara", "vivek-vihar", "mayur-vihar", "daryaganj", "vasundhara-enclave", "mayur-vihar-phase-3"],
+    "landmarks": ["Laxmi Nagar Metro Station", "Nirman Vihar Metro Station", "V3S East Centre Mall, Vikas Marg", "Akshardham Temple"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["students", "working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Laxmi Nagar, under pincode 110092, is a dense mixed-use locality just east of the Yamuna, directly across the river from the ITO side of central Delhi. It is widely known for its commerce-coaching ecosystem: institutes preparing students for CA, CS and other examinations cluster along Vikas Marg and the inner lanes, and paying-guest accommodation and rented builder floors absorb a large student population. Housing is overwhelmingly builder floors stacked over shops and narrow plots, occupied by a mix of students, working professionals and long-time family households. The Laxmi Nagar and Nirman Vihar stations on the Blue Line's Vaishali branch serve the locality, and the V3S East Centre Mall on Vikas Marg is a local retail landmark. Shakarpur adjoins it to the west, Preet Vihar continues eastward along Vikas Marg, and Gandhi Nagar and Shahdara lie to the north-west and north. Flexible, part-time domestic help suits the locality's many compact rented floors.",
+    "commuteNotes": "Laxmi Nagar and Nirman Vihar stations on the Blue Line's Vaishali branch serve the area, with dense bus and e-rickshaw movement along Vikas Marg; most inner lanes are walkable from the stations.",
+    "housingNotes": "Dense builder floors over shops, with many rented floors and paying-guest set-ups; compact homes mean short part-time visits are the norm, and entry is arranged directly with tenants or landlords.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-laxmi-nagar-1",
+        "q": "Do you arrange help for rented builder floors and PGs in Laxmi Nagar?",
+        "a": "Most housing in Laxmi Nagar's pincode 110092 is builder floors and paying-guest accommodation occupied by students and working professionals. Short part-time visits for cleaning and cooking are the usual arrangement in these compact homes, with entry coordinated directly with tenants or landlords.",
+        "scope": "locality",
+        "tags": ["delhi", "laxmi-nagar"]
+      },
+      {
+        "id": "faq-delhi-laxmi-nagar-2",
+        "q": "Which areas near Laxmi Nagar do you also serve?",
+        "a": "Preet Vihar continues east along Vikas Marg and shares the 110092 pincode, while Gandhi Nagar and Shahdara lie to the north-west and north. Adjoining pockets such as Shakarpur fall within the same belt.",
+        "scope": "locality",
+        "tags": ["delhi", "laxmi-nagar"]
+      },
+      {
+        "id": "faq-delhi-laxmi-nagar-3",
+        "q": "How do helpers reach homes in Laxmi Nagar?",
+        "a": "The Laxmi Nagar and Nirman Vihar stations on the Blue Line's Vaishali branch open onto Vikas Marg, and the inner lanes are walkable from both. E-rickshaws cover the stretches deeper into the colony.",
+        "scope": "locality",
+        "tags": ["delhi", "laxmi-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "vasundhara-enclave": {
+    "neighbours": ["mayur-vihar-phase-3", "mayur-vihar", "preet-vihar", "laxmi-nagar", "shahdara", "vivek-vihar"],
+    "landmarks": ["Dharamshila Narayana Superspeciality Hospital", "New Ashok Nagar Metro Station", "Ghazipur Flower Market"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Khoda Colony", "New Ashok Nagar"],
+    "localIntro": "Vasundhara Enclave is a compact society-driven locality in East Delhi under pincode 110096, sitting close to the Delhi-Noida border. Its streets are lined almost entirely with cooperative group housing societies, mid-rise gated apartment complexes with their own guards, visitor registers and internal parks, which gives the area a quieter, self-contained character than the plotted colonies nearby. Residents are mostly families and retired couples, along with professionals working in Noida's sectors a short drive away. Dharamshila Narayana Superspeciality Hospital, a major East Delhi hospital, is located within the enclave, and the New Ashok Nagar Metro Station on the Blue Line's Noida stretch lies nearby; the Ghazipur Flower Market operates further north along NH-9. Mayur Vihar Phase III adjoins the enclave to the north and Mayur Vihar sits to its west, while Khoda Colony across the border is the closest settlement on the Uttar Pradesh side. Society gate-pass norms shape how domestic help enters and works here.",
+    "commuteNotes": "New Ashok Nagar station on the Blue Line's Noida stretch is the nearest metro, with e-rickshaws plying between it and the societies; many helpers walk in from adjoining Khoda Colony and the New Ashok Nagar side.",
+    "housingNotes": "Gated cooperative group housing societies dominate; guards keep visitor registers, and regular domestic staff typically need a society entry pass arranged by the resident.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-vasundhara-enclave-1",
+        "q": "Do helpers in Vasundhara Enclave need society gate passes?",
+        "a": "Almost all housing in Vasundhara Enclave is in gated cooperative group housing societies with guards and visitor registers. Regular domestic staff normally need the resident to register them, and most societies issue their own entry passes for daily help.",
+        "scope": "locality",
+        "tags": ["delhi", "vasundhara-enclave"]
+      },
+      {
+        "id": "faq-delhi-vasundhara-enclave-2",
+        "q": "Which areas near Vasundhara Enclave do you also serve?",
+        "a": "Mayur Vihar Phase III adjoins the enclave and shares its 110096 pincode, and Mayur Vihar Phases 1 and 2 lie a short distance west. Preet Vihar and Laxmi Nagar up the Vikas Marg corridor are part of the same East Delhi belt.",
+        "scope": "locality",
+        "tags": ["delhi", "vasundhara-enclave"]
+      },
+      {
+        "id": "faq-delhi-vasundhara-enclave-3",
+        "q": "Where do domestic helpers serving Vasundhara Enclave usually come from?",
+        "a": "Many helpers walk in from Khoda Colony, the large settlement just across the Uttar Pradesh border, and from the New Ashok Nagar side near the Blue Line metro station. Both areas adjoin the enclave, so commutes are short and usually on foot.",
+        "scope": "locality",
+        "tags": ["delhi", "vasundhara-enclave"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "gandhi-nagar": {
+    "neighbours": ["laxmi-nagar", "shahdara", "seelampur", "old-delhi", "preet-vihar", "vivek-vihar", "daryaganj"],
+    "landmarks": ["Gandhi Nagar Cloth Market", "Loha Pul (Old Yamuna Bridge)", "Krishna Nagar Market"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Gandhi Nagar, under pincode 110031, is widely known for its wholesale readymade garment market, whose lanes of shops and godowns draw traders from across the region. Residentially, the locality is a dense grid of owner-built independent houses, many with shops or small stitching units on the ground floor and family homes above. Households are largely trading families who have been in the area for generations, and homes often double as workplaces, so daily routines run long. The historic Loha Pul, the old iron bridge over the Yamuna, connects the area towards Old Delhi, and the Krishna Nagar shopping stretch adjoins it on the eastern side. Kailash Nagar and Geeta Colony are the immediate surrounding pockets, with Shahdara to the north-east, Seelampur to the north and Laxmi Nagar to the south-east. Because houses open directly onto lanes rather than sitting behind society gates, timings for domestic help tend to be flexible and settled family by family.",
+    "commuteNotes": "The area is reached mainly by bus and e-rickshaw along the Geeta Colony and Shahdara roads; Shastri Park and Welcome stations on the Red Line are the nearest metro stops [VERIFY].",
+    "housingNotes": "Dense owner-built independent houses, often with shops or stitching units below; there are no gates or passes, and longer, flexible working hours are common because many homes double as workplaces.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-gandhi-nagar-1",
+        "q": "Which pincode does Gandhi Nagar service cover?",
+        "a": "Gandhi Nagar falls under pincode 110031, which takes in the residential lanes around the wholesale garment market. Neighbouring Shahdara and Laxmi Nagar fall under their own separate pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "gandhi-nagar"]
+      },
+      {
+        "id": "faq-delhi-gandhi-nagar-2",
+        "q": "Which areas near Gandhi Nagar do you also serve?",
+        "a": "Laxmi Nagar lies to the south-east, Seelampur to the north and Shahdara to the north-east, all within the same east-of-Yamuna belt. The adjoining Krishna Nagar and Geeta Colony pockets are covered as part of this area.",
+        "scope": "locality",
+        "tags": ["delhi", "gandhi-nagar"]
+      },
+      {
+        "id": "faq-delhi-gandhi-nagar-3",
+        "q": "Do helpers in Gandhi Nagar need gate passes?",
+        "a": "Gandhi Nagar is a dense grid of independent owner-built houses without society gates, so no pass system applies. Because many homes double as workplaces linked to the cloth market, families often prefer flexible, longer help timings settled directly with the helper.",
+        "scope": "locality",
+        "tags": ["delhi", "gandhi-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "vivek-vihar": {
+    "neighbours": ["shahdara", "preet-vihar", "laxmi-nagar", "gandhi-nagar", "seelampur", "mayur-vihar"],
+    "landmarks": ["Jhilmil Metro Station", "Karkardooma Court Complex", "Cross River Mall", "Vivek Vihar Railway Station"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Vivek Vihar is a planned residential colony in the Shahdara belt of north-east Delhi, under pincode 110095. Laid out in lettered blocks of plotted houses, much of its stock has been rebuilt into builder floors, while a section of older single-family homes survives; block parks and wide internal roads give it a settled, middle-class character. Residents are mainly families and working professionals, with many households connected to the trade and industry of the surrounding east Delhi markets and the Jhilmil industrial area next door. The Jhilmil Metro Station on the Red Line serves the colony's northern side, Vivek Vihar's own railway station sits on the Delhi-Ghaziabad line, and the Karkardooma Court Complex and Cross River Mall are close by to the south. Shahdara adjoins it to the west, Preet Vihar and Laxmi Nagar lie south across the Karkardooma stretch, and Dilshad Garden is a short ride north-east along the Red Line.",
+    "commuteNotes": "Jhilmil station on the Red Line serves the colony's northern edge and the Karkarduma Blue-Pink interchange lies to the south; buses and e-rickshaws run along the GT Road side.",
+    "housingNotes": "Plotted blocks now largely rebuilt as builder floors, with some original independent houses; there is no colony-wide gating, so entry and timings are agreed directly with each household.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-vivek-vihar-1",
+        "q": "Which areas near Vivek Vihar do you also serve?",
+        "a": "Shahdara adjoins Vivek Vihar to the west, and Preet Vihar and Laxmi Nagar lie south across the Karkardooma stretch. Gandhi Nagar and Seelampur further west fall within the same belt.",
+        "scope": "locality",
+        "tags": ["delhi", "vivek-vihar"]
+      },
+      {
+        "id": "faq-delhi-vivek-vihar-2",
+        "q": "Do helpers in Vivek Vihar need society gate passes?",
+        "a": "Vivek Vihar is a plotted colony of builder floors and independent houses arranged in lettered blocks rather than gated towers, so there is no colony-wide pass system. Families coordinate entry and timings directly with the helper.",
+        "scope": "locality",
+        "tags": ["delhi", "vivek-vihar"]
+      },
+      {
+        "id": "faq-delhi-vivek-vihar-3",
+        "q": "Which pincode does Vivek Vihar service cover?",
+        "a": "Vivek Vihar falls under pincode 110095, which it shares with parts of neighbouring Shahdara. The colony sits between the Jhilmil Red Line station and the Karkardooma court and metro complex.",
+        "scope": "locality",
+        "tags": ["delhi", "vivek-vihar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "shahdara": {
+    "neighbours": ["vivek-vihar", "seelampur", "gandhi-nagar", "preet-vihar", "laxmi-nagar", "bhajanpura"],
+    "landmarks": ["Shahdara Metro Station", "Shahdara Railway Junction", "Chhota Bazar, Shahdara", "Cross River Mall", "GTB Hospital, Dilshad Garden"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Shahdara, spread across pincodes 110032 and 110095, is among the older settled parts of Delhi east of the Yamuna, with a fabric of narrow bazaar lanes and dense owner-built houses. Homes here are mostly independent two- and three-storey family houses, often with shops below, and multiple generations commonly live under one roof. The Shahdara Metro Station on the Red Line and the Shahdara railway junction anchor the area's connectivity, the old Chhota Bazar market runs through its heart, and Cross River Mall on the Karkardooma side is the nearest large-format retail stop; GTB Hospital in Dilshad Garden is the major public hospital serving the belt. Vivek Vihar adjoins Shahdara to the east, Seelampur and the Welcome side lie to the west, and Gandhi Nagar's garment market is to the south-west. Household help here usually works across independent homes with direct lane access rather than through society gates, and timings are settled directly with each family.",
+    "commuteNotes": "Shahdara station on the Red Line and the Shahdara railway junction anchor connectivity; helpers typically arrive on foot or by e-rickshaw from adjoining lanes and the Welcome side.",
+    "housingNotes": "Old, dense independent family houses with direct lane access dominate; there are no gate-pass systems, and helpers commonly serve several houses in adjoining lanes.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-shahdara-1",
+        "q": "Which pincodes does Shahdara service cover?",
+        "a": "Shahdara spreads across two pincodes, 110032 and 110095, the latter shared with neighbouring Vivek Vihar. Both the old bazaar core and the newer colonies around the Red Line station fall within these codes.",
+        "scope": "locality",
+        "tags": ["delhi", "shahdara"]
+      },
+      {
+        "id": "faq-delhi-shahdara-2",
+        "q": "Which areas near Shahdara do you also serve?",
+        "a": "Vivek Vihar adjoins Shahdara to the east, Seelampur lies to the west near the Welcome interchange, and Gandhi Nagar's market area is to the south-west. Preet Vihar and Laxmi Nagar down the Vikas Marg side are part of the same belt.",
+        "scope": "locality",
+        "tags": ["delhi", "shahdara"]
+      },
+      {
+        "id": "faq-delhi-shahdara-3",
+        "q": "Do helpers in Shahdara need gate passes?",
+        "a": "Housing in Shahdara is mostly old independent family houses opening directly onto lanes, so there are no society gates or passes. Helpers usually serve several houses in adjoining lanes and settle timings directly with each family.",
+        "scope": "locality",
+        "tags": ["delhi", "shahdara"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "bhajanpura": {
+    "neighbours": ["karawal-nagar", "seelampur", "shahdara", "vivek-vihar", "civil-lines", "burari"],
+    "landmarks": ["Signature Bridge", "Khajuri Khas Chowk", "Maujpur-Babarpur Metro Station"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Bhajanpura, under pincode 110053, is a dense north-east Delhi locality strung along Wazirabad Road, the arterial route that leads west to the Signature Bridge over the Yamuna. Housing is almost entirely owner-built independent homes on compact plots, rising three or four floors, with ground floors frequently given to shops and small businesses; lanes are narrow and neighbourhoods are close-knit. Households are predominantly large, long-settled families, and many run trades from home. Khajuri Khas Chowk, a major junction on Wazirabad Road, marks the locality's eastern approach, while the Pink Line's Maujpur-Babarpur station lies to its south-east and Yamuna Vihar's block markets adjoin it. Karawal Nagar continues north-east along the road towards the Uttar Pradesh border, Seelampur lies to the south, and Shahdara is further south-east. Domestic help in Bhajanpura typically works morning and evening shifts across nearby independent homes, moving between houses on foot through the lanes.",
+    "commuteNotes": "Buses and e-rickshaws along Wazirabad Road are the main links, with the Pink Line's Maujpur-Babarpur station to the south-east; most helpers live within walking distance in adjoining lanes.",
+    "housingNotes": "Owner-built independent homes on narrow lanes dominate, with no society gates; timings are flexible and agreed directly with each household, and helpers commonly cover several homes in one stretch.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-bhajanpura-1",
+        "q": "Which pincode does Bhajanpura service cover?",
+        "a": "Bhajanpura falls under pincode 110053 on Wazirabad Road in north-east Delhi. Neighbouring Karawal Nagar and Seelampur fall under their own separate pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "bhajanpura"]
+      },
+      {
+        "id": "faq-delhi-bhajanpura-2",
+        "q": "Which areas near Bhajanpura do you also serve?",
+        "a": "Karawal Nagar continues north-east along Wazirabad Road, Seelampur lies to the south and Shahdara to the south-east. Adjoining pockets such as Yamuna Vihar and Maujpur are covered as part of this belt.",
+        "scope": "locality",
+        "tags": ["delhi", "bhajanpura"]
+      },
+      {
+        "id": "faq-delhi-bhajanpura-3",
+        "q": "Do helpers in Bhajanpura need gate passes?",
+        "a": "Bhajanpura's housing is almost entirely independent owner-built homes on narrow lanes, with no society gates. Helpers generally live within walking distance and agree timings directly with each household.",
+        "scope": "locality",
+        "tags": ["delhi", "bhajanpura"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "seelampur": {
+    "neighbours": ["shahdara", "gandhi-nagar", "bhajanpura", "old-delhi", "vivek-vihar", "karawal-nagar"],
+    "landmarks": ["Seelampur Metro Station", "Welcome Metro Station", "Jaffrabad Metro Station"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Seelampur, under pincode 110093, is a closely packed north-east Delhi locality just east of the Yamuna, long associated with small garment and denim stitching units that operate from homes and lane-side workshops. Its housing is dense, owner-built independent homes of two to four floors on narrow plots, with joint families the norm and ground floors often used for work or shops. The Seelampur Metro Station on the Red Line sits on the locality's edge along the GT Road corridor, with the Welcome interchange station, connecting the Red and Pink Lines, immediately to its east and Jaffrabad's Pink Line station to the north. Shahdara lies further east along the Red Line, Gandhi Nagar and its garment market are to the south, and Bhajanpura is to the north across the Maujpur side. Domestic work here is arranged informally between households in adjoining lanes, with helpers usually living within walking distance of the homes they serve.",
+    "commuteNotes": "The Seelampur Red Line station and the Welcome Red-Pink interchange sit at the locality's edges; within Seelampur, movement is on foot through the dense lanes.",
+    "housingNotes": "Dense owner-built independent homes on narrow plots dominate, with no gating or pass systems; ground floors often double as workspaces, and help timings are settled directly between households and helpers.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-seelampur-1",
+        "q": "Which pincode does Seelampur service cover?",
+        "a": "Seelampur falls under pincode 110093 in north-east Delhi, along the GT Road corridor. Neighbouring Shahdara and Gandhi Nagar have their own separate pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "seelampur"]
+      },
+      {
+        "id": "faq-delhi-seelampur-2",
+        "q": "Which areas near Seelampur do you also serve?",
+        "a": "Shahdara lies to the east along the Red Line, Gandhi Nagar and its garment market to the south, and Bhajanpura to the north. The adjoining Jaffrabad and Welcome pockets fall within the same belt.",
+        "scope": "locality",
+        "tags": ["delhi", "seelampur"]
+      },
+      {
+        "id": "faq-delhi-seelampur-3",
+        "q": "How do helpers reach homes in Seelampur?",
+        "a": "The Seelampur Red Line station and the Welcome Red-Pink interchange sit at the locality's edges, but most movement within Seelampur is on foot through its dense lanes. Helpers typically live in or immediately around the locality.",
+        "scope": "locality",
+        "tags": ["delhi", "seelampur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "karawal-nagar": {
+    "neighbours": ["bhajanpura", "seelampur", "shahdara", "burari", "vivek-vihar", "gandhi-nagar"],
+    "landmarks": ["Khajuri Khas Chowk", "Shiv Vihar Metro Station", "Sonia Vihar Water Treatment Plant"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Karawal Nagar, under pincode 110094, sits in the far north-east of Delhi between the Yamuna khadar and the Uttar Pradesh border, and has grown from village land into a sprawl of densely built colonies. Housing is almost entirely owner-built independent homes on small plots, typically two to four floors built incrementally as families grow, and lanes are narrow with local markets threaded through them. Households are overwhelmingly large family units, many with members working in trade, transport and small manufacturing across east Delhi and neighbouring Loni. Khajuri Khas Chowk on Wazirabad Road is the main junction connecting the area to the rest of the city, the Pink Line ends nearby at Shiv Vihar, and the Sonia Vihar Water Treatment Plant lies to the locality's north. Bhajanpura is the closest named neighbour towards the Signature Bridge side, with Seelampur and Shahdara further south-west. Domestic help arrangements here are hyper-local, usually between homes a few lanes apart.",
+    "commuteNotes": "The Pink Line terminates at Shiv Vihar to the locality's south, but day-to-day movement relies on buses, shared autos and e-rickshaws along Wazirabad Road and Karawal Nagar Road; most helpers live locally and walk.",
+    "housingNotes": "Owner-built independent homes on small plots dominate, with no society gating; entry is direct from the lane, and timings are agreed household by household.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-karawal-nagar-1",
+        "q": "Which pincode does Karawal Nagar service cover?",
+        "a": "Karawal Nagar falls under pincode 110094 in far north-east Delhi, near the Uttar Pradesh border. Neighbouring Bhajanpura falls under 110053.",
+        "scope": "locality",
+        "tags": ["delhi", "karawal-nagar"]
+      },
+      {
+        "id": "faq-delhi-karawal-nagar-2",
+        "q": "Which areas near Karawal Nagar do you also serve?",
+        "a": "Bhajanpura lies south-west along Wazirabad Road, with Seelampur and Shahdara further on. Adjoining pockets such as Khajuri Khas and Sonia Vihar are covered as part of the Karawal Nagar belt.",
+        "scope": "locality",
+        "tags": ["delhi", "karawal-nagar"]
+      },
+      {
+        "id": "faq-delhi-karawal-nagar-3",
+        "q": "How do helpers reach homes in Karawal Nagar?",
+        "a": "The Pink Line ends at Shiv Vihar to the locality's south, but day-to-day movement relies on buses, shared autos and e-rickshaws along Wazirabad Road. Most helpers live locally and reach homes on foot.",
+        "scope": "locality",
+        "tags": ["delhi", "karawal-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

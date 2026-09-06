@@ -1,6 +1,5 @@
-// Dynamic robots.txt — equivalent to the static robots.txt we deployed.
-
 import type { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/seo-engine/meta';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,20 +7,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/home',
-          '/auth',
-          '/profile',
-          '/bookings',
-          '/onboarding',
-          '/pricing',
-          '/splash',
-          '/services',
-          '/api/',
-          '/_next/',
-        ],
+        disallow: ['/api/', '/app', '/app/', '/_spa/', '/maintenance', '/og', '/*?*'],
       },
     ],
-    sitemap: 'https://mybuddymaid.in/sitemap.xml',
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }

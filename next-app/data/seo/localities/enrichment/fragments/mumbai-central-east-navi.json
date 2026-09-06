@@ -1,0 +1,562 @@
+{
+  "dadar": {
+    "neighbours": ["mahim", "matunga", "prabhadevi", "parel", "wadala", "sion", "worli", "sewri"],
+    "landmarks": ["Shivaji Park", "Dadar Railway Station", "Siddhivinayak Temple", "Dadar Flower Market", "Chaityabhoomi"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Dharavi"],
+    "localIntro": "Dadar is the heart of central Mumbai, split by the railway line into Dadar West under pincode 400028 and Dadar East under 400014. It is one of the city's oldest planned residential neighbourhoods, and the housing is a genuine mix: older co-operative buildings and chawls around Shivaji Park and Hindu Colony, redeveloped mid-rise towers along the main roads, and a growing number of newer high-rises near Dadar Railway Station. Households are largely long-settled Maharashtrian and Gujarati families, many of them multi-generational with elderly members at home, alongside working professionals who value the location between South Mumbai and the suburbs. Shivaji Park, Chaityabhoomi on the seafront and the Siddhivinayak Temple just across the Prabhadevi boundary give the area its character, while the Dadar Flower Market sets the early-morning rhythm on the station side. Mahim and Matunga adjoin Dadar to the north, with Prabhadevi and Parel to the south. Regular cooking help, daily cleaning and elder-care support are the typical requirements here, with families usually preferring helpers who can commit to fixed long-term timings.",
+    "commuteNotes": "Dadar is the interchange between the Western and Central suburban railway lines, so helpers arrive easily from across the city, and BEST buses connect it to every neighbouring area. Many helpers also walk or take a short bus ride in from Dharavi and the Prabhadevi and Parel side.",
+    "housingNotes": "Housing ranges from older co-operative societies and chawls to redeveloped towers, so entry rules vary building by building. Newer societies keep watchmen registers and helper ID entries, while older buildings tend to be informal and flexible on timings.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-dadar-1",
+        "q": "Which areas near Dadar do you also serve?",
+        "a": "Mahim, Matunga, Prabhadevi, Parel and Wadala are all covered by the same nearby helper pool as Dadar. Both Dadar West and Dadar East fall under this locality's coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "dadar"]
+      },
+      {
+        "id": "faq-mumbai-dadar-2",
+        "q": "Which pincodes does Dadar service cover?",
+        "a": "Dadar coverage spans pincode 400028 for Dadar West and 400014 for Dadar East. Adjacent areas such as Mahim (400016) and Matunga (400019) have their own pincodes but share the same helper network.",
+        "scope": "locality",
+        "tags": ["mumbai", "dadar"]
+      },
+      {
+        "id": "faq-mumbai-dadar-3",
+        "q": "Do helpers in Dadar need society gate passes?",
+        "a": "It depends on the building. Redeveloped towers and larger societies near Shivaji Park usually ask for a helper ID entry at the gate, while older co-operative buildings and chawls rarely have a formal pass system.",
+        "scope": "locality",
+        "tags": ["mumbai", "dadar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mahim": {
+    "neighbours": ["dadar", "bandra-west", "matunga", "prabhadevi", "bandra-east", "worli", "parel"],
+    "landmarks": ["Mahim Dargah", "St. Michael's Church", "Mahim Causeway", "Mahim Railway Station", "P.D. Hinduja Hospital"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Dharavi"],
+    "localIntro": "Mahim, under pincode 400016, sits at the northern tip of the island city where the Mahim Causeway carries traffic across the creek to Bandra. It is an old and closely built neighbourhood with a mixed housing stock: heritage-era buildings and Catholic villas in the lanes near St. Michael's Church, co-operative societies along Lady Jamshedji Road, and redeveloped towers coming up around Mahim Railway Station. Households here are mostly long-settled families, many with senior members, together with medical professionals connected to P.D. Hinduja Hospital and working couples who choose Mahim for its position between Dadar and Bandra West. The Mahim Dargah on the seafront draws visitors through the week, and the Mahim fair each December fills the area around it. Dadar is immediately to the south, Bandra West lies just across the causeway and Matunga is a short distance east. Daily cleaning, cooking and elder care are the most common requirements, and families here typically look for helpers who can stay with a household over the long term.",
+    "commuteNotes": "Mahim Railway Station on the Western line and BEST bus routes along Lady Jamshedji Road and Cadell Road serve the area well. A large share of helpers walk in from Dharavi, which borders Mahim on the eastern side.",
+    "housingNotes": "The stock mixes older low-rise buildings and villas with newer redeveloped towers, so gate rules differ from one society to the next. Older buildings are informal about entry, while the newer towers keep a watchman register for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-mahim-1",
+        "q": "Which areas near Mahim do you also serve?",
+        "a": "Dadar, Matunga and Prabhadevi on the island-city side and Bandra West across the causeway are all served by the same nearby helper pool. Helpers who work in Mahim frequently take assignments in these adjoining areas too.",
+        "scope": "locality",
+        "tags": ["mumbai", "mahim"]
+      },
+      {
+        "id": "faq-mumbai-mahim-2",
+        "q": "Which pincode does the Mahim service area cover?",
+        "a": "Mahim falls under pincode 400016. Neighbouring Dadar carries 400028 and 400014, and Bandra West carries 400050, but the same helper network covers all of them.",
+        "scope": "locality",
+        "tags": ["mumbai", "mahim"]
+      },
+      {
+        "id": "faq-mumbai-mahim-3",
+        "q": "Do helpers in Mahim need society gate passes?",
+        "a": "Older buildings in the lanes near St. Michael's Church and the Mahim Dargah rarely have a formal pass system. Newer redeveloped towers near Mahim Railway Station usually ask for the helper's details to be noted at the gate.",
+        "scope": "locality",
+        "tags": ["mumbai", "mahim"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "matunga": {
+    "neighbours": ["dadar", "sion", "wadala", "mahim", "parel", "antop-hill", "sewri", "kurla"],
+    "landmarks": ["King's Circle", "Five Gardens", "Ruia College", "VJTI", "Matunga Railway Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "students"],
+    "helperSourceAreas": ["Dharavi"],
+    "localIntro": "Matunga, under pincode 400019, is one of central Mumbai's most settled residential neighbourhoods, laid out in the early twentieth century with wide roads, gardens and a strong South Indian community. The housing is mixed: well-kept older co-operative buildings and art-deco blocks around King's Circle and Five Gardens, a few chawls and low-rise homes, and redeveloped towers appearing on the main roads. Households are predominantly long-settled families, often with elderly parents at home, and there is a sizeable student population drawn by Ruia College, Podar College and VJTI, which gives the area a steady demand for paying-guest and shared-flat arrangements. Matunga Railway Station on the Central line and Matunga Road on the Western line keep the area well connected, and the tree-lined Five Gardens remains the neighbourhood's main open space. Dadar lies immediately to the west, Sion to the north and Wadala to the east. Cooking help familiar with vegetarian and South Indian kitchens, daily cleaning and elder care are the typical requirements here, with most families preferring helpers on fixed long-term arrangements.",
+    "commuteNotes": "Matunga is served by Matunga Railway Station on the Central line and Matunga Road on the Western line, with BEST buses running along Bhaudaji Road and Sion Road. Many helpers walk in from Dharavi, which lies just across the Sion side.",
+    "housingNotes": "Most homes are in older co-operative societies where the building watchman handles entry and timings stay flexible. The newer redeveloped towers on the main roads tend to keep a register of domestic helpers at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-matunga-1",
+        "q": "Which areas near Matunga do you also serve?",
+        "a": "Dadar, Sion, Wadala and Mahim are all covered by the same nearby helper pool as Matunga. Helpers working around King's Circle and Five Gardens often take assignments in these adjoining areas as well.",
+        "scope": "locality",
+        "tags": ["mumbai", "matunga"]
+      },
+      {
+        "id": "faq-mumbai-matunga-2",
+        "q": "Can I find a cook in Matunga who handles South Indian vegetarian food?",
+        "a": "Matunga has a large vegetarian and South Indian community, so cooks familiar with these kitchens are a common requirement in the 400019 area. You can state your cuisine and dietary preferences when you post the requirement so that only suitable profiles are matched.",
+        "scope": "locality",
+        "tags": ["mumbai", "matunga"]
+      },
+      {
+        "id": "faq-mumbai-matunga-3",
+        "q": "Do helpers in Matunga need society gate passes?",
+        "a": "Older co-operative buildings around Five Gardens and King's Circle generally rely on the watchman and do not issue formal passes. Newer towers near Matunga Railway Station may ask for a helper ID entry, so it is worth checking with your society office.",
+        "scope": "locality",
+        "tags": ["mumbai", "matunga"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sion": {
+    "neighbours": ["matunga", "kurla", "wadala", "antop-hill", "dadar", "chembur", "bandra-east", "sewri"],
+    "landmarks": ["Sion Hospital", "Sion Fort", "Sion Railway Station", "Maharashtra Nature Park", "Gandhi Market"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Dharavi"],
+    "localIntro": "Sion, under pincode 400022, marks the historic boundary of Mumbai's island city, and the small hilltop Sion Fort still overlooks the junction where the Eastern Express Highway begins. The neighbourhood has a mixed housing stock: older co-operative societies and colonies such as Sion Koliwada and Pratiksha Nagar, chawls near the station, and newer redeveloped towers along the highway and Sion Circle. Households are mainly long-settled families, many with elderly members, plus working professionals who use Sion as a base between South Mumbai, Bandra-Kurla Complex and the eastern suburbs. Sion Hospital, one of the city's largest public hospitals, brings a large medical and nursing community to the area, while Gandhi Market is the local shopping hub and the Maharashtra Nature Park offers rare green space on the Mithi River side. Matunga adjoins Sion to the south, Kurla lies just north across the highway and Wadala is to the east. Daily cleaning, cooking help and elder care are the usual requirements, with hospital-linked households often needing helpers on early or shift-based timings.",
+    "commuteNotes": "Sion Railway Station on the Central line and BEST buses along the Eastern Express Highway and Sion-Bandra Link Road make the area easy to reach. Dharavi lies immediately to the west, and many helpers walk in from there.",
+    "housingNotes": "Older societies and chawls are informal about entry, while the newer redeveloped towers along the highway keep helper registers at the gate. Timings are generally flexible except in the larger gated complexes.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-sion-1",
+        "q": "Which areas near Sion do you also serve?",
+        "a": "Matunga, Kurla, Wadala, Antop Hill and Chembur are all covered by the same nearby helper pool as Sion. Helpers based around the Dharavi side regularly take assignments across these adjoining areas.",
+        "scope": "locality",
+        "tags": ["mumbai", "sion"]
+      },
+      {
+        "id": "faq-mumbai-sion-2",
+        "q": "Which pincode does the Sion service area cover?",
+        "a": "Sion falls under pincode 400022, which includes the areas around Sion Hospital, Sion Circle and Sion Koliwada. Neighbouring Matunga carries 400019 and Kurla 400070.",
+        "scope": "locality",
+        "tags": ["mumbai", "sion"]
+      },
+      {
+        "id": "faq-mumbai-sion-3",
+        "q": "Can I get a helper in Sion on shift-based or early-morning timings?",
+        "a": "Because Sion Hospital and nearby offices bring many shift workers to the area, requests for early-morning or split-shift help are common here. Mention the exact timings in your requirement so that only helpers available in those slots are matched.",
+        "scope": "locality",
+        "tags": ["mumbai", "sion"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "kurla": {
+    "neighbours": ["sion", "chembur", "ghatkopar", "bandra-east", "andheri-east", "powai", "matunga", "antop-hill"],
+    "landmarks": ["Phoenix Marketcity", "Bandra Kurla Complex", "Kurla Railway Station", "Lokmanya Tilak Terminus", "Kohinoor City"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Kurla, under pincode 400070, is a busy transport and commercial hub where the Central and Harbour railway lines meet, with Lokmanya Tilak Terminus handling long-distance trains on the eastern side. Its housing is a genuine mix: dense older chawls and low-rise buildings near Kurla Railway Station and along LBS Marg, mid-rise co-operative societies in Nehru Nagar and Kurla East, and newer gated complexes such as Kohinoor City and the towers around Phoenix Marketcity in Kurla West. The Bandra Kurla Complex business district lies just across the Mithi River, so a large share of newer residents are working professionals and young families renting close to their offices. Sion adjoins Kurla to the south, Ghatkopar and Chembur lie to the east and Bandra East is across the river to the west. Daily cleaning and cooking help for working couples are the most common requirements, along with full-time help for families in the larger societies, and the area's dense population means a good supply of helpers living within walking distance.",
+    "commuteNotes": "Kurla Railway Station serves both the Central and Harbour lines, and BEST buses run along LBS Marg and towards Bandra Kurla Complex. Most helpers live within Kurla itself or in adjoining parts of Sion and Ghatkopar and reach households on foot or by share auto.",
+    "housingNotes": "Newer gated complexes such as Kohinoor City keep helper ID registers and fixed entry rules, while the older chawls and co-operative buildings around the station are informal and flexible on timings.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-kurla-1",
+        "q": "Which areas near Kurla do you also serve?",
+        "a": "Sion, Chembur, Ghatkopar and Bandra East are all covered by the same nearby helper pool as Kurla. Households in Bandra Kurla Complex are typically served by helpers based on the Kurla side of the river.",
+        "scope": "locality",
+        "tags": ["mumbai", "kurla"]
+      },
+      {
+        "id": "faq-mumbai-kurla-2",
+        "q": "Which pincode does the Kurla service area cover?",
+        "a": "Kurla falls under pincode 400070, which covers the areas around Kurla Railway Station, Lokmanya Tilak Terminus and Kohinoor City. Neighbouring Sion is 400022 and Ghatkopar is 400086.",
+        "scope": "locality",
+        "tags": ["mumbai", "kurla"]
+      },
+      {
+        "id": "faq-mumbai-kurla-3",
+        "q": "Do helpers in Kurla need society gate passes?",
+        "a": "The larger gated complexes near Phoenix Marketcity and in Kohinoor City generally require a helper ID entry at the gate. Older buildings and chawls near the station usually have no formal pass system and rely on the watchman.",
+        "scope": "locality",
+        "tags": ["mumbai", "kurla"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "powai": {
+    "neighbours": ["vikhroli", "andheri-east", "ghatkopar", "bhandup", "jogeshwari-east", "kurla", "mulund"],
+    "landmarks": ["Powai Lake", "IIT Bombay", "Hiranandani Gardens", "Dr L H Hiranandani Hospital", "Galleria Powai"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Chandivali", "Saki Naka"],
+    "localIntro": "Powai, under pincode 400076, is a planned lakeside suburb in the eastern part of Mumbai built around Powai Lake and the IIT Bombay campus. Housing here is dominated by gated societies: the neo-classical towers of Hiranandani Gardens set the pattern, and newer high-rise complexes along Chandivali Farm Road and towards the lake follow the same model, with security desks, visitor registers and shared amenities. Households are largely working professionals employed in the corporate offices and IT parks around Hiranandani and Chandivali, along with young families and a steady population of expatriates and faculty linked to IIT Bombay. Galleria Powai is the everyday shopping and dining hub, and Dr L H Hiranandani Hospital serves the neighbourhood. Vikhroli lies to the east across the Eastern Express Highway side, Andheri East is reached along Jogeshwari-Vikhroli Link Road, and Ghatkopar is to the south. Full-time and part-time cooking, daily cleaning and nanny support for dual-income households are the main requirements, and most societies expect helpers to carry a registered ID for gate entry.",
+    "commuteNotes": "Powai has no suburban railway station of its own, so helpers usually take BEST buses or share autos along Jogeshwari-Vikhroli Link Road from Vikhroli, Kanjurmarg or Andheri East. Many helpers live in Chandivali and Saki Naka and reach Hiranandani on foot or by a short auto ride.",
+    "housingNotes": "Almost all homes are in gated towers with security desks, so helpers need to be registered with the society and often carry a society-issued ID card. Entry timings are fixed by each society, which suits regular daily arrangements.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-powai-1",
+        "q": "Do helpers in Powai need society gate passes?",
+        "a": "Yes, in most cases. Gated complexes in Hiranandani Gardens and along Chandivali Farm Road require domestic helpers to be registered with the society office and usually issue an ID card for gate entry. Please complete this registration once you finalise a helper.",
+        "scope": "locality",
+        "tags": ["mumbai", "powai"]
+      },
+      {
+        "id": "faq-mumbai-powai-2",
+        "q": "Which areas near Powai do you also serve?",
+        "a": "Vikhroli, Andheri East, Ghatkopar and Bhandup are all covered by the same nearby helper pool as Powai. Helpers based in Chandivali and Saki Naka regularly take assignments across these areas.",
+        "scope": "locality",
+        "tags": ["mumbai", "powai"]
+      },
+      {
+        "id": "faq-mumbai-powai-3",
+        "q": "Which pincode does the Powai service area cover?",
+        "a": "Powai falls under pincode 400076, which covers Hiranandani Gardens, the IIT Bombay side and the Chandivali stretch. Neighbouring Vikhroli is 400078 and Andheri East is 400059 and 400093.",
+        "scope": "locality",
+        "tags": ["mumbai", "powai"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "ghatkopar": {
+    "neighbours": ["vikhroli", "kurla", "chembur", "powai", "bhandup", "sion", "andheri-east"],
+    "landmarks": ["R City Mall", "Ghatkopar Metro Station", "Ghatkopar Railway Station", "Somaiya Vidyavihar", "Pant Nagar"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Ghatkopar, under pincode 400086, is one of the largest residential suburbs on Mumbai's Central line, spread across Ghatkopar West and Ghatkopar East on either side of the railway. Its housing is mixed: long-established co-operative societies in Pant Nagar, Garodia Nagar and Tilak Road, redeveloped mid-rise towers, and a number of newer gated complexes along LBS Marg near R City Mall. Households are predominantly Gujarati and Maharashtrian families, many of them multi-generational with elderly members, together with working professionals who value the Metro Line 1 link from Ghatkopar Metro Station to Andheri and the airport belt. Ghatkopar Railway Station is a major Central line stop, R City Mall is the main shopping and cinema destination, and the Somaiya Vidyavihar campus borders the area to the south. Vikhroli lies to the north, Kurla and Chembur to the south-west and south, and Powai is a short drive up the hill road. Cooking help for vegetarian households, daily cleaning and elder care are the usual requirements, with most families preferring fixed long-term arrangements.",
+    "commuteNotes": "Ghatkopar Railway Station on the Central line and Ghatkopar Metro Station, the eastern terminus of Metro Line 1, make the area one of the easiest suburbs to reach. BEST buses and share autos run along LBS Marg and into the inner colonies of Ghatkopar East.",
+    "housingNotes": "Older co-operative societies rely on the watchman and keep flexible timings, while the newer gated complexes along LBS Marg ask for helper ID registration at the gate. Redeveloped buildings increasingly follow the gated model.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-ghatkopar-1",
+        "q": "Which areas near Ghatkopar do you also serve?",
+        "a": "Vikhroli, Kurla, Chembur and Powai are all covered by the same nearby helper pool as Ghatkopar. Both Ghatkopar West and Ghatkopar East fall under this locality's coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "ghatkopar"]
+      },
+      {
+        "id": "faq-mumbai-ghatkopar-2",
+        "q": "Which pincode does the Ghatkopar service area cover?",
+        "a": "Ghatkopar falls under pincode 400086, covering both sides of Ghatkopar Railway Station including Pant Nagar and the R City Mall stretch. Neighbouring Vikhroli is 400078 and Kurla is 400070.",
+        "scope": "locality",
+        "tags": ["mumbai", "ghatkopar"]
+      },
+      {
+        "id": "faq-mumbai-ghatkopar-3",
+        "q": "Can I find a cook in Ghatkopar for a vegetarian household?",
+        "a": "Ghatkopar has a large vegetarian population, so cooks experienced with vegetarian Gujarati and Maharashtrian kitchens are a common requirement here. Mention your dietary preferences when posting so that only suitable profiles are matched.",
+        "scope": "locality",
+        "tags": ["mumbai", "ghatkopar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "chembur": {
+    "neighbours": ["ghatkopar", "kurla", "sion", "antop-hill", "wadala", "sewri"],
+    "landmarks": ["Diamond Garden", "Chembur Railway Station", "Chembur Monorail Station", "Tata Institute of Social Sciences", "K Star Mall"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Govandi", "Mankhurd"],
+    "localIntro": "Chembur, under pincode 400088, is an established suburb on Mumbai's Harbour line, known for its green pockets, gymkhanas and a long-settled community. The housing stock is mixed: older co-operative societies and bungalow plots around Diamond Garden and Chembur Camp, refinery and government colonies dating from the area's industrial past, and a wave of newer redeveloped towers along the Eastern Freeway approach and Sion-Trombay Road. Households are largely families, many with elderly members who have lived here for decades, joined in recent years by working professionals who use the Eastern Freeway and the monorail to reach South Mumbai and Wadala. Chembur Railway Station and Chembur Monorail Station sit close together in the central market area, K Star Mall is the main shopping stop and the Tata Institute of Social Sciences campus lies on the Deonar side. Ghatkopar adjoins Chembur to the north, Kurla lies to the north-west and Sion is to the west. Daily cleaning, cooking help and elder care are the most common requirements here, with a steady supply of helpers from the adjoining Govandi and Mankhurd side.",
+    "commuteNotes": "Chembur Railway Station on the Harbour line and Chembur Monorail Station serve the area, and BEST buses run along Sion-Trombay Road and the Eastern Express Highway. A large share of helpers live in Govandi and Mankhurd and reach Chembur by bus, share auto or on foot.",
+    "housingNotes": "Older societies and colony housing around Diamond Garden are informal about entry, while the newer redeveloped towers keep helper registers and fixed entry timings at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-chembur-1",
+        "q": "Which areas near Chembur do you also serve?",
+        "a": "Ghatkopar, Kurla, Sion and Wadala are all covered by the same nearby helper pool as Chembur. Helpers based in Govandi and Mankhurd regularly take assignments across these areas.",
+        "scope": "locality",
+        "tags": ["mumbai", "chembur"]
+      },
+      {
+        "id": "faq-mumbai-chembur-2",
+        "q": "Which pincode does the Chembur service area cover?",
+        "a": "This locality is listed under pincode 400088, which covers the Chembur East and Deonar side near the Tata Institute of Social Sciences. Households in the Diamond Garden and Chembur Camp stretch can post their exact address and the nearest helper pool will be matched.",
+        "scope": "locality",
+        "tags": ["mumbai", "chembur"]
+      },
+      {
+        "id": "faq-mumbai-chembur-3",
+        "q": "Is elder care available in Chembur?",
+        "a": "Yes. Chembur has a large population of long-settled senior residents, so attendants and helpers experienced in elder care are a common requirement here. Specify whether you need day-time support or a live-in arrangement when posting your requirement.",
+        "scope": "locality",
+        "tags": ["mumbai", "chembur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "vikhroli": {
+    "neighbours": ["ghatkopar", "powai", "bhandup", "kurla", "mulund", "andheri-east"],
+    "landmarks": ["Godrej Pirojshanagar", "Vikhroli Railway Station", "Vikhroli Mangroves", "Eastern Express Highway", "Kannamwar Nagar"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Vikhroli, under pincode 400078, is a Central line suburb shaped by the Godrej group's Pirojshanagar township, which occupies a large stretch between the railway and the Eastern Express Highway. The housing stock is mixed: long-established Godrej staff colonies and older co-operative buildings on the west side, the dense MHADA colonies of Kannamwar Nagar and Tagore Nagar in Vikhroli East, and newer gated towers coming up along LBS Marg and near the Godrej One office campus. Households are mainly working families, many employed in the Godrej offices and factories or in the corporate parks of nearby Powai, together with young professionals renting close to the Jogeshwari-Vikhroli Link Road. The Vikhroli Mangroves along the creek are one of the largest protected green belts within the city, and Vikhroli Railway Station keeps the area on the main commuter route. Ghatkopar adjoins Vikhroli to the south, Bhandup lies to the north and Powai is just up the link road to the west. Daily cleaning and cooking help for working households are the usual requirements, with a good supply of helpers living within Vikhroli East itself.",
+    "commuteNotes": "Vikhroli Railway Station on the Central line and BEST buses along LBS Marg and Jogeshwari-Vikhroli Link Road serve the area. Most helpers live within Vikhroli East colonies such as Kannamwar Nagar and walk or take a share auto to households on either side of the railway.",
+    "housingNotes": "The MHADA colonies and older buildings are informal about entry and flexible on timings, while the newer gated towers along LBS Marg keep helper registers and fixed entry hours.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-vikhroli-1",
+        "q": "Which areas near Vikhroli do you also serve?",
+        "a": "Ghatkopar, Powai, Bhandup and Kurla are all covered by the same nearby helper pool as Vikhroli. Both Vikhroli West and Vikhroli East fall under this locality's coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "vikhroli"]
+      },
+      {
+        "id": "faq-mumbai-vikhroli-2",
+        "q": "Which pincode does the Vikhroli service area cover?",
+        "a": "Vikhroli is listed under pincode 400078, which covers the Kannamwar Nagar and Tagore Nagar side of Vikhroli East. Households on the Vikhroli West side near Godrej Pirojshanagar can post their exact address and will be matched with the same helper pool.",
+        "scope": "locality",
+        "tags": ["mumbai", "vikhroli"]
+      },
+      {
+        "id": "faq-mumbai-vikhroli-3",
+        "q": "Do helpers in Vikhroli need society gate passes?",
+        "a": "Newer gated towers near the Eastern Express Highway and LBS Marg usually ask for a helper ID entry at the gate. Older colony buildings and the MHADA societies of Vikhroli East generally have no formal pass system.",
+        "scope": "locality",
+        "tags": ["mumbai", "vikhroli"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "bhandup": {
+    "neighbours": ["vikhroli", "mulund", "mulund-east", "powai", "ghatkopar", "kurla"],
+    "landmarks": ["Bhandup Railway Station", "Dreams Mall", "Neptune Magnet Mall", "Eastern Express Highway", "LBS Marg"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Bhandup, under pincode 400083, is a Central line suburb between Vikhroli and Mulund that has changed from an industrial belt into a largely residential area over the past two decades. The housing is mixed: older chawls and co-operative buildings near Bhandup Railway Station and along LBS Marg, dense hillside settlements on the western edge, and a growing number of gated towers built on former factory land, especially around Dreams Mall and Neptune Magnet Mall. Households are mostly middle-class Maharashtrian families, many of them first-generation buyers in the newer complexes, together with working professionals who commute to Powai, Vikhroli and the Thane side. The Eastern Express Highway runs along the eastern boundary and links the area to Mulund and Sion, while LBS Marg is the main local artery for shops, buses and share autos. Vikhroli adjoins Bhandup to the south and Mulund to the north, with Powai reachable across the hill road to the west. Daily cleaning and cooking help for working households and full-time help for families in the larger societies are the typical requirements.",
+    "commuteNotes": "Bhandup Railway Station on the Central line and BEST buses along LBS Marg and the Eastern Express Highway serve the area. Most helpers live within Bhandup West's older colonies and hillside settlements and reach households on foot or by share auto.",
+    "housingNotes": "Newer gated complexes built on former industrial plots keep helper registers and fixed entry timings, while the older chawls and co-operative buildings near the station are informal and flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-bhandup-1",
+        "q": "Which areas near Bhandup do you also serve?",
+        "a": "Vikhroli, Mulund, Mulund East and Powai are all covered by the same nearby helper pool as Bhandup. Helpers working along LBS Marg frequently take assignments in these adjoining areas.",
+        "scope": "locality",
+        "tags": ["mumbai", "bhandup"]
+      },
+      {
+        "id": "faq-mumbai-bhandup-2",
+        "q": "Which pincode does the Bhandup service area cover?",
+        "a": "Bhandup is listed under pincode 400083, which covers the Bhandup West side around Bhandup Railway Station and LBS Marg. Households in Bhandup East can post their exact address and will be matched with the same helper pool.",
+        "scope": "locality",
+        "tags": ["mumbai", "bhandup"]
+      },
+      {
+        "id": "faq-mumbai-bhandup-3",
+        "q": "Do helpers in Bhandup need society gate passes?",
+        "a": "The newer gated towers near Dreams Mall and Neptune Magnet Mall usually require a helper ID entry at the gate. Older buildings and chawls near the station generally have no formal pass system and rely on the watchman.",
+        "scope": "locality",
+        "tags": ["mumbai", "bhandup"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mulund": {
+    "neighbours": ["mulund-east", "bhandup", "vikhroli", "powai", "ghatkopar", "kurla"],
+    "landmarks": ["Mulund Railway Station", "R Mall Mulund", "Fortis Hospital Mulund", "Johnson and Johnson Garden", "Yogi Hills"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Mulund, under pincode 400080, is the northernmost suburb on Mumbai's Central line before Thane, and the Mulund West side covered here is one of the more spacious and green residential belts in the eastern suburbs. Housing is dominated by gated societies: large co-operative complexes and newer high-rise townships on former industrial land along LBS Marg and Goregaon-Mulund Link Road, with a few older buildings near Mulund Railway Station and the market lanes. Households are largely Gujarati and Maharashtrian families, many multi-generational with elderly members, along with working professionals who commute to Powai, Vikhroli and the Thane business belt. R Mall Mulund and the shopping stretch around the station serve everyday needs, Fortis Hospital Mulund is the main private hospital, and the Yogi Hills and the Johnson and Johnson Garden provide green space at the foot of the Sanjay Gandhi National Park boundary. Mulund East lies just across the railway line, Bhandup adjoins to the south and Vikhroli is further down the line. Cooking help for vegetarian households, daily cleaning and elder care are the typical requirements, with most societies expecting helpers to be registered at the gate.",
+    "commuteNotes": "Mulund Railway Station on the Central line and BEST buses along LBS Marg serve the area, with share autos covering the inner lanes. Helpers commonly come from the older colonies on the Bhandup side and from Mulund East.",
+    "housingNotes": "Most homes are in gated societies and townships with security desks, so helpers are usually registered with the society office and enter on fixed timings. Older buildings near the station remain informal.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-mulund-1",
+        "q": "Do helpers in Mulund need society gate passes?",
+        "a": "Yes, in most large complexes along LBS Marg and Goregaon-Mulund Link Road, where the society office registers domestic helpers and issues an entry ID. Older buildings near Mulund Railway Station generally rely on the watchman instead.",
+        "scope": "locality",
+        "tags": ["mumbai", "mulund"]
+      },
+      {
+        "id": "faq-mumbai-mulund-2",
+        "q": "Which areas near Mulund do you also serve?",
+        "a": "Mulund East, Bhandup and Vikhroli are all covered by the same nearby helper pool as Mulund West. Households in Powai are also within reach for helpers based in this belt.",
+        "scope": "locality",
+        "tags": ["mumbai", "mulund"]
+      },
+      {
+        "id": "faq-mumbai-mulund-3",
+        "q": "Which pincode does the Mulund service area cover?",
+        "a": "This locality covers Mulund West under pincode 400080. Mulund East, across the railway line, is listed separately under 400081 but is served by the same helper network.",
+        "scope": "locality",
+        "tags": ["mumbai", "mulund"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mulund-east": {
+    "neighbours": ["mulund", "bhandup", "vikhroli", "powai", "ghatkopar", "kurla"],
+    "landmarks": ["Mulund Railway Station", "Mulund-Airoli Bridge", "Eastern Express Highway", "Mulund Check Naka", "Hari Om Nagar"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Mulund East, under pincode 400081, lies between the Central railway line and the Eastern Express Highway at the very edge of Mumbai city, with the Mulund-Airoli Bridge carrying traffic across the creek to Navi Mumbai and the Mulund Check Naka marking the boundary with Thane. The housing here is mixed: older co-operative societies and low-rise buildings in colonies such as Hari Om Nagar and Anand Nagar, some remaining chawls near the highway, and a number of newer mid-rise and high-rise complexes replacing them under redevelopment. Households are mostly Maharashtrian and Gujarati families, many with elderly members, together with working professionals who use the highway to reach Thane, Airoli and Powai. The area is quieter and more affordable than Mulund West across the tracks, and the market lanes near Mulund Railway Station serve daily needs for both sides. Mulund West is immediately across the line, Bhandup lies to the south and Vikhroli is further down the highway. Daily cleaning, cooking help and elder care are the typical requirements, with families generally preferring long-term helpers on fixed timings.",
+    "commuteNotes": "Mulund Railway Station on the Central line is shared with Mulund West, and BEST buses run along the Eastern Express Highway and the approach to the Mulund-Airoli Bridge. Most helpers live within the older colonies of Mulund East itself and reach households on foot.",
+    "housingNotes": "Older co-operative buildings and chawls are informal about entry and flexible on timings, while the newer redeveloped complexes along the highway keep helper registers at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-mulund-east-1",
+        "q": "Which areas near Mulund East do you also serve?",
+        "a": "Mulund West, Bhandup and Vikhroli are all covered by the same nearby helper pool as Mulund East. Powai is also within reach for helpers based in this belt.",
+        "scope": "locality",
+        "tags": ["mumbai", "mulund-east"]
+      },
+      {
+        "id": "faq-mumbai-mulund-east-2",
+        "q": "Which pincode does the Mulund East service area cover?",
+        "a": "Mulund East falls under pincode 400081, which covers colonies such as Hari Om Nagar and Anand Nagar between the railway line and the Eastern Express Highway. Mulund West across the tracks is listed separately under 400080.",
+        "scope": "locality",
+        "tags": ["mumbai", "mulund-east"]
+      },
+      {
+        "id": "faq-mumbai-mulund-east-3",
+        "q": "Do helpers in Mulund East need society gate passes?",
+        "a": "Older co-operative buildings in Mulund East usually have no formal pass system and rely on the watchman. Newer redeveloped complexes near the Eastern Express Highway may ask for a helper ID entry, so check with your society office.",
+        "scope": "locality",
+        "tags": ["mumbai", "mulund-east"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "vashi": {
+    "neighbours": ["sanpada", "nerul", "airoli"],
+    "landmarks": ["Inorbit Mall Vashi", "Raghuleela Mall", "Vashi Railway Station", "APMC Market", "Mini Seashore"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Turbhe"],
+    "localIntro": "Vashi is the oldest and most established node of Navi Mumbai, sitting just across the Vashi Bridge from Mankhurd and serving as the commercial centre of the planned city. Its housing is mixed: original CIDCO-built low-rise blocks and row houses in the older sectors, co-operative societies built by private developers through the 1990s, and newer high-rise towers along Palm Beach Road and near the Sector 17 market. Households are largely Maharashtrian and North Indian families who moved here as the city grew, alongside working professionals employed in the offices around Vashi Railway Station and the APMC Market wholesale complex. Inorbit Mall Vashi and Raghuleela Mall are the main shopping and dining destinations, and the Mini Seashore promenade along the creek is the neighbourhood's open space. This locality is listed under pincode 400701 in our records. [VERIFY] Sanpada adjoins Vashi to the south-east, Nerul lies further along the Harbour line and Airoli is up the Thane-Belapur Road to the north. Daily cleaning, cooking help and full-time support for families in the larger societies are the usual requirements.",
+    "commuteNotes": "Vashi Railway Station on the Harbour line and NMMT and BEST buses across the Vashi Bridge serve the area, with share autos covering the sectors. Many helpers live in Turbhe and reach Vashi households by bus or share auto.",
+    "housingNotes": "Older CIDCO blocks and row houses are informal about entry and flexible on timings, while the newer towers along Palm Beach Road and in the private societies keep helper registers and fixed entry hours at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-vashi-1",
+        "q": "Which areas near Vashi do you also serve?",
+        "a": "Sanpada, Nerul and Airoli are covered by the same Navi Mumbai helper pool as Vashi. Helpers based on the Turbhe side regularly take assignments across these nodes.",
+        "scope": "locality",
+        "tags": ["mumbai", "vashi"]
+      },
+      {
+        "id": "faq-mumbai-vashi-2",
+        "q": "Do helpers in Vashi need society gate passes?",
+        "a": "The newer towers along Palm Beach Road and most private co-operative societies ask for a helper ID entry at the gate. The older CIDCO blocks and row houses in the early sectors generally have no formal pass system.",
+        "scope": "locality",
+        "tags": ["mumbai", "vashi"]
+      },
+      {
+        "id": "faq-mumbai-vashi-3",
+        "q": "Is Vashi served from the Mumbai city helper pool or a separate Navi Mumbai one?",
+        "a": "Vashi is served by helpers based within Navi Mumbai, mainly from Vashi's own sectors and adjoining Sanpada and Turbhe. Helpers from the island city and eastern suburbs do not normally cross the creek for daily assignments.",
+        "scope": "locality",
+        "tags": ["mumbai", "vashi"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "nerul": {
+    "neighbours": ["sanpada", "vashi", "airoli"],
+    "landmarks": ["Wonders Park", "Nerul Railway Station", "Seawoods Grand Central Mall", "D Y Patil Stadium", "Palm Beach Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Nerul is one of the larger residential nodes of Navi Mumbai, spread between the Harbour line and Palm Beach Road with Seawoods on its southern edge. Housing is dominated by gated societies: private developers built dense clusters of mid-rise and high-rise co-operative complexes through the 2000s, especially in the sectors near Palm Beach Road and Seawoods, while a smaller number of older CIDCO blocks remain around Nerul Railway Station. Households are mainly families, including many who moved from Mumbai city for larger flats, along with working professionals employed in the offices of Belapur, Vashi and the Thane-Belapur industrial belt. Wonders Park is the neighbourhood's best-known open space, D Y Patil Stadium and the D Y Patil campus sit on the eastern side, and Seawoods Grand Central Mall above Seawoods-Darave station is the main shopping and cinema destination. This locality is listed under pincodes 400703 and 400706 in our records. [VERIFY] Sanpada adjoins Nerul to the north, Vashi lies a few stations further up the Harbour line and Airoli is reached along the Thane-Belapur Road. Full-time and part-time cooking, daily cleaning and nanny support are the common requirements, and most societies expect helpers to carry a registered ID.",
+    "commuteNotes": "Nerul Railway Station on the Harbour line and Seawoods-Darave station serve the area, with NMMT buses and share autos running along Palm Beach Road and through the sectors. Helpers generally live within Nerul's older sectors or in adjoining nodes and reach households by share auto or on foot.",
+    "housingNotes": "Most homes are in gated co-operative complexes with security desks, so helpers are usually registered with the society and enter on fixed timings. The older CIDCO blocks near the station remain informal.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-nerul-1",
+        "q": "Do helpers in Nerul need society gate passes?",
+        "a": "Yes, in most of the gated complexes near Palm Beach Road and Seawoods, where the society office registers domestic helpers and issues an entry ID. Older CIDCO blocks near Nerul Railway Station generally rely on the watchman.",
+        "scope": "locality",
+        "tags": ["mumbai", "nerul"]
+      },
+      {
+        "id": "faq-mumbai-nerul-2",
+        "q": "Which areas near Nerul do you also serve?",
+        "a": "Sanpada, Vashi and Airoli are covered by the same Navi Mumbai helper pool as Nerul. Households in the Seawoods sectors fall under this locality's coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "nerul"]
+      },
+      {
+        "id": "faq-mumbai-nerul-3",
+        "q": "Is Nerul served from the Mumbai city helper pool or a separate Navi Mumbai one?",
+        "a": "Nerul is served by helpers based within Navi Mumbai, mainly from Nerul's own sectors and the adjoining nodes. Helpers from the island city and eastern suburbs do not normally cross the creek for daily assignments.",
+        "scope": "locality",
+        "tags": ["mumbai", "nerul"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sanpada": {
+    "neighbours": ["vashi", "nerul", "airoli"],
+    "landmarks": ["Sanpada Railway Station", "Palm Beach Road", "Inorbit Mall Vashi", "Sion-Panvel Highway", "Juinagar Railway Station"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Turbhe"],
+    "localIntro": "Sanpada, under pincode 400705, is a compact residential node of Navi Mumbai lying between Vashi and Nerul, bounded by the Sion-Panvel Highway on one side and Palm Beach Road on the other. Housing is dominated by gated societies: mid-rise and high-rise co-operative complexes built by private developers through the 2000s fill most of the sectors, with a few older CIDCO buildings near Sanpada Railway Station. Households are mainly families and working professionals who chose Sanpada for its quieter streets and quick access to the offices and malls of Vashi, and many residents commute to Mumbai city along the Harbour line or the highway. Inorbit Mall Vashi is a short walk across the sector boundary, Palm Beach Road provides the main link to Nerul and Belapur, and Juinagar Railway Station serves the southern sectors. Vashi adjoins Sanpada to the north-west, Nerul lies to the south and Airoli is further up the Thane-Belapur Road. Daily cleaning, cooking help and nanny support for dual-income households are the common requirements, and most societies expect helpers to be registered at the gate.",
+    "commuteNotes": "Sanpada Railway Station and Juinagar Railway Station on the Harbour line serve the area, with NMMT buses and share autos running along Palm Beach Road and the Sion-Panvel Highway service road. Many helpers live in Turbhe, just across the highway, and reach Sanpada households by share auto or on foot.",
+    "housingNotes": "Most homes are in gated co-operative complexes with security desks, so helpers are usually registered with the society and enter on fixed timings. A handful of older CIDCO buildings near the station remain informal.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-sanpada-1",
+        "q": "Which areas near Sanpada do you also serve?",
+        "a": "Vashi, Nerul and Airoli are covered by the same Navi Mumbai helper pool as Sanpada. Helpers based on the Turbhe side regularly take assignments across these nodes.",
+        "scope": "locality",
+        "tags": ["mumbai", "sanpada"]
+      },
+      {
+        "id": "faq-mumbai-sanpada-2",
+        "q": "Which pincode does the Sanpada service area cover?",
+        "a": "Sanpada falls under pincode 400705, which covers the sectors between the Sion-Panvel Highway and Palm Beach Road around Sanpada Railway Station. Neighbouring Nerul is listed under 400703 and 400706.",
+        "scope": "locality",
+        "tags": ["mumbai", "sanpada"]
+      },
+      {
+        "id": "faq-mumbai-sanpada-3",
+        "q": "Do helpers in Sanpada need society gate passes?",
+        "a": "Yes, in most of the gated complexes in Sanpada's sectors, where the society office registers domestic helpers and issues an entry ID. Only the older CIDCO buildings near the station rely on the watchman alone.",
+        "scope": "locality",
+        "tags": ["mumbai", "sanpada"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "airoli": {
+    "neighbours": ["vashi", "sanpada", "nerul"],
+    "landmarks": ["Airoli Railway Station", "Mulund-Airoli Bridge", "Mindspace Airoli", "Coastal and Marine Biodiversity Centre", "Thane-Belapur Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Airoli, under pincode 400708, is the northernmost node of Navi Mumbai, connected to Mumbai's Mulund East by the Mulund-Airoli Bridge and to Thane by the Thane-Belapur Road. Housing is dominated by gated societies: mid-rise and high-rise co-operative complexes built by private developers fill most of the sectors, with some older CIDCO blocks near Airoli Railway Station and the original Airoli village settlement on the creek side. Households are largely working professionals employed in the IT and corporate campuses of Mindspace Airoli and the Thane-Belapur industrial belt, along with young families who chose the node for its newer housing and quick access to Thane and Mulund. The Coastal and Marine Biodiversity Centre beside the creek mangroves is the area's best-known attraction, drawing visitors for flamingo season each winter. Vashi, Sanpada and Nerul lie further south along the Harbour and Trans-Harbour lines, and Airoli's helper pool is drawn from within Navi Mumbai rather than from across the creek. Daily cleaning and cooking help for dual-income households and full-time support for families in the larger complexes are the typical requirements, and most societies expect helpers to carry a registered ID.",
+    "commuteNotes": "Airoli Railway Station on the Trans-Harbour line and NMMT buses along the Thane-Belapur Road serve the area, with share autos covering the sectors. Helpers generally live within Airoli's older sectors and village settlement or in adjoining nodes and reach households by share auto or on foot.",
+    "housingNotes": "Most homes are in gated co-operative complexes with security desks, so helpers are usually registered with the society and enter on fixed timings. The older CIDCO blocks and village-side housing remain informal.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-airoli-1",
+        "q": "Do helpers in Airoli need society gate passes?",
+        "a": "Yes, in most of the gated complexes across Airoli's sectors, where the society office registers domestic helpers and issues an entry ID. The older CIDCO blocks near Airoli Railway Station generally rely on the watchman.",
+        "scope": "locality",
+        "tags": ["mumbai", "airoli"]
+      },
+      {
+        "id": "faq-mumbai-airoli-2",
+        "q": "Which areas near Airoli do you also serve?",
+        "a": "Vashi, Sanpada and Nerul are covered by the same Navi Mumbai helper pool as Airoli. Helpers do not normally cross the Mulund-Airoli Bridge from the Mumbai side for daily assignments.",
+        "scope": "locality",
+        "tags": ["mumbai", "airoli"]
+      },
+      {
+        "id": "faq-mumbai-airoli-3",
+        "q": "Which pincode does the Airoli service area cover?",
+        "a": "Airoli falls under pincode 400708, which covers the sectors around Airoli Railway Station, Mindspace Airoli and the Thane-Belapur Road stretch. Neighbouring Vashi and Sanpada carry their own pincodes but share the same Navi Mumbai helper network.",
+        "scope": "locality",
+        "tags": ["mumbai", "airoli"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

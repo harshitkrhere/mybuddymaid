@@ -1,0 +1,668 @@
+{
+  "bandra-west": {
+    "neighbours": ["khar", "bandra-east", "santacruz-west", "mahim", "juhu", "vile-parle", "dadar"],
+    "landmarks": ["Bandra Railway Station", "Mount Mary Basilica", "Bandstand Promenade", "Linking Road", "Lilavati Hospital", "Bandra-Worli Sea Link"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families", "elderly"],
+    "helperSourceAreas": ["Khar Danda", "Behrampada (Bandra East)"],
+    "localIntro": "Bandra West, under pincode 400050, stretches from the Western line tracks at Bandra Railway Station out to the sea at Bandstand and Carter Road, with Pali Hill and Hill Road in between. Housing here is genuinely mixed: old Catholic-village bungalows and low-rise cooperative buildings in the gaothans sit alongside redeveloped high-rise towers on Pali Hill and Bandra Reclamation, so households range from long-settled families and older residents to young professionals renting apartments close to the shopping belt on Linking Road. Mount Mary Basilica and Bandra Fort draw steady visitor traffic, while Lilavati Hospital on the Reclamation side and the Bandra-Worli Sea Link keep the area busy through the day. Khar sits directly to the north across the 16th Road boundary, Bandra East lies across the railway line, and Mahim is a short drive south over the causeway. The common needs in this locality are daily cleaning and cooking help for working couples, full-day support for families with children, and attentive care for elderly residents in older buildings without lifts.",
+    "commuteNotes": "Bandra Railway Station on the Western line is the main arrival point, with BEST buses running along S.V. Road, Hill Road and Linking Road. Many helpers also walk in from Khar Danda and from the settlements around Bandra East station.",
+    "housingNotes": "The stock mixes older low-rise buildings and bungalows, where households manage timings directly, with newer gated towers on Pali Hill and the Reclamation that require visitor registration or society entry passes for regular staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-bandra-west-1",
+        "q": "Which areas near Bandra West do you also serve?",
+        "a": "Khar, Bandra East, Santacruz West and Mahim are served by the same nearby helper pool. Pali Hill, Bandstand and the Reclamation side all fall within Bandra West coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "bandra-west"]
+      },
+      {
+        "id": "faq-mumbai-bandra-west-2",
+        "q": "Which pincode does the Bandra West service area cover?",
+        "a": "Bandra West falls under pincode 400050, which includes Pali Hill, Hill Road, Bandstand and Carter Road. Bandra East across the railway line carries pincode 400051 and is covered separately.",
+        "scope": "locality",
+        "tags": ["mumbai", "bandra-west"]
+      },
+      {
+        "id": "faq-mumbai-bandra-west-3",
+        "q": "Do helpers in Bandra West need society gate passes?",
+        "a": "It depends on the building. Newer towers on Pali Hill and Bandra Reclamation usually ask for a registered entry pass for regular staff, while the older low-rise buildings and bungalow lanes near Mount Mary generally handle entry informally.",
+        "scope": "locality",
+        "tags": ["mumbai", "bandra-west"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "bandra-east": {
+    "neighbours": ["bandra-west", "khar", "kurla", "mahim", "santacruz-west", "dadar", "sion", "vile-parle"],
+    "landmarks": ["Bandra Kurla Complex (BKC)", "Bandra Terminus", "MMRDA Grounds", "Kalanagar", "Asian Heart Institute", "Bandra Colony Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Behrampada", "Bharat Nagar"],
+    "localIntro": "Bandra East, pincode 400051, is the side of Bandra that sits between the Western line and the Mithi River, and it is home to the Bandra Kurla Complex, the business district where a large share of the residents' employers are based. Housing is mixed in the fullest sense: government staff quarters in Government Colony, older cooperative buildings in Kalanagar and Kherwadi, dense settlements such as Behrampada near the station, and new high-rise towers rising around BKC and the MMRDA Grounds. Households are therefore a blend of long-serving families and younger professionals who have moved close to the offices. Bandra Terminus handles long-distance trains, and the Asian Heart Institute and Guru Nanak Hospital serve the area. Bandra West is across the railway bridge, Kurla lies across the river beyond BKC, and Mahim is to the south over the Bandra-Mahim causeway. Households here commonly look for morning cooking and cleaning help timed around office hours, with families in the colony buildings preferring a fixed daily helper rather than short visits.",
+    "commuteNotes": "Bandra station's east exit, the Bandra Colony and Bandra Kurla Complex stations on Metro Line 3, and BEST buses along the Western Express Highway all serve the area. A large share of helpers walk in from Behrampada and Bharat Nagar within Bandra East itself.",
+    "housingNotes": "Government Colony and the older Kalanagar buildings have simple entry arrangements, while the new gated towers around BKC and the Reclamation follow visitor registration and society ID rules for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-bandra-east-1",
+        "q": "Which areas near Bandra East do you also serve?",
+        "a": "Bandra West, Khar, Kurla and Mahim are covered by the same nearby helper pool. Kalanagar, Government Colony, Kherwadi and the residential pockets around BKC all fall within Bandra East coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "bandra-east"]
+      },
+      {
+        "id": "faq-mumbai-bandra-east-2",
+        "q": "Which pincode does the Bandra East service area cover?",
+        "a": "Bandra East falls under pincode 400051, which takes in Kalanagar, Government Colony, Kherwadi and the Bandra Kurla Complex. Bandra West on the other side of the tracks is pincode 400050.",
+        "scope": "locality",
+        "tags": ["mumbai", "bandra-east"]
+      },
+      {
+        "id": "faq-mumbai-bandra-east-3",
+        "q": "Can helpers reach Bandra East easily during office hours?",
+        "a": "Yes. Bandra station's east side, Metro Line 3's Bandra Colony and BKC stations and buses along the Western Express Highway all bring helpers in, and many live within walking distance in Behrampada and Bharat Nagar, so early-morning slots are usually workable.",
+        "scope": "locality",
+        "tags": ["mumbai", "bandra-east"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "khar": {
+    "neighbours": ["bandra-west", "santacruz-west", "bandra-east", "juhu", "vile-parle", "mahim"],
+    "landmarks": ["Khar Road Railway Station", "Khar Gymkhana", "Linking Road", "Khar Danda", "Madhu Park", "Khar Subway"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Khar Danda"],
+    "localIntro": "Khar, under pincode 400052, is the quieter residential band between Bandra West and Santacruz West, laid out along the numbered roads that run west from Khar Road Railway Station towards the sea. The housing is mixed: older bungalows and three- and four-storey cooperative buildings on the numbered roads, many now redeveloped into tall towers, and the Koli fishing village of Khar Danda on the shoreline. Households are mostly established families and elderly residents who have lived here for decades, joined by professionals renting redeveloped flats close to Linking Road and its shopping stretch. Khar Gymkhana and Madhu Park are the neighbourhood's social anchors, and the Khar Subway links the west side to Khar East across the tracks. Bandra West begins at 16th Road to the south, Santacruz West lies just north, and Juhu is a short ride away along the coast. Demand here leans towards long-term cooks and full-day helpers for family homes, with care support for older residents in the low-rise buildings.",
+    "commuteNotes": "Khar Road station on the Western line and BEST buses on S.V. Road and Linking Road are the main routes in, and helpers from Khar Danda and the Santacruz side generally walk.",
+    "housingNotes": "Low-rise cooperative buildings and bungalows on the numbered roads keep timings flexible and entry informal, while the redeveloped towers along Linking Road and 14th–18th Roads maintain society registers for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-khar-1",
+        "q": "Which areas near Khar do you also serve?",
+        "a": "Bandra West, Santacruz West and Bandra East are served from the same nearby helper pool, with Juhu and Vile Parle slightly further along. The numbered roads, Khar Danda and the Linking Road belt all fall within Khar coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "khar"]
+      },
+      {
+        "id": "faq-mumbai-khar-2",
+        "q": "Which pincode does the Khar service area cover?",
+        "a": "Khar West falls under pincode 400052, which covers the numbered roads from Khar Road station out to Khar Danda. Khar East across the railway tracks has a separate pincode and is not part of this locality page.",
+        "scope": "locality",
+        "tags": ["mumbai", "khar"]
+      },
+      {
+        "id": "faq-mumbai-khar-3",
+        "q": "Do helpers in Khar need society gate passes?",
+        "a": "Older low-rise buildings and bungalows near Madhu Park usually manage entry directly with the household. The newer towers along Linking Road and the redeveloped plots typically ask the society office to register regular helpers.",
+        "scope": "locality",
+        "tags": ["mumbai", "khar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "santacruz-west": {
+    "neighbours": ["khar", "juhu", "vile-parle", "bandra-west", "bandra-east", "andheri-west"],
+    "landmarks": ["Santacruz Railway Station", "Juhu Tara Road", "Milan Subway", "Willingdon Catholic Gymkhana", "Linking Road (Santacruz)", "Gazdar Bandh"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Gazdar Bandh"],
+    "localIntro": "Santacruz West, pincode 400054, runs from Santacruz Railway Station westwards along Linking Road and Juhu Tara Road to the shoreline settlements near Juhu Koliwada. The housing is mixed: older cooperative societies and a few surviving bungalows on the lanes off S.V. Road, a good number of redeveloped mid-rise towers, and the dense Gazdar Bandh settlement towards the coast. Most households are families who have been in the area for a generation or more, with professionals moving into the newer buildings for the quick access to Bandra and the airport belt. The Willingdon Catholic Gymkhana and the schools along Linking Road give the area its settled, neighbourhood feel, while the Milan Subway connects the west side to Santacruz East under the tracks. Khar is immediately south, Juhu lies to the north-west along Juhu Tara Road, and Vile Parle is the next station up the line. Households here most often ask for daily cleaning and cooking help, and for reliable childcare support in the family-oriented societies.",
+    "commuteNotes": "Santacruz station on the Western line is the main access, with BEST buses along S.V. Road and Juhu Tara Road. Helpers from Gazdar Bandh and Juhu Koliwada walk in across the west side.",
+    "housingNotes": "Older cooperative buildings keep entry simple and hours flexible, while the redeveloped towers along Linking Road and Juhu Tara Road generally register regular domestic staff at the society gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-santacruz-west-1",
+        "q": "Which areas near Santacruz West do you also serve?",
+        "a": "Khar, Juhu and Vile Parle are served by the same nearby helper pool, with Bandra West a little further south. Coverage includes the lanes off S.V. Road, the Linking Road belt and Juhu Tara Road.",
+        "scope": "locality",
+        "tags": ["mumbai", "santacruz-west"]
+      },
+      {
+        "id": "faq-mumbai-santacruz-west-2",
+        "q": "Which pincode does the Santacruz West service area cover?",
+        "a": "Santacruz West falls under pincode 400054, which covers the area west of Santacruz station up to the Juhu boundary. Santacruz East across the Milan Subway carries a different pincode.",
+        "scope": "locality",
+        "tags": ["mumbai", "santacruz-west"]
+      },
+      {
+        "id": "faq-mumbai-santacruz-west-3",
+        "q": "Can helpers reach Santacruz West early in the morning?",
+        "a": "Yes. Santacruz station opens early and many helpers live within walking distance in Gazdar Bandh and the Juhu Koliwada side, so 7 am starts are generally workable in this locality.",
+        "scope": "locality",
+        "tags": ["mumbai", "santacruz-west"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "juhu": {
+    "neighbours": ["vile-parle", "santacruz-west", "andheri-west", "versova", "khar", "andheri", "bandra-west"],
+    "landmarks": ["Juhu Beach", "ISKCON Temple Juhu", "Prithvi Theatre", "Juhu Circle", "Juhu Koliwada", "Juhu Aerodrome"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Juhu Koliwada", "Nehru Nagar (Juhu)"],
+    "localIntro": "Juhu, pincode 400049, is the beachfront locality between Santacruz West and Andheri West, better known for Juhu Beach and the film-industry homes along Juhu Tara Road and the Juhu Scheme than for its everyday residential side. The housing is mixed: sea-facing bungalows and older cooperative buildings on the Juhu Scheme roads, newer high-rise towers near Juhu Circle, and the long-standing fishing village of Juhu Koliwada at the southern end of the beach. Households here are largely established families and elderly residents who have owned their homes for decades, with professionals renting in the newer buildings for the calm and the sea air. ISKCON Temple and Prithvi Theatre are the best-known landmarks, and Juhu Aerodrome marks the northern edge. Vile Parle is immediately east, Santacruz West lies south along Juhu Tara Road, and Andheri West and Versova continue north up the coast. Full-time cooks, live-in help for larger homes and elder-care support are the common asks, alongside daily cleaning for the apartment buildings.",
+    "commuteNotes": "Juhu has no railway station of its own; helpers come in via Vile Parle and Santacruz stations on the Western line and BEST buses along Juhu Tara Road and S.V. Road. Many walk from Juhu Koliwada and Nehru Nagar within the locality.",
+    "housingNotes": "Bungalows and older buildings on the Juhu Scheme roads generally manage staff entry directly, while the towers near Juhu Circle keep society registers and may ask for photo ID for regular helpers.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-juhu-1",
+        "q": "Which areas near Juhu do you also serve?",
+        "a": "Vile Parle, Santacruz West and Andheri West are served by the same nearby helper pool, with Versova further up the coast. Juhu Scheme, Juhu Tara Road and the Juhu Circle area all fall within Juhu coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "juhu"]
+      },
+      {
+        "id": "faq-mumbai-juhu-2",
+        "q": "Which pincode does the Juhu service area cover?",
+        "a": "Juhu falls under pincode 400049, which covers the Juhu Scheme, Juhu Tara Road and the beachfront up to Juhu Aerodrome. Adjacent Vile Parle West is pincode 400056 and Santacruz West is 400054.",
+        "scope": "locality",
+        "tags": ["mumbai", "juhu"]
+      },
+      {
+        "id": "faq-mumbai-juhu-3",
+        "q": "Is it easy for helpers to reach Juhu without a railway station nearby?",
+        "a": "Yes. Vile Parle and Santacruz stations are both within a short bus or auto ride, and a good share of helpers live in Juhu Koliwada and Nehru Nagar inside the locality itself, so morning and evening slots are generally workable.",
+        "scope": "locality",
+        "tags": ["mumbai", "juhu"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "vile-parle": {
+    "neighbours": ["juhu", "santacruz-west", "andheri", "andheri-west", "andheri-east", "khar", "versova"],
+    "landmarks": ["Vile Parle Railway Station", "Nanavati Max Hospital", "Mithibai College", "NMIMS", "Cooper Hospital", "Irla Market"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "students"],
+    "helperSourceAreas": [],
+    "localIntro": "Vile Parle West, pincode 400056, is one of the western suburbs' most settled residential neighbourhoods, laid out between Vile Parle Railway Station and the Juhu Scheme with S.V. Road running through its middle. The housing is mixed: long-established Gujarati and Maharashtrian cooperative societies, older bungalows in the Parle Tilak and Irla lanes, and a growing number of redeveloped towers. Households here are largely multi-generational families and elderly residents, with a steady student population drawn by Mithibai College and NMIMS on the Juhu side. Nanavati Max Hospital and Cooper Hospital are the area's medical anchors, and Irla Market is the everyday shopping hub. Juhu lies immediately west, Santacruz West is the next station south, and Andheri is one stop north; Vile Parle East and the airport sit across the tracks under a separate pincode. Households commonly look for vegetarian cooks familiar with Gujarati and Maharashtrian kitchens, daily cleaning help, and patient elder-care support for older residents in walk-up buildings.",
+    "commuteNotes": "Vile Parle station on the Western line and BEST buses along S.V. Road and Juhu Road serve the area, and most helpers walk from the station or come in from the Juhu and Santacruz sides.",
+    "housingNotes": "Older cooperative societies and bungalows keep timings flexible and entry informal, while the redeveloped towers along S.V. Road and Juhu Road usually register regular domestic staff with the society office.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-vile-parle-1",
+        "q": "Which areas near Vile Parle do you also serve?",
+        "a": "Juhu, Santacruz West and Andheri are served by the same nearby helper pool, with Andheri West and Andheri East slightly further out. The Parle Tilak lanes, Irla and the Juhu Scheme side all fall within Vile Parle coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "vile-parle"]
+      },
+      {
+        "id": "faq-mumbai-vile-parle-2",
+        "q": "Which pincode does the Vile Parle service area cover?",
+        "a": "This page covers Vile Parle West under pincode 400056, from the station out to the Juhu boundary near Mithibai College. Vile Parle East across the tracks carries a different pincode.",
+        "scope": "locality",
+        "tags": ["mumbai", "vile-parle"]
+      },
+      {
+        "id": "faq-mumbai-vile-parle-3",
+        "q": "Are vegetarian cooks available for households in Vile Parle?",
+        "a": "Yes. A large share of the households in the Vile Parle cooperative societies keep vegetarian kitchens, so cooks who are used to Gujarati and Maharashtrian preparations are commonly placed here. Preferences can be set at the time of the request.",
+        "scope": "locality",
+        "tags": ["mumbai", "vile-parle"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "andheri": {
+    "neighbours": ["andheri-west", "andheri-east", "vile-parle", "juhu", "jogeshwari-west", "versova", "santacruz-west"],
+    "landmarks": ["Andheri Railway Station", "Andheri Metro Station (Line 1)", "Gilbert Hill", "Bhavan's College", "S.V. Road", "Lallubhai Park"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families", "students"],
+    "helperSourceAreas": [],
+    "localIntro": "Andheri under pincode 400058 is the core of Andheri West around the railway station, taking in the S.V. Road belt, the lanes around Gilbert Hill and the Munshi Nagar area near Bhavan's College. It is the busiest interchange in the western suburbs, where the Western line meets Metro Line 1, and that connectivity shapes who lives here: working professionals in older cooperative buildings and redeveloped towers close to the station, families in the quieter lanes around Lallubhai Park, and students near Bhavan's College. The housing is mixed, ranging from decades-old societies and chawls near the station to new high-rises along S.V. Road. Gilbert Hill, the basalt column rising above the neighbourhood, is the area's most distinctive landmark. Andheri West's Lokhandwala and Four Bungalows side lies further west under pincode 400053, Andheri East and the airport belt are across the tracks, and Vile Parle is one station south. Demand is heavy for morning cooking and cleaning help timed around office and college hours, with families asking for full-day support.",
+    "commuteNotes": "Andheri station is the main arrival point, served by the Western line and Metro Line 1, with BEST buses fanning out along S.V. Road and Veera Desai Road. Most helpers walk from the station or come in from the Jogeshwari side.",
+    "housingNotes": "Older societies and chawls near the station handle entry informally, while the newer towers along S.V. Road and around Lallubhai Park usually require a registered pass for regular domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-andheri-1",
+        "q": "Which areas near Andheri do you also serve?",
+        "a": "Andheri West, Andheri East and Vile Parle are served by the same nearby helper pool, with Juhu, Jogeshwari West and Versova a little further out. The station area, Gilbert Hill and the Bhavan's College lanes all fall within this page's coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri"]
+      },
+      {
+        "id": "faq-mumbai-andheri-2",
+        "q": "Which pincode does the Andheri service area cover?",
+        "a": "This page covers pincode 400058, the Andheri West station belt along S.V. Road. Lokhandwala and Four Bungalows fall under 400053 on the Andheri West page, and Andheri East is under 400059 and 400093.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri"]
+      },
+      {
+        "id": "faq-mumbai-andheri-3",
+        "q": "Can helpers reach Andheri before office hours?",
+        "a": "Yes. Andheri station on the Western line and Metro Line 1 runs services from early morning, and many helpers come from within walking distance of the station, so slots starting between 6 and 8 am are generally workable.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "andheri-west": {
+    "neighbours": ["andheri", "versova", "juhu", "jogeshwari-west", "vile-parle", "andheri-east", "goregaon-west"],
+    "landmarks": ["Lokhandwala Complex", "D.N. Nagar Metro Station", "Infiniti Mall Andheri", "Kokilaben Dhirubhai Ambani Hospital", "Four Bungalows", "Andheri Sports Complex"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Behram Baug (Jogeshwari West)"],
+    "localIntro": "Andheri West under pincode 400053 covers Lokhandwala Complex, Four Bungalows, Seven Bungalows and the Oshiwara and Veera Desai Road belt, the part of Andheri that developed as planned apartment townships rather than around the railway station. The dominant housing form is the gated society: large cooperative complexes and high-rise towers with their own security, especially in Lokhandwala and along the Link Road, with a few older bungalow plots surviving in Four Bungalows. Households are mostly working professionals from the media and film production offices nearby, along with families who value the schools, Infiniti Mall and Kokilaben Dhirubhai Ambani Hospital within easy reach. D.N. Nagar Metro Station connects Line 1 and Line 2A, and the Andheri Sports Complex on Veera Desai Road is the main recreation ground. The station-side Andheri belt lies east under pincode 400058, Versova is to the north-west, and Juhu sits to the south. Cooking and cleaning help fitted around long working hours is the main need, with families in the larger societies asking for full-day helpers and nannies.",
+    "commuteNotes": "D.N. Nagar and Azad Nagar stations on Metro Line 1, the Line 2A stations along Link Road, and BEST buses on Link Road and Veera Desai Road bring helpers in. Many also walk from Behram Baug on the Jogeshwari West side.",
+    "housingNotes": "Most homes are in gated complexes with security desks, so regular helpers usually need a society-issued pass or ID registration, and timings are set within the society's visitor rules.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-andheri-west-1",
+        "q": "Which areas near Andheri West do you also serve?",
+        "a": "The Andheri station belt, Versova and Juhu are served by the same nearby helper pool, with Jogeshwari West and Vile Parle a little further. Lokhandwala, Four Bungalows, Seven Bungalows and Oshiwara all fall within Andheri West coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri-west"]
+      },
+      {
+        "id": "faq-mumbai-andheri-west-2",
+        "q": "Do helpers in Andheri West need society gate passes?",
+        "a": "Usually yes. Lokhandwala Complex, Four Bungalows and the Link Road towers are mostly gated societies with security desks, so households generally register a regular helper with the society office and hand over a pass for daily entry.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri-west"]
+      },
+      {
+        "id": "faq-mumbai-andheri-west-3",
+        "q": "Which pincode does the Andheri West service area cover?",
+        "a": "This page covers pincode 400053, which takes in Lokhandwala, Four Bungalows, Seven Bungalows and the Veera Desai Road belt. The station-side area around S.V. Road falls under 400058 on the Andheri page.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri-west"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "andheri-east": {
+    "neighbours": ["andheri", "vile-parle", "jogeshwari-east", "andheri-west", "powai", "kurla", "santacruz-west"],
+    "landmarks": ["Chhatrapati Shivaji Maharaj International Airport", "Marol Naka Metro Station", "MIDC Andheri", "Mahakali Caves", "Holy Spirit Hospital", "Western Express Highway Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Andheri East, under pincodes 400059 and 400093, is the office and airport side of Andheri, running from the railway station along Andheri-Kurla Road through Chakala and J.B. Nagar to Marol, MIDC and the Mahakali Caves Road belt. The housing is mixed: older cooperative societies in J.B. Nagar and Vijay Nagar, chawls and urban villages such as Marol Gaon, and new high-rise towers built around the office parks and the Western Express Highway. Households are predominantly working professionals employed in the MIDC, Chakala and airport-zone companies, along with families in the established societies near Holy Spirit Hospital and the Mahakali Caves. Metro Line 1 runs down the middle of the area with stations at Western Express Highway, Chakala, Airport Road and Marol Naka, and Line 3 now adds Marol Naka and MIDC-Andheri stops underground. The Andheri station belt lies across the tracks to the west, Jogeshwari East is north beyond the highway, and Powai sits to the east past Marol. Demand is strongest for morning and evening cooking and cleaning help fitted around shift-based and office timings.",
+    "commuteNotes": "Metro Line 1 (Western Express Highway, Chakala, Airport Road and Marol Naka stations), Line 7 at Gundavali and Andheri station's east exit all serve the area, along with BEST buses on Andheri-Kurla Road. Helpers also walk in from the Marol and Sahar village settlements.",
+    "housingNotes": "Older societies and chawls in J.B. Nagar and Marol keep entry simple, while the newer towers near the highway and MIDC follow gated-society rules with registered passes for regular staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-andheri-east-1",
+        "q": "Which areas near Andheri East do you also serve?",
+        "a": "The Andheri station belt, Vile Parle and Jogeshwari East are served by the same nearby helper pool, with Powai and Kurla further out. Chakala, J.B. Nagar, Marol, MIDC and the Mahakali Caves Road belt all fall within Andheri East coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri-east"]
+      },
+      {
+        "id": "faq-mumbai-andheri-east-2",
+        "q": "Which pincodes does the Andheri East service area cover?",
+        "a": "Andheri East is served under two pincodes: 400059, which covers the station side, Chakala, J.B. Nagar and Marol, and 400093, which covers the MIDC and Mahakali Caves Road belt. Both are handled as one locality here.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri-east"]
+      },
+      {
+        "id": "faq-mumbai-andheri-east-3",
+        "q": "Can helpers in Andheri East work around shift timings?",
+        "a": "Generally yes. With Metro Line 1 stations at Chakala, Airport Road and Marol Naka and buses on Andheri-Kurla Road, helpers can reach most societies early or late, and households with airport or IT shift timings can set fixed morning or evening slots at the time of booking.",
+        "scope": "locality",
+        "tags": ["mumbai", "andheri-east"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "versova": {
+    "neighbours": ["andheri-west", "andheri", "jogeshwari-west", "juhu", "vile-parle", "goregaon-west"],
+    "landmarks": ["Versova Beach", "Versova Metro Station", "Versova Jetty", "Versova Koliwada", "Yari Road", "Seven Bungalows"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Versova, pincode 400061, is the coastal end of Andheri West, where Yari Road and the Seven Bungalows side run out to Versova Beach and the jetty that ferries people across to Madh Island. The housing is mixed: apartment blocks along Yari Road and Aram Nagar, a scattering of bungalows and low-rise buildings near the shore, and the old fishing village of Versova Koliwada, which remains a working Koli settlement. Households are largely working professionals from film, television and advertising who have settled near the Lokhandwala and Yari Road studios, along with families drawn to the sea breeze and the relatively quiet lanes. Versova Metro Station is the western terminus of Metro Line 1 and the area's main transit link, and the beach front and jetty give the locality its distinctive character. Andheri West's Lokhandwala and Four Bungalows lie immediately east, Juhu is to the south along the coast, and Jogeshwari West sits across the creek to the north-east. The usual needs are cooks and daily cleaning help for professionals with irregular hours, plus full-day support for families.",
+    "commuteNotes": "Versova Metro Station on Line 1 and BEST buses along Yari Road and J.P. Road bring helpers in from the Andheri side, and many walk from the settlements within Versova Koliwada and the Yari Road lanes.",
+    "housingNotes": "Apartment societies on Yari Road and Aram Nagar generally keep a register of regular helpers at the gate, while the bungalows and older buildings near the beach handle entry directly with the household.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-versova-1",
+        "q": "Which areas near Versova do you also serve?",
+        "a": "Andheri West's Lokhandwala and Seven Bungalows side, the Andheri station belt and Juhu are served by the same nearby helper pool, with Jogeshwari West a little further. Yari Road, Aram Nagar and Versova Koliwada all fall within Versova coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "versova"]
+      },
+      {
+        "id": "faq-mumbai-versova-2",
+        "q": "Which pincode does the Versova service area cover?",
+        "a": "Versova falls under pincode 400061, which covers Yari Road, Aram Nagar, Versova Koliwada and the beachfront. The adjoining Lokhandwala and Four Bungalows area is pincode 400053 on the Andheri West page.",
+        "scope": "locality",
+        "tags": ["mumbai", "versova"]
+      },
+      {
+        "id": "faq-mumbai-versova-3",
+        "q": "How do helpers reach Versova?",
+        "a": "Versova Metro Station, the terminus of Metro Line 1, is the main arrival point, and BEST buses run along Yari Road and J.P. Road. Helpers who live within Versova Koliwada and the Yari Road lanes usually walk.",
+        "scope": "locality",
+        "tags": ["mumbai", "versova"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "jogeshwari-east": {
+    "neighbours": ["jogeshwari-west", "andheri-east", "goregaon-east", "powai", "andheri", "goregaon-west"],
+    "landmarks": ["Jogeshwari Caves", "SEEPZ", "Jogeshwari-Vikhroli Link Road (JVLR)", "Jogeshwari East Metro Station", "Aarey JVLR Metro Station", "Majas"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Jogeshwari East, pincode 400096, lies between the Western Express Highway and the edge of Aarey Colony, and is anchored by the SEEPZ export zone and the Jogeshwari-Vikhroli Link Road that carries traffic across to Powai. The housing is mixed: long-standing chawls and settlements in Meghwadi, Majas and Pratap Nagar, MHADA and cooperative buildings, and a newer line of high-rise towers along the JVLR and the highway. Households are a blend of working-class and middle-class families who have lived here for generations and professionals who have moved into the towers for the short commute to SEEPZ and the Andheri East offices. The Jogeshwari Caves, a rock-cut temple complex in Pratap Nagar, are the area's oldest landmark. Metro Line 7 stops at Jogeshwari East on the highway and Line 3 runs underground with stations at Aarey JVLR and SEEPZ. Jogeshwari West is across the railway line, Andheri East lies south along the highway, and Goregaon East is the next stretch north. Daily cleaning and cooking help for family homes is the main demand, with tower residents asking for fixed-time morning slots.",
+    "commuteNotes": "Jogeshwari station's east side, Jogeshwari East station on Metro Line 7 and the Aarey JVLR and SEEPZ stations on Line 3 serve the area, with BEST buses along the JVLR. Most helpers walk in from the settlements in Meghwadi and Majas.",
+    "housingNotes": "Chawls and older MHADA buildings manage entry informally with flexible timings, while the newer towers along the JVLR and the highway follow gated-society rules with registered passes for regular staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-jogeshwari-east-1",
+        "q": "Which areas near Jogeshwari East do you also serve?",
+        "a": "Jogeshwari West, Andheri East and Goregaon East are served by the same nearby helper pool, with Powai across the JVLR a little further. Meghwadi, Majas, Pratap Nagar and the SEEPZ side all fall within Jogeshwari East coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "jogeshwari-east"]
+      },
+      {
+        "id": "faq-mumbai-jogeshwari-east-2",
+        "q": "Which pincode does the Jogeshwari East service area cover?",
+        "a": "Jogeshwari East falls under pincode 400096, which includes SEEPZ, the JVLR belt and the residential pockets up to the Aarey boundary. Jogeshwari West across the tracks is pincode 400102.",
+        "scope": "locality",
+        "tags": ["mumbai", "jogeshwari-east"]
+      },
+      {
+        "id": "faq-mumbai-jogeshwari-east-3",
+        "q": "Do helpers in Jogeshwari East need society gate passes?",
+        "a": "In the newer towers along the JVLR and the Western Express Highway, yes; those societies generally register regular helpers at the gate. The older chawls and MHADA buildings in Meghwadi and Majas usually manage entry directly with the household.",
+        "scope": "locality",
+        "tags": ["mumbai", "jogeshwari-east"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "jogeshwari-west": {
+    "neighbours": ["jogeshwari-east", "andheri-west", "goregaon-west", "andheri", "versova", "goregaon-east"],
+    "landmarks": ["Jogeshwari Railway Station", "Oshiwara Metro Station", "Mega Mall Oshiwara", "Behram Baug", "S.V. Road", "Lower Oshiwara Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Behram Baug"],
+    "localIntro": "Jogeshwari West, pincode 400102, runs from Jogeshwari Railway Station across S.V. Road to the Oshiwara side of the Link Road, where the locality merges into the northern edge of Andheri West. The housing is mixed: dense chawls and settlements such as Behram Baug and the lanes around the station, older cooperative buildings along S.V. Road, and a belt of newer high-rise towers on the Oshiwara and Link Road side close to Mega Mall. Households range from long-settled working-class and middle-class families near the station to professionals who have taken flats in the Oshiwara towers for their proximity to the Lokhandwala offices and studios. Metro Line 2A's Oshiwara and Lower Oshiwara stations sit along the Link Road, and the Oshiwara police station and Mega Mall are the everyday reference points. Jogeshwari East lies across the tracks, Andheri West's Lokhandwala is directly south, and Goregaon West is the next stretch north. Demand centres on daily cleaning and cooking help for family homes, with the Oshiwara towers asking for fixed-slot morning helpers.",
+    "commuteNotes": "Jogeshwari station on the Western line, the Oshiwara and Lower Oshiwara stations on Metro Line 2A and BEST buses on S.V. Road and Link Road serve the area. A large share of helpers walk in from Behram Baug and the lanes near the station.",
+    "housingNotes": "Chawls and older buildings near the station and S.V. Road manage entry informally, while the Oshiwara and Link Road towers follow gated-society rules and register regular domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-jogeshwari-west-1",
+        "q": "Which areas near Jogeshwari West do you also serve?",
+        "a": "Jogeshwari East, Andheri West and Goregaon West are served by the same nearby helper pool. Oshiwara, Behram Baug, the S.V. Road belt and the Link Road towers all fall within Jogeshwari West coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "jogeshwari-west"]
+      },
+      {
+        "id": "faq-mumbai-jogeshwari-west-2",
+        "q": "Which pincode does the Jogeshwari West service area cover?",
+        "a": "Jogeshwari West falls under pincode 400102, which covers the station side, S.V. Road and the Oshiwara stretch of the Link Road. Jogeshwari East across the railway line is pincode 400096.",
+        "scope": "locality",
+        "tags": ["mumbai", "jogeshwari-west"]
+      },
+      {
+        "id": "faq-mumbai-jogeshwari-west-3",
+        "q": "Can helpers reach the Oshiwara towers in Jogeshwari West early?",
+        "a": "Yes. Many helpers live within walking distance in Behram Baug and the lanes near Jogeshwari station, and Metro Line 2A's Oshiwara station is on the Link Road, so early-morning slots at the Oshiwara societies are generally workable.",
+        "scope": "locality",
+        "tags": ["mumbai", "jogeshwari-west"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "goregaon-east": {
+    "neighbours": ["goregaon-west", "jogeshwari-east", "malad-east", "jogeshwari-west", "malad-west", "powai", "andheri-east"],
+    "landmarks": ["Film City (Dadasaheb Phalke Chitranagari)", "Aarey Milk Colony", "Oberoi Mall", "NESCO / Bombay Exhibition Centre", "Goregaon Railway Station", "Goregaon East Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helputSourceAreasNote": null,
+    "helperSourceAreas": [],
+    "localIntro": "Goregaon East, under pincodes 400063 and 400065, stretches from Goregaon Railway Station across the Western Express Highway to Film City and the green expanse of Aarey Milk Colony. The housing is mixed: older cooperative societies and MHADA colonies in Dindoshi and Nagari Niwara, chawls and settlements near the station, and large gated townships built along the highway around Oberoi Mall and NESCO, which have brought in a sizeable professional population. Households are therefore a blend of long-settled families in the older colonies and younger working couples in the new towers, many employed at the NESCO IT park and the offices along the highway. Metro Line 7 stops at Goregaon East and Aarey on the highway, and Film City continues to draw production staff into the area every day. Goregaon West is across the railway line, Jogeshwari East is the next stretch south along the highway, and Malad East lies to the north past Dindoshi. Daily cleaning and cooking help for families is the core demand, with the township societies asking for fixed-slot helpers registered with their security.",
+    "commuteNotes": "Goregaon station's east exit, the Goregaon East and Aarey stations on Metro Line 7 and BEST buses along the highway and the Aarey Road serve the area. Helpers also walk in from the settlements near the station and along Film City Road.",
+    "housingNotes": "The gated townships along the highway keep security desks and issue passes for regular domestic staff, while the older colonies in Dindoshi and Nagari Niwara and the chawls near the station manage entry directly with households.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-goregaon-east-1",
+        "q": "Which areas near Goregaon East do you also serve?",
+        "a": "Goregaon West, Jogeshwari East and Malad East are served by the same nearby helper pool, with Powai across Aarey a little further. Dindoshi, Nagari Niwara, the Film City Road belt and the townships near Oberoi Mall all fall within Goregaon East coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "goregaon-east"]
+      },
+      {
+        "id": "faq-mumbai-goregaon-east-2",
+        "q": "Which pincodes does the Goregaon East service area cover?",
+        "a": "Goregaon East is handled under two pincodes: 400063, which covers the station side and the highway belt around NESCO and Oberoi Mall, and 400065, which covers Film City Road, Aarey and the Dindoshi side. Both are treated as one locality here.",
+        "scope": "locality",
+        "tags": ["mumbai", "goregaon-east"]
+      },
+      {
+        "id": "faq-mumbai-goregaon-east-3",
+        "q": "Do helpers in Goregaon East need society gate passes?",
+        "a": "In the gated townships along the Western Express Highway, yes; those societies generally require regular helpers to be registered with security and carry a pass. The older MHADA colonies in Dindoshi and Nagari Niwara usually handle entry informally.",
+        "scope": "locality",
+        "tags": ["mumbai", "goregaon-east"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "goregaon-west": {
+    "neighbours": ["goregaon-east", "malad-west", "jogeshwari-west", "malad-east", "jogeshwari-east", "andheri-west", "versova"],
+    "landmarks": ["Goregaon Railway Station", "Ram Mandir Railway Station", "Bangur Nagar", "Goregaon West Metro Station", "S.V. Road", "Motilal Nagar"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Goregaon West, pincode 400104, is the residential side of Goregaon between the railway line and the Link Road, taking in Bangur Nagar, Motilal Nagar, Siddharth Nagar and the lanes along S.V. Road. The housing is mixed: MHADA and cooperative colonies from the 1970s and 1980s in Motilal Nagar and Siddharth Nagar, a few surviving chawls near the station, and a growing band of redeveloped towers along the Link Road on the Bangur Nagar side. Households are mainly middle-class families who have been in the colonies for decades, with professionals moving into the newer buildings for the metro and the office belt in Goregaon East and Malad. Goregaon and Ram Mandir stations serve the Western line, and Metro Line 2A's Goregaon West and Bangur Nagar stations run along the Link Road. Goregaon East lies across the tracks, Malad West is the next stretch north along the Link Road, and Jogeshwari West is south beyond Ram Mandir. Daily cleaning and cooking help for family homes is the main need, with elder-care support common in the older colony buildings.",
+    "commuteNotes": "Goregaon and Ram Mandir stations on the Western line, the Goregaon West and Bangur Nagar stations on Metro Line 2A and BEST buses on S.V. Road and Link Road bring helpers in, and many walk from the settlements near the station.",
+    "housingNotes": "The MHADA and cooperative colonies in Motilal Nagar and Siddharth Nagar handle entry informally with flexible hours, while the redeveloped Link Road towers around Bangur Nagar register regular domestic staff at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-goregaon-west-1",
+        "q": "Which areas near Goregaon West do you also serve?",
+        "a": "Goregaon East, Malad West and Jogeshwari West are served by the same nearby helper pool. Bangur Nagar, Motilal Nagar, Siddharth Nagar and the S.V. Road belt all fall within Goregaon West coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "goregaon-west"]
+      },
+      {
+        "id": "faq-mumbai-goregaon-west-2",
+        "q": "Which pincode does the Goregaon West service area cover?",
+        "a": "Goregaon West falls under pincode 400104, which covers the area between Goregaon station and the Link Road including Bangur Nagar and Motilal Nagar. Goregaon East across the railway line is under 400063 and 400065.",
+        "scope": "locality",
+        "tags": ["mumbai", "goregaon-west"]
+      },
+      {
+        "id": "faq-mumbai-goregaon-west-3",
+        "q": "How do helpers usually reach Goregaon West?",
+        "a": "Most arrive via Goregaon or Ram Mandir stations on the Western line, or via the Goregaon West and Bangur Nagar stops on Metro Line 2A along the Link Road. Helpers living near the station usually walk to the Motilal Nagar and S.V. Road buildings.",
+        "scope": "locality",
+        "tags": ["mumbai", "goregaon-west"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "malad-west": {
+    "neighbours": ["malad-east", "goregaon-west", "kandivali-west", "goregaon-east", "kandivali-east", "jogeshwari-west", "versova"],
+    "landmarks": ["Inorbit Mall Malad", "Infiniti Mall Malad", "Mindspace Malad", "Malad Railway Station", "Marve Road", "Orlem"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Malwani"],
+    "localIntro": "Malad West, pincode 400064, spreads from Malad Railway Station across S.V. Road and the Link Road towards Marve Road, Orlem and the Mindspace office belt near Chincholi Bunder. The housing is mixed: older cooperative buildings and the East Indian village lanes of Orlem, MHADA and chawl pockets near the station, and a large number of newer high-rise societies along the Link Road and Marve Road that have grown up around Inorbit Mall, Infiniti Mall and the Mindspace IT park. Households are a blend of long-settled families, many of them in the older Orlem and Liberty Garden lanes, and working professionals who took flats close to the Mindspace offices. Metro Line 2A's Malad West and Lower Malad stations sit on the Link Road. Goregaon West is the next stretch south, Kandivali West lies north past Charkop, and Malad East is across the tracks. Daily cleaning and cooking help for family homes is the main demand, with the Link Road societies asking for fixed morning slots for working couples.",
+    "commuteNotes": "Malad station on the Western line, the Malad West and Lower Malad stations on Metro Line 2A and BEST buses along S.V. Road, Link Road and Marve Road serve the area. A significant share of helpers come in from Malwani on the Marve Road side.",
+    "housingNotes": "Newer societies along the Link Road and Marve Road are gated with security desks and register regular helpers, while the older buildings in Orlem and near Liberty Garden handle entry directly with households.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-malad-west-1",
+        "q": "Which areas near Malad West do you also serve?",
+        "a": "Malad East, Goregaon West and Kandivali West are served by the same nearby helper pool. Orlem, Liberty Garden, the Link Road belt near Inorbit Mall and the Mindspace side all fall within Malad West coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "malad-west"]
+      },
+      {
+        "id": "faq-mumbai-malad-west-2",
+        "q": "Which pincode does the Malad West service area cover?",
+        "a": "Malad West falls under pincode 400064, which covers the station side, S.V. Road, the Link Road belt and Orlem. Malad East across the railway line is pincode 400097.",
+        "scope": "locality",
+        "tags": ["mumbai", "malad-west"]
+      },
+      {
+        "id": "faq-mumbai-malad-west-3",
+        "q": "Do helpers in Malad West need society gate passes?",
+        "a": "Most of the newer societies along the Link Road and Marve Road are gated and ask households to register a regular helper with security. The older buildings in Orlem and near Liberty Garden usually manage entry informally.",
+        "scope": "locality",
+        "tags": ["mumbai", "malad-west"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "malad-east": {
+    "neighbours": ["malad-west", "goregaon-east", "kandivali-east", "kandivali-west", "goregaon-west", "dahisar"],
+    "landmarks": ["Malad Railway Station", "Western Express Highway", "Kurar Village", "Kurar Metro Station", "Dindoshi Metro Station", "Sanjay Gandhi National Park"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Kurar Village", "Appapada"],
+    "localIntro": "Malad East, pincode 400097, runs from the east side of Malad Railway Station across the Western Express Highway to Kurar Village, Pathanwadi and the hillside settlements that back onto Sanjay Gandhi National Park. The housing is mixed in the fullest sense: dense settlements and chawls in Kurar Village and Appapada, older cooperative buildings between the station and the highway, and a fast-growing line of high-rise societies along the highway and Dindoshi that draw working professionals. Households range from long-settled working-class and middle-class families to younger couples in the new towers who commute to the Goregaon and Malad office parks. Metro Line 7 stops at Kurar and Dindoshi on the highway, which has made the eastern side much easier to reach. Malad West is across the tracks, Goregaon East lies south past Dindoshi, and Kandivali East is the next stretch north along the highway. Daily cleaning and cooking help for family homes is the main need, and because so many helpers live within the locality itself, morning slots are generally easy to fill.",
+    "commuteNotes": "Malad station's east side, the Kurar and Dindoshi stations on Metro Line 7 and BEST buses along the highway serve the area, and a large share of helpers walk in from Kurar Village and Appapada.",
+    "housingNotes": "The high-rise societies along the highway and in Dindoshi are gated and register regular helpers at the security desk, while the chawls and older buildings in Kurar and near the station manage entry directly with households.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-malad-east-1",
+        "q": "Which areas near Malad East do you also serve?",
+        "a": "Malad West, Goregaon East and Kandivali East are served by the same nearby helper pool. Kurar Village, Pathanwadi, Dindoshi and the highway belt all fall within Malad East coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "malad-east"]
+      },
+      {
+        "id": "faq-mumbai-malad-east-2",
+        "q": "Which pincode does the Malad East service area cover?",
+        "a": "Malad East falls under pincode 400097, which covers the area east of Malad station including Kurar Village, Pathanwadi and the Western Express Highway belt. Malad West across the line is pincode 400064.",
+        "scope": "locality",
+        "tags": ["mumbai", "malad-east"]
+      },
+      {
+        "id": "faq-mumbai-malad-east-3",
+        "q": "Are helpers available for early-morning slots in Malad East?",
+        "a": "Yes. Many helpers live within walking distance in Kurar Village and Appapada, and Metro Line 7's Kurar and Dindoshi stations serve the highway-side societies, so 6 to 8 am starts are generally workable.",
+        "scope": "locality",
+        "tags": ["mumbai", "malad-east"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "kandivali-east": {
+    "neighbours": ["kandivali-west", "malad-east", "dahisar", "malad-west", "goregaon-east", "goregaon-west"],
+    "landmarks": ["Thakur Village", "Lokhandwala Township Kandivali", "Growel's 101 Mall", "Akurli Metro Station", "Poisar Metro Station", "Kandivali Railway Station"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Damu Nagar"],
+    "localIntro": "Kandivali East, pincode 400101, lies between the Western Express Highway and the forest edge of Sanjay Gandhi National Park, and is best known for Thakur Village, Thakur Complex and Lokhandwala Township, the planned residential townships that give the area its character. The dominant housing form is the gated society: large cooperative complexes and high-rise towers with their own security and internal roads, with older MHADA and chawl pockets in Samta Nagar, Hanuman Nagar and along Akurli Road. Households are mostly families, many of them with school-age children, along with working professionals who commute down the highway to the Goregaon and Andheri office belts. Growel's 101 Mall on Akurli Road is the everyday shopping hub, and Metro Line 7's Akurli and Poisar stations on the highway now put the townships within a short walk of rapid transit. Kandivali West is across the railway line, Malad East is the next stretch south along the highway, and Dahisar lies north past Borivali. Full-day and fixed-slot helpers, cooks and childcare support for family homes are the common requirements.",
+    "commuteNotes": "The Akurli and Poisar stations on Metro Line 7, Kandivali station's east exit and BEST buses along Akurli Road and the highway serve the area. Many helpers walk in from Damu Nagar and the settlements along the park boundary.",
+    "housingNotes": "Thakur Village, Thakur Complex and Lokhandwala Township are gated townships with security at every entrance, so regular helpers generally need a society-issued pass or ID registration and follow the complex's visitor timings.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-kandivali-east-1",
+        "q": "Which areas near Kandivali East do you also serve?",
+        "a": "Kandivali West, Malad East and Dahisar are served by the same nearby helper pool. Thakur Village, Thakur Complex, Lokhandwala Township, Samta Nagar and the Akurli Road belt all fall within Kandivali East coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "kandivali-east"]
+      },
+      {
+        "id": "faq-mumbai-kandivali-east-2",
+        "q": "Do helpers in Kandivali East need society gate passes?",
+        "a": "Usually yes. The townships in Thakur Village and Lokhandwala Township are gated with security desks, so households generally register a regular helper with the society office and hand over a pass for daily entry.",
+        "scope": "locality",
+        "tags": ["mumbai", "kandivali-east"]
+      },
+      {
+        "id": "faq-mumbai-kandivali-east-3",
+        "q": "Which pincode does the Kandivali East service area cover?",
+        "a": "Kandivali East falls under pincode 400101, which takes in Thakur Village, Lokhandwala Township, Samta Nagar and Akurli Road. Kandivali West across the railway line is pincode 400067.",
+        "scope": "locality",
+        "tags": ["mumbai", "kandivali-east"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "kandivali-west": {
+    "neighbours": ["kandivali-east", "malad-west", "dahisar", "malad-east", "goregaon-west", "goregaon-east"],
+    "landmarks": ["Kandivali Railway Station", "Mahavir Nagar", "Charkop", "Kandivali West Metro Station", "Raghuleela Mega Mall", "Shatabdi Hospital"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Kandivali West, pincode 400067, extends from Kandivali Railway Station across S.V. Road and the Link Road into Mahavir Nagar and the planned sectors of Charkop, with the Charkop industrial estate and the metro depot at its western edge. The housing is mixed: cooperative societies from the 1980s and 1990s in Mahavir Nagar and Charkop, older buildings and chawls near the station, and a newer generation of redeveloped towers along the Link Road. Households are predominantly Gujarati and Maharashtrian families who have lived here for years, with a noticeable number of elderly residents in the older societies and younger couples in the redeveloped buildings. Raghuleela Mega Mall near the station and the municipal Shatabdi Hospital are everyday reference points, and Metro Line 2A's Kandivali West and Dahanukarwadi stations run along the Link Road. Kandivali East lies across the tracks, Malad West is the next stretch south, and Dahisar sits north beyond Borivali. Vegetarian cooks, daily cleaning help and elder-care support for the older societies are the common needs here.",
+    "commuteNotes": "Kandivali station on the Western line, the Kandivali West and Dahanukarwadi stations on Metro Line 2A and BEST buses on S.V. Road and Link Road serve the area, and most helpers walk from the station or the Charkop side.",
+    "housingNotes": "The cooperative societies in Mahavir Nagar and Charkop generally keep a simple register of regular helpers and allow flexible timings, while the redeveloped Link Road towers follow gated-society rules with passes for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-kandivali-west-1",
+        "q": "Which areas near Kandivali West do you also serve?",
+        "a": "Kandivali East, Malad West and Dahisar are served by the same nearby helper pool. Mahavir Nagar, Charkop, the S.V. Road belt and the Link Road towers all fall within Kandivali West coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "kandivali-west"]
+      },
+      {
+        "id": "faq-mumbai-kandivali-west-2",
+        "q": "Which pincode does the Kandivali West service area cover?",
+        "a": "Kandivali West falls under pincode 400067, which covers the area west of Kandivali station including Mahavir Nagar and Charkop. Kandivali East across the railway line is pincode 400101.",
+        "scope": "locality",
+        "tags": ["mumbai", "kandivali-west"]
+      },
+      {
+        "id": "faq-mumbai-kandivali-west-3",
+        "q": "Are vegetarian cooks available for households in Kandivali West?",
+        "a": "Yes. A large share of the families in the Mahavir Nagar and Charkop societies keep vegetarian kitchens, so cooks experienced with Gujarati and Maharashtrian preparations are commonly placed here. Dietary preferences can be set when making the request.",
+        "scope": "locality",
+        "tags": ["mumbai", "kandivali-west"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "dahisar": {
+    "neighbours": ["kandivali-west", "kandivali-east", "malad-west", "malad-east", "goregaon-west", "goregaon-east"],
+    "landmarks": ["Dahisar Railway Station", "Dahisar East Metro Station", "Dahisar Check Naka", "Sanjay Gandhi National Park", "Anand Nagar Metro Station", "Dahisar River"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Dahisar, pincode 400068, is the northernmost locality within Mumbai's municipal limits, sitting on both sides of the Western line between Borivali and the Dahisar Check Naka that marks the boundary with Mira Road. The pincode covers both Dahisar East and Dahisar West. The housing is mixed: older cooperative societies and chawls near the station and along S.V. Road, MHADA-style colonies in Anand Nagar and Ketkipada, and a fast-growing belt of new high-rise societies on the Link Road extension in the west and along the Western Express Highway in the east, where the land backs onto Sanjay Gandhi National Park. Households are mainly middle-class families, with a growing number of working professionals who chose Dahisar for its two metro lines: Line 2A along the Link Road and Line 7 along the highway meet at the Dahisar East interchange, with Anand Nagar and Kandarpada as the other local stops. Kandivali West and Kandivali East are the nearest covered localities south beyond Borivali, and Malad lies further down the line. Daily cleaning, cooking help and childcare support for family homes are the usual requirements.",
+    "commuteNotes": "Dahisar station on the Western line, the Dahisar East interchange between Metro Lines 2A and 7, and the Anand Nagar and Kandarpada stations on Line 2A serve the area, with BEST buses along S.V. Road and the highway. Some helpers also travel in from the Mira Road side across the check naka.",
+    "housingNotes": "The new societies along the Link Road extension and the highway are gated and register regular helpers at the security desk, while the older buildings and chawls near the station and in Anand Nagar manage entry directly with households.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-dahisar-1",
+        "q": "Which areas near Dahisar do you also serve?",
+        "a": "Kandivali West and Kandivali East are the nearest covered localities, with Malad West and Malad East further south. Dahisar East, Dahisar West, Anand Nagar, Ketkipada and the Link Road extension all fall within Dahisar coverage.",
+        "scope": "locality",
+        "tags": ["mumbai", "dahisar"]
+      },
+      {
+        "id": "faq-mumbai-dahisar-2",
+        "q": "Which pincode does the Dahisar service area cover?",
+        "a": "Dahisar falls under a single pincode, 400068, which covers both Dahisar East and Dahisar West up to the Dahisar Check Naka. Mira Road beyond the check naka is outside the Mumbai municipal area and is not part of this locality page.",
+        "scope": "locality",
+        "tags": ["mumbai", "dahisar"]
+      },
+      {
+        "id": "faq-mumbai-dahisar-3",
+        "q": "How do helpers reach Dahisar?",
+        "a": "Dahisar station on the Western line and the Dahisar East metro interchange between Lines 2A and 7 are the main arrival points, with Anand Nagar and Kandarpada stations on Line 2A serving the west side. Helpers living near the station and in Anand Nagar usually walk.",
+        "scope": "locality",
+        "tags": ["mumbai", "dahisar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

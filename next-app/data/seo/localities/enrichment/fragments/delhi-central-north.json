@@ -1,0 +1,492 @@
+{
+  "connaught-place": {
+    "neighbours": ["paharganj", "daryaganj", "old-delhi", "karol-bagh", "lodi-road", "rajinder-nagar", "patel-nagar", "civil-lines"],
+    "landmarks": ["Rajiv Chowk Metro Station", "Central Park", "Jantar Mantar", "Palika Bazaar", "Janpath Market"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Connaught Place sits at the heart of New Delhi under pincode 110001, its white colonnades arranged in inner and outer circles around Central Park. While the circles themselves are largely commercial, the blocks around Barakhamba Road, Janpath and Kasturba Gandhi Marg hold a mix of older apartments, government quarters and staff housing, so household needs here range from full-day help for families to short morning shifts for working professionals. Rajiv Chowk Metro Station, Jantar Mantar and Palika Bazaar anchor the area, keeping it busy through the day and well connected in every direction. Residential pockets are compact, and many households prefer helpers who can arrive early, before office-hour traffic builds. Paharganj lies just to the north-west, Daryaganj to the east and Karol Bagh a short ride west, and helpers serving homes around Connaught Place typically travel in from these denser neighbouring areas each morning.",
+    "commuteNotes": "Rajiv Chowk on the Blue and Yellow Lines and Shivaji Stadium on the Airport Express Line put Connaught Place within easy metro reach, and DTC buses connect it to every surrounding neighbourhood; many helpers walk in from the Paharganj side.",
+    "housingNotes": "Housing is a mix of older apartment blocks, government quarters and residential floors above commercial stretches; most buildings have watchmen rather than formal society gates, so entry arrangements and timings tend to be flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-connaught-place-1",
+        "q": "Which areas near Connaught Place do you also serve?",
+        "a": "Nearby coverage includes Paharganj, Daryaganj, Karol Bagh and Old Delhi, all a short distance from Connaught Place. Many helpers work across this central belt, so availability often overlaps between these areas.",
+        "scope": "locality",
+        "tags": ["delhi", "connaught-place"]
+      },
+      {
+        "id": "faq-delhi-connaught-place-2",
+        "q": "Which pincode does Connaught Place service cover?",
+        "a": "Connaught Place falls under pincode 110001. Homes in the surrounding blocks off Barakhamba Road, Janpath and Kasturba Gandhi Marg within this pincode are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "connaught-place"]
+      },
+      {
+        "id": "faq-delhi-connaught-place-3",
+        "q": "Do helpers need gate passes in Connaught Place buildings?",
+        "a": "Most residential blocks around Connaught Place are older buildings managed by watchmen rather than gated societies, so formal society passes are usually not needed. Government quarters in the area may ask for basic ID verification at entry.",
+        "scope": "locality",
+        "tags": ["delhi", "connaught-place"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "lodi-road": {
+    "neighbours": ["jangpura", "nizamuddin", "defence-colony", "lajpat-nagar", "andrews-ganj", "connaught-place", "daryaganj"],
+    "landmarks": ["Lodhi Garden", "Khan Market", "India Habitat Centre", "Safdarjung's Tomb", "Jawaharlal Nehru Stadium"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Lodi Road runs through one of central Delhi's greenest and most orderly belts, covered by pincode 110003. Housing here is a mix of government colonies such as Lodhi Colony and Lodhi Estate, older low-rise flats and a small number of private apartments, home to civil servants, professionals working in the nearby institutional offices and long-settled families, including many older residents. Lodhi Garden, Khan Market and the India Habitat Centre are all within walking distance, giving the area its unhurried, leafy character, with Safdarjung's Tomb marking its western end. Households here typically look for reliable part-time help for cooking and cleaning, and some families need elder-care support for parents living on their own. Jangpura and Nizamuddin lie just to the east, while Defence Colony and Lajpat Nagar are a short drive south, so helpers often serve homes across this whole cluster in a single day.",
+    "commuteNotes": "Jor Bagh on the Yellow Line and Khan Market and JLN Stadium on the Violet Line all serve the Lodi Road belt, and DTC buses run along Lodhi Road itself; many helpers walk between colonies within the area.",
+    "housingNotes": "Government colonies like Lodhi Colony are open low-rise layouts rather than gated towers, so helpers do not usually need society passes; individual blocks may expect helpers to be introduced to gate or block staff.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-lodi-road-1",
+        "q": "Do helpers in Lodi Road's government colonies need entry passes?",
+        "a": "Colonies like Lodhi Colony and Lodhi Estate are open government layouts rather than gated societies, so formal gate passes are generally not required. Individual blocks may still expect a helper to be introduced to the gate or block staff on the first visit.",
+        "scope": "locality",
+        "tags": ["delhi", "lodi-road"]
+      },
+      {
+        "id": "faq-delhi-lodi-road-2",
+        "q": "Which areas near Lodi Road do you also serve?",
+        "a": "Jangpura, Nizamuddin, Defence Colony and Lajpat Nagar are all close to Lodi Road and fall within the same service belt. Helpers frequently take up homes across several of these areas in one day.",
+        "scope": "locality",
+        "tags": ["delhi", "lodi-road"]
+      },
+      {
+        "id": "faq-delhi-lodi-road-3",
+        "q": "Which pincode does Lodi Road service cover?",
+        "a": "Lodi Road and its surrounding colonies fall under pincode 110003. This includes the residential blocks around Lodhi Colony, Lodhi Estate and the institutional stretch near the India Habitat Centre.",
+        "scope": "locality",
+        "tags": ["delhi", "lodi-road"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "karol-bagh": {
+    "neighbours": ["rajinder-nagar", "patel-nagar", "paharganj", "pusa", "connaught-place", "old-delhi", "daryaganj"],
+    "landmarks": ["Gaffar Market", "Ajmal Khan Road Market", "Karol Bagh Metro Station", "Jhandewalan Hanuman Temple", "Jhandewalan Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Anand Parbat"],
+    "localIntro": "Karol Bagh, under pincode 110005, is one of Delhi's classic mixed neighbourhoods, where multi-storey builder floors and older family homes rise above busy commercial stretches. Trading families who have lived here for generations share the area with working professionals and paying-guest tenants, so household help needs range from full-day cooks to short cleaning shifts. Gaffar Market, Ajmal Khan Road and the towering Hanuman statue at nearby Jhandewalan anchor daily life, while the Blue Line's Karol Bagh and Jhandewalan stations keep the area well connected. Lanes are dense and parking is scarce, which is one reason most families prefer helpers who live close by and come on foot or by metro; many travel in from the adjacent Anand Parbat side. Rajinder Nagar sits directly to the south, Patel Nagar to the west and Paharganj a short ride east, forming a continuous belt that helpers commonly serve together.",
+    "commuteNotes": "Karol Bagh and Jhandewalan stations on the Blue Line serve the area directly, and helpers also arrive on foot from adjacent pockets like Anand Parbat or by shared e-rickshaw along the main roads.",
+    "housingNotes": "The stock is dominated by walk-up builder floors and older homes above shops, with no large gated societies; entry is arranged directly with the household, and stairs rather than lifts are the norm.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-karol-bagh-1",
+        "q": "Which pincode does Karol Bagh service cover?",
+        "a": "Karol Bagh falls under pincode 110005, covering the residential blocks around Ajmal Khan Road, Gaffar Market and the lanes between them. Adjacent areas like Rajinder Nagar and Patel Nagar have their own separate pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "karol-bagh"]
+      },
+      {
+        "id": "faq-delhi-karol-bagh-2",
+        "q": "Which areas near Karol Bagh do you also serve?",
+        "a": "Rajinder Nagar, Patel Nagar, Paharganj and Pusa are all adjacent to Karol Bagh and covered as part of the same belt. Helpers working in Karol Bagh very often take homes in these neighbouring colonies too.",
+        "scope": "locality",
+        "tags": ["delhi", "karol-bagh"]
+      },
+      {
+        "id": "faq-delhi-karol-bagh-3",
+        "q": "Do helpers in Karol Bagh need society gate passes?",
+        "a": "Karol Bagh has almost no gated societies; homes are mostly builder floors and walk-ups reached directly from the lane. Entry is coordinated with the household itself rather than through a society office.",
+        "scope": "locality",
+        "tags": ["delhi", "karol-bagh"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "patel-nagar": {
+    "neighbours": ["rajinder-nagar", "pusa", "karol-bagh", "ramesh-nagar", "naraina", "punjabi-bagh"],
+    "landmarks": ["Patel Nagar Metro Station", "Shadipur Metro Station", "Pusa Road", "Indian Agricultural Research Institute (Pusa)"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Anand Parbat"],
+    "localIntro": "Patel Nagar, spread across its East, West and South blocks under pincode 110008, is a classic plotted colony where original single homes have largely given way to builder floors, three or four flats to a plot. Most households are families, joined by working professionals renting floors close to the Blue Line, which stops at both Patel Nagar and Shadipur stations along the colony's edge. The green campus of the Indian Agricultural Research Institute at Pusa borders the area to the south, and Pusa Road links it to Karol Bagh and central Delhi. Daily needs centre on part-time cooking and cleaning help, with many homes preferring fixed morning and evening slots. Rajinder Nagar and Karol Bagh adjoin the colony to the east, while Ramesh Nagar and Naraina lie a short distance away, and helpers commonly move between these adjacent colonies through the day, with several walking across from the Anand Parbat side.",
+    "commuteNotes": "Patel Nagar and Shadipur stations on the Blue Line sit along the colony's edge, and helpers also arrive on foot from the adjacent Anand Parbat settlement or by e-rickshaw along Pusa Road.",
+    "housingNotes": "Builder floors dominate: walk-up buildings of three to four flats on plotted lanes, without society gates or entry passes, so timings are arranged directly between household and helper; some lanes have RWA barriers but daytime entry is straightforward.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-patel-nagar-1",
+        "q": "Which areas near Patel Nagar do you also serve?",
+        "a": "Rajinder Nagar, Karol Bagh, Ramesh Nagar and Naraina all adjoin or sit close to Patel Nagar and are served as part of the same belt. Helpers frequently split their day between homes in two or three of these colonies.",
+        "scope": "locality",
+        "tags": ["delhi", "patel-nagar"]
+      },
+      {
+        "id": "faq-delhi-patel-nagar-2",
+        "q": "Do helpers in Patel Nagar need society gate passes?",
+        "a": "Patel Nagar is a builder-floor colony without gated societies, so no society pass is needed. Households coordinate timings directly, and any RWA lane barriers are generally open through working hours.",
+        "scope": "locality",
+        "tags": ["delhi", "patel-nagar"]
+      },
+      {
+        "id": "faq-delhi-patel-nagar-3",
+        "q": "Which pincode does Patel Nagar service cover?",
+        "a": "East, West and South Patel Nagar all fall under pincode 110008. The colony sits between the Blue Line metro corridor and the Pusa institute campus, and homes across all three blocks are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "patel-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "pusa": {
+    "neighbours": ["patel-nagar", "rajinder-nagar", "naraina", "karol-bagh", "ramesh-nagar", "delhi-cantt"],
+    "landmarks": ["Indian Agricultural Research Institute (Pusa Institute)", "National Physical Laboratory", "Shadipur Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Todapur", "Dasghara"],
+    "localIntro": "Pusa, under pincode 110012, is unlike most central Delhi localities: much of it is the leafy campus of the Indian Agricultural Research Institute, better known as the Pusa Institute, with staff quarters, institutional housing and pockets of private homes around its edges. The National Physical Laboratory sits along the same belt, and Shadipur Metro Station on the Blue Line is the nearest metro point for most residents. Households are largely scientists, government employees and settled families living in campus or government accommodation, and they typically need dependable part-time help for cooking, cleaning and occasional child care. The adjoining urban villages of Todapur and Dasghara sit right beside the campus and are home to many of the helpers who work in this belt. Patel Nagar and Rajinder Nagar lie immediately to the north and east, with Naraina to the south-west, so Pusa households also draw on the larger pool of helpers serving those colonies.",
+    "commuteNotes": "Shadipur on the Blue Line is the nearest metro station for most of the Pusa belt, and helpers from Todapur and Dasghara reach campus-edge homes on foot or by cycle; buses run along Pusa Road.",
+    "housingNotes": "Housing is mostly institutional: campus staff quarters and government blocks with regulated gate entry, alongside some private homes on the fringes, so residents may need to arrange gate entry for helpers as per campus or colony rules.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-pusa-1",
+        "q": "Does service cover homes inside the Pusa Institute campus?",
+        "a": "Homes in and around the IARI campus and the government quarters under pincode 110012 are covered. Since much of Pusa is institutional campus, residents may need to arrange gate entry for their helper as per campus rules.",
+        "scope": "locality",
+        "tags": ["delhi", "pusa"]
+      },
+      {
+        "id": "faq-delhi-pusa-2",
+        "q": "Which areas near Pusa do you also serve?",
+        "a": "Patel Nagar, Rajinder Nagar, Naraina and Karol Bagh all lie close to the Pusa belt and are covered as part of the same cluster. Helpers working in Pusa often also take homes in these adjoining colonies.",
+        "scope": "locality",
+        "tags": ["delhi", "pusa"]
+      },
+      {
+        "id": "faq-delhi-pusa-3",
+        "q": "Where do helpers serving Pusa usually come from?",
+        "a": "Many live in the adjoining villages of Todapur and Dasghara, right beside the institute campus, and reach homes on foot. Others travel in from the Patel Nagar side via Shadipur Metro Station on the Blue Line.",
+        "scope": "locality",
+        "tags": ["delhi", "pusa"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "rajinder-nagar": {
+    "neighbours": ["karol-bagh", "patel-nagar", "pusa", "naraina", "ramesh-nagar", "connaught-place"],
+    "landmarks": ["Sir Ganga Ram Hospital", "Rajendra Place Metro Station", "Shankar Road Market", "Karol Bagh Metro Station"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["students", "families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Rajinder Nagar, under pincode 110060, is best known for Old Rajinder Nagar's UPSC coaching centres, which fill its builder floors with students and paying-guest accommodation, while New Rajinder Nagar along Shankar Road remains a quieter, family-oriented plotted colony. Sir Ganga Ram Hospital stands beside the Old Rajinder Nagar edge on Pusa Road, and Rajendra Place Metro Station on the Blue Line is a short walk from most blocks. Household needs here are distinctive: alongside regular family cooking and cleaning, there is steady demand for tiffin-style cooking and room cleaning from student households and PGs. Karol Bagh adjoins the colony to the north and Patel Nagar to the west, with the green Pusa campus just beyond, and helpers routinely work across these adjacent areas in one day. Builder floors dominate the housing stock, so most buildings are walk-ups without formal society gates.",
+    "commuteNotes": "Rajendra Place and Karol Bagh stations on the Blue Line serve the colony, and helpers commonly move between Rajinder Nagar, Karol Bagh and Patel Nagar on foot or by shared e-rickshaw.",
+    "housingNotes": "The stock is walk-up builder floors, many converted to PGs and shared flats in Old Rajinder Nagar; there are no gated societies, so helpers deal directly with households and building caretakers.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-rajinder-nagar-1",
+        "q": "Can students in Old Rajinder Nagar PGs arrange part-time help?",
+        "a": "Part-time cooking and cleaning arrangements are common in Old Rajinder Nagar's PG and shared-flat belt near the coaching centres. Shorter fixed slots, sometimes shared between flatmates, are the usual pattern there.",
+        "scope": "locality",
+        "tags": ["delhi", "rajinder-nagar"]
+      },
+      {
+        "id": "faq-delhi-rajinder-nagar-2",
+        "q": "Which pincode does Rajinder Nagar service cover?",
+        "a": "Both Old and New Rajinder Nagar fall under pincode 110060. Coverage runs from the Pusa Road side near Sir Ganga Ram Hospital across to the Shankar Road blocks.",
+        "scope": "locality",
+        "tags": ["delhi", "rajinder-nagar"]
+      },
+      {
+        "id": "faq-delhi-rajinder-nagar-3",
+        "q": "Which areas near Rajinder Nagar do you also serve?",
+        "a": "Karol Bagh, Patel Nagar and the Pusa belt directly adjoin Rajinder Nagar and are served as one cluster. Connaught Place and Naraina are also within easy reach for helpers based in this area.",
+        "scope": "locality",
+        "tags": ["delhi", "rajinder-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "daryaganj": {
+    "neighbours": ["old-delhi", "connaught-place", "paharganj", "gandhi-nagar", "civil-lines", "nizamuddin"],
+    "landmarks": ["Delhi Gate", "Raj Ghat", "Feroz Shah Kotla", "Lok Nayak (LNJP) Hospital"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Daryaganj, under pincode 110002, sits where Old Delhi meets New Delhi, a dense mixed neighbourhood long associated with publishing houses and trading families. Housing runs from old walk-up apartments and haveli-style homes in the inner lanes to sturdier blocks along Netaji Subhash Marg, with many joint families who have lived here for decades. Delhi Gate marks its southern end, Feroz Shah Kotla and Raj Ghat lie just to the east, and Lok Nayak Hospital is on its doorstep. Households usually want experienced all-round help comfortable with larger family kitchens, and the narrow lanes mean helpers arrive on foot, by rickshaw or via Delhi Gate Metro Station on the Violet Line. Old Delhi begins immediately to the north, Connaught Place is a short ride west and Civil Lines lies further up the Ring Road, keeping Daryaganj well linked to the city's oldest and newest quarters alike.",
+    "commuteNotes": "Delhi Gate on the Violet Line serves Daryaganj directly, with Jama Masjid station one stop north, and the inner lanes are covered on foot or by cycle-rickshaw.",
+    "housingNotes": "Homes are mostly older walk-ups and haveli-style buildings without society gates, often with joint families across floors; helpers are engaged directly by households, and larger kitchens mean longer daily shifts are common.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-daryaganj-1",
+        "q": "Which areas near Daryaganj do you also serve?",
+        "a": "Old Delhi adjoins Daryaganj directly, and Connaught Place, Paharganj and Civil Lines are all a short ride away. Helpers based in this central belt commonly serve homes across several of these areas.",
+        "scope": "locality",
+        "tags": ["delhi", "daryaganj"]
+      },
+      {
+        "id": "faq-delhi-daryaganj-2",
+        "q": "Which pincode does Daryaganj service cover?",
+        "a": "Daryaganj falls under pincode 110002, from the Delhi Gate end up along Netaji Subhash Marg towards Old Delhi. Homes in both the main-road blocks and the inner lanes are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "daryaganj"]
+      },
+      {
+        "id": "faq-delhi-daryaganj-3",
+        "q": "How do helpers reach homes inside Daryaganj's lanes?",
+        "a": "Most arrive via Delhi Gate Metro Station on the Violet Line or by bus, then continue on foot or by cycle-rickshaw. The inner lanes are largely walking-only, so households usually agree timings that allow for this.",
+        "scope": "locality",
+        "tags": ["delhi", "daryaganj"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "old-delhi": {
+    "neighbours": ["daryaganj", "civil-lines", "paharganj", "connaught-place", "kamla-nagar", "karol-bagh"],
+    "landmarks": ["Red Fort", "Jama Masjid", "Chandni Chowk Metro Station", "Khari Baoli Spice Market", "Gurudwara Sis Ganj Sahib"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Old Delhi, under pincode 110006 and known to most as Chandni Chowk, is the city's historic core: a web of katras, havelis and walk-up family homes packed around some of India's most recognisable monuments. The Red Fort and Jama Masjid stand at its heart, Khari Baoli's wholesale spice market runs along its western edge, and Gurudwara Sis Ganj Sahib anchors the main Chandni Chowk stretch. Households here are overwhelmingly long-settled trading families, many living jointly across floors of the same building, and they typically need help experienced with big kitchens, festival-time workloads and early market-day starts. Lanes are too narrow for cars, so helpers move on foot or by rickshaw, with the Yellow Line's Chandni Chowk and Chawri Bazar stations close by. Daryaganj adjoins the area to the south, Paharganj lies just west beyond the railway line, and Civil Lines begins across the northern edge.",
+    "commuteNotes": "Chandni Chowk and Chawri Bazar stations on the Yellow Line and Jama Masjid and Lal Quila on the Violet Line ring the area; the final stretch to most homes is on foot or by cycle-rickshaw through the lanes.",
+    "housingNotes": "Housing is dense and old — havelis, katras and walk-ups with shared entrances rather than society gates — so helpers are engaged directly by families, and joint households often need help across multiple floors of one building.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-old-delhi-1",
+        "q": "Do you serve homes in the inner lanes of Chandni Chowk?",
+        "a": "Yes, homes in the katras and lanes off Chandni Chowk under pincode 110006 are covered. Helpers reach them on foot from the Chandni Chowk or Chawri Bazar metro stations, since vehicle access inside the lanes is limited.",
+        "scope": "locality",
+        "tags": ["delhi", "old-delhi"]
+      },
+      {
+        "id": "faq-delhi-old-delhi-2",
+        "q": "Which pincode does Old Delhi service cover?",
+        "a": "Old Delhi falls under pincode 110006, covering Chandni Chowk and the surrounding lanes between the Red Fort side and the Khari Baoli end. Adjacent Daryaganj has its own pincode, 110002.",
+        "scope": "locality",
+        "tags": ["delhi", "old-delhi"]
+      },
+      {
+        "id": "faq-delhi-old-delhi-3",
+        "q": "Which areas near Old Delhi do you also serve?",
+        "a": "Daryaganj directly adjoins Old Delhi to the south, with Paharganj just across the railway line and Civil Lines to the north. Connaught Place and Karol Bagh are also within a short metro ride for helpers working in this belt.",
+        "scope": "locality",
+        "tags": ["delhi", "old-delhi"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "paharganj": {
+    "neighbours": ["connaught-place", "karol-bagh", "old-delhi", "daryaganj", "rajinder-nagar", "patel-nagar"],
+    "landmarks": ["New Delhi Railway Station", "Main Bazaar Paharganj", "R.K. Ashram Marg Metro Station", "Jhandewalan Devi Temple"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Paharganj, under pincode 110055, faces the New Delhi Railway Station across its famous Main Bazaar, and its lanes mix guesthouses and shops with older family homes stacked two and three floors high. Behind the tourist-facing frontage it remains a dense residential quarter of long-settled families and working households, many running small businesses from the same buildings they live in. R.K. Ashram Marg Metro Station on the Blue Line sits at its western edge, and the Jhandewalan temple area is a short ride away. Household help needs lean towards practical, flexible arrangements: cleaning shifts that fit around shop hours and cooking help for joint families. Connaught Place is a short ride south-east, Karol Bagh lies west along Desh Bandhu Gupta Road and Old Delhi's Sadar Bazaar side begins just north, so helpers serving Paharganj usually cover neighbouring pockets on the same route.",
+    "commuteNotes": "R.K. Ashram Marg on the Blue Line and the New Delhi station complex on the Yellow and Airport Express Lines bracket Paharganj, and most helpers cover the lanes themselves on foot.",
+    "housingNotes": "Homes are mostly older walk-ups above or beside commercial premises, with no gated societies; helpers coordinate directly with households, and flexible timings around shop hours are common.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-paharganj-1",
+        "q": "Which pincode does Paharganj service cover?",
+        "a": "Paharganj falls under pincode 110055, including Main Bazaar and the residential lanes behind the New Delhi Railway Station side. Homes above and beside commercial buildings in these lanes are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "paharganj"]
+      },
+      {
+        "id": "faq-delhi-paharganj-2",
+        "q": "Which areas near Paharganj do you also serve?",
+        "a": "Connaught Place, Karol Bagh, Old Delhi and Daryaganj all sit within a short distance of Paharganj. Helpers in this central belt commonly serve homes across two or three of these areas in a day.",
+        "scope": "locality",
+        "tags": ["delhi", "paharganj"]
+      },
+      {
+        "id": "faq-delhi-paharganj-3",
+        "q": "Do helpers in Paharganj need building passes?",
+        "a": "Paharganj's homes are mostly older walk-ups without society gates, so no passes are needed. Entry and timings are agreed directly with the household, often worked around family shop hours.",
+        "scope": "locality",
+        "tags": ["delhi", "paharganj"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "kamla-nagar": {
+    "neighbours": ["civil-lines", "model-town", "ashok-vihar", "old-delhi", "azadpur", "karol-bagh"],
+    "landmarks": ["Delhi University North Campus", "Kamla Nagar Market", "Vishwavidyalaya Metro Station", "Hansraj College"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["students", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Kamla Nagar, under pincode 110007, lives to the rhythm of Delhi University's North Campus next door: its builder floors and older plotted homes house a large population of students in PGs and rented flats alongside long-resident families. Kamla Nagar Market, with its well-known food lanes, is the neighbourhood's centre of gravity, while Vishwavidyalaya Metro Station on the Yellow Line and campus colleges such as Hansraj College sit within walking distance. Demand for help splits accordingly: families want regular cooks and cleaners, while student flats and PGs look for shorter, flexible cleaning and cooking slots, often shared between flatmates. Civil Lines lies to the east, Model Town a little further north and Ashok Vihar across to the west, and many helpers work a circuit across these adjoining areas, moving between homes by e-rickshaw and on foot.",
+    "commuteNotes": "Vishwavidyalaya and GTB Nagar stations on the Yellow Line serve the North Campus belt around Kamla Nagar, and e-rickshaws cover the last stretch into the colony's lanes.",
+    "housingNotes": "Builder floors and older plotted homes dominate, many converted into student PGs; there are no gated societies, so helpers arrange entry and timings directly with households or PG caretakers.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-kamla-nagar-1",
+        "q": "Can student flats near Delhi University book help in Kamla Nagar?",
+        "a": "Shared student flats and PGs around the North Campus commonly arrange part-time cooking and cleaning in fixed slots. Many helpers in Kamla Nagar handle several such homes in one building or lane.",
+        "scope": "locality",
+        "tags": ["delhi", "kamla-nagar"]
+      },
+      {
+        "id": "faq-delhi-kamla-nagar-2",
+        "q": "Which pincode does Kamla Nagar service cover?",
+        "a": "Kamla Nagar falls under pincode 110007, covering the lanes around Kamla Nagar Market and the blocks facing the Delhi University North Campus side. Neighbouring Civil Lines and Model Town have their own pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "kamla-nagar"]
+      },
+      {
+        "id": "faq-delhi-kamla-nagar-3",
+        "q": "Which areas near Kamla Nagar do you also serve?",
+        "a": "Civil Lines, Model Town and Ashok Vihar are the closest covered areas, with Azadpur a little further north. Helpers in this university belt often serve homes across more than one of these localities.",
+        "scope": "locality",
+        "tags": ["delhi", "kamla-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "model-town": {
+    "neighbours": ["azadpur", "ashok-vihar", "kamla-nagar", "shalimar-bagh", "civil-lines", "burari"],
+    "landmarks": ["Model Town Metro Station", "Naini Lake", "Azadpur Mandi", "GTB Nagar Metro Station"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Model Town, under pincode 110009, is one of north Delhi's most established planned colonies, laid out in phases around the small Naini Lake. Its original bungalows have steadily been rebuilt as builder floors, so most plots now hold two to four family flats, home to business families, professionals and a sizeable number of older residents who have lived here for decades. Model Town Metro Station on the Yellow Line sits on the colony's edge, with the Azadpur interchange one stop away and GTB Nagar to the south. Households commonly look for stable long-term help: daily cooking and cleaning, and increasingly elder-care support for parents living independently. Azadpur adjoins the colony to the north-west, Kamla Nagar and the university belt lie to the south, and Shalimar Bagh is a short drive west, keeping Model Town connected to a wide pool of helpers from the surrounding areas.",
+    "commuteNotes": "Model Town station on the Yellow Line serves the colony directly, with the Azadpur Yellow-Pink interchange one stop away; e-rickshaws connect the station to the inner phases.",
+    "housingNotes": "The colony is plotted builder-floor stock with RWA-managed lanes rather than gated towers, so society passes are generally not needed; some RWAs keep visitor registers at lane gates.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-model-town-1",
+        "q": "Which areas near Model Town do you also serve?",
+        "a": "Azadpur, Kamla Nagar, Ashok Vihar and Shalimar Bagh all lie close to Model Town and are covered as part of the same north Delhi belt. Burari and Civil Lines are also within reach for helpers based here.",
+        "scope": "locality",
+        "tags": ["delhi", "model-town"]
+      },
+      {
+        "id": "faq-delhi-model-town-2",
+        "q": "Do helpers in Model Town need society gate passes?",
+        "a": "Model Town is a builder-floor colony with RWA-managed lanes rather than gated societies, so formal passes are generally not required. Some RWAs keep a visitor register at lane gates, which takes only a moment on first entry.",
+        "scope": "locality",
+        "tags": ["delhi", "model-town"]
+      },
+      {
+        "id": "faq-delhi-model-town-3",
+        "q": "Which pincode does Model Town service cover?",
+        "a": "Model Town falls under pincode 110009, covering its phases around Naini Lake. The adjacent Azadpur area has its own pincode, 110033.",
+        "scope": "locality",
+        "tags": ["delhi", "model-town"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "azadpur": {
+    "neighbours": ["model-town", "shalimar-bagh", "ashok-vihar", "burari", "kamla-nagar", "samaypur-badli"],
+    "landmarks": ["Azadpur Mandi", "Azadpur Metro Station", "Adarsh Nagar Metro Station", "Majlis Park Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Jahangirpuri"],
+    "localIntro": "Azadpur, under pincode 110033, is best known for its sprawling wholesale fruit and vegetable mandi, and the neighbourhood around it mixes older residential colonies, builder floors and homes tied to the market economy. Working days start early here, and many households — traders' families as well as salaried professionals — look for help that can begin before the morning rush. Connectivity is a genuine strength: Azadpur Metro Station is an interchange between the Yellow and Pink Lines, with Adarsh Nagar station and the Majlis Park Pink Line terminus also close by. Housing is mixed, from plotted family homes in the colonies to flats above commercial stretches, so helper arrangements vary from full-day to short shifts. Model Town adjoins Azadpur to the south-east, Shalimar Bagh lies across to the west and Burari spreads out to the north-east, while the large working-class settlement of Jahangirpuri to the north is home to many of the area's helpers.",
+    "commuteNotes": "The Azadpur Yellow-Pink interchange, Adarsh Nagar station and the Majlis Park terminus give helpers metro access from several directions, and many walk or take e-rickshaws in from nearby Jahangirpuri.",
+    "housingNotes": "Housing is mixed — plotted homes, builder floors and flats above commercial stretches — with few gated societies, so entry is arranged directly with households; early-morning start times are common given the mandi's hours.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-azadpur-1",
+        "q": "Which pincode does Azadpur service cover?",
+        "a": "Azadpur falls under pincode 110033, covering the residential colonies around the mandi and the metro interchange. Neighbouring Model Town is under 110009 and is covered separately.",
+        "scope": "locality",
+        "tags": ["delhi", "azadpur"]
+      },
+      {
+        "id": "faq-delhi-azadpur-2",
+        "q": "Which areas near Azadpur do you also serve?",
+        "a": "Model Town, Shalimar Bagh, Ashok Vihar and Burari are the closest covered areas around Azadpur. Helpers based in this belt regularly work homes across two or more of these localities.",
+        "scope": "locality",
+        "tags": ["delhi", "azadpur"]
+      },
+      {
+        "id": "faq-delhi-azadpur-3",
+        "q": "Where do helpers serving Azadpur usually come from?",
+        "a": "Many live in Jahangirpuri, the large settlement just north of Azadpur, and reach homes by e-rickshaw or on foot. The Yellow and Pink Line interchange at Azadpur also brings in helpers from further along both lines.",
+        "scope": "locality",
+        "tags": ["delhi", "azadpur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "civil-lines": {
+    "neighbours": ["kamla-nagar", "old-delhi", "model-town", "daryaganj", "azadpur", "burari"],
+    "landmarks": ["Civil Lines Metro Station", "Delhi Vidhan Sabha", "Qudsia Bagh", "Maidens Hotel", "Majnu ka Tila"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Civil Lines, under pincode 110054, is one of Delhi's oldest premium neighbourhoods, its shaded avenues lined with colonial-era bungalows, large independent houses and a small number of upscale apartment developments. Many properties still sit on generous plots with gardens, and households — often senior professionals, business families and older residents — typically employ multiple helpers, from cooks and cleaners to elder-care attendants. The Delhi Vidhan Sabha and the historic Maidens Hotel anchor the area, Qudsia Bagh lies at its southern end, and Civil Lines Metro Station on the Yellow Line runs right through it, with the riverside stretch near Majnu ka Tila marking its eastern edge. Kamla Nagar and the university area adjoin it to the west, Old Delhi begins just south past Kashmere Gate, and Model Town lies a short drive north, so helpers reach Civil Lines easily from several directions.",
+    "commuteNotes": "Civil Lines and Vidhan Sabha stations on the Yellow Line serve the area directly, and buses along the Ring Road connect it to Old Delhi and the university belt; e-rickshaws cover the internal avenues.",
+    "housingNotes": "Large independent houses and bungalows dominate, most with their own gates and staff arrangements rather than society-controlled entry, so households set timings flexibly; full-day and live-in roles are more common here than in most of north Delhi.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-civil-lines-1",
+        "q": "Do Civil Lines homes usually need full-day help?",
+        "a": "Many Civil Lines homes are large independent properties where households employ multiple helpers, often full-day or live-in. Part-time arrangements are also common in the area's apartment developments.",
+        "scope": "locality",
+        "tags": ["delhi", "civil-lines"]
+      },
+      {
+        "id": "faq-delhi-civil-lines-2",
+        "q": "Which pincode does Civil Lines service cover?",
+        "a": "Civil Lines falls under pincode 110054, from the Vidhan Sabha side down towards Qudsia Bagh and across to the riverside stretch near Majnu ka Tila. Homes along the metro corridor and the inner avenues are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "civil-lines"]
+      },
+      {
+        "id": "faq-delhi-civil-lines-3",
+        "q": "Which areas near Civil Lines do you also serve?",
+        "a": "Kamla Nagar adjoins Civil Lines to the west and Old Delhi begins just to the south, with Model Town and Azadpur a short ride north. Helpers working in this belt frequently cover homes in more than one of these areas.",
+        "scope": "locality",
+        "tags": ["delhi", "civil-lines"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "burari": {
+    "neighbours": ["azadpur", "model-town", "samaypur-badli", "civil-lines", "kamla-nagar", "alipur"],
+    "landmarks": ["Nirankari Samagam Ground", "Sant Nagar Market", "Burari Chowk"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Burari, under pincode 110084, is a fast-growing north Delhi locality along the western side of the Yamuna, made up largely of regularised colonies such as Sant Nagar, where narrow-plotted independent houses of two and three storeys dominate. It is overwhelmingly a family neighbourhood, with many first-time homeowners who moved here for affordable space, and household help needs centre on daily cleaning and cooking. The Nirankari Samagam Ground, one of the area's most recognisable open spaces, sits on its edge, and Burari Chowk connects the locality towards the Outer Ring Road. There is no metro station within Burari itself, so residents and helpers alike rely on buses and shared e-rickshaws, with Yellow Line stations like GTB Nagar a bus ride away. Azadpur and Model Town lie to the south-west, Samaypur Badli further west and Civil Lines down the riverside road to the south.",
+    "commuteNotes": "There is no metro station inside Burari, so helpers travel by bus and shared e-rickshaw along the main Burari road, with the nearest Yellow Line stations, such as GTB Nagar, a bus ride away; many helpers live within Burari's own colonies.",
+    "housingNotes": "The stock is narrow-plot independent houses in regularised colonies, without society gates or entry formalities, so helpers deal directly with families; most homes are walk-ups of two or three floors.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-burari-1",
+        "q": "Which pincode does Burari service cover?",
+        "a": "Burari falls under pincode 110084, including Sant Nagar and the surrounding regularised colonies. Homes across the main colony lanes off the Burari road are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "burari"]
+      },
+      {
+        "id": "faq-delhi-burari-2",
+        "q": "How do helpers travel within Burari?",
+        "a": "Burari has no metro station of its own, so helpers move by bus and shared e-rickshaw along the main road and colony lanes. Many helpers live locally within Burari's colonies, which keeps travel times short.",
+        "scope": "locality",
+        "tags": ["delhi", "burari"]
+      },
+      {
+        "id": "faq-delhi-burari-3",
+        "q": "Which areas near Burari do you also serve?",
+        "a": "Azadpur and Model Town are the nearest covered areas to the south-west, with Samaypur Badli further west and Civil Lines down the riverside road. Helpers from the Azadpur side also take homes in Burari's closer colonies.",
+        "scope": "locality",
+        "tags": ["delhi", "burari"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

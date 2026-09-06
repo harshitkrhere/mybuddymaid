@@ -1,0 +1,1692 @@
+{
+  "delhi/connaught-place": {
+    "lat": 28.6317695,
+    "lng": 77.2193804,
+    "display": "Connaught Place, New Delhi, Delhi, 110001, India"
+  },
+  "delhi/lodi-road": {
+    "lat": 28.5800535,
+    "lng": 77.2217923,
+    "display": "Bank of India, Najaf Khan Road, Khanna Market, Kidwai Nagar, New Delhi, Delhi, 110003, India"
+  },
+  "delhi/karol-bagh": {
+    "lat": 28.6529982,
+    "lng": 77.1890227,
+    "display": "Karol Bagh, Delhi, Central Delhi, Delhi, India"
+  },
+  "delhi/patel-nagar": {
+    "lat": 28.6450127,
+    "lng": 77.1692817,
+    "display": "Patel Nagar, Patel Road, South Patel Nagar, Patel Nagar, Karol Bagh, Delhi, Central Delhi, Delhi, 110008, India"
+  },
+  "delhi/pusa": {
+    "lat": 28.6362997,
+    "lng": 77.1576444,
+    "display": "Pusa, Karol Bagh, Delhi, Central Delhi, Delhi, India"
+  },
+  "delhi/rajinder-nagar": {
+    "lat": 28.6357855,
+    "lng": 77.1841395,
+    "display": "CGHS, New Rajinder Nagar, Shankar Road, New Rajendra Nagar, Karol Bagh, Delhi, Central Delhi, Delhi, 110060, India"
+  },
+  "delhi/daryaganj": {
+    "lat": 28.64609,
+    "lng": 77.243048,
+    "display": "Daryaganj, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi/old-delhi": {
+    "lat": 28.6652543,
+    "lng": 77.2043261,
+    "display": "Old Delhi, Delhi, India"
+  },
+  "delhi/paharganj": {
+    "lat": 28.6414989,
+    "lng": 77.2140607,
+    "display": "Paharganj, Karol Bagh, Delhi, Central Delhi, Delhi, 110055, India"
+  },
+  "delhi/nizamuddin": {
+    "lat": 28.5909417,
+    "lng": 77.2423341,
+    "display": "Nizamuddin, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi/jangpura": {
+    "lat": 28.5830386,
+    "lng": 77.2393151,
+    "display": "Jangpura, Shri Kuldeep Singh Gujral Marg, Lajpat Nagar, Central, Delhi, South East Delhi, Delhi, 110014, India"
+  },
+  "delhi/hauz-khas": {
+    "lat": 28.5498087,
+    "lng": 77.2077638,
+    "display": "Hauz Khas, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi/green-park": {
+    "lat": 28.5564421,
+    "lng": 77.2038699,
+    "display": "Green Park, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi/safdarjung-enclave": {
+    "lat": 28.56502,
+    "lng": 77.1925584,
+    "display": "Safdarjung Enclave, South, Delhi, South Delhi, Delhi, 110029, India"
+  },
+  "delhi/malviya-nagar": {
+    "lat": 28.5339201,
+    "lng": 77.2124474,
+    "display": "Malviya Nagar, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi/kalkaji": {
+    "lat": 28.5469476,
+    "lng": 77.258801,
+    "display": "Kalkaji, Central, Delhi, South East Delhi, Delhi, 110019, India"
+  },
+  "delhi/chanakyapuri": {
+    "lat": 28.5946775,
+    "lng": 77.1885212,
+    "display": "Chanakyapuri, New Delhi, Delhi, 110021, India"
+  },
+  "delhi/rk-puram": {
+    "lat": 28.5503805,
+    "lng": 77.1855231,
+    "display": "R. K. Puram, IIT Flyover, Hauz Khas, South, Delhi, South Delhi, Delhi, 110016, India"
+  },
+  "delhi/lajpat-nagar": {
+    "lat": 28.5660924,
+    "lng": 77.2432851,
+    "display": "Lajpat Nagar, Central, Delhi, South East Delhi, Delhi, 110065, India"
+  },
+  "delhi/defence-colony": {
+    "lat": 28.5713575,
+    "lng": 77.2330402,
+    "display": "Defence Colony, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi/new-friends-colony": {
+    "lat": 28.5671008,
+    "lng": 77.2697643,
+    "display": "New Friends Colony, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi/okhla": {
+    "lat": 28.5636616,
+    "lng": 77.2890546,
+    "display": "Okhla, Jamia Nagar, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi/mehrauli": {
+    "lat": 28.5218262,
+    "lng": 77.1783232,
+    "display": "Mehrauli, South, Delhi, South Delhi, Delhi, 110030, India"
+  },
+  "delhi/greater-kailash": {
+    "lat": 28.5419077,
+    "lng": 77.2384925,
+    "display": "Greater Kailash, Ho Chi Minh Marg, Greater Kailash, Alaknanda, South, Delhi, South Delhi, Delhi, 110019, India"
+  },
+  "delhi/andrews-ganj": {
+    "lat": 28.5651135,
+    "lng": 77.2280152,
+    "display": "Andrews Ganj, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi/vasant-vihar": {
+    "lat": 28.557827,
+    "lng": 77.1611168,
+    "display": "Vasant Vihar, Munirka Marg, Vasant Vihar, South, Delhi, South Delhi, Delhi, 110057, India"
+  },
+  "delhi/pushp-vihar": {
+    "lat": 28.522712,
+    "lng": 77.2230873,
+    "display": "Pushp Vihar, Sector 5, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi/east-of-kailash": {
+    "lat": 28.5570322,
+    "lng": 77.2446139,
+    "display": "East of Kailash, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi/munirka": {
+    "lat": 28.554886,
+    "lng": 77.1710841,
+    "display": "Munirka, South, New Delhi, South Delhi, Delhi, 110057, India"
+  },
+  "delhi/saket": {
+    "lat": 28.521168,
+    "lng": 77.2022237,
+    "display": "Saket, Mehrauli Badarpur Road, Lado Sarai, South, Delhi, South Delhi, Delhi, 110030, India"
+  },
+  "delhi/vasant-kunj": {
+    "lat": 28.5292495,
+    "lng": 77.1541335,
+    "display": "Vasant Kunj, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi/chhatarpur": {
+    "lat": 28.5067242,
+    "lng": 77.1750019,
+    "display": "Chhatarpur, Acharya Shri Tulsi Marg, Chhattarpur, South, Delhi, South Delhi, Delhi, 110030, India"
+  },
+  "delhi/sarita-vihar": {
+    "lat": 28.5334785,
+    "lng": 77.2935232,
+    "display": "Sarita Vihar, Central, Delhi, South East Delhi, Delhi, India"
+  },
+  "delhi/sangam-vihar": {
+    "lat": 28.5057128,
+    "lng": 77.2484672,
+    "display": "Sangam Vihar, Central, Delhi, South East Delhi, Delhi, 110080, India"
+  },
+  "delhi/sarojini-nagar": {
+    "lat": 28.575817,
+    "lng": 77.1980786,
+    "display": "Sarojini Nagar, Cross Road Number 3, Sarojini Nagar, New Delhi, Delhi, 110023, India"
+  },
+  "delhi/badarpur": {
+    "lat": 28.4932633,
+    "lng": 77.3030303,
+    "display": "Badarpur, Mathura Road, Badarpur, Central, Delhi, South East Delhi, Delhi, 121009, India"
+  },
+  "delhi/dwarka": {
+    "lat": 28.6149362,
+    "lng": 77.0227628,
+    "display": "Dwarka - Kakrola (Blue Line), स्वतंत्रता सेनानी श्री छोटू मार्ग, Dwarka, Najafgarh, Delhi, South West Delhi, Delhi, 110078, India"
+  },
+  "delhi/delhi-cantt": {
+    "lat": 28.5982897,
+    "lng": 77.1234689,
+    "display": "Delhi Cantonment, New Delhi, Delhi, India"
+  },
+  "delhi/mahipalpur": {
+    "lat": 28.544537,
+    "lng": 77.1279229,
+    "display": "Mahipalpur, Delhi, South West Delhi, Delhi, 110037, India"
+  },
+  "delhi/rajokari": {
+    "lat": 28.5124848,
+    "lng": 77.1194143,
+    "display": "Rajokari Water Body, South, Delhi, South Delhi, Delhi, India"
+  },
+  "delhi/najafgarh": {
+    "lat": 28.6124504,
+    "lng": 76.9865067,
+    "display": "Najafgarh, Shivaji Marg, Najafgarh, Delhi, South West Delhi, Delhi, 110043, India"
+  },
+  "delhi/palam": {
+    "lat": 28.5918933,
+    "lng": 77.0828242,
+    "display": "Palam, Najafgarh, Delhi, South West Delhi, Delhi, 110045, India"
+  },
+  "delhi/nangal-raya": {
+    "lat": 28.6093967,
+    "lng": 77.1103352,
+    "display": "Nangal Raya, West, Delhi, West Delhi, Delhi, India"
+  },
+  "delhi/arjun-garh": {
+    "lat": 28.4787294,
+    "lng": 77.1209508,
+    "display": "Arjangarh, Acharya Shri Tulsi Marg, Chattarpur Farms, South, Delhi, South Delhi, Delhi, 110047, India"
+  },
+  "delhi/chhawla": {
+    "lat": 28.5623044,
+    "lng": 77.0037102,
+    "display": "Chhawla, Najafgarh, Delhi, South West Delhi, Delhi, India"
+  },
+  "delhi/mahavir-enclave": {
+    "lat": 28.600032,
+    "lng": 77.0789777,
+    "display": "Mahavir Enclave, Najafgarh, Delhi, South West Delhi, Delhi, 110045, India"
+  },
+  "delhi/ramesh-nagar": {
+    "lat": 28.6527444,
+    "lng": 77.1316496,
+    "display": "Ramesh Nagar, Shivaji Marg, Punjabi Bagh, Karol Bagh, Delhi, Central Delhi, Delhi, 110026, India"
+  },
+  "delhi/punjabi-bagh": {
+    "lat": 28.672995,
+    "lng": 77.1461239,
+    "display": "Punjabi Bagh, Rohtak Road, Rampura, Ashok Vihar, Keshavpuram, Delhi, Central North Delhi, Delhi, 110035, India"
+  },
+  "delhi/rajouri-garden": {
+    "lat": 28.6490563,
+    "lng": 77.1227198,
+    "display": "Rajouri Garden (Blue Line), Shivaji Marg, Tilak Nagar Industrial Area, Mayapuri, West, Delhi, West Delhi, Delhi, 110027, India"
+  },
+  "delhi/tagore-garden": {
+    "lat": 28.6437265,
+    "lng": 77.11282,
+    "display": "Tagore Garden, Shivaji Marg, DLF Indl Area, Punjabi Bagh, West, Delhi, West Delhi, Delhi, 110027, India"
+  },
+  "delhi/naraina": {
+    "lat": 28.6264562,
+    "lng": 77.1349668,
+    "display": "Naraina, Karol Bagh, Delhi, Central Delhi, Delhi, 110028, India"
+  },
+  "delhi/janakpuri": {
+    "lat": 28.6219272,
+    "lng": 77.0874757,
+    "display": "Janakpuri, West, Delhi, West Delhi, Delhi, India"
+  },
+  "delhi/tilak-nagar": {
+    "lat": 28.6365482,
+    "lng": 77.0964961,
+    "display": "Tilak Nagar, Tilak Nagar Round About, West, Delhi, West Delhi, Delhi, 110018, India"
+  },
+  "delhi/nangloi": {
+    "lat": 28.6824007,
+    "lng": 77.0647319,
+    "display": "Nangloi, Rohtak Road, Nangloi Extension, Narela, Delhi, Outer North Delhi, Delhi, 110041, India"
+  },
+  "delhi/uttam-nagar": {
+    "lat": 28.6215226,
+    "lng": 77.0611064,
+    "display": "Uttam Nagar, West, Delhi, West Delhi, Delhi, 110059, India"
+  },
+  "delhi/paschim-vihar": {
+    "lat": 28.6695782,
+    "lng": 77.095956,
+    "display": "Paschim Vihar, Delhi, Central North Delhi, Delhi, India"
+  },
+  "delhi/hari-nagar": {
+    "lat": 28.6296489,
+    "lng": 77.1119344,
+    "display": "Hari Nagar, West, Delhi, West Delhi, Delhi, 110064, India"
+  },
+  "delhi/kamla-nagar": {
+    "lat": 28.6806752,
+    "lng": 77.2039504,
+    "display": "Kamla Nagar, Keshavpuram, Delhi, Central North Delhi, Delhi, India"
+  },
+  "delhi/model-town": {
+    "lat": 28.707334,
+    "lng": 77.1885231,
+    "display": "Model Town, Keshavpuram, Delhi, Central North Delhi, Delhi, India"
+  },
+  "delhi/azadpur": {
+    "lat": 28.7070448,
+    "lng": 77.1803722,
+    "display": "Azadpur (Yellow Line), Mahatma Gandhi Marg, Ashok Vihar, Shalimar Bagh, Keshavpuram, Delhi, Central North Delhi, Delhi, 110088, India"
+  },
+  "delhi/civil-lines": {
+    "lat": 28.6806862,
+    "lng": 77.2225999,
+    "display": "Civil Lines, City & Sadar, Delhi, Old Delhi, Delhi, 110054, India"
+  },
+  "delhi/burari": {
+    "lat": 28.7536438,
+    "lng": 77.2016511,
+    "display": "Burari, Civil Lines, Delhi, North Delhi, Delhi, 110084, India"
+  },
+  "delhi/ashok-vihar": {
+    "lat": 28.6885171,
+    "lng": 77.1739339,
+    "display": "Ashok Vihar, Ashok Vihar - I, Keshavpuram, Delhi, Central North Delhi, Delhi, 110052, India"
+  },
+  "delhi/pitampura": {
+    "lat": 28.7032676,
+    "lng": 77.1322497,
+    "display": "Madhuban Chowk, Lala Jagat Narayan marg, Kapil Vihar, Pitampura, Keshavpuram, Delhi, Central North Delhi, Delhi, 110034, India"
+  },
+  "delhi/shakurpur": {
+    "lat": 28.6857668,
+    "lng": 77.1496094,
+    "display": "Shakurpur, Mahatma Gandhi Road, Block C5, Ashok Vihar, Shalimar Bagh, Keshavpuram, Delhi, Central North Delhi, Delhi, 110035, India"
+  },
+  "delhi/alipur": {
+    "lat": 28.7973118,
+    "lng": 77.138667,
+    "display": "Alipur, Narela, Delhi, Outer North Delhi, Delhi, 110036, India"
+  },
+  "delhi/bawana": {
+    "lat": 28.79966,
+    "lng": 77.0328847,
+    "display": "Bawana, Narela, Delhi, Outer North Delhi, Delhi, India"
+  },
+  "delhi/narela": {
+    "lat": 28.8464766,
+    "lng": 77.0856631,
+    "display": "Narela, Bawana road, Narela, Delhi, Outer North Delhi, Delhi, 110040, India"
+  },
+  "delhi/samaypur-badli": {
+    "lat": 28.7446411,
+    "lng": 77.1382701,
+    "display": "Samaypur Badli, Samaypur Underpass, Rohini, Delhi, North West Delhi, Delhi, 110089, India"
+  },
+  "delhi/shakur-basti": null,
+  "delhi/kanjhawala": {
+    "lat": 28.7358173,
+    "lng": 77.0043151,
+    "display": "Kanjhawala, Narela, Delhi, Outer North Delhi, Delhi, India"
+  },
+  "delhi/rohini": {
+    "lat": 28.7063083,
+    "lng": 77.1087892,
+    "display": "Rohini, Delhi, North West Delhi, Delhi, India"
+  },
+  "delhi/shalimar-bagh": {
+    "lat": 28.7019574,
+    "lng": 77.1654317,
+    "display": "Shalimar Bagh, Shalimar Bagh Flyover, Jailer Wala Bagh, Ashok Vihar, Shalimar Bagh, Keshavpuram, Delhi, Central North Delhi, Delhi, 110088, India"
+  },
+  "delhi/mayur-vihar": {
+    "lat": 28.6098555,
+    "lng": 77.2926318,
+    "display": "Mayur Vihar, Shahdara South, Delhi, East Delhi, Delhi, 110091, India"
+  },
+  "delhi/mayur-vihar-phase-3": null,
+  "delhi/preet-vihar": {
+    "lat": 28.6414409,
+    "lng": 77.2952594,
+    "display": "Preet Vihar, Vikas Marg, D Block, Preet Vihar, Indraprastha Extension, Shahdara South, Delhi, East Delhi, Delhi, 110051, India"
+  },
+  "delhi/laxmi-nagar": {
+    "lat": 28.6305974,
+    "lng": 77.277523,
+    "display": "Laxmi Nagar, Laxmi Nagar Metro Station, Vikas Marg, Vir Savarkar Block, Shahdara South, Delhi, East Delhi, Delhi, 110051, India"
+  },
+  "delhi/vasundhara-enclave": {
+    "lat": 28.6017308,
+    "lng": 77.3211059,
+    "display": "Vasundhara Enclave, Delhi, East Delhi, Delhi, 110096, India"
+  },
+  "delhi/gandhi-nagar": {
+    "lat": 28.6587904,
+    "lng": 77.2715878,
+    "display": "Gandhi Nagar, Shahdara South, Delhi, East Delhi, Delhi, 110031, India"
+  },
+  "delhi/vivek-vihar": {
+    "lat": 28.6691641,
+    "lng": 77.312267,
+    "display": "Vivek Vihar, Delhi, North East Delhi, Delhi, India"
+  },
+  "delhi/shahdara": {
+    "lat": 28.6734298,
+    "lng": 77.2898858,
+    "display": "Shahdara, Makki Sarai Railway Road, Naveen Shahdara, Shahdara, Babarpur, Shahdara North, Delhi, North East Delhi, Delhi, 110032, India"
+  },
+  "delhi/bhajanpura": {
+    "lat": 28.7009399,
+    "lng": 77.2617817,
+    "display": "Bhajanpura, Shahdara North, Delhi, North East Delhi, Delhi, 110053, India"
+  },
+  "delhi/seelampur": {
+    "lat": 28.6698165,
+    "lng": 77.2668137,
+    "display": "Seelampur, Ajit Nagar Gali No. 5, Ajit Nagar, Shahdara South, Delhi, East Delhi, Delhi, 110031, India"
+  },
+  "delhi/karawal-nagar": {
+    "lat": 28.7311406,
+    "lng": 77.2747898,
+    "display": "Karawal Nagar, Shahdara North, Delhi, North East Delhi, Delhi, 110094, India"
+  },
+  "noida/sector-12": {
+    "lat": 28.5951184,
+    "lng": 77.3384862,
+    "display": "Sector 12, Sector 10, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-15": {
+    "lat": 28.5827979,
+    "lng": 77.3102221,
+    "display": "Sector 15, Chilla, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-16": {
+    "lat": 28.5778608,
+    "lng": 77.3150912,
+    "display": "Sector 16, Chilla, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-18": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-19": {
+    "lat": 28.5783966,
+    "lng": 77.3247692,
+    "display": "Sector 19, Nithari, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-20": {
+    "lat": 28.5832586,
+    "lng": 77.3313743,
+    "display": "Sector 20, Sector 10, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-21": {
+    "lat": 28.5868228,
+    "lng": 77.3361622,
+    "display": "Sector 21, Sector 10, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-22": {
+    "lat": 28.5952028,
+    "lng": 77.3472792,
+    "display": "Sector 22, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-27": {
+    "lat": 28.5746768,
+    "lng": 77.3287281,
+    "display": "Sector 27, Nithari, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-28": {
+    "lat": 28.571608,
+    "lng": 77.3318283,
+    "display": "Sector 28, Nithari, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-29": {
+    "lat": 28.5708315,
+    "lng": 77.3358207,
+    "display": "Sector 29, Nithari, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-30": {
+    "lat": 28.5733021,
+    "lng": 77.3391732,
+    "display": "Sector 30, Nithari, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-37": {
+    "lat": 28.4698857,
+    "lng": 77.5317922,
+    "display": "37, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "noida/sector-41": {
+    "lat": 28.5662237,
+    "lng": 77.3617456,
+    "display": "Sector 41, Noida City Centre, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-43": {
+    "lat": 28.5575946,
+    "lng": 77.351679,
+    "display": "Sector 43, Sadarpur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-44": {
+    "lat": 28.5531837,
+    "lng": 77.3381716,
+    "display": "Sector 44, Chhalera, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-45": {
+    "lat": 28.5506021,
+    "lng": 77.3505128,
+    "display": "Sector 45, Sadarpur, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-46": {
+    "lat": 28.5521627,
+    "lng": 77.3606057,
+    "display": "Sector 46, Sadarpur, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201303, India"
+  },
+  "noida/sector-47": {
+    "lat": 28.5498284,
+    "lng": 77.3700699,
+    "display": "Sector 47, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-50": {
+    "lat": 28.5711552,
+    "lng": 77.3674862,
+    "display": "Sector 50, Noida City Centre, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-51": {
+    "lat": 28.5821535,
+    "lng": 77.371457,
+    "display": "Sector 51, Noida City Centre, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-52": {
+    "lat": 28.5885198,
+    "lng": 77.3689065,
+    "display": "Sector 52, Mamura, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-55": {
+    "lat": 28.6043261,
+    "lng": 77.3480293,
+    "display": "Sector 55, Sector 62, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-56": {
+    "lat": 28.6038717,
+    "lng": 77.342572,
+    "display": "Sector 56, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-61": {
+    "lat": 28.5964581,
+    "lng": 77.3675644,
+    "display": "Sector 61, Mamura, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201307, India"
+  },
+  "noida/sector-62": {
+    "lat": 28.6211447,
+    "lng": 77.3643493,
+    "display": "Sector 62, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201309, India"
+  },
+  "noida/sector-63": {
+    "lat": 28.6120749,
+    "lng": 77.3778122,
+    "display": "63, B Block Road, Sector 64, Mamura, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
+  },
+  "noida/sector-71": {
+    "lat": 28.5942367,
+    "lng": 77.3761378,
+    "display": "Sector 71, Mamura, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-72": {
+    "lat": 28.6114861,
+    "lng": 77.3777821,
+    "display": "Tyagi Service Center, 72, B Block Road, Sector 64, Mamura, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
+  },
+  "noida/sector-74": {
+    "lat": 28.4716585,
+    "lng": 77.5312807,
+    "display": "74, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "noida/sector-75": {
+    "lat": 28.4716932,
+    "lng": 77.5313411,
+    "display": "75, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "noida/sector-76": {
+    "lat": 28.5653305,
+    "lng": 77.3796581,
+    "display": "Noida Sector 76, Vishwakarma Road, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
+  },
+  "noida/sector-77": {
+    "lat": 28.4711991,
+    "lng": 77.5307605,
+    "display": "77, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "noida/sector-78": {
+    "lat": 28.4712338,
+    "lng": 77.5308209,
+    "display": "78, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "noida/sector-79": {
+    "lat": 28.4712685,
+    "lng": 77.5308813,
+    "display": "79, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "noida/sector-93": {
+    "lat": 28.5229507,
+    "lng": 77.3861165,
+    "display": "Sector 93, Yaqubpur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-100": {
+    "lat": 28.5422873,
+    "lng": 77.3650963,
+    "display": "Sector 100, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-104": {
+    "lat": 28.6158648,
+    "lng": 77.3785392,
+    "display": "ANR Software Private Limited, B 103-104, B Block Road, Sector 64, Sector 62, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
+  },
+  "noida/sector-107": {
+    "lat": 28.545932,
+    "lng": 77.376561,
+    "display": "Sector 107, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-108": {
+    "lat": 28.5266067,
+    "lng": 77.3767936,
+    "display": "Sector 108, Hazipur, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-110": {
+    "lat": 28.4714645,
+    "lng": 77.5301239,
+    "display": "110, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "noida/sector-135": {
+    "lat": 28.4980047,
+    "lng": 77.4000326,
+    "display": "Sector 135, Bajidpur, Noida, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-136": {
+    "lat": 28.4713237,
+    "lng": 77.5319706,
+    "display": "136, Sector 31 B Block Road, Sector 31 Tau, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "noida/sector-137": {
+    "lat": 28.5087875,
+    "lng": 77.4104388,
+    "display": "Sector 137, Shahdara, Noida, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-140": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-141": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-142": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-143": {
+    "lat": 28.5026633,
+    "lng": 77.4262557,
+    "display": "Sector 143, Shahdara, Noida, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-144": {
+    "lat": 28.5887004,
+    "lng": 77.3318752,
+    "display": "AMPM Fashions Private Limited, B-144, Sector 10, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
+  },
+  "noida/sector-145": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-146": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-147": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-148": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-149": {
+    "lat": 28.6151098,
+    "lng": 77.3777107,
+    "display": "Trignodev Softwares Pvt Ltd., B- 149, B Block Road, Sector 64, Sector 62, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201301, India"
+  },
+  "noida/sector-150": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-151": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "noida/sector-152": {
+    "lat": 28.5705399,
+    "lng": 77.3228931,
+    "display": "Sector 18, Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "greater-noida/gaur-city": {
+    "lat": 28.6054205,
+    "lng": 77.4274445,
+    "display": "Gaur City Center - Retail Shops For Sale, Gaur City Center, Havelia Rd, Gaur City 2, Greater Noida, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 203207, India"
+  },
+  "greater-noida/techzone": {
+    "lat": 28.5960689,
+    "lng": 77.4379542,
+    "display": "JIMS Noida Extension College, 20 C,  Techzone IV, Amrapali Dream Valley, Havelia Rd, Gaur City 2, Dadri, Gautam Buddha Nagar, Uttar Pradesh, 201218, India"
+  },
+  "greater-noida/surajpur": {
+    "lat": 28.5106529,
+    "lng": 77.4786055,
+    "display": "Surajpur, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 201306, India"
+  },
+  "greater-noida/alpha": {
+    "lat": 28.4710345,
+    "lng": 77.5127373,
+    "display": "Alpha 1, Shree Krishan Estates Greater Noida & Yamuna Expressway, JP Greens, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "greater-noida/beta": {
+    "lat": 28.484866,
+    "lng": 77.5134595,
+    "display": "Beta 2, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "greater-noida/gamma": {
+    "lat": 28.4847757,
+    "lng": 77.5001497,
+    "display": "Gamma 1, Knowledge Park III, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, India"
+  },
+  "greater-noida/delta": {
+    "lat": 28.4784766,
+    "lng": 77.5257314,
+    "display": "Delta 1, Shree Krishan Estates Greater Noida & Yamuna Expressway, JP Greens, Sector 20, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "greater-noida/knowledge-park": {
+    "lat": 28.4569945,
+    "lng": 77.5001973,
+    "display": "Knowledge Park II, Noida-Greater Noida Expressway, Shafipur, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 201315, India"
+  },
+  "greater-noida/pari-chowk": {
+    "lat": 28.4631285,
+    "lng": 77.5080985,
+    "display": "Pari Chowk, Noida-Greater Noida Expressway, Sector 20, Shafipur, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 210310, India"
+  },
+  "greater-noida/jaypee-greens": {
+    "lat": 28.5113245,
+    "lng": 77.3678085,
+    "display": "Jaypee Greens Internal Road, Nagli Sabapur, Noida, Gautam Buddha Nagar, Uttar Pradesh, 201304, India"
+  },
+  "greater-noida/kasna": null,
+  "greater-noida/dadri": {
+    "lat": 28.5320852,
+    "lng": 77.4467538,
+    "display": "Dadri Road, Surajpur, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh, 201306, India"
+  },
+  "gurgaon/dlf-phase-1": {
+    "lat": 28.4765171,
+    "lng": 77.090194,
+    "display": "DLF Phase 1, Sector 28, Gurgaon, Gurugram, Haryana, 122002, India"
+  },
+  "gurgaon/dlf-phase-2": {
+    "lat": 28.483901,
+    "lng": 77.0846097,
+    "display": "DLF City Phase 2, Sector 25, Gurgaon, Gurugram, Haryana, 122002, India"
+  },
+  "gurgaon/dlf-phase-3": {
+    "lat": 28.4919048,
+    "lng": 77.0937804,
+    "display": "Central Bank of India, U-4, DLF Phase 3-U Block, Sector 24, Gurgaon, Gurugram, Haryana, 122010, India"
+  },
+  "gurgaon/dlf-phase-4": {
+    "lat": 28.4919048,
+    "lng": 77.0937804,
+    "display": "Central Bank of India, U-4, DLF Phase 3-U Block, Sector 24, Gurgaon, Gurugram, Haryana, 122010, India"
+  },
+  "gurgaon/dlf-phase-5": {
+    "lat": 28.503445,
+    "lng": 77.0952048,
+    "display": "DLF Downtown Gurugram, Commercial Site, Block 5 , DLF City Phase 3, Sector 25A, Sector 24, Gurgaon, Gurugram, Haryana, 122002, India"
+  },
+  "gurgaon/golf-course-road": {
+    "lat": 28.4495292,
+    "lng": 77.0995152,
+    "display": "Golf Course Road Underpass, DLF 5, Sector 42, Gurgaon, Gurugram, Haryana, 122002, India"
+  },
+  "gurgaon/sector-42": {
+    "lat": 28.4558973,
+    "lng": 77.1084759,
+    "display": "Sector 42, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-43": {
+    "lat": 28.4548735,
+    "lng": 77.0858864,
+    "display": "Sector 43, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-53": {
+    "lat": 28.4415191,
+    "lng": 77.096805,
+    "display": "Sector 53, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-54": {
+    "lat": 28.4421059,
+    "lng": 77.1112654,
+    "display": "Sector 54, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-55": {
+    "lat": 28.4274166,
+    "lng": 77.1097538,
+    "display": "Sector 55, Sohna, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-56": {
+    "lat": 28.4253232,
+    "lng": 77.0985157,
+    "display": "Sector 56, Gurgaon, Gurugram, Haryana, 122011, India"
+  },
+  "gurgaon/sector-57": {
+    "lat": 28.4232478,
+    "lng": 77.0804487,
+    "display": "Sector 57, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-58": {
+    "lat": 28.4160012,
+    "lng": 77.1085564,
+    "display": "Sector 58, Sohna, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-59": {
+    "lat": 28.4030162,
+    "lng": 77.1066682,
+    "display": "Sector 59, Ireo City, Sohna, Gurugram, Haryana, 122011, India"
+  },
+  "gurgaon/sector-60": {
+    "lat": 28.3985617,
+    "lng": 77.0978276,
+    "display": "Sector 60, Sohna, Gurugram, Haryana, 122008, India"
+  },
+  "gurgaon/sector-61": {
+    "lat": 28.4110188,
+    "lng": 77.0963685,
+    "display": "Sector 61, Ireo City, Sohna, Gurugram, Haryana, 122011, India"
+  },
+  "gurgaon/south-city-1": {
+    "lat": 28.4597391,
+    "lng": 77.0612091,
+    "display": "South City, South City I, Sector 41, Gurgaon, Gurugram, Haryana, 122022, India"
+  },
+  "gurgaon/south-city-2": {
+    "lat": 28.4188806,
+    "lng": 77.0439211,
+    "display": "2, Sector 47, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sohna-road": {
+    "lat": 28.4115053,
+    "lng": 77.0419027,
+    "display": "Sohna Road, Sector 48, Sector 69, Gurgaon, Gurugram, Haryana, 122018, India"
+  },
+  "gurgaon/sector-47": {
+    "lat": 28.4251572,
+    "lng": 77.0475128,
+    "display": "Sector 47, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-49": {
+    "lat": 28.4128851,
+    "lng": 77.0498362,
+    "display": "Sector 49, Gurgaon, Gurugram, Haryana, 122018, India"
+  },
+  "gurgaon/sector-50": {
+    "lat": 28.4166536,
+    "lng": 77.0611745,
+    "display": "Sector 50, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-51": {
+    "lat": 28.4287011,
+    "lng": 77.0666877,
+    "display": "Sector 51, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-65": {
+    "lat": 28.4030162,
+    "lng": 77.0695893,
+    "display": "Sector 65, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-66": {
+    "lat": 28.3974292,
+    "lng": 77.0538823,
+    "display": "Sector 66, Gurgaon, Gurugram, Haryana, 122101, India"
+  },
+  "gurgaon/sector-67": {
+    "lat": 28.3864052,
+    "lng": 77.0598046,
+    "display": "Sector 67, Esencia, Gurgaon, Gurugram, Haryana, 122008, India"
+  },
+  "gurgaon/sector-68": {
+    "lat": 28.388897,
+    "lng": 77.0459859,
+    "display": "Sector 68, Gurgaon, Gurugram, Haryana, 122101, India"
+  },
+  "gurgaon/sector-69": {
+    "lat": 28.3960701,
+    "lng": 77.0372311,
+    "display": "Sector 69, Gurgaon, Gurugram, Haryana, 122101, India"
+  },
+  "gurgaon/sector-70": {
+    "lat": 28.3947261,
+    "lng": 77.0223138,
+    "display": "Sector 70, Gurgaon, Gurugram, Haryana, 122015, India"
+  },
+  "gurgaon/sector-71": {
+    "lat": 28.4064564,
+    "lng": 77.0233125,
+    "display": "Sector 71, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-72": {
+    "lat": 28.4159257,
+    "lng": 77.0290772,
+    "display": "Sector 72, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-73": {
+    "lat": 28.4088081,
+    "lng": 77.0161691,
+    "display": "Sector 73, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-74": {
+    "lat": 28.4110081,
+    "lng": 77.0101209,
+    "display": "Sector 74, Gurgaon, Gurugram, Haryana, 122004, India"
+  },
+  "gurgaon/sector-75": {
+    "lat": 28.3964476,
+    "lng": 77.0065896,
+    "display": "Sector 75, Gurgaon, Gurugram, Haryana, 122004, India"
+  },
+  "gurgaon/sector-76": {
+    "lat": 28.3910112,
+    "lng": 76.9900243,
+    "display": "Sector 76, Gurgaon, Gurugram, Haryana, 122004, India"
+  },
+  "gurgaon/sector-77": {
+    "lat": 28.3832337,
+    "lng": 76.982557,
+    "display": "Sector 77, Manesar, Gurugram, Haryana, 122004, India"
+  },
+  "gurgaon/sector-82": {
+    "lat": 28.3931076,
+    "lng": 76.9588762,
+    "display": "Sector 82, Manesar, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-83": {
+    "lat": 28.3981087,
+    "lng": 76.9732873,
+    "display": "Sector 83, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-84": {
+    "lat": 28.4082289,
+    "lng": 76.9630245,
+    "display": "Sector 84, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-85": {
+    "lat": 28.403652,
+    "lng": 76.9531428,
+    "display": "Sector 85, Manesar, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-86": {
+    "lat": 28.3981205,
+    "lng": 76.9411257,
+    "display": "Sector 86, Manesar, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-88": {
+    "lat": 28.4219647,
+    "lng": 76.9568078,
+    "display": "Sector 88, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/manesar": {
+    "lat": 28.3247096,
+    "lng": 76.9263787,
+    "display": "Manesar, Gurugram, Haryana, India"
+  },
+  "gurgaon/imt-manesar": {
+    "lat": 28.3671851,
+    "lng": 76.920669,
+    "display": "Industrial Modern Township Manesar, Manesar, Gurugram, Haryana, 122052, India"
+  },
+  "gurgaon/sector-21": {
+    "lat": 28.5143629,
+    "lng": 77.0730087,
+    "display": "Sector 21, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-44": {
+    "lat": 28.4507064,
+    "lng": 77.0738281,
+    "display": "Sector 44, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-45": {
+    "lat": 28.4449004,
+    "lng": 77.0663545,
+    "display": "Sector 45, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-46": {
+    "lat": 28.4359133,
+    "lng": 77.0584045,
+    "display": "Sector 46, Gurgaon, Gurugram, Haryana, India"
+  },
+  "gurgaon/sector-52": {
+    "lat": 28.4368166,
+    "lng": 77.0795276,
+    "display": "Sector 52, Gurgaon, Gurugram, Haryana, India"
+  },
+  "mumbai/fort": {
+    "lat": 18.9219661,
+    "lng": 72.8345657,
+    "display": "Gateway of India - गेटवे ऑफ इंडिया, Apollo Bandar, Koli Nagar, A Ward, Mumbai Zone 1, Mumbai, Mumbai City District, Maharashtra, 400039, India"
+  },
+  "mumbai/colaba": {
+    "lat": 18.915091,
+    "lng": 72.8259691,
+    "display": "Colaba, A Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400005, India"
+  },
+  "mumbai/malabar-hill": {
+    "lat": 18.9581616,
+    "lng": 72.8033665,
+    "display": "Malabar Hill, D Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400036, India"
+  },
+  "mumbai/worli": {
+    "lat": 19.0117388,
+    "lng": 72.8178706,
+    "display": "Worli, G/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400030, India"
+  },
+  "mumbai/nariman-point": {
+    "lat": 18.927089,
+    "lng": 72.8235859,
+    "display": "Nariman Point, Colaba, A Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400021, India"
+  },
+  "mumbai/prabhadevi": {
+    "lat": 19.0148811,
+    "lng": 72.8279556,
+    "display": "Prabhadevi, G/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400025, India"
+  },
+  "mumbai/cumballa-hill": {
+    "lat": 18.968623,
+    "lng": 72.8068368,
+    "display": "Cumballa Hill, D Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400026, India"
+  },
+  "mumbai/tardeo": {
+    "lat": 18.9722351,
+    "lng": 72.8203423,
+    "display": "Tardeo, E Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400026, India"
+  },
+  "mumbai/kalbadevi": {
+    "lat": 18.9492575,
+    "lng": 72.8279382,
+    "display": "Kalbadevi, C Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400002, India"
+  },
+  "mumbai/girgaon": {
+    "lat": 18.9609893,
+    "lng": 72.813628,
+    "display": "J Shankarsheth Marg, Gamdevi, D Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400036, India"
+  },
+  "mumbai/grant-road": {
+    "lat": 18.9633549,
+    "lng": 72.8158261,
+    "display": "Grant Road, N Bharucha Marg, Gamdevi, D Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400036, India"
+  },
+  "mumbai/mumbai-central": {
+    "lat": 18.9695855,
+    "lng": 72.8193152,
+    "display": "Mumbai Central, J Boman Behram Marg, Tardeo, E Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400004, India"
+  },
+  "mumbai/mazgaon": {
+    "lat": 18.9697337,
+    "lng": 72.8406201,
+    "display": "Mazgaon, E Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 200008, India"
+  },
+  "mumbai/parel": {
+    "lat": 18.988459,
+    "lng": 72.8393913,
+    "display": "Parel, 22, Dattaram Lad Marg (Kala Chowky Road), Byculla East, E Ward, Mumbai Zone 1, Mumbai City District, Maharashtra, 400011, India"
+  },
+  "mumbai/sewri": {
+    "lat": 18.9987796,
+    "lng": 72.8544218,
+    "display": "Sewri, Eastern Freeway, Sadbhavana Nagar, Sewri, F/S Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400015, India"
+  },
+  "mumbai/wadala": {
+    "lat": 19.0269192,
+    "lng": 72.8759337,
+    "display": "Wadala, F/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400037, India"
+  },
+  "mumbai/antop-hill": {
+    "lat": 19.0301805,
+    "lng": 72.8669504,
+    "display": "Antop Hill, M Ambedkar Marg, CGS Colony, Indira Nagar, F/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400037, India"
+  },
+  "mumbai/dadar": {
+    "lat": 19.0192269,
+    "lng": 72.8428479,
+    "display": "Dadar, Ranade Road Extension, Dadar West, G/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400028, India"
+  },
+  "mumbai/mahim": {
+    "lat": 19.0423145,
+    "lng": 72.8398344,
+    "display": "Mahim, G/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400016, India"
+  },
+  "mumbai/matunga": {
+    "lat": 19.0314768,
+    "lng": 72.8468509,
+    "display": "Reliance Smart Bazaar, Matunga, Senapati Bapat Marg, Telephone Colony, Matunga West, G/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400016, India"
+  },
+  "mumbai/sion": {
+    "lat": 19.0465213,
+    "lng": 72.8632834,
+    "display": "Sion, Sion Bandra Link Road, Sion East, G/N Ward, Mumbai Zone 2, Mumbai City District, Maharashtra, 400051, India"
+  },
+  "mumbai/kurla": {
+    "lat": 19.0652797,
+    "lng": 72.8793805,
+    "display": "Kurla, Kurla FOB 4, Naware Baug Jagruti Nagar, Kurla East, L Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, 400024, India"
+  },
+  "mumbai/bandra-west": {
+    "lat": 19.0583358,
+    "lng": 72.8302669,
+    "display": "Bandra West, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, India"
+  },
+  "mumbai/bandra-east": {
+    "lat": 19.0616565,
+    "lng": 72.8498111,
+    "display": "Bandra East, H/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400051, India"
+  },
+  "mumbai/khar": {
+    "lat": 19.0682411,
+    "lng": 72.8400412,
+    "display": "Khar Road, Chitrakar Durandhar Road (2nd Road), Khar, H/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400052, India"
+  },
+  "mumbai/santacruz-west": {
+    "lat": 19.0844004,
+    "lng": 72.8372899,
+    "display": "Santacruz West, H/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400054, India"
+  },
+  "mumbai/juhu": {
+    "lat": 19.1070215,
+    "lng": 72.8275275,
+    "display": "Juhu, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400058, India"
+  },
+  "mumbai/vile-parle": {
+    "lat": 19.0999098,
+    "lng": 72.8440038,
+    "display": "Vile Parle, Sky Walk (Vile Parle (west)), Kamala Nagar, Vile Parle West, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400057, India"
+  },
+  "mumbai/andheri": {
+    "lat": 19.1196976,
+    "lng": 72.8464205,
+    "display": "Andheri, Masjid Galli, Gaondevi Dongri, Andheri West, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400069, India"
+  },
+  "mumbai/andheri-west": {
+    "lat": 19.1172495,
+    "lng": 72.833968,
+    "display": "Andheri West, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400058, India"
+  },
+  "mumbai/andheri-east": {
+    "lat": 19.1158835,
+    "lng": 72.854202,
+    "display": "Andheri East, K/E Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400069, India"
+  },
+  "mumbai/versova": {
+    "lat": 19.1302521,
+    "lng": 72.8213775,
+    "display": "Versova, Balasaheb Sawant Road, Seven Bungalows, Versova, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400061, India"
+  },
+  "mumbai/jogeshwari-east": {
+    "lat": 19.1429467,
+    "lng": 72.8551559,
+    "display": "Jogeshwari (East), Western Express Highway, Aarey Milk Colony, P/S Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, 400060, India"
+  },
+  "mumbai/jogeshwari-west": {
+    "lat": 19.136394,
+    "lng": 72.8373817,
+    "display": "Jogeshwari West, K/W Ward, Mumbai Zone 3, Mumbai, Mumbai Suburban District, Maharashtra, 400047, India"
+  },
+  "mumbai/goregaon-east": {
+    "lat": 19.1692623,
+    "lng": 72.8552548,
+    "display": "Goregaon East, P/S Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, 400063, India"
+  },
+  "mumbai/goregaon-west": {
+    "lat": 19.1633281,
+    "lng": 72.8411995,
+    "display": "Goregaon West, P/S Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, 400090, India"
+  },
+  "mumbai/malad-west": {
+    "lat": 19.1852851,
+    "lng": 72.8358611,
+    "display": "Malad (West), Link Road, Malad West, P/N Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, 400064, India"
+  },
+  "mumbai/malad-east": {
+    "lat": 19.1860219,
+    "lng": 72.8563181,
+    "display": "Malad East, P/N Ward, Mumbai Zone 4, Mumbai, Mumbai Suburban District, Maharashtra, 400097, India"
+  },
+  "mumbai/kandivali-east": {
+    "lat": 19.2051958,
+    "lng": 72.8626165,
+    "display": "Kandivali East, R/S Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, 400101, India"
+  },
+  "mumbai/kandivali-west": {
+    "lat": 19.2140139,
+    "lng": 72.8372919,
+    "display": "Kandivali (West), Goregaon Link Road, Renuka Nagar, Mahavir Nagar, R/S Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, 400067, India"
+  },
+  "mumbai/dahisar": {
+    "lat": 19.2493572,
+    "lng": 72.8596302,
+    "display": "Dahisar, Bharucha Road, Dahisar East, R/N Ward, Mumbai Zone 4, Mumbai Suburban District, Maharashtra, 400068, India"
+  },
+  "mumbai/powai": {
+    "lat": 19.1187195,
+    "lng": 72.9073476,
+    "display": "Powai, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, 400076, India"
+  },
+  "mumbai/ghatkopar": {
+    "lat": 19.0856928,
+    "lng": 72.9083668,
+    "display": "Ghatkopar, Station Road, Kapol Wadi, Ghatkopar East, N Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, 400086, India"
+  },
+  "mumbai/chembur": {
+    "lat": 19.054818,
+    "lng": 72.8979713,
+    "display": "Chembur, M/W Ward, Mumbai Zone 5, Mumbai, Mumbai Suburban District, Maharashtra, 400089, India"
+  },
+  "mumbai/vikhroli": {
+    "lat": 19.1114795,
+    "lng": 72.928021,
+    "display": "Vikhroli, पी. सोमन मार्ग, Hariyali, Vikhroli West, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, 400059, India"
+  },
+  "mumbai/bhandup": {
+    "lat": 19.142757,
+    "lng": 72.9376543,
+    "display": "Bhandup, Bhandup Station Road, Bhandup West, S Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, 400078, India"
+  },
+  "mumbai/mulund": {
+    "lat": 19.1721366,
+    "lng": 72.9566971,
+    "display": "Mulund, Platform 4, Vijay Nagar, Mulund East, T Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, 400081, India"
+  },
+  "mumbai/mulund-east": {
+    "lat": 19.1704719,
+    "lng": 72.9610447,
+    "display": "Mulund East, T Ward, Mumbai Zone 6, Mumbai, Mumbai Suburban District, Maharashtra, 400081, India"
+  },
+  "mumbai/vashi": {
+    "lat": 19.0632481,
+    "lng": 72.9987966,
+    "display": "Vashi, Vashi Station Road, Vashi, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, 400703, India"
+  },
+  "mumbai/nerul": {
+    "lat": 19.0335938,
+    "lng": 73.018164,
+    "display": "Nerul, Mata Amritanandamayi Marg, Nerul Village, Nerul West, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, 400706, India"
+  },
+  "mumbai/sanpada": {
+    "lat": 19.0659774,
+    "lng": 73.0095329,
+    "display": "Sanpada, Sanpada Station Road, Sanpada, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, 400706, India"
+  },
+  "mumbai/airoli": {
+    "lat": 19.1585147,
+    "lng": 72.9994019,
+    "display": "Airoli, Airoli Station Road, Airoli Sector 2, Airoli, Navi Mumbai, Thane Subdistrict, Thane, Maharashtra, 400708, India"
+  },
+  "pune/aundh": {
+    "lat": 18.5618834,
+    "lng": 73.8101957,
+    "display": "Aundh, Pune, Pune City Subdistrict, Pune, Maharashtra, 411027, India"
+  },
+  "pune/baner": {
+    "lat": 18.5589937,
+    "lng": 73.7845232,
+    "display": "Baner, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/balewadi": {
+    "lat": 18.5820266,
+    "lng": 73.7689831,
+    "display": "Balewadi, Pune City Subdistrict, Pune, Maharashtra, 411045, India"
+  },
+  "pune/pashan": {
+    "lat": 18.5386704,
+    "lng": 73.7952542,
+    "display": "Pashan, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/sus": {
+    "lat": 18.5536672,
+    "lng": 73.752727,
+    "display": "Sus, Mulshi Subdistrict, Pune, Maharashtra, 411405, India"
+  },
+  "pune/bavdhan": {
+    "lat": 18.5209541,
+    "lng": 73.7780873,
+    "display": "Bavdhan, Pune City Subdistrict, Pune, Maharashtra, 411072, India"
+  },
+  "pune/wakad": {
+    "lat": 18.6022495,
+    "lng": 73.7644454,
+    "display": "Wakad, Tathawade, Mulshi Subdistrict, Pune, Maharashtra, 411071, India"
+  },
+  "pune/hinjawadi": {
+    "lat": 18.5927532,
+    "lng": 73.7382151,
+    "display": "Hinjawadi, Mulshi Subdistrict, Pune, Maharashtra, 411057, India"
+  },
+  "pune/pune-camp": {
+    "lat": 18.5216239,
+    "lng": 73.8717527,
+    "display": "signature, Camp, Babasaheb Ambedkar Marg, Somwar Peth, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/deccan": {
+    "lat": 18.548889,
+    "lng": 73.8748641,
+    "display": "Deccan College, Deccan College Road, Yerawada, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/deccan-gymkhana": {
+    "lat": 18.5158926,
+    "lng": 73.84116,
+    "display": "Deccan Gymkhana, Pune, Pune City Subdistrict, Pune, Maharashtra, 411004, India"
+  },
+  "pune/shivajinagar": {
+    "lat": 18.5325915,
+    "lng": 73.8513115,
+    "display": "Shivajinagar, Shivajinagar Railway Station Road, Shivajinagar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/pune-university-area": {
+    "lat": 18.549946,
+    "lng": 73.8207947,
+    "display": "ARDE Colony Ganeshkhind, Aundh, Pune, Pune City Subdistrict, Pune, Maharashtra, 411027, India"
+  },
+  "pune/sadashiv-peth": {
+    "lat": 18.5107764,
+    "lng": 73.8502149,
+    "display": "Sadashiv Peth, Pune, Pune City Subdistrict, Pune, Maharashtra, 411030, India"
+  },
+  "pune/kothrud": {
+    "lat": 18.5072618,
+    "lng": 73.8056676,
+    "display": "Kothrud, Karve Nagar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411051, India"
+  },
+  "pune/karve-nagar": {
+    "lat": 18.4894205,
+    "lng": 73.821347,
+    "display": "Karve Nagar, Anandnagar, Pune City Subdistrict, Pune, Maharashtra, 411051, India"
+  },
+  "pune/warje": {
+    "lat": 18.4820444,
+    "lng": 73.8001705,
+    "display": "Warje, Anandnagar, Pune City Subdistrict, Pune, Maharashtra, 411051, India"
+  },
+  "pune/anandnagar": {
+    "lat": 18.4784152,
+    "lng": 73.8240754,
+    "display": "Anandnagar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411051, India"
+  },
+  "pune/kharadi": {
+    "lat": 18.5512763,
+    "lng": 73.9416575,
+    "display": "Kharadi, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/viman-nagar": {
+    "lat": 18.5703877,
+    "lng": 73.9133336,
+    "display": "Viman Nagar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/hadapsar": {
+    "lat": 18.5007741,
+    "lng": 73.9379146,
+    "display": "Hadapsar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/dhanori": {
+    "lat": 18.5906707,
+    "lng": 73.8913189,
+    "display": "Dhanori, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/lohegaon": {
+    "lat": 18.5803749,
+    "lng": 73.9182265,
+    "display": "Pune International Airport, Airport Road, Viman Nagar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411014, India"
+  },
+  "pune/wanowrie": {
+    "lat": 18.4883683,
+    "lng": 73.8986672,
+    "display": "Wanawadi, Pune, Pune City Subdistrict, Pune, Maharashtra, 411040, India"
+  },
+  "pune/nibm": {
+    "lat": 18.463108,
+    "lng": 73.9115982,
+    "display": "NIBM Road, Krushna Nagar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/kondhwa": {
+    "lat": 18.4779905,
+    "lng": 73.8940627,
+    "display": "Kondhwa, Pune, Pune City Subdistrict, Pune, Maharashtra, 411018, India"
+  },
+  "pune/bibwewadi": {
+    "lat": 18.4752329,
+    "lng": 73.8562486,
+    "display": "Bibwewadi, Satara Road, Panchavati, Sahakar Nagar, Pune, Pune City Subdistrict, Pune, Maharashtra, 411001, India"
+  },
+  "pune/katraj": {
+    "lat": 18.4536792,
+    "lng": 73.8563196,
+    "display": "Katraj, Pune, Pune City Subdistrict, Pune, Maharashtra, 411046, India"
+  },
+  "pune/pimpri": {
+    "lat": 18.6231854,
+    "lng": 73.8019932,
+    "display": "Pimpri, Pimpri Chinchwad Link Road Flyover, Pimpri, Pimpri-Chinchwad, Haveli Subdistrict, Pune, Maharashtra, 411089, India"
+  },
+  "pune/chinchwad": {
+    "lat": 18.6403548,
+    "lng": 73.7917128,
+    "display": "Chinchwad, Mangal Upvan Road, Chinchwad, Pimpri-Chinchwad, Haveli Subdistrict, Pune, Maharashtra, 411019, India"
+  },
+  "pune/pimple-saudagar": {
+    "lat": 18.5981553,
+    "lng": 73.7977661,
+    "display": "Pimple Saudagar, Pimpri-Chinchwad, Haveli Subdistrict, Pune, Maharashtra, 431027, India"
+  },
+  "bangalore/whitefield": {
+    "lat": 12.9957428,
+    "lng": 77.7579489,
+    "display": "Whitefield (Kadugodi), SH35, Belathur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560067, India"
+  },
+  "bangalore/marathahalli": {
+    "lat": 12.9552572,
+    "lng": 77.6984163,
+    "display": "Marathahalli, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India"
+  },
+  "bangalore/hoodi": {
+    "lat": 12.9959233,
+    "lng": 77.7192796,
+    "display": "Hoodi, Kumbena Agrahara Main Road, Hoody Garden, Hoodi, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560048, India"
+  },
+  "bangalore/ramamurthy-nagar": {
+    "lat": 13.0120218,
+    "lng": 77.6777817,
+    "display": "Ramamurthy Nagar, Ramamurthy Nagara, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560016, India"
+  },
+  "bangalore/koramangala": {
+    "lat": 12.9357366,
+    "lng": 77.624081,
+    "display": "Koramangala, Sri Lakshmi Devi Ward, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560095, India"
+  },
+  "bangalore/hsr-layout": {
+    "lat": 12.9116225,
+    "lng": 77.6388622,
+    "display": "HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560102, India"
+  },
+  "bangalore/bellandur": {
+    "lat": 12.9320495,
+    "lng": 77.6842915,
+    "display": "Bellandur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, India"
+  },
+  "bangalore/sarjapur-road": {
+    "lat": 12.9243414,
+    "lng": 77.6448784,
+    "display": "Sarjapur Road, Sector 5, HSR Layout, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560034, India"
+  },
+  "bangalore/bommanahalli": {
+    "lat": 12.9034581,
+    "lng": 77.6230028,
+    "display": "Bommanahalli, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India"
+  },
+  "bangalore/electronic-city": {
+    "lat": 12.8487599,
+    "lng": 77.648253,
+    "display": "Prime City Apartments, Electronic City, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560100, India"
+  },
+  "bangalore/begur": {
+    "lat": 12.8633887,
+    "lng": 77.6130112,
+    "display": "Begur, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India"
+  },
+  "bangalore/jp-nagar": {
+    "lat": 12.9096941,
+    "lng": 77.5866067,
+    "display": "JP Nagar, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, India"
+  },
+  "bangalore/jayanagar": {
+    "lat": 12.9292731,
+    "lng": 77.5824229,
+    "display": "Jayanagar, Tilak Nagara, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560011, India"
+  },
+  "bangalore/bannerghatta-road": {
+    "lat": 12.9334416,
+    "lng": 77.6008389,
+    "display": "Bannerghatta Road, BHEL Ward, Bengaluru Central City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560041, India"
+  },
+  "bangalore/banashankari": {
+    "lat": 12.9278196,
+    "lng": 77.556621,
+    "display": "Banashankari, Kathriguppe, Bengaluru West City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560085, India"
+  },
+  "bangalore/basavanagudi": {
+    "lat": 12.9417261,
+    "lng": 77.5755021,
+    "display": "Basavanagudi, Sunkenahalli, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560004, India"
+  },
+  "bangalore/wilson-garden": {
+    "lat": 12.9489339,
+    "lng": 77.5968273,
+    "display": "Wilson Garden, Hombegowda Nagara, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560027, India"
+  },
+  "bangalore/adugodi": {
+    "lat": 12.9440234,
+    "lng": 77.6088867,
+    "display": "Adugodi, A Adugodi, Bengaluru South City Corporation, Bengaluru, Bangalore South, Bengaluru Urban, Karnataka, 560030, India"
+  },
+  "bangalore/vasanth-nagar": {
+    "lat": 12.9921738,
+    "lng": 77.591459,
+    "display": "Vasanth Nagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560052, India"
+  },
+  "bangalore/richmond-town": {
+    "lat": 12.963555,
+    "lng": 77.6015856,
+    "display": "Richmond Town, Shanthinagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560025, India"
+  },
+  "bangalore/domlur": {
+    "lat": 12.9624669,
+    "lng": 77.6381958,
+    "display": "Domlur, Domluru, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560071, India"
+  },
+  "bangalore/indiranagar": {
+    "lat": 12.9732913,
+    "lng": 77.6404672,
+    "display": "Indiranagar, Jogpalya, Bengaluru Central City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560008, India"
+  },
+  "bangalore/viveknagar": {
+    "lat": 12.9529247,
+    "lng": 77.6231374,
+    "display": "Viveknagar, Vannarpet, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560047, India"
+  },
+  "bangalore/chickpet": {
+    "lat": 12.9563732,
+    "lng": 77.7454891,
+    "display": "Chickpet Donne Biriyani, Varthur Lake Road, Varthur Kodi, Varthur, Bengaluru East City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560087, India"
+  },
+  "bangalore/seshadripuram": {
+    "lat": 12.9946631,
+    "lng": 77.5747183,
+    "display": "Seshadripuram, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, India"
+  },
+  "bangalore/kalyan-nagar": {
+    "lat": 13.0221416,
+    "lng": 77.6403368,
+    "display": "Kalyan Nagar, Kalyanagar, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560043, India"
+  },
+  "bangalore/nagawara": {
+    "lat": 13.0422794,
+    "lng": 77.6248577,
+    "display": "Nagawara (Proposed), Thanisandra Main Road, Fatima Layout, Kempapura, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560045, India"
+  },
+  "bangalore/fraser-town": {
+    "lat": 13.0027542,
+    "lng": 77.6157507,
+    "display": "Clarence High School, Pottery Road, Sagayapura, Richards Town, Sagayapuram, Bengaluru North City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560005, India"
+  },
+  "bangalore/rajajinagar": {
+    "lat": 13.0005232,
+    "lng": 77.5496166,
+    "display": "Rajajinagar, Chord Road, Nagapura, Mahalakshmipuram, Nagapura, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560086, India"
+  },
+  "bangalore/vijayanagar": {
+    "lat": 12.9709537,
+    "lng": 77.5373851,
+    "display": "Vijayanagar, Chord Road, M C Layout, Dr. Vishnuvardhan Ward, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560040, India"
+  },
+  "bangalore/malleswaram": {
+    "lat": 13.0027353,
+    "lng": 77.5703253,
+    "display": "Malleswaram, Malleshwaram, Bengaluru West City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560003, India"
+  },
+  "mangalore/hampankatta": {
+    "lat": 12.8691203,
+    "lng": 74.843432,
+    "display": "Hampankatta Bus stop, Light House Hill Road, Attavar, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/kodialbail": null,
+  "mangalore/kadri": {
+    "lat": 12.8897288,
+    "lng": 74.8501424,
+    "display": "Kadri, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/kottara": {
+    "lat": 12.9111902,
+    "lng": 74.8357222,
+    "display": "Kottara Chowki Flyover, Derebail, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/bejai": {
+    "lat": 12.893716,
+    "lng": 74.8415046,
+    "display": "Bejai Kavoor Road, Kuntikan, Ladyhill, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/derebail": {
+    "lat": 12.9082864,
+    "lng": 74.8423615,
+    "display": "Derebail, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/kulshekar": null,
+  "mangalore/valencia": {
+    "lat": 12.8636212,
+    "lng": 74.8607268,
+    "display": "Valencia, Father Mullers Road, Nandigudda, Kankanady, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/bolar": {
+    "lat": 12.8468042,
+    "lng": 74.8430182,
+    "display": "Bolar, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/jeppu": {
+    "lat": 12.8487632,
+    "lng": 74.848938,
+    "display": "Jeppu Park, Bolar, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/kankanady": {
+    "lat": 12.8646481,
+    "lng": 74.8600033,
+    "display": "Kankanady, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/attavar": {
+    "lat": 12.860548,
+    "lng": 74.8480626,
+    "display": "Attavar, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/urwa": {
+    "lat": 12.889223,
+    "lng": 74.8325295,
+    "display": "Urwa Market Road, Gandhinagar, Ladyhill, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/kavoor": {
+    "lat": 12.9180644,
+    "lng": 74.8593498,
+    "display": "Orphic Garden, Kavoor, SH67, Bolpugudde, Kavoor, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575015, India"
+  },
+  "mangalore/bondel": {
+    "lat": 12.9243306,
+    "lng": 74.8694491,
+    "display": "PHC, Bondel, SH67, Bolpugudde, Kavoor, Bondel, Mangaluru taluk, Dakshina Kannada, Karnataka, 575015, India"
+  },
+  "mangalore/kulur": {
+    "lat": 12.9259692,
+    "lng": 74.8257305,
+    "display": "Air India Memorial Park, Kulur, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575010, India"
+  },
+  "mangalore/nantoor": {
+    "lat": 12.8847697,
+    "lng": 74.8607701,
+    "display": "Nanthoor, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/pumpwell": {
+    "lat": 12.8696153,
+    "lng": 74.86606,
+    "display": "West Gate Centre, D. No 7-49/6, Kankanady, Pumpwell,, NH73, Nethravati Nagara, Kankanady, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575002, India"
+  },
+  "mangalore/surathkal": {
+    "lat": 12.9798673,
+    "lng": 74.8246658,
+    "display": "BASF India Ltd, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575030, India"
+  },
+  "mangalore/panambur": {
+    "lat": 12.945576,
+    "lng": 74.8078986,
+    "display": "Panambur, NH66, New Mangalore Port, Baikampady, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/katipalla": {
+    "lat": 13.0007856,
+    "lng": 74.8333153,
+    "display": "Katipalla Colony Park, Krishnapura, Mangalapete, Mangaluru taluk, Dakshina Kannada, Karnataka, 575014, India"
+  },
+  "mangalore/bajpe": {
+    "lat": 12.8908317,
+    "lng": 74.8588632,
+    "display": "Bajpe Road, Kadri Hills, Nanthoor, Mangaluru, Mangaluru taluk, Dakshina Kannada, Karnataka, 575001, India"
+  },
+  "mangalore/ullal": {
+    "lat": 12.8181202,
+    "lng": 74.8459375,
+    "display": "Ullal, Ullala taluk, Dakshina Kannada, Karnataka, 574159, India"
+  },
+  "mangalore/konaje": {
+    "lat": 12.8201692,
+    "lng": 74.928293,
+    "display": "Konaje, Ullala taluk, Dakshina Kannada, Karnataka, 574199, India"
+  },
+  "mangalore/mudipu": {
+    "lat": 12.8036462,
+    "lng": 74.9617128,
+    "display": "Mudipu, Ullala taluk, Dakshina Kannada, Karnataka, 574153, India"
+  }
+}

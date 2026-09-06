@@ -1,71 +1,87 @@
+// components/shared/Footer.tsx — data-driven footer: cities, services, trust, legal.
 import Link from 'next/link';
-import './Footer.css';
+import { CITIES, SERVICES } from '@/data/seo';
+import { PHONE_DISPLAY, TEL_URL, whatsappUrl } from '@/lib/seo-engine/links';
 
-export default function Footer() {
+export function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        {/* Column 1: Our Services */}
-        <div className="footer-column">
-          <h3>Our Services</h3>
+    <footer className="site-footer">
+      <div className="site-footer__grid">
+        <div>
+          <h3>Cities</h3>
           <ul>
-            <li><Link href="/maid-service" className="footer-link">Maid Service</Link></li>
-            <li><Link href="/full-time-maid-service" className="footer-link">Full-Time Live-In</Link></li>
-            <li><Link href="/cook-service" className="footer-link">Cook Service</Link></li>
-            <li><Link href="/nanny-service" className="footer-link">Nanny & Babysitting</Link></li>
-            <li><Link href="/elderly-care-service" className="footer-link">Elderly Care</Link></li>
-            <li><Link href="/postnatal-care-service" className="footer-link">Postnatal Care</Link></li>
+            {CITIES.map((c) => (
+              <li key={c.slug}>
+                <Link href={`/${c.slug}`}>Maid service in {c.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
-
-        {/* Column 2: Top Cities */}
-        <div className="footer-column">
-          <h3>Top Cities</h3>
+        <div>
+          <h3>Services</h3>
           <ul>
-            <li><Link href="/best-maid-service-in-delhi" className="footer-link">Delhi</Link></li>
-            <li><Link href="/best-maid-service-in-mumbai" className="footer-link">Mumbai</Link></li>
-            <li><Link href="/best-maid-service-in-bangalore" className="footer-link">Bangalore</Link></li>
-            <li><Link href="/best-maid-service-in-hyderabad" className="footer-link">Hyderabad</Link></li>
-            <li><Link href="/best-maid-service-in-pune" className="footer-link">Pune</Link></li>
-            <li><Link href="/best-maid-service-in-chennai" className="footer-link">Chennai</Link></li>
-            <li><Link href="/best-maid-service-in-kolkata" className="footer-link">Kolkata</Link></li>
-            <li><Link href="/best-maid-service-in-gurugram" className="footer-link">Gurugram</Link></li>
-            <li><Link href="/best-maid-service-in-noida" className="footer-link">Noida</Link></li>
-            <li><Link href="/best-maid-service-in-ahmedabad" className="footer-link">Ahmedabad</Link></li>
+            <li>
+              <Link href="/services/maid-service">Maid service</Link>
+            </li>
+            {SERVICES.map((s) => (
+              <li key={s.slug}>
+                <Link href={`/services/${s.slug}`}>{s.name}</Link>
+              </li>
+            ))}
           </ul>
         </div>
-
-        {/* Column 3: Resources */}
-        <div className="footer-column">
-          <h3>Resources</h3>
+        <div>
+          <h3>Trust</h3>
           <ul>
-            <li><Link href="/blog-find-reliable-maid-delhi" className="footer-link">How to Find a Maid</Link></li>
-            <li><Link href="/blog-elderly-care-at-home-guide" className="footer-link">Elderly Care Guide</Link></li>
-            <li><Link href="/blog-maid-vs-cook-vs-nanny" className="footer-link">Maid vs Cook vs Nanny</Link></li>
-            <li><Link href="/#pricing" className="footer-link">Pricing & Packages</Link></li>
-            <li><Link href="/#faq" className="footer-link">FAQs</Link></li>
+            <li>
+              <Link href="/how-we-verify">How we verify</Link>
+            </li>
+            <li>
+              <Link href="/replacement-policy">Replacement policy</Link>
+            </li>
+            <li>
+              <Link href="/pricing">Pricing &amp; plans</Link>
+            </li>
+            <li>
+              <Link href="/about">About MyBuddyMaid</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
           </ul>
         </div>
-
-        {/* Column 4: Company */}
-        <div className="footer-column footer-company">
-          <h3>Company</h3>
-          <p>MyBuddyMaid is your trusted partner for reliable, background-verified domestic help services across India.</p>
-          <div className="footer-contact-item">
-            <span>📞</span> +91 9355114869
-          </div>
-          <div className="footer-contact-item">
-            <span>✉️</span> info@mybuddymaid.in
-          </div>
-          <a href="https://wa.me/919355114869" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
-            Chat on WhatsApp
-          </a>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <a href={TEL_URL}>{PHONE_DISPLAY}</a>
+            </li>
+            <li>
+              <a href={whatsappUrl('Hi MyBuddyMaid, I need help hiring a helper.')} rel="noopener" target="_blank">
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a>
+            </li>
+            <li>175, 5th Floor, Main Road, Chandra Layout, Bengaluru 560040</li>
+          </ul>
+          <ul className="legal">
+            <li>
+              <Link href="/privacy-policy">Privacy policy</Link>
+            </li>
+            <li>
+              <Link href="/terms-of-service">Terms of service</Link>
+            </li>
+          </ul>
         </div>
       </div>
-
-      <div className="footer-bottom">
-        <p>&copy; 2026 MyBuddyMaid. All Rights Reserved.</p>
-      </div>
+      <p className="site-footer__note">
+        © {new Date().getFullYear()} MyBuddyMaid. Locality coordinates © OpenStreetMap contributors (ODbL).
+      </p>
     </footer>
   );
 }

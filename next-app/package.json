@@ -6,7 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo:validate": "tsx scripts/seo/validate.ts",
+    "seo:stats": "tsx scripts/seo/stats.ts",
+    "seo:gate": "tsx scripts/seo/uniqueness.ts",
+    "seo:redirects": "tsx scripts/seo/gen-redirects.ts",
+    "seo:merge": "tsx scripts/seo/merge-enrichment.ts",
+    "seo:geocode": "tsx scripts/seo/geocode.ts",
+    "seo:neighbours": "tsx scripts/seo/refine-neighbours.ts",
+    "seo:jsonld": "tsx scripts/seo/validate-jsonld.ts",
+    "seo:crawl": "tsx scripts/seo/crawl.ts",
+    "seo:check-redirects": "tsx scripts/seo/check-redirects.ts",
+    "seo:indexnow": "tsx scripts/seo/indexnow.ts",
+    "seo:entities": "tsx scripts/seo/import-entities.ts",
+    "prebuild": "npm run seo:validate && npm run seo:redirects && npm run seo:gate"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
@@ -24,6 +37,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
-    "typescript": "^5"
+    "tsx": "^4.23.13",
+    "typescript": "^5",
+    "zod": "^4.5.4"
   }
 }

@@ -1,0 +1,597 @@
+{
+  "dlf-phase-1": {
+    "neighbours": ["dlf-phase-2", "golf-course-road", "sector-43", "dlf-phase-4", "dlf-phase-3", "sector-42", "dlf-phase-5", "sector-44"],
+    "landmarks": ["Sikanderpur Metro Station", "Guru Dronacharya Metro Station", "Qutab Plaza Market", "DLF Cyber City", "Aravalli Biodiversity Park"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Sikanderpur"],
+    "localIntro": "DLF Phase 1, under pincode 122002, is the oldest of the DLF City phases and sits on the Gurgaon side of the Delhi border, close to the Guru Dronacharya and Sikanderpur metro stations on the Yellow Line. Housing here is largely plotted: independent houses and older bungalows on wide, tree-lined blocks, with a growing number of builder floors as plots are redeveloped. Residents are a mix of long-settled families, senior citizens who bought here decades ago, and professionals who work in the nearby DLF Cyber City offices. Qutab Plaza market is the everyday commercial hub for groceries and services, and the Aravalli Biodiversity Park lies along the Delhi-Gurgaon boundary. DLF Phase 2 adjoins on the Sikanderpur side, Golf Course Road begins a short distance south, and Sushant Lok in Sector 43 lies beyond it. Households in this kind of plotted colony usually want a regular full-day or live-in helper along with cooking support, and many of the helpers who work here live within walking distance in Sikanderpur village.",
+    "commuteNotes": "Sikanderpur Metro Station (the Yellow Line and Rapid Metro interchange) and Guru Dronacharya station sit at the edge of the colony, and buses run along MG Road. A large share of helpers simply walk in from Sikanderpur village.",
+    "housingNotes": "Mostly independent houses and bungalows on individual plots, with builder floors replacing some older homes. Entry is managed by the household rather than a society gate, so timings are flexible, though many homes keep their own private guards.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-dlf-phase-1-1",
+        "q": "Which areas near DLF Phase 1 do you also serve?",
+        "a": "DLF Phase 2, DLF Phase 4, Golf Course Road and Sushant Lok in Sector 43 are all close by and draw on the same helper pool. DLF Phase 3 on the far side of Cyber City is also covered.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-1"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-1-2",
+        "q": "Which pincode does the DLF Phase 1 service area cover?",
+        "a": "DLF Phase 1 falls under pincode 122002, which it shares with DLF Phase 2. Neighbouring DLF Phase 4 is 122009 and DLF Phase 3 is 122010.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-1"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-1-3",
+        "q": "Do helpers in DLF Phase 1 need society gate passes?",
+        "a": "Most homes in DLF Phase 1 are independent houses rather than gated towers, so a formal society pass is usually not required. Where a block or RWA maintains its own gate, the household simply registers the helper with the guard.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-1"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "dlf-phase-2": {
+    "neighbours": ["dlf-phase-1", "dlf-phase-3", "dlf-phase-4", "golf-course-road", "sector-43", "sector-42", "dlf-phase-5", "sector-44"],
+    "landmarks": ["Sikanderpur Metro Station", "DLF Phase 2 Rapid Metro Station", "DLF Cyber City", "MG Road Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Sikanderpur"],
+    "localIntro": "DLF Phase 2, sharing pincode 122002 with DLF Phase 1, lies between MG Road and the DLF Cyber City office district, which makes it one of the most convenient residential addresses in Gurgaon for people working in the corporate towers. The housing stock is mixed: plotted independent houses and builder floors make up most of the older blocks, while a few gated apartment complexes stand along the Cyber City edge. Residents are dominated by working professionals, including many couples and flat-sharers renting builder floors, alongside families who have lived here since the colony was developed. The colony is unusually well connected, with Sikanderpur Metro Station on the Yellow Line and the DLF Phase 2 station on the Rapid Metro loop both within walking distance, and MG Road station a little further east. DLF Phase 1 adjoins to the north-east, DLF Phase 3 lies beyond Cyber City, and Golf Course Road and Sushant Lok in Sector 43 are a short drive south. Demand here leans towards part-time cleaning and cooking on fixed morning and evening slots to suit office hours, and the adjacent Sikanderpur village is where many helpers live.",
+    "commuteNotes": "Sikanderpur Metro Station and the DLF Phase 2 Rapid Metro station both serve the colony directly, and MG Road carries frequent buses and shared autos. Helpers from Sikanderpur village walk in.",
+    "housingNotes": "A mix of plotted houses, builder floors and a few gated complexes, so entry rules vary block by block: apartment complexes issue helper passes, while builder floors and independent houses handle entry at the door.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-dlf-phase-2-1",
+        "q": "Which areas near DLF Phase 2 do you also serve?",
+        "a": "DLF Phase 1, DLF Phase 3, DLF Phase 4 and the Sushant Lok blocks of Sector 43 are all nearby and served by the same helper pool. Golf Course Road and Sector 42 are a short drive south.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-2"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-2-2",
+        "q": "Which pincode does DLF Phase 2 service cover?",
+        "a": "DLF Phase 2 comes under pincode 122002, the same as DLF Phase 1. DLF Phase 3 across Cyber City uses 122010 and DLF Phase 4 uses 122009.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-2"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-2-3",
+        "q": "Can I get a helper on office-hour timings in DLF Phase 2?",
+        "a": "Early-morning and evening part-time slots are the most common request from DLF Phase 2, since many residents work in the nearby Cyber City offices. With Sikanderpur Metro and the Rapid Metro station so close, helpers can reach the colony early in the day.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-2"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "dlf-phase-3": {
+    "neighbours": ["dlf-phase-2", "dlf-phase-1", "dlf-phase-4", "golf-course-road", "sector-43", "sector-42", "dlf-phase-5"],
+    "landmarks": ["DLF Cyber City", "DLF CyberHub", "Ambience Mall", "DLF Phase 3 Rapid Metro Station", "Moulsari Avenue Rapid Metro Station"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Nathupur"],
+    "localIntro": "DLF Phase 3, under pincode 122010, sits right beside DLF Cyber City and the CyberHub dining hub, with Ambience Mall and the Delhi-Gurgaon expressway on its western edge. Unlike the plotted bungalow blocks of DLF Phase 1, most of Phase 3 was laid out in smaller plots, so builder floors dominate: three- and four-storey buildings with one flat per floor, many of them let to young professionals, flat-sharers and paying-guest residents who walk to work in the corporate towers. A few gated complexes such as Belvedere Park and Belvedere Towers stand near the Cyber City boundary, and a smaller number of families own homes in the U and S blocks. The Rapid Metro loop runs through the area, with the DLF Phase 3 and Moulsari Avenue stations offering a quick link to Sikanderpur on the Yellow Line. DLF Phase 2 adjoins across Cyber City, DLF Phase 1 lies to the north-east and Golf Course Road is a short drive away. Household requirements here are mostly part-time cleaning and cooking, often on shared-flat arrangements, and Nathupur village on the colony's edge is where a large share of helpers live.",
+    "commuteNotes": "The DLF Phase 3 and Moulsari Avenue stations on the Rapid Metro connect to Sikanderpur on the Yellow Line, and buses run along NH-48 and Nathupur Road. Most helpers live in Nathupur village and walk across.",
+    "housingNotes": "Builder floors on compact plots make up most of the housing, with individual landlords rather than societies, so entry is informal and short part-time slots are easy to arrange; the few gated complexes near Cyber City issue helper passes.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-dlf-phase-3-1",
+        "q": "Which areas near DLF Phase 3 do you also serve?",
+        "a": "DLF Phase 2 and DLF Phase 1 on the other side of Cyber City are covered by the same nearby helper pool, as are DLF Phase 4 and Sushant Lok in Sector 43. Nathupur village, which adjoins the colony, is treated as part of DLF Phase 3.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-3"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-3-2",
+        "q": "Which pincode does the DLF Phase 3 service area cover?",
+        "a": "DLF Phase 3 falls under pincode 122010. Neighbouring DLF Phase 2 and DLF Phase 1 use 122002, and DLF Phase 4 uses 122009.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-3"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-3-3",
+        "q": "Do you provide helpers for shared builder-floor flats in DLF Phase 3?",
+        "a": "Yes. Part-time cleaning and cooking for shared flats is the most common request from DLF Phase 3, given how many residents work in Cyber City. Because these are builder floors with individual landlords, there is normally no society pass to arrange and flatmates settle the slot directly with the helper.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-3"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "dlf-phase-4": {
+    "neighbours": ["dlf-phase-1", "golf-course-road", "sector-43", "sector-42", "dlf-phase-2", "dlf-phase-5", "sector-54", "sector-53", "sector-44"],
+    "landmarks": ["Galleria Market", "Cross Point Mall", "Sector 42-43 Rapid Metro Station", "Golf Course Road", "Chakkarpur"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Chakkarpur"],
+    "localIntro": "DLF Phase 4, with pincode 122009, stretches from the MG Road side of Gurgaon down to Golf Course Road and is best known for Galleria Market, the open-air shopping and dining square that serves the whole DLF belt. Housing is genuinely mixed: gated apartment complexes such as Ridgewood Estate and Regency Park sit alongside plotted independent houses and newer builder floors, so residents range from established families with school-going children to professionals commuting to Cyber City and the Golf Course Road offices. Cross Point Mall and the Sector 42-43 station on the Rapid Metro's Golf Course Road extension are both on the doorstep, and Chakkarpur village adjoins the colony on the MG Road side. DLF Phase 1 lies to the north, Sushant Lok in Sector 43 to the south-west and DLF Phase 5 across Golf Course Road. Because apartment blocks and independent houses sit side by side, requirements vary from full-day helpers for larger houses to fixed part-time slots in the towers, and Chakkarpur is where many of the helpers who serve this area live.",
+    "commuteNotes": "The Sector 42-43 Rapid Metro station is on the Golf Course Road edge of the colony, and MG Road and Sikanderpur metro stations are a short bus or auto ride away. Many helpers walk in from Chakkarpur village.",
+    "housingNotes": "Gated complexes here register helpers and issue entry passes at the gate, while the plotted houses and builder floors manage entry directly, so timing flexibility depends on which part of the colony you live in.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-dlf-phase-4-1",
+        "q": "Which areas near DLF Phase 4 do you also serve?",
+        "a": "DLF Phase 1, Sushant Lok in Sector 43, Sector 42 and the DLF Phase 5 towers across Golf Course Road are all close by and served by the same helper pool. Chakkarpur village on the MG Road side is covered as part of DLF Phase 4.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-4"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-4-2",
+        "q": "Which pincode does DLF Phase 4 service cover?",
+        "a": "DLF Phase 4 falls under pincode 122009. DLF Phase 1 and DLF Phase 2 to the north use 122002, while DLF Phase 5 and the Golf Course Road sectors use 122011.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-4"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-4-3",
+        "q": "Do helpers in DLF Phase 4 need society gate passes?",
+        "a": "It depends on the block. Gated complexes such as Ridgewood Estate and Regency Park require helpers to be registered with the society and carry a pass, whereas the independent houses and builder floors around Galleria Market manage entry at the door.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-4"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "dlf-phase-5": {
+    "neighbours": ["golf-course-road", "sector-42", "sector-53", "sector-54", "sector-43", "dlf-phase-4", "sector-52", "sector-55", "sector-56"],
+    "landmarks": ["DLF Golf & Country Club", "South Point Mall", "Sector 53-54 Rapid Metro Station", "Sector 54 Chowk Rapid Metro Station", "Golf Course Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Wazirabad"],
+    "localIntro": "DLF Phase 5, under pincode 122011, is the high-rise heart of Golf Course Road, spread across Sectors 42, 53 and 54 around the DLF Golf & Country Club. Housing is almost entirely gated: large condominium complexes such as The Aralias, The Magnolias, The Belaire and Park Place, with landscaped grounds, clubhouses and strict entry controls. Residents are mostly affluent families, senior corporate executives and expatriates, many of whom keep full-time or live-in domestic staff alongside cooks, nannies and drivers. South Point Mall and the Sector 53-54 and Sector 54 Chowk stations on the Rapid Metro sit along the main road, and the offices of Golf Course Road are within walking distance. DLF Phase 4 lies across Golf Course Road, Sushant Lok in Sector 43 is to the north-west and Sectors 55 and 56 continue south towards the Golf Course Extension Road. Every society here runs a formal helper-registration system, so households typically arrange verified full-day helpers and register them at the gate, and Wazirabad village beside Sector 53 is where a good many of them live.",
+    "commuteNotes": "The Sector 53-54 and Sector 54 Chowk stations on the Rapid Metro serve the area directly, with buses and shared autos along Golf Course Road. Helpers also walk in from Wazirabad village on the Sector 52 side.",
+    "housingNotes": "Almost entirely gated condominium towers with guarded entry, so every helper must be registered with the society and carry a pass; most complexes also fix maid-entry timings and keep a log at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-dlf-phase-5-1",
+        "q": "Which areas near DLF Phase 5 do you also serve?",
+        "a": "Sectors 42, 53 and 54, which make up the DLF Phase 5 belt, are covered along with DLF Phase 4 across Golf Course Road and Sushant Lok in Sector 43. Sectors 55 and 56 towards the Golf Course Extension Road are also nearby.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-5"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-5-2",
+        "q": "Do helpers in DLF Phase 5 need society passes?",
+        "a": "Yes. The condominium complexes in DLF Phase 5 all require helpers to be registered with the society office and to carry a gate pass, and many fix maid-entry timings. The household usually completes this registration once a helper is finalised.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-5"]
+      },
+      {
+        "id": "faq-gurgaon-dlf-phase-5-3",
+        "q": "Which pincode does DLF Phase 5 service cover?",
+        "a": "DLF Phase 5 falls under pincode 122011, which it shares with Sectors 42, 43, 53 and 54 along Golf Course Road. DLF Phase 4 across the road uses 122009.",
+        "scope": "locality",
+        "tags": ["gurgaon", "dlf-phase-5"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "golf-course-road": {
+    "neighbours": ["dlf-phase-5", "sector-42", "sector-43", "sector-53", "sector-54", "sector-55", "sector-56", "dlf-phase-4", "dlf-phase-1", "sector-57"],
+    "landmarks": ["DLF Golf & Country Club", "South Point Mall", "One Horizon Center", "Sector 42-43 Rapid Metro Station", "Sector 55-56 Rapid Metro Station", "Paras Hospital"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Golf Course Road is Gurgaon's flagship residential and office corridor, running from the DLF Phase 1 end near Sikanderpur through DLF Phase 5 to the Sector 55-56 junction where the Golf Course Extension Road begins, and covering pincode 122002 at its northern end and 122011 for most of its length. The road is lined with gated high-rise societies on both sides: DLF Phase 5 condominiums, the towers of Sectors 53 and 54, and newer complexes towards Sectors 55 and 56, with plotted Sushant Lok in Sector 43 just behind the western frontage. Residents are largely working professionals and affluent families, many employed in office towers such as One Horizon Center that share the corridor, with the DLF Golf & Country Club and South Point Mall as its best-known landmarks. The Rapid Metro's Golf Course Road extension runs down the median, with stations at Sector 42-43, Sector 53-54, Sector 54 Chowk and Sector 55-56, and Paras Hospital lies on the Sector 43 side. Because almost every building here is a gated society, households generally look for verified full-day or part-time helpers who can be registered at the gate.",
+    "commuteNotes": "Four Rapid Metro stations - Sector 42-43, Sector 53-54, Sector 54 Chowk and Sector 55-56 - sit along the road, and buses and shared autos run its full length; helpers from the adjoining villages such as Chakkarpur and Wazirabad usually walk or take a shared auto.",
+    "housingNotes": "Overwhelmingly gated high-rise societies with guarded entry, helper registration and fixed entry timings, so passes are the norm; only the plotted colonies just off the road, such as Sushant Lok, offer more informal arrangements.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-golf-course-road-1",
+        "q": "Which areas along Golf Course Road do you serve?",
+        "a": "The whole corridor from DLF Phase 1 to the Sector 55-56 junction is covered, including DLF Phase 5, Sectors 42, 43, 53 and 54, and Sectors 55 and 56 at the southern end. DLF Phase 4 and Sector 57 just off the road are served by the same helper pool.",
+        "scope": "locality",
+        "tags": ["gurgaon", "golf-course-road"]
+      },
+      {
+        "id": "faq-gurgaon-golf-course-road-2",
+        "q": "Which pincodes does the Golf Course Road service area cover?",
+        "a": "Golf Course Road spans two pincodes: 122002 at the DLF Phase 1 end near Sikanderpur, and 122011 for the DLF Phase 5 stretch and the sectors from 42 down to 56.",
+        "scope": "locality",
+        "tags": ["gurgaon", "golf-course-road"]
+      },
+      {
+        "id": "faq-gurgaon-golf-course-road-3",
+        "q": "Do helpers on Golf Course Road need society gate passes?",
+        "a": "Almost always, since nearly every residential building on Golf Course Road is a gated society with guarded entry. Helpers are registered with the society office and issued a pass, and most complexes also set maid-entry timings.",
+        "scope": "locality",
+        "tags": ["gurgaon", "golf-course-road"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-42": {
+    "neighbours": ["golf-course-road", "sector-43", "dlf-phase-5", "sector-54", "sector-53", "dlf-phase-4", "dlf-phase-1", "sector-44"],
+    "landmarks": ["DLF Golf & Country Club", "Sector 42-43 Rapid Metro Station", "Golf Course Road", "South Point Mall"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 42, under pincode 122011, is the sector on the golf-course side of Golf Course Road that contains the DLF Golf & Country Club and the DLF Phase 5 condominium towers built around its fairways, including The Aralias and The Magnolias. Housing is almost entirely gated high-rise, and residents are affluent families, senior executives and expatriate households, most of whom employ full-time cooks, nannies and cleaning staff alongside drivers. The Sector 42-43 station on the Rapid Metro's Golf Course Road extension sits at the sector's edge, South Point Mall is a short walk down the road, and the offices along Golf Course Road are within easy reach. Sushant Lok in Sector 43 lies directly across the road, Sector 54 continues south along the same side, and DLF Phase 4 and DLF Phase 1 are to the north. Society rules here are formal, with helper registration, gate passes and often fixed entry windows, so households in Sector 42 typically look for verified helpers who can be registered with the society and are comfortable with the routines of large condominium complexes.",
+    "commuteNotes": "The Sector 42-43 Rapid Metro station, connected to Sikanderpur on the Yellow Line, serves the sector directly, and buses and shared autos ply Golf Course Road. Helpers from Chakkarpur and Wazirabad typically come by shared auto or on foot.",
+    "housingNotes": "Gated condominium complexes dominate, each with guarded gates, helper registration and entry passes, and many fix maid-entry timings, so households should expect to complete society formalities before a helper starts.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-42-1",
+        "q": "Which areas near Sector 42 do you also serve?",
+        "a": "Sushant Lok in Sector 43 across Golf Course Road, Sector 54 and Sector 53 further down the road, and DLF Phase 4 and DLF Phase 1 to the north are all covered by the same helper pool. Sector 42 itself forms part of the DLF Phase 5 belt.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-42"]
+      },
+      {
+        "id": "faq-gurgaon-sector-42-2",
+        "q": "Do helpers in Sector 42 need society gate passes?",
+        "a": "Yes. The condominium complexes around the DLF Golf & Country Club all require helpers to be registered with the society and to carry a pass, and several fix maid-entry timings. Households normally complete this at the society office once a helper is finalised.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-42"]
+      },
+      {
+        "id": "faq-gurgaon-sector-42-3",
+        "q": "Which pincode does Sector 42 service cover?",
+        "a": "Sector 42 falls under pincode 122011, shared with Sectors 43, 53 and 54 and the rest of DLF Phase 5. DLF Phase 4 across Golf Course Road uses 122009.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-42"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-43": {
+    "neighbours": ["sector-42", "golf-course-road", "sector-44", "sector-45", "dlf-phase-4", "sector-53", "sector-46", "dlf-phase-5", "sector-54"],
+    "landmarks": ["Millennium City Centre (Huda City Centre) Metro Station", "Paras Hospital", "Vyapar Kendra", "Sector 42-43 Rapid Metro Station", "Golf Course Road"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Kanhai"],
+    "localIntro": "Sector 43, under pincode 122011, is largely made up of Sushant Lok Phase 1, one of Gurgaon's earliest private plotted colonies, lying between Golf Course Road and the Millennium City Centre (formerly Huda City Centre) metro station. Housing is dominated by builder floors raised on individual plots, with a good number of original independent houses still standing in the older blocks and a handful of apartment complexes along the main roads. Residents are a mix of long-settled families and professionals renting floors close to the Golf Course Road offices, with Vyapar Kendra serving as the colony's everyday market. Paras Hospital and the Sector 42-43 Rapid Metro station are on the Golf Course Road side, while the Yellow Line terminus sits at the colony's western edge. Sector 42 and DLF Phase 5 lie across Golf Course Road, Sectors 44 and 45 are to the west and south, and Sector 53 adjoins further down the road. Builder floors mean individual landlords rather than societies, so part-time cleaning and cooking on fixed slots is the typical requirement, and Kanhai village in Sector 45 is home to many of the helpers who work here.",
+    "commuteNotes": "Millennium City Centre (Huda City Centre) Metro Station on the Yellow Line and the Sector 42-43 Rapid Metro station serve opposite ends of the sector, and buses run along the Sector 43 main road. Many helpers walk in from Kanhai village in Sector 45.",
+    "housingNotes": "Mostly builder floors and independent houses with individual landlords, so there is no society pass system in the older blocks and timings are settled directly with the household; the few apartment complexes register helpers at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-43-1",
+        "q": "Which areas near Sector 43 do you also serve?",
+        "a": "Sector 42 and DLF Phase 5 across Golf Course Road, DLF Phase 4 to the north, and Sectors 44 and 45 towards the metro station are all served by the same helper pool. Sushant Lok Phase 1 is covered as part of Sector 43.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-43"]
+      },
+      {
+        "id": "faq-gurgaon-sector-43-2",
+        "q": "Which pincode does Sector 43 service cover?",
+        "a": "Sector 43, including Sushant Lok Phase 1, falls under pincode 122011. Neighbouring Sectors 44, 45 and 46 use 122003, and DLF Phase 4 uses 122009.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-43"]
+      },
+      {
+        "id": "faq-gurgaon-sector-43-3",
+        "q": "Do helpers in Sector 43 need society gate passes?",
+        "a": "In most of Sushant Lok Phase 1 the homes are builder floors or independent houses with individual owners, so no society pass is needed and entry is arranged with the household. Only the apartment complexes on the main roads register helpers at the gate.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-43"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-53": {
+    "neighbours": ["sector-54", "golf-course-road", "dlf-phase-5", "sector-52", "sector-43", "sector-56", "sector-55", "sector-42"],
+    "landmarks": ["South Point Mall", "Sector 53-54 Rapid Metro Station", "Golf Course Road", "Wazirabad"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Wazirabad"],
+    "localIntro": "Sector 53, with pincode 122011, occupies the western side of Golf Course Road opposite Sector 54 and forms part of the DLF Phase 5 belt, with South Point Mall as its most familiar landmark. Housing is dominated by gated apartment complexes and condominium towers along the road, including Vipul Belmonte, and residents are largely working professionals employed in the Golf Course Road and Cyber City offices together with families drawn by the proximity to schools and the mall. The Sector 53-54 station on the Rapid Metro sits directly on the sector's frontage, and Wazirabad village adjoins the sector on the Sector 52 side, which is where many of the domestic helpers serving these towers live. Sushant Lok in Sector 43 lies to the north, Ardee City in Sector 52 to the west and Sectors 55 and 56 continue south towards the end of Golf Course Road. Because entry to every complex here runs through a guarded gate, households usually arrange verified helpers who can be registered with the society, with full-day cooks and part-time cleaning on fixed slots being the common pattern.",
+    "commuteNotes": "The Sector 53-54 Rapid Metro station is on the sector's doorstep and buses and shared autos run along Golf Course Road. Most helpers walk across from Wazirabad village on the Sector 52 side.",
+    "housingNotes": "Gated towers with guarded entry, helper registration and passes are the norm, and several societies fix maid-entry windows, so households should allow time for society formalities before a helper starts.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-53-1",
+        "q": "Which areas near Sector 53 do you also serve?",
+        "a": "Sector 54 across Golf Course Road, the rest of DLF Phase 5, Ardee City in Sector 52 and Sushant Lok in Sector 43 are all covered by the same helper pool. Sectors 55 and 56 further down the road are also nearby.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-53"]
+      },
+      {
+        "id": "faq-gurgaon-sector-53-2",
+        "q": "Where do helpers working in Sector 53 usually come from?",
+        "a": "Wazirabad village, which adjoins Sector 53 on the Sector 52 side, is home to many of the helpers who work in the Golf Course Road towers, so most reach the societies on foot. Others come by shared auto along Golf Course Road or via the Sector 53-54 Rapid Metro station.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-53"]
+      },
+      {
+        "id": "faq-gurgaon-sector-53-3",
+        "q": "Which pincode does Sector 53 service cover?",
+        "a": "Sector 53 falls under pincode 122011, shared with Sector 54, Sector 42 and the rest of DLF Phase 5. Ardee City in neighbouring Sector 52 is also part of the same Golf Course Road belt.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-53"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-54": {
+    "neighbours": ["sector-53", "dlf-phase-5", "golf-course-road", "sector-42", "sector-55", "sector-56", "sector-43"],
+    "landmarks": ["Sector 54 Chowk Rapid Metro Station", "Sector 53-54 Rapid Metro Station", "Suncity Township", "DLF Golf & Country Club", "Golf Course Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 54, under pincode 122011, sits on the golf-course side of Golf Course Road between Sector 42 and Sector 55 and is one of the densest residential pockets of DLF Phase 5. Housing is almost entirely gated: large DLF condominiums such as Park Place, The Belaire and The Crest, alongside the Suncity township and other apartment complexes, with very few independent houses. Residents are predominantly families with children and senior professionals, and households commonly employ a cook, a full-day helper and a nanny or elder-care attendant. Two Rapid Metro stations, Sector 53-54 and Sector 54 Chowk, serve the sector, the DLF Golf & Country Club forms its northern boundary and South Point Mall is just across the road in Sector 53. Sector 42 lies to the north, Sector 53 across Golf Course Road and Sectors 55 and 56 to the south. Every complex here operates a formal gate system with helper registration, passes and often fixed entry timings, so households in Sector 54 generally look for verified, long-term helpers who are comfortable with society procedures.",
+    "commuteNotes": "The Sector 54 Chowk and Sector 53-54 Rapid Metro stations both serve the sector, with buses and shared autos on Golf Course Road; helpers from Wazirabad and the Sector 52 side usually take a shared auto or walk.",
+    "housingNotes": "Gated condominium towers with guarded entry dominate; helpers must be registered with the society, carry a pass and, in most complexes, follow fixed maid-entry timings.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-54-1",
+        "q": "Which areas near Sector 54 do you also serve?",
+        "a": "Sector 53 across Golf Course Road, Sector 42 to the north and the rest of DLF Phase 5 are covered by the same helper pool, along with Sectors 55 and 56 to the south. Suncity and the DLF condominiums are all treated as part of Sector 54.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-54"]
+      },
+      {
+        "id": "faq-gurgaon-sector-54-2",
+        "q": "Do helpers in Sector 54 need society gate passes?",
+        "a": "Yes. Complexes such as Park Place, The Belaire and Suncity all register helpers at the society office and issue passes, and most set maid-entry timings. The household completes the registration once a helper is finalised.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-54"]
+      },
+      {
+        "id": "faq-gurgaon-sector-54-3",
+        "q": "Which pincode does Sector 54 service cover?",
+        "a": "Sector 54 falls under pincode 122011, the same as Sectors 42, 53, 55 and 56 and DLF Phase 5. Both the Sector 53-54 and Sector 54 Chowk Rapid Metro stations lie within this pincode.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-54"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-55": {
+    "neighbours": ["sector-56", "golf-course-road", "sector-54", "sector-53", "dlf-phase-5", "sector-57", "sector-58", "sector-52"],
+    "landmarks": ["Sector 55-56 Rapid Metro Station", "Golf Course Road", "Sushant Lok 2", "Golf Course Extension Road"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 55, with pincode 122011, lies towards the southern end of Golf Course Road, just before the road meets the Golf Course Extension Road at the Sector 55-56 junction. Much of the sector is taken up by Sushant Lok Phase 2, a plotted private colony where builder floors on individual plots are now the dominant housing form, mixed with original independent houses and a few gated apartment complexes along the main road. Residents are largely families and working professionals who want to be near the Golf Course Road offices without living in a high-rise, and the sector has a quieter, more low-rise character than DLF Phase 5 to its north. The Sector 55-56 station, the terminus of the Rapid Metro's Golf Course Road extension, is the main transit point, and Sector 54 and Sector 53 lie immediately north, with Sector 56 alongside and Sector 57 beyond it. Individual landlords rather than societies mean helper entry is informal in most blocks, and part-time cleaning and cooking slots are the typical requirement, with full-day helpers common in the larger independent houses.",
+    "commuteNotes": "The Sector 55-56 Rapid Metro station is the nearest metro point, with buses and shared autos along Golf Course Road and the Golf Course Extension Road. Helpers usually arrive on foot from adjoining sectors or by shared auto.",
+    "housingNotes": "Builder floors and independent houses with individual owners make up most of the sector, so entry is arranged directly with the household; the few gated complexes on the main road issue helper passes.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-55-1",
+        "q": "Which areas near Sector 55 do you also serve?",
+        "a": "Sector 56 alongside, Sectors 54 and 53 towards DLF Phase 5, and Sector 57 beyond the Golf Course Extension Road junction are all served by the same helper pool. Sushant Lok Phase 2 is covered as part of Sector 55.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-55"]
+      },
+      {
+        "id": "faq-gurgaon-sector-55-2",
+        "q": "Which pincode does Sector 55 service cover?",
+        "a": "Sector 55, including its Sushant Lok Phase 2 blocks, falls under pincode 122011. Neighbouring Sectors 54 and 56 share the same pincode, as does DLF Phase 5.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-55"]
+      },
+      {
+        "id": "faq-gurgaon-sector-55-3",
+        "q": "Do helpers in Sector 55 need society gate passes?",
+        "a": "Mostly not, because Sushant Lok Phase 2 consists of builder floors and independent houses with individual owners, so entry and timings are agreed directly with the household. The few gated complexes along Golf Course Road do register helpers and issue passes.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-55"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-56": {
+    "neighbours": ["sector-55", "sector-57", "golf-course-road", "sector-58", "sector-54", "sector-53", "dlf-phase-5", "sector-59", "sector-52"],
+    "landmarks": ["Sector 55-56 Rapid Metro Station", "Golf Course Extension Road", "Golf Course Road", "Sushant Lok 2", "HUDA Market Sector 56"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 56, under pincode 122011, marks the point where Golf Course Road ends and the Golf Course Extension Road begins, with the Sector 55-56 Rapid Metro terminus at its junction. It is a HUDA-developed sector, so the housing is mixed: plotted independent houses and builder floors laid out on HUDA plots, the plotted blocks of Sushant Lok Phase 2, and a number of gated apartment complexes along the two arterial roads. Residents are mainly families, including many long-settled plot owners, together with professionals who rent floors for the easy access to Golf Course Road offices, and the HUDA market in Sector 56 serves as the local shopping hub. Sector 55 adjoins to the north, Sector 57 (Sushant Lok 3) to the south-west and Sector 58 to the south-east along the Golf Course Extension Road, with the DLF Phase 5 towers a short drive up the main road. The mix of plotted homes and societies means requirements vary from full-day helpers for independent houses to fixed part-time slots in the apartment complexes, and helpers here move easily between adjoining sectors.",
+    "commuteNotes": "The Sector 55-56 Rapid Metro station sits at the sector's junction with Golf Course Road, and buses and shared autos run along both Golf Course Road and the Golf Course Extension Road. Helpers usually reach the plotted blocks on foot from adjoining sectors.",
+    "housingNotes": "A mix of HUDA plots, builder floors and gated societies: independent houses handle entry directly and allow flexible timings, while the apartment complexes register helpers and issue passes.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-56-1",
+        "q": "Which areas near Sector 56 do you also serve?",
+        "a": "Sector 55 to the north, Sector 57 (Sushant Lok 3) to the south-west and Sector 58 along the Golf Course Extension Road are all served by the same helper pool. Sectors 53 and 54 and DLF Phase 5 up Golf Course Road are also close.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-56"]
+      },
+      {
+        "id": "faq-gurgaon-sector-56-2",
+        "q": "Which pincode does Sector 56 service cover?",
+        "a": "Sector 56 falls under pincode 122011, which also covers Sectors 55, 57 and 58 and the DLF Phase 5 belt. The Sector 55-56 Rapid Metro station lies within this pincode.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-56"]
+      },
+      {
+        "id": "faq-gurgaon-sector-56-3",
+        "q": "Do helpers in Sector 56 need society gate passes?",
+        "a": "It depends on where you live. The HUDA plots and Sushant Lok Phase 2 blocks are independent houses and builder floors where entry is arranged with the household, while the gated apartment complexes on Golf Course Road and the Golf Course Extension Road register helpers and issue passes.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-56"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-57": {
+    "neighbours": ["sector-56", "sector-58", "sector-55", "sector-50", "sector-51", "sector-59", "golf-course-road", "sector-49", "sector-60"],
+    "landmarks": ["Golf Course Extension Road", "Sector 55-56 Rapid Metro Station", "Sushant Lok 3", "Nirvana Country"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 57, with pincode 122011, is home to Sushant Lok Phase 3 and lies just off the Golf Course Extension Road, south-west of Sector 56 and alongside Nirvana Country in Sector 50. Housing is mostly builder floors on plotted land, with a fair number of independent houses in the older blocks and several gated group-housing societies on the sector's outer edges, giving it a mid-rise, family-oriented feel compared with the towers along Golf Course Road. Residents are largely families, many of them long-term owners, together with professionals who rent floors for the short drive to the Golf Course Road and Sohna Road office belts. The Sector 55-56 Rapid Metro station is the nearest metro point, and the Golf Course Extension Road gives quick access to Sectors 58 to 61 further along it. Sector 56 lies to the north, Sector 58 to the south-east, and Sectors 50 and 51 to the west. Individual landlords in the builder-floor blocks keep entry informal, so part-time cleaning and cooking slots are easy to arrange, while the gated societies on the sector's fringe register helpers at the gate.",
+    "commuteNotes": "The Sector 55-56 Rapid Metro station is the closest metro link, and buses and shared autos run along the Golf Course Extension Road; helpers usually walk in from adjoining sectors or come by shared auto.",
+    "housingNotes": "Builder floors and independent houses with individual owners dominate, so there is no society pass in most blocks; the group-housing societies on the sector's edges register helpers and issue passes.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-57-1",
+        "q": "Which areas near Sector 57 do you also serve?",
+        "a": "Sector 56 to the north, Sector 58 along the Golf Course Extension Road, and Nirvana Country and Sectors 50 and 51 to the west are all covered by the same helper pool. Sushant Lok Phase 3 is served as part of Sector 57.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-57"]
+      },
+      {
+        "id": "faq-gurgaon-sector-57-2",
+        "q": "Which pincode does Sector 57 service cover?",
+        "a": "Sector 57, including Sushant Lok Phase 3, falls under pincode 122011. Neighbouring Sectors 56 and 58 share the same pincode, while Sectors 49, 50 and 51 towards Sohna Road use 122018.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-57"]
+      },
+      {
+        "id": "faq-gurgaon-sector-57-3",
+        "q": "Do helpers in Sector 57 need society gate passes?",
+        "a": "In the builder-floor and independent-house blocks of Sushant Lok Phase 3 no society pass is needed and timings are settled with the household. The gated group-housing societies on the edges of the sector do register helpers and issue passes.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-57"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-58": {
+    "neighbours": ["sector-59", "sector-57", "sector-56", "sector-60", "sector-55", "sector-61", "golf-course-road", "sector-54"],
+    "landmarks": ["Golf Course Extension Road", "Ghata Village", "Sector 55-56 Rapid Metro Station", "Aravalli foothills"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Ghata"],
+    "localIntro": "Sector 58, under pincode 122011, is the first sector along the Golf Course Extension Road after it branches off from Golf Course Road at Sector 56, and it backs onto the Aravalli foothills beside Ghata village. Housing is dominated by gated societies, most of them high-rise complexes built over the last decade such as Ireo Grand Arch, along with a few low-rise gated enclaves, and there are very few plotted homes. Residents are mostly working professionals and young families who have bought or rented in the newer towers, attracted by the green edge and the short drive to Golf Course Road offices. The Sector 55-56 Rapid Metro terminus is the nearest metro station, and the extension road carries buses and shared autos towards Sectors 59, 60 and 61 and on to Sohna Road. Sector 56 and Sector 57 lie to the north-west, Sector 59 alongside and Sector 60 further along the road. Every complex here runs a gated entry system, so households typically arrange verified helpers who are registered with the society, and Ghata village on the sector's boundary is where many of those helpers live.",
+    "commuteNotes": "The Sector 55-56 Rapid Metro station is the nearest metro point, and buses and shared autos run along the Golf Course Extension Road. Many helpers walk in from Ghata village, which adjoins the sector.",
+    "housingNotes": "Gated high-rise societies dominate, so helpers must be registered with the society, carry a pass and follow the complex's maid-entry timings; the few independent houses handle entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-58-1",
+        "q": "Which areas near Sector 58 do you also serve?",
+        "a": "Sector 59 alongside, Sectors 60 and 61 further down the Golf Course Extension Road, and Sectors 56 and 57 back towards Golf Course Road are all covered by the same helper pool. Ghata village on the sector's edge is served as part of Sector 58.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-58"]
+      },
+      {
+        "id": "faq-gurgaon-sector-58-2",
+        "q": "Do helpers in Sector 58 need society gate passes?",
+        "a": "Yes, in almost every case, since Sector 58 is made up of gated societies such as Ireo Grand Arch. Helpers are registered at the society office, carry a pass and follow the complex's maid-entry timings.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-58"]
+      },
+      {
+        "id": "faq-gurgaon-sector-58-3",
+        "q": "Which pincode does Sector 58 service cover?",
+        "a": "Sector 58 falls under pincode 122011, which also covers Sectors 56, 57, 59, 60 and 61 along the Golf Course Extension Road. Ghata village adjoining the sector is within the same service area.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-58"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-59": {
+    "neighbours": ["sector-58", "sector-60", "sector-61", "sector-57", "sector-56", "sector-55", "golf-course-road", "sector-65"],
+    "landmarks": ["Golf Course Extension Road", "Ghata Village", "Sector 55-56 Rapid Metro Station", "Aravalli foothills"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 59, with pincode 122011, lies along the Golf Course Extension Road between Sector 58 and Sector 60, on the Aravalli-facing side of the corridor close to Ghata village. Like its neighbours on the extension road, it has been built up almost entirely with gated societies over the past decade, from high-rise apartment complexes to a few low-rise and villa enclaves, with little in the way of plotted independent housing. Residents are largely working professionals and young families, many of them first-time buyers or tenants in the newer towers who commute to Golf Course Road, Sohna Road and Cyber City. The Sector 55-56 Rapid Metro terminus is the nearest metro station, a short drive back up the corridor, and the extension road links the sector to Sector 65 and Sohna Road further south. Sector 58 adjoins to the north-west, Sectors 60 and 61 continue along the road, and Sector 57 and Sector 56 lie back towards Golf Course Road. Because every complex runs a guarded gate, households usually look for verified helpers who can be registered with the society, with cooks and full-day helpers common among the families here.",
+    "commuteNotes": "The Sector 55-56 Rapid Metro station is the closest metro link and buses and shared autos run along the Golf Course Extension Road; helpers from the Ghata side and adjoining sectors usually come on foot or by shared auto.",
+    "housingNotes": "Almost entirely gated societies with guarded entry, so helper registration, passes and fixed maid-entry windows are standard across the sector.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-59-1",
+        "q": "Which areas near Sector 59 do you also serve?",
+        "a": "Sector 58 and Sectors 60 and 61 along the Golf Course Extension Road are covered by the same helper pool, as are Sectors 56 and 57 back towards Golf Course Road. Sector 65 further down the corridor is also nearby.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-59"]
+      },
+      {
+        "id": "faq-gurgaon-sector-59-2",
+        "q": "Do helpers in Sector 59 need society gate passes?",
+        "a": "Yes. Sector 59 is made up almost entirely of gated societies, so every helper needs to be registered at the society office and carry a pass, and most complexes set maid-entry timings.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-59"]
+      },
+      {
+        "id": "faq-gurgaon-sector-59-3",
+        "q": "Which pincode does Sector 59 service cover?",
+        "a": "Sector 59 falls under pincode 122011, shared with Sectors 58, 60 and 61 on the Golf Course Extension Road. Sector 65 further along uses 122018.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-59"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-60": {
+    "neighbours": ["sector-59", "sector-61", "sector-58", "sector-57", "sector-65", "sector-66", "sector-56", "golf-course-road"],
+    "landmarks": ["Golf Course Extension Road", "Sector 55-56 Rapid Metro Station", "Ghata Village", "Aravalli foothills"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 60, under pincode 122011, sits midway along the Golf Course Extension Road between Sector 59 and Sector 61, one of the newer residential belts that grew up after the road was built to link Golf Course Road with Sohna Road. The housing is almost entirely gated high-rise societies, including Ireo Skyon, with landscaped grounds, clubhouses and guarded gates, and the few remaining open plots are still being developed. Residents are mostly working professionals and young families, a large share of them tenants, who commute to the office towers on Golf Course Road, Sohna Road and Cyber City. The Sector 55-56 Rapid Metro station is the nearest metro point, some distance back up the corridor, so most daily movement is by car, cab and shared auto along the extension road. Sector 59 and Sector 58 lie towards Golf Course Road, Sector 61 continues along the road and Sectors 65 and 66 follow beyond it towards Sohna Road, with the Aravalli foothills and Ghata village on the eastern side. Society formalities are standard in every complex here, so households generally arrange verified helpers who can be registered at the gate and who are used to fixed entry timings.",
+    "commuteNotes": "The Sector 55-56 Rapid Metro station is the closest metro link, with buses and shared autos running along the Golf Course Extension Road; most helpers reach the societies by shared auto or on foot from adjoining sectors.",
+    "housingNotes": "Gated high-rise societies dominate, so every helper needs society registration and a gate pass, and most complexes fix maid-entry timings.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-60-1",
+        "q": "Which areas near Sector 60 do you also serve?",
+        "a": "Sectors 59 and 58 back towards Golf Course Road and Sector 61 further along the Golf Course Extension Road are covered by the same helper pool. Sectors 65 and 66 towards Sohna Road are also close.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-60"]
+      },
+      {
+        "id": "faq-gurgaon-sector-60-2",
+        "q": "Do helpers in Sector 60 need society gate passes?",
+        "a": "Yes. Complexes such as Ireo Skyon and the other gated societies in Sector 60 require helpers to be registered at the society office and to carry a pass, and most fix maid-entry timings.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-60"]
+      },
+      {
+        "id": "faq-gurgaon-sector-60-3",
+        "q": "Which pincode does Sector 60 service cover?",
+        "a": "Sector 60 falls under pincode 122011, the same as Sectors 58, 59 and 61 along the Golf Course Extension Road. Sectors 65 and 66 beyond it use 122018.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-60"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-61": {
+    "neighbours": ["sector-60", "sector-59", "sector-65", "sector-66", "sector-58", "sector-57", "sector-67", "sector-56"],
+    "landmarks": ["Golf Course Extension Road", "Pioneer Park", "Sector 55-56 Rapid Metro Station", "Sohna Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 61, with pincode 122011, lies further down the Golf Course Extension Road past Sector 60, where the corridor begins to turn towards Sector 65 and Sohna Road. Housing is dominated by gated high-rise societies developed over the last decade, including Pioneer Park, and the sector still has construction under way on remaining plots, so the resident base is young: working professionals and families, many of them tenants, who commute to Golf Course Road, Sohna Road and the Cyber City offices. There is little plotted housing, and daily life revolves around the society clubhouse, the local markets along the extension road and the shopping strips on Sohna Road. The Sector 55-56 Rapid Metro terminus is the nearest metro station, well back up the corridor, so cars, cabs and shared autos along the Golf Course Extension Road do most of the work. Sector 60 and Sector 59 lie back towards Golf Course Road, Sectors 65 and 66 adjoin on the Sohna Road side, and Sector 67 follows beyond them. Society registration and gate passes are standard in every complex here, and households typically look for verified helpers who are comfortable with fixed entry timings and the routines of large gated communities.",
+    "commuteNotes": "The Sector 55-56 Rapid Metro station is the nearest metro link; buses and shared autos run along the Golf Course Extension Road and from the Sohna Road side, and helpers typically arrive by shared auto or on foot from adjoining sectors.",
+    "housingNotes": "Almost entirely gated high-rise societies with guarded gates, so helpers must be registered with the society, carry a pass and follow maid-entry timings set by the complex.",
+    "localFaqs": [
+      {
+        "id": "faq-gurgaon-sector-61-1",
+        "q": "Which areas near Sector 61 do you also serve?",
+        "a": "Sectors 60 and 59 back up the Golf Course Extension Road and Sectors 65 and 66 on the Sohna Road side are covered by the same helper pool. Sector 67 beyond them and Sectors 57 and 58 towards Golf Course Road are also nearby.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-61"]
+      },
+      {
+        "id": "faq-gurgaon-sector-61-2",
+        "q": "Do helpers in Sector 61 need society gate passes?",
+        "a": "Yes. Sector 61 consists almost entirely of gated societies such as Pioneer Park, so helpers are registered at the society office, issued a pass and expected to follow the complex's maid-entry timings.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-61"]
+      },
+      {
+        "id": "faq-gurgaon-sector-61-3",
+        "q": "Which pincode does Sector 61 service cover?",
+        "a": "Sector 61 falls under pincode 122011, shared with Sectors 58, 59 and 60 along the Golf Course Extension Road. Neighbouring Sectors 65 and 66 use 122018 and Sector 67 uses 122101.",
+        "scope": "locality",
+        "tags": ["gurgaon", "sector-61"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

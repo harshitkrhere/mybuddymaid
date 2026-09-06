@@ -1,0 +1,390 @@
+{
+  "faqs": {
+    "delhi": [
+      {
+        "id": "faq-city-delhi-1",
+        "q": "Which parts of Delhi does MyBuddyMaid cover?",
+        "a": "Coverage is organised into eight zones: Central Delhi, South Delhi, South West Delhi, West Delhi, North Delhi, North West Delhi, East Delhi and North East Delhi. Each zone page lists the individual localities inside it, from Connaught Place and Karol Bagh in the centre to Rohini, Narela and Bawana in the north-west.",
+        "scope": "city",
+        "tags": [
+          "delhi"
+        ]
+      },
+      {
+        "id": "faq-city-delhi-2",
+        "q": "Is New Delhi covered, or only Delhi?",
+        "a": "New Delhi is treated as part of the Delhi coverage area on this site. Localities such as Connaught Place, Lodi Road and Chanakyapuri that fall in the New Delhi district are listed under the Central Delhi and South Delhi zones.",
+        "scope": "city",
+        "tags": [
+          "delhi"
+        ]
+      },
+      {
+        "id": "faq-city-delhi-3",
+        "q": "Do you cover Dwarka and the rest of South West Delhi?",
+        "a": "Yes. The South West Delhi zone includes Dwarka, Delhi Cantt, Palam, Mahipalpur, Rajokari, Najafgarh, Nangal Raya, Arjun Garh, Chhawla and Mahavir Enclave. Dwarka's sector-based apartment societies usually require helpers to be registered at the society gate.",
+        "scope": "city",
+        "tags": [
+          "delhi"
+        ]
+      },
+      {
+        "id": "faq-city-delhi-4",
+        "q": "Are trans-Yamuna areas like Mayur Vihar, Laxmi Nagar and Shahdara covered?",
+        "a": "Yes. East Delhi covers Mayur Vihar, Mayur Vihar Phase III, Preet Vihar, Laxmi Nagar, Vasundhara Enclave and Gandhi Nagar, while North East Delhi covers Shahdara, Vivek Vihar, Bhajanpura, Seelampur and Karawal Nagar.",
+        "scope": "city",
+        "tags": [
+          "delhi"
+        ]
+      },
+      {
+        "id": "faq-city-delhi-5",
+        "q": "Are Gurgaon, Noida and Faridabad included under Delhi?",
+        "a": "No. Gurgaon, Noida and Greater Noida each have their own city page with their own zones and localities. Faridabad and Ghaziabad are not currently part of the service footprint, so they do not have pages.",
+        "scope": "city",
+        "tags": [
+          "delhi"
+        ]
+      }
+    ],
+    "noida": [
+      {
+        "id": "faq-city-noida-1",
+        "q": "Which Noida sectors does MyBuddyMaid cover?",
+        "a": "Sectors are grouped into two zones. Noida Central covers the older and mid-city sectors from Sector 12 through Sector 79, and Noida Expressway covers Sector 93 through Sector 152 along the Noida-Greater Noida Expressway. Each sector has its own page listing its pincode.",
+        "scope": "city",
+        "tags": [
+          "noida"
+        ]
+      },
+      {
+        "id": "faq-city-noida-2",
+        "q": "Is Sector 62 covered?",
+        "a": "Yes. Sector 62 is listed under the Noida Central zone along with neighbouring Sectors 61 and 63. Households here are a mix of apartment societies and builder floors close to the Sector 62 office belt.",
+        "scope": "city",
+        "tags": [
+          "noida"
+        ]
+      },
+      {
+        "id": "faq-city-noida-3",
+        "q": "Do you cover the Expressway sectors such as Sector 137 and Sector 150?",
+        "a": "Yes. The Noida Expressway zone includes Sectors 93, 100, 104, 107, 108, 110, 135, 136, 137 and 140 through 152. Most housing along this belt is in gated high-rise societies, so helpers are usually registered with the society before starting.",
+        "scope": "city",
+        "tags": [
+          "noida"
+        ]
+      },
+      {
+        "id": "faq-city-noida-4",
+        "q": "Is Noida Extension part of Noida on this site?",
+        "a": "No. Noida Extension is the common name for Greater Noida West, which is listed under the Greater Noida city page rather than under Noida. Gaur City, Techzone and Surajpur are covered there.",
+        "scope": "city",
+        "tags": [
+          "noida"
+        ]
+      },
+      {
+        "id": "faq-city-noida-5",
+        "q": "Are the newer society sectors 74 to 79 covered?",
+        "a": "Yes. Sectors 74, 75, 76, 77, 78 and 79 are listed under Noida Central. These sectors are largely high-rise gated societies, and most have society-level rules for helper entry and ID registration.",
+        "scope": "city",
+        "tags": [
+          "noida"
+        ]
+      }
+    ],
+    "greater-noida": [
+      {
+        "id": "faq-city-greater-noida-1",
+        "q": "Is Noida Extension covered?",
+        "a": "Yes. Noida Extension is the everyday name for Greater Noida West, which is one of the two Greater Noida zones. Gaur City, Techzone and Surajpur are the localities listed under it, with pincode 201306 as the zone-level pin.",
+        "scope": "city",
+        "tags": [
+          "greater-noida"
+        ]
+      },
+      {
+        "id": "faq-city-greater-noida-2",
+        "q": "Do you cover the Alpha, Beta, Gamma and Delta sectors?",
+        "a": "Yes. Alpha, Beta, Gamma and Delta are listed under the Greater Noida Central zone. These are largely plotted sectors with independent houses and builder floors, unlike the high-rise societies of Greater Noida West.",
+        "scope": "city",
+        "tags": [
+          "greater-noida"
+        ]
+      },
+      {
+        "id": "faq-city-greater-noida-3",
+        "q": "Are Knowledge Park, Pari Chowk and Jaypee Greens covered?",
+        "a": "Yes. All three are localities in the Greater Noida Central zone. Knowledge Park is the college and institute belt, Pari Chowk is the central roundabout area served by the Aqua Line metro, and Jaypee Greens is a gated township.",
+        "scope": "city",
+        "tags": [
+          "greater-noida"
+        ]
+      },
+      {
+        "id": "faq-city-greater-noida-4",
+        "q": "Do you cover Kasna and Dadri?",
+        "a": "Yes. Kasna and Dadri are listed as localities in the Greater Noida Central zone. They sit on the outer side of the city, so helper availability there depends on who is registered nearby at the time.",
+        "scope": "city",
+        "tags": [
+          "greater-noida"
+        ]
+      },
+      {
+        "id": "faq-city-greater-noida-5",
+        "q": "Is Greater Noida the same as Noida on this site?",
+        "a": "No. Noida and Greater Noida are separate city pages. Noida covers Sectors 12 to 152 within Noida itself, while Greater Noida covers Greater Noida West (Noida Extension) and Greater Noida Central, with 203201 as its city-level pincode.",
+        "scope": "city",
+        "tags": [
+          "greater-noida"
+        ]
+      }
+    ],
+    "gurgaon": [
+      {
+        "id": "faq-city-gurgaon-1",
+        "q": "Is this service available in Gurugram?",
+        "a": "Yes. Gurugram is the official name of Gurgaon, and both names refer to the same coverage area on this site. The city is organised into four zones: DLF & Golf Course Road, Sohna Road & South City, New Gurgaon and Old Gurgaon.",
+        "scope": "city",
+        "tags": [
+          "gurgaon"
+        ]
+      },
+      {
+        "id": "faq-city-gurgaon-2",
+        "q": "Which DLF phases are covered?",
+        "a": "DLF Phase 1, Phase 2, Phase 3, Phase 4 and Phase 5 are all listed under the DLF & Golf Course Road zone, along with Golf Course Road itself. Housing here ranges from DLF plotted colonies and builder floors to gated condominiums.",
+        "scope": "city",
+        "tags": [
+          "gurgaon"
+        ]
+      },
+      {
+        "id": "faq-city-gurgaon-3",
+        "q": "Do you cover Sohna Road and South City?",
+        "a": "Yes. Sohna Road, South City 1 and South City 2 form the Sohna Road & South City zone. Most households on Sohna Road are in gated societies, while South City 1 and 2 have a larger share of independent houses and builder floors.",
+        "scope": "city",
+        "tags": [
+          "gurgaon"
+        ]
+      },
+      {
+        "id": "faq-city-gurgaon-4",
+        "q": "Is Manesar covered?",
+        "a": "Yes. Manesar and IMT Manesar are listed under the New Gurgaon zone, with 122505 as the zone-level pincode. This is the industrial township side of the city, so households are typically in newer societies and company-linked housing.",
+        "scope": "city",
+        "tags": [
+          "gurgaon"
+        ]
+      },
+      {
+        "id": "faq-city-gurgaon-5",
+        "q": "What does Old Gurgaon cover?",
+        "a": "Old Gurgaon, also called Gurgaon Main, is the older part of the city around pincode 122001. It is a zone-level listing on this site, and housing here is mostly independent houses and older colonies rather than gated towers.",
+        "scope": "city",
+        "tags": [
+          "gurgaon"
+        ]
+      }
+    ],
+    "mumbai": [
+      {
+        "id": "faq-city-mumbai-1",
+        "q": "Do you cover Navi Mumbai?",
+        "a": "Yes. Navi Mumbai is one of the five Mumbai zones on this site. Vashi, Nerul, Sanpada and Airoli are the localities currently listed, all of which are planned nodes with a mix of housing societies and older CIDCO buildings.",
+        "scope": "city",
+        "tags": [
+          "mumbai"
+        ]
+      },
+      {
+        "id": "faq-city-mumbai-2",
+        "q": "Is Bombay the same coverage area as Mumbai?",
+        "a": "Yes. Bombay is the former name of Mumbai and refers to the same city. Coverage runs from South Mumbai and Central Mumbai through the Western Suburbs, the Eastern Suburbs and Navi Mumbai.",
+        "scope": "city",
+        "tags": [
+          "mumbai"
+        ]
+      },
+      {
+        "id": "faq-city-mumbai-3",
+        "q": "How far along the Western Suburbs does coverage go?",
+        "a": "The Western Suburbs zone runs from Bandra through Khar, Santacruz, Juhu, Vile Parle, Andheri, Versova, Jogeshwari, Goregaon, Malad and Kandivali up to Dahisar. Each of these has its own locality page listing the pincodes it covers.",
+        "scope": "city",
+        "tags": [
+          "mumbai"
+        ]
+      },
+      {
+        "id": "faq-city-mumbai-4",
+        "q": "Is Thane covered?",
+        "a": "Thane city is not currently listed. On the eastern side, coverage on the Central line ends at Mulund and Mulund East, and on the Navi Mumbai side it ends at Airoli. Powai, Ghatkopar, Chembur, Vikhroli and Bhandup are all covered in the Eastern Suburbs zone.",
+        "scope": "city",
+        "tags": [
+          "mumbai"
+        ]
+      },
+      {
+        "id": "faq-city-mumbai-5",
+        "q": "Which areas count as South Mumbai and Central Mumbai here?",
+        "a": "South Mumbai (SoBo) covers Colaba, Fort, Nariman Point, Malabar Hill, Cumballa Hill, Tardeo, Worli, Prabhadevi, Parel, Sewri, Wadala and the older neighbourhoods of Kalbadevi, Girgaon, Grant Road, Mumbai Central, Mazgaon and Antop Hill. Central Mumbai covers Dadar, Mahim, Matunga, Sion and Kurla.",
+        "scope": "city",
+        "tags": [
+          "mumbai"
+        ]
+      }
+    ],
+    "pune": [
+      {
+        "id": "faq-city-pune-1",
+        "q": "Is Pimpri-Chinchwad (PCMC) covered?",
+        "a": "Yes. Pimpri-Chinchwad is listed as its own zone under Pune, even though it is a separate municipal corporation. Pimpri, Chinchwad and Pimple Saudagar are the localities currently covered there.",
+        "scope": "city",
+        "tags": [
+          "pune"
+        ]
+      },
+      {
+        "id": "faq-city-pune-2",
+        "q": "Do you cover Hinjawadi, Wakad and Baner?",
+        "a": "Yes. Hinjawadi, Wakad, Baner, Balewadi, Aundh, Pashan, Sus and Bavdhan make up the West Pune zone. Most households in this belt live in gated societies built around the Hinjawadi IT park, so society registration for helpers is common.",
+        "scope": "city",
+        "tags": [
+          "pune"
+        ]
+      },
+      {
+        "id": "faq-city-pune-3",
+        "q": "Are Kharadi, Viman Nagar and Hadapsar covered?",
+        "a": "Yes. The East Pune zone includes Kharadi, Viman Nagar, Hadapsar, Dhanori, Lohegaon and Wanowrie. This side of the city sits between the airport and the eastern IT parks, and housing is largely apartment societies.",
+        "scope": "city",
+        "tags": [
+          "pune"
+        ]
+      },
+      {
+        "id": "faq-city-pune-4",
+        "q": "Is Kothrud and the central city covered?",
+        "a": "Yes. Central Pune covers Kothrud, Karve Nagar, Warje, Deccan, Deccan Gymkhana, Shivajinagar, Sadashiv Peth, the Pune University area, Anandnagar and Pune Camp. Housing here is a mix of older independent houses and apartment blocks.",
+        "scope": "city",
+        "tags": [
+          "pune"
+        ]
+      },
+      {
+        "id": "faq-city-pune-5",
+        "q": "Which South Pune areas are covered?",
+        "a": "NIBM, Kondhwa, Bibwewadi and Katraj are the localities listed under South Pune. Each locality page shows the pincodes it covers and the nearby areas served from the same pool of helpers.",
+        "scope": "city",
+        "tags": [
+          "pune"
+        ]
+      }
+    ],
+    "bangalore": [
+      {
+        "id": "faq-city-bangalore-1",
+        "q": "Is this service available in Bengaluru?",
+        "a": "Yes. Bengaluru is the official name of Bangalore and both names refer to the same coverage area. The city is organised into six zones: East, South East, South, Central, North and West Bangalore.",
+        "scope": "city",
+        "tags": [
+          "bangalore"
+        ]
+      },
+      {
+        "id": "faq-city-bangalore-2",
+        "q": "Do you cover Whitefield and Marathahalli?",
+        "a": "Yes. Whitefield, Marathahalli, Hoodi and Ramamurthy Nagar form the East Bangalore zone. Most housing here is in gated apartment communities along the IT corridor, so helpers are usually registered with the society before starting.",
+        "scope": "city",
+        "tags": [
+          "bangalore"
+        ]
+      },
+      {
+        "id": "faq-city-bangalore-3",
+        "q": "Are Electronic City and Sarjapur Road covered?",
+        "a": "Yes. Electronic City, Sarjapur Road, Bellandur, HSR Layout, Koramangala, Bommanahalli and Begur are all listed under the South East Bangalore zone.",
+        "scope": "city",
+        "tags": [
+          "bangalore"
+        ]
+      },
+      {
+        "id": "faq-city-bangalore-4",
+        "q": "Is Jayanagar and the older south side covered?",
+        "a": "Yes. South Bangalore covers Jayanagar, JP Nagar, Banashankari, Basavanagudi, Bannerghatta Road, Wilson Garden and Adugodi. Households here are more often independent houses and older layouts than in the eastern belt.",
+        "scope": "city",
+        "tags": [
+          "bangalore"
+        ]
+      },
+      {
+        "id": "faq-city-bangalore-5",
+        "q": "Are Hebbal and Yelahanka covered?",
+        "a": "Not at present. North Bangalore coverage is currently Kalyan Nagar, Nagawara and Fraser Town, and West Bangalore covers Malleswaram, Rajajinagar and Vijayanagar. Central Bangalore includes Indiranagar, Domlur, Richmond Town, Vasanth Nagar, Seshadripuram, Chickpet and Viveknagar.",
+        "scope": "city",
+        "tags": [
+          "bangalore"
+        ]
+      }
+    ],
+    "mangalore": [
+      {
+        "id": "faq-city-mangalore-1",
+        "q": "Is this service available in Mangaluru?",
+        "a": "Yes. Mangaluru is the official name of Mangalore, and both refer to the same coverage area. The city is organised into three zones: Mangalore City, Mangalore North (the Surathkal belt) and Mangalore South (the Ullal belt).",
+        "scope": "city",
+        "tags": [
+          "mangalore"
+        ]
+      },
+      {
+        "id": "faq-city-mangalore-2",
+        "q": "Which localities in the city centre are covered?",
+        "a": "The Mangalore City zone covers Hampankatta, Kodialbail, Kadri, Kottara, Bejai, Derebail, Kulshekar, Valencia, Bolar, Jeppu, Kankanady, Attavar, Urwa, Kavoor, Bondel, Kulur, Nantoor and Pumpwell. City-level pincodes 575001 and 575036 are also listed.",
+        "scope": "city",
+        "tags": [
+          "mangalore"
+        ]
+      },
+      {
+        "id": "faq-city-mangalore-3",
+        "q": "Do you cover Surathkal and Panambur?",
+        "a": "Yes. Surathkal, Panambur, Katipalla and Bajpe make up the Mangalore North zone. This belt runs along the coast north of the city towards the port and the airport.",
+        "scope": "city",
+        "tags": [
+          "mangalore"
+        ]
+      },
+      {
+        "id": "faq-city-mangalore-4",
+        "q": "Is Ullal covered?",
+        "a": "Yes. Ullal, Konaje and Mudipu form the Mangalore South zone, on the southern side of the Netravati river. Konaje is the Mangalore University area, so households there include staff families and rented accommodation.",
+        "scope": "city",
+        "tags": [
+          "mangalore"
+        ]
+      },
+      {
+        "id": "faq-city-mangalore-5",
+        "q": "Are Udupi and Manipal covered?",
+        "a": "No. Udupi and Manipal are outside the current service footprint. Coverage along the coast ends at the Surathkal belt in the north and the Ullal belt in the south.",
+        "scope": "city",
+        "tags": [
+          "mangalore"
+        ]
+      }
+    ]
+  },
+  "intros": {
+    "delhi": "Delhi is a city of very different household types living side by side, and the New Delhi district at its centre is only one part of it. Central Delhi around Connaught Place, Lodi Road, Karol Bagh and Daryaganj mixes government housing, older colonies and busy commercial pockets. South Delhi, from Hauz Khas, Greater Kailash and Defence Colony to Saket, Vasant Kunj and Chhatarpur, is largely independent houses, builder floors and DDA flats. South West Delhi is anchored by Dwarka's sector-wise apartment societies, with Delhi Cantt, Palam and Najafgarh alongside.\n\nWest Delhi (Janakpuri, Rajouri Garden, Punjabi Bagh, Paschim Vihar) and North West Delhi (Rohini, Pitampura, Shalimar Bagh, Ashok Vihar) are dominated by planned residential colonies and cooperative group housing societies. North Delhi covers Civil Lines, Model Town and Kamla Nagar near the university, while East Delhi (Mayur Vihar, Preet Vihar, Laxmi Nagar) and North East Delhi (Shahdara, Vivek Vihar) are dense, apartment- and builder-floor-heavy belts across the Yamuna.\n\nMyBuddyMaid lists verified maids, cooks, nannies and elder-care helpers across all eight zones: Central Delhi, South Delhi, South West Delhi, West Delhi, North Delhi, North West Delhi, East Delhi and North East Delhi. Requirements differ by belt. Gated societies in Dwarka and Rohini usually need helpers registered at the gate, while independent houses in South and West Delhi tend to have more flexible timings. Open a zone or locality page to see exactly which pincodes and neighbouring areas are covered near you.",
+    "noida": "Noida is a planned city in Gautam Buddh Nagar district, Uttar Pradesh, laid out in numbered sectors rather than named neighbourhoods, and the type of household changes as the sector numbers rise. The older sectors such as 15, 19, 27, 30 and 44 are mostly plotted colonies with independent houses and builder floors. Sectors 50, 51, 52, 55 and 56 mix cooperative group housing with private apartment blocks, and Sectors 61, 62 and 63 sit next to the office belt along the Delhi Metro Blue Line. Sectors 71 to 79 are the newer high-rise society belt, where most households live in gated towers with their own entry rules for domestic help.\n\nOn this site the city is split into two zones. Noida Central covers Sectors 12 through 79, including the 201301 area near the Delhi border. Noida Expressway covers Sectors 93 through 152 along the Noida-Greater Noida Expressway, from Sector 93 and Sector 100 down to Sector 137, Sector 150 and Sector 152. Housing along the Expressway is almost entirely gated societies, and helpers typically travel in from adjacent villages and settlements or by the Aqua Line metro that runs through Sectors 51 to 148 towards Greater Noida.\n\nMyBuddyMaid lists verified maids, cooks, nannies and elder-care helpers for both zones. Noida Extension, which many residents think of as Noida, is listed separately under Greater Noida as Greater Noida West. Each sector page shows the pincode it falls under and the sectors served from the same helper pool.",
+    "greater-noida": "Greater Noida is the newer planned city south-east of Noida in Gautam Buddh Nagar district, Uttar Pradesh, and it is really two different places joined under one name. Greater Noida West, better known as Noida Extension, is a dense belt of high-rise gated societies where most residents have moved in within the last decade. Gaur City, Techzone and Surajpur are the localities listed there, with 201306 as the zone-level pincode. Households are largely young families and working professionals in society flats, and almost every society runs its own gate-pass and ID system for domestic help.\n\nGreater Noida Central, with the city-level pincode 203201, is the original planned township. The Greek-letter sectors of Alpha, Beta, Gamma and Delta are plotted with independent houses and builder floors, Knowledge Park is the college and institute belt, Pari Chowk is the central roundabout on the Aqua Line metro, and Jaypee Greens is a gated golf township. Kasna and Dadri on the outer edge complete the zone. The mix here is older residents, faculty and staff families, and tenants renting near the institutes.\n\nMyBuddyMaid lists verified maids, cooks, nannies and elder-care helpers across both Greater Noida West and Greater Noida Central. Because helper availability differs between the society-heavy Noida Extension belt and the plotted central sectors, each locality page shows the pincodes it covers and the neighbouring areas served from the same pool, so you can see what is realistic for your address before you enquire.",
+    "gurgaon": "Gurgaon (officially Gurugram) is the Haryana city on Delhi's south-western edge, and its housing splits cleanly along its main roads. The DLF & Golf Course Road zone covers DLF Phase 1 through DLF Phase 5 and Golf Course Road itself, a belt of plotted DLF colonies, builder floors and gated condominium towers. The Rapid Metro runs along Golf Course Road and the Delhi Metro Yellow Line passes through Sikanderpur and MG Road nearby, so this is the belt where helpers most often travel in by metro and shared auto.\n\nThe Sohna Road & South City zone covers South City 1, South City 2 and Sohna Road. South City 1 and 2 have a large share of independent houses and builder floors, while Sohna Road is mostly newer gated societies. New Gurgaon covers Manesar and IMT Manesar, the industrial township side with zone-level pincode 122505, where households are typically in recent societies and company-linked housing. Old Gurgaon, also called Gurgaon Main, is the original town around pincode 122001, with independent houses and older colonies rather than towers.\n\nMyBuddyMaid lists verified maids, cooks, nannies and elder-care helpers across all four Gurgaon zones. Gated societies on Golf Course Road, Sohna Road and in Manesar generally require helpers to be registered with the society office before their first day, while independent houses in South City and Old Gurgaon usually set timings directly with the family. Each locality page shows the pincodes it covers and the nearby areas served from the same helper pool.",
+    "mumbai": "Mumbai (formerly Bombay) is a long, narrow city where housing and commuting are shaped by the suburban railway lines, and domestic help follows the same pattern. South Mumbai, often called SoBo, runs from Colaba, Fort and Nariman Point through Malabar Hill, Cumballa Hill and Tardeo to Worli, Prabhadevi and Parel, with the older neighbourhoods of Kalbadevi, Girgaon, Grant Road, Mazgaon, Sewri, Wadala and Antop Hill in between. Redeveloped towers stand next to old buildings and chawls, so household needs range from full-time live-in help to a few hours of part-time work a day.\n\nCentral Mumbai covers Dadar, Mahim, Matunga, Sion and Kurla, mostly cooperative housing societies and mid-rise buildings. The Western Suburbs zone runs along the Western line from Bandra, Khar, Santacruz and Juhu through Vile Parle, Andheri, Versova and Jogeshwari to Goregaon, Malad, Kandivali and Dahisar. The Eastern Suburbs zone follows the Central line through Ghatkopar, Vikhroli, Bhandup and Mulund, with Powai and Chembur alongside. Navi Mumbai, across the creek, covers the planned nodes of Vashi, Nerul, Sanpada and Airoli, where housing is a mix of newer societies and older CIDCO buildings.\n\nMyBuddyMaid lists verified maids, cooks, nannies and elder-care helpers across all five zones: South Mumbai, Central Mumbai, Western Suburbs, Eastern Suburbs and Navi Mumbai. Thane city is not currently listed. Helpers here commute by local train, BEST bus and on foot from nearby settlements, so each locality page shows the pincodes it covers and the neighbouring areas served from the same pool.",
+    "pune": "Pune spreads outward from an old core into distinct residential belts, and the kind of household you find depends on which belt you are in. Central Pune covers Deccan, Deccan Gymkhana, Shivajinagar, Sadashiv Peth, Pune Camp and the Pune University area, along with Kothrud, Karve Nagar, Warje and Anandnagar. This is the established city, with older independent houses, wadas and mid-rise apartment blocks, and many long-settled families.\n\nWest Pune covers Aundh, Baner, Balewadi, Pashan, Sus, Bavdhan, Wakad and Hinjawadi, the belt that grew around the Hinjawadi IT park. Most households here live in gated societies with their own rules for helper entry. East Pune covers Kharadi, Viman Nagar, Hadapsar, Dhanori, Lohegaon and Wanowrie, sitting between the airport and the eastern IT parks, again largely apartment societies. South Pune covers NIBM, Kondhwa, Bibwewadi and Katraj, a mix of societies and older housing on the road out of the city. Pimpri-Chinchwad, usually shortened to PCMC, is a separate municipal corporation to the north-west, and Pimpri, Chinchwad and Pimple Saudagar are listed under their own zone.\n\nMyBuddyMaid lists verified maids, cooks, nannies and elder-care helpers across all five zones: West Pune, Central Pune, East Pune, South Pune and Pimpri-Chinchwad. Helper availability varies between the society-heavy western and eastern belts and the older central and southern areas, so each locality page shows the pincodes it covers and the nearby areas served from the same pool.",
+    "bangalore": "Bangalore (officially Bengaluru) has grown from an older core of planned layouts into an apartment-heavy ring along its IT corridors, and the two halves run their households differently. East Bangalore covers Whitefield, Marathahalli, Hoodi and Ramamurthy Nagar, where most families live in large gated communities with society-managed entry for domestic help. South East Bangalore covers Koramangala, HSR Layout, Bellandur, Sarjapur Road, Bommanahalli, Electronic City and Begur, a mix of gated apartments, independent houses in the older layouts and paying-guest accommodation for working professionals.\n\nSouth Bangalore covers Jayanagar, JP Nagar, Banashankari, Basavanagudi, Bannerghatta Road, Wilson Garden and Adugodi, where independent houses and older layouts are more common than towers. Central Bangalore covers Indiranagar, Domlur, Richmond Town, Vasanth Nagar, Seshadripuram, Chickpet and Viveknagar. North Bangalore covers Kalyan Nagar, Nagawara and Fraser Town, and West Bangalore covers Malleswaram, Rajajinagar and Vijayanagar, the older residential neighbourhoods on the Namma Metro Green Line.\n\nMyBuddyMaid lists verified maids, cooks, nannies and elder-care helpers across all six zones: East, South East, South, Central, North and West Bangalore. Hebbal, Yelahanka and other areas outside these zones are not listed at present. Helpers typically travel by BMTC bus, metro or on foot from nearby settlements, so each locality page shows the pincodes it covers and the neighbouring areas served from the same pool.",
+    "mangalore": "Mangalore (officially Mangaluru) is the coastal headquarters of Dakshina Kannada district in Karnataka, a mid-sized city where independent houses with compounds still outnumber apartment towers, though apartment blocks are now common around Kadri, Bejai and Kankanady. The Mangalore City zone covers Hampankatta and Kodialbail in the commercial centre, Kadri, Kottara, Bejai, Derebail, Kulshekar and Valencia inland, Bolar, Jeppu, Attavar and Kankanady towards the river and the hospital belt, and Urwa, Kavoor, Bondel, Kulur, Nantoor and Pumpwell on the outer ring. The city-level pincodes 575001 and 575036 are listed alongside the locality pins.\n\nMangalore North, the Surathkal belt, covers Surathkal, Panambur, Katipalla and Bajpe, running along the coast towards the port and the airport. Households here include NITK staff and student rentals in Surathkal and port-linked families in Panambur. Mangalore South, the Ullal belt, covers Ullal, Konaje and Mudipu across the Netravati river, with the Mangalore University campus at Konaje shaping the local mix of faculty families and tenants.\n\nMyBuddyMaid lists verified maids, cooks, nannies and elder-care helpers across all three zones: Mangalore City, Mangalore North and Mangalore South. Udupi and Manipal are outside the current footprint. Helper availability differs between the city core and the outer belts, so each locality page shows the pincodes it covers and the neighbouring areas served from the same pool."
+  }
+}

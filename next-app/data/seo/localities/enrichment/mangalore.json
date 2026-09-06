@@ -1,0 +1,1748 @@
+{
+  "hampankatta": {
+    "neighbours": [
+      "attavar",
+      "bolar",
+      "bejai",
+      "kankanady",
+      "valencia",
+      "kadri",
+      "urwa",
+      "jeppu",
+      "pumpwell",
+      "nantoor",
+      "kodialbail",
+      "derebail",
+      "ullal"
+    ],
+    "landmarks": [
+      "Mangalore Central Railway Station",
+      "City Centre Mall",
+      "Milagres Church",
+      "Wenlock District Hospital",
+      "State Bank Bus Stand"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Hampankatta is the commercial heart of Mangalore, the junction where KS Rao Road, Lighthouse Hill Road and the roads to Bunder and Kankanady meet, under pincode 575002. Housing is a genuine mix: old family homes and shop-houses on the inner lanes, apartment blocks built over the last two decades along KS Rao Road and towards Balmatta, and rented flats above commercial premises. Residents are long-settled trading and professional families, older couples who have lived here for generations, and working tenants who want to be close to the city centre. Mangalore Central Railway Station and the State Bank city bus stand are both within walking distance, City Centre Mall on KS Rao Road is the everyday shopping stop, and Milagres Church and Wenlock District Hospital sit on the edge of the locality. Attavar lies immediately to the south-east, Kodialbail up the hill to the north and Bolar towards the old port. Households here usually look for part-time cleaning and cooking help on fixed morning and evening slots, and many older residents need daytime elder-care support.",
+    "commuteNotes": "Mangalore has no metro; the State Bank bus stand at Hampankatta is the hub for most city bus routes, so helpers from every direction can reach the area by bus and walk in. Helpers from Attavar, Bolar and Kodialbail usually walk across.",
+    "housingNotes": "Older independent homes and apartment blocks sit side by side, so entry rules vary by building: standalone houses handle timings directly, while the newer apartment complexes keep a visitor register at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-hampankatta-1",
+        "q": "Which areas near Hampankatta do you also serve?",
+        "a": "Attavar, Kodialbail and Bolar are all within walking distance of Hampankatta and are served as separate localities. Bejai, Kankanady and Valencia are a short bus ride away and are covered too.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "hampankatta"
+        ]
+      },
+      {
+        "id": "faq-mangalore-hampankatta-2",
+        "q": "Which pincode does the Hampankatta service area cover?",
+        "a": "Hampankatta comes under pincode 575002 in our data, next to the central Mangalore pincode 575001. Adjoining Attavar is 575015 and Kodialbail is 575003.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "hampankatta"
+        ]
+      },
+      {
+        "id": "faq-mangalore-hampankatta-3",
+        "q": "Do helpers in Hampankatta need building passes?",
+        "a": "Most apartment blocks along KS Rao Road and towards City Centre Mall keep a visitor register, and the household usually needs to inform security before the first visit. Independent houses on the inner lanes manage entry themselves.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "hampankatta"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.86912,
+    "lng": 74.84343
+  },
+  "kodialbail": {
+    "neighbours": [
+      "hampankatta",
+      "urwa",
+      "bejai",
+      "kadri",
+      "attavar",
+      "kottara",
+      "derebail",
+      "bolar"
+    ],
+    "landmarks": [
+      "St Aloysius College",
+      "Tagore Park (Lighthouse Hill)",
+      "Kudroli Gokarnanatheshwara Temple",
+      "PVS Circle",
+      "Bharath Mall"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "elderly",
+      "students"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Kodialbail rises up Lighthouse Hill from Hampankatta and spreads north towards PVS Circle and Ladyhill, under pincode 575003. It is one of Mangalore's oldest residential quarters, and the housing reflects that: tiled independent houses and church-linked institutions on the older lanes, with a steady number of apartment complexes built on former house plots along Lighthouse Hill Road and the Bejai side. Residents are established Catholic and Konkani families, retired couples, and students and staff attached to St Aloysius College, which sits at the top of the hill next to Tagore Park. Kudroli Gokarnanatheshwara Temple is a short walk down towards Urwa, and Bharath Mall on the Bejai-Kodialbail road is the nearest large shopping centre. Hampankatta lies directly below to the south, Urwa to the north-west and Bejai to the east. Households here tend to ask for part-time cleaning and cooking help, and there is steady demand for daytime elder-care and companionship for older residents living in the larger family homes.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Hampankatta-Urwa and Hampankatta-Bejai routes pass PVS Circle and Ladyhill, and helpers from Hampankatta or Urwa usually walk in. [VERIFY]",
+    "housingNotes": "Old independent houses dominate the inner lanes and handle helper timings directly, while the apartment blocks along Lighthouse Hill Road and near Bharath Mall keep a register at the gate and may ask for the helper's ID on the first visit.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-kodialbail-1",
+        "q": "Which areas near Kodialbail do you also serve?",
+        "a": "Hampankatta at the foot of Lighthouse Hill, Urwa to the north-west and Bejai to the east are all served as separate localities. Kadri and Kottara are also covered a little further out.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kodialbail"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kodialbail-2",
+        "q": "Which pincode does the Kodialbail service area cover?",
+        "a": "Kodialbail comes under pincode 575003, which also covers the Kudroli and PVS Circle stretch. Neighbouring Hampankatta is 575002 and Urwa is 575016.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kodialbail"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kodialbail-3",
+        "q": "Can I get a cook or maid near St Aloysius College in Kodialbail?",
+        "a": "Yes, the lanes around St Aloysius College and Tagore Park are within the Kodialbail service area. Both independent houses and the apartment blocks on Lighthouse Hill Road are served, with timings agreed directly with the household.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kodialbail"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026"
+    ],
+    "reviewed": false
+  },
+  "kadri": {
+    "neighbours": [
+      "bejai",
+      "nantoor",
+      "kankanady",
+      "valencia",
+      "hampankatta",
+      "bondel",
+      "attavar",
+      "pumpwell",
+      "bajpe",
+      "urwa",
+      "kodialbail",
+      "kottara",
+      "derebail",
+      "kulshekar",
+      "bolar"
+    ],
+    "landmarks": [
+      "Kadri Manjunatha Temple",
+      "Kadri Park",
+      "Mangala Stadium",
+      "KMC Hospital Ambedkar Circle",
+      "Bharath Mall"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Kadri is one of Mangalore's most sought-after residential areas, spread over the hills and the flatter Kadri Kambla side around the ancient Kadri Manjunatha Temple, under pincode 575004. The housing here is mixed: spacious independent houses on the older Kadri Hills lanes, and a large number of apartment complexes built along Nantoor Road, Mallikatte and towards Bejai over the last twenty years. Residents are professional families, senior doctors and businesspeople, retired couples, and tenants working in the city's hospitals and offices. Kadri Park, the largest public park in the city, sits beside the temple, Mangala Stadium and KMC Hospital at Ambedkar Circle are on the Lalbagh edge, and Bharath Mall is a short drive away. Bejai adjoins Kadri to the west, Nantoor to the east and Kankanady to the south via Mallikatte. Households here commonly look for full-day or part-time cooking and cleaning help, and for reliable elder-care support in the bigger family homes.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Kadri-Nantoor and Lalbagh routes run past Kadri Park and the temple junction, and helpers from Bejai and Nantoor usually walk or take a short bus ride. [VERIFY]",
+    "housingNotes": "Apartment complexes along Nantoor Road and Mallikatte keep a security desk and visitor register, so helpers are generally logged at the gate; the independent houses on Kadri Hills handle timings directly with the household.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-kadri-1",
+        "q": "Which areas near Kadri do you also serve?",
+        "a": "Bejai to the west, Nantoor to the east and Kankanady via Mallikatte are all served as separate localities. Valencia, Kodialbail and Bondel are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kadri"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kadri-2",
+        "q": "Do helpers in Kadri need society gate passes?",
+        "a": "Most of the apartment complexes around Kadri Park and along Nantoor Road log visitors at the security desk, so the household usually informs security about the helper's name and timings. Independent houses on the Kadri Hills lanes do not need any pass.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kadri"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kadri-3",
+        "q": "Which pincode does the Kadri service area cover?",
+        "a": "Kadri comes under pincode 575004, which covers Kadri Hills, Kadri Kambla and the stretch near the Kadri Manjunatha Temple. Neighbouring Bejai is 575006 and Nantoor is 575030.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kadri"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.88973,
+    "lng": 74.85014
+  },
+  "kottara": {
+    "neighbours": [
+      "urwa",
+      "derebail",
+      "kulur",
+      "kavoor",
+      "bejai",
+      "surathkal",
+      "panambur",
+      "katipalla",
+      "kadri",
+      "bajpe",
+      "kodialbail",
+      "bondel"
+    ],
+    "landmarks": [
+      "Kottara Chowki",
+      "Ashok Nagar",
+      "Urwa Market",
+      "Kulur Bridge"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Kottara sits on the north-western side of Mangalore around the busy Kottara Chowki junction, where the road from Urwa and Ladyhill meets the road towards Kulur and the highway, under pincode 575005. The area has grown from a cluster of independent houses into a mixed neighbourhood, with apartment blocks coming up along the Kottara-Kulur stretch and around Ashok Nagar, while older tiled homes remain on the side lanes. Residents are mostly middle-class families, working professionals commuting to the port belt and the city centre, and a growing number of tenants renting in the newer flats. Urwa Market is a short distance to the south and the Kulur Bridge on the highway is just to the north. Urwa adjoins Kottara on the city side, Derebail lies to the east and Kulur to the north. Households here typically ask for part-time cleaning and cooking help on morning slots, and families with young children often look for daytime nanny support.",
+    "commuteNotes": "Mangalore has no metro; city buses between Hampankatta and Kulur, Surathkal and Bajpe pass through Kottara Chowki, so it is easy for helpers from Urwa, Derebail and the Kulur side to reach. [VERIFY]",
+    "housingNotes": "Older independent houses on the side lanes deal with helpers directly and keep flexible timings, while the newer apartment blocks near Kottara Chowki and Ashok Nagar maintain a visitor register at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-kottara-1",
+        "q": "Which areas near Kottara do you also serve?",
+        "a": "Urwa on the city side, Derebail to the east and Kulur to the north are all served as separate localities. Kodialbail and Kavoor are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kottara"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kottara-2",
+        "q": "Which pincode does the Kottara service area cover?",
+        "a": "Kottara comes under pincode 575005, which takes in Kottara Chowki and the Ashok Nagar side. Adjoining Urwa is 575016, Derebail is 575007 and Kulur is 575029.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kottara"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kottara-3",
+        "q": "Do helpers in Kottara need society gate passes?",
+        "a": "Independent houses in Kottara manage entry on their own, so no pass is needed. The apartment complexes along the Kottara-Kulur road keep a visitor register and usually ask the household to inform security before the helper's first visit.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kottara"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.91119,
+    "lng": 74.83572
+  },
+  "bejai": {
+    "neighbours": [
+      "kadri",
+      "derebail",
+      "kottara",
+      "nantoor",
+      "hampankatta",
+      "urwa",
+      "bondel",
+      "bajpe",
+      "kavoor",
+      "attavar",
+      "kodialbail",
+      "valencia",
+      "kulur",
+      "panambur"
+    ],
+    "landmarks": [
+      "Bharath Mall",
+      "Mangala Stadium",
+      "KMC Hospital Ambedkar Circle",
+      "KSRTC Bus Stand Bejai",
+      "Bejai Church"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "elderly",
+      "working-professionals"
+    ],
+    "helparSourceAreasNote": null,
+    "helperSourceAreas": [],
+    "localIntro": "Bejai lies just north of Lalbagh in the middle of Mangalore, between Kodialbail and Kadri, under pincode 575006. It is a settled residential locality where old independent houses on lanes such as Bejai Kapikad and Bejai New Road sit alongside a large number of apartment complexes built over the last two decades along the Bejai-Kodialbail road and the KSRTC side. Residents are long-established families, retired couples, doctors and staff connected to KMC Hospital at Ambedkar Circle, and working tenants who want to stay central. Bharath Mall on the Bejai-Kodialbail road is the neighbourhood's shopping anchor, Mangala Stadium and the Lalbagh civic offices are next door, and the KSRTC bus stand on the Bejai side handles state-run city and intercity services. Kadri adjoins Bejai to the east, Kodialbail to the west and Derebail to the north. Households here look mainly for part-time cleaning and cooking help, and there is steady demand for elder-care and daytime companionship for older residents.",
+    "commuteNotes": "Mangalore has no metro; the KSRTC bus stand at Bejai and the Lalbagh stretch are served by city buses from every direction, and helpers from Kodialbail, Kadri and Derebail usually walk or take a short bus ride in.",
+    "housingNotes": "Apartment complexes along the Bejai-Kodialbail road keep a security desk and visitor register for domestic staff, while the older independent houses on Bejai Kapikad and the inner lanes deal with helpers directly.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-bejai-1",
+        "q": "Which areas near Bejai do you also serve?",
+        "a": "Kadri to the east, Kodialbail to the west and Derebail to the north are all served as separate localities. Kottara, Nantoor and Hampankatta are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bejai"
+        ]
+      },
+      {
+        "id": "faq-mangalore-bejai-2",
+        "q": "Which pincode does the Bejai service area cover?",
+        "a": "Bejai comes under pincode 575006, covering Bejai Kapikad, Bejai New Road and the KSRTC bus stand side. Neighbouring Kadri is 575004 and Kodialbail is 575003.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bejai"
+        ]
+      },
+      {
+        "id": "faq-mangalore-bejai-3",
+        "q": "Do helpers in Bejai need society gate passes?",
+        "a": "Most apartment complexes near Bharath Mall and along the Bejai-Kodialbail road log visitors at the gate, so the household should inform security of the helper's name and timings. Independent houses on the older lanes do not need any pass.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bejai"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.89372,
+    "lng": 74.8415
+  },
+  "derebail": {
+    "neighbours": [
+      "kottara",
+      "bejai",
+      "kavoor",
+      "urwa",
+      "bondel",
+      "kulur",
+      "bajpe",
+      "kadri",
+      "nantoor",
+      "hampankatta",
+      "kodialbail",
+      "panambur"
+    ],
+    "landmarks": [
+      "Derebail Church",
+      "Konchady Junction",
+      "Kottara Chowki",
+      "Kavoor Mahalingeshwara Temple"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Derebail is a quiet residential locality on the northern side of Mangalore, between Kottara and Kavoor, under pincode 575007. It is still largely a neighbourhood of independent houses on plotted lanes off the Konchady and Ashok Nagar roads, with newer apartment projects appearing along the main road towards Kavoor. Residents are mostly middle-class families who moved here for larger plots than the city centre allows, working professionals commuting to the port and industrial belt to the north, and older couples who have lived here for decades. Derebail Church is the local landmark, Konchady Junction connects the area to Bejai and the city, and Kottara Chowki and the Kavoor Mahalingeshwara Temple are a short drive in either direction. Kottara adjoins Derebail to the west, Bejai to the south and Kavoor to the north-east. Households here usually ask for part-time cleaning help and cooks on morning slots, and families with school-going children often need afternoon supervision.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Hampankatta-Kavoor and Konchady routes serve Derebail, and helpers from Kottara and Bejai usually walk or take a short bus ride in. [VERIFY]",
+    "housingNotes": "Independent houses on plotted lanes dominate, so entry and timings are handled directly by the household without any gate pass; the few apartment blocks on the Kavoor road keep a visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-derebail-1",
+        "q": "Which areas near Derebail do you also serve?",
+        "a": "Kottara to the west, Bejai to the south and Kavoor to the north-east are all served as separate localities. Urwa, Kodialbail and Bondel are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "derebail"
+        ]
+      },
+      {
+        "id": "faq-mangalore-derebail-2",
+        "q": "Which pincode does the Derebail service area cover?",
+        "a": "Derebail comes under pincode 575007, which includes the Konchady side. Neighbouring Kottara is 575005, Bejai is 575006 and Kavoor is 575017.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "derebail"
+        ]
+      },
+      {
+        "id": "faq-mangalore-derebail-3",
+        "q": "Do helpers in Derebail need society gate passes?",
+        "a": "Derebail is mostly independent houses, so there is no society pass system and the household manages entry directly. Residents of the newer apartment blocks on the Kavoor road may need to register the helper with building security.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "derebail"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.90829,
+    "lng": 74.84236
+  },
+  "kulshekar": {
+    "neighbours": [
+      "nantoor",
+      "pumpwell",
+      "kadri",
+      "bondel",
+      "kankanady",
+      "valencia",
+      "konaje",
+      "mudipu"
+    ],
+    "landmarks": [
+      "Holy Cross Church Kulshekar",
+      "Bikarnakatte Junction",
+      "Nantoor Circle",
+      "Pumpwell Circle"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Kulshekar, also spelt Kulshekara, lies on the eastern edge of Mangalore city along the road from Nantoor and Bikarnakatte towards Padil and the Bantwal highway, under pincode 575008. It is a largely residential belt of independent houses set on sloping plots, with a growing number of apartment projects near Bikarnakatte Junction and along the main road. Residents are mostly families who chose the area for its space and calmer surroundings, working professionals commuting into Kadri and Kankanady, and long-settled Catholic families around Holy Cross Church, the locality's main landmark. Bikarnakatte Junction links Kulshekar to Nantoor and Kadri on one side and to Pumpwell Circle and the highway on the other. Nantoor adjoins the area to the north-west, Pumpwell lies to the south-west and Bondel further north. Households here usually look for part-time cleaning and cooking help and, in the larger family homes, for daytime elder-care support.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Nantoor-Bikarnakatte and Pumpwell-Padil routes serve Kulshekar, and helpers from Nantoor and Pumpwell usually take a short bus ride or walk in. [VERIFY]",
+    "housingNotes": "Independent houses on plotted lanes dominate, so timings are agreed directly with the household; the apartment blocks near Bikarnakatte Junction keep a visitor register at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-kulshekar-1",
+        "q": "Which areas near Kulshekar do you also serve?",
+        "a": "Nantoor to the north-west, Pumpwell to the south-west and Kadri beyond Nantoor are all served as separate localities. Bondel, Kankanady and Valencia are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kulshekar"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kulshekar-2",
+        "q": "Which pincode does the Kulshekar service area cover?",
+        "a": "Kulshekar comes under pincode 575008, covering the stretch around Holy Cross Church and Bikarnakatte Junction. Neighbouring Nantoor is 575030 and Pumpwell is 575031.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kulshekar"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kulshekar-3",
+        "q": "Do helpers in Kulshekar need society gate passes?",
+        "a": "Most homes in Kulshekar are independent houses, so no pass is needed and the household sets timings directly. The newer apartment complexes near Bikarnakatte Junction may ask the household to register the helper with security.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kulshekar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026"
+    ],
+    "reviewed": false
+  },
+  "valencia": {
+    "neighbours": [
+      "kankanady",
+      "kadri",
+      "attavar",
+      "jeppu",
+      "bolar",
+      "hampankatta",
+      "pumpwell",
+      "nantoor",
+      "bajpe",
+      "bejai",
+      "kulshekar",
+      "ullal",
+      "konaje",
+      "mudipu"
+    ],
+    "landmarks": [
+      "Valencia Church",
+      "Bendoorwell Circle",
+      "Father Muller Medical College Hospital",
+      "Mangalore Junction Railway Station"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "elderly",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Valencia is a compact, well-established residential area in south-central Mangalore, between Kankanady and the Falnir-Bendoorwell stretch, under pincode 575009. The housing is mixed: older independent houses of long-settled Catholic and Konkani families on the inner lanes, and a growing number of apartment complexes on Valencia Road and around Bendoorwell Circle. Residents are established families, retired couples, and doctors, nurses and staff connected to Father Muller Medical College Hospital, which sits just across in Kankanady. Valencia Church is the local landmark, Bendoorwell Circle links the area to Kadri and Hampankatta, and Mangalore Junction railway station at Kankanady is a short distance away. Kankanady adjoins Valencia to the south-east, Kadri lies to the north via Mallikatte and Attavar to the west. Households here typically want part-time cleaning and cooking help on fixed slots, and elder-care support is in steady demand given the number of older residents in the larger family homes.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Hampankatta-Kankanady and Bendoorwell routes serve Valencia, and helpers from Kankanady, Attavar and Jeppu usually walk in. [VERIFY]",
+    "housingNotes": "Independent houses on the inner lanes handle helper timings directly, while the apartment complexes on Valencia Road and near Bendoorwell Circle keep a visitor register and may ask for the helper's ID on the first visit.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-valencia-1",
+        "q": "Which areas near Valencia do you also serve?",
+        "a": "Kankanady to the south-east, Kadri to the north and Attavar to the west are all served as separate localities. Jeppu, Bolar and Pumpwell are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "valencia"
+        ]
+      },
+      {
+        "id": "faq-mangalore-valencia-2",
+        "q": "Which pincode does the Valencia service area cover?",
+        "a": "Valencia comes under pincode 575009, covering the lanes around Valencia Church and the Bendoorwell side. Neighbouring Kankanady is 575013 and Attavar is 575015.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "valencia"
+        ]
+      },
+      {
+        "id": "faq-mangalore-valencia-3",
+        "q": "Can I get elder-care help for a parent living in Valencia?",
+        "a": "Yes, daytime elder-care and companionship is one of the more common requests from Valencia households, many of which are older family homes. Father Muller Medical College Hospital in adjoining Kankanady is close by for medical needs, but the helper's role is domestic and non-medical.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "valencia"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.86362,
+    "lng": 74.86073
+  },
+  "bolar": {
+    "neighbours": [
+      "hampankatta",
+      "attavar",
+      "jeppu",
+      "valencia",
+      "kankanady",
+      "pumpwell",
+      "ullal",
+      "nantoor",
+      "kadri",
+      "urwa",
+      "kodialbail"
+    ],
+    "landmarks": [
+      "Mangaladevi Temple",
+      "Rosario Cathedral",
+      "Forum Fiza Mall",
+      "Old Port (Bunder)",
+      "Mangalore Central Railway Station"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Bolar is the old southern quarter of Mangalore, lying between Hampankatta and the Netravati backwaters near the historic Bunder port, under pincode 575010. It is one of the city's oldest residential areas, and independent houses remain the dominant form: tiled family homes on narrow lanes off Bolar Main Road and Pandeshwar, with a few apartment blocks appearing on the larger plots. Residents are long-settled families, many of them traders and fishing-community households linked to the port, along with older couples who have lived here for generations. The Mangaladevi Temple, which gives the city its name, stands on the Bolar side, Rosario Cathedral and Forum Fiza Mall are at Pandeshwar on the northern edge, and Mangalore Central Railway Station is a short walk away. Hampankatta adjoins Bolar to the north, Attavar to the east and Jeppu to the south. Households here mostly ask for part-time cleaning and cooking help, and elder-care support for older family members is a regular request.",
+    "commuteNotes": "Mangalore has no metro; the State Bank bus stand at Hampankatta is within walking distance, and helpers from Attavar, Jeppu and Hampankatta generally walk across into Bolar.",
+    "housingNotes": "Independent houses on old lanes dominate, so there is no gate-pass system and timings are agreed directly with the household; the handful of apartment blocks near Pandeshwar keep their own visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-bolar-1",
+        "q": "Which areas near Bolar do you also serve?",
+        "a": "Hampankatta to the north, Attavar to the east and Jeppu to the south are all served as separate localities. Valencia and Kankanady are a short bus ride away and are covered too.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bolar"
+        ]
+      },
+      {
+        "id": "faq-mangalore-bolar-2",
+        "q": "Which pincode does the Bolar service area cover?",
+        "a": "Bolar comes under pincode 575010, which takes in the lanes near the Mangaladevi Temple and the Bunder side. Neighbouring Hampankatta is 575002 and Jeppu is 575011.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bolar"
+        ]
+      },
+      {
+        "id": "faq-mangalore-bolar-3",
+        "q": "Do helpers in Bolar need society gate passes?",
+        "a": "Almost all homes in Bolar are independent houses, so there is no society pass and the household manages entry and timings itself. Only the few apartment blocks near Pandeshwar keep a visitor register.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bolar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.8468,
+    "lng": 74.84302
+  },
+  "jeppu": {
+    "neighbours": [
+      "bolar",
+      "attavar",
+      "valencia",
+      "kankanady",
+      "hampankatta",
+      "pumpwell",
+      "ullal",
+      "konaje",
+      "mudipu",
+      "nantoor"
+    ],
+    "landmarks": [
+      "Mangaladevi Temple",
+      "Jeppu Market",
+      "Morgan's Gate",
+      "Netravati Bridge"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Jeppu is the southern tip of Mangalore city, running from the Mangaladevi Temple down to Morgan's Gate and the Netravati Bridge that carries NH-66 across to Ullal, under pincode 575011. It is an old, densely built neighbourhood of independent houses on lanes off Jeppu Main Road, with a few apartment blocks near the market and along the highway. Residents are long-settled families from the fishing, trading and church communities, older couples who have lived here for generations, and a smaller number of tenants renting close to the city. Jeppu Market is the daily shopping stop, the Mangaladevi Temple is on the Bolar boundary, and Morgan's Gate marks the road out towards Ullal. Bolar adjoins Jeppu to the north, Valencia and Kankanady lie to the east and Ullal is across the river. Households here typically look for part-time cleaning and cooking help on morning slots, and elder-care support for older residents is a frequent request.",
+    "commuteNotes": "Mangalore has no metro; city buses between Hampankatta and Ullal or Thokkottu run along Jeppu Main Road and NH-66, and helpers from Bolar and Attavar usually walk in. [VERIFY]",
+    "housingNotes": "Independent houses on older lanes dominate, so helper timings are agreed directly with the household and no gate pass is involved; the few apartment blocks near Jeppu Market keep a simple visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-jeppu-1",
+        "q": "Which areas near Jeppu do you also serve?",
+        "a": "Bolar to the north, Valencia and Kankanady to the east and Attavar towards the city are all served as separate localities. Ullal, across the Netravati Bridge, is covered under our Mangalore South localities.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "jeppu"
+        ]
+      },
+      {
+        "id": "faq-mangalore-jeppu-2",
+        "q": "Which pincode does the Jeppu service area cover?",
+        "a": "Jeppu comes under pincode 575011, covering Jeppu Market, Morgan's Gate and the approach to the Netravati Bridge. Neighbouring Bolar is 575010 and Ullal across the river is 575021.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "jeppu"
+        ]
+      },
+      {
+        "id": "faq-mangalore-jeppu-3",
+        "q": "Do helpers in Jeppu need society gate passes?",
+        "a": "Most homes in Jeppu are independent houses, so there is no society pass and the household handles entry directly. Residents of the few apartment blocks along the highway may need to note the helper's name with building security.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "jeppu"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.84876,
+    "lng": 74.84894
+  },
+  "kankanady": {
+    "neighbours": [
+      "valencia",
+      "pumpwell",
+      "jeppu",
+      "attavar",
+      "kadri",
+      "bolar",
+      "hampankatta",
+      "nantoor",
+      "ullal",
+      "konaje",
+      "kulshekar",
+      "mudipu"
+    ],
+    "landmarks": [
+      "Father Muller Medical College Hospital",
+      "Mangalore Junction Railway Station",
+      "Pumpwell Circle",
+      "Bendoorwell Circle",
+      "Kankanady Market"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "students"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Kankanady is a busy residential and institutional locality in south-central Mangalore, built around Father Muller Medical College Hospital and stretching from Bendoorwell to the Pumpwell bypass, under pincode 575013. Housing is mixed: independent houses and older family homes on the lanes behind the hospital, a large number of apartment complexes along the Kankanady bypass and Mallikatte road, and rented flats and paying-guest units taken up by medical students and hospital staff. Residents are established families, doctors, nurses and other professionals working at the hospital, and working tenants who value the road and rail links. Mangalore Junction railway station sits at the southern end of the locality, Pumpwell Circle on the highway is just beyond it, and Kankanady Market and Bendoorwell Circle are the everyday hubs. Valencia adjoins Kankanady to the north-west, Pumpwell to the south and Jeppu to the west. Households here look for part-time cleaning and cooking help on flexible timings that suit hospital shifts, along with nanny support for young families.",
+    "commuteNotes": "Mangalore has no metro; Kankanady is on the main Hampankatta-Pumpwell bus corridor and close to Mangalore Junction station, so helpers from Jeppu, Valencia and the Pumpwell side reach it easily by bus or on foot.",
+    "housingNotes": "Apartment complexes along the Kankanady bypass and Mallikatte road keep a security desk and visitor register for domestic staff, while independent houses behind the hospital handle timings directly with the household.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-kankanady-1",
+        "q": "Which areas near Kankanady do you also serve?",
+        "a": "Valencia to the north-west, Pumpwell to the south and Jeppu to the west are all served as separate localities. Attavar, Kadri and Bolar are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kankanady"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kankanady-2",
+        "q": "Which pincode does the Kankanady service area cover?",
+        "a": "Kankanady comes under pincode 575013, which takes in the area around Father Muller Medical College Hospital and Mangalore Junction station. Neighbouring Valencia is 575009 and Pumpwell is 575031.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kankanady"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kankanady-3",
+        "q": "Can I book a helper for shift-based timings in Kankanady?",
+        "a": "Yes, many Kankanady households are hospital staff, so requests for early-morning or evening slots rather than standard daytime hours are common. Timings are agreed directly with the helper at the start of the engagement.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kankanady"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.86465,
+    "lng": 74.86
+  },
+  "attavar": {
+    "neighbours": [
+      "hampankatta",
+      "bolar",
+      "kankanady",
+      "valencia",
+      "jeppu",
+      "kadri",
+      "pumpwell",
+      "nantoor",
+      "bajpe",
+      "urwa",
+      "kodialbail",
+      "bejai",
+      "ullal"
+    ],
+    "landmarks": [
+      "KMC Hospital Attavar",
+      "Mangalore Central Railway Station",
+      "City Centre Mall",
+      "Balmatta",
+      "Milagres Church"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "students"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Attavar sits directly south-east of Hampankatta, between the railway line and the Balmatta ridge, under pincode 575015. It is a central, densely built locality where old independent houses on the inner lanes share space with apartment complexes along Attavar Main Road and the Balmatta side, many of them occupied by doctors, nurses and medical students connected to KMC Hospital Attavar, the locality's anchor institution. Residents are established families, hospital staff, and working professionals who want to live within walking distance of the city centre. Mangalore Central Railway Station is on the northern boundary, City Centre Mall and Milagres Church at Hampankatta are a few minutes' walk away, and Balmatta connects the area up towards Kadri and Falnir. Hampankatta adjoins Attavar to the north-west, Bolar to the south-west and Kankanady to the south-east. Households here usually ask for part-time cleaning and cooking help, often on timings that fit hospital shifts, and families with young children look for daytime nanny support.",
+    "commuteNotes": "Mangalore has no metro; the State Bank bus stand and Mangalore Central station are within walking distance, so helpers from Hampankatta, Bolar and Kankanady usually walk in or take a short city bus ride.",
+    "housingNotes": "Apartment complexes along Attavar Main Road and near KMC Hospital keep a visitor register and may ask for the helper's ID on the first visit, while the older independent houses on the inner lanes handle timings directly.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-attavar-1",
+        "q": "Which areas near Attavar do you also serve?",
+        "a": "Hampankatta to the north-west, Bolar to the south-west and Kankanady to the south-east are all served as separate localities. Valencia, Jeppu and Kodialbail are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "attavar"
+        ]
+      },
+      {
+        "id": "faq-mangalore-attavar-2",
+        "q": "Which pincode does the Attavar service area cover?",
+        "a": "Attavar comes under pincode 575015, covering the lanes around KMC Hospital Attavar and the Balmatta side. Neighbouring Hampankatta is 575002 and Kankanady is 575013.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "attavar"
+        ]
+      },
+      {
+        "id": "faq-mangalore-attavar-3",
+        "q": "Do helpers in Attavar need building passes?",
+        "a": "Most apartment complexes near KMC Hospital Attavar and along Attavar Main Road log domestic staff at the gate, so the household should inform security before the first visit. Independent houses on the inner lanes do not need any pass.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "attavar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.86055,
+    "lng": 74.84806
+  },
+  "urwa": {
+    "neighbours": [
+      "kottara",
+      "derebail",
+      "hampankatta",
+      "bejai",
+      "kulur",
+      "kavoor",
+      "kadri",
+      "bajpe",
+      "nantoor",
+      "attavar",
+      "kodialbail",
+      "bolar",
+      "bondel",
+      "panambur"
+    ],
+    "landmarks": [
+      "Urwa Market",
+      "Sultan Battery",
+      "Kudroli Gokarnanatheshwara Temple",
+      "Ladyhill",
+      "Tannirbhavi Beach"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Urwa lies on the north-western side of Mangalore between Ladyhill and the Gurupura river, stretching from Urwa Market to Boloor and the Sultan Battery watchtower, under pincode 575016. It is a settled residential locality with a mix of independent houses on the older lanes around Urwa Market and Chilimbi, and apartment complexes built along Urwa Main Road and the Ladyhill and Ashok Nagar stretch. Residents are established families, retired couples, and working professionals who commute to the city centre and the port belt. Urwa Market is the daily shopping hub, Kudroli Gokarnanatheshwara Temple is a short walk towards Kodialbail, Sultan Battery stands at the Boloor end on the river, and the ferry from there crosses to Tannirbhavi Beach. Kodialbail adjoins Urwa to the south-east, Kottara to the north and Derebail to the east. Households here typically ask for part-time cleaning and cooking help on fixed slots, and elder-care support is a regular request in the larger family homes.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Hampankatta-Urwa-Kottara route run along Urwa Main Road, and helpers from Kodialbail and Kottara usually walk in. [VERIFY]",
+    "housingNotes": "Independent houses on the lanes around Urwa Market and Chilimbi handle helper timings directly, while the apartment complexes on Urwa Main Road and Ladyhill keep a visitor register at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-urwa-1",
+        "q": "Which areas near Urwa do you also serve?",
+        "a": "Kodialbail to the south-east, Kottara to the north and Derebail to the east are all served as separate localities. Hampankatta, Bejai and Kulur are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "urwa"
+        ]
+      },
+      {
+        "id": "faq-mangalore-urwa-2",
+        "q": "Which pincode does the Urwa service area cover?",
+        "a": "Urwa comes under pincode 575016, covering Urwa Market, Chilimbi and the Boloor side near Sultan Battery. Neighbouring Kodialbail is 575003 and Kottara is 575005.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "urwa"
+        ]
+      },
+      {
+        "id": "faq-mangalore-urwa-3",
+        "q": "Do helpers in Urwa need society gate passes?",
+        "a": "Apartment complexes along Urwa Main Road and Ladyhill usually log domestic staff at the gate, so the household should inform security of the helper's name and timings. Independent houses around Urwa Market do not need any pass.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "urwa"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.88922,
+    "lng": 74.83253
+  },
+  "kavoor": {
+    "neighbours": [
+      "kulur",
+      "derebail",
+      "bondel",
+      "kottara",
+      "bajpe",
+      "urwa",
+      "panambur",
+      "nantoor",
+      "surathkal",
+      "katipalla",
+      "bejai"
+    ],
+    "landmarks": [
+      "Kavoor Mahalingeshwara Temple",
+      "Kavoor Junction",
+      "Kulur Bridge",
+      "Konchady Junction"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Kavoor is a residential locality on the northern edge of Mangalore city, on the road from Kulur and Derebail towards Bajpe and the airport, under pincode 575017. It is still mostly a neighbourhood of independent houses on plotted lanes off Kavoor Main Road, though apartment projects have come up around Kavoor Junction and along the airport road as the city has spread north. Residents are middle-class families who wanted more space than the city centre offers, working professionals commuting to the port, MRPL and industrial belt to the north, and older couples who have lived here for many years. The Kavoor Mahalingeshwara Temple is the locality's landmark, Kavoor Junction connects the area to Kulur on the highway and to Bondel on the other side, and the Kulur Bridge is a short drive away. Kulur adjoins Kavoor to the west, Derebail to the south and Bondel to the east. Households here mainly ask for part-time cleaning and cooking help, and families with school-going children often look for afternoon supervision.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Hampankatta-Bajpe and Kavoor routes stop at Kavoor Junction, and helpers from Derebail and Kulur usually take a short bus ride or walk in. [VERIFY]",
+    "housingNotes": "Independent houses on plotted lanes dominate, so entry and timings are handled directly by the household with no gate pass; the newer apartment blocks near Kavoor Junction keep a visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-kavoor-1",
+        "q": "Which areas near Kavoor do you also serve?",
+        "a": "Kulur to the west, Derebail to the south and Bondel to the east are all served as separate localities. Kottara and Bajpe on the airport road are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kavoor"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kavoor-2",
+        "q": "Which pincode does the Kavoor service area cover?",
+        "a": "Kavoor comes under pincode 575017, covering the area around Kavoor Junction and the Mahalingeshwara Temple. Neighbouring Kulur is 575029, Derebail is 575007 and Bondel is 575028.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kavoor"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kavoor-3",
+        "q": "Do helpers in Kavoor need society gate passes?",
+        "a": "Most homes in Kavoor are independent houses, so there is no society pass and the household manages entry directly. Residents of the newer apartment blocks near Kavoor Junction may need to register the helper with building security.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kavoor"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.91806,
+    "lng": 74.85935
+  },
+  "bondel": {
+    "neighbours": [
+      "nantoor",
+      "kavoor",
+      "kadri",
+      "derebail",
+      "bajpe",
+      "bejai",
+      "kottara",
+      "kulur",
+      "urwa",
+      "pumpwell",
+      "kulshekar",
+      "surathkal",
+      "panambur"
+    ],
+    "landmarks": [
+      "Bondel Church",
+      "Airport Road Bondel",
+      "Kudupu Anantha Padmanabha Temple",
+      "Nantoor Circle"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Bondel lies on the north-eastern side of Mangalore along Airport Road, between Nantoor and the road out towards Kavoor and Bajpe, under pincode 575028. Once a village of independent houses and coconut gardens around Bondel Church, it has become one of the city's main growth areas, with a large number of apartment complexes and gated projects built along Airport Road and the Bondel-Kavoor stretch over the last decade, while older houses remain on the side lanes. Residents are young families and working professionals who moved here for newer flats within reach of Kadri and the city, along with long-settled Catholic families around the church. Bondel Church is the local landmark, Nantoor Circle links the area to Kadri, and the Kudupu Anantha Padmanabha Temple is a short drive along the road to Vamanjoor. Nantoor adjoins Bondel to the south, Kavoor lies to the west and Kadri beyond Nantoor. Households here commonly look for full-day or part-time cleaning and cooking help and daytime nanny support for families with young children.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Hampankatta-Bajpe and Kadri-Bondel routes run along Airport Road, and helpers from Nantoor and Kavoor usually take a short bus ride in. [VERIFY]",
+    "housingNotes": "The apartment complexes and gated projects along Airport Road keep a security desk and visitor register, so helpers are logged at the gate; the older independent houses on the side lanes handle timings directly with the household.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-bondel-1",
+        "q": "Which areas near Bondel do you also serve?",
+        "a": "Nantoor to the south, Kavoor to the west and Kadri beyond Nantoor Circle are all served as separate localities. Derebail, Kulshekar and Bajpe are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bondel"
+        ]
+      },
+      {
+        "id": "faq-mangalore-bondel-2",
+        "q": "Do helpers in Bondel need society gate passes?",
+        "a": "Most of the newer apartment complexes along Airport Road in Bondel log domestic staff at the security desk, so the household should register the helper's name and timings before the first visit. Independent houses on the older lanes near Bondel Church do not need any pass.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bondel"
+        ]
+      },
+      {
+        "id": "faq-mangalore-bondel-3",
+        "q": "Which pincode does the Bondel service area cover?",
+        "a": "Bondel comes under pincode 575028, covering the Airport Road stretch and the lanes around Bondel Church. Neighbouring Nantoor is 575030 and Kavoor is 575017.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bondel"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.92433,
+    "lng": 74.86945
+  },
+  "kulur": {
+    "neighbours": [
+      "kottara",
+      "kavoor",
+      "derebail",
+      "urwa",
+      "panambur",
+      "bajpe",
+      "surathkal",
+      "katipalla",
+      "bejai",
+      "bondel"
+    ],
+    "landmarks": [
+      "Kulur Bridge",
+      "Kulur Junction (NH-66)",
+      "Kavoor Mahalingeshwara Temple",
+      "Baikampady Industrial Area"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Kulur is the northern gateway of Mangalore city, sitting on NH-66 at the Kulur Bridge over the Gurupura river, under pincode 575029. The locality spreads along the highway and the road towards Kavoor, and it remains mostly a neighbourhood of independent houses on plotted lanes, with apartment blocks and commercial buildings appearing near Kulur Junction as traffic to the port and industrial belt has grown. Residents are middle-class families, workers and professionals employed at New Mangalore Port, the Baikampady Industrial Area and MRPL just across the bridge, and older households who have lived here for years. Kulur Junction is where the highway meets the Kavoor road, the Kulur Bridge carries traffic north to Panambur and Surathkal, and the Kavoor Mahalingeshwara Temple is a short distance to the east. Kottara adjoins Kulur on the city side, Kavoor lies to the east and Panambur across the bridge to the north. Households here mainly ask for part-time cleaning and cooking help on morning slots and afternoon supervision for school-going children.",
+    "commuteNotes": "Mangalore has no metro; nearly every city bus between Hampankatta and Surathkal, Panambur or Baikampady stops at Kulur Junction on NH-66, so helpers from Kottara, Kavoor and the northern side reach it easily.",
+    "housingNotes": "Independent houses on plotted lanes dominate, so timings are agreed directly with the household and no gate pass is needed; the apartment blocks near Kulur Junction keep a visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-kulur-1",
+        "q": "Which areas near Kulur do you also serve?",
+        "a": "Kottara on the city side, Kavoor to the east and Panambur across the Kulur Bridge are all served as separate localities. Derebail, Urwa and Surathkal are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kulur"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kulur-2",
+        "q": "Which pincode does the Kulur service area cover?",
+        "a": "Kulur comes under pincode 575029, covering Kulur Junction and the lanes near the Kulur Bridge. Neighbouring Kottara is 575005, Kavoor is 575017 and Panambur is 575019.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kulur"
+        ]
+      },
+      {
+        "id": "faq-mangalore-kulur-3",
+        "q": "Do helpers in Kulur need society gate passes?",
+        "a": "Most homes in Kulur are independent houses, so there is no society pass and the household manages entry directly. The newer apartment blocks near Kulur Junction on NH-66 may ask the household to register the helper with building security.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "kulur"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.92597,
+    "lng": 74.82573
+  },
+  "nantoor": {
+    "neighbours": [
+      "kadri",
+      "bondel",
+      "bejai",
+      "kankanady",
+      "pumpwell",
+      "kavoor",
+      "bajpe",
+      "valencia",
+      "hampankatta",
+      "attavar",
+      "derebail",
+      "kulshekar",
+      "bolar",
+      "jeppu",
+      "urwa",
+      "ullal"
+    ],
+    "landmarks": [
+      "Nantoor Circle",
+      "Kadri Manjunatha Temple",
+      "Bikarnakatte Junction",
+      "Bondel Church"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Nantoor, also spelt Nanthoor, is the junction locality between Kadri and the eastern and north-eastern edges of Mangalore, centred on Nantoor Circle where the roads to Bondel, Bikarnakatte and Kadri meet, under pincode 575030. The housing is mixed: a strong stock of apartment complexes built along Nantoor Road and the Kadri side over the last two decades, with older independent houses and church-linked institutions on the lanes off the circle. Residents are working professionals and young families who chose the area for its proximity to Kadri and the city, alongside long-settled families who have seen the neighbourhood grow around them. Nantoor Circle is the everyday landmark, the Kadri Manjunatha Temple and Kadri Park are a short walk to the west, and Bikarnakatte Junction and Bondel Church lie in the other directions. Kadri adjoins Nantoor to the west, Bondel to the north and Kulshekar to the east. Households here commonly ask for part-time cleaning and cooking help on morning and evening slots, and daytime nanny support for families with young children.",
+    "commuteNotes": "Mangalore has no metro; Nantoor Circle is a stop on the city bus routes from Hampankatta towards Bondel, Bikarnakatte and Kulshekar, and helpers from Kadri usually walk in. [VERIFY]",
+    "housingNotes": "Apartment complexes along Nantoor Road keep a security desk and visitor register, so helpers are logged at the gate; the independent houses on the side lanes handle timings directly with the household.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-nantoor-1",
+        "q": "Which areas near Nantoor do you also serve?",
+        "a": "Kadri to the west, Bondel to the north and Kulshekar to the east are all served as separate localities. Bejai, Kankanady and Pumpwell are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "nantoor"
+        ]
+      },
+      {
+        "id": "faq-mangalore-nantoor-2",
+        "q": "Which pincode does the Nantoor service area cover?",
+        "a": "Nantoor comes under pincode 575030, covering Nantoor Circle and the lanes towards Bikarnakatte. Neighbouring Kadri is 575004 and Bondel is 575028.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "nantoor"
+        ]
+      },
+      {
+        "id": "faq-mangalore-nantoor-3",
+        "q": "Do helpers in Nantoor need society gate passes?",
+        "a": "Most apartment complexes along Nantoor Road log domestic staff at the security desk, so the household should inform security of the helper's name and timings before the first visit. Independent houses off Nantoor Circle do not need any pass.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "nantoor"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.88477,
+    "lng": 74.86077
+  },
+  "pumpwell": {
+    "neighbours": [
+      "kankanady",
+      "valencia",
+      "jeppu",
+      "nantoor",
+      "kadri",
+      "bolar",
+      "ullal",
+      "konaje",
+      "mudipu",
+      "attavar",
+      "hampankatta",
+      "kulshekar",
+      "bondel"
+    ],
+    "landmarks": [
+      "Pumpwell Circle",
+      "Mangalore Junction Railway Station",
+      "Father Muller Medical College Hospital",
+      "Indiana Hospital",
+      "Padil"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Pumpwell is the southern junction of Mangalore, centred on Pumpwell Circle where NH-66 meets the Bantwal highway and the Kankanady bypass, under pincode 575031. The locality has grown quickly around this junction: apartment complexes and commercial buildings line the highway and the road towards Padil, while older independent houses remain on the lanes behind, giving it a mixed housing profile. Residents are working professionals and young families who value the road and rail links, staff connected to Indiana Hospital and to Father Muller Medical College Hospital in adjoining Kankanady, and long-settled households on the inner lanes. Mangalore Junction railway station sits just off the circle, Indiana Hospital is on the highway, and Padil marks the start of the road towards Bantwal. Kankanady adjoins Pumpwell to the north, Kulshekar lies to the north-east and Jeppu to the west. Households here typically ask for part-time cleaning and cooking help on timings that fit working days, along with nanny support for families with young children.",
+    "commuteNotes": "Mangalore has no metro; Pumpwell Circle is one of the busiest city bus stops in the south of the city, served by routes from Hampankatta, Ullal, Padil and Bikarnakatte, so helpers reach it easily from Kankanady, Jeppu and the Padil side.",
+    "housingNotes": "Apartment complexes along NH-66 and the Padil road keep a security desk and visitor register for domestic staff, while independent houses on the inner lanes handle timings directly with the household.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-pumpwell-1",
+        "q": "Which areas near Pumpwell do you also serve?",
+        "a": "Kankanady to the north, Kulshekar to the north-east and Jeppu to the west are all served as separate localities. Valencia, Nantoor and Kadri are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "pumpwell"
+        ]
+      },
+      {
+        "id": "faq-mangalore-pumpwell-2",
+        "q": "Which pincode does the Pumpwell service area cover?",
+        "a": "Pumpwell comes under pincode 575031, covering Pumpwell Circle and the stretch towards Padil. Neighbouring Kankanady is 575013 and Kulshekar is 575008.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "pumpwell"
+        ]
+      },
+      {
+        "id": "faq-mangalore-pumpwell-3",
+        "q": "Do helpers in Pumpwell need society gate passes?",
+        "a": "Most apartment complexes near Pumpwell Circle and along the highway log domestic staff at the gate, so the household should register the helper's name and timings with security. Independent houses on the lanes behind the highway do not need any pass.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "pumpwell"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.86962,
+    "lng": 74.86606
+  },
+  "surathkal": {
+    "neighbours": [
+      "katipalla",
+      "panambur",
+      "kulur",
+      "kavoor",
+      "bajpe",
+      "kottara",
+      "bondel"
+    ],
+    "landmarks": [
+      "NITK Surathkal",
+      "Surathkal Beach",
+      "Surathkal Lighthouse",
+      "Sadashiva Temple Surathkal",
+      "Govinda Dasa College"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "students",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Surathkal is a coastal town on NH-66 about fifteen kilometres north of Mangalore city, known across the country for the NITK Surathkal campus that sits on the beach at its northern end, under pincode 575018. Housing is dominated by independent houses on plotted lanes off the highway and around Surathkal Market, with apartment blocks and paying-guest accommodation appearing near the campus and the Mukka side to serve students and faculty. Residents are long-settled families, professors and staff of NITK and Govinda Dasa College, employees of MRPL and New Mangalore Port to the south, and students renting near the institute. Surathkal Beach and the lighthouse on the rocky headland are the town's best-known spots, and the Sadashiva Temple near the market is its traditional centre. Katipalla and Krishnapura adjoin Surathkal to the east, Panambur lies to the south along the highway and Kulur further towards the city. Households here ask for part-time cleaning and cooking help, and faculty families near the campus often look for daytime nanny support.",
+    "commuteNotes": "Mangalore has no metro; frequent city buses run between Hampankatta and Surathkal along NH-66 via Kulur and Panambur, and Surathkal railway station on the Konkan line serves the town, so helpers from Katipalla and the Panambur side reach it by bus or on foot.",
+    "housingNotes": "Independent houses dominate, so entry and timings are handled directly by the household with no gate pass; the apartment blocks near NITK and the market keep a visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-surathkal-1",
+        "q": "Which areas near Surathkal do you also serve?",
+        "a": "Katipalla to the east and Panambur to the south along NH-66 are served as separate localities. Kulur, Kavoor and Bajpe further towards the city are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "surathkal"
+        ]
+      },
+      {
+        "id": "faq-mangalore-surathkal-2",
+        "q": "Can I get a maid or cook near NITK Surathkal?",
+        "a": "Yes, the lanes around the NITK Surathkal campus and the Mukka side are within the Surathkal service area under pincode 575018. Faculty housing and apartment blocks near the campus are served along with independent houses in the town.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "surathkal"
+        ]
+      },
+      {
+        "id": "faq-mangalore-surathkal-3",
+        "q": "Which pincode does the Surathkal service area cover?",
+        "a": "Surathkal comes under pincode 575018, which covers the town, the beach and the NITK campus. Neighbouring Panambur is 575019 and Katipalla is 575020.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "surathkal"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.97987,
+    "lng": 74.82467
+  },
+  "panambur": {
+    "neighbours": [
+      "kulur",
+      "surathkal",
+      "katipalla",
+      "kavoor",
+      "kottara",
+      "bajpe",
+      "derebail",
+      "urwa",
+      "bejai",
+      "bondel"
+    ],
+    "landmarks": [
+      "New Mangalore Port",
+      "Panambur Beach",
+      "Baikampady Industrial Area",
+      "Kulur Bridge"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Panambur is the port locality of Mangalore, lying on NH-66 between the Kulur Bridge and Surathkal and taking in New Mangalore Port, Panambur Beach and the Baikampady Industrial Area, under pincode 575019. Housing here is mostly independent houses and staff quarters: port and industrial employees live in the residential colonies attached to the port and in plotted houses on the lanes off the highway, with a few newer apartment blocks near Baikampady and the Kulur side. Residents are families of port officers, shipping and logistics staff, workers at the industrial estate and MRPL, and long-settled coastal households. Panambur Beach is the city's most-visited beach, New Mangalore Port dominates the western side, and the Kulur Bridge is the link back to the city. Kulur adjoins Panambur to the south across the bridge, Surathkal lies to the north along the highway and Katipalla to the north-east. Households here typically ask for part-time cleaning and cooking help on morning slots and afternoon supervision for school-going children.",
+    "commuteNotes": "Mangalore has no metro; city buses between Hampankatta and Surathkal or Baikampady run along NH-66 through Panambur, and helpers from Kulur and Surathkal usually take a short bus ride in.",
+    "housingNotes": "Port and industrial staff colonies have their own entry points, and independent houses on the highway-side lanes deal with helpers directly, so timings are generally agreed with the household rather than through a society gate.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-panambur-1",
+        "q": "Which areas near Panambur do you also serve?",
+        "a": "Kulur across the bridge to the south, Surathkal to the north and Katipalla to the north-east are all served as separate localities. Kavoor and Kottara towards the city are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "panambur"
+        ]
+      },
+      {
+        "id": "faq-mangalore-panambur-2",
+        "q": "Which pincode does the Panambur service area cover?",
+        "a": "Panambur comes under pincode 575019, which covers the New Mangalore Port area, Panambur Beach and the Baikampady side. Neighbouring Kulur is 575029 and Surathkal is 575018.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "panambur"
+        ]
+      },
+      {
+        "id": "faq-mangalore-panambur-3",
+        "q": "Can helpers enter the port staff colonies in Panambur?",
+        "a": "Residential colonies attached to New Mangalore Port and the industrial units keep their own entry rules, so the household usually needs to register the helper's name at the colony gate before the first visit. Independent houses along the highway lanes do not need any pass.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "panambur"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.94558,
+    "lng": 74.8079
+  },
+  "katipalla": {
+    "neighbours": [
+      "surathkal",
+      "panambur",
+      "kulur",
+      "kavoor",
+      "bajpe",
+      "kottara"
+    ],
+    "landmarks": [
+      "MRPL Refinery",
+      "Krishnapura",
+      "NITK Surathkal",
+      "Surathkal Railway Station"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Katipalla lies just east of Surathkal on the inland side of NH-66, next to the Krishnapura settlement and the MRPL refinery at Kuthethoor, under pincode 575020. The area is a spread of independent houses on plotted lanes, much of it built as resettlement and worker housing when the port, refinery and industrial estate came up, with newer plotted homes and a few small apartment blocks added as the belt has grown. Residents are families of MRPL and port employees, workers from the Baikampady industrial area, and long-settled households who moved here from the coast. The MRPL refinery is the area's dominant employer and landmark, Krishnapura is the neighbouring settlement to the south, and the NITK Surathkal campus and Surathkal railway station are a short distance to the west. Surathkal adjoins Katipalla to the west, Panambur lies to the south-west and Bajpe further inland to the east. Households here typically ask for part-time cleaning and cooking help on morning slots and afternoon supervision for school-going children.",
+    "commuteNotes": "Mangalore has no metro; city buses on the Surathkal-Katipalla and Krishnapura routes connect the area to the NH-66 corridor, and helpers from Surathkal usually walk or take a short bus ride in. [VERIFY]",
+    "housingNotes": "Independent houses on plotted lanes dominate, so there is no gate-pass system and timings are agreed directly with the household; the few small apartment blocks keep a simple visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-katipalla-1",
+        "q": "Which areas near Katipalla do you also serve?",
+        "a": "Surathkal to the west and Panambur to the south-west are served as separate localities. Kulur, Kavoor and Bajpe further inland are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "katipalla"
+        ]
+      },
+      {
+        "id": "faq-mangalore-katipalla-2",
+        "q": "Which pincode does the Katipalla service area cover?",
+        "a": "Katipalla comes under pincode 575020, covering the settlement near Krishnapura and the MRPL side. Neighbouring Surathkal is 575018 and Panambur is 575019.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "katipalla"
+        ]
+      },
+      {
+        "id": "faq-mangalore-katipalla-3",
+        "q": "Do helpers in Katipalla need society gate passes?",
+        "a": "Almost all homes in Katipalla are independent houses, so there is no society pass and the household manages entry and timings itself. Residents of the few small apartment blocks may need to note the helper's name with the building watchman.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "katipalla"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 13.00079,
+    "lng": 74.83332
+  },
+  "bajpe": {
+    "neighbours": [
+      "kavoor",
+      "bondel",
+      "kulur",
+      "katipalla",
+      "derebail",
+      "panambur",
+      "surathkal",
+      "nantoor",
+      "kadri",
+      "bejai",
+      "kottara",
+      "valencia",
+      "attavar",
+      "urwa"
+    ],
+    "landmarks": [
+      "Mangalore International Airport",
+      "Bajpe Church",
+      "Kavoor Mahalingeshwara Temple",
+      "Kenjar"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Bajpe is the airport town on the north-eastern outskirts of Mangalore, about thirteen kilometres from the city centre along the road from Kavoor, under pincode 575025. Mangalore International Airport, spread between Bajpe and Kenjar, defines the area, and the town itself remains a settlement of independent houses on plotted lanes around Bajpe Church and the market, with a few apartment blocks and lodges near the airport road. Residents are long-settled families, airport and airline staff, and working professionals who chose the area for larger plots and lower congestion while still commuting to Kadri, Bondel and the city. Bajpe Church is the town's landmark, Kenjar marks the airport side, and the Kavoor Mahalingeshwara Temple lies on the road back towards the city. Kavoor adjoins Bajpe to the south-west, Bondel lies to the south towards the city and Katipalla to the west across the industrial belt. Households here mainly ask for part-time cleaning and cooking help on morning slots and afternoon supervision for school-going children.",
+    "commuteNotes": "Mangalore has no metro; city buses run between Hampankatta and Bajpe via Kavoor and the airport road, and helpers from Kavoor usually take a bus in as walking distances are long. [VERIFY]",
+    "housingNotes": "Independent houses on plotted lanes dominate, so entry and timings are handled directly by the household with no gate pass; the few apartment blocks on the airport road keep a visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-bajpe-1",
+        "q": "Which areas near Bajpe do you also serve?",
+        "a": "Kavoor to the south-west and Bondel towards the city are served as separate localities. Kulur, Katipalla and Derebail are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bajpe"
+        ]
+      },
+      {
+        "id": "faq-mangalore-bajpe-2",
+        "q": "Which pincode does the Bajpe service area cover?",
+        "a": "Bajpe comes under pincode 575025, covering the town around Bajpe Church and the Mangalore International Airport side at Kenjar. Neighbouring Kavoor is 575017 and Bondel is 575028.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bajpe"
+        ]
+      },
+      {
+        "id": "faq-mangalore-bajpe-3",
+        "q": "Do helpers in Bajpe need society gate passes?",
+        "a": "Most homes in Bajpe are independent houses, so there is no society pass and the household manages entry directly. Residents of the few apartment blocks near the airport road may need to register the helper with building security.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "bajpe"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.89083,
+    "lng": 74.85886
+  },
+  "ullal": {
+    "neighbours": [
+      "konaje",
+      "mudipu",
+      "jeppu",
+      "bolar",
+      "kankanady",
+      "pumpwell",
+      "attavar",
+      "valencia",
+      "hampankatta",
+      "nantoor"
+    ],
+    "landmarks": [
+      "Ullal Beach",
+      "Sayyed Madani Dargah",
+      "Someshwara Temple",
+      "Thokkottu Junction",
+      "Netravati Bridge"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Ullal is the coastal town immediately south of Mangalore across the Netravati river, reached by the NH-66 bridge from Jeppu and centred on Thokkottu Junction, under pincode 575021. It is an old settlement of independent houses on lanes running between the highway and the sea, with a few apartment blocks near Thokkottu and along the road towards Deralakatte. Residents are long-settled fishing and trading families, households of many faiths who live around the town's shrines, and working families who commute over the bridge into the city. Ullal Beach and the Sayyed Madani Dargah draw visitors from across the region, the Someshwara Temple stands on the rocky shore at the southern end, and Thokkottu Junction is where the highway meets the road to Konaje and Mangalore University. Jeppu lies across the Netravati Bridge to the north, Konaje to the east via Deralakatte and Mudipu further inland. Households here mostly ask for part-time cleaning and cooking help, and elder-care support for older family members is a regular request.",
+    "commuteNotes": "Mangalore has no metro; frequent city buses run between Hampankatta and Ullal or Thokkottu along NH-66 over the Netravati Bridge, and helpers from Jeppu and the Someshwar side reach the town by bus or on foot.",
+    "housingNotes": "Independent houses on old lanes dominate, so there is no gate-pass system and timings are agreed directly with the household; the few apartment blocks near Thokkottu keep a simple visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-ullal-1",
+        "q": "Which areas near Ullal do you also serve?",
+        "a": "Jeppu across the Netravati Bridge, Konaje via Deralakatte and Mudipu further inland are served as separate localities. Bolar, Kankanady and Pumpwell on the city side are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "ullal"
+        ]
+      },
+      {
+        "id": "faq-mangalore-ullal-2",
+        "q": "Which pincode does the Ullal service area cover?",
+        "a": "Ullal comes under pincode 575021, covering the town, Thokkottu Junction and the beach side. Neighbouring Jeppu across the river is 575011 and Konaje is 575022.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "ullal"
+        ]
+      },
+      {
+        "id": "faq-mangalore-ullal-3",
+        "q": "Do helpers in Ullal need society gate passes?",
+        "a": "Almost all homes in Ullal are independent houses, so there is no society pass and the household manages entry and timings itself. Residents of the few apartment blocks near Thokkottu Junction may need to note the helper's name with the building watchman.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "ullal"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.81812,
+    "lng": 74.84594
+  },
+  "konaje": {
+    "neighbours": [
+      "mudipu",
+      "ullal",
+      "pumpwell",
+      "kankanady",
+      "jeppu",
+      "valencia",
+      "kulshekar"
+    ],
+    "landmarks": [
+      "Mangalore University (Mangalagangothri)",
+      "Yenepoya University Deralakatte",
+      "KS Hegde Hospital Deralakatte",
+      "Thokkottu Junction"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "students",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Konaje is the university locality on the southern outskirts of Mangalore, about fifteen kilometres from the city centre on the road from Thokkottu through Deralakatte, under pincode 575022. The Mangalore University campus at Mangalagangothri sits on the hills here, and the area remains largely a spread of independent houses on plotted lanes, with apartment blocks, hostels and paying-guest buildings clustered near the campus and along the Deralakatte stretch. Residents are university faculty and staff, students renting near the campus, families connected to Yenepoya University and KS Hegde Hospital at Deralakatte, and long-settled village households. Mangalore University is the area's defining landmark, the Deralakatte medical institutions lie on the road back towards Ullal, and Thokkottu Junction on NH-66 is the link to the city. Mudipu adjoins Konaje to the east, Ullal lies to the west via Deralakatte and Pumpwell is the nearest city locality to the north. Households here ask for part-time cleaning and cooking help, and faculty families often look for daytime nanny support.",
+    "commuteNotes": "Mangalore has no metro; city buses run between Hampankatta and Konaje via Thokkottu and Deralakatte, and helpers from Deralakatte and the Ullal side usually take a bus in. [VERIFY]",
+    "housingNotes": "Independent houses dominate, so entry and timings are handled directly by the household without any gate pass; the apartment blocks and hostels near the university keep a visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-konaje-1",
+        "q": "Which areas near Konaje do you also serve?",
+        "a": "Mudipu to the east and Ullal to the west via Deralakatte are served as separate localities. Pumpwell, Kankanady and Jeppu on the city side are also within our coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "konaje"
+        ]
+      },
+      {
+        "id": "faq-mangalore-konaje-2",
+        "q": "Can I get a maid or cook near Mangalore University in Konaje?",
+        "a": "Yes, the lanes around the Mangalagangothri campus and the Deralakatte stretch are within the Konaje service area under pincode 575022. Faculty housing, apartment blocks and independent houses near the university are all served.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "konaje"
+        ]
+      },
+      {
+        "id": "faq-mangalore-konaje-3",
+        "q": "Which pincode does the Konaje service area cover?",
+        "a": "Konaje comes under pincode 575022, which covers the Mangalore University campus and surrounding lanes. Neighbouring Mudipu is 575023 and Ullal is 575021.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "konaje"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.82017,
+    "lng": 74.92829
+  },
+  "mudipu": {
+    "neighbours": [
+      "konaje",
+      "ullal",
+      "pumpwell",
+      "kankanady",
+      "jeppu",
+      "valencia",
+      "kulshekar"
+    ],
+    "landmarks": [
+      "Infosys Mangalore Campus (Pajeer)",
+      "Mangalore University (Mangalagangothri)",
+      "Mudipu Junction",
+      "Kurnad"
+    ],
+    "housingProfile": "independent-houses",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Mudipu is a small town on the south-eastern outskirts of Mangalore, beyond Konaje on the road towards Kurnad and Vittal, under pincode 575023. The Infosys Mangalore campus at Pajeer sits close to the town and has brought a steady flow of IT employees to an area that is otherwise a spread of independent houses on plotted lanes, with a few apartment blocks and rented houses added near Mudipu Junction to serve the campus. Residents are long-settled village households, Infosys staff who rent or have built homes nearby, and families connected to Mangalore University at Konaje. Mudipu Junction is the town's centre, the Infosys campus lies a short drive away, and Kurnad is the next settlement along the road. Konaje adjoins Mudipu to the west, Ullal lies further west on the coast and Pumpwell is the nearest city locality to the north via the Bantwal highway side. Households here ask for part-time cleaning and cooking help on morning and evening slots, and working couples often look for daytime nanny support.",
+    "commuteNotes": "Mangalore has no metro; city buses run between Hampankatta and Mudipu via Thokkottu and Konaje, and helpers from Konaje and Kurnad usually take a bus in as distances are long. [VERIFY]",
+    "housingNotes": "Independent houses on plotted lanes dominate, so there is no gate-pass system and timings are agreed directly with the household; the few apartment blocks near Mudipu Junction keep a simple visitor register.",
+    "localFaqs": [
+      {
+        "id": "faq-mangalore-mudipu-1",
+        "q": "Which areas near Mudipu do you also serve?",
+        "a": "Konaje to the west and Ullal on the coast are served as separate localities. Pumpwell, Kankanady and Jeppu on the city side are also within our Mangalore coverage.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "mudipu"
+        ]
+      },
+      {
+        "id": "faq-mangalore-mudipu-2",
+        "q": "Which pincode does the Mudipu service area cover?",
+        "a": "Mudipu comes under pincode 575023, covering the town around Mudipu Junction and the lanes towards the Infosys campus at Pajeer. Neighbouring Konaje is 575022 and Ullal is 575021.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "mudipu"
+        ]
+      },
+      {
+        "id": "faq-mangalore-mudipu-3",
+        "q": "Do helpers in Mudipu need society gate passes?",
+        "a": "Almost all homes in Mudipu are independent houses, so there is no society pass and the household manages entry and timings itself. Residents of the few apartment blocks near Mudipu Junction may need to note the helper's name with the building watchman.",
+        "scope": "locality",
+        "tags": [
+          "mangalore",
+          "mudipu"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 12.80365,
+    "lng": 74.96171
+  }
+}

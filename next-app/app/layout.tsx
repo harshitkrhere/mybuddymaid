@@ -1,68 +1,46 @@
-import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
-import { Analytics } from '@/components/shared/Analytics';
-import { Analytics as VercelAnalytics, SpeedInsights } from '@/components/shared/VercelAnalytics';
+import type { Metadata, Viewport } from 'next';
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
+import { Header } from '@/components/shared/Header';
+import { Footer } from '@/components/shared/Footer';
+import { Analytics } from '@/components/shared/Analytics';
+import { VercelAnalytics } from '@/components/shared/VercelAnalytics';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { organizationLd } from '@/lib/seo-engine/jsonld';
+import { SITE_URL, BRAND } from '@/lib/seo-engine/meta';
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-heading',
-  display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
-});
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display', display: 'swap', weight: ['600', '700', '800'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mybuddymaid.in'),
-  title: {
-    default: 'Verified Maid Service in Delhi NCR, Mumbai & Bangalore — MyBuddyMaid | Book Online',
-    template: '%s — MyBuddyMaid',
+  metadataBase: new URL(SITE_URL),
+  title: { default: `${BRAND} – Verified Maids, Cooks & Nannies`, template: `%s` },
+  description: 'Verified maids, cooks, nannies and elder-care helpers across Delhi NCR, Mumbai, Pune, Bangalore and Mangalore, with a replacement policy.',
+  applicationName: BRAND,
+  icons: { icon: '/favicon-32.png', apple: '/apple-touch-icon.png' },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } : undefined,
   },
-  description:
-    'Book 100% police-verified maids, cooks, nannies & elderly care helpers in Delhi NCR, Mumbai & Bangalore. 1-year free replacement guarantee. Trusted by 12,000+ families. Starting ₹3,999.',
-  keywords: [
-    'maid service Delhi NCR',
-    'maid service Mumbai',
-    'maid service Bangalore',
-    'verified maid',
-    'cook service',
-    'nanny service',
-    'elderly care',
-    'MyBuddyMaid',
-  ],
-  authors: [{ name: 'MyBuddyMaid' }],
-  openGraph: {
-    siteName: 'MyBuddyMaid',
-    locale: 'en_IN',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-  },
-  icons: {
-    icon: '/favicon-32.png',
-    apple: '/apple-touch-icon.png',
-  },
+  // hreflang hook: single language today; add `alternates.languages` with hi-IN when a Hindi site exists.
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0d1117',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable}`}>
+    <html lang="en-IN" className={`${jakarta.variable} ${inter.variable}`}>
       <body>
-        {children}
+        <JsonLd data={[organizationLd()]} />
+        <Header />
+        <div className="page">{children}</div>
+        <Footer />
         <Analytics />
         <VercelAnalytics />
-        <SpeedInsights />
       </body>
     </html>
   );

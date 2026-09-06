@@ -1,0 +1,352 @@
+{
+  "dwarka": {
+    "neighbours": ["palam", "mahavir-enclave", "uttam-nagar", "najafgarh", "chhawla", "janakpuri", "nangal-raya", "delhi-cantt"],
+    "landmarks": ["Dwarka Sector 21 Metro Station", "Vegas Mall, Sector 14", "Pacific D21 Mall, Sector 21", "Netaji Subhas University of Technology (NSUT), Sector 3", "Venkateshwar Hospital, Sector 18A", "Yashobhoomi (India International Convention & Expo Centre), Sector 25"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Palam", "Sagarpur", "Kakrola"],
+    "localIntro": "Dwarka is a planned DDA sub-city in south-west Delhi, laid out in numbered sectors across pincodes 110075 and 110078. Housing is dominated by gated cooperative group housing societies and apartment complexes, so most households are working professionals and families living behind secured gates with visitor-entry systems. The sub-city is well served by the Blue Line metro, with Vegas Mall in Sector 14 and Pacific D21 Mall near the Dwarka Sector 21 interchange station anchoring the retail side, while Netaji Subhas University of Technology in Sector 3 and Venkateshwar Hospital in Sector 18A anchor the institutional one. The Yashobhoomi convention centre in Sector 25 has added further activity on the airport-facing edge. Dwarka sits with Palam and Mahavir Enclave along its eastern side, Uttam Nagar and Janakpuri to the north-east, and Najafgarh and Chhawla towards the rural west, so domestic helpers move easily between these areas. For gated societies, helpers typically need police verification and a society entry pass, which residents arrange through the RWA or society office before the first working day.",
+    "commuteNotes": "The Blue Line runs through the sub-city with stations from Dwarka Mor to Dwarka Sector 21, and the Airport Express Line also stops at Sector 21; many helpers arrive by metro or come on foot or by cycle from adjacent areas such as Palam, Sagarpur and Kakrola.",
+    "housingNotes": "Housing is dominated by gated CGHS societies and apartment towers where helpers need police verification and society entry passes; RWAs and society offices keep gate records, so residents usually register a helper before the first visit.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-dwarka-1",
+        "q": "Do maids and cooks in Dwarka need society gate passes?",
+        "a": "Yes, most of Dwarka's housing consists of gated CGHS societies and apartment complexes spread across its numbered sectors, and helpers generally need police verification plus a society entry pass. Residents typically register the helper with the RWA or society office before the first working day.",
+        "scope": "locality",
+        "tags": ["delhi", "dwarka"]
+      },
+      {
+        "id": "faq-delhi-dwarka-2",
+        "q": "Which pincodes does the Dwarka service area cover?",
+        "a": "Dwarka's service area covers pincodes 110075 and 110078, which span the sub-city's numbered sectors. Adjacent areas such as Palam and Mahavir Enclave fall under their own pincodes and locality pages.",
+        "scope": "locality",
+        "tags": ["delhi", "dwarka"]
+      },
+      {
+        "id": "faq-delhi-dwarka-3",
+        "q": "Which areas near Dwarka are also served?",
+        "a": "Nearby coverage includes Palam, Mahavir Enclave, Uttam Nagar, Najafgarh and Chhawla, all of which adjoin the sub-city. Helpers often work across Dwarka's sectors and these bordering areas because the Blue and Grey Lines and local roads connect them closely.",
+        "scope": "locality",
+        "tags": ["delhi", "dwarka"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "delhi-cantt": {
+    "neighbours": ["nangal-raya", "naraina", "palam", "rk-puram", "janakpuri", "mahipalpur", "hari-nagar", "dwarka"],
+    "landmarks": ["Delhi Cantt Railway Station", "Gopinath Bazaar", "Base Hospital Delhi Cantt", "Manekshaw Centre, Parade Road", "Sadar Bazaar Cantonment Metro Station (Magenta Line)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Delhi Cantt, pincode 110010, is a large cantonment area administered by the Cantonment Board and dominated by defence quarters, bungalows and institutional campuses rather than commercial towers. Households are largely serving and retired defence families, and daily life centres on established markets like Gopinath Bazaar and the cantonment's own Sadar Bazaar. Base Hospital Delhi Cantt and the Manekshaw Centre on Parade Road are prominent landmarks, while Delhi Cantt Railway Station connects the area to the wider rail network. Because much of the housing is official accommodation inside controlled-entry zones, domestic helpers usually go through identity checks and, in many pockets, need entry passes issued for the specific residential area, which households arrange in advance. Nangal Raya and Naraina adjoin the cantonment on its city side, Palam lies to the west, and R.K. Puram is a short distance away across Dhaula Kuan. Working hours in cantonment homes tend to follow structured routines, and helpers reaching the area rely on its bus corridors and the Magenta Line station at Sadar Bazaar Cantonment.",
+    "commuteNotes": "Helpers usually arrive by bus along the cantonment's arterial roads or via the Sadar Bazaar Cantonment station on the Magenta Line; Delhi Cantt Railway Station also links the area to the rail network.",
+    "housingNotes": "Most housing is defence quarters and bungalows inside controlled-entry zones, so helpers often need identity checks and area-specific entry passes; households typically arrange these before the first visit.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-delhi-cantt-1",
+        "q": "Do helpers need special entry passes to work in Delhi Cantt?",
+        "a": "Much of Delhi Cantt's housing is official defence accommodation inside controlled-entry zones, so identity checks are standard and several residential pockets require area-specific entry passes. Households usually arrange these through their own establishment before the helper's first visit.",
+        "scope": "locality",
+        "tags": ["delhi", "delhi-cantt"]
+      },
+      {
+        "id": "faq-delhi-delhi-cantt-2",
+        "q": "Which pincode does the Delhi Cantt service area cover?",
+        "a": "Delhi Cantt service coverage corresponds to pincode 110010, which spans the cantonment's residential pockets around Gopinath Bazaar and Sadar Bazaar. Neighbouring Nangal Raya and Palam are covered under their own pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "delhi-cantt"]
+      },
+      {
+        "id": "faq-delhi-delhi-cantt-3",
+        "q": "Which areas around Delhi Cantt are also served?",
+        "a": "Coverage extends to adjoining areas including Nangal Raya, Naraina, Palam and R.K. Puram across Dhaula Kuan. Dwarka and Mahipalpur on the cantonment's western and southern sides are also close by.",
+        "scope": "locality",
+        "tags": ["delhi", "delhi-cantt"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mahipalpur": {
+    "neighbours": ["vasant-kunj", "rajokari", "delhi-cantt", "palam", "vasant-vihar", "munirka", "dwarka"],
+    "landmarks": ["Indira Gandhi International Airport", "Delhi Aerocity", "Radisson Blu Plaza Delhi Airport", "NH-48 Mahipalpur flyover", "Ambience Mall, Vasant Kunj (nearby)"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Rangpuri", "Mahipalpur village"],
+    "localIntro": "Mahipalpur, pincode 110037, is a dense urban village on NH-48 right beside Indira Gandhi International Airport and the Aerocity hospitality district. The housing stock is mostly builder floors and multi-storey village homes packed along narrow lanes, with a heavy concentration of guest houses and hotels — the Radisson Blu Plaza on the highway is a familiar marker of the area. Many residents work in aviation, hotels and logistics connected to the airport, so households include shift-working professionals alongside long-settled village families, and demand for flexible morning and evening help is steady. The Delhi Aerocity station on the Airport Express Line is the closest metro point, and buses and shared autos run constantly along NH-48. Vasant Kunj rises immediately to the east, Rajokri lies further down the highway towards the Gurugram border, and Palam and Dwarka sit on the airport's other flank. Helpers serving Mahipalpur homes typically live in the village itself or in nearby Rangpuri, walking or taking short shared-auto rides, which makes part-time slots across the day easy to arrange.",
+    "commuteNotes": "Delhi Aerocity station on the Airport Express Line is the nearest metro point, and buses and shared autos run along NH-48; many helpers live within Mahipalpur village or nearby Rangpuri and reach homes on foot.",
+    "housingNotes": "The stock is dense builder floors and village homes without society gates; entry and timings are agreed directly with each household, and part-time slots across mornings and evenings are the usual pattern.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-mahipalpur-1",
+        "q": "Which pincode does Mahipalpur service cover?",
+        "a": "Mahipalpur falls under pincode 110037, covering the village core and the lanes off NH-48 near the airport. Vasant Kunj and Palam next door have their own pincodes and locality pages.",
+        "scope": "locality",
+        "tags": ["delhi", "mahipalpur"]
+      },
+      {
+        "id": "faq-delhi-mahipalpur-2",
+        "q": "Where do domestic helpers in Mahipalpur usually come from?",
+        "a": "Most helpers live within Mahipalpur village itself or in nearby Rangpuri, so they reach homes on foot or by a short shared-auto ride. This makes part-time morning and evening slots straightforward to schedule.",
+        "scope": "locality",
+        "tags": ["delhi", "mahipalpur"]
+      },
+      {
+        "id": "faq-delhi-mahipalpur-3",
+        "q": "Which areas near Mahipalpur are also served?",
+        "a": "Nearby coverage includes Vasant Kunj, Rajokri, Palam and Delhi Cantt, with Dwarka a little further west. The NH-48 corridor and airport roads keep these areas closely connected.",
+        "scope": "locality",
+        "tags": ["delhi", "mahipalpur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "rajokari": {
+    "neighbours": ["mahipalpur", "vasant-kunj", "arjun-garh", "chhatarpur", "dwarka", "delhi-cantt"],
+    "landmarks": ["Rajokri flyover, NH-48", "Indira Gandhi International Airport (nearby)", "Delhi Aerocity (nearby)", "Ambience Mall, Gurugram (across the border)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Rajokri, pincode 110038, is an urban village on NH-48 near the Delhi–Gurugram border, familiar to commuters for the Rajokri flyover on the airport highway. The core is a traditional village settlement of independent houses, surrounded by a belt of farmhouses and newer builder floors, and households range from long-established village families to professionals who commute to Gurugram's office districts and to Aerocity. Indira Gandhi International Airport lies just up the highway, and Ambience Mall on the Gurugram side of the border is the closest large mall. Mahipalpur is the next settlement towards the airport, Vasant Kunj spreads across the ridge to the east, and the Arjun Garh–Aya Nagar belt sits further south along the ridge. There is no metro station inside Rajokri itself, so helpers typically rely on buses and shared autos along NH-48 or live within the village. Homes here tend to have flexible, informal working arrangements compared with gated societies, with entry and timings managed directly by the household rather than through a gate office.",
+    "commuteNotes": "There is no metro station within Rajokri; helpers rely on buses and shared autos along NH-48 or live within the village itself.",
+    "housingNotes": "Independent village houses and farmhouse plots dominate, with no society gate systems; households manage entry directly and timings tend to be flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-rajokari-1",
+        "q": "Which areas near Rajokri do you also serve?",
+        "a": "Coverage around Rajokri includes Mahipalpur up the highway, Vasant Kunj across the ridge, and the Arjun Garh belt to the south, with Chhatarpur and Dwarka further afield. Helpers move between these areas along NH-48 and the ridge roads.",
+        "scope": "locality",
+        "tags": ["delhi", "rajokari"]
+      },
+      {
+        "id": "faq-delhi-rajokari-2",
+        "q": "Do helpers in Rajokri need gate passes?",
+        "a": "Rajokri is mostly independent village houses and farmhouse plots without society gate systems, so entry is managed directly by each household. Verification documents can still be shared with the family before work begins.",
+        "scope": "locality",
+        "tags": ["delhi", "rajokari"]
+      },
+      {
+        "id": "faq-delhi-rajokari-3",
+        "q": "Which pincode does Rajokri service cover?",
+        "a": "Rajokri falls under pincode 110038, which covers the village settlement and the surrounding farmhouse belt along NH-48. Neighbouring Mahipalpur and Vasant Kunj are handled under their own pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "rajokari"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "najafgarh": {
+    "neighbours": ["chhawla", "dwarka", "uttam-nagar", "nangloi", "mahavir-enclave", "palam"],
+    "landmarks": ["Najafgarh Metro Station (Grey Line)", "Dhansa Bus Stand Metro Station (Grey Line)", "Najafgarh Bazaar", "Rao Tula Ram Memorial Hospital, Jaffarpur (nearby)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Najafgarh is a large, self-contained township in outer south-west Delhi covering pincodes 110043 and 110073, historically a market town serving the surrounding villages. Housing is overwhelmingly independent plotted houses, many built over shops along dense bazaar streets, and households are typically multi-generational families rather than transient professionals. The area gained a direct metro link with the Grey Line, whose Najafgarh and Dhansa Bus Stand stations connect the town to Dwarka's Blue Line network, and the Najafgarh drain that skirts the town is a prominent local waterway. Rao Tula Ram Memorial Hospital at nearby Jaffarpur is the main government hospital serving this belt. Chhawla lies to the south-east on the road towards Dwarka, Dwarka sub-city itself is the nearest major apartment hub, and Uttam Nagar and Nangloi connect Najafgarh to west Delhi along the Najafgarh Road corridor. Domestic help in Najafgarh usually comes from within the town and its adjoining villages, and working arrangements are agreed directly with households, since gated societies are rare in this part of Delhi.",
+    "commuteNotes": "The Grey Line's Najafgarh and Dhansa Bus Stand stations link the town to Dwarka, and buses along Najafgarh Road connect it to west Delhi; most helpers live within the town or adjoining villages and travel short distances on foot or by shared auto.",
+    "housingNotes": "Plotted independent houses dominate and gated societies are rare, so households deal with helpers directly, and full-day or multi-visit arrangements are easy to structure.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-najafgarh-1",
+        "q": "Which pincodes does Najafgarh service cover?",
+        "a": "Najafgarh coverage spans pincodes 110043 and 110073, taking in the town's bazaar streets and residential colonies. Chhawla and Dwarka next door fall under separate pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "najafgarh"]
+      },
+      {
+        "id": "faq-delhi-najafgarh-2",
+        "q": "How do helpers travel within Najafgarh?",
+        "a": "Most helpers live within the town or in adjoining villages and cover short distances on foot or by shared auto. The Grey Line's Najafgarh and Dhansa Bus Stand stations also connect the town to Dwarka for helpers coming from that side.",
+        "scope": "locality",
+        "tags": ["delhi", "najafgarh"]
+      },
+      {
+        "id": "faq-delhi-najafgarh-3",
+        "q": "Which areas near Najafgarh are also served?",
+        "a": "Nearby coverage includes Chhawla, Dwarka, Uttam Nagar and Nangloi along the Najafgarh Road corridor. Helpers frequently work across Najafgarh and these adjoining belts.",
+        "scope": "locality",
+        "tags": ["delhi", "najafgarh"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "palam": {
+    "neighbours": ["mahavir-enclave", "dwarka", "delhi-cantt", "nangal-raya", "mahipalpur", "uttam-nagar"],
+    "landmarks": ["Palam Metro Station (Magenta Line)", "Palam Railway Station", "Indira Gandhi International Airport Terminal 1 (nearby)", "Dashrath Puri Metro Station (nearby)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Palam, covering pincodes 110045 and 110061, combines an old village core with dense plotted colonies such as Raj Nagar and Sadh Nagar, where most homes are compact multi-storey builder floors and family-owned houses. It sits directly beside the airport zone — Terminal 1 of Indira Gandhi International Airport is a short drive away — and the Palam Railway Station and the Palam Metro Station on the Magenta Line give the area two rail links of its own. Households are mainly settled families, many with members working at the airport, in government service or in offices towards Dwarka and Gurugram. Mahavir Enclave adjoins Palam to the north, Dwarka's sectors begin immediately to the west, and Delhi Cantt stretches along the eastern boundary, so domestic helpers circulate easily between these areas on foot and by shared auto. Homes here rarely have society-style gate controls; timings and entry are agreed directly with the household, and part-time help across mornings and evenings is the common working pattern in these lanes.",
+    "commuteNotes": "The Magenta Line's Palam station and the Palam Railway Station both serve the area, and helpers from adjacent colonies commonly walk or take shared autos along the Dabri–Palam corridor.",
+    "housingNotes": "The mix of village homes and compact builder floors means few formal gate controls; entry is handled by the household, and helpers often serve several homes in the same lane.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-palam-1",
+        "q": "Which pincodes does Palam service cover?",
+        "a": "Palam spans pincodes 110045 and 110061, covering the village core and colonies such as Raj Nagar and Sadh Nagar. Mahavir Enclave and Dwarka adjoin Palam under their own pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "palam"]
+      },
+      {
+        "id": "faq-delhi-palam-2",
+        "q": "Do homes in Palam need society gate passes for helpers?",
+        "a": "Mostly no — Palam's housing is village homes and compact builder floors without society gates, so entry and timings are agreed directly with the household. Verification can still be completed for the family's records.",
+        "scope": "locality",
+        "tags": ["delhi", "palam"]
+      },
+      {
+        "id": "faq-delhi-palam-3",
+        "q": "Which areas near Palam are also served?",
+        "a": "Coverage extends to Mahavir Enclave, Dwarka, Delhi Cantt and Nangal Raya, with Mahipalpur on the airport's far side. The Magenta Line and the Dabri–Palam road keep these areas well linked.",
+        "scope": "locality",
+        "tags": ["delhi", "palam"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "nangal-raya": {
+    "neighbours": ["janakpuri", "hari-nagar", "delhi-cantt", "tilak-nagar", "mahavir-enclave", "palam", "uttam-nagar"],
+    "landmarks": ["Janakpuri District Centre (nearby)", "Janakpuri East Metro Station (Blue Line, nearby)", "Deen Dayal Upadhyay Hospital, Hari Nagar (nearby)", "Delhi Cantonment (adjacent)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Nangal Raya, pincode 110046, is a compact pocket where west Delhi meets the Delhi Cantonment, sitting on the busy corridor that carries traffic from Dhaula Kuan towards Janakpuri. The area mixes an old village settlement with DDA flats and builder floors, so the housing profile is genuinely mixed, and households are mainly settled families along with working professionals who value quick access to both west and south-west Delhi. Janakpuri District Centre and the Janakpuri East Metro Station on the Blue Line are minutes away, and Deen Dayal Upadhyay Hospital in neighbouring Hari Nagar is the closest large government hospital. Janakpuri and Hari Nagar adjoin Nangal Raya on the city side, Delhi Cantt spreads along its southern edge, and Tilak Nagar and Mahavir Enclave are a short ride away. Helpers typically reach Nangal Raya by bus along this corridor or on foot from adjacent colonies, and since most buildings are low-rise, entry is handled by the household or the building caretaker rather than a society gate office.",
+    "commuteNotes": "Buses along the Janakpuri–Dhaula Kuan corridor pass directly through Nangal Raya, and Janakpuri East and Janakpuri West stations on the Blue Line are a short ride away; many helpers walk in from adjacent west Delhi colonies.",
+    "housingNotes": "DDA flats, village houses and builder floors sit side by side; most buildings are low-rise without society gates, so entry is managed by the household or building caretaker.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-nangal-raya-1",
+        "q": "Which areas near Nangal Raya do you also serve?",
+        "a": "Nangal Raya sits between west Delhi and the cantonment, so nearby coverage includes Janakpuri, Hari Nagar, Tilak Nagar and Delhi Cantt, with Mahavir Enclave and Palam a short ride away.",
+        "scope": "locality",
+        "tags": ["delhi", "nangal-raya"]
+      },
+      {
+        "id": "faq-delhi-nangal-raya-2",
+        "q": "Which pincode does Nangal Raya service cover?",
+        "a": "Nangal Raya falls under pincode 110046. The surrounding areas of Janakpuri and Delhi Cantt have separate pincodes and their own locality coverage.",
+        "scope": "locality",
+        "tags": ["delhi", "nangal-raya"]
+      },
+      {
+        "id": "faq-delhi-nangal-raya-3",
+        "q": "Do helpers in Nangal Raya need gate passes?",
+        "a": "Most buildings here are low-rise DDA flats, village houses and builder floors without society gates, so entry is handled by the household or the building caretaker. Homes closer to the cantonment side may follow stricter entry checks.",
+        "scope": "locality",
+        "tags": ["delhi", "nangal-raya"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "arjun-garh": {
+    "neighbours": ["chhatarpur", "vasant-kunj", "mehrauli", "rajokari", "mahipalpur", "saket"],
+    "landmarks": ["Arjan Garh Metro Station (Yellow Line)", "Air Force Station Arjangarh", "Mehrauli–Gurugram (MG) Road", "Aya Nagar (adjacent)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Aya Nagar"],
+    "localIntro": "Arjun Garh (also written Arjangarh), pincode 110047, sits on Delhi's southern edge along the Mehrauli–Gurugram (MG) Road, familiar to commuters for the Arjan Garh Metro Station on the Yellow Line and for the Air Force Station Arjangarh that occupies a large tract beside it. Residential life here is village-style: independent houses in the settlement core, with farmhouse plots scattered along the ridge, so households tend to be long-settled families along with professionals commuting to Gurugram a couple of stations away. The adjacent urban village of Aya Nagar is the area's dense residential extension, and Chhatarpur and Mehrauli lie further up MG Road towards the city. Vasant Kunj and Mahipalpur are across the ridge to the north-west, with Rajokri beyond them on the highway side. Domestic helpers serving Arjun Garh homes mostly live in Aya Nagar or within the village itself, reaching households on foot or by shared autos plying MG Road, and working terms are agreed directly with families, since gated societies are uncommon in this belt.",
+    "commuteNotes": "Arjan Garh station on the Yellow Line and shared autos along MG Road are the main links; most helpers live in adjacent Aya Nagar or within the village and reach homes on foot.",
+    "housingNotes": "Independent houses and farmhouse plots dominate; there are no society gate systems, so households handle entry and verification directly.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-arjun-garh-1",
+        "q": "Which pincode does Arjun Garh service cover?",
+        "a": "Arjun Garh (Arjangarh) falls under pincode 110047, covering the village settlement along MG Road near the Arjan Garh Metro Station. Adjacent Aya Nagar and the Chhatarpur belt are close by.",
+        "scope": "locality",
+        "tags": ["delhi", "arjun-garh"]
+      },
+      {
+        "id": "faq-delhi-arjun-garh-2",
+        "q": "Where do domestic helpers in Arjun Garh usually come from?",
+        "a": "Most helpers live in adjacent Aya Nagar or within the village itself, reaching homes on foot or by shared autos along MG Road. This keeps commute times short for daily part-time work.",
+        "scope": "locality",
+        "tags": ["delhi", "arjun-garh"]
+      },
+      {
+        "id": "faq-delhi-arjun-garh-3",
+        "q": "Which areas near Arjun Garh are also served?",
+        "a": "Coverage nearby includes Chhatarpur, Vasant Kunj, Mehrauli and Rajokri, with Mahipalpur further along towards the airport. The Yellow Line and MG Road connect Arjun Garh to these areas.",
+        "scope": "locality",
+        "tags": ["delhi", "arjun-garh"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "chhawla": {
+    "neighbours": ["najafgarh", "dwarka", "mahavir-enclave", "palam", "uttam-nagar", "delhi-cantt"],
+    "landmarks": ["CRPF Camp, Chhawla", "Goyla Dairy", "Dwarka Sector 23 (adjacent)", "Najafgarh Bazaar (nearby)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Chhawla, pincode 110071, is a village-centred locality on the rural south-western fringe of Delhi, between Najafgarh town and the outer sectors of Dwarka. Homes are almost entirely independent houses — village homes on family plots, with newer low-rise construction along the Najafgarh–Chhawla road — and households are typically large, multi-generational families with work ties to farming, dairying and jobs in Dwarka and the airport belt. The CRPF camp at Chhawla is a prominent institutional landmark, and Goyla Dairy is a familiar name on the road towards Dwarka. There is no metro station in Chhawla itself; the Grey Line at Najafgarh and the Blue Line in Dwarka are the nearest connections, with buses and shared autos covering the gap. Najafgarh adjoins Chhawla to the north-west, Dwarka's sectors — including Sector 23 — begin to the north-east, and Palam and Mahavir Enclave lie beyond Dwarka. Domestic help here is usually arranged from within the village and nearby settlements, with flexible, household-managed timings rather than society gate procedures.",
+    "commuteNotes": "Chhawla has no metro station; helpers travel by bus or shared auto along the Najafgarh and Dwarka roads, with the Grey Line at Najafgarh and the Blue Line in Dwarka as the nearest metro connections.",
+    "housingNotes": "Housing is almost entirely independent village homes on family plots, so working arrangements are informal and managed directly by each household.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-chhawla-1",
+        "q": "Which pincode does Chhawla service cover?",
+        "a": "Chhawla falls under pincode 110071, covering the village and the stretch along the Najafgarh–Chhawla road. Najafgarh and Dwarka next door are served under their own pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "chhawla"]
+      },
+      {
+        "id": "faq-delhi-chhawla-2",
+        "q": "How do helpers reach homes in Chhawla?",
+        "a": "Chhawla has no metro station, so helpers travel by bus or shared auto along the Najafgarh and Dwarka roads, or live within the village itself. The Grey Line at Najafgarh and the Blue Line in Dwarka are the nearest metro links.",
+        "scope": "locality",
+        "tags": ["delhi", "chhawla"]
+      },
+      {
+        "id": "faq-delhi-chhawla-3",
+        "q": "Which areas near Chhawla are also served?",
+        "a": "Nearby coverage includes Najafgarh, Dwarka's outer sectors, Mahavir Enclave and Palam. Helpers commonly work across Chhawla and the adjoining Dwarka–Najafgarh belt.",
+        "scope": "locality",
+        "tags": ["delhi", "chhawla"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mahavir-enclave": {
+    "neighbours": ["palam", "dwarka", "uttam-nagar", "janakpuri", "nangal-raya", "delhi-cantt"],
+    "landmarks": ["Dashrath Puri Metro Station (Magenta Line)", "Dabri Mor–Janakpuri South Metro Station (Magenta Line)", "Palam Railway Station (nearby)", "Dwarka Sector 1 (adjacent)"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Mahavir Enclave, pincode 110077, is a densely built residential colony wedged between Dwarka Sector 1 and Palam, laid out in parts along the Dabri–Palam corridor. The dominant housing form is the builder floor — three- and four-storey walk-ups on compact plots — occupied mainly by families and working professionals who want quick access to Dwarka and the Magenta Line. The Dashrath Puri Metro Station on the Magenta Line sits at the colony's doorstep, with the Dabri Mor–Janakpuri South station one stop away, and Palam Railway Station is close by on the southern side. Palam adjoins the colony to the south, Dwarka's Sector 1 lies immediately west, and Uttam Nagar, Janakpuri and Nangal Raya are a short ride to the north and east, so helpers move easily through this cluster of colonies. Since buildings are low-rise without society gates, entry and timings are agreed directly with each household or building, and it is common for one helper to cover several homes in the same lane across the morning and evening.",
+    "commuteNotes": "Dashrath Puri station on the Magenta Line sits beside the colony, and helpers from adjacent pockets typically walk between homes; buses and shared autos along the Dabri–Palam road cover the rest.",
+    "housingNotes": "Three- and four-storey builder floors on compact plots dominate; there are no society gates, so entry and timings are settled directly with each household or building.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-mahavir-enclave-1",
+        "q": "Which pincode does Mahavir Enclave service cover?",
+        "a": "Mahavir Enclave falls under pincode 110077, covering its parts along the Dabri–Palam corridor. Palam and Dwarka adjoin the colony under separate pincodes.",
+        "scope": "locality",
+        "tags": ["delhi", "mahavir-enclave"]
+      },
+      {
+        "id": "faq-delhi-mahavir-enclave-2",
+        "q": "Do helpers in Mahavir Enclave need society gate passes?",
+        "a": "No — the colony is made up of builder floors without society gate systems, so entry and timings are settled directly with each household or building. Verification can still be completed for the family's records.",
+        "scope": "locality",
+        "tags": ["delhi", "mahavir-enclave"]
+      },
+      {
+        "id": "faq-delhi-mahavir-enclave-3",
+        "q": "Which areas near Mahavir Enclave are also served?",
+        "a": "Coverage extends to Palam, Dwarka, Uttam Nagar, Janakpuri and Nangal Raya. The Dashrath Puri metro station and local roads make movement between these areas easy for helpers.",
+        "scope": "locality",
+        "tags": ["delhi", "mahavir-enclave"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

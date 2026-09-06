@@ -1,0 +1,387 @@
+{
+  "ashok-vihar": {
+    "neighbours": ["shalimar-bagh", "shakurpur", "model-town", "azadpur", "pitampura", "shakur-basti", "punjabi-bagh"],
+    "landmarks": ["Deep Market", "Satyawati College", "Wazirpur Industrial Area", "Shalimar Bagh Metro Station (Pink Line)"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Wazirpur JJ Colony"],
+    "localIntro": "Ashok Vihar is a planned DDA-era colony in north-west Delhi under pincode 110052, laid out in phases of plotted houses that have steadily been rebuilt as builder floors. Households here are largely settled families, many running businesses in the adjoining Wazirpur Industrial Area or commuting to offices around Netaji Subhash Place. Daily life centres on Deep Market and the neighbourhood parks, while Satyawati College in Phase III brings a regular flow of students and staff into the area. The Pink Line's Shalimar Bagh station sits close to the colony's northern edge, keeping connectivity simple. Shalimar Bagh lies immediately north, Shakurpur to the west and Model Town across on the GT Karnal Road side, so domestic help arrangements often overlap across these neighbourhoods. Homes are typically two- to four-storey builder floors with family-managed entry, which suits part-time cooks and cleaners working several houses within a single phase.",
+    "commuteNotes": "Helpers reach Ashok Vihar via the Pink Line's Shalimar Bagh station on the colony's edge or the Red Line stations at Kanhaiya Nagar and Keshav Puram to the south-west, with DTC buses on the surrounding roads. Many also walk in from the adjoining Wazirpur side.",
+    "housingNotes": "The colony is dominated by plotted houses rebuilt as two- to four-storey builder floors, with some DDA blocks; entry is managed by the household rather than a society gate, which suits part-time helpers covering several homes in one phase.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-ashok-vihar-1",
+        "q": "Which areas near Ashok Vihar do you also serve?",
+        "a": "Coverage around Ashok Vihar extends to adjoining colonies such as Shalimar Bagh, Shakurpur, Model Town and Pitampura. Helpers often work across these neighbouring areas in a single day, so timings can usually be matched.",
+        "scope": "locality",
+        "tags": ["delhi", "ashok-vihar"]
+      },
+      {
+        "id": "faq-delhi-ashok-vihar-2",
+        "q": "Which pincode does the Ashok Vihar service cover?",
+        "a": "Ashok Vihar falls under pincode 110052, covering its residential phases. Adjoining areas such as Shalimar Bagh (110088) and Shakurpur (110035) are handled as separate localities.",
+        "scope": "locality",
+        "tags": ["delhi", "ashok-vihar"]
+      },
+      {
+        "id": "faq-delhi-ashok-vihar-3",
+        "q": "Do helpers in Ashok Vihar need society gate passes?",
+        "a": "Most of Ashok Vihar is builder-floor and plotted housing where the household itself manages entry, so formal gate passes are rarely needed. In blocks with active RWA arrangements, a simple verification or register entry may be asked for.",
+        "scope": "locality",
+        "tags": ["delhi", "ashok-vihar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "pitampura": {
+    "neighbours": ["rohini", "shalimar-bagh", "shakur-basti", "shakurpur", "ashok-vihar", "paschim-vihar"],
+    "landmarks": ["Pitampura TV Tower", "Dilli Haat Pitampura", "Bhagwan Mahavir Hospital", "Netaji Subhash Place Metro Station", "Kohat Enclave Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Shakurpur village"],
+    "localIntro": "Pitampura is one of north-west Delhi's largest planned residential areas, under pincode 110034, known across the city for the Pitampura TV Tower that rises over its skyline. Housing is genuinely mixed: DDA flats in named blocks, cooperative group housing societies and older kothis sit side by side, so households range from young working professionals to three-generation families and retired residents. The Red Line runs along its spine with stations at Pitampura, Kohat Enclave and Netaji Subhash Place, while Dilli Haat Pitampura and Bhagwan Mahavir Hospital anchor the civic map. Rohini adjoins to the north-west, Shalimar Bagh to the north-east and Shakur Basti to the south, with Rani Bagh's markets close by. Because many blocks are society-managed with gates and visitor registers, families here usually arrange helper entry through the society office, while the kothi lanes work on more informal, directly agreed timings.",
+    "commuteNotes": "The Red Line's Pitampura, Kohat Enclave and Netaji Subhash Place stations serve the area, so helpers commonly arrive by metro or DTC bus; those living in adjoining Shakurpur typically walk in.",
+    "housingNotes": "DDA flats, cooperative group housing societies and older kothis share the locality. Society blocks usually require gate registration or an entry pass for regular helpers, while kothi lanes are managed by the households themselves.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-pitampura-1",
+        "q": "Do helpers in Pitampura need society gate passes?",
+        "a": "Many Pitampura blocks are DDA pockets or cooperative group housing societies with gates and visitor registers, so societies often ask for an entry pass or register entry for regular helpers. In the kothi lanes, entry is managed by the household directly.",
+        "scope": "locality",
+        "tags": ["delhi", "pitampura"]
+      },
+      {
+        "id": "faq-delhi-pitampura-2",
+        "q": "Which areas near Pitampura do you also serve?",
+        "a": "Coverage extends to neighbouring Rohini, Shalimar Bagh, Shakur Basti, Shakurpur and Ashok Vihar. Because these areas adjoin one another, helpers frequently take up homes across two or three of them.",
+        "scope": "locality",
+        "tags": ["delhi", "pitampura"]
+      },
+      {
+        "id": "faq-delhi-pitampura-3",
+        "q": "How do helpers usually reach homes in Pitampura?",
+        "a": "The Red Line's Pitampura, Kohat Enclave and Netaji Subhash Place stations serve pincode 110034, and many helpers arrive by metro or bus. Those from nearby Shakurpur generally walk to the blocks they work in.",
+        "scope": "locality",
+        "tags": ["delhi", "pitampura"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "shakurpur": {
+    "neighbours": ["ashok-vihar", "pitampura", "shakur-basti", "punjabi-bagh", "shalimar-bagh", "paschim-vihar"],
+    "landmarks": ["Shakurpur Metro Station (Pink Line)", "Britannia Chowk", "Netaji Subhash Place District Centre", "Pitampura TV Tower (nearby)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Shakurpur, under pincode 110035, is a dense pocket between the Netaji Subhash Place commercial district and the Ring Road side, combining an old urban village with tightly packed independent houses and rented floors. Many residents work in the surrounding markets and offices, and the area is itself home to many domestic workers who serve households in neighbouring Ashok Vihar and Pitampura. The Pink Line's Shakurpur station sits on its edge, Britannia Chowk is one of the familiar junctions minutes away, and the Pitampura TV Tower is visible to the north. Ashok Vihar lies to the east, Pitampura to the north and Punjabi Bagh across the railway line to the south. Homes here are mostly self-managed independent buildings of two or three floors, so helpers typically work on directly agreed timings without society gate formalities, and households often find cooks and cleaners living within walking distance of their lane.",
+    "commuteNotes": "The Pink Line's Shakurpur station serves the locality directly, and DTC buses run through Britannia Chowk and the Netaji Subhash Place side; many helpers simply walk between Shakurpur and adjoining Ashok Vihar or Pitampura.",
+    "housingNotes": "Housing is largely dense, self-built independent houses and rented floors from the urban-village fabric, without society gates, so entry and timings are agreed directly with each household.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-shakurpur-1",
+        "q": "Which pincode does the Shakurpur service cover?",
+        "a": "Shakurpur falls under pincode 110035. Neighbouring Ashok Vihar (110052) and Pitampura (110034) are covered as separate locality pages.",
+        "scope": "locality",
+        "tags": ["delhi", "shakurpur"]
+      },
+      {
+        "id": "faq-delhi-shakurpur-2",
+        "q": "Which areas near Shakurpur do you also serve?",
+        "a": "Coverage around Shakurpur includes Ashok Vihar, Pitampura, Shakur Basti and Punjabi Bagh. These areas sit close together, so helpers often serve homes across more than one of them in a day.",
+        "scope": "locality",
+        "tags": ["delhi", "shakurpur"]
+      },
+      {
+        "id": "faq-delhi-shakurpur-3",
+        "q": "Do helpers in Shakurpur need gate passes?",
+        "a": "No formal passes are usually needed, since Shakurpur is made up of independent houses and rented floors rather than gated societies. Entry and timings are settled directly with the household.",
+        "scope": "locality",
+        "tags": ["delhi", "shakurpur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "alipur": {
+    "neighbours": ["narela", "samaypur-badli", "bawana", "burari", "rohini", "azadpur"],
+    "landmarks": ["Swami Shraddhanand College (Delhi University)", "GT Karnal Road (NH-44)", "Singhu Border (nearby)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Alipur sits on the GT Karnal Road (NH-44) corridor in Delhi's northern rural belt, under pincode 110036, closer in character to a self-contained township than to the city's apartment districts. Housing is dominated by independent houses on family plots, along with farmhouses and low-rise rented floors, and households are mostly long-settled families whose work revolves around local trade, transport and farming on the belt's edges. Swami Shraddhanand College, a Delhi University campus, is the area's best-known institution, and the Singhu Border crossing into Haryana lies a short drive north on the highway. Narela is the nearest large township to the north-west, with Samaypur Badli down the highway to the south and Bawana across the rural belt to the west. Domestic help here usually comes from within Alipur and its surrounding villages, with work patterns built around independent homes and directly agreed timings rather than society gates.",
+    "commuteNotes": "Helpers move along the GT Karnal Road (NH-44) corridor by DTC bus and shared auto; the nearest metro is the Yellow Line terminus at Samaypur Badli, a bus ride to the south.",
+    "housingNotes": "The stock is overwhelmingly independent houses and low-rise floors on private plots, so there are no society gate formalities and households set flexible timings directly with helpers.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-alipur-1",
+        "q": "Which pincode does the Alipur service cover?",
+        "a": "Alipur falls under pincode 110036 on the GT Karnal Road corridor. Nearby Narela (110040) and Samaypur Badli (110042) are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["delhi", "alipur"]
+      },
+      {
+        "id": "faq-delhi-alipur-2",
+        "q": "Which areas near Alipur do you also serve?",
+        "a": "Coverage in the northern belt includes Narela, Samaypur Badli, Bawana and Burari. Helpers in this belt usually stay local, so matches are made from Alipur and the villages immediately around it.",
+        "scope": "locality",
+        "tags": ["delhi", "alipur"]
+      },
+      {
+        "id": "faq-delhi-alipur-3",
+        "q": "Do helpers in Alipur need society gate passes?",
+        "a": "Rarely. Alipur is mostly independent houses on family plots rather than gated societies, so entry, duties and timings are agreed directly with the household.",
+        "scope": "locality",
+        "tags": ["delhi", "alipur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "bawana": {
+    "neighbours": ["narela", "rohini", "kanjhawala", "samaypur-badli", "alipur", "nangloi"],
+    "landmarks": ["Bawana Industrial Area (DSIIDC)", "Maharishi Valmiki Hospital, Pooth Khurd", "Delhi Technological University (Bawana Road)", "Bawana JJ Colony"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": ["Bawana JJ Colony"],
+    "localIntro": "Bawana, under pincode 110039, combines an old village core, the large DSIIDC Bawana Industrial Area and resettlement blocks including Bawana JJ Colony, making it one of outer north-west Delhi's main industrial-residential belts. Most homes are independent houses—village plots, worker housing and low-rise rented rooms—occupied largely by families connected to the factories and local trades. Maharishi Valmiki Hospital at Pooth Khurd serves the belt, and Delhi Technological University lies down Bawana Road towards the city. Narela adjoins to the north-east, Rohini's outer sectors sit to the south-east and the Kanjhawala village belt spreads to the south. Domestic help demand here is steady but local in nature: helpers generally live within Bawana itself, particularly in the JJ Colony and village lanes, and walk or cycle to nearby homes, so full-day and flexible part-time arrangements are both common and easy to schedule.",
+    "commuteNotes": "Most helpers live within Bawana and reach homes on foot or by cycle and shared auto; DTC buses run along Bawana Road and the Narela side, and the nearest metro is the Red Line terminus at Rithala in Rohini.",
+    "housingNotes": "Housing is dominated by independent village houses, resettlement rows and worker accommodation rather than gated towers, so there are no entry-pass formalities and timings are set directly with households.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-bawana-1",
+        "q": "Which pincode does the Bawana service cover?",
+        "a": "Bawana falls under pincode 110039, taking in the village core, the DSIIDC industrial area side and the JJ Colony blocks. Neighbouring Narela (110040) is a separate locality.",
+        "scope": "locality",
+        "tags": ["delhi", "bawana"]
+      },
+      {
+        "id": "faq-delhi-bawana-2",
+        "q": "Which areas near Bawana do you also serve?",
+        "a": "Coverage extends to Narela, the outer sectors of Rohini, the Kanjhawala belt and Samaypur Badli. Within this belt, helpers usually prefer homes close to where they live.",
+        "scope": "locality",
+        "tags": ["delhi", "bawana"]
+      },
+      {
+        "id": "faq-delhi-bawana-3",
+        "q": "Where do helpers working in Bawana usually come from?",
+        "a": "Most helpers live within Bawana itself, especially in Bawana JJ Colony and the village lanes, and walk or cycle to work. This keeps timings flexible for both part-time and full-day arrangements.",
+        "scope": "locality",
+        "tags": ["delhi", "bawana"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "narela": {
+    "neighbours": ["alipur", "bawana", "samaypur-badli", "rohini", "kanjhawala", "burari"],
+    "landmarks": ["Narela Industrial Area", "Narela Anaj Mandi", "National Institute of Technology (NIT) Delhi", "Narela bus terminal"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Metro Vihar, Holambi Kalan"],
+    "localIntro": "Narela, under pincode 110040, is a full-fledged sub-city in Delhi's far north-west, where DDA housing pockets stand alongside an old town core, the Narela Anaj Mandi grain market and the Narela Industrial Area. Households are mainly families—shopkeepers, mandi traders, industrial staff and government employees—living in a mix of DDA flats and independent town houses. The National Institute of Technology (NIT) Delhi campus is located here, and the Narela bus terminal ties the sub-city to the rest of the capital. Alipur lies to the east on the NH-44 side, Bawana to the south-west and Samaypur Badli further south towards the metro. Because much of the housing is DDA blocks and self-managed houses without formal society gating, domestic help arrangements are usually made directly between households and helpers, many of whom come from nearby settlements such as Metro Vihar at Holambi Kalan.",
+    "commuteNotes": "Narela runs on DTC buses via the Narela bus terminal and the Bawana and NH-44 roads; metro users connect at the Yellow Line terminus in Samaypur Badli, a bus ride to the south.",
+    "housingNotes": "DDA flat pockets and independent town houses dominate rather than gated towers, so helper entry is informal and timings are agreed directly with each household.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-narela-1",
+        "q": "Which pincode does the Narela service cover?",
+        "a": "Narela falls under pincode 110040, covering the old town, the DDA pockets and the industrial area side. Alipur (110036) and Bawana (110039) next door are separate localities.",
+        "scope": "locality",
+        "tags": ["delhi", "narela"]
+      },
+      {
+        "id": "faq-delhi-narela-2",
+        "q": "Which areas near Narela do you also serve?",
+        "a": "Coverage extends to Alipur, Bawana, Samaypur Badli and the outer sectors of Rohini. Helpers in this belt generally take homes close to where they live, so local matches are the norm.",
+        "scope": "locality",
+        "tags": ["delhi", "narela"]
+      },
+      {
+        "id": "faq-delhi-narela-3",
+        "q": "Do helpers in Narela need society gate passes?",
+        "a": "Usually not. Most Narela housing is DDA blocks and independent houses without gated entry, so households manage access themselves. Where an RWA is active, a simple register entry may be requested.",
+        "scope": "locality",
+        "tags": ["delhi", "narela"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "samaypur-badli": {
+    "neighbours": ["rohini", "shalimar-bagh", "alipur", "azadpur", "pitampura", "narela", "burari"],
+    "landmarks": ["Samaypur Badli Metro Station (Yellow Line terminus)", "Delhi Technological University (DTU)", "Badli Industrial Area", "Badli railway station"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "students"],
+    "helperSourceAreas": ["Badli village", "Libaspur"],
+    "localIntro": "Samaypur Badli, under pincode 110042, grew around the twin urban villages of Samaypur and Badli on the GT Karnal Road corridor and is best known today as the terminus of the Yellow Line metro. The area mixes village houses, worker housing tied to the Badli Industrial Area and newer rented floors, with Delhi Technological University's Shahbad Daulatpur campus close by bringing students and paying-guest demand into the belt. Households are mostly working families, many linked to the industrial units and transport trades along the highway. Rohini's north-eastern sectors adjoin to the west, Shalimar Bagh lies to the south beyond Haiderpur, and Alipur is up the highway to the north. Housing is dominated by independent, self-managed buildings rather than gated societies, so helpers—often from Badli village and Libaspur—work on direct arrangements with households and reach homes on foot or by shared auto from the metro and bus stops.",
+    "commuteNotes": "The Yellow Line terminates at Samaypur Badli station, and Badli railway station plus DTC buses on GT Karnal Road add further options; most helpers cover the last stretch on foot or by shared auto.",
+    "housingNotes": "Independent village houses, worker housing and rented floors make up most of the stock, so there are no society gate formalities and duties are agreed directly with households; PG accommodation near DTU adds student-side demand for cooking help.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-samaypur-badli-1",
+        "q": "Is there a metro station at Samaypur Badli?",
+        "a": "Yes. Samaypur Badli is the terminus of the Yellow Line, and many helpers and households use it daily. Badli railway station and GT Karnal Road buses also serve pincode 110042.",
+        "scope": "locality",
+        "tags": ["delhi", "samaypur-badli"]
+      },
+      {
+        "id": "faq-delhi-samaypur-badli-2",
+        "q": "Which areas near Samaypur Badli do you also serve?",
+        "a": "Coverage extends to the adjoining Rohini sectors, Shalimar Bagh, Alipur and the Azadpur side. Helpers from Badli village and Libaspur commonly take homes across this stretch.",
+        "scope": "locality",
+        "tags": ["delhi", "samaypur-badli"]
+      },
+      {
+        "id": "faq-delhi-samaypur-badli-3",
+        "q": "Do helpers in Samaypur Badli need society gate passes?",
+        "a": "Generally not, because the area is made up of village houses and independent buildings rather than gated societies. Entry and timings are settled directly with each household or PG operator.",
+        "scope": "locality",
+        "tags": ["delhi", "samaypur-badli"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "shakur-basti": {
+    "neighbours": ["pitampura", "shakurpur", "paschim-vihar", "punjabi-bagh", "ashok-vihar", "rohini"],
+    "landmarks": ["Shakur Basti railway station", "Rani Bagh Market", "Pitampura TV Tower (nearby)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Shakur Basti, under pincode 110056, is best known for its railway station and depot, around which railway quarters, older plotted houses and rebuilt floors have grown into a quiet residential pocket of north-west Delhi. Many households are long-settled families, including retired railway staff, alongside working members commuting towards Netaji Subhash Place and central Delhi. Rani Bagh's busy market runs along its edge, and the Pitampura TV Tower stands just to the north, giving the area its most recognisable backdrop. Pitampura adjoins to the north, Shakurpur to the south-east and Paschim Vihar to the south-west, so helpers often serve homes across these boundaries in a single working day. With a mix of railway colony quarters and independent houses rather than gated towers, entry formalities are minimal: timings, duties and access are agreed directly with households, and elder-care support is a recurring need in the older blocks.",
+    "commuteNotes": "Shakur Basti has its own railway station, the Pink Line's Shakurpur station is close by, and Red Line stations along the Pitampura stretch plus DTC buses via Rani Bagh cover the rest; many helpers walk in from adjoining pockets.",
+    "housingNotes": "Railway quarters, plotted houses and rebuilt floors make up the stock, with no large gated societies, so helper entry is informal and arranged household by household.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-shakur-basti-1",
+        "q": "Which pincode does the Shakur Basti service cover?",
+        "a": "Shakur Basti falls under pincode 110056, including the railway colony pockets and the lanes around Rani Bagh Market. Pitampura (110034) and Shakurpur (110035) are separate localities.",
+        "scope": "locality",
+        "tags": ["delhi", "shakur-basti"]
+      },
+      {
+        "id": "faq-delhi-shakur-basti-2",
+        "q": "Which areas near Shakur Basti do you also serve?",
+        "a": "Coverage extends to Pitampura, Shakurpur, Paschim Vihar and Punjabi Bagh. These pockets sit close together, so a helper working in Shakur Basti often takes additional homes next door.",
+        "scope": "locality",
+        "tags": ["delhi", "shakur-basti"]
+      },
+      {
+        "id": "faq-delhi-shakur-basti-3",
+        "q": "Do helpers in Shakur Basti need society gate passes?",
+        "a": "Rarely. The area is a mix of railway quarters and independent houses rather than gated towers, so households manage entry themselves and set timings directly with the helper.",
+        "scope": "locality",
+        "tags": ["delhi", "shakur-basti"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "kanjhawala": {
+    "neighbours": ["rohini", "bawana", "nangloi", "narela", "paschim-vihar", "pitampura"],
+    "landmarks": ["Kanjhawala SDM office (sub-division headquarters)", "Kanjhawala Road", "Maharishi Valmiki Hospital, Pooth Khurd (nearby)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families"],
+    "helperSourceAreas": [],
+    "localIntro": "Kanjhawala, under pincode 110081, is the administrative heart of Delhi's north-western rural belt, home to the sub-divisional magistrate's office that gives the surrounding villages their tehsil identity. The area remains a village landscape of independent houses on family land, where farming, dairying and local trades shape daily routines and most households are joint families settled over generations. Kanjhawala Road links the belt eastwards to Rohini's sectors, and Maharishi Valmiki Hospital at Pooth Khurd serves the wider area's healthcare needs. Rohini lies to the east, the Bawana industrial belt to the north and Nangloi to the south, and most services—including domestic help—flow along these connecting roads. Households here typically look for cooks and cleaners from Kanjhawala and its neighbouring villages on flexible, directly agreed timings, since homes are self-managed without society gates, entry passes or visitor registers of any kind.",
+    "commuteNotes": "DTC buses and shared autos along Kanjhawala Road connect the village belt to Rohini and Nangloi; the nearest metro is the Red Line terminus at Rithala in Rohini, a bus ride away.",
+    "housingNotes": "Housing is almost entirely independent village houses on family plots, with no gated societies, so helpers work on flexible timings agreed directly with each household.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-kanjhawala-1",
+        "q": "Which pincode does the Kanjhawala service cover?",
+        "a": "Kanjhawala falls under pincode 110081 in Delhi's north-western rural belt. Adjoining urban areas such as Rohini (110085, 110086, 110089) are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["delhi", "kanjhawala"]
+      },
+      {
+        "id": "faq-delhi-kanjhawala-2",
+        "q": "Which areas near Kanjhawala do you also serve?",
+        "a": "Coverage extends to Rohini, the Bawana belt and Nangloi along the connecting roads. Helpers in this belt are usually from nearby villages and prefer homes within a short commute.",
+        "scope": "locality",
+        "tags": ["delhi", "kanjhawala"]
+      },
+      {
+        "id": "faq-delhi-kanjhawala-3",
+        "q": "Do helpers in Kanjhawala need gate passes?",
+        "a": "No. Kanjhawala is a village belt of independent houses without society gates, so entry, duties and timings are agreed directly between the household and the helper.",
+        "scope": "locality",
+        "tags": ["delhi", "kanjhawala"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "rohini": {
+    "neighbours": ["pitampura", "samaypur-badli", "bawana", "kanjhawala", "shakur-basti", "shalimar-bagh", "paschim-vihar"],
+    "landmarks": ["Adventure Island amusement park", "Swarn Jayanti Park (Japanese Park)", "Rithala Metro Station", "Dr. Baba Saheb Ambedkar Hospital", "Metro Walk Mall"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Mangolpuri", "Budh Vihar"],
+    "localIntro": "Rohini spreads across pincodes 110085, 110086 and 110089 as a vast DDA-planned sub-city of numbered sectors, where DDA flats, cooperative group housing societies and plotted houses sit in a carefully laid grid. Households range from young working professionals to large families and elderly parents living near married children, which keeps demand for cooks, cleaners and elder-care support steady through the year. The Red Line serves the older sectors through Rithala, Rohini West and Rohini East stations, while Adventure Island, Metro Walk and the Japanese Park (Swarn Jayanti Park) in Sector 10 are the sub-city's familiar weekend landmarks; Dr. Baba Saheb Ambedkar Hospital in Sector 6 anchors public healthcare. Pitampura adjoins to the south-east, Samaypur Badli to the north-east and the Bawana belt to the north-west. Many helpers live in adjacent Mangolpuri and Budh Vihar and walk or take shared autos into the sectors; society blocks usually ask for gate registration, while DDA pockets work more informally.",
+    "commuteNotes": "The Red Line's Rithala, Rohini West and Rohini East stations serve the older sectors, DTC buses cover the outer ones, and many helpers walk or take shared autos in from adjoining Mangolpuri and Budh Vihar.",
+    "housingNotes": "DDA flats, group housing societies and plotted houses all coexist across the sectors: society towers typically need gate registration or helper passes, while DDA pockets and plots manage entry informally.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-rohini-1",
+        "q": "Which pincodes does the Rohini service cover?",
+        "a": "Rohini's sectors fall under pincodes 110085, 110086 and 110089. Adjoining areas such as Pitampura (110034) and Samaypur Badli (110042) are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["delhi", "rohini"]
+      },
+      {
+        "id": "faq-delhi-rohini-2",
+        "q": "Do helpers in Rohini need society gate passes?",
+        "a": "In the cooperative group housing societies, yes—gates and visitor registers are standard, and regular helpers are usually issued an entry pass. DDA pockets and plotted lanes handle entry informally through the household.",
+        "scope": "locality",
+        "tags": ["delhi", "rohini"]
+      },
+      {
+        "id": "faq-delhi-rohini-3",
+        "q": "Which areas near Rohini do you also serve?",
+        "a": "Coverage extends to Pitampura, Samaypur Badli, Shalimar Bagh and the Bawana belt. Many helpers live in adjacent Mangolpuri and Budh Vihar, so sectors bordering those areas are matched fastest.",
+        "scope": "locality",
+        "tags": ["delhi", "rohini"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "shalimar-bagh": {
+    "neighbours": ["ashok-vihar", "pitampura", "azadpur", "model-town", "samaypur-badli", "rohini", "shakurpur"],
+    "landmarks": ["Fortis Hospital Shalimar Bagh", "Mughal-era Shalimar Bagh garden (Sheesh Mahal)", "Shalimar Bagh Metro Station (Pink Line)", "Haiderpur Badli Mor Metro Station (Yellow Line)", "Azadpur Mandi (nearby)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Haiderpur village", "Jahangirpuri"],
+    "localIntro": "Shalimar Bagh, under pincode 110088, takes its name from the Mughal-era garden in its village quarter, where the restored Sheesh Mahal recalls the site of Aurangzeb's coronation. The modern colony is a mix of plotted kothis in lettered blocks, rebuilt builder floors and DDA flats, home to established families, elderly residents and professionals working across north Delhi. Fortis Hospital Shalimar Bagh is the area's best-known institution, the Pink Line stops at Shalimar Bagh station, and the Yellow Line runs close by at Haiderpur Badli Mor and Azadpur, beside the sprawling Azadpur wholesale mandi. Ashok Vihar adjoins to the south, Pitampura to the west and Model Town across the Azadpur side, so households and helpers move easily between these colonies. Helpers commonly come from Haiderpur village and Jahangirpuri nearby; block associations manage lanes rather than gated towers, so entry is usually straightforward once timings are fixed with the household.",
+    "commuteNotes": "The Pink Line's Shalimar Bagh station serves the colony directly, with the Yellow Line close by at Haiderpur Badli Mor and Azadpur; helpers from Haiderpur and Jahangirpuri often walk or take a short shared-auto ride in.",
+    "housingNotes": "Plotted kothis, builder floors and DDA flats share the colony, managed by block RWAs rather than gated towers, so helper entry usually needs no pass beyond an occasional register entry in the DDA blocks.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-shalimar-bagh-1",
+        "q": "Which pincode does the Shalimar Bagh service cover?",
+        "a": "Shalimar Bagh falls under pincode 110088, covering its lettered residential blocks and the village quarter near the Mughal garden. Ashok Vihar (110052) and Pitampura (110034) are separate localities.",
+        "scope": "locality",
+        "tags": ["delhi", "shalimar-bagh"]
+      },
+      {
+        "id": "faq-delhi-shalimar-bagh-2",
+        "q": "Which areas near Shalimar Bagh do you also serve?",
+        "a": "Coverage extends to Ashok Vihar, Pitampura, the Azadpur side, Model Town and the adjoining Rohini sectors. Helpers frequently work across two or three of these colonies in a day.",
+        "scope": "locality",
+        "tags": ["delhi", "shalimar-bagh"]
+      },
+      {
+        "id": "faq-delhi-shalimar-bagh-3",
+        "q": "Do helpers in Shalimar Bagh need society gate passes?",
+        "a": "Mostly not: the colony is plotted kothis and builder floors where households manage entry, with block RWAs overseeing the lanes. In the DDA flat pockets, a simple register entry may be asked for.",
+        "scope": "locality",
+        "tags": ["delhi", "shalimar-bagh"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

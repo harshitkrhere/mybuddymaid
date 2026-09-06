@@ -1,0 +1,2217 @@
+{
+  "pune-camp": {
+    "neighbours": [
+      "wanowrie",
+      "sadashiv-peth",
+      "shivajinagar",
+      "deccan",
+      "viman-nagar",
+      "nibm",
+      "kondhwa",
+      "hadapsar",
+      "kharadi",
+      "dhanori",
+      "deccan-gymkhana",
+      "lohegaon",
+      "bibwewadi",
+      "katraj"
+    ],
+    "landmarks": [
+      "MG Road (Mahatma Gandhi Road)",
+      "Pune Railway Station",
+      "Ruby Hall Clinic",
+      "Jehangir Hospital",
+      "Empress Garden",
+      "Pune Race Course"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Pune Camp, the old Pune Cantonment area under pincode 411001, is the city's colonial-era commercial and civic heart, laid out around MG Road, East Street and Moledina Road. Housing here is a genuine mix: heritage bungalows and Parsi and Irani-owned buildings on the leafy inner streets, walk-up apartment blocks from the 1970s and 1980s, and a handful of newer towers towards Bund Garden and Koregaon Park. Residents are long-settled business families, senior citizens who have lived in Camp for decades, and working professionals who value being close to Pune Railway Station, Ruby Hall Clinic and Jehangir Hospital on Sassoon Road. Empress Garden and the Pune Race Course give the southern edge its open feel, and Wanowrie lies just beyond them. Shivajinagar and Sadashiv Peth sit across the river and the Peths to the west, while Viman Nagar is a short drive up Nagar Road. Households in Camp typically look for part-time cleaning and cooking help on fixed morning slots, along with elder-care support in the larger older homes.",
+    "commuteNotes": "Pune Railway Station and Ruby Hall Clinic stations on the Aqua Line of Pune Metro sit on the northern edge of Camp, and PMPML buses from Swargate and Pune Station stop along MG Road and East Street. Many helpers also walk in from the adjoining Peth areas and Ghorpadi.",
+    "housingNotes": "Older bungalows, walk-up apartment blocks and a few newer towers sit side by side, so entry rules vary street by street: independent homes manage timings directly, while apartment buildings keep a watchman register or society pass for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-pune-camp-1",
+        "q": "Which areas near Pune Camp do you also serve?",
+        "a": "Wanowrie to the south beyond Empress Garden, and Shivajinagar, Deccan and Sadashiv Peth across the Peths to the west, are all covered and draw on a nearby helper pool. Viman Nagar, NIBM and Kondhwa are handled as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pune-camp"
+        ]
+      },
+      {
+        "id": "faq-pune-pune-camp-2",
+        "q": "Which pincode does the Pune Camp service area cover?",
+        "a": "Pune Camp and the Cantonment area fall under pincode 411001, which also covers the Pune Railway Station and MG Road stretch. Neighbouring Wanowrie is 411040 and Shivajinagar is 411005.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pune-camp"
+        ]
+      },
+      {
+        "id": "faq-pune-pune-camp-3",
+        "q": "Do helpers in Pune Camp need building or society passes?",
+        "a": "It depends on the building. Heritage bungalows and independent homes in Camp manage entry themselves, while the walk-up apartment blocks and newer towers near Bund Garden usually ask for the helper to be entered in the watchman's register or issued a society pass.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pune-camp"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.52162,
+    "lng": 73.87175
+  },
+  "deccan": {
+    "neighbours": [
+      "deccan-gymkhana",
+      "shivajinagar",
+      "sadashiv-peth",
+      "pune-university-area",
+      "kothrud",
+      "karve-nagar",
+      "anandnagar",
+      "pune-camp",
+      "viman-nagar",
+      "dhanori",
+      "kharadi",
+      "lohegaon"
+    ],
+    "landmarks": [
+      "Fergusson College Road (FC Road)",
+      "Jangli Maharaj Road (JM Road)",
+      "Goodluck Chowk",
+      "Fergusson College",
+      "Pataleshwar Cave Temple",
+      "Chhatrapati Sambhaji Udyan"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "students",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Deccan, under pincode 411004, is the stretch of central Pune built around Fergusson College Road and Jangli Maharaj Road, with Goodluck Chowk at its busiest corner. It is one of the city's oldest educated middle-class neighbourhoods: Fergusson College, the Pataleshwar Cave Temple on JM Road and Chhatrapati Sambhaji Udyan on the river side all sit within a few minutes' walk of each other. Housing is a mix of older bungalows and wadas on the inner lanes, mid-rise cooperative apartment buildings from the 1970s onwards, and a large number of hostels and paying-guest rooms that serve the college crowd along FC Road. Residents range from long-settled Marathi families and senior citizens to students and young professionals renting near the colleges. Deccan Gymkhana lies immediately south across Karve Road, Shivajinagar to the north-east across JM Road, and Sadashiv Peth to the east past the Peth lanes. Households here usually need part-time cleaning and cooking help on fixed morning and evening slots, and many older residents look for daytime elder-care support.",
+    "commuteNotes": "Deccan Gymkhana and Chhatrapati Sambhaji Udyan stations on the Aqua Line of Pune Metro serve the area directly, and Deccan Bus Stand on JM Road is a major PMPML hub. Many helpers also walk in from the adjoining Peth areas.",
+    "housingNotes": "Older bungalows and wadas sit alongside mid-rise cooperative apartment buildings, so most homes deal with helpers directly or through a building watchman rather than a formal gated-society pass system.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-deccan-1",
+        "q": "Which areas near Deccan do you also serve?",
+        "a": "Deccan Gymkhana across Karve Road, Shivajinagar across JM Road and Sadashiv Peth to the east are all adjacent and share the same nearby helper pool. Kothrud, Karve Nagar and the Pune University area further out are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "deccan"
+        ]
+      },
+      {
+        "id": "faq-pune-deccan-2",
+        "q": "Which pincode does the Deccan service area cover?",
+        "a": "Deccan falls under pincode 411004, covering the FC Road and JM Road belt around Goodluck Chowk. The adjoining Deccan Gymkhana side is listed under 411030 and Shivajinagar under 411005.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "deccan"
+        ]
+      },
+      {
+        "id": "faq-pune-deccan-3",
+        "q": "Can helpers reach Deccan by metro?",
+        "a": "Yes. Deccan Gymkhana and Chhatrapati Sambhaji Udyan stations on the Aqua Line of Pune Metro are both within the area, and Deccan Bus Stand on JM Road connects to most parts of the city by PMPML bus.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "deccan"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.54889,
+    "lng": 73.87486
+  },
+  "deccan-gymkhana": {
+    "neighbours": [
+      "deccan",
+      "sadashiv-peth",
+      "shivajinagar",
+      "kothrud",
+      "karve-nagar",
+      "anandnagar",
+      "pune-university-area",
+      "warje",
+      "pune-camp",
+      "bibwewadi",
+      "pashan",
+      "bavdhan",
+      "wanowrie",
+      "kondhwa",
+      "katraj"
+    ],
+    "landmarks": [
+      "Deccan Gymkhana Club",
+      "Bhandarkar Road",
+      "Prabhat Road",
+      "Law College Road",
+      "Kamala Nehru Park",
+      "ILS Law College"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "elderly",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Deccan Gymkhana, under pincode 411030, is the quiet, tree-lined residential quarter that grew up around the Deccan Gymkhana Club between Karve Road and Law College Road. Bhandarkar Road and Prabhat Road are its best-known streets, lined with older bungalows, low-rise apartment buildings and a growing number of redeveloped mid-rise blocks that have replaced the original plots. Residents are largely established Marathi families, retired professionals and academics, along with working professionals who want to stay close to the city centre. Kamala Nehru Park is the neighbourhood's everyday green space, ILS Law College sits on Law College Road, and the Bhandarkar Oriental Research Institute is a short walk away. Deccan lies immediately north across Karve Road, Sadashiv Peth to the east past the Peth lanes, and Kothrud begins further west along Karve Road past Nal Stop. Households here typically look for part-time cleaning and cooking help on steady long-term arrangements, and elder-care support for senior family members living in the larger old homes.",
+    "commuteNotes": "Deccan Gymkhana, Garware College and Nal Stop stations on the Aqua Line of Pune Metro all sit along the Karve Road edge of the area, and PMPML buses from Deccan Bus Stand run along Karve Road and Law College Road.",
+    "housingNotes": "Older bungalows and low-rise apartment buildings dominate, so entry is usually handled by the household or a building watchman; the newer redeveloped mid-rise blocks may ask for the helper to be registered with society security.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-deccan-gymkhana-1",
+        "q": "Which areas near Deccan Gymkhana do you also serve?",
+        "a": "Deccan across Karve Road, Sadashiv Peth to the east and Shivajinagar to the north-east are all close by and share the same nearby helper pool. Kothrud and Karve Nagar further west along Karve Road are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "deccan-gymkhana"
+        ]
+      },
+      {
+        "id": "faq-pune-deccan-gymkhana-2",
+        "q": "Which pincode does the Deccan Gymkhana service area cover?",
+        "a": "Deccan Gymkhana is served under pincode 411030, covering the Bhandarkar Road, Prabhat Road and Law College Road belt. The adjoining Deccan side towards FC Road is listed under 411004.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "deccan-gymkhana"
+        ]
+      },
+      {
+        "id": "faq-pune-deccan-gymkhana-3",
+        "q": "Do helpers in Deccan Gymkhana need society gate passes?",
+        "a": "Most homes on Bhandarkar Road and Prabhat Road are bungalows or small apartment buildings where the household or building watchman manages entry directly. Only the newer redeveloped mid-rise blocks tend to run a formal society register for domestic staff.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "deccan-gymkhana"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.51589,
+    "lng": 73.84116
+  },
+  "shivajinagar": {
+    "neighbours": [
+      "deccan",
+      "pune-university-area",
+      "sadashiv-peth",
+      "deccan-gymkhana",
+      "pune-camp",
+      "aundh",
+      "kothrud",
+      "dhanori",
+      "lohegaon",
+      "karve-nagar",
+      "pashan",
+      "warje",
+      "anandnagar",
+      "viman-nagar",
+      "kondhwa"
+    ],
+    "landmarks": [
+      "Shivajinagar Metro Station",
+      "Shivajinagar Railway Station",
+      "Pune District Court",
+      "COEP Technological University",
+      "Sancheti Hospital",
+      "Modern College"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "working-professionals",
+      "families",
+      "students"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Shivajinagar, under pincode 411005, is Pune's administrative and transport core, home to the Pune District Court, the Pune Municipal Corporation headquarters and the Shivajinagar railway station and ST bus stand. Housing is a mix of government and institutional quarters, older chawls and wadas on the inner lanes, mid-rise cooperative apartment buildings in Model Colony and along Ghole Road, and a few newer towers. Residents include government employees, working professionals, students attending COEP Technological University and Modern College, and long-settled families in the older colonies. Sancheti Hospital on Shivajinagar Chowk is a well-known landmark, and JM Road with Chhatrapati Sambhaji Udyan marks the boundary with Deccan to the south. The Pune University area lies to the north-west along Ganeshkhind Road, Sadashiv Peth to the south-east past the Peths, and Pune Camp across the river to the east. Households here typically want part-time cleaning and cooking help timed around office hours, and families in the older colonies often need daytime support for elderly parents.",
+    "commuteNotes": "Shivajinagar station on the Purple Line of Pune Metro, with the Civil Court interchange to the Aqua Line nearby, serves the area directly, and Shivajinagar railway station handles suburban trains from the Lonavala side. The ST stand and PMPML stops on JM Road and Ganeshkhind Road connect to the rest of the city.",
+    "housingNotes": "Government quarters, older chawls and mid-rise cooperative buildings make up most of the stock, so helpers are usually registered with a building watchman rather than a gated-society security desk; timings stay reasonably flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-shivajinagar-1",
+        "q": "Which areas near Shivajinagar do you also serve?",
+        "a": "Deccan across JM Road, the Pune University area along Ganeshkhind Road and Sadashiv Peth past the Peths are all adjacent and draw on the same nearby helper pool. Pune Camp across the river and Aundh further north are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "shivajinagar"
+        ]
+      },
+      {
+        "id": "faq-pune-shivajinagar-2",
+        "q": "Which pincode does the Shivajinagar service area cover?",
+        "a": "Shivajinagar falls under pincode 411005, which covers the court, railway station and Model Colony belt. Neighbouring Deccan is 411004 and the Pune University area along Ganeshkhind Road is 411008.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "shivajinagar"
+        ]
+      },
+      {
+        "id": "faq-pune-shivajinagar-3",
+        "q": "Can helpers reach Shivajinagar by metro or train?",
+        "a": "Yes. Shivajinagar Metro Station on the Purple Line is in the heart of the area, with the Civil Court interchange to the Aqua Line close by, and Shivajinagar railway station brings in suburban trains from the Lonavala side. This makes it one of the easier central Pune localities for helpers to reach on time.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "shivajinagar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.53259,
+    "lng": 73.85131
+  },
+  "pune-university-area": {
+    "neighbours": [
+      "shivajinagar",
+      "aundh",
+      "pashan",
+      "baner",
+      "deccan",
+      "deccan-gymkhana",
+      "sus",
+      "kothrud",
+      "dhanori",
+      "sadashiv-peth",
+      "balewadi",
+      "bavdhan",
+      "pimple-saudagar"
+    ],
+    "landmarks": [
+      "Savitribai Phule Pune University (SPPU) campus",
+      "Pune University Chowk",
+      "Ganeshkhind Road",
+      "Chatushrungi Temple",
+      "Senapati Bapat Road",
+      "E-Square multiplex"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "working-professionals",
+      "families",
+      "students"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "The Pune University area, under pincode 411008 and often referred to as Ganeshkhind, is the belt around the Savitribai Phule Pune University campus and Pune University Chowk, where Ganeshkhind Road meets the roads towards Baner and Pashan. Housing here is mixed: government and university staff quarters, the older bungalows and low-rise apartment buildings of Bhosale Nagar and ICS Colony, and mid-rise cooperative societies and a few newer towers towards Senapati Bapat Road. Residents include university faculty and staff, working professionals who commute to Hinjawadi and Baner, families settled in the older colonies, and a steady student population living in hostels and rented flats. Chatushrungi Temple on Senapati Bapat Road and the E-Square multiplex on University Road are the best-known everyday landmarks. Shivajinagar lies to the south-east along Ganeshkhind Road, Aundh to the north past the university, and Pashan and Baner to the west. Households here usually look for part-time cleaning and cooking help timed around office and college schedules.",
+    "commuteNotes": "PMPML buses along Ganeshkhind Road and Senapati Bapat Road are the main link, with Shivajinagar Metro Station on the Purple Line a short bus ride away; the Hinjawadi to Shivajinagar Metro Line 3 under construction along Ganeshkhind Road is expected to add stations near the university. [VERIFY]",
+    "housingNotes": "Staff quarters, older colony bungalows and mid-rise societies sit side by side, so entry rules vary: independent homes and quarters manage timings directly, while the newer societies towards Senapati Bapat Road ask for helpers to be registered with security.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-pune-university-area-1",
+        "q": "Which areas near the Pune University area do you also serve?",
+        "a": "Shivajinagar along Ganeshkhind Road, Aundh to the north of the campus and Pashan and Baner to the west are all close by and share the same nearby helper pool. Deccan, Deccan Gymkhana and Kothrud further south are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pune-university-area"
+        ]
+      },
+      {
+        "id": "faq-pune-pune-university-area-2",
+        "q": "Which pincode does the Pune University area service cover?",
+        "a": "The Ganeshkhind and Pune University belt falls under pincode 411008, covering Bhosale Nagar, ICS Colony and the campus surroundings. Neighbouring Aundh is 411007 and Shivajinagar is 411005.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pune-university-area"
+        ]
+      },
+      {
+        "id": "faq-pune-pune-university-area-3",
+        "q": "Do helpers in the Pune University area need society gate passes?",
+        "a": "In the older colonies such as Bhosale Nagar and ICS Colony, and in university staff quarters, entry is handled by the household directly. The mid-rise and newer societies towards Senapati Bapat Road usually register the helper with security and may issue a pass.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pune-university-area"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.54995,
+    "lng": 73.82079
+  },
+  "sadashiv-peth": {
+    "neighbours": [
+      "deccan",
+      "deccan-gymkhana",
+      "shivajinagar",
+      "pune-camp",
+      "bibwewadi",
+      "kothrud",
+      "karve-nagar",
+      "anandnagar",
+      "warje",
+      "katraj",
+      "pune-university-area",
+      "wanowrie",
+      "kondhwa"
+    ],
+    "landmarks": [
+      "Tilak Road",
+      "SP College (Sir Parashurambhau College)",
+      "Vishrambaug Wada",
+      "Tulshibaug",
+      "Bharat Natya Mandir",
+      "Shaniwar Wada"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "elderly",
+      "students"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Sadashiv Peth, under pincode 411011, is one of the historic Peths of old Pune, a dense grid of lanes between Tilak Road and Bajirao Road that has been home to the city's traditional Marathi middle class for generations. Housing here is a mix of surviving wadas and old two- and three-storey houses, along with a growing number of redeveloped mid-rise apartment buildings that have replaced them on the wider lanes. Residents are mostly long-settled families and senior citizens, plus students attending SP College on Tilak Road and the nearby coaching classes. Vishrambaug Wada and the Tulshibaug market are a few minutes' walk to the north, Shaniwar Wada is just beyond them, and Bharat Natya Mandir keeps the area's cultural life going. Deccan and Deccan Gymkhana lie to the west across the river-side roads, Shivajinagar to the north, and Bibwewadi to the south past Swargate. Households here typically look for part-time cleaning, cooking and dishwashing help on morning slots, and many older residents need daytime elder-care support.",
+    "commuteNotes": "Mandai and Budhwar Peth stations on the Purple Line of Pune Metro are within walking distance of the northern lanes, and Swargate, the city's main PMPML and ST bus hub, sits at the southern end of Tilak Road. Many helpers walk in from the adjoining Peths.",
+    "housingNotes": "Old wadas and low-rise houses still make up much of the stock, so entry is usually handled by the household itself; the redeveloped mid-rise buildings keep a watchman register but rarely run a formal gated-society pass system.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-sadashiv-peth-1",
+        "q": "Which areas near Sadashiv Peth do you also serve?",
+        "a": "Deccan and Deccan Gymkhana to the west, Shivajinagar to the north and Bibwewadi to the south past Swargate are all close by and share the same nearby helper pool. Pune Camp to the east and Kothrud further west are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "sadashiv-peth"
+        ]
+      },
+      {
+        "id": "faq-pune-sadashiv-peth-2",
+        "q": "Which pincode does the Sadashiv Peth service area cover?",
+        "a": "Sadashiv Peth is served under pincode 411011, covering the lanes between Tilak Road and Bajirao Road. Neighbouring Deccan Gymkhana is listed under 411030 and Bibwewadi under 411043.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "sadashiv-peth"
+        ]
+      },
+      {
+        "id": "faq-pune-sadashiv-peth-3",
+        "q": "Do helpers in Sadashiv Peth need society gate passes?",
+        "a": "Rarely. Most homes are old wadas, low-rise houses or small redeveloped buildings where the family or the building watchman manages entry directly, so timings can be agreed flexibly with the household.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "sadashiv-peth"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.51078,
+    "lng": 73.85021
+  },
+  "kothrud": {
+    "neighbours": [
+      "karve-nagar",
+      "anandnagar",
+      "warje",
+      "bavdhan",
+      "deccan-gymkhana",
+      "deccan",
+      "sadashiv-peth",
+      "pashan",
+      "shivajinagar",
+      "pune-university-area",
+      "sus"
+    ],
+    "landmarks": [
+      "Vanaz Metro Station",
+      "Paud Road",
+      "Karve Road",
+      "MIT World Peace University",
+      "Chandani Chowk",
+      "Dahanukar Colony"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "families",
+      "elderly",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [
+      "Kelewadi",
+      "Sutardara"
+    ],
+    "localIntro": "Kothrud, under pincodes 411021 and 411038, is one of Pune's largest and most densely built residential suburbs, spread along Paud Road and Karve Road on the western side of the city. Housing is dominated by cooperative housing societies, mostly mid-rise apartment buildings from the 1990s and 2000s in colonies such as Dahanukar Colony, Mahatma Society and Kishkinda Nagar, with newer gated projects towards Chandani Chowk and a few older bungalow pockets. Residents are largely Marathi middle-class families, a sizeable population of senior citizens who moved here decades ago, and working professionals who commute to Hinjawadi and the city centre. MIT World Peace University on Paud Road and the Vanaz terminus of the Aqua Line metro are the area's best-known reference points, and Chandani Chowk on the Mumbai-Bengaluru bypass marks its western edge. Karve Nagar lies to the south-east, Warje beyond it along the bypass, and Deccan Gymkhana to the east along Karve Road. Households here typically look for part-time cleaning and cooking help on morning slots, and elder-care and companionship support is in steady demand.",
+    "commuteNotes": "Vanaz, Anand Nagar and Ideal Colony stations on the Aqua Line of Pune Metro run along Paud Road, and PMPML buses from Kothrud Depot cover Karve Road and Paud Road. Many helpers walk in from Kelewadi and Sutardara, which sit inside Kothrud along Paud Road.",
+    "housingNotes": "Mid-rise cooperative societies dominate, and most keep a watchman register or society pass for domestic staff; the newer gated projects near Chandani Chowk run formal visitor-entry systems, while the remaining bungalows deal with helpers directly.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-kothrud-1",
+        "q": "Which areas near Kothrud do you also serve?",
+        "a": "Karve Nagar to the south-east, Warje along the bypass and Bavdhan beyond Chandani Chowk are all adjacent and share a nearby helper pool. Deccan Gymkhana and Deccan along Karve Road to the east are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kothrud"
+        ]
+      },
+      {
+        "id": "faq-pune-kothrud-2",
+        "q": "Which pincodes does the Kothrud service area cover?",
+        "a": "Kothrud service covers pincodes 411021 and 411038, taking in the Paud Road and Karve Road belt from Nal Stop out to Chandani Chowk. Neighbouring Karve Nagar is 411052 and Warje is 411024.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kothrud"
+        ]
+      },
+      {
+        "id": "faq-pune-kothrud-3",
+        "q": "Do helpers in Kothrud need society gate passes?",
+        "a": "Usually yes. Most Kothrud homes are in cooperative housing societies where the watchman keeps a register of domestic staff, and the newer gated projects towards Chandani Chowk issue formal passes. Only the older bungalow pockets handle entry directly.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kothrud"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.50726,
+    "lng": 73.80567
+  },
+  "karve-nagar": {
+    "neighbours": [
+      "kothrud",
+      "warje",
+      "anandnagar",
+      "deccan-gymkhana",
+      "bavdhan",
+      "sadashiv-peth",
+      "deccan",
+      "bibwewadi",
+      "katraj",
+      "shivajinagar",
+      "pashan"
+    ],
+    "landmarks": [
+      "Cummins College of Engineering for Women",
+      "Maharshi Karve Stree Shikshan Samstha campus (Hingne)",
+      "Rajaram Bridge",
+      "Warje Flyover on the Mumbai-Bengaluru Bypass",
+      "Mutha River"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "students"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Karve Nagar, under pincode 411052, sits between Kothrud and Warje on the north bank of the Mutha River, taking its name from the Maharshi Karve Stree Shikshan Samstha campus at Hingne that anchors the locality. Housing is mixed: mid-rise cooperative apartment societies on the main internal roads, older bungalows and row houses in the lanes near the campus, and newer gated buildings towards the Warje side. Residents are mostly middle-class families, working professionals who use the nearby bypass to reach Hinjawadi and Baner, and a large student population from Cummins College of Engineering for Women and the other Karve institutions. Rajaram Bridge links the area across the river to Sinhagad Road and Anandnagar, and the Warje Flyover on the Mumbai-Bengaluru Bypass is a few minutes away. Kothrud lies immediately north along Karve Road, Warje to the west, and Deccan Gymkhana to the east towards Nal Stop. Households here typically look for part-time cleaning and cooking help on fixed slots, and hostels and shared flats near the colleges create steady demand for cooking help.",
+    "commuteNotes": "PMPML buses along Karve Road and the Karve Nagar internal road are the main link, with Nal Stop and Anand Nagar stations on the Aqua Line of Pune Metro a short bus ride away; helpers from the Sinhagad Road side cross over Rajaram Bridge on foot or by shared auto.",
+    "housingNotes": "Mid-rise societies and older bungalows sit side by side, so entry rules vary: independent homes manage timings directly, while societies keep a watchman register and the newer gated buildings ask for helpers to be registered with security.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-karve-nagar-1",
+        "q": "Which areas near Karve Nagar do you also serve?",
+        "a": "Kothrud to the north, Warje to the west and Anandnagar across Rajaram Bridge on Sinhagad Road are all adjacent and share the same nearby helper pool. Deccan Gymkhana towards Nal Stop and Bavdhan beyond the bypass are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "karve-nagar"
+        ]
+      },
+      {
+        "id": "faq-pune-karve-nagar-2",
+        "q": "Which pincode does the Karve Nagar service area cover?",
+        "a": "Karve Nagar falls under pincode 411052, covering the belt from the Karve institutions at Hingne to the Warje side. Neighbouring Kothrud is 411021 and 411038, and Anandnagar across the river is 411051.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "karve-nagar"
+        ]
+      },
+      {
+        "id": "faq-pune-karve-nagar-3",
+        "q": "Do helpers in Karve Nagar need society gate passes?",
+        "a": "In the cooperative apartment societies the watchman usually keeps a register of domestic staff, and the newer gated buildings towards Warje ask for a formal registration. Bungalows and row houses near the Karve campus handle entry directly.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "karve-nagar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.48942,
+    "lng": 73.82135
+  },
+  "warje": {
+    "neighbours": [
+      "karve-nagar",
+      "kothrud",
+      "bavdhan",
+      "anandnagar",
+      "deccan-gymkhana",
+      "sadashiv-peth",
+      "katraj",
+      "bibwewadi",
+      "pashan",
+      "shivajinagar"
+    ],
+    "landmarks": [
+      "Warje Flyover on the Mumbai-Bengaluru Bypass",
+      "Chandani Chowk",
+      "Warje Malwadi",
+      "Atul Nagar",
+      "Mutha River"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Warje, under pincode 411024, lies on the south-western edge of Pune where the Mumbai-Bengaluru Bypass crosses the Mutha River, with the Warje Flyover as its most recognisable landmark. Housing is mixed: the older Warje Malwadi village core still has independent houses and small buildings, while the main roads and the slopes towards the bypass have filled up with mid-rise cooperative societies and newer gated projects in pockets such as Atul Nagar and Ramnagar. Residents are largely middle-class families and working professionals who use the bypass to reach Hinjawadi, Baner and Bavdhan, along with long-settled village families. Chandani Chowk, the busy junction on the bypass, sits to the north and marks the boundary with Kothrud and Bavdhan. Karve Nagar is immediately to the east along the river, Anandnagar on Sinhagad Road lies across the water to the south-east, and Deccan Gymkhana is further in towards the city. Households here typically look for part-time cleaning and cooking help on morning slots, and families with young children often ask for daytime nanny support.",
+    "commuteNotes": "PMPML buses along the Warje internal road and the bypass service road connect the area to Kothrud, Deccan and Swargate; there is no metro station in Warje itself, and helpers from the Karve Nagar side walk or take shared autos across.",
+    "housingNotes": "Village-core houses and mid-rise societies coexist, so entry rules vary: independent houses in Warje Malwadi manage timings directly, while the societies and newer gated projects keep a watchman register or issue passes for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-warje-1",
+        "q": "Which areas near Warje do you also serve?",
+        "a": "Karve Nagar to the east, Kothrud and Bavdhan beyond Chandani Chowk, and Anandnagar on Sinhagad Road across the river are all covered and share a nearby helper pool. Deccan Gymkhana and Sadashiv Peth further in are handled as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "warje"
+        ]
+      },
+      {
+        "id": "faq-pune-warje-2",
+        "q": "Which pincode does the Warje service area cover?",
+        "a": "Warje is served under pincode 411024, covering Warje Malwadi, Atul Nagar and the bypass-side societies. Neighbouring Karve Nagar is 411052 and Bavdhan is 411023.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "warje"
+        ]
+      },
+      {
+        "id": "faq-pune-warje-3",
+        "q": "Do helpers in Warje need society gate passes?",
+        "a": "It depends on the building. Independent houses in the Warje Malwadi village core handle entry directly, while the mid-rise societies and gated projects along the bypass usually register helpers with the watchman or security desk.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "warje"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.48204,
+    "lng": 73.80017
+  },
+  "anandnagar": {
+    "neighbours": [
+      "karve-nagar",
+      "warje",
+      "kothrud",
+      "sadashiv-peth",
+      "bibwewadi",
+      "katraj",
+      "deccan-gymkhana",
+      "deccan",
+      "bavdhan",
+      "shivajinagar",
+      "kondhwa"
+    ],
+    "landmarks": [
+      "Sinhagad Road",
+      "Rajaram Bridge",
+      "Hingne Khurd",
+      "Vitthalwadi",
+      "Vadgaon Budruk"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Anandnagar, under pincode 411051, is the residential stretch of Sinhagad Road around Hingne Khurd on the south bank of the Mutha River, distinct from the Anand Nagar metro station on Paud Road in Kothrud. Housing here is dominated by mid-rise and high-rise apartment societies built from the late 1990s onwards along Sinhagad Road and its side lanes, with the older Hingne Khurd and Vitthalwadi village pockets and a few bungalow lanes mixed in. Residents are mostly middle-class families and working professionals who commute along Sinhagad Road to Swargate and the city, or across Rajaram Bridge to Kothrud and the bypass. Rajaram Bridge links the area directly to Karve Nagar on the opposite bank, Vadgaon Budruk with its Sinhgad Institutes campus lies further south along the road, and Warje sits to the west beyond the river bend. Sadashiv Peth and Swargate are reached going north-east along Sinhagad Road, and Katraj is to the south-east. Households here typically look for part-time cleaning and cooking help on fixed morning and evening slots, and dual-income families often need daytime nanny support.",
+    "commuteNotes": "PMPML buses along Sinhagad Road from Swargate are the main link, and helpers from Karve Nagar and Kothrud cross Rajaram Bridge on foot or by shared auto; no metro station serves Sinhagad Road at present.",
+    "housingNotes": "Gated apartment societies dominate, so most homes require the helper to be registered with society security and issued an entry pass; the older village pockets in Hingne Khurd and Vitthalwadi deal with helpers directly.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-anandnagar-1",
+        "q": "Which areas near Anandnagar do you also serve?",
+        "a": "Karve Nagar across Rajaram Bridge, Warje to the west and Kothrud beyond it are all covered and share the same nearby helper pool. Sadashiv Peth and Bibwewadi towards Swargate, and Katraj to the south-east, are handled as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "anandnagar"
+        ]
+      },
+      {
+        "id": "faq-pune-anandnagar-2",
+        "q": "Which pincode does the Anandnagar service area cover?",
+        "a": "Anandnagar on Sinhagad Road falls under pincode 411051, which also covers Hingne Khurd and the nearby Sinhagad Road societies. This is a different area from the Anand Nagar metro station in Kothrud, which comes under 411038.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "anandnagar"
+        ]
+      },
+      {
+        "id": "faq-pune-anandnagar-3",
+        "q": "Do helpers in Anandnagar need society gate passes?",
+        "a": "Yes in most cases. The apartment societies along Sinhagad Road register domestic staff with security and issue passes, and some require an ID copy at the gate. Only the older houses in Hingne Khurd and Vitthalwadi manage entry directly.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "anandnagar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.47842,
+    "lng": 73.82408
+  },
+  "kharadi": {
+    "neighbours": [
+      "viman-nagar",
+      "hadapsar",
+      "lohegaon",
+      "dhanori",
+      "wanowrie",
+      "pune-camp",
+      "deccan"
+    ],
+    "landmarks": [
+      "EON IT Park",
+      "World Trade Center Pune",
+      "Zensar Technologies campus",
+      "Manipal Hospital Kharadi",
+      "Kharadi Bypass",
+      "Phoenix Marketcity"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Wadgaon Sheri",
+      "Chandan Nagar"
+    ],
+    "localIntro": "Kharadi, under pincode 411014, is Pune's eastern IT hub, built up over the past two decades around EON IT Park, the World Trade Center Pune and the Zensar Technologies campus on the Kharadi Bypass. Housing is overwhelmingly gated: large high-rise townships and apartment complexes line the bypass and the roads towards Mundhwa and Chandan Nagar, with only the old Kharadi gaothan and a few village lanes surviving in between. Residents are mostly working professionals employed in the IT parks, many of them young couples and nuclear families who have moved to Pune from other cities, along with a growing number of families with school-going children. Manipal Hospital Kharadi is the main hospital, and Phoenix Marketcity on Nagar Road in Viman Nagar is the nearest large mall. Viman Nagar lies to the north-west, Hadapsar and Magarpatta to the south across Mundhwa, and Lohegaon and Dhanori further north towards the airport. Households here typically look for part-time cleaning and cooking help timed around office hours, live-in help for dual-income families, and nanny support for young children.",
+    "commuteNotes": "Ramwadi station, the eastern terminus of the Aqua Line of Pune Metro on Nagar Road, is the nearest metro stop, and PMPML buses run along Nagar Road and the Kharadi Bypass. Many helpers walk or take shared autos from Wadgaon Sheri and Chandan Nagar, which adjoin Kharadi.",
+    "housingNotes": "High-rise gated townships dominate, so almost every home requires the helper to be registered with society security, issued an entry pass and often logged through a visitor app; timings are fixed by society rules rather than the household alone.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-kharadi-1",
+        "q": "Which areas near Kharadi do you also serve?",
+        "a": "Viman Nagar to the north-west and Hadapsar with Magarpatta to the south are both adjacent and share a nearby helper pool. Lohegaon and Dhanori towards the airport, and Wanowrie and Pune Camp further in, are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kharadi"
+        ]
+      },
+      {
+        "id": "faq-pune-kharadi-2",
+        "q": "Which pincode does the Kharadi service area cover?",
+        "a": "Kharadi falls under pincode 411014, covering the EON IT Park and bypass belt out to Chandan Nagar. Neighbouring Viman Nagar is served under 411022 and Hadapsar under 411013 and 411028.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kharadi"
+        ]
+      },
+      {
+        "id": "faq-pune-kharadi-3",
+        "q": "Do helpers in Kharadi need society gate passes?",
+        "a": "Yes, almost always. The gated townships along the Kharadi Bypass register domestic staff with security, issue entry passes and often require an ID copy and photo; several also log entries through a visitor management app. Plan for a day or two to complete registration before the first shift.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kharadi"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.55128,
+    "lng": 73.94166
+  },
+  "viman-nagar": {
+    "neighbours": [
+      "kharadi",
+      "lohegaon",
+      "dhanori",
+      "pune-camp",
+      "hadapsar",
+      "wanowrie",
+      "deccan",
+      "shivajinagar"
+    ],
+    "landmarks": [
+      "Phoenix Marketcity",
+      "Pune Airport",
+      "Symbiosis International University (Viman Nagar campus)",
+      "Weikfield IT Park",
+      "Ramwadi Metro Station",
+      "Nagar Road"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "students",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Wadgaon Sheri"
+    ],
+    "localIntro": "Viman Nagar, under pincode 411022, is the residential suburb that grew up beside Pune Airport on the northern side of Nagar Road, and today one of the city's most cosmopolitan neighbourhoods. Housing is dominated by gated apartment societies, from mid-rise complexes built in the early 2000s to newer high-rise towers, with a few older bungalow lanes and the Symbiosis International University campus giving the area its student character. Residents include working professionals from the nearby Weikfield IT Park and the Kharadi IT hub, a large population of students and young professionals renting shared flats, families with school-going children, and frequent flyers who value the airport being minutes away. Phoenix Marketcity on Nagar Road is the everyday shopping and dining hub, and Ramwadi Metro Station sits at the southern edge on Nagar Road. Kharadi lies to the south-east across Wadgaon Sheri, Lohegaon and Dhanori to the north beyond the airport, and Pune Camp is a short drive down Nagar Road past Yerawada. Households here typically look for part-time cleaning and cooking help timed around office hours, and shared student flats create steady demand for cooking help.",
+    "commuteNotes": "Ramwadi station on the Aqua Line of Pune Metro serves the Nagar Road edge of Viman Nagar directly, and PMPML buses run along Nagar Road and Viman Nagar Road; many helpers walk in from Wadgaon Sheri, which adjoins the area.",
+    "housingNotes": "Gated apartment societies dominate, so most homes require the helper to be registered with society security and issued an entry pass; a few older bungalows and small buildings near Symbiosis handle entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-viman-nagar-1",
+        "q": "Which areas near Viman Nagar do you also serve?",
+        "a": "Kharadi to the south-east and Lohegaon and Dhanori to the north beyond the airport are all close by and share the same nearby helper pool. Pune Camp down Nagar Road, and Hadapsar and Wanowrie further south, are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "viman-nagar"
+        ]
+      },
+      {
+        "id": "faq-pune-viman-nagar-2",
+        "q": "Which pincode does the Viman Nagar service area cover?",
+        "a": "Viman Nagar is served under pincode 411022, covering the belt between Nagar Road and Pune Airport. Neighbouring Kharadi is 411014 and Lohegaon is 411047.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "viman-nagar"
+        ]
+      },
+      {
+        "id": "faq-pune-viman-nagar-3",
+        "q": "Can helpers reach Viman Nagar by metro?",
+        "a": "Yes. Ramwadi Metro Station, the eastern terminus of the Aqua Line, is on Nagar Road at the southern edge of Viman Nagar, and PMPML buses connect it to the inner residential lanes. Helpers from Wadgaon Sheri usually walk in directly.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "viman-nagar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.57039,
+    "lng": 73.91333
+  },
+  "hadapsar": {
+    "neighbours": [
+      "wanowrie",
+      "kharadi",
+      "nibm",
+      "kondhwa",
+      "viman-nagar",
+      "pune-camp",
+      "bibwewadi",
+      "lohegaon"
+    ],
+    "landmarks": [
+      "Magarpatta City",
+      "Amanora Park Town and Amanora Mall",
+      "Seasons Mall",
+      "Noble Hospital",
+      "Hadapsar Gadital bus terminus",
+      "Pune-Solapur Road"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Hadapsar, under pincodes 411013 and 411028, is Pune's large south-eastern suburb along the Pune-Solapur Road, best known for the Magarpatta City and Amanora Park Town townships that reshaped it from an industrial and village area into a major residential hub. Housing is dominated by gated townships and apartment complexes: Magarpatta and Amanora alone house tens of thousands of residents, and mid-rise societies fill the roads towards Mundhwa, Sasane Nagar and Handewadi, with the old Hadapsar gaothan and the industrial estate surviving in between. Residents are largely working professionals employed in the Magarpatta and Kharadi IT campuses, families with school-going children, and long-settled local households near the Gadital bus terminus. Seasons Mall and Amanora Mall are the main shopping centres, and Noble Hospital on the Solapur Road is the best-known hospital. Wanowrie lies to the west, Kharadi to the north across Mundhwa, and NIBM and Kondhwa to the south-west. Households here typically look for part-time cleaning and cooking help timed around office hours, live-in help for dual-income families, and nanny support for young children.",
+    "commuteNotes": "Hadapsar Gadital is a major PMPML bus terminus with services along the Solapur Road and to Swargate and Pune Station; there is no metro station in Hadapsar at present, and helpers from the gaothan and nearby settlements typically walk or take shared autos to the townships.",
+    "housingNotes": "Gated townships and apartment societies dominate, so almost every home requires the helper to be registered with society security and issued an entry pass; Magarpatta and Amanora run their own centralised staff-registration systems with fixed procedures.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-hadapsar-1",
+        "q": "Which areas near Hadapsar do you also serve?",
+        "a": "Wanowrie to the west, Kharadi across Mundhwa to the north and NIBM and Kondhwa to the south-west are all close by and share a nearby helper pool. Viman Nagar, Pune Camp and Bibwewadi further in are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "hadapsar"
+        ]
+      },
+      {
+        "id": "faq-pune-hadapsar-2",
+        "q": "Which pincodes does the Hadapsar service area cover?",
+        "a": "Hadapsar service covers pincodes 411013 and 411028, taking in Magarpatta, Amanora, the Gadital area and the Solapur Road belt. Neighbouring Wanowrie is 411040 and Kharadi is 411014.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "hadapsar"
+        ]
+      },
+      {
+        "id": "faq-pune-hadapsar-3",
+        "q": "Do helpers in Magarpatta or Amanora need special passes?",
+        "a": "Yes. Both Magarpatta City and Amanora Park Town run centralised registration for domestic staff, which usually involves an ID copy, a photograph and a township-issued pass before the helper can enter. Smaller societies elsewhere in Hadapsar keep a watchman register instead.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "hadapsar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.50077,
+    "lng": 73.93791
+  },
+  "dhanori": {
+    "neighbours": [
+      "lohegaon",
+      "viman-nagar",
+      "kharadi",
+      "pune-camp",
+      "pune-university-area",
+      "shivajinagar",
+      "deccan"
+    ],
+    "landmarks": [
+      "Vishrantwadi Chowk",
+      "Pune Airport",
+      "Alandi Road",
+      "Tingre Nagar",
+      "Dhanori-Lohegaon Road"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Dhanori, under pincode 411036, is a fast-growing residential suburb in north-east Pune, sitting between Vishrantwadi on Alandi Road and Lohegaon beside the airport. Until the 2000s it was largely a village with farmland; today the Dhanori-Lohegaon Road and the internal roads towards Tingre Nagar are lined with gated apartment projects, most of them mid-rise societies built in the past fifteen years, with the old Dhanori gaothan still standing in the middle. Residents are mostly young working professionals and nuclear families drawn by comparatively affordable flats close to Viman Nagar and Kharadi, along with long-settled village households. Vishrantwadi Chowk is the main junction and bus stop, Tingre Nagar the neighbouring older colony, and Pune Airport lies just to the east. Lohegaon is immediately north-east, Viman Nagar to the south across the airport approach, and Kharadi beyond it along the bypass. Households here typically look for part-time cleaning and cooking help on morning and evening slots, and dual-income families often need daytime nanny support.",
+    "commuteNotes": "PMPML buses via Vishrantwadi Chowk on Alandi Road are the main link, with no metro station in Dhanori itself; helpers from the Dhanori gaothan and Tingre Nagar typically walk or take shared autos to the newer societies.",
+    "housingNotes": "Gated mid-rise societies dominate, so most homes require the helper to be registered with society security and issued a pass; the older gaothan houses and Tingre Nagar lanes handle entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-dhanori-1",
+        "q": "Which areas near Dhanori do you also serve?",
+        "a": "Lohegaon to the north-east and Viman Nagar to the south are both adjacent and share the same nearby helper pool. Kharadi, Pune Camp and the Shivajinagar and Pune University areas across the river are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "dhanori"
+        ]
+      },
+      {
+        "id": "faq-pune-dhanori-2",
+        "q": "Which pincode does the Dhanori service area cover?",
+        "a": "Dhanori is served under pincode 411036, covering the Dhanori-Lohegaon Road belt and the societies towards Vishrantwadi. Neighbouring Lohegaon is 411047 and Viman Nagar is 411022.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "dhanori"
+        ]
+      },
+      {
+        "id": "faq-pune-dhanori-3",
+        "q": "Do helpers in Dhanori need society gate passes?",
+        "a": "In most cases yes. The newer gated societies along Dhanori-Lohegaon Road register domestic staff with security and issue an entry pass, often with an ID copy. Homes in the old gaothan and in Tingre Nagar deal with helpers directly.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "dhanori"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.59067,
+    "lng": 73.89132
+  },
+  "lohegaon": {
+    "neighbours": [
+      "dhanori",
+      "viman-nagar",
+      "kharadi",
+      "pune-camp",
+      "hadapsar",
+      "shivajinagar",
+      "deccan"
+    ],
+    "landmarks": [
+      "Pune Airport",
+      "Air Force Station Lohegaon",
+      "Lohegaon gaothan",
+      "Porwal Road",
+      "Wagholi (Nagar Road)"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Lohegaon, under pincode 411047, is the village-turned-suburb on the north-eastern edge of Pune that gives Pune Airport its official name, with the Air Force Station occupying a large part of the area. Housing here is genuinely mixed: the old Lohegaon gaothan still has independent houses and small buildings on narrow lanes, while Porwal Road and the roads towards Dhanori and Wagholi have filled up with mid-rise gated societies and row-house projects over the past decade. Residents are a blend of long-settled village families, Air Force and airport staff, and young working professionals and nuclear families who chose Lohegaon for comparatively affordable flats within reach of Viman Nagar and Kharadi. Pune Airport and the Air Force Station are the defining landmarks, and Wagholi on Nagar Road marks the eastern edge. Dhanori lies immediately south-west, Viman Nagar to the south beyond the airport, and Kharadi to the south-east across the bypass. Households here typically look for part-time cleaning and cooking help on fixed slots, and families in the newer societies often ask for daytime nanny support.",
+    "commuteNotes": "PMPML buses along Porwal Road and via Vishrantwadi and Dhanori are the main link, with no metro station in Lohegaon itself; helpers from the gaothan walk to the nearby societies, and Ramwadi Metro Station on Nagar Road is reached by bus or shared auto.",
+    "housingNotes": "Village-core houses and gated societies coexist, so entry rules vary: independent houses in the gaothan manage timings directly, while the newer societies along Porwal Road register helpers with security and issue passes.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-lohegaon-1",
+        "q": "Which areas near Lohegaon do you also serve?",
+        "a": "Dhanori to the south-west and Viman Nagar beyond the airport are both close by and share the same nearby helper pool. Kharadi across the bypass, and Pune Camp and Hadapsar further in, are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "lohegaon"
+        ]
+      },
+      {
+        "id": "faq-pune-lohegaon-2",
+        "q": "Which pincode does the Lohegaon service area cover?",
+        "a": "Lohegaon falls under pincode 411047, covering the gaothan, Porwal Road and the societies towards Dhanori and Wagholi. Neighbouring Dhanori is 411036 and Viman Nagar is 411022.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "lohegaon"
+        ]
+      },
+      {
+        "id": "faq-pune-lohegaon-3",
+        "q": "Do helpers in Lohegaon need society gate passes?",
+        "a": "It depends on where you live. The gated societies along Porwal Road register domestic staff with security and issue entry passes, while the independent houses in the old Lohegaon gaothan handle entry and timings directly.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "lohegaon"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.58037,
+    "lng": 73.91823
+  },
+  "wanowrie": {
+    "neighbours": [
+      "pune-camp",
+      "nibm",
+      "kondhwa",
+      "hadapsar",
+      "bibwewadi",
+      "viman-nagar",
+      "kharadi",
+      "sadashiv-peth",
+      "katraj",
+      "deccan-gymkhana"
+    ],
+    "landmarks": [
+      "Fatima Nagar Chowk",
+      "Command Hospital (Southern Command)",
+      "Inamdar Multispeciality Hospital",
+      "Salunke Vihar Road",
+      "Empress Garden",
+      "Pune Race Course"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Wanowrie, under pincode 411040, lies just south of Pune Camp beyond Empress Garden and the Pune Race Course, and blends the cantonment's older residential character with newer apartment living. Housing is mixed: independent bungalows and army-linked quarters on the quieter lanes, older cooperative apartment buildings in colonies such as Salunke Vihar and Kedari Nagar, and newer gated societies towards Fatima Nagar and the NIBM Road side. Residents include serving and retired defence families, long-settled Christian and Parsi households from the Camp side, working professionals who commute to Hadapsar and Kharadi, and a good number of senior citizens. Fatima Nagar Chowk is the busy commercial junction, Command Hospital of the Southern Command is the best-known institution, and Inamdar Multispeciality Hospital sits at Fatima Nagar. Pune Camp lies to the north, NIBM and Kondhwa to the south along Salunke Vihar Road, and Hadapsar to the east along the Solapur Road. Households here typically look for part-time cleaning and cooking help on stable arrangements, and elder-care support is in steady demand among the retired defence families.",
+    "commuteNotes": "PMPML buses via Fatima Nagar Chowk and Salunke Vihar Road connect Wanowrie to Swargate, Pune Station and Hadapsar; there is no metro station in Wanowrie, and many helpers walk in from the Camp side and the adjoining settlements.",
+    "housingNotes": "Bungalows, older cooperative buildings and newer gated societies sit side by side, so entry rules vary: independent homes manage timings directly, cooperative buildings keep a watchman register, and the gated societies near Fatima Nagar issue passes.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-wanowrie-1",
+        "q": "Which areas near Wanowrie do you also serve?",
+        "a": "Pune Camp to the north, NIBM and Kondhwa along Salunke Vihar Road and Hadapsar to the east are all close by and share a nearby helper pool. Bibwewadi and Viman Nagar are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "wanowrie"
+        ]
+      },
+      {
+        "id": "faq-pune-wanowrie-2",
+        "q": "Which pincode does the Wanowrie service area cover?",
+        "a": "Wanowrie is served under pincode 411040, covering Fatima Nagar, Salunke Vihar and the lanes south of Empress Garden. Neighbouring Pune Camp is 411001 and NIBM is 411048.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "wanowrie"
+        ]
+      },
+      {
+        "id": "faq-pune-wanowrie-3",
+        "q": "Do helpers in Wanowrie need society gate passes?",
+        "a": "It depends on the building. Bungalows and army-linked quarters handle entry directly, the older cooperative buildings in Salunke Vihar keep a watchman register, and the newer gated societies near Fatima Nagar register helpers with security and issue passes.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "wanowrie"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.48837,
+    "lng": 73.89867
+  },
+  "nibm": {
+    "neighbours": [
+      "kondhwa",
+      "wanowrie",
+      "hadapsar",
+      "bibwewadi",
+      "pune-camp",
+      "katraj"
+    ],
+    "landmarks": [
+      "National Institute of Bank Management campus",
+      "NIBM Road",
+      "Lullanagar Chowk",
+      "Salunke Vihar Road",
+      "Undri",
+      "Mohammadwadi"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "NIBM, under pincode 411048, is the residential belt along NIBM Road in south-east Pune, named after the National Institute of Bank Management campus that sits at its far end. Over the past two decades the road and its offshoots towards Undri and Mohammadwadi have filled up with gated apartment societies, from mid-rise complexes to newer high-rise towers, and the area is now one of the city's established upper-middle-class addresses. Residents are largely working professionals commuting to Magarpatta, Hadapsar and the Camp offices, families with school-going children drawn by the many schools along the road, and a growing number of residents who moved here from Wanowrie and Camp for larger flats. Lullanagar Chowk marks the northern entry from Wanowrie, and Salunke Vihar Road runs parallel on the Wanowrie side. Kondhwa lies to the west along the Katraj-Kondhwa Road, Wanowrie to the north, and Hadapsar to the north-east. Households here typically look for part-time cleaning and cooking help timed around office hours, live-in help for dual-income families, and nanny support for young children.",
+    "commuteNotes": "PMPML buses via Lullanagar Chowk and along NIBM Road connect the area to Swargate and Pune Station; there is no metro station on NIBM Road, and helpers from Kondhwa and Wanowrie typically walk or take shared autos in.",
+    "housingNotes": "Gated apartment societies dominate, so almost every home requires the helper to be registered with society security and issued an entry pass, often with an ID copy; timings are fixed by society rules rather than the household alone.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-nibm-1",
+        "q": "Which areas near NIBM do you also serve?",
+        "a": "Kondhwa to the west, Wanowrie to the north via Lullanagar Chowk and Hadapsar to the north-east are all adjacent and share the same nearby helper pool. Bibwewadi, Pune Camp and Katraj are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "nibm"
+        ]
+      },
+      {
+        "id": "faq-pune-nibm-2",
+        "q": "Which pincode does the NIBM service area cover?",
+        "a": "NIBM Road falls under pincode 411048, which it shares with the adjoining Kondhwa side; Kondhwa service also covers 411041. Neighbouring Wanowrie is 411040 and Hadapsar is 411013 and 411028.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "nibm"
+        ]
+      },
+      {
+        "id": "faq-pune-nibm-3",
+        "q": "Do helpers on NIBM Road need society gate passes?",
+        "a": "Yes, almost always. The gated societies along NIBM Road register domestic staff with security, issue entry passes and usually ask for an ID copy and photo; several also use a visitor management app. Allow a day or two for registration before the first shift.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "nibm"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.46311,
+    "lng": 73.9116
+  },
+  "kondhwa": {
+    "neighbours": [
+      "nibm",
+      "wanowrie",
+      "bibwewadi",
+      "katraj",
+      "hadapsar",
+      "pune-camp",
+      "sadashiv-peth",
+      "deccan-gymkhana",
+      "anandnagar",
+      "shivajinagar"
+    ],
+    "landmarks": [
+      "Katraj-Kondhwa Road",
+      "Lullanagar Chowk",
+      "Kausar Baug",
+      "Kondhwa Khurd",
+      "Kondhwa Budruk",
+      "NIBM Road"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Kondhwa, under pincodes 411041 and 411048, is a large and densely populated suburb in south-east Pune, spread along the Katraj-Kondhwa Road between Lullanagar Chowk and the Katraj side. Housing is genuinely mixed: the older Kondhwa Khurd and Kondhwa Budruk village cores have independent houses and small buildings, colonies such as Kausar Baug are built up with mid-rise apartment blocks, and the roads towards NIBM and Undri carry newer gated societies. Residents are a diverse mix of long-settled local families, a large Muslim community concentrated around Kausar Baug and Kondhwa Khurd, working professionals commuting to Hadapsar and Magarpatta, and families drawn by comparatively affordable flats. Lullanagar Chowk is the main junction shared with Wanowrie and NIBM Road, and the Katraj-Kondhwa Road carries traffic through to Katraj in the west. NIBM lies immediately east, Wanowrie to the north, and Bibwewadi to the west beyond the Kondhwa-Bibwewadi road. Households here typically look for part-time cleaning and cooking help on fixed morning and evening slots, and families in the larger independent homes often need daytime elder-care support.",
+    "commuteNotes": "PMPML buses along the Katraj-Kondhwa Road and via Lullanagar Chowk connect Kondhwa to Swargate, Katraj and Hadapsar; there is no metro station in Kondhwa, and helpers from the Kondhwa Khurd and Kondhwa Budruk village cores typically walk to the nearby societies.",
+    "housingNotes": "Village-core houses, mid-rise apartment blocks and newer gated societies coexist, so entry rules vary street by street: independent homes manage timings directly, while the gated societies towards NIBM and Undri register helpers with security and issue passes.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-kondhwa-1",
+        "q": "Which areas near Kondhwa do you also serve?",
+        "a": "NIBM to the east, Wanowrie to the north via Lullanagar Chowk and Bibwewadi to the west are all close by and share the same nearby helper pool. Katraj along the Katraj-Kondhwa Road, Hadapsar and Pune Camp are covered as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kondhwa"
+        ]
+      },
+      {
+        "id": "faq-pune-kondhwa-2",
+        "q": "Which pincodes does the Kondhwa service area cover?",
+        "a": "Kondhwa service covers pincodes 411041 and 411048, taking in Kondhwa Khurd, Kondhwa Budruk, Kausar Baug and the belt shared with NIBM Road. Neighbouring Bibwewadi is 411043 and Wanowrie is 411040.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kondhwa"
+        ]
+      },
+      {
+        "id": "faq-pune-kondhwa-3",
+        "q": "Do helpers in Kondhwa need society gate passes?",
+        "a": "It depends on the building. Independent houses in Kondhwa Khurd and Kondhwa Budruk handle entry directly, mid-rise blocks in colonies such as Kausar Baug keep a watchman register, and the newer gated societies towards NIBM and Undri issue formal passes to domestic staff.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "kondhwa"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.47799,
+    "lng": 73.89406
+  },
+  "bibwewadi": {
+    "neighbours": [
+      "sadashiv-peth",
+      "katraj",
+      "kondhwa",
+      "nibm",
+      "wanowrie",
+      "pune-camp",
+      "anandnagar",
+      "hadapsar",
+      "karve-nagar",
+      "deccan-gymkhana",
+      "warje"
+    ],
+    "landmarks": [
+      "Swargate Metro Station",
+      "Kumar Pacific Mall",
+      "Market Yard (Gultekdi)",
+      "Pune-Satara Road",
+      "Padmavati",
+      "Sahakar Nagar"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Bibwewadi, under pincode 411043, is an established residential suburb in south Pune, stretching from the Swargate transport hub down the Pune-Satara Road towards Padmavati and the Katraj side. Housing is mixed: the older Bibwewadi lanes and the adjoining Sahakar Nagar and Upper Indira Nagar colonies have independent houses and small buildings, cooperative apartment societies from the 1980s and 1990s line the main roads, and newer mid-rise gated projects have come up in pockets. Residents are largely long-settled Marathi middle-class families, senior citizens who have lived here for decades, and working professionals who use the Satara Road and Swargate connections to reach the city and Hinjawadi. Swargate, with its bus stands and the Purple Line metro terminus, sits at the northern end, Kumar Pacific Mall is the everyday shopping stop, and Market Yard at Gultekdi is the city's wholesale produce market just to the east. Sadashiv Peth lies north across Swargate, Kondhwa and NIBM to the east, and Katraj to the south along the Satara Road. Households here typically look for part-time cleaning and cooking help on morning slots, and elder-care support is in steady demand.",
+    "commuteNotes": "Swargate station, the southern terminus of the Purple Line of Pune Metro, and the adjoining PMPML and ST bus stands sit at the northern end of Bibwewadi, and buses along the Pune-Satara Road stop at Padmavati and Bibwewadi Chowk. Many helpers walk in from the adjoining settlements.",
+    "housingNotes": "Independent houses, older cooperative societies and newer gated projects sit side by side, so entry rules vary: independent homes manage timings directly, cooperative buildings keep a watchman register, and the newer gated projects issue passes to domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-bibwewadi-1",
+        "q": "Which areas near Bibwewadi do you also serve?",
+        "a": "Sadashiv Peth across Swargate to the north, Kondhwa and NIBM to the east and Katraj down the Satara Road to the south are all covered and share a nearby helper pool. Wanowrie, Pune Camp and Anandnagar on Sinhagad Road are handled as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "bibwewadi"
+        ]
+      },
+      {
+        "id": "faq-pune-bibwewadi-2",
+        "q": "Which pincode does the Bibwewadi service area cover?",
+        "a": "Bibwewadi is served under pincode 411043, covering the belt from Swargate down the Pune-Satara Road to Padmavati and Upper Indira Nagar. Neighbouring Katraj is 411046 and Kondhwa is 411041 and 411048.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "bibwewadi"
+        ]
+      },
+      {
+        "id": "faq-pune-bibwewadi-3",
+        "q": "Can helpers reach Bibwewadi by metro?",
+        "a": "Yes. Swargate Metro Station on the Purple Line is at the northern end of Bibwewadi, next to the PMPML and ST bus stands, and buses along the Pune-Satara Road cover the rest of the area down to Padmavati.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "bibwewadi"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.47523,
+    "lng": 73.85625
+  },
+  "katraj": {
+    "neighbours": [
+      "bibwewadi",
+      "kondhwa",
+      "nibm",
+      "anandnagar",
+      "warje",
+      "sadashiv-peth",
+      "karve-nagar",
+      "wanowrie",
+      "deccan-gymkhana",
+      "pune-camp"
+    ],
+    "landmarks": [
+      "Rajiv Gandhi Zoological Park (Katraj Zoo)",
+      "Katraj Dairy",
+      "Katraj Lake",
+      "Bharati Vidyapeeth campus (Dhankawadi)",
+      "Katraj Chowk bus terminus",
+      "Katraj Tunnel on the Mumbai-Bengaluru Bypass"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "students",
+      "working-professionals"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Katraj, under pincode 411046, is the southern gateway of Pune, where the Pune-Satara Road meets the Mumbai-Bengaluru Bypass at the foot of the Katraj ghat. Housing is mixed: the old Katraj gaothan and the lanes around Katraj Chowk still have independent houses and small buildings, mid-rise cooperative societies line the Satara Road and the Katraj-Kondhwa Road, and newer gated projects have come up towards Ambegaon and Dhankawadi. Residents are a mix of long-settled local families, working professionals who use the bypass to reach Hinjawadi and Hadapsar, and a large student population attached to the Bharati Vidyapeeth campus at Dhankawadi and the nearby colleges. The Rajiv Gandhi Zoological Park, Katraj Dairy and Katraj Lake are the area's best-known landmarks, and the Katraj Chowk bus terminus is the main transport point. Bibwewadi lies to the north up the Satara Road, Kondhwa to the east along the Katraj-Kondhwa Road, and Anandnagar on Sinhagad Road to the north-west. Households here typically look for part-time cleaning and cooking help on fixed slots, and hostels and shared student flats create steady demand for cooking help.",
+    "commuteNotes": "Katraj Chowk is a major PMPML bus terminus with services along the Satara Road to Swargate and along the Katraj-Kondhwa Road; the Purple Line metro extension from Swargate to Katraj is approved and under construction, but no metro station serves Katraj at present. [VERIFY]",
+    "housingNotes": "Gaothan houses, cooperative societies and newer gated projects coexist, so entry rules vary: independent homes manage timings directly, while the societies along the Satara Road and the gated projects towards Ambegaon register helpers with security and issue passes.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-katraj-1",
+        "q": "Which areas near Katraj do you also serve?",
+        "a": "Bibwewadi up the Satara Road, Kondhwa along the Katraj-Kondhwa Road and Anandnagar on Sinhagad Road are all covered and share a nearby helper pool. NIBM, Warje and Sadashiv Peth are handled as separate localities.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "katraj"
+        ]
+      },
+      {
+        "id": "faq-pune-katraj-2",
+        "q": "Which pincode does the Katraj service area cover?",
+        "a": "Katraj falls under pincode 411046, covering the Katraj Chowk, Katraj Dairy and Satara Road belt at the foot of the ghat. Neighbouring Bibwewadi is 411043 and Kondhwa is 411041 and 411048.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "katraj"
+        ]
+      },
+      {
+        "id": "faq-pune-katraj-3",
+        "q": "Do helpers in Katraj need society gate passes?",
+        "a": "It depends on the building. Independent houses in the Katraj gaothan and around Katraj Chowk handle entry directly, while the cooperative societies on the Satara Road and the newer gated projects towards Ambegaon and Dhankawadi register domestic staff with security and issue passes.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "katraj"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.45368,
+    "lng": 73.85632
+  },
+  "aundh": {
+    "neighbours": [
+      "baner",
+      "pashan",
+      "pune-university-area",
+      "pimple-saudagar",
+      "balewadi",
+      "sus",
+      "shivajinagar",
+      "wakad",
+      "hinjawadi",
+      "pimpri",
+      "bavdhan",
+      "chinchwad"
+    ],
+    "landmarks": [
+      "Parihar Chowk",
+      "Westend Mall",
+      "Bremen Chowk",
+      "Aundh ITI Road",
+      "Aundh-Sangvi Bridge",
+      "DAV Public School Aundh"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [
+      "Aundh Gaon",
+      "Sangvi"
+    ],
+    "localIntro": "Aundh, pincode 411007, is one of Pune's older established western suburbs, and its housing reflects that. Lanes off Aundh ITI Road and around Sanewadi still hold independent bungalows and low-rise cooperative societies, while newer apartment complexes have filled in along the D.P. Road and towards Baner. Households here range from long-settled Maharashtrian families and retired couples to working professionals who chose Aundh for its access to the University Road and the Aundh-Ravet corridor. Parihar Chowk and Bremen Chowk are the everyday reference points, with Westend Mall and the shops along ITI Road serving as the commercial spine. Aundh sits next to Baner and Pashan on the Pune side and connects across the Mula river to Pimple Saudagar via the Aundh-Sangvi Bridge, so domestic help often moves between these areas. Demand for cooks, part-time cleaners and elder-care attendants is steady across the year, with a noticeable mix of full-day and morning-only requirements from the older residential pockets.",
+    "commuteNotes": "Helpers reach Aundh on PMPML buses along the Aundh-Ravet road and University Road, or on foot and two-wheeler from Sangvi and Aundh Gaon across the Aundh-Sangvi Bridge. The nearest Pune Metro stops are on the PCMC-Swargate line at Bopodi and Shivajinagar rather than inside Aundh itself.",
+    "housingNotes": "Aundh mixes older bungalows and small cooperative societies with newer gated apartment blocks; the bungalow pockets allow flexible timings and direct entry, while the gated complexes usually require a registered helper pass at the security desk.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-aundh-1",
+        "q": "Which areas near Aundh do you also serve?",
+        "a": "Besides Aundh (411007), we cover the adjoining localities of Baner, Pashan, Balewadi and the Pune University area on the city side, as well as Pimple Saudagar across the Aundh-Sangvi Bridge. Helpers often work in more than one of these areas on the same day.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "aundh"
+        ]
+      },
+      {
+        "id": "faq-pune-aundh-2",
+        "q": "Do helpers in Aundh need society gate passes?",
+        "a": "It depends on where you live. The newer gated societies along D.P. Road and towards Baner generally require the helper to be registered with security and issued a pass, while the older bungalow lanes near Aundh ITI Road and Sanewadi usually do not.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "aundh"
+        ]
+      },
+      {
+        "id": "faq-pune-aundh-3",
+        "q": "Is part-time cooking help available near Parihar Chowk and Bremen Chowk?",
+        "a": "Yes. Morning and evening cooking slots are among the most common requests from households around Parihar Chowk, Bremen Chowk and the ITI Road lanes, and many helpers in this pocket also take up cleaning work in the same building or nearby.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "aundh"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.56188,
+    "lng": 73.8102
+  },
+  "baner": {
+    "neighbours": [
+      "balewadi",
+      "aundh",
+      "pashan",
+      "sus",
+      "bavdhan",
+      "pimple-saudagar",
+      "wakad",
+      "hinjawadi",
+      "pune-university-area",
+      "pimpri",
+      "chinchwad"
+    ],
+    "landmarks": [
+      "Baner Road",
+      "Baner Hill",
+      "Baner-Pashan Link Road",
+      "Mumbai-Bangalore Highway",
+      "Pancard Club Road",
+      "Baner Gaon"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Baner Gaon"
+    ],
+    "localIntro": "Baner, pincode 411045, grew from a village on the Mumbai-Bangalore Highway into one of Pune's largest apartment belts within about two decades. Most households today live in gated societies of mid-rise and high-rise towers laid out along Baner Road, Pancard Club Road and the Baner-Pashan Link Road, with the older Baner Gaon settlement still sitting at the centre. Residents are largely working professionals and young families, many of whom commute west to Hinjawadi or east towards Shivajinagar, so weekday demand leans towards morning cooking and cleaning slots before office hours and full-day nanny support. Baner Hill provides a green edge on the southern side, and the highway service road connects the area to Balewadi and Wakad in minutes. Aundh lies immediately east and Pashan to the south, and helpers commonly work across these areas because the buildings and requirements are similar. The dense concentration of societies means most requests here involve registered entry and fixed timings agreed with the building management.",
+    "commuteNotes": "Helpers typically arrive by PMPML bus along Baner Road and the highway service road, or by shared auto and two-wheeler from Baner Gaon and adjoining Balewadi and Aundh. No metro line currently serves Baner directly. [VERIFY]",
+    "housingNotes": "Baner is dominated by gated apartment societies with manned gates and visitor management, so helpers usually need to be registered with the society and enter on a pass; Baner Gaon and a few older lanes are the exception with more flexible access.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-baner-1",
+        "q": "Which pincodes and nearby areas does the Baner service cover?",
+        "a": "Baner itself falls under pincode 411045. Coverage extends to adjoining Balewadi, Aundh, Pashan and Sus, and across the highway to Wakad, since helpers working in Baner societies commonly take assignments in these neighbouring areas as well.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "baner"
+        ]
+      },
+      {
+        "id": "faq-pune-baner-2",
+        "q": "How does helper entry work in Baner's gated societies?",
+        "a": "Most societies along Baner Road, Pancard Club Road and the Baner-Pashan Link Road use a security desk or visitor app for domestic help. You will usually need to register the helper's name and ID once, after which entry is by pass or app approval at the agreed timings.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "baner"
+        ]
+      },
+      {
+        "id": "faq-pune-baner-3",
+        "q": "Can I get early-morning help in Baner before I leave for Hinjawadi?",
+        "a": "Yes. Early cooking and cleaning slots are common in Baner because many residents commute to Hinjawadi or Balewadi offices, and helpers in the area are used to starting around 6 to 7 am. Fixed slots are easier to confirm than ad-hoc timings.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "baner"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.55899,
+    "lng": 73.78452
+  },
+  "balewadi": {
+    "neighbours": [
+      "baner",
+      "wakad",
+      "aundh",
+      "sus",
+      "pashan",
+      "hinjawadi",
+      "pimple-saudagar",
+      "pimpri",
+      "chinchwad",
+      "pune-university-area"
+    ],
+    "landmarks": [
+      "Shree Shiv Chhatrapati Sports Complex",
+      "Balewadi High Street",
+      "Mumbai-Bangalore Highway",
+      "Balewadi Phata",
+      "Balewadi Gaon"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Balewadi Gaon"
+    ],
+    "localIntro": "Balewadi, pincode 411062, sits between Baner and Wakad on the western edge of Pune city, and is best known for the Shree Shiv Chhatrapati Sports Complex and the restaurant and office cluster around Balewadi High Street. Housing is almost entirely gated apartment societies, many of them built in the last ten to fifteen years along the highway service road and the lanes leading off Balewadi Phata, with the original Balewadi Gaon still occupying the older core. Residents are mostly working professionals and young families who value the short drive to Hinjawadi and Baner, and a good share are tenants on corporate relocations, which creates a regular churn in household help requirements. Requests here cluster around cooking, daily cleaning and nanny support rather than elder care. Baner lies to the south-east and Wakad across the highway to the north-west, and the three areas function as one continuous residential belt for helpers, who often keep one morning slot in Balewadi and another in Baner within walking or short bus distance.",
+    "commuteNotes": "Helpers reach Balewadi by PMPML bus along the Mumbai-Bangalore Highway service road and Baner Road, or on foot from Balewadi Gaon and adjoining Baner. There is no metro station within Balewadi at present. [VERIFY]",
+    "housingNotes": "Nearly all residential stock in Balewadi is gated societies with security-managed entry, so helpers generally need one-time registration and a society pass, and timings are usually fixed with the building's visitor system.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-balewadi-1",
+        "q": "Which areas near Balewadi do you also serve?",
+        "a": "Coverage for Balewadi (411062) extends to Baner, Wakad, Aundh, Sus and Pashan, and across the highway to Hinjawadi. Helpers frequently combine a Balewadi assignment with one in Baner or Wakad because the societies are within short travel distance of each other.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "balewadi"
+        ]
+      },
+      {
+        "id": "faq-pune-balewadi-2",
+        "q": "I am new to Balewadi on a company transfer. How quickly can help start?",
+        "a": "Balewadi sees regular tenant turnover, so helpers are used to short-notice starts in the societies near Balewadi High Street and the Sports Complex. Once your society registration formalities are done, a fixed daily slot can usually begin within a few days.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "balewadi"
+        ]
+      },
+      {
+        "id": "faq-pune-balewadi-3",
+        "q": "Do helpers need a society pass in Balewadi?",
+        "a": "Almost always, yes. Balewadi's housing is dominated by gated societies along the highway service road and Balewadi Phata, and most require the helper's ID to be registered with security before a pass or app-based entry is issued.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "balewadi"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.58203,
+    "lng": 73.76898
+  },
+  "pashan": {
+    "neighbours": [
+      "sus",
+      "baner",
+      "aundh",
+      "bavdhan",
+      "pune-university-area",
+      "balewadi",
+      "kothrud",
+      "deccan-gymkhana",
+      "shivajinagar",
+      "karve-nagar",
+      "wakad",
+      "warje",
+      "pimple-saudagar"
+    ],
+    "landmarks": [
+      "Pashan Lake",
+      "National Chemical Laboratory (NCL)",
+      "IISER Pune",
+      "Pashan-Sus Road",
+      "Baner-Pashan Link Road",
+      "Pashan Gaon"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [
+      "Pashan Gaon",
+      "Sutarwadi"
+    ],
+    "localIntro": "Pashan, pincode 411061, lies on the western side of Pune between Baner and Bavdhan, and has a quieter, more institutional character than its neighbours because of the National Chemical Laboratory and IISER Pune campuses along Pashan Road. Housing is mixed: staff quarters and older cooperative societies near NCL, independent houses and bungalows around Pashan Gaon and Sutarwadi, and newer gated apartment projects along the Pashan-Sus Road and the Baner-Pashan Link Road. Households include scientists and academics, retired residents and a growing number of working professionals, so requests span full-day cooks, part-time cleaning and elder-care attendants in fairly even measure. Pashan Lake on the south-western edge is the area's main open space. Baner sits to the north, Sus to the west and Bavdhan beyond the hills to the south, and helpers from the Pashan Gaon side commonly work in both Pashan and Baner societies. The older bungalow lanes here tend to prefer long-standing arrangements with flexible timings rather than fixed society slots.",
+    "commuteNotes": "Helpers reach Pashan by PMPML bus along Pashan Road and the Pashan-Sus Road, or on foot and two-wheeler from Pashan Gaon and Sutarwadi. No metro line serves Pashan directly; the nearest stations are on the Vanaz-Ramwadi line towards Kothrud. [VERIFY]",
+    "housingNotes": "Pashan mixes institutional quarters, older independent houses and newer gated societies, so entry rules vary by pocket: the gated projects on Pashan-Sus Road require security registration and passes, while bungalow lanes near Pashan Gaon allow more flexible direct access.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-pashan-1",
+        "q": "Which areas near Pashan do you also serve?",
+        "a": "Service for Pashan (411061) extends to Sus, Baner, Aundh and Bavdhan, as well as the Pune University area and Balewadi. Helpers based around Pashan Gaon regularly take assignments in the adjoining Baner and Sus societies.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pashan"
+        ]
+      },
+      {
+        "id": "faq-pune-pashan-2",
+        "q": "Are elder-care attendants available for households near NCL and IISER?",
+        "a": "Yes. The older residential pockets around NCL, IISER Pune and Pashan Gaon have a meaningful number of retired residents, and daytime and full-day elder-care attendants are a regular requirement here alongside cooking and cleaning help.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pashan"
+        ]
+      },
+      {
+        "id": "faq-pune-pashan-3",
+        "q": "Do helpers in Pashan need society gate passes?",
+        "a": "In the newer gated societies along the Pashan-Sus Road and the Baner-Pashan Link Road, yes; the helper's ID is registered once and entry is through a pass or the society's visitor system. Independent houses in the older lanes generally do not require this.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pashan"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.53867,
+    "lng": 73.79525
+  },
+  "sus": {
+    "neighbours": [
+      "pashan",
+      "baner",
+      "balewadi",
+      "bavdhan",
+      "aundh",
+      "hinjawadi",
+      "wakad",
+      "pune-university-area",
+      "pimple-saudagar",
+      "kothrud"
+    ],
+    "landmarks": [
+      "Sus Road",
+      "Pashan-Sus Road",
+      "Sus Gaon",
+      "Mumbai-Bangalore Highway"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Sus Gaon"
+    ],
+    "localIntro": "Sus, pincode 411060, is a fast-growing suburb on the western fringe of Pune where the Pashan-Sus Road meets the Mumbai-Bangalore Highway. Until recently it was largely farmland and the Sus Gaon village settlement, and its housing today is dominated by large new gated townships and mid-rise societies that have come up along Sus Road and the highway edge in the last decade. Residents are predominantly working professionals and young families, many of whom chose Sus for its proximity to Hinjawadi and Baner while still being within reach of the city side via Pashan. Because much of the housing is new and on a large scale, requests here are mostly for daily cooking and cleaning slots and nanny support, and a number of societies have in-house helper registration systems. Pashan lies directly east, Baner to the north-east and Bavdhan across the hills to the south. Infrastructure such as roads and public transport is still catching up with the pace of construction, which affects how far helpers can travel for early morning slots. [VERIFY]",
+    "commuteNotes": "Helpers reach Sus mainly by PMPML bus along the Pashan-Sus Road, by shared auto from Pashan and Baner, or on foot from Sus Gaon; public transport frequency is lower than in Baner or Aundh. No metro serves the area. [VERIFY]",
+    "housingNotes": "Housing in Sus is almost entirely new gated societies and townships with controlled entry, so helpers are generally registered with security and work fixed slots; Sus Gaon is the main exception with more informal access.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-sus-1",
+        "q": "Which areas near Sus do you also serve?",
+        "a": "Service for Sus (411060) covers the adjoining areas of Pashan, Baner and Balewadi, and extends to Bavdhan and Hinjawadi. Helpers from Sus Gaon commonly work in societies along the Pashan-Sus Road and in nearby Pashan.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "sus"
+        ]
+      },
+      {
+        "id": "faq-pune-sus-2",
+        "q": "Is it harder to find helpers in Sus than in Baner?",
+        "a": "Availability is improving as the townships along Sus Road fill up, but public transport to Sus is still thinner than in Baner or Aundh, so fixed mid-morning slots are easier to confirm than very early ones. Households in societies with many registered helpers usually have the shortest wait.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "sus"
+        ]
+      },
+      {
+        "id": "faq-pune-sus-3",
+        "q": "Do helpers need a society pass in Sus townships?",
+        "a": "Yes, in nearly all cases. The gated townships and societies along Sus Road and the Pashan-Sus Road register domestic help with security and issue passes or app-based entry, so keep the helper's ID ready for registration when work begins.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "sus"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.55367,
+    "lng": 73.75273
+  },
+  "bavdhan": {
+    "neighbours": [
+      "kothrud",
+      "pashan",
+      "sus",
+      "warje",
+      "baner",
+      "karve-nagar",
+      "anandnagar",
+      "pune-university-area",
+      "aundh",
+      "deccan-gymkhana"
+    ],
+    "landmarks": [
+      "Chandni Chowk",
+      "Mumbai-Bangalore Highway (Katraj-Dehu Bypass)",
+      "NDA Road",
+      "Bavdhan Gaon",
+      "Chandni Chowk Flyover"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Bavdhan Gaon"
+    ],
+    "localIntro": "Bavdhan, pincode 411023, occupies the hilly stretch west of Kothrud where the Mumbai-Bangalore bypass passes Chandni Chowk. The area developed in the 2000s as gated apartment societies spread up the slopes on either side of the highway, and most households today live in mid-rise and high-rise complexes with the older Bavdhan Gaon settlement in the valley. Residents are mostly working professionals and families who chose Bavdhan for its access to Kothrud on one side and Hinjawadi and Baner via the bypass on the other. The Chandni Chowk junction and its flyover are the everyday landmark and the point where most buses stop, with NDA Road leading south-west towards Pashan Lake. Kothrud lies immediately east, Pashan to the north and Warje to the south-east, and helpers usually come from the Kothrud and Bavdhan Gaon side rather than from across the highway. Requests here are weighted towards daily cooking and cleaning, with a fair number of full-day nanny requirements from dual-income households in the larger societies.",
+    "commuteNotes": "Helpers reach Bavdhan by PMPML bus to Chandni Chowk and then on foot or by shared auto up the society lanes, or from Kothrud and Bavdhan Gaon by two-wheeler. The hilly layout means the walk from the highway can be longer than it looks on a map. No metro serves Bavdhan; the nearest is Vanaz on the Kothrud side. [VERIFY]",
+    "housingNotes": "Bavdhan is dominated by gated hillside societies with manned gates, so helpers generally need security registration and a pass; the slopes and distance from the bus stop mean fixed timings are easier to keep than short unplanned visits.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-bavdhan-1",
+        "q": "Which areas near Bavdhan do you also serve?",
+        "a": "Coverage for Bavdhan (411023) extends to Kothrud, Pashan, Sus and Warje, along with Karve Nagar and Baner. Helpers from the Kothrud and Bavdhan Gaon side commonly work in Bavdhan societies on both sides of the highway.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "bavdhan"
+        ]
+      },
+      {
+        "id": "faq-pune-bavdhan-2",
+        "q": "Do helpers in Bavdhan need society gate passes?",
+        "a": "Yes in most cases. Bavdhan's housing is mostly gated societies on the slopes around Chandni Chowk and NDA Road, and these usually require the helper's ID to be registered with security before a pass or app-based entry is issued.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "bavdhan"
+        ]
+      },
+      {
+        "id": "faq-pune-bavdhan-3",
+        "q": "Does the hilly layout affect helper timings in Bavdhan?",
+        "a": "It can. Many societies are a steep walk from the Chandni Chowk bus stop, so helpers prefer fixed daily slots over short ad-hoc visits, and early-morning slots are easier to confirm in societies closer to the highway or the Kothrud side.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "bavdhan"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.52095,
+    "lng": 73.77809
+  },
+  "wakad": {
+    "neighbours": [
+      "hinjawadi",
+      "pimple-saudagar",
+      "balewadi",
+      "baner",
+      "pimpri",
+      "chinchwad",
+      "sus",
+      "aundh",
+      "pashan"
+    ],
+    "landmarks": [
+      "Wakad Chowk",
+      "Datta Mandir Road",
+      "Bhumkar Chowk",
+      "Kalewadi Phata",
+      "Mumbai-Bangalore Highway",
+      "Kaspate Wasti"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Kalewadi",
+      "Kaspate Wasti"
+    ],
+    "localIntro": "Wakad, pincode 411058, is the PCMC-side suburb where the Mumbai-Bangalore Highway meets the road to Hinjawadi, and it has become one of the densest apartment belts in the Pune region. Households here live almost entirely in gated societies of mid-rise and high-rise towers packed along Datta Mandir Road, around Bhumkar Chowk and towards Kalewadi Phata, with the older Kaspate Wasti and Wakad Gaon settlements in between. Residents are largely IT and services professionals working in Hinjawadi and a large tenant population, so demand is steady for early-morning cooking, daily cleaning and nanny support, with frequent short-notice requests as tenants move in and out. Wakad Chowk on the highway is the main transit point. Hinjawadi lies to the west, Balewadi and Baner across the highway to the south-east, and Pimple Saudagar to the east, and helpers from the Kalewadi side commonly work across Wakad and Pimple Saudagar. The scale of the societies means most have formal helper registration and visitor apps.",
+    "commuteNotes": "Helpers reach Wakad by PMPML bus to Wakad Chowk, Bhumkar Chowk or Kalewadi Phata, and on foot or two-wheeler from Kalewadi and Kaspate Wasti. No metro station is operational in Wakad at present. [VERIFY]",
+    "housingNotes": "Wakad's stock is overwhelmingly large gated societies with security desks and visitor apps, so helpers need one-time registration and enter on a pass at agreed timings; the older wasti lanes are the only pockets with informal access.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-wakad-1",
+        "q": "Which areas near Wakad do you also serve?",
+        "a": "Service for Wakad (411058) extends to Hinjawadi, Pimple Saudagar, Balewadi and Baner, and to Pimpri and Chinchwad on the PCMC side. Helpers from Kalewadi and Kaspate Wasti routinely take assignments across Wakad and Pimple Saudagar in the same day.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "wakad"
+        ]
+      },
+      {
+        "id": "faq-pune-wakad-2",
+        "q": "I am a tenant in Wakad. Can help start at short notice?",
+        "a": "Usually, yes. Wakad has high tenant turnover in the societies along Datta Mandir Road and near Bhumkar Chowk, so helpers are used to short-notice starts once your society has registered them. Fixed daily slots are the easiest to confirm quickly.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "wakad"
+        ]
+      },
+      {
+        "id": "faq-pune-wakad-3",
+        "q": "Do helpers in Wakad need society gate passes?",
+        "a": "Almost always. The large gated societies in Wakad require the helper's ID to be registered with security, after which entry is through a pass or the society's visitor app at the agreed timings.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "wakad"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.60225,
+    "lng": 73.76445
+  },
+  "hinjawadi": {
+    "neighbours": [
+      "wakad",
+      "balewadi",
+      "baner",
+      "sus",
+      "pimple-saudagar",
+      "chinchwad",
+      "aundh",
+      "pimpri"
+    ],
+    "landmarks": [
+      "Rajiv Gandhi Infotech Park",
+      "Hinjawadi Phase 1",
+      "Infosys Phase 2",
+      "Wipro Circle",
+      "Maan Village",
+      "Marunji"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Maan",
+      "Marunji",
+      "Hinjawadi Gaon"
+    ],
+    "localIntro": "Hinjawadi, pincode 411057, is the IT hub on Pune's western edge, built around the three phases of the Rajiv Gandhi Infotech Park. Housing has followed the offices: households live in large gated townships and high-rise societies spread along the Phase 1 to Phase 3 road and around Maan and Marunji, with the original village settlements still occupying the older cores. Residents are overwhelmingly IT and services professionals, a large share of them tenants and young families, and household requirements reflect that: early-morning cooking before office hours, daily cleaning, and full-day nanny support for dual-income homes. Hinjawadi Phase 1 and the Wipro Circle area are the everyday reference points. Wakad lies immediately east across the highway, with Balewadi and Baner beyond, and helpers commonly come from the Maan, Marunji and Hinjawadi Gaon side rather than from the city. The townships here are among the largest in the region, and most run their own helper registration and visitor systems.",
+    "commuteNotes": "Helpers reach Hinjawadi by PMPML bus along the Hinjawadi road from Wakad Chowk, by shared auto from Wakad, or on foot and two-wheeler from Maan, Marunji and Hinjawadi Gaon. A metro line to Hinjawadi is under construction but not yet operational. [VERIFY]",
+    "housingNotes": "Hinjawadi housing is dominated by large gated townships and societies with formal security and visitor apps, so helpers need one-time registration and enter on a pass at fixed timings; the village cores of Maan and Marunji are the exception.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-hinjawadi-1",
+        "q": "Which areas near Hinjawadi do you also serve?",
+        "a": "Service for Hinjawadi (411057) covers Wakad, Balewadi, Baner and Sus, and extends to Pimple Saudagar and Chinchwad. Helpers from Maan and Marunji generally work within the Hinjawadi townships, while those from Wakad take assignments on both sides of the highway.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "hinjawadi"
+        ]
+      },
+      {
+        "id": "faq-pune-hinjawadi-2",
+        "q": "Can I get a cook in Hinjawadi before early office hours?",
+        "a": "Yes. Early cooking slots are the most common request from households near Hinjawadi Phase 1 and the Wipro Circle area, and helpers from the adjoining villages are used to 6 to 7 am starts. Fixed daily slots are easier to confirm than varying timings.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "hinjawadi"
+        ]
+      },
+      {
+        "id": "faq-pune-hinjawadi-3",
+        "q": "Do helpers need a township pass in Hinjawadi?",
+        "a": "Almost always. The large gated townships along the Phase 1 to Phase 3 road and around Maan and Marunji register domestic help with security and issue passes or app-based entry, so keep the helper's ID ready when work begins.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "hinjawadi"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.59275,
+    "lng": 73.73822
+  },
+  "pimpri": {
+    "neighbours": [
+      "chinchwad",
+      "pimple-saudagar",
+      "wakad",
+      "aundh",
+      "hinjawadi",
+      "balewadi",
+      "baner"
+    ],
+    "landmarks": [
+      "Pimpri Railway Station",
+      "PCMC Building",
+      "YCM Hospital",
+      "Pimpri Camp",
+      "Sant Tukaram Nagar Metro Station",
+      "Morwadi"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Pimpri, covering pincodes 411017, 411018 and 411034, is the administrative and commercial heart of the Pimpri-Chinchwad Municipal Corporation, with the PCMC Building, YCM Hospital and Pimpri Railway Station all within a short distance of each other. Its housing is mixed in a way that the newer western suburbs are not: older cooperative societies and independent houses in Pimpri Camp and Morwadi, industrial-era colonies around the station, and newer apartment complexes along the Pimpri-Chinchwad Link Road and towards Sant Tukaram Nagar. Households range from long-settled families and retired residents to working professionals employed in the industrial belt and in Hinjawadi, so requirements span full-day cooks, part-time cleaning and elder-care attendants. The Pune Metro's PCMC-Swargate line, with stations at PCMC and Sant Tukaram Nagar, has improved connections to Shivajinagar and the city centre. Chinchwad lies to the west, Pimple Saudagar to the south and Wakad beyond it, and helpers here tend to be based in the older settlements within Pimpri itself.",
+    "commuteNotes": "Helpers reach Pimpri by Pune Metro on the PCMC-Swargate line at PCMC or Sant Tukaram Nagar stations, by suburban train to Pimpri Railway Station, or by PMPML bus along the Pune-Mumbai Road; many also walk from the settlements around Morwadi and Pimpri Camp.",
+    "housingNotes": "Pimpri mixes older cooperative societies and independent houses with newer gated complexes, so entry rules vary: the newer societies near Sant Tukaram Nagar and the Link Road use security registration and passes, while Pimpri Camp and Morwadi lanes allow more flexible direct access.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-pimpri-1",
+        "q": "Which pincodes and nearby areas does the Pimpri service cover?",
+        "a": "Pimpri spans pincodes 411017, 411018 and 411034. Coverage extends to Chinchwad, Pimple Saudagar and Wakad within PCMC, and to Aundh on the Pune side across the river.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pimpri"
+        ]
+      },
+      {
+        "id": "faq-pune-pimpri-2",
+        "q": "Are elder-care attendants available in Pimpri Camp and Morwadi?",
+        "a": "Yes. The older residential pockets of Pimpri Camp and Morwadi have many long-settled families and retired residents, and daytime and full-day elder-care attendants are a regular requirement here alongside cooking and cleaning help.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pimpri"
+        ]
+      },
+      {
+        "id": "faq-pune-pimpri-3",
+        "q": "How do helpers reach societies near Sant Tukaram Nagar?",
+        "a": "Sant Tukaram Nagar has its own station on the Pune Metro's PCMC-Swargate line, and PMPML buses run along the Pune-Mumbai Road, so helpers can reach societies in this part of Pimpri from Shivajinagar and the city side as well as from within PCMC.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pimpri"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.62319,
+    "lng": 73.80199
+  },
+  "chinchwad": {
+    "neighbours": [
+      "pimpri",
+      "wakad",
+      "pimple-saudagar",
+      "hinjawadi",
+      "balewadi",
+      "baner",
+      "aundh"
+    ],
+    "landmarks": [
+      "Chinchwad Railway Station",
+      "Morya Gosavi Temple",
+      "Chapekar Chowk",
+      "Elpro City Square Mall",
+      "Chinchwad Station Road",
+      "Premlok Park"
+    ],
+    "housingProfile": "mixed",
+    "demandProfile": [
+      "families",
+      "working-professionals",
+      "elderly"
+    ],
+    "helperSourceAreas": [],
+    "localIntro": "Chinchwad, covering pincodes 411019 and 411033, is the older half of the Pimpri-Chinchwad twin city, with Chinchwad Gaon and the Morya Gosavi Temple on the Pavana river as its historic core. The housing mix reflects several decades of growth: independent houses and old cooperative societies around Chapekar Chowk and Chinchwad Station Road, industrial-era colonies near the railway station, and newer gated apartment complexes in Premlok Park, Bijlinagar and along the road towards Ravet, where Elpro City Square Mall has become a landmark. Households include long-settled Maharashtrian families and retired residents as well as working professionals employed in the MIDC belt and in Hinjawadi, so requests cover full-day cooking, part-time cleaning and elder-care in fairly even measure. Pimpri lies immediately east and Wakad to the south across the highway, with Pimple Saudagar beyond, and helpers in Chinchwad are largely drawn from the older settlements within the area. The suburban railway station and PMPML buses along the Pune-Mumbai Road are the main transit links.",
+    "commuteNotes": "Helpers reach Chinchwad by suburban train to Chinchwad Railway Station, by PMPML bus along the Pune-Mumbai Road and Chinchwad Station Road, or on foot from the older settlements around Chinchwad Gaon. The nearest Pune Metro station is PCMC on the PCMC-Swargate line, in adjoining Pimpri.",
+    "housingNotes": "Chinchwad mixes independent houses and older societies with newer gated complexes, so entry rules depend on the pocket: gated projects in Premlok Park and towards Ravet use security registration and passes, while the older lanes around Chapekar Chowk and Chinchwad Gaon allow flexible direct access.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-chinchwad-1",
+        "q": "Which pincodes and nearby areas does the Chinchwad service cover?",
+        "a": "Chinchwad spans pincodes 411019 and 411033. Coverage extends to Pimpri, Wakad and Pimple Saudagar within PCMC, and to Hinjawadi and Balewadi across the highway.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "chinchwad"
+        ]
+      },
+      {
+        "id": "faq-pune-chinchwad-2",
+        "q": "Do helpers in Chinchwad need society gate passes?",
+        "a": "Only in the newer gated complexes such as those in Premlok Park and along the road towards Elpro City Square Mall, where the helper's ID is registered with security. Independent houses and older societies near Chapekar Chowk and Chinchwad Station Road usually do not require this.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "chinchwad"
+        ]
+      },
+      {
+        "id": "faq-pune-chinchwad-3",
+        "q": "Is full-day cooking help available near Chinchwad Gaon?",
+        "a": "Yes. The older family homes around Chinchwad Gaon and the Morya Gosavi Temple area commonly request full-day cooks and long-standing arrangements, and helpers based in the nearby settlements are used to such timings.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "chinchwad"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.64035,
+    "lng": 73.79171
+  },
+  "pimple-saudagar": {
+    "neighbours": [
+      "aundh",
+      "wakad",
+      "pimpri",
+      "chinchwad",
+      "baner",
+      "balewadi",
+      "hinjawadi",
+      "pune-university-area",
+      "pashan",
+      "sus"
+    ],
+    "landmarks": [
+      "Kunal Icon Road",
+      "Shivar Garden Chowk",
+      "Govind Garden Chowk",
+      "Aundh-Sangvi Bridge",
+      "Rahatani",
+      "Pimple Nilakh"
+    ],
+    "housingProfile": "gated-societies",
+    "demandProfile": [
+      "working-professionals",
+      "families"
+    ],
+    "helperSourceAreas": [
+      "Sangvi",
+      "Rahatani"
+    ],
+    "localIntro": "Pimple Saudagar, pincode 411027, is a compact and densely built PCMC suburb across the Mula river from Aundh, and over the last fifteen years it has filled almost entirely with gated apartment societies. Most households live in mid-rise complexes along Kunal Icon Road and around Shivar Garden Chowk and Govind Garden Chowk, with the original gaothan and the adjoining settlements of Rahatani and Pimple Nilakh giving the area a more mixed edge. Residents are mainly working professionals and young families, many of whom commute to Hinjawadi via Wakad or to Aundh and the University Road across the Aundh-Sangvi Bridge, so requirements cluster around morning cooking and cleaning slots and full-day nanny support. Wakad lies to the west, Pimpri to the north and Aundh across the bridge to the south, and helpers from the Sangvi and Rahatani side commonly work in Pimple Saudagar and Aundh societies on the same day. The density of societies here means fixed timings and formal helper registration are the norm.",
+    "commuteNotes": "Helpers reach Pimple Saudagar by PMPML bus along the Aundh-Rahatani road and Kunal Icon Road, or on foot and two-wheeler from Sangvi across the Aundh-Sangvi Bridge and from Rahatani. No metro station serves Pimple Saudagar directly. [VERIFY]",
+    "housingNotes": "Pimple Saudagar is almost entirely gated societies with manned gates and visitor apps, so helpers need one-time security registration and a pass at the agreed timings; the gaothan and Rahatani lanes are the only pockets with informal access.",
+    "localFaqs": [
+      {
+        "id": "faq-pune-pimple-saudagar-1",
+        "q": "Which areas near Pimple Saudagar do you also serve?",
+        "a": "Service for Pimple Saudagar (411027) extends to Aundh across the Aundh-Sangvi Bridge, to Wakad and Pimpri within PCMC, and to Baner and Balewadi. Helpers from Sangvi and Rahatani routinely work in Pimple Saudagar and Aundh societies in the same day.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pimple-saudagar"
+        ]
+      },
+      {
+        "id": "faq-pune-pimple-saudagar-2",
+        "q": "Do helpers in Pimple Saudagar need society gate passes?",
+        "a": "Almost always. The gated societies along Kunal Icon Road and around Shivar Garden Chowk register domestic help with security, after which entry is by pass or through the society's visitor app at the agreed timings.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pimple-saudagar"
+        ]
+      },
+      {
+        "id": "faq-pune-pimple-saudagar-3",
+        "q": "Can I get morning help in Pimple Saudagar before commuting to Hinjawadi?",
+        "a": "Yes. Early cooking and cleaning slots are the most common request in Pimple Saudagar because many residents commute to Hinjawadi via Wakad, and helpers from the Sangvi and Rahatani side are used to 6 to 7 am starts. Fixed daily slots are easier to confirm than varying timings.",
+        "scope": "locality",
+        "tags": [
+          "pune",
+          "pimple-saudagar"
+        ]
+      }
+    ],
+    "sourceRefs": [
+      "general-knowledge-2026",
+      "OpenStreetMap Nominatim (ODbL 1.0)"
+    ],
+    "reviewed": false,
+    "lat": 18.59816,
+    "lng": 73.79777
+  }
+}

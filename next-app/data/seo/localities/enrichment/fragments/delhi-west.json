@@ -1,0 +1,387 @@
+{
+  "ramesh-nagar": {
+    "neighbours": ["rajouri-garden", "punjabi-bagh", "patel-nagar", "naraina", "tagore-garden", "tilak-nagar", "hari-nagar"],
+    "landmarks": ["Ramesh Nagar Metro Station (Blue Line)", "Kirti Nagar Furniture Market", "Raja Garden Chowk", "Mayapuri Industrial Area"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Basai Darapur"],
+    "localIntro": "Ramesh Nagar is one of West Delhi's established post-Partition colonies, laid out in compact plotted blocks that have largely been rebuilt as builder floors, with two or three households often sharing a single gate. The whole colony falls under pincode 110015 and sits on the Najafgarh Road corridor, with Ramesh Nagar Metro Station on the Blue Line at its doorstep and the Kirti Nagar Furniture Market and Raja Garden Chowk a short distance away. Households here are mostly settled families and working couples, many connected to trading businesses in the surrounding markets, so domestic help is in steady demand for cooking, cleaning and child care across morning and evening slots. Rajouri Garden lies just west along the metro line, Punjabi Bagh to the north and Patel Nagar to the east, and helpers and households move easily between these adjoining areas because the metro and Najafgarh Road buses link them directly.",
+    "commuteNotes": "Ramesh Nagar Metro Station on the Blue Line sits on Najafgarh Road, so helpers reach the colony directly by metro or by bus along the corridor. Many also walk in from the adjacent Basai Darapur and Moti Nagar side.",
+    "housingNotes": "Housing is dominated by builder floors on compact plots, so entry is managed by individual households rather than society gates, and helpers usually cover fixed morning or evening slots across two or three homes in the same lane.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-ramesh-nagar-1",
+        "q": "Which areas near Ramesh Nagar do you also serve?",
+        "a": "Along with Ramesh Nagar itself, service covers the adjoining West Delhi belt including Rajouri Garden, Tagore Garden, Punjabi Bagh and Patel Nagar. Helpers often work across these areas because they sit on the same Najafgarh Road and metro corridor.",
+        "scope": "locality",
+        "tags": ["delhi", "ramesh-nagar"]
+      },
+      {
+        "id": "faq-delhi-ramesh-nagar-2",
+        "q": "Which pincode does the Ramesh Nagar service cover?",
+        "a": "Ramesh Nagar falls under pincode 110015, and the service covers the residential blocks across this pincode. Homes near Ramesh Nagar Metro Station and the lanes off Najafgarh Road are all included.",
+        "scope": "locality",
+        "tags": ["delhi", "ramesh-nagar"]
+      },
+      {
+        "id": "faq-delhi-ramesh-nagar-3",
+        "q": "Do helpers in Ramesh Nagar need society gate passes?",
+        "a": "Mostly no, because Ramesh Nagar is a builder-floor colony where each household manages its own entry. Any ID or verification record is typically kept by the family directly rather than a society office.",
+        "scope": "locality",
+        "tags": ["delhi", "ramesh-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "punjabi-bagh": {
+    "neighbours": ["shakurpur", "paschim-vihar", "ramesh-nagar", "rajouri-garden", "patel-nagar", "pitampura", "ashok-vihar"],
+    "landmarks": ["Punjabi Bagh Club", "Bharat Darshan Park", "Maharaja Agrasen Hospital", "Punjabi Bagh West Metro Station (Pink Line)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Madipur"],
+    "localIntro": "Punjabi Bagh is a large plotted colony under pincode 110026, known for its wide internal roads and spacious independent kothis across the East and West blocks, though many plots have been rebuilt as multi-storey family homes. It is an established neighbourhood where joint families, business households and elderly residents commonly keep full-time or twice-a-day domestic help for cooking, housekeeping and elder support. The Punjabi Bagh Club on Ring Road, Bharat Darshan Park and Maharaja Agrasen Hospital are well-known local landmarks, and the Green Line's Punjabi Bagh station along with Punjabi Bagh West on the Pink Line keep the area well connected. Paschim Vihar lies to the west, Shakurpur just across to the north-east, and Rajouri Garden and Ramesh Nagar a short drive south. Helpers working in Punjabi Bagh often take up additional households in these adjoining colonies, and many live in the neighbouring Madipur area within walking distance.",
+    "commuteNotes": "Helpers reach Punjabi Bagh via the Green Line's Punjabi Bagh station, the Pink Line's Punjabi Bagh West station, or buses along Ring Road and Rohtak Road. Many walk in from the adjacent Madipur side.",
+    "housingNotes": "Independent kothis dominate, and larger homes often have space for full-time or live-in staff, so full-day arrangements are common here. Entry is managed by individual households rather than society gates.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-punjabi-bagh-1",
+        "q": "Which areas near Punjabi Bagh do you also serve?",
+        "a": "Service covers the neighbouring belt including Paschim Vihar, Shakurpur, Rajouri Garden and Ramesh Nagar. These areas sit directly around Punjabi Bagh, so the same pool of verified helpers typically serves them.",
+        "scope": "locality",
+        "tags": ["delhi", "punjabi-bagh"]
+      },
+      {
+        "id": "faq-delhi-punjabi-bagh-2",
+        "q": "Which pincode does the Punjabi Bagh service cover?",
+        "a": "Punjabi Bagh falls under pincode 110026, which includes both the East and West blocks of the colony. Homes around the Punjabi Bagh Club and along the Ring Road stretch are all within the service area.",
+        "scope": "locality",
+        "tags": ["delhi", "punjabi-bagh"]
+      },
+      {
+        "id": "faq-delhi-punjabi-bagh-3",
+        "q": "Can I arrange full-time or live-in help in Punjabi Bagh?",
+        "a": "Yes, full-time and live-in arrangements are common in Punjabi Bagh because the independent kothis here often have separate space for staff. Part-time morning and evening slots are also available for smaller households.",
+        "scope": "locality",
+        "tags": ["delhi", "punjabi-bagh"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "rajouri-garden": {
+    "neighbours": ["tagore-garden", "ramesh-nagar", "tilak-nagar", "hari-nagar", "punjabi-bagh", "janakpuri"],
+    "landmarks": ["Rajouri Garden Metro Station (Blue-Pink interchange)", "TDI Mall", "City Square Mall", "Rajouri Garden Main Market"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Khyala", "Raghubir Nagar"],
+    "localIntro": "Rajouri Garden, under pincode 110027, is among West Delhi's busiest residential and shopping hubs. The colony's plotted lanes are now dominated by builder floors, typically housing two to four families per plot, alongside a well-known market and food scene. Rajouri Garden Metro Station is an interchange between the Blue and Pink Lines, and TDI Mall and City Square Mall anchor the commercial stretch near Najafgarh Road and Ring Road. Households are largely settled families and working professionals who need part-time help for cleaning and cooking, with child-care demand from younger couples renting the newer floors. Tagore Garden adjoins it to the west, Ramesh Nagar to the east, and Tilak Nagar and Hari Nagar sit just beyond, so the same pool of verified helpers typically serves this whole belt. Many domestic workers walk in from the adjacent Khyala and Raghubir Nagar settlements, which keeps morning and evening slots easy to fill.",
+    "commuteNotes": "Rajouri Garden Metro Station connects both the Blue and Pink Lines, and buses run along Najafgarh Road and Ring Road. Many helpers walk in from the adjacent Khyala and Raghubir Nagar areas.",
+    "housingNotes": "Builder floors dominate the plotted lanes, so households manage helper entry directly without society gate formalities. Helpers commonly string together two or three homes in the same block across a morning or evening shift.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-rajouri-garden-1",
+        "q": "Which areas near Rajouri Garden do you also serve?",
+        "a": "The service extends across the adjoining belt including Tagore Garden, Ramesh Nagar, Tilak Nagar and Hari Nagar. These colonies sit along the same Blue Line corridor, so helpers move between them easily.",
+        "scope": "locality",
+        "tags": ["delhi", "rajouri-garden"]
+      },
+      {
+        "id": "faq-delhi-rajouri-garden-2",
+        "q": "Which pincode does the Rajouri Garden service cover?",
+        "a": "Rajouri Garden falls under pincode 110027, which it shares with neighbouring Tagore Garden. Homes across the main colony blocks and the lanes near Rajouri Garden Metro Station are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "rajouri-garden"]
+      },
+      {
+        "id": "faq-delhi-rajouri-garden-3",
+        "q": "Do helpers in Rajouri Garden need society gate passes?",
+        "a": "Usually not, since most homes here are builder floors where the family manages entry itself. Verification documents are shared with the household directly rather than a society office.",
+        "scope": "locality",
+        "tags": ["delhi", "rajouri-garden"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "tagore-garden": {
+    "neighbours": ["rajouri-garden", "tilak-nagar", "hari-nagar", "ramesh-nagar", "janakpuri", "punjabi-bagh"],
+    "landmarks": ["Tagore Garden Metro Station (Blue Line)", "Pacific Mall", "Subhash Nagar Metro Station", "Rajouri Garden Main Market"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Raghubir Nagar", "Khyala"],
+    "localIntro": "Tagore Garden shares pincode 110027 with neighbouring Rajouri Garden and has a similar plotted layout, with older single-storey houses steadily giving way to builder floors across its blocks and extension. Tagore Garden Metro Station on the Blue Line sits right on Najafgarh Road, and Pacific Mall, one of West Delhi's biggest malls, stands at the edge of the locality near Subhash Nagar, drawing visitors from across the city. Households here are mainly established families and working couples who engage part-time helpers for cleaning, cooking and elderly support in morning and evening shifts. Rajouri Garden adjoins the colony directly, Tilak Nagar continues along the metro corridor, and Hari Nagar lies to the south. Because these areas run into one another, households commonly find helpers who already work in the surrounding blocks, and many domestic workers walk in from the adjacent Raghubir Nagar settlement to cover their daily rounds.",
+    "commuteNotes": "Tagore Garden Metro Station on the Blue Line and buses along Najafgarh Road are the main routes in. Many helpers walk from the adjacent Raghubir Nagar and Khyala areas.",
+    "housingNotes": "The stock is mostly builder floors on plotted lanes, with entry handled by individual families rather than society gates. This makes flexible part-time timings easy to arrange across neighbouring homes.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-tagore-garden-1",
+        "q": "Which areas near Tagore Garden do you also serve?",
+        "a": "Service covers the adjoining colonies including Rajouri Garden, Tilak Nagar, Hari Nagar and Ramesh Nagar. They all sit along the same Najafgarh Road metro corridor, so helpers frequently work across more than one of them.",
+        "scope": "locality",
+        "tags": ["delhi", "tagore-garden"]
+      },
+      {
+        "id": "faq-delhi-tagore-garden-2",
+        "q": "Which pincode does the Tagore Garden service cover?",
+        "a": "Tagore Garden falls under pincode 110027, which it shares with Rajouri Garden. Homes across the main blocks, the extension and the lanes near Tagore Garden Metro Station are all covered.",
+        "scope": "locality",
+        "tags": ["delhi", "tagore-garden"]
+      },
+      {
+        "id": "faq-delhi-tagore-garden-3",
+        "q": "How do helpers usually reach homes in Tagore Garden?",
+        "a": "Most arrive via the Blue Line at Tagore Garden or Subhash Nagar stations, or by bus along Najafgarh Road. Helpers based in the adjacent Raghubir Nagar area typically walk to their assigned homes.",
+        "scope": "locality",
+        "tags": ["delhi", "tagore-garden"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "naraina": {
+    "neighbours": ["ramesh-nagar", "patel-nagar", "pusa", "delhi-cantt", "nangal-raya", "rajouri-garden", "hari-nagar"],
+    "landmarks": ["Naraina Vihar Metro Station (Pink Line)", "Naraina Industrial Area", "Loha Mandi iron market", "Mayapuri Chowk"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Naraina Village"],
+    "localIntro": "Naraina, under pincode 110028, combines the planned residential blocks of Naraina Vihar with the older Naraina Village and one of Delhi's larger industrial areas, giving it a genuinely mixed character. Housing ranges from plotted homes and builder floors in Naraina Vihar to denser village lanes, so domestic-help requirements vary from full-day support in family homes to short daily cleaning slots. Naraina Vihar Metro Station on the Pink Line connects the area towards Rajouri Garden on one side and Delhi Cantt and South Delhi on the other, while the Naraina Industrial Area and the Loha Mandi iron market keep the locality busy through the week. Ramesh Nagar and Patel Nagar lie to the north, Delhi Cantt to the south and the Pusa institutional area to the north-east. Most helpers serving Naraina Vihar live close by, with Naraina Village itself the most common base for experienced domestic workers walking to nearby homes.",
+    "commuteNotes": "Naraina Vihar Metro Station on the Pink Line and buses along Ring Road are the main routes in. Many helpers walk over from Naraina Village, which sits right beside the residential blocks.",
+    "housingNotes": "Naraina Vihar has plotted houses and builder floors where families manage entry directly, while the village side has denser self-built homes. Gate-pass formalities are rare, so timings stay flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-naraina-1",
+        "q": "Which areas near Naraina do you also serve?",
+        "a": "Service extends to the surrounding areas including Ramesh Nagar, Patel Nagar, Delhi Cantt and Nangal Raya. The Pink Line and Ring Road connect Naraina to these neighbours directly.",
+        "scope": "locality",
+        "tags": ["delhi", "naraina"]
+      },
+      {
+        "id": "faq-delhi-naraina-2",
+        "q": "Which pincode does the Naraina service cover?",
+        "a": "Naraina falls under pincode 110028, which covers Naraina Vihar's residential blocks as well as Naraina Village. Homes near Naraina Vihar Metro Station and along the industrial-area edge are included.",
+        "scope": "locality",
+        "tags": ["delhi", "naraina"]
+      },
+      {
+        "id": "faq-delhi-naraina-3",
+        "q": "Where do domestic helpers in Naraina usually come from?",
+        "a": "Most helpers working in Naraina Vihar live in or around Naraina Village, so commutes are short and often on foot. This makes early-morning and evening slots practical for working households.",
+        "scope": "locality",
+        "tags": ["delhi", "naraina"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "janakpuri": {
+    "neighbours": ["tilak-nagar", "uttam-nagar", "hari-nagar", "nangal-raya", "dwarka", "tagore-garden", "mahavir-enclave"],
+    "landmarks": ["Janakpuri West Metro Station (Blue-Magenta interchange)", "Janakpuri District Centre", "Dilli Haat Janakpuri", "Mata Chanan Devi Hospital"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Sagarpur", "Uttam Nagar"],
+    "localIntro": "Janakpuri, under pincode 110058, is one of West Delhi's largest planned colonies, with DDA flats, plotted houses and rebuilt builder floors spread across its lettered blocks. It is a settled, family-dominated neighbourhood with a sizeable elderly population, so demand covers cooking, housekeeping and elder-care support alongside part-time cleaning for working couples. Janakpuri West Metro Station is an interchange between the Blue and Magenta Lines, and the Janakpuri District Centre, Dilli Haat Janakpuri and Mata Chanan Devi Hospital are landmarks most residents use every week. Tilak Nagar adjoins the colony to the north, Hari Nagar to the east and Uttam Nagar to the west, with Dwarka a short drive to the south-west. Helpers typically reach Janakpuri by metro or on foot from the dense Sagarpur and Uttam Nagar lanes nearby, and many serve two or three households within the same block cluster each day.",
+    "commuteNotes": "The Blue Line runs through Janakpuri with the Janakpuri West interchange also serving the Magenta Line, and buses cover the internal block roads. Many helpers walk in from the adjacent Sagarpur and Uttam Nagar side.",
+    "housingNotes": "The mix of DDA flats, plotted houses and builder floors means entry norms vary: DDA pockets and apartment blocks may keep a visitor record at the gate, while plotted homes deal with helpers directly.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-janakpuri-1",
+        "q": "Which areas near Janakpuri do you also serve?",
+        "a": "Service covers the adjoining areas including Tilak Nagar, Hari Nagar, Uttam Nagar and Dwarka. These localities surround Janakpuri and share the same metro and road corridors.",
+        "scope": "locality",
+        "tags": ["delhi", "janakpuri"]
+      },
+      {
+        "id": "faq-delhi-janakpuri-2",
+        "q": "Which pincode does the Janakpuri service cover?",
+        "a": "Janakpuri falls under pincode 110058, covering its residential blocks and the area around the District Centre. Homes near Janakpuri West Metro Station and Dilli Haat Janakpuri are all within the service area.",
+        "scope": "locality",
+        "tags": ["delhi", "janakpuri"]
+      },
+      {
+        "id": "faq-delhi-janakpuri-3",
+        "q": "Do helpers in Janakpuri need gate passes or entry records?",
+        "a": "In DDA pockets and gated apartment clusters, the gate may keep a visitor or helper record, so carrying ID helps. In the plotted-house lanes, families manage entry themselves without formal passes.",
+        "scope": "locality",
+        "tags": ["delhi", "janakpuri"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "tilak-nagar": {
+    "neighbours": ["hari-nagar", "janakpuri", "tagore-garden", "rajouri-garden", "uttam-nagar", "ramesh-nagar"],
+    "landmarks": ["Tilak Nagar Metro Station (Blue Line)", "Tilak Nagar Main Market", "Pacific Mall (adjacent, Tagore Garden)"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Khyala"],
+    "localIntro": "Tilak Nagar, under pincode 110018, is a busy post-Partition colony best known for its wedding-shopping market, where lanes of plotted houses have largely been rebuilt into builder floors. Households are predominantly settled families along with working couples renting the newer floors, and most engage part-time help for cleaning and cooking across two daily shifts. Tilak Nagar Metro Station on the Blue Line sits on the main Najafgarh Road corridor, the Tilak Nagar Main Market draws shoppers from across Delhi, and Pacific Mall is just one stop away at Tagore Garden. Hari Nagar adjoins the colony to the south, Janakpuri lies to the west and Rajouri Garden a couple of stops to the east, so helpers move between these areas without long commutes. Many domestic workers serving Tilak Nagar homes walk in from the adjacent Khyala settlement, which keeps early-morning slots reliable even for households with fixed office timings.",
+    "commuteNotes": "Tilak Nagar Metro Station on the Blue Line and buses along Najafgarh Road bring helpers in from across West Delhi. Many walk from the adjacent Khyala area.",
+    "housingNotes": "Builder floors dominate, so households handle helper entry directly and timings stay flexible. Helpers commonly cover several homes within the same block during a single shift.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-tilak-nagar-1",
+        "q": "Which areas near Tilak Nagar do you also serve?",
+        "a": "Service extends to the surrounding belt including Hari Nagar, Janakpuri, Tagore Garden and Rajouri Garden. These colonies connect to Tilak Nagar along the same Blue Line and Najafgarh Road corridor.",
+        "scope": "locality",
+        "tags": ["delhi", "tilak-nagar"]
+      },
+      {
+        "id": "faq-delhi-tilak-nagar-2",
+        "q": "Which pincode does the Tilak Nagar service cover?",
+        "a": "Tilak Nagar falls under pincode 110018. Homes across the colony's blocks, including the lanes around Tilak Nagar Metro Station and the Main Market, are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "tilak-nagar"]
+      },
+      {
+        "id": "faq-delhi-tilak-nagar-3",
+        "q": "Do helpers in Tilak Nagar need society gate passes?",
+        "a": "Generally no, because the housing here is mostly builder floors without society gates. Families keep verification details themselves and manage entry at their own door.",
+        "scope": "locality",
+        "tags": ["delhi", "tilak-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "nangloi": {
+    "neighbours": ["paschim-vihar", "kanjhawala", "rohini", "uttam-nagar", "najafgarh", "punjabi-bagh"],
+    "landmarks": ["Nangloi Metro Station (Green Line)", "Nangloi Railway Station", "Nangloi Chowk"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Nangloi, under pincode 110041, is a dense outer-West Delhi hub on Rohtak Road where most housing is self-built independent homes in regularised colonies, often with one extended family spread across two or three floors of the same house. It is a fast-growing area of working families, with demand concentrated in part-time cleaning and cooking slots rather than full-time live-in help. Nangloi Metro Station on the Green Line and the Nangloi Railway Station connect the area to central Delhi, and Nangloi Chowk is the locality's main junction, with the Nangloi-Najafgarh Road heading south. Paschim Vihar lies to the east along Rohtak Road, Kanjhawala to the north-west and Najafgarh and Uttam Nagar to the south. Because Nangloi's own colonies house a large working population, most households here find helpers who live within the area itself, keeping commutes short and timings dependable.",
+    "commuteNotes": "The Green Line's Nangloi station and buses along Rohtak Road are the main routes, and the Nangloi-Najafgarh Road links the area southward. Most helpers live within Nangloi's own colonies and reach homes on foot or by shared auto.",
+    "housingNotes": "Self-built independent houses dominate, so there are no society gates or pass systems and families set timings directly with helpers. Multi-floor family homes often need a single helper covering the whole house.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-nangloi-1",
+        "q": "Which areas near Nangloi do you also serve?",
+        "a": "Service covers the neighbouring areas including Paschim Vihar, Kanjhawala, Uttam Nagar and Najafgarh. Rohtak Road and the Nangloi-Najafgarh Road connect these localities directly to Nangloi.",
+        "scope": "locality",
+        "tags": ["delhi", "nangloi"]
+      },
+      {
+        "id": "faq-delhi-nangloi-2",
+        "q": "Which pincode does the Nangloi service cover?",
+        "a": "Nangloi falls under pincode 110041. Homes across its colonies, from the lanes near Nangloi Chowk to those around the Green Line metro station, are included.",
+        "scope": "locality",
+        "tags": ["delhi", "nangloi"]
+      },
+      {
+        "id": "faq-delhi-nangloi-3",
+        "q": "Do helpers in Nangloi need gate passes?",
+        "a": "No, since the area is made up of independent houses in regularised colonies without society gates. Entry and timings are settled directly between the household and the helper.",
+        "scope": "locality",
+        "tags": ["delhi", "nangloi"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "uttam-nagar": {
+    "neighbours": ["janakpuri", "dwarka", "najafgarh", "mahavir-enclave", "nangloi", "tilak-nagar", "hari-nagar"],
+    "landmarks": ["Uttam Nagar East Metro Station (Blue Line)", "Uttam Nagar West Metro Station (Blue Line)", "Dwarka Mor Metro Station", "Najafgarh Road"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Mohan Garden", "Bindapur"],
+    "localIntro": "Uttam Nagar, under pincode 110059, is one of West Delhi's most densely populated residential belts, with narrow lanes of affordable builder floors stretching from the Najafgarh Road metro corridor deep into colonies such as Mohan Garden and Bindapur. Households are largely young families and working couples in rented floors, so demand runs high for hourly cleaning, cooking and child-care help. The Blue Line serves the area through the Uttam Nagar East and Uttam Nagar West stations, with Dwarka Mor station at its southern edge. Janakpuri adjoins Uttam Nagar to the east, Dwarka lies to the south-west and Najafgarh to the west. A large number of domestic workers themselves live within Uttam Nagar's colonies, so households here usually find helpers from the immediate neighbourhood with very short commutes, and it is common for a helper to cover several homes in the same lane through the day.",
+    "commuteNotes": "The Blue Line's Uttam Nagar East, Uttam Nagar West and Dwarka Mor stations serve the belt, with buses and shared autos on Najafgarh Road. Most helpers live locally in colonies like Mohan Garden and Bindapur and walk to work.",
+    "housingNotes": "Dense, affordable builder floors dominate, with no society gates, so families manage entry and timings directly. Short distances mean helpers can take up multiple nearby households in a single day.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-uttam-nagar-1",
+        "q": "Which areas near Uttam Nagar do you also serve?",
+        "a": "Service covers the surrounding areas including Janakpuri, Dwarka, Najafgarh and Mahavir Enclave. The Blue Line and Najafgarh Road connect all of these to Uttam Nagar.",
+        "scope": "locality",
+        "tags": ["delhi", "uttam-nagar"]
+      },
+      {
+        "id": "faq-delhi-uttam-nagar-2",
+        "q": "Which pincode does the Uttam Nagar service cover?",
+        "a": "Uttam Nagar falls under pincode 110059, which takes in the colonies around the Uttam Nagar East and West metro stations, including the Mohan Garden and Bindapur belt.",
+        "scope": "locality",
+        "tags": ["delhi", "uttam-nagar"]
+      },
+      {
+        "id": "faq-delhi-uttam-nagar-3",
+        "q": "Where do helpers working in Uttam Nagar usually live?",
+        "a": "Most helpers live within Uttam Nagar itself, in colonies such as Mohan Garden and Bindapur, so commutes are short and often on foot. This makes flexible and early-morning slots easier to arrange.",
+        "scope": "locality",
+        "tags": ["delhi", "uttam-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "paschim-vihar": {
+    "neighbours": ["punjabi-bagh", "nangloi", "pitampura", "shakur-basti", "rohini", "shakurpur"],
+    "landmarks": ["Paschim Vihar East Metro Station (Green Line)", "Paschim Vihar West Metro Station (Green Line)", "Peeragarhi Chowk", "Jwala Heri Market"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Peeragarhi", "Madipur"],
+    "localIntro": "Paschim Vihar, under pincode 110063, is a planned West Delhi colony where DDA flats, group-housing societies and rebuilt plotted homes sit side by side, giving it a genuinely mixed housing profile. Its settled families, retired residents and working professionals keep steady demand for cooks, housekeepers and elder-care attendants. The Green Line runs along its Rohtak Road edge with the Paschim Vihar East and Paschim Vihar West stations, Peeragarhi Chowk anchors the junction with the Outer Ring Road, and Jwala Heri Market is the locality's best-known shopping stretch. Punjabi Bagh lies to the east, Nangloi to the west along Rohtak Road, and Pitampura and Shakur Basti further north-east. Apartment societies here typically ask for gate entries and helper verification, while the plotted lanes deal with helpers directly, and many domestic workers walk in from the adjacent Peeragarhi and Madipur settlements to cover morning and evening shifts.",
+    "commuteNotes": "Helpers arrive via the Green Line's Paschim Vihar East, Paschim Vihar West and Peeragarhi stations, or by bus along Rohtak Road and the Outer Ring Road. Many walk in from the adjacent Peeragarhi and Madipur areas.",
+    "housingNotes": "The mix of DDA flats, society apartments and plotted homes means gated blocks usually require gate passes and entry records for helpers, while independent lanes keep timings flexible and informal.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-paschim-vihar-1",
+        "q": "Which areas near Paschim Vihar do you also serve?",
+        "a": "Service covers the adjoining areas including Punjabi Bagh, Nangloi, Pitampura and Shakur Basti. Rohtak Road and the Outer Ring Road link these localities directly to Paschim Vihar.",
+        "scope": "locality",
+        "tags": ["delhi", "paschim-vihar"]
+      },
+      {
+        "id": "faq-delhi-paschim-vihar-2",
+        "q": "Do helpers in Paschim Vihar need society gate passes?",
+        "a": "In the group-housing societies and DDA apartment pockets, yes - gates usually keep an entry record and may ask for a pass or ID for regular helpers. In the plotted-house lanes, families manage entry themselves.",
+        "scope": "locality",
+        "tags": ["delhi", "paschim-vihar"]
+      },
+      {
+        "id": "faq-delhi-paschim-vihar-3",
+        "q": "Which pincode does the Paschim Vihar service cover?",
+        "a": "Paschim Vihar falls under pincode 110063. Homes across its blocks, from the Green Line stations on the Rohtak Road side to the lanes around Jwala Heri Market, are covered.",
+        "scope": "locality",
+        "tags": ["delhi", "paschim-vihar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "hari-nagar": {
+    "neighbours": ["tilak-nagar", "janakpuri", "tagore-garden", "rajouri-garden", "nangal-raya", "ramesh-nagar"],
+    "landmarks": ["Deen Dayal Upadhyay Hospital", "Hari Nagar Ghanta Ghar", "Tihar Jail complex (Jail Road)", "Subhash Nagar Metro Station (adjacent)"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Khyala"],
+    "localIntro": "Hari Nagar, under pincode 110064, is a settled West Delhi colony arranged in lettered blocks along Jail Road, where original plotted houses have mostly been rebuilt as builder floors housing two or three families each. The locality is best known for the Deen Dayal Upadhyay Hospital, the Hari Nagar Ghanta Ghar clock-tower crossing, and its position beside the Tihar Jail complex on Jail Road. Households are mainly long-settled families and working couples, generating consistent demand for part-time cleaning, cooking and elder support across morning and evening shifts. Tilak Nagar adjoins the colony to the north, Janakpuri lies to the west and Tagore Garden and Rajouri Garden a little further north-east. There is no metro station inside Hari Nagar itself, so helpers usually arrive by bus along Jail Road or walk from the Blue Line stations at Tilak Nagar and Subhash Nagar, with the adjacent Khyala area a common base for domestic workers serving these blocks.",
+    "commuteNotes": "Hari Nagar has no metro station of its own; helpers typically come by bus along Jail Road or walk from the Blue Line stations at Tilak Nagar and Subhash Nagar. Many are based in the adjacent Khyala area.",
+    "housingNotes": "Builder floors on plotted blocks dominate, so there are no society gates and households arrange entry and timings directly. Helpers often serve two or three floors within the same building.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-hari-nagar-1",
+        "q": "Which areas near Hari Nagar do you also serve?",
+        "a": "Service extends to the surrounding colonies including Tilak Nagar, Janakpuri, Tagore Garden and Rajouri Garden. These areas sit directly around Hari Nagar along the Jail Road and Najafgarh Road corridors.",
+        "scope": "locality",
+        "tags": ["delhi", "hari-nagar"]
+      },
+      {
+        "id": "faq-delhi-hari-nagar-2",
+        "q": "Which pincode does the Hari Nagar service cover?",
+        "a": "Hari Nagar falls under pincode 110064, covering its lettered blocks along Jail Road. Homes near the Ghanta Ghar crossing and around Deen Dayal Upadhyay Hospital are all included.",
+        "scope": "locality",
+        "tags": ["delhi", "hari-nagar"]
+      },
+      {
+        "id": "faq-delhi-hari-nagar-3",
+        "q": "How do helpers reach Hari Nagar without a metro station in the colony?",
+        "a": "Most come by bus along Jail Road or walk from the nearby Blue Line stations at Tilak Nagar and Subhash Nagar. Helpers based in the adjacent Khyala area reach homes on foot.",
+        "scope": "locality",
+        "tags": ["delhi", "hari-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

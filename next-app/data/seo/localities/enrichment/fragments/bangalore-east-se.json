@@ -1,0 +1,387 @@
+{
+  "whitefield": {
+    "neighbours": ["hoodi", "marathahalli", "ramamurthy-nagar", "bellandur", "sarjapur-road", "indiranagar"],
+    "landmarks": ["International Tech Park Bangalore (ITPL)", "Phoenix Marketcity", "VR Bengaluru", "Nexus Shantiniketan Mall", "Whitefield (Kadugodi) Metro Station", "Varthur Lake"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Kadugodi", "Nallurhalli", "Varthur"],
+    "localIntro": "Whitefield, spread across pincodes 560066 and 560049 in east Bangalore, grew from a quiet Anglo-Indian settlement into one of the city's largest IT and residential hubs around the International Tech Park (ITPL). Housing here is dominated by large gated societies and township-style apartment complexes along Whitefield Main Road, Varthur Road and ITPL Main Road, with a smaller stock of villas and independent homes in the older Whitefield and Kadugodi pockets. Residents are mostly working professionals and young families, many of them relocated from other cities, with dual-income households that rely on regular domestic help. Phoenix Marketcity, VR Bengaluru and Nexus Shantiniketan serve as the main shopping and leisure anchors, and the Purple Line metro now runs through the area up to the Whitefield (Kadugodi) terminal. Hoodi lies to the north-west, Marathahalli to the west along the Outer Ring Road corridor, and Bellandur to the south-west. Households here typically look for full-time cooks, part-time cleaning help and nannies who can work within society entry rules and keep consistent shifts.",
+    "commuteNotes": "The Purple Line metro serves the area with stations at Hoodi, Nallurhalli, Pattandur Agrahara, Kadugodi Tree Park and Whitefield (Kadugodi), and BMTC buses run along Whitefield Main Road and Varthur Road. Many helpers walk or take short bus rides in from Kadugodi, Nallurhalli, Immadihalli and Varthur.",
+    "housingNotes": "Large gated townships dominate, so helpers are usually registered with the apartment association and carry a society entry pass or app-based visitor approval. The older villa pockets and independent houses around Kadugodi handle entry directly and allow more flexible timings.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-whitefield-1",
+        "q": "Which areas near Whitefield do you also serve?",
+        "a": "Hoodi, Marathahalli and Ramamurthy Nagar are the closest localities on the Whitefield side and share the same helper pool. Bellandur and Sarjapur Road further south-west are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["bangalore", "whitefield"]
+      },
+      {
+        "id": "faq-bangalore-whitefield-2",
+        "q": "Which pincodes does the Whitefield service area cover?",
+        "a": "Whitefield service covers pincodes 560066 and 560049, which take in the ITPL side, Kadugodi and the Varthur Road stretch. Adjacent Hoodi falls under 560048 and Marathahalli under 560037.",
+        "scope": "locality",
+        "tags": ["bangalore", "whitefield"]
+      },
+      {
+        "id": "faq-bangalore-whitefield-3",
+        "q": "Do helpers in Whitefield need society gate passes?",
+        "a": "Most Whitefield homes are in gated townships along Whitefield Main Road and Varthur Road, and these societies require the helper to be registered at the gate or through the association's visitor app. Households in the older independent houses near Kadugodi manage entry themselves.",
+        "scope": "locality",
+        "tags": ["bangalore", "whitefield"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "marathahalli": {
+    "neighbours": ["bellandur", "whitefield", "hoodi", "indiranagar", "domlur", "ramamurthy-nagar", "sarjapur-road"],
+    "landmarks": ["Marathahalli Bridge", "Innovative Multiplex", "Kundalahalli Gate", "Outer Ring Road", "Old Airport Road"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Munnekolala", "Doddanekundi"],
+    "localIntro": "Marathahalli, under pincode 560037, sits at the junction of the Outer Ring Road and Old Airport Road in east Bangalore, and is best known to most residents for the Marathahalli Bridge flyover and the long row of factory-outlet garment stores along its main road. Housing is mixed: older independent houses and builder-built apartment blocks in the interior lanes of Marathahalli village and Munnekolala, alongside larger gated complexes closer to the Outer Ring Road. The population is dominated by working professionals employed in the tech parks along the Ring Road, with a large share of shared flats and paying-guest accommodation, plus a growing number of young families. Innovative Multiplex and Kundalahalli Gate are the everyday reference points for directions. Bellandur lies immediately south along the Ring Road, Whitefield and Hoodi to the east, and Indiranagar to the west via Old Airport Road. Demand here leans towards part-time cleaning and cooking help on flexible schedules that suit long office hours, with full-day help requested mainly by families in the larger complexes.",
+    "commuteNotes": "Marathahalli has no operational metro station of its own, so helpers rely on the dense BMTC bus services along the Outer Ring Road and Old Airport Road that stop at Marathahalli Bridge. Many walk in from Munnekolala and Doddanekundi, which adjoin the main residential lanes.",
+    "housingNotes": "The interior lanes are mostly independent houses and small builder apartments where entry is arranged directly with the household, while the gated complexes near the Ring Road require helper registration with security. Timings are generally flexible in the smaller buildings.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-marathahalli-1",
+        "q": "Which areas near Marathahalli do you also serve?",
+        "a": "Bellandur to the south along the Outer Ring Road and Whitefield and Hoodi to the east are the closest localities served. Indiranagar and Domlur on the Old Airport Road side are covered separately.",
+        "scope": "locality",
+        "tags": ["bangalore", "marathahalli"]
+      },
+      {
+        "id": "faq-bangalore-marathahalli-2",
+        "q": "Which pincode does the Marathahalli service area cover?",
+        "a": "Marathahalli falls under pincode 560037, which includes Munnekolala and the lanes off the Marathahalli main road. Neighbouring Bellandur is 560103 and Whitefield is 560066 and 560049.",
+        "scope": "locality",
+        "tags": ["bangalore", "marathahalli"]
+      },
+      {
+        "id": "faq-bangalore-marathahalli-3",
+        "q": "Do helpers in Marathahalli need society gate passes?",
+        "a": "It depends on the building. Independent houses and small builder apartments in the interior lanes have no formal pass system, whereas the gated complexes towards the Outer Ring Road ask households to register the helper with security before the first visit.",
+        "scope": "locality",
+        "tags": ["bangalore", "marathahalli"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "hoodi": {
+    "neighbours": ["whitefield", "ramamurthy-nagar", "marathahalli", "bellandur", "indiranagar", "domlur"],
+    "landmarks": ["Hoodi Circle", "Hoodi Metro Station", "International Tech Park Bangalore (ITPL)", "Phoenix Marketcity", "KR Puram Railway Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Hoodi, pincode 560048, is a fast-growing residential pocket between Whitefield and KR Puram in east Bangalore, best known for Hoodi Circle on Whitefield Main Road and its Purple Line metro station. It sits next door to the ITPL tech park and the Mahadevapura industrial belt, so most households are working professionals in their twenties and thirties, along with young families drawn by the metro connectivity. Housing is mixed: large gated apartment complexes and township projects on the main roads, and older independent houses and small builder apartment blocks in the lanes of Hoodi village and Garudacharpalya. Phoenix Marketcity in Mahadevapura is the nearest large mall, and KR Puram railway station is a short ride away for outstation travel. Whitefield lies to the east, Ramamurthy Nagar to the north beyond Old Madras Road, and Marathahalli to the south-west. Households here usually want part-time cleaning and cooking help timed around office commutes, with steady demand for full-day nannies among dual-income families in the gated complexes.",
+    "commuteNotes": "Hoodi Metro Station and Garudacharpalya Metro Station on the Purple Line serve the area directly, and BMTC buses run along Whitefield Main Road through Hoodi Circle. Helpers also walk in from the older village lanes around Hoodi and Garudacharpalya.",
+    "housingNotes": "The gated complexes on the main roads require helper registration and society passes, while the independent houses and small builder blocks in Hoodi village lanes arrange entry directly with the household and keep timings flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-hoodi-1",
+        "q": "Which areas near Hoodi do you also serve?",
+        "a": "Whitefield to the east and Ramamurthy Nagar to the north are the closest localities and draw on the same helper pool. Marathahalli and Bellandur along the Outer Ring Road are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["bangalore", "hoodi"]
+      },
+      {
+        "id": "faq-bangalore-hoodi-2",
+        "q": "Which pincode does the Hoodi service area cover?",
+        "a": "Hoodi falls under pincode 560048, which covers Hoodi Circle, Hoodi village and the Garudacharpalya side. Whitefield next door uses 560066 and 560049, and Ramamurthy Nagar is 560016.",
+        "scope": "locality",
+        "tags": ["bangalore", "hoodi"]
+      },
+      {
+        "id": "faq-bangalore-hoodi-3",
+        "q": "Can helpers reach Hoodi by metro?",
+        "a": "Yes. Hoodi Metro Station on the Purple Line is on Whitefield Main Road, with Garudacharpalya the next stop towards the city, so helpers coming from the KR Puram or Indiranagar side can reach most Hoodi homes by metro plus a short walk.",
+        "scope": "locality",
+        "tags": ["bangalore", "hoodi"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "ramamurthy-nagar": {
+    "neighbours": ["kalyan-nagar", "hoodi", "whitefield", "indiranagar", "marathahalli", "nagawara", "fraser-town"],
+    "landmarks": ["KR Puram Cable-Stayed Bridge", "Tin Factory Junction", "Krishnarajapura Metro Station", "KR Puram Railway Station", "Ramamurthy Nagar Main Road"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Ramamurthy Nagar, pincode 560016, is an established residential area in north-east Bangalore off Old Madras Road, close to the KR Puram cable-stayed bridge and Tin Factory junction. Unlike the newer township belts further east, it is largely built up with independent houses, duplexes and three- to four-storey apartment blocks on individual plots, with a few larger gated complexes on the outer edges. Residents are a mix of long-settled families, elderly residents who have lived here for decades, and tenants working in the KR Puram, Whitefield and Mahadevapura employment areas. Ramamurthy Nagar Main Road carries the local markets and schools, while Krishnarajapura metro station on the Purple Line and KR Puram railway station serve as the main transport nodes. Kalyan Nagar lies to the north-west, Hoodi and Whitefield to the south-east, and Indiranagar to the south-west. Demand here is steady for daily cleaning and cooking help, and elder-care support is common given the older resident base in the family-owned homes.",
+    "commuteNotes": "Krishnarajapura Metro Station on the Purple Line at Tin Factory junction is the nearest metro stop, and BMTC buses run along Old Madras Road and Ramamurthy Nagar Main Road. Helpers also come in on foot from the adjoining lanes and settlements around KR Puram.",
+    "housingNotes": "Independent houses and small plot-based apartment blocks dominate, so entry is managed directly by the household without a society pass and timings are flexible. The few gated complexes on the edges register helpers with their security desk.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-ramamurthy-nagar-1",
+        "q": "Which areas near Ramamurthy Nagar do you also serve?",
+        "a": "Kalyan Nagar to the north-west and Hoodi to the south-east are the closest localities served. Whitefield, Marathahalli and Indiranagar are covered separately and share bus and metro links via Old Madras Road.",
+        "scope": "locality",
+        "tags": ["bangalore", "ramamurthy-nagar"]
+      },
+      {
+        "id": "faq-bangalore-ramamurthy-nagar-2",
+        "q": "Which pincode does the Ramamurthy Nagar service area cover?",
+        "a": "Ramamurthy Nagar, also written Ramamurthi Nagar, falls under pincode 560016. Neighbouring Kalyan Nagar is 560043 and Hoodi is 560048.",
+        "scope": "locality",
+        "tags": ["bangalore", "ramamurthy-nagar"]
+      },
+      {
+        "id": "faq-bangalore-ramamurthy-nagar-3",
+        "q": "Do helpers in Ramamurthy Nagar need society gate passes?",
+        "a": "Most homes here are independent houses or small apartment buildings on individual plots, so there is no society pass system and the household handles entry directly. Only the larger gated complexes on the outer edges ask for helper registration with security.",
+        "scope": "locality",
+        "tags": ["bangalore", "ramamurthy-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "koramangala": {
+    "neighbours": ["hsr-layout", "viveknagar", "adugodi", "domlur", "wilson-garden", "indiranagar", "bommanahalli", "bellandur", "jayanagar"],
+    "landmarks": ["Nexus Koramangala Mall", "Sony World Junction", "St. John's Medical College Hospital", "Jyoti Nivas College", "Koramangala BDA Complex", "Koramangala Indoor Stadium"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families", "students"],
+    "helperSourceAreas": ["Ejipura"],
+    "localIntro": "Koramangala, spanning pincodes 560034, 560095 and 560029, is one of south-east Bangalore's most lived-in neighbourhoods, laid out in numbered blocks from 1st to 8th Block between Hosur Road and the Inner Ring Road. Housing is mixed: independent bungalows and duplexes on the internal roads of the 3rd, 4th and 5th Blocks, apartment buildings and builder floors across most other blocks, and a large number of paying-guest hostels catering to students and young professionals. The area draws working professionals from nearby tech offices and start-ups, families who have lived here for decades, and students from Jyoti Nivas College and Christ University. Nexus Koramangala mall, Sony World Junction and St. John's Medical College Hospital are the main reference points. HSR Layout lies to the south, Viveknagar and Adugodi to the north-west, and Domlur to the north. Households here look for everything from part-time cleaning and cooking to full-day help and nannies, and often need staff comfortable with flexible timings around office and college schedules.",
+    "commuteNotes": "Helpers reach Koramangala mainly by BMTC buses along Hosur Road, the Inner Ring Road and Sarjapur Road via Sony World Junction, and many walk in from Ejipura, which adjoins the 5th and 6th Blocks. Koramangala does not yet have an operational Namma Metro station of its own [VERIFY].",
+    "housingNotes": "Independent houses and small apartment buildings on the block roads arrange entry directly with the household, while the larger gated complexes and PG hostels require helper registration at the gate. Timings are generally flexible outside the gated buildings.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-koramangala-1",
+        "q": "Which areas near Koramangala do you also serve?",
+        "a": "HSR Layout to the south and Viveknagar and Adugodi to the north-west are the closest localities served. Domlur, Indiranagar, Bommanahalli and Bellandur are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["bangalore", "koramangala"]
+      },
+      {
+        "id": "faq-bangalore-koramangala-2",
+        "q": "Which pincodes does the Koramangala service area cover?",
+        "a": "Koramangala service covers pincodes 560034, 560095 and 560029, which together take in the 1st to 8th Blocks and the Hosur Road edge. Adjacent HSR Layout uses 560102 and Ejipura falls under the Viveknagar side at 560047.",
+        "scope": "locality",
+        "tags": ["bangalore", "koramangala"]
+      },
+      {
+        "id": "faq-bangalore-koramangala-3",
+        "q": "Do helpers in Koramangala need society gate passes?",
+        "a": "Most Koramangala homes are independent houses or small apartment buildings on the block roads, where the household manages entry directly. Residents of the larger gated complexes and PG hostels usually have to register the helper with building security before the first visit.",
+        "scope": "locality",
+        "tags": ["bangalore", "koramangala"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "hsr-layout": {
+    "neighbours": ["koramangala", "bommanahalli", "bellandur", "sarjapur-road", "begur", "jp-nagar", "electronic-city"],
+    "landmarks": ["Agara Lake", "HSR BDA Complex", "Central Silk Board Junction", "27th Main Road", "Somasundarapalya Lake"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Agara", "Somasundarapalya", "Parangipalya"],
+    "localIntro": "HSR Layout, pincode 560102, is a planned BDA layout in south-east Bangalore divided into seven sectors, wedged between Koramangala, the Outer Ring Road and Hosur Road. The housing stock is mixed: independent houses and duplexes on BDA plots in the interior sectors, a large number of three- and four-floor builder apartments on subdivided plots, and a handful of gated complexes on the edges near the Ring Road. The area is home to working professionals from the Ring Road tech corridor, many start-up teams, and families settled across Sector 1 to Sector 7. Agara Lake, the HSR BDA Complex and the 27th Main Road cafe strip are everyday landmarks, with the Central Silk Board junction marking the western boundary. Koramangala lies to the north, Bommanahalli to the west across Hosur Road, and Bellandur and Sarjapur Road to the east. Households here usually need part-time cooking and cleaning help, with full-day help and nannies common among young families in the larger houses and gated complexes.",
+    "commuteNotes": "BMTC buses along the Outer Ring Road, Hosur Road and the HSR main roads are the usual route in, and the Central Silk Board and Bommanahalli stations on the Yellow Line are the nearest metro stops on the western edge. Many helpers walk in from Agara, Somasundarapalya and Parangipalya, the older villages inside and beside the layout.",
+    "housingNotes": "Independent houses and small builder apartments on BDA plots dominate, so entry is usually arranged directly with the household and timings stay flexible. The gated complexes near the Ring Road require helpers to be registered with society security.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-hsr-layout-1",
+        "q": "Which areas near HSR Layout do you also serve?",
+        "a": "Koramangala to the north and Bommanahalli across Hosur Road are the closest localities served. Bellandur and Sarjapur Road to the east and Begur to the south are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["bangalore", "hsr-layout"]
+      },
+      {
+        "id": "faq-bangalore-hsr-layout-2",
+        "q": "Which pincode does the HSR Layout service area cover?",
+        "a": "HSR Layout, often shortened to HSR, falls under pincode 560102, which covers all seven sectors and the Agara side. Neighbouring Koramangala uses 560034, 560095 and 560029, and Bommanahalli is 560068.",
+        "scope": "locality",
+        "tags": ["bangalore", "hsr-layout"]
+      },
+      {
+        "id": "faq-bangalore-hsr-layout-3",
+        "q": "Do helpers in HSR Layout need society gate passes?",
+        "a": "Most HSR homes are independent houses or small builder apartments on BDA plots, so the household manages entry directly and there is no society pass. Only the gated complexes near the Outer Ring Road ask for the helper to be registered with security.",
+        "scope": "locality",
+        "tags": ["bangalore", "hsr-layout"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "bellandur": {
+    "neighbours": ["sarjapur-road", "marathahalli", "hsr-layout", "whitefield", "koramangala", "hoodi"],
+    "landmarks": ["Bellandur Lake", "RMZ Ecospace", "Embassy Tech Village", "Sakra World Hospital", "Outer Ring Road", "Iblur Junction"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Bellandur village", "Kariyammana Agrahara"],
+    "localIntro": "Bellandur, pincode 560103, sits on the Outer Ring Road in south-east Bangalore, alongside the large Bellandur Lake and the string of tech parks that includes RMZ Ecospace and Embassy Tech Village. The residential stock is dominated by large gated apartment communities built over the last fifteen years, with older independent houses concentrated in Bellandur village and the settlements of Kariyammana Agrahara and Kaikondrahalli. Most households are working professionals employed in the Ring Road offices, many in dual-income families with young children, which makes full-day nannies and cooks especially common here. Sakra World Hospital on the Ring Road and the Iblur junction are the main local reference points. Sarjapur Road begins at Iblur to the south, Marathahalli lies to the north along the Ring Road, and HSR Layout to the west. Society security rules shape most arrangements, so households here generally prefer helpers who can be registered with the apartment association and work consistent shifts around office hours.",
+    "commuteNotes": "Bellandur has no operational metro station yet, so helpers rely on BMTC buses along the Outer Ring Road and Sarjapur Road, stopping at Bellandur Gate and Iblur. Many walk in from Bellandur village and Kariyammana Agrahara, which sit right beside the tech parks and apartment complexes.",
+    "housingNotes": "Large gated communities dominate, and almost all require helpers to be registered with the association and carry a society pass or app-based entry approval. Timings tend to follow fixed shifts agreed with the household and logged at the gate.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-bellandur-1",
+        "q": "Which areas near Bellandur do you also serve?",
+        "a": "Sarjapur Road from the Iblur junction and Marathahalli further north on the Outer Ring Road are the closest localities served. HSR Layout to the west and Whitefield to the east are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["bangalore", "bellandur"]
+      },
+      {
+        "id": "faq-bangalore-bellandur-2",
+        "q": "Which pincode does the Bellandur service area cover?",
+        "a": "Bellandur falls under pincode 560103, which takes in Bellandur village, the Ring Road tech parks and the apartment belt up to Iblur. Sarjapur Road beyond Iblur is 560035 and Marathahalli is 560037.",
+        "scope": "locality",
+        "tags": ["bangalore", "bellandur"]
+      },
+      {
+        "id": "faq-bangalore-bellandur-3",
+        "q": "Do helpers in Bellandur need society gate passes?",
+        "a": "Yes in most cases. The majority of Bellandur homes are in large gated communities that require the helper to be registered with the association and issued a pass or app-based entry approval before the first visit. Only the older houses in Bellandur village manage entry directly.",
+        "scope": "locality",
+        "tags": ["bangalore", "bellandur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sarjapur-road": {
+    "neighbours": ["bellandur", "hsr-layout", "koramangala", "begur", "electronic-city", "marathahalli", "whitefield"],
+    "landmarks": ["Wipro Corporate Office (Doddakannelli)", "Kaikondrahalli Lake", "Iblur Junction", "Total Mall Sarjapur Road", "Carmelaram Railway Station"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sarjapur Road, pincode 560035, is the long arterial stretch running south-east from the Iblur junction on the Outer Ring Road past Kaikondrahalli Lake, Harlur, Kasavanahalli and Doddakannelli towards Carmelaram and Dommasandra. It is one of Bangalore's largest gated-community belts: most households live in large apartment townships and villa communities along the road and its offshoots, built to house the working professionals employed at the Wipro corporate campus at Doddakannelli and the Outer Ring Road tech parks. Dual-income families with young children are the dominant household type, with a growing number of elderly parents living with them. Total Mall on Sarjapur Road and Kaikondrahalli Lake are the everyday landmarks, and Carmelaram railway station serves the outer stretch. Bellandur lies at the Ring Road end of the road, HSR Layout to the west, and Electronic City and Begur to the south-west via Hosa Road. Demand here is strongest for full-day cooks, nannies and live-in help, and most societies require helpers to be registered at the gate before they start.",
+    "commuteNotes": "There is no metro on Sarjapur Road, so helpers depend on BMTC buses running from Iblur junction along the road, with suburban trains stopping at Carmelaram for the outer stretch. Many walk in from the villages that line the road, such as Kasavanahalli and Doddakannelli [VERIFY].",
+    "housingNotes": "Gated apartment townships and villa communities dominate, and nearly all require the helper to be registered with the association and issued a pass or app-based entry approval. Fixed shifts logged at the gate are the norm, with live-in arrangements common in the villa communities.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-sarjapur-road-1",
+        "q": "Which areas near Sarjapur Road do you also serve?",
+        "a": "Bellandur at the Iblur end and HSR Layout to the west are the closest localities served. Koramangala, Begur and Electronic City are covered as separate localities further along the Hosur Road side.",
+        "scope": "locality",
+        "tags": ["bangalore", "sarjapur-road"]
+      },
+      {
+        "id": "faq-bangalore-sarjapur-road-2",
+        "q": "Which pincode does the Sarjapur Road service area cover?",
+        "a": "The Sarjapur Road stretch, also written Sarjapura Road, is served under pincode 560035, which covers Harlur, Kasavanahalli, Doddakannelli and Carmelaram. The Bellandur end near Iblur falls under 560103.",
+        "scope": "locality",
+        "tags": ["bangalore", "sarjapur-road"]
+      },
+      {
+        "id": "faq-bangalore-sarjapur-road-3",
+        "q": "Do helpers on Sarjapur Road need society gate passes?",
+        "a": "Yes, almost always. Sarjapur Road homes are overwhelmingly in gated townships and villa communities that require the helper to be registered with the association and approved at the gate or through a visitor app before the first visit.",
+        "scope": "locality",
+        "tags": ["bangalore", "sarjapur-road"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "bommanahalli": {
+    "neighbours": ["hsr-layout", "begur", "koramangala", "jp-nagar", "bannerghatta-road", "electronic-city", "adugodi"],
+    "landmarks": ["Central Silk Board Junction", "Bommanahalli Metro Station", "Hosur Road", "Madiwala Market", "Kudlu Gate"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Hongasandra", "Garvebhavipalya"],
+    "localIntro": "Bommanahalli, pincode 560068, sits on Hosur Road just south of the Central Silk Board junction, at the point where south-east Bangalore's residential belt meets the Electronic City commuter corridor. Housing is mixed: dense rows of independent houses and small rental apartment buildings in the interior lanes, paying-guest blocks that serve Hosur Road commuters, and a few larger gated complexes towards the HSR Layout side. Residents are mostly working professionals commuting to Electronic City, the Ring Road and Koramangala, along with families who have lived in the older layouts for years. Bommanahalli metro station on the Yellow Line and Madiwala market on Hosur Road are the main reference points, with Kudlu Gate marking the southern edge. HSR Layout lies to the east, Begur to the south, Koramangala to the north and JP Nagar to the west across Bannerghatta Road. Households here mainly want part-time cleaning and cooking help, with elder-care demand rising in the older family homes.",
+    "commuteNotes": "Bommanahalli Metro Station on the Yellow Line and the Central Silk Board interchange put the area directly on the metro, and BMTC buses along Hosur Road stop at every junction. Helpers also walk in from Hongasandra and Garvebhavipalya, which adjoin the main lanes.",
+    "housingNotes": "Independent houses and small rental buildings dominate, so entry is arranged directly with the household and timings are flexible. The few gated complexes towards HSR Layout require helper registration with security.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-bommanahalli-1",
+        "q": "Which areas near Bommanahalli do you also serve?",
+        "a": "HSR Layout to the east and Begur to the south are the closest localities served, followed by Koramangala across the Silk Board junction. JP Nagar, Bannerghatta Road and Electronic City are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["bangalore", "bommanahalli"]
+      },
+      {
+        "id": "faq-bangalore-bommanahalli-2",
+        "q": "Which pincode does the Bommanahalli service area cover?",
+        "a": "Bommanahalli falls under pincode 560068, which covers the Hosur Road stretch from Central Silk Board to Kudlu Gate along with Hongasandra and Garvebhavipalya. Neighbouring HSR Layout is 560102 and Begur is 560114.",
+        "scope": "locality",
+        "tags": ["bangalore", "bommanahalli"]
+      },
+      {
+        "id": "faq-bangalore-bommanahalli-3",
+        "q": "Can helpers reach Bommanahalli by metro?",
+        "a": "Yes. Bommanahalli Metro Station on the Yellow Line sits on Hosur Road, one stop south of the Central Silk Board interchange, so helpers coming from the Jayanagar, BTM Layout or Electronic City side can arrive by metro and walk into the interior lanes.",
+        "scope": "locality",
+        "tags": ["bangalore", "bommanahalli"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "electronic-city": {
+    "neighbours": ["begur", "bommanahalli", "hsr-layout", "bannerghatta-road", "sarjapur-road", "jp-nagar"],
+    "landmarks": ["Infosys Electronic City Campus", "Biocon Park", "Hosur Road Elevated Expressway", "Electronic City Metro Station", "Narayana Health City"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Doddathogur", "Konappana Agrahara"],
+    "localIntro": "Electronic City, pincode 560100, is Bangalore's largest IT campus cluster, spread across Phase 1 and Phase 2 on Hosur Road with the Infosys, Wipro and Biocon campuses at its core. The residential belt around it, including Neo Town, Doddathogur and the Hosa Road side, is dominated by gated apartment communities built for the professionals who work in the parks, with a smaller set of villa enclaves and older independent houses in the surrounding villages. Households are overwhelmingly working professionals, many of them dual-income families with young children, plus a large transient population in shared flats and paying-guest accommodation. The Hosur Road elevated expressway connects the area to the Silk Board junction, and Electronic City metro station on the Yellow Line now links it to the rest of the city. Narayana Health City lies just south at Bommasandra. Begur and Bommanahalli are the nearest residential areas to the north, with HSR Layout beyond them and Bannerghatta Road to the west. Full-day cooks and nannies who can work inside gated societies are the most requested help here.",
+    "commuteNotes": "The Yellow Line metro serves the area with stations at Hosa Road, Beratena Agrahara, Electronic City and Infosys Foundation Konappana Agrahara, and BMTC buses run along Hosur Road beneath the elevated expressway. Many helpers walk in from Doddathogur and Konappana Agrahara, the villages that adjoin the apartment belt.",
+    "housingNotes": "Gated apartment communities dominate, and helpers are almost always registered with the association and issued a pass or app-based entry approval. Older independent houses in Doddathogur and the surrounding villages handle entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-electronic-city-1",
+        "q": "Which areas near Electronic City do you also serve?",
+        "a": "Begur and Bommanahalli to the north along Hosur Road are the closest localities served. HSR Layout, Bannerghatta Road and Sarjapur Road are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["bangalore", "electronic-city"]
+      },
+      {
+        "id": "faq-bangalore-electronic-city-2",
+        "q": "Which pincode does the Electronic City service area cover?",
+        "a": "Electronic City, often shortened to E-City, falls under pincode 560100, which covers Phase 1, Phase 2, Neo Town and Doddathogur. Begur to the north is 560114 and Bommanahalli is 560068.",
+        "scope": "locality",
+        "tags": ["bangalore", "electronic-city"]
+      },
+      {
+        "id": "faq-bangalore-electronic-city-3",
+        "q": "Do helpers in Electronic City need society gate passes?",
+        "a": "Yes in most cases. Electronic City homes are mostly in gated apartment communities that require the helper to be registered with the association and approved at the gate or through a visitor app. Only the independent houses in the older villages around Phase 1 and Phase 2 manage entry directly.",
+        "scope": "locality",
+        "tags": ["bangalore", "electronic-city"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "begur": {
+    "neighbours": ["bommanahalli", "electronic-city", "bannerghatta-road", "hsr-layout", "jp-nagar", "sarjapur-road"],
+    "landmarks": ["Naganatheshwara Temple", "Begur Lake", "Begur Road", "Hulimavu Lake", "Akshayanagar"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Begur, pincode 560114, is an old village turned residential suburb in south-east Bangalore, reached along Begur Road from Hosur Road at Bommanahalli. It is best known for the Naganatheshwara temple, an ancient shrine whose inscription carries one of the earliest recorded mentions of the name Bengaluru, and for Begur Lake beside it. Housing is mixed: the village core and its older layouts remain independent houses, while the Begur Road and Begur-Koppa Road stretches have filled up with gated apartment complexes and mid-rise builder projects aimed at Electronic City commuters. Residents include working professionals from Electronic City and the Hosur Road corridor, young families in the newer complexes, and long-settled local families in the village. Hulimavu Lake and Akshayanagar lie to the west towards Bannerghatta Road. Bommanahalli is immediately north, Electronic City to the south and HSR Layout to the north-east. Households here typically look for part-time cleaning and cooking help, with full-day help increasingly requested in the larger gated communities along Begur Road.",
+    "commuteNotes": "Helpers reach Begur by BMTC buses along Begur Road from Hosur Road, and the Hongasandra and Kudlu Gate stations on the Yellow Line are the nearest metro stops at the Hosur Road end [VERIFY]. Many also walk in from the village lanes and older layouts beside Begur Lake.",
+    "housingNotes": "The village core is independent houses where entry is arranged directly with the household, while the gated complexes along Begur Road and Begur-Koppa Road require helpers to be registered with society security. Timings are more flexible in the older houses.",
+    "localFaqs": [
+      {
+        "id": "faq-bangalore-begur-1",
+        "q": "Which areas near Begur do you also serve?",
+        "a": "Bommanahalli immediately north on Hosur Road and Electronic City to the south are the closest localities served. Bannerghatta Road, HSR Layout and JP Nagar are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["bangalore", "begur"]
+      },
+      {
+        "id": "faq-bangalore-begur-2",
+        "q": "Which pincode does the Begur service area cover?",
+        "a": "Begur falls under pincode 560114, which covers Begur village, Begur Road and the Begur-Koppa Road stretch. Neighbouring Bommanahalli is 560068 and Electronic City is 560100.",
+        "scope": "locality",
+        "tags": ["bangalore", "begur"]
+      },
+      {
+        "id": "faq-bangalore-begur-3",
+        "q": "Do helpers in Begur need society gate passes?",
+        "a": "It depends on where you live. The gated apartment complexes along Begur Road require the helper to be registered with society security, while the independent houses in Begur village and its older layouts have no pass system and the household manages entry directly.",
+        "scope": "locality",
+        "tags": ["bangalore", "begur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

@@ -1,0 +1,632 @@
+{
+  "sector-12": {
+    "neighbours": ["sector-22", "sector-21", "sector-56", "sector-55", "sector-20", "sector-19", "sector-15", "sector-16"],
+    "landmarks": ["Metro Hospital & Heart Institute", "Sector 12 Market", "Noida Stadium (Sector 21A)", "Sector 22 Market"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 12 is one of the older residential sectors of central Noida, falling under pincode 201301 and sitting between the Sector 11 side and the busy Sector 22 belt. Housing here is mixed: rows of plotted independent houses and older kothis share the sector with pocket-style flats, and many original plots have been rebuilt as multi-floor homes with tenant families on the upper floors. The result is a settled neighbourhood of long-time owner families, retirees and working households renting near their offices. Metro Hospital & Heart Institute is the best-known institution in the sector, and the Sector 12 Market handles daily groceries and repairs, with the Sector 22 Market and Noida Stadium in Sector 21A a short distance away. Sector 22 lies immediately to the south, Sector 21 beyond it, and Sectors 55 and 56 sit across the main road on the eastern side. Households in Sector 12 typically look for part-time cleaning and cooking help on fixed morning slots, along with day-time support for elderly parents in the older homes.",
+    "commuteNotes": "Helpers reach Sector 12 mainly by shared autos and buses along the Sector 12–22 road, and many walk in from adjoining sectors. The nearest Blue Line stations are Noida Sector 15 and Noida City Centre, both a short auto ride away. [VERIFY]",
+    "housingNotes": "A mix of independent plotted houses and smaller flat pockets means most households deal with helpers directly rather than through a society office, and timings are flexible. A few group-housing blocks do keep gate registers, so a first-day introduction at the gate is sometimes needed.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-12-1",
+        "q": "Which areas near Sector 12 do you also serve?",
+        "a": "Sector 22 and Sector 21 directly adjoin Sector 12 and share the same helper pool, as do Sectors 55 and 56 across the main road. Sectors 15, 16, 19 and 20 are also close enough for the same helpers to travel.",
+        "scope": "locality",
+        "tags": ["noida", "sector-12"]
+      },
+      {
+        "id": "faq-noida-sector-12-2",
+        "q": "Which pincode does Sector 12 service cover?",
+        "a": "Sector 12 falls under pincode 201301, the same pin used by most of central Noida including Sectors 15 to 30. Helpers matched for this pincode are drawn from nearby sectors rather than from far-off parts of the city.",
+        "scope": "locality",
+        "tags": ["noida", "sector-12"]
+      },
+      {
+        "id": "faq-noida-sector-12-3",
+        "q": "Do helpers in Sector 12 need society gate passes?",
+        "a": "Most homes in Sector 12 are independent houses or small flat pockets without a formal society office, so a gate pass is usually not required. Where a block does maintain a register, the household simply introduces the helper to the guard on the first day.",
+        "scope": "locality",
+        "tags": ["noida", "sector-12"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-15": {
+    "neighbours": ["sector-16", "sector-19", "sector-20", "sector-18", "sector-12", "sector-21", "sector-27", "sector-22"],
+    "landmarks": ["Noida Sector 15 Metro Station", "Sector 15 Market", "Film City (Sector 16A)", "DND Flyway"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 15 is the first residential sector inside Noida from the Delhi side, under pincode 201301, and one of the most conveniently placed for commuters because the Noida Sector 15 Metro Station on the Blue Line sits at its edge. The sector was developed as plotted housing, so the streets are lined with independent houses and older kothis, a good number of which have been rebuilt into builder floors that are rented by working professionals employed in the Film City offices of Sector 16A and the media and IT companies nearby. Long-settled owner families and senior residents still make up a large share of households. The Sector 15 Market covers daily needs, and the DND Flyway entry is minutes away for anyone driving into South Delhi. Sector 16 lies directly alongside, with Sector 19 and Sector 20 across the road and Sector 18's commercial hub a short walk further. Demand here is mainly for morning cleaning and cooking help on fixed slots, plus full-day support in homes with elderly members.",
+    "commuteNotes": "Noida Sector 15 Metro Station on the Blue Line serves the sector directly, and buses and shared autos run along the main road towards Sector 18. Helpers living in adjoining sectors usually walk or cycle in.",
+    "housingNotes": "Plotted independent houses and builder floors dominate, so households manage entry and timings themselves without a society office. Part-time slots across two or three nearby homes are easy to arrange in this layout.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-15-1",
+        "q": "Which areas near Sector 15 do you also serve?",
+        "a": "Sector 16, Sector 19 and Sector 20 adjoin Sector 15 and are served by the same helpers. Sector 18, Sector 12 and Sector 21 are also within easy reach on foot or by shared auto.",
+        "scope": "locality",
+        "tags": ["noida", "sector-15"]
+      },
+      {
+        "id": "faq-noida-sector-15-2",
+        "q": "Is there a metro station close to Sector 15 for helpers?",
+        "a": "Yes. Noida Sector 15 Metro Station on the Blue Line is at the edge of the sector, so helpers coming from East Delhi or other parts of Noida can reach the area without changing lines. Sector 16 station is the next stop and is equally close for the eastern blocks.",
+        "scope": "locality",
+        "tags": ["noida", "sector-15"]
+      },
+      {
+        "id": "faq-noida-sector-15-3",
+        "q": "Which pincode does Sector 15 fall under?",
+        "a": "Sector 15 is covered by pincode 201301, shared with neighbouring Sectors 16, 19 and 20. Helpers matched for this pincode come from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-15"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-16": {
+    "neighbours": ["sector-15", "sector-18", "sector-19", "sector-20", "sector-27", "sector-28", "sector-29", "sector-12"],
+    "landmarks": ["Noida Sector 16 Metro Station", "Film City (Sector 16A)", "Sector 16 Market", "Atta Market (Sector 18)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 16, under pincode 201301, is a mature plotted sector wedged between Sector 15 and the commercial centre of Sector 18, with the Film City media and office cluster of Sector 16A directly across the road. Homes are predominantly independent houses on individual plots, many rebuilt over the years into two- and three-floor builder units, so streets combine original owner families with tenant households of professionals working in the nearby studios, news channels and corporate offices. Noida Sector 16 Metro Station on the Blue Line sits at the sector boundary, and the Sector 16 Market serves everyday shopping, with Atta Market in Sector 18 only a few minutes away for anything larger. Sector 15 adjoins on one side and Sector 19 and Sector 20 lie across the main road, while Sector 27 and Sector 28 are just beyond Sector 18. Households here commonly need part-time cleaning and cooking help timed around office hours, with some full-day placements for families with young children or elderly parents at home.",
+    "commuteNotes": "Noida Sector 16 Metro Station on the Blue Line serves the sector directly, and the Sector 15 and Sector 18 stations are within walking distance of the outer blocks. Buses and shared autos ply the main road between Sector 15 and Sector 18.",
+    "housingNotes": "Independent plotted houses and builder floors dominate, so there is no society office and households set timings and entry rules directly with the helper. Multi-floor buildings often have two or three separate households, which suits part-time helpers covering several homes in one building.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-16-1",
+        "q": "Which areas near Sector 16 do you also serve?",
+        "a": "Sector 15, Sector 18, Sector 19 and Sector 20 all adjoin Sector 16 and share its helper pool. Sectors 27, 28 and 29 on the far side of Sector 18 are also within a short auto ride.",
+        "scope": "locality",
+        "tags": ["noida", "sector-16"]
+      },
+      {
+        "id": "faq-noida-sector-16-2",
+        "q": "How do helpers usually reach Sector 16?",
+        "a": "Most helpers arrive by the Blue Line at Noida Sector 16 Metro Station or by bus along the Sector 15–18 road. Helpers who live in adjoining sectors typically walk or cycle in.",
+        "scope": "locality",
+        "tags": ["noida", "sector-16"]
+      },
+      {
+        "id": "faq-noida-sector-16-3",
+        "q": "Which pincode does Sector 16 come under?",
+        "a": "Sector 16 falls under pincode 201301, along with the Film City blocks of Sector 16A and neighbouring Sectors 15 and 18. Matching is done for this pincode using helpers from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-16"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-18": {
+    "neighbours": ["sector-16", "sector-19", "sector-27", "sector-28", "sector-29", "sector-15", "sector-20", "sector-37", "sector-30"],
+    "landmarks": ["DLF Mall of India", "Atta Market", "Noida Sector 18 Metro Station", "The Great India Place", "Wave Mall"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 18 is Noida's commercial heart under pincode 201301, known citywide for Atta Market, DLF Mall of India, The Great India Place and the Noida Sector 18 Metro Station on the Blue Line. Its residential side is small compared with the shops, restaurants and offices, and it is mixed in character: a handful of plotted independent houses and builder floors sit in the quieter blocks behind the market, alongside serviced apartments and paying-guest accommodation used by people working in the retail and hospitality businesses around them. Households here are mostly working professionals and small families who value being able to walk to the metro and to Atta Market for everything from groceries to tailoring. Sector 16 and Sector 19 border the sector on the north, while Sector 27 and Sector 28 lie immediately to the south and share the same lanes and markets. Domestic-help demand in Sector 18 is largely for part-time cleaning and cooking slots that fit around long office hours, plus occasional full-day help for families in the residential blocks.",
+    "commuteNotes": "Noida Sector 18 Metro Station on the Blue Line is in the sector itself, and it is one of the busiest bus and shared-auto points in Noida, so helpers reach the area easily from any direction. Adjoining Sectors 16, 19, 27 and 28 are within walking distance.",
+    "housingNotes": "The residential pockets are mainly builder floors, independent houses and serviced apartments rather than large gated societies, so entry is arranged directly with the household or building caretaker. Serviced buildings may ask for a helper's ID at reception on the first visit.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-18-1",
+        "q": "Which areas near Sector 18 do you also serve?",
+        "a": "Sector 16, Sector 19, Sector 27 and Sector 28 all adjoin Sector 18 and are covered by the same helpers. Sectors 15, 20, 29 and 30 are a short auto ride away and also fall within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-18"]
+      },
+      {
+        "id": "faq-noida-sector-18-2",
+        "q": "Is Sector 18 mostly commercial, and can I still get a maid there?",
+        "a": "Yes, Sector 18 is dominated by Atta Market, the malls and offices, but it has residential blocks of builder floors, independent houses and serviced apartments. Helpers serve these homes just as they do the neighbouring residential sectors, and the metro station makes the area easy to reach.",
+        "scope": "locality",
+        "tags": ["noida", "sector-18"]
+      },
+      {
+        "id": "faq-noida-sector-18-3",
+        "q": "Which pincode does Sector 18 fall under?",
+        "a": "Sector 18 is covered by pincode 201301, shared with Sectors 16, 19, 27 and 28 around it. Helpers matched for this pincode are drawn from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-18"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-19": {
+    "neighbours": ["sector-18", "sector-20", "sector-27", "sector-16", "sector-15", "sector-21", "sector-22", "sector-28"],
+    "landmarks": ["Atta Market (Sector 18)", "Noida Sector 18 Metro Station", "Sector 19 Market", "DLF Mall of India"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 19 is a well-established plotted sector under pincode 201301, sitting directly beside Sector 18 and sharing its markets, metro access and everyday bustle while remaining residential in character. Independent houses on individual plots line the internal roads, many of them original family homes now occupied by second-generation owners and elderly parents, with a growing number rebuilt into builder floors let to working professionals who want to walk to the Noida Sector 18 Metro Station. The Sector 19 Market covers daily provisions, and Atta Market and DLF Mall of India in Sector 18 are only minutes away. Sector 20 adjoins on one side and Sector 27 lies across the road on the other, with Sector 16 and Sector 15 within easy walking distance towards the Delhi side. Households here typically want part-time cleaning and cooking help in the morning, and many homes with senior residents look for full-day or live-in support, which the older, larger houses can accommodate.",
+    "commuteNotes": "Noida Sector 18 Metro Station on the Blue Line is a short walk from most of Sector 19, and buses and shared autos stop along the Sector 18–19 road. Helpers from adjoining Sectors 20, 21 and 27 usually walk in.",
+    "housingNotes": "Plotted independent houses and builder floors make up nearly all the housing, so there is no society office and timings are agreed directly between the household and the helper. Larger original homes often have space for live-in staff.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-19-1",
+        "q": "Which areas near Sector 19 do you also serve?",
+        "a": "Sector 18, Sector 20 and Sector 27 adjoin Sector 19 and share the same helpers. Sectors 15, 16, 21 and 22 are also close enough for the same helper pool to cover.",
+        "scope": "locality",
+        "tags": ["noida", "sector-19"]
+      },
+      {
+        "id": "faq-noida-sector-19-2",
+        "q": "Do helpers in Sector 19 need society gate passes?",
+        "a": "No. Sector 19 is made up of independent houses and builder floors rather than gated societies, so households arrange entry and timings directly with the helper. No society registration is involved.",
+        "scope": "locality",
+        "tags": ["noida", "sector-19"]
+      },
+      {
+        "id": "faq-noida-sector-19-3",
+        "q": "Which pincode does Sector 19 fall under?",
+        "a": "Sector 19 is covered by pincode 201301, the same as neighbouring Sectors 18, 20 and 27. Helpers matched for this pincode are drawn from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-19"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-20": {
+    "neighbours": ["sector-19", "sector-21", "sector-18", "sector-15", "sector-16", "sector-22", "sector-27", "sector-12"],
+    "landmarks": ["Sector 20 Market", "Noida Stadium (Sector 21A)", "Atta Market (Sector 18)", "Noida Sector 18 Metro Station"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 20 is a quiet, mature residential sector under pincode 201301, tucked between Sector 19 and Sector 21 and a short walk from the Sector 18 commercial centre. Its housing is almost entirely independent plotted houses, many of them original two-storey family homes with small gardens, and a growing share rebuilt as builder floors that attract working professionals who want metro access without living amid Sector 18's traffic. Long-settled owner families and elderly residents make up a large share of households. The Sector 20 Market meets daily needs, the Noida Stadium sports complex in Sector 21A is close by for morning walkers, and Atta Market and the Noida Sector 18 Metro Station are within walking distance. Sector 19 adjoins on the Sector 18 side, Sector 21 with its Jalvayu Vihar colony lies on the other, and Sector 15 and Sector 16 are a short distance towards the DND Flyway. Demand is mostly for part-time cleaning and cooking help on fixed morning slots, along with full-day or live-in support in homes with senior family members.",
+    "commuteNotes": "Noida Sector 18 Metro Station on the Blue Line is the nearest station, roughly a ten to fifteen minute walk from most blocks, and shared autos and buses run along the outer sector roads. Helpers from Sectors 19, 21 and 22 usually walk in.",
+    "housingNotes": "Independent plotted houses and builder floors dominate, so households deal with helpers directly and timings stay flexible; there are no society gates or entry passes. Older homes with staff quarters can accommodate live-in help.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-20-1",
+        "q": "Which areas near Sector 20 do you also serve?",
+        "a": "Sector 19 and Sector 21 adjoin Sector 20 and are covered by the same helpers, as are Sector 18, Sector 15 and Sector 16 nearby. Sectors 12, 22 and 27 also fall within easy travelling distance.",
+        "scope": "locality",
+        "tags": ["noida", "sector-20"]
+      },
+      {
+        "id": "faq-noida-sector-20-2",
+        "q": "Which pincode does Sector 20 fall under?",
+        "a": "Sector 20 is covered by pincode 201301, shared with neighbouring Sectors 19, 21 and 18. Helpers matched for this pincode come from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-20"]
+      },
+      {
+        "id": "faq-noida-sector-20-3",
+        "q": "Can I find live-in help for elderly parents in Sector 20?",
+        "a": "Yes. Sector 20's independent houses often have the space for a live-in helper, and many households here already keep full-day help for senior family members. Part-time morning slots for cleaning and cooking are the other common arrangement.",
+        "scope": "locality",
+        "tags": ["noida", "sector-20"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-21": {
+    "neighbours": ["sector-22", "sector-20", "sector-19", "sector-12", "sector-18", "sector-27", "sector-15", "sector-28"],
+    "landmarks": ["Jalvayu Vihar", "Noida Stadium (Sector 21A)", "Sector 21 Market", "Sector 22 Market"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 21, under pincode 201301, is best known for Jalvayu Vihar, the large Air Force and Naval housing colony of low-rise apartment blocks that occupies much of the sector alongside its extension in Sector 25. The colony's gated layout, internal parks and community halls give the sector a calm, planned character, and its residents are largely serving and retired defence families along with tenants who prefer the security and open space. The Noida Stadium complex in Sector 21A adjoins the sector, providing a track, courts and grounds used by walkers every morning, while the Sector 21 Market and the neighbouring Sector 22 Market take care of daily shopping. Sector 22 lies immediately alongside, Sector 20 and Sector 19 are on the Sector 18 side, and Sector 12 is across the main road to the north. Households here commonly look for part-time cleaning and cooking help on fixed slots, and a good number of retired couples want steady day-time support, so consistency and gate familiarity matter more than in the plotted sectors.",
+    "commuteNotes": "Shared autos and buses run along the Sector 21–22 road and the outer roads towards Sector 18, and helpers from Sectors 12, 20 and 22 typically walk in. Noida Sector 18 on the Blue Line is the nearest metro station. [VERIFY]",
+    "housingNotes": "Jalvayu Vihar is a gated colony with manned entry, so helpers are registered at the gate and usually carry an identity card issued by the colony office. Once registered, timings can be flexible, but changes of helper need a fresh gate entry.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-21-1",
+        "q": "Do helpers in Sector 21 need a Jalvayu Vihar gate pass?",
+        "a": "Yes. Jalvayu Vihar in Sector 21 is a gated colony, and helpers are registered at the gate with ID proof before they start work. The household usually completes this on the first day, after which the helper can enter on the agreed timings.",
+        "scope": "locality",
+        "tags": ["noida", "sector-21"]
+      },
+      {
+        "id": "faq-noida-sector-21-2",
+        "q": "Which areas near Sector 21 do you also serve?",
+        "a": "Sector 22 and Sector 20 adjoin Sector 21 and share its helper pool, as do Sector 19 and Sector 12 close by. Sectors 15, 18, 27 and 28 are also within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-21"]
+      },
+      {
+        "id": "faq-noida-sector-21-3",
+        "q": "Which pincode does Sector 21 fall under?",
+        "a": "Sector 21, including Jalvayu Vihar, is covered by pincode 201301, the same as neighbouring Sectors 20 and 22. Helpers matched for this pincode come from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-21"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-22": {
+    "neighbours": ["sector-21", "sector-12", "sector-20", "sector-56", "sector-55", "sector-19", "sector-18", "sector-27"],
+    "landmarks": ["Sector 22 Market", "Chaura Raghunathpur village", "Noida Stadium (Sector 21A)", "Metro Hospital & Heart Institute (Sector 12)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Chaura Raghunathpur"],
+    "localIntro": "Sector 22 is a busy, mixed residential sector under pincode 201301, combining planned plotted housing with the old village settlement of Chaura Raghunathpur that lies within its boundary. The planned blocks have independent houses and builder floors occupied by owner families and tenants, while the village side has denser, older housing and a large working population, which gives the sector a lively, affordable character quite different from the quieter sectors nearer the DND Flyway. The Sector 22 Market is one of the larger sector markets in this part of Noida and draws shoppers from Sector 12 and Sector 21 as well, and the Noida Stadium complex in Sector 21A and Metro Hospital & Heart Institute in Sector 12 are both close by. Sector 21 with its Jalvayu Vihar colony adjoins on one side, Sector 12 lies to the north and Sectors 55 and 56 sit across the main road. Households here mostly want part-time cleaning and cooking help, and because many helpers live within the sector itself in Chaura, morning and evening slots are easy to fill.",
+    "commuteNotes": "A large share of helpers live in Chaura Raghunathpur inside the sector and walk to work, and shared autos run along the Sector 12–22 road towards Sector 18 and Noida City Centre. The nearest Blue Line stations are Noida Sector 18 and Noida City Centre, both a short auto ride away. [VERIFY]",
+    "housingNotes": "Mixed independent houses, builder floors and village-side housing mean there is no society office; households arrange entry and timings directly with the helper. Multi-floor buildings with several tenant families suit helpers covering two or three homes in one building.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-22-1",
+        "q": "Where do helpers working in Sector 22 usually come from?",
+        "a": "Many helpers live in Chaura Raghunathpur, the village settlement within Sector 22 itself, and walk to nearby homes. Others come from adjoining Sector 12 and Sector 21 by shared auto or on foot.",
+        "scope": "locality",
+        "tags": ["noida", "sector-22"]
+      },
+      {
+        "id": "faq-noida-sector-22-2",
+        "q": "Which areas near Sector 22 do you also serve?",
+        "a": "Sector 21, Sector 12 and Sector 20 adjoin Sector 22 and share the same helper pool. Sectors 55 and 56 across the main road, and Sectors 18, 19 and 27 further on, are also within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-22"]
+      },
+      {
+        "id": "faq-noida-sector-22-3",
+        "q": "Which pincode does Sector 22 fall under?",
+        "a": "Sector 22 is covered by pincode 201301, the same pin as neighbouring Sectors 12 and 21. Helpers matched for this pincode are drawn from within Sector 22 and the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-22"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-27": {
+    "neighbours": ["sector-28", "sector-18", "sector-19", "sector-29", "sector-30", "sector-16", "sector-20", "sector-37"],
+    "landmarks": ["Kailash Hospital", "Atta Market (Sector 18)", "Noida Sector 18 Metro Station", "Sector 27 Market"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 27, under pincode 201301, lies immediately south of the Sector 18 commercial hub and is best known as the home of Kailash Hospital, one of the older multi-speciality hospitals in Noida. The sector itself is a plotted residential layout of independent houses, many of them large original family homes on tree-lined internal roads, with a steady number now converted to builder floors that appeal to doctors, hospital staff and professionals who want to walk to Atta Market and the Noida Sector 18 Metro Station. Long-settled owner families and elderly residents remain the core of the neighbourhood. The Sector 27 Market handles daily needs, and everything larger is available a few minutes away in Sector 18. Sector 28 adjoins on the south, Sector 18 and Sector 19 are directly across the road to the north, and Sector 29 and Sector 30 continue the residential belt towards the Sector 37 crossing. Households here commonly need part-time cleaning and cooking help, and many with senior members or patients recovering at home look for full-day or live-in support.",
+    "commuteNotes": "Noida Sector 18 Metro Station on the Blue Line is a short walk from the northern blocks, and buses and shared autos stop along the Sector 18–27 road outside Kailash Hospital. Helpers from Sectors 28, 29 and 30 usually walk in.",
+    "housingNotes": "Independent plotted houses and builder floors dominate, so households manage entry and timings directly without a society office. The larger original homes often have servant quarters, which makes live-in placements practical here.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-27-1",
+        "q": "Which areas near Sector 27 do you also serve?",
+        "a": "Sector 28, Sector 18 and Sector 19 adjoin Sector 27 and share the same helpers. Sectors 29, 30, 16 and 20 are also close enough for the same helper pool to cover.",
+        "scope": "locality",
+        "tags": ["noida", "sector-27"]
+      },
+      {
+        "id": "faq-noida-sector-27-2",
+        "q": "Can I get a helper for elder care or post-hospital support in Sector 27?",
+        "a": "Yes. Sector 27 has many older households and sits beside Kailash Hospital, so full-day and live-in helpers for elderly or recovering family members are a common requirement here. The independent houses in the sector generally have the space to accommodate live-in staff.",
+        "scope": "locality",
+        "tags": ["noida", "sector-27"]
+      },
+      {
+        "id": "faq-noida-sector-27-3",
+        "q": "Which pincode does Sector 27 fall under?",
+        "a": "Sector 27 is covered by pincode 201301, shared with neighbouring Sectors 18, 28 and 29. Helpers matched for this pincode come from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-27"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-28": {
+    "neighbours": ["sector-27", "sector-29", "sector-30", "sector-18", "sector-37", "sector-19", "sector-16", "sector-20"],
+    "landmarks": ["Kailash Hospital (Sector 27)", "Brahmaputra Shopping Complex (Sector 29)", "Noida Sector 18 Metro Station", "Sector 28 Market"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 28 is a settled plotted sector under pincode 201301, sitting between Sector 27 and Sector 29 in the residential belt that runs south from Sector 18 towards the Sector 37 crossing. Housing is made up of independent houses on individual plots, a good number of them original family homes with small front gardens, while others have been rebuilt as builder floors that draw working professionals who like being a short walk from the Noida Sector 18 Metro Station and Atta Market without the noise of the commercial sector. Owner families who have lived here for decades, along with their elderly parents, still form the bulk of households. The Sector 28 Market covers daily provisions, Kailash Hospital in Sector 27 is minutes away, and the Brahmaputra Shopping Complex in Sector 29 serves as the larger neighbourhood market. Sector 27 adjoins on the Sector 18 side, Sector 29 and Sector 30 continue southwards, and Sector 37 is just beyond. Demand here centres on part-time cleaning and cooking help in the mornings, with full-day support common in homes that have senior residents.",
+    "commuteNotes": "Noida Sector 18 Metro Station on the Blue Line is within walking distance of the northern blocks, and shared autos and buses run along the Sector 27–29 road. Helpers from adjoining Sectors 27, 29 and 30 usually walk in.",
+    "housingNotes": "Independent plotted houses and builder floors dominate, so entry and timings are arranged directly with the household rather than through a society office. Older homes with staff quarters can take live-in help.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-28-1",
+        "q": "Which areas near Sector 28 do you also serve?",
+        "a": "Sector 27, Sector 29 and Sector 30 adjoin Sector 28 and share the same helper pool. Sectors 18, 19, 16 and 37 are also within a short walk or auto ride.",
+        "scope": "locality",
+        "tags": ["noida", "sector-28"]
+      },
+      {
+        "id": "faq-noida-sector-28-2",
+        "q": "Do helpers in Sector 28 need society gate passes?",
+        "a": "No. Sector 28 consists of independent houses and builder floors rather than gated societies, so households arrange entry and timings directly with the helper. No society registration is required.",
+        "scope": "locality",
+        "tags": ["noida", "sector-28"]
+      },
+      {
+        "id": "faq-noida-sector-28-3",
+        "q": "Which pincode does Sector 28 fall under?",
+        "a": "Sector 28 is covered by pincode 201301, the same as neighbouring Sectors 27, 29 and 30. Helpers matched for this pincode come from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-28"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-29": {
+    "neighbours": ["sector-28", "sector-30", "sector-27", "sector-37", "sector-18", "sector-19", "sector-41", "sector-16"],
+    "landmarks": ["Brahmaputra Shopping Complex", "Ganga Shopping Complex", "Child PGI (Sector 30)", "Kailash Hospital (Sector 27)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 29, under pincode 201301, is one of central Noida's most established residential sectors and the neighbourhood shopping hub for the sectors around it, thanks to the Brahmaputra Shopping Complex and the Ganga Shopping Complex, two of the older market complexes in the city with groceries, clinics, eateries and service shops. Housing is plotted, with independent houses on tree-lined internal roads, a large proportion of them long-held family homes now shared with second-generation owners and elderly parents, and a growing number rebuilt into builder floors rented by professionals who value the central location. The Super Speciality Paediatric Hospital, commonly called Child PGI, sits in adjoining Sector 30, and Kailash Hospital in Sector 27 is a short distance north. Sector 28 adjoins on one side and Sector 30 on the other, with Sector 37 and the Botanical Garden metro area just beyond. Households here usually want part-time cleaning and cooking help on fixed morning slots, and many with senior residents keep full-day or live-in support.",
+    "commuteNotes": "Shared autos and buses run along the main road past the Brahmaputra and Ganga complexes towards Sector 18 and the Sector 37 crossing, and Noida Sector 18 and Botanical Garden on the Blue Line are the nearest metro stations. Helpers from Sectors 28, 30 and 37 usually walk in.",
+    "housingNotes": "Independent plotted houses and builder floors dominate, so there is no society office and households set entry and timings directly. Older homes with servant quarters can accommodate live-in staff.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-29-1",
+        "q": "Which areas near Sector 29 do you also serve?",
+        "a": "Sector 28 and Sector 30 adjoin Sector 29 and are served by the same helpers, as are Sector 27 and Sector 37 close by. Sectors 18, 19, 16 and 41 also fall within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-29"]
+      },
+      {
+        "id": "faq-noida-sector-29-2",
+        "q": "Which pincode does Sector 29 fall under?",
+        "a": "Sector 29, including the Brahmaputra and Ganga shopping complexes, is covered by pincode 201301, shared with neighbouring Sectors 28 and 30. Helpers matched for this pincode come from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-29"]
+      },
+      {
+        "id": "faq-noida-sector-29-3",
+        "q": "Do helpers in Sector 29 need society gate passes?",
+        "a": "No. Sector 29 is a plotted sector of independent houses and builder floors, so households deal with helpers directly and no society pass is needed. Timings are agreed between the family and the helper.",
+        "scope": "locality",
+        "tags": ["noida", "sector-29"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-30": {
+    "neighbours": ["sector-29", "sector-28", "sector-37", "sector-27", "sector-41", "sector-18", "sector-43", "sector-19"],
+    "landmarks": ["Child PGI (Super Speciality Paediatric Hospital & PG Teaching Institute)", "District Combined Hospital", "Ganga Shopping Complex (Sector 29)", "Sector 37 Crossing"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 30 is a mature residential sector under pincode 201301, sitting at the southern end of the Sector 27–29 belt beside the Sector 37 crossing, and known across Noida for its hospitals: the Super Speciality Paediatric Hospital and PG Teaching Institute, generally called Child PGI, and the District Combined Hospital are both located here. Away from the hospital frontage, the sector is a plotted layout of independent houses on quiet internal roads, home to long-settled families and elderly residents, with builder floors on rebuilt plots attracting doctors, hospital staff and other professionals. The Ganga Shopping Complex in adjoining Sector 29 serves as the main neighbourhood market, and the Sector 37 crossing next door is one of the city's main bus points for Delhi. Sector 29 and Sector 28 adjoin to the north, Sector 37 lies immediately across the crossing, and Sector 41 and Sector 43 are a short distance further. Households here commonly need part-time cleaning and cooking help, and homes with elderly members or recovering patients often look for full-day or live-in support.",
+    "commuteNotes": "The Sector 37 crossing beside the sector is a major bus and shared-auto stop, and Botanical Garden Metro Station on the Blue Line is the nearest station, a short auto ride away. Helpers from Sectors 29, 37 and 41 usually walk in.",
+    "housingNotes": "Independent plotted houses and builder floors dominate, so entry and timings are arranged directly with the household. Larger original homes often have servant quarters, which makes live-in placements practical.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-30-1",
+        "q": "Which areas near Sector 30 do you also serve?",
+        "a": "Sector 29, Sector 28 and Sector 37 adjoin Sector 30 and share the same helper pool. Sectors 27, 41, 43 and 18 are also within a short walk or auto ride.",
+        "scope": "locality",
+        "tags": ["noida", "sector-30"]
+      },
+      {
+        "id": "faq-noida-sector-30-2",
+        "q": "Can I get a helper for elder care in Sector 30?",
+        "a": "Yes. Sector 30 has many older households and sits beside Child PGI and the District Combined Hospital, so full-day and live-in helpers for elderly or recovering family members are frequently requested. The sector's independent houses generally have space for live-in staff.",
+        "scope": "locality",
+        "tags": ["noida", "sector-30"]
+      },
+      {
+        "id": "faq-noida-sector-30-3",
+        "q": "Which pincode does Sector 30 fall under?",
+        "a": "Sector 30 is covered by pincode 201301, shared with neighbouring Sectors 28 and 29. Sector 37 across the crossing falls under 201303, but the same nearby helpers serve both sides.",
+        "scope": "locality",
+        "tags": ["noida", "sector-30"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-37": {
+    "neighbours": ["sector-41", "sector-30", "sector-29", "sector-44", "sector-28", "sector-43", "sector-27", "sector-45"],
+    "landmarks": ["Arun Vihar", "Botanical Garden Metro Station", "Sector 37 Crossing", "Noida Golf Course (Sector 38)", "Golf Course Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 37, under pincode 201303, is a large and well-connected residential sector best known for Arun Vihar, the Army Welfare Housing colony of apartment blocks that occupies a major part of it, alongside plotted independent houses in the remaining blocks. This mix gives the sector a distinctive population of serving and retired defence families, long-settled owner households and professionals renting builder floors for the location. Botanical Garden Metro Station on the Blue Line lies just across the road, the Sector 37 crossing is one of Noida's busiest bus points for Delhi, and the Noida Golf Course in Sector 38 and the Golf Course Metro Station are close by. Sector 30 adjoins on the Sector 29 side, Sector 41 lies alongside towards the golf course, and Sector 44 and Sector 43 stretch southwards towards the Noida–Greater Noida Expressway. Households here commonly need part-time cleaning and cooking help on fixed slots, and the many retired couples in Arun Vihar frequently look for reliable full-day support, where familiarity with colony gate procedures counts.",
+    "commuteNotes": "Botanical Garden Metro Station on the Blue Line is directly across the road and the Sector 37 crossing is a major bus and shared-auto hub, so helpers reach the sector easily from all directions. Helpers from Sectors 30, 41 and 44 usually walk in.",
+    "housingNotes": "Arun Vihar is a gated colony where helpers are registered at the gate and typically carry a colony-issued pass, while the plotted blocks around it are independent houses with informal entry. Households in the colony should complete gate registration on the helper's first day.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-37-1",
+        "q": "Do helpers in Sector 37 need an Arun Vihar gate pass?",
+        "a": "Yes, within Arun Vihar helpers are registered at the gate with ID proof and usually carry a pass issued by the colony office. Homes in the plotted blocks outside the colony have no such requirement.",
+        "scope": "locality",
+        "tags": ["noida", "sector-37"]
+      },
+      {
+        "id": "faq-noida-sector-37-2",
+        "q": "Which areas near Sector 37 do you also serve?",
+        "a": "Sector 41 and Sector 30 adjoin Sector 37 and share its helper pool, as do Sector 29 and Sector 44 close by. Sectors 28, 43, 27 and 45 also fall within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-37"]
+      },
+      {
+        "id": "faq-noida-sector-37-3",
+        "q": "Which pincode does Sector 37 fall under?",
+        "a": "Sector 37, including Arun Vihar, is covered by pincode 201303, shared with Sectors 41, 43, 44, 45 and 46. Neighbouring Sector 30 across the crossing uses 201301, but the same nearby helpers serve both.",
+        "scope": "locality",
+        "tags": ["noida", "sector-37"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-41": {
+    "neighbours": ["sector-37", "sector-44", "sector-30", "sector-29", "sector-43", "sector-45", "sector-28", "sector-46"],
+    "landmarks": ["Golf Course Metro Station", "Noida Golf Course (Sector 38)", "Botanical Garden Metro Station", "Sector 41 Market", "Arun Vihar (Sector 37)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 41 is a quiet, mature plotted sector under pincode 201303, lying between Sector 37 and Sector 44 close to the Noida Golf Course and the Golf Course Metro Station on the Blue Line. Its internal roads are lined with independent houses on individual plots, a good number of them original family homes with gardens, and a growing share rebuilt as builder floors that appeal to working professionals who want metro access and a green setting away from the traffic of Sector 18. Long-settled owner families and their elderly parents remain a large part of the neighbourhood. The Sector 41 Market handles daily provisions, with Botanical Garden Metro Station and the Sector 37 crossing a short distance away for buses and larger shopping. Sector 37 with its Arun Vihar colony adjoins on one side, Sector 44 lies towards the Noida–Greater Noida Expressway, and Sector 30 and Sector 29 are close by to the north. Households here usually need part-time cleaning and cooking help in the mornings, and homes with senior residents frequently keep full-day or live-in support.",
+    "commuteNotes": "Golf Course and Botanical Garden stations on the Blue Line are both within walking distance of parts of the sector, and buses and shared autos stop at the Sector 37 crossing nearby. Helpers from Sectors 37, 44 and 30 usually walk in. [VERIFY]",
+    "housingNotes": "Independent plotted houses and builder floors dominate, so households arrange entry and timings directly without a society office. Older homes often have staff quarters, which makes live-in placements practical.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-41-1",
+        "q": "Which areas near Sector 41 do you also serve?",
+        "a": "Sector 37 and Sector 44 adjoin Sector 41 and share the same helpers, as do Sector 30 and Sector 29 to the north. Sectors 43, 45, 46 and 28 also fall within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-41"]
+      },
+      {
+        "id": "faq-noida-sector-41-2",
+        "q": "Do helpers in Sector 41 need society gate passes?",
+        "a": "No. Sector 41 is a plotted sector of independent houses and builder floors, so entry and timings are arranged directly between the household and the helper. Only the Arun Vihar colony in neighbouring Sector 37 has a gate-registration system.",
+        "scope": "locality",
+        "tags": ["noida", "sector-41"]
+      },
+      {
+        "id": "faq-noida-sector-41-3",
+        "q": "Which pincode does Sector 41 fall under?",
+        "a": "Sector 41 is covered by pincode 201303, the same as neighbouring Sectors 37, 43 and 44. Helpers matched for this pincode come from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-41"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-43": {
+    "neighbours": ["sector-44", "sector-41", "sector-45", "sector-37", "sector-46", "sector-30", "sector-29", "sector-47"],
+    "landmarks": ["Noida–Greater Noida Expressway", "Botanical Garden Metro Station", "Sector 44 Market", "Chhalera village (Sector 44)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 43, under pincode 201303, is a residential sector on the southern side of central Noida, close to the Noida–Greater Noida Expressway and adjoining Sector 44 and Sector 41. It is a plotted layout of independent houses, with many plots rebuilt into two- and three-floor builder units that are popular with working professionals employed along the expressway and in the corporate parks of Sector 62 and Greater Noida, alongside owner families who have lived here since the sector was developed. The neighbourhood is quieter than the older sectors near Sector 18, with the Sector 44 Market and the shops of Chhalera village next door covering daily needs, and Botanical Garden Metro Station on the Blue Line a short auto ride away for the commute into Delhi. [VERIFY] Sector 44 adjoins towards the expressway, Sector 41 lies on the golf-course side, and Sector 45 and Sector 46 continue the residential belt eastwards. Households here typically want part-time cleaning and cooking help arranged around office hours, and families with young children often look for full-day support.",
+    "commuteNotes": "Shared autos and buses run along the sector roads towards the Sector 37 crossing and the expressway, and Botanical Garden on the Blue Line is the nearest metro station. Helpers from Chhalera in Sector 44 and from Sectors 41 and 45 usually walk in. [VERIFY]",
+    "housingNotes": "Independent plotted houses and builder floors dominate, so there is no society office and households set entry and timings directly. Buildings with several tenant families suit part-time helpers covering more than one home per visit.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-43-1",
+        "q": "Which areas near Sector 43 do you also serve?",
+        "a": "Sector 44 and Sector 41 adjoin Sector 43 and share the same helper pool, as do Sector 45 and Sector 37 close by. Sectors 46, 47, 30 and 29 also fall within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-43"]
+      },
+      {
+        "id": "faq-noida-sector-43-2",
+        "q": "Do helpers in Sector 43 need society gate passes?",
+        "a": "No. Sector 43 is a plotted sector of independent houses and builder floors without a society office, so households arrange entry and timings directly with the helper. No registration is required.",
+        "scope": "locality",
+        "tags": ["noida", "sector-43"]
+      },
+      {
+        "id": "faq-noida-sector-43-3",
+        "q": "Which pincode does Sector 43 fall under?",
+        "a": "Sector 43 is covered by pincode 201303, shared with neighbouring Sectors 41, 44, 45 and 46. Helpers matched for this pincode come from the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-43"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-44": {
+    "neighbours": ["sector-45", "sector-43", "sector-41", "sector-37", "sector-46", "sector-30", "sector-47", "sector-29"],
+    "landmarks": ["Chhalera village", "Noida–Greater Noida Expressway", "Botanical Garden Metro Station", "Sector 44 Market", "Amrapali Sapphire (Sector 45)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Chhalera"],
+    "localIntro": "Sector 44, under pincode 201303, sits on the edge of the Noida–Greater Noida Expressway at the southern end of central Noida and is a genuinely mixed sector: planned blocks of independent houses and builder floors share it with the old village settlement of Chhalera, which has grown into a dense, affordable neighbourhood of rented rooms and small shops. That combination gives the sector a wide range of households, from owner families in the plotted blocks to young professionals renting builder floors for the expressway access, while Chhalera houses a large working population that includes many of the helpers who serve the surrounding sectors. The Sector 44 Market and the Chhalera bazaar cover daily needs, Botanical Garden Metro Station on the Blue Line is a short auto ride away, and the Amrapali Sapphire towers in adjoining Sector 45 mark the start of the group-housing belt to the east. Sector 45 adjoins on one side, Sector 43 and Sector 41 lie on the other, and Sector 37 with Arun Vihar is close by to the north. Households here mostly want part-time cleaning and cooking help, and slots fill quickly because many helpers live within walking distance in Chhalera.",
+    "commuteNotes": "A large share of helpers live in Chhalera inside the sector and walk to work, and shared autos and buses run along the sector road to the Sector 37 crossing and the expressway. Botanical Garden on the Blue Line is the nearest metro station. [VERIFY]",
+    "housingNotes": "The planned blocks are independent houses and builder floors with informal entry, while the village side has dense rented housing; neither involves society passes. Households arrange timings directly with the helper.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-44-1",
+        "q": "Where do helpers working in Sector 44 usually come from?",
+        "a": "Many helpers live in Chhalera, the village settlement inside Sector 44, and walk to homes in the sector and in neighbouring Sectors 45, 43 and 41. Others come by shared auto from further parts of central Noida.",
+        "scope": "locality",
+        "tags": ["noida", "sector-44"]
+      },
+      {
+        "id": "faq-noida-sector-44-2",
+        "q": "Which areas near Sector 44 do you also serve?",
+        "a": "Sector 45, Sector 43 and Sector 41 adjoin Sector 44 and share the same helper pool, as does Sector 37 close by. Sectors 46, 47, 30 and 29 also fall within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-44"]
+      },
+      {
+        "id": "faq-noida-sector-44-3",
+        "q": "Which pincode does Sector 44 fall under?",
+        "a": "Sector 44, including Chhalera, is covered by pincode 201303, the same as neighbouring Sectors 43, 45 and 41. Helpers matched for this pincode are drawn from within the sector and the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-44"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-45": {
+    "neighbours": ["sector-44", "sector-46", "sector-47", "sector-43", "sector-41", "sector-37", "sector-50", "sector-30"],
+    "landmarks": ["Amrapali Sapphire", "Sadarpur village", "Chhalera village (Sector 44)", "Sector 45 Market", "Prateek Stylome"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Sadarpur", "Chhalera"],
+    "localIntro": "Sector 45, under pincode 201303, is a mixed residential sector on the southern fringe of central Noida where large group-housing towers such as Amrapali Sapphire and Prateek Stylome stand alongside plotted independent houses and the old village of Sadarpur, which lies within the sector. The towers are home mainly to young families and working professionals who commute along the Noida–Greater Noida Expressway or to the corporate parks of Sector 62, while the plotted blocks hold longer-settled owner families and the village side houses a sizeable working population with rented rooms and small shops. The Sector 45 Market and the Sadarpur bazaar cover daily needs, and the Chhalera settlement in adjoining Sector 44 is a short walk away. Sector 44 adjoins on the expressway side, Sector 46 and Sector 47 continue eastwards, and Sector 43 and Sector 41 lie to the north-west. Households here look for part-time cleaning and cooking help in the towers, where gate registration applies, and for flexible slots in the plotted blocks; many helpers live within the sector in Sadarpur, which keeps morning and evening slots easy to fill.",
+    "commuteNotes": "Most helpers live in Sadarpur within the sector or in Chhalera next door and walk to work, and shared autos run along the sector roads towards the Sector 37 crossing and the expressway. The nearest metro stations are Botanical Garden on the Blue Line and Noida Sector 50 on the Aqua Line, both an auto ride away. [VERIFY]",
+    "housingNotes": "Gated towers such as Amrapali Sapphire and Prateek Stylome register helpers at the gate and usually issue a society pass, while the plotted blocks and village side have informal entry. Households in the towers should complete gate registration on the helper's first day.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-45-1",
+        "q": "Do helpers in Sector 45 need society gate passes?",
+        "a": "In the gated towers such as Amrapali Sapphire and Prateek Stylome, yes: helpers are registered at the gate with ID proof and usually carry a society-issued pass. Homes in the plotted blocks and in Sadarpur have no such requirement.",
+        "scope": "locality",
+        "tags": ["noida", "sector-45"]
+      },
+      {
+        "id": "faq-noida-sector-45-2",
+        "q": "Where do helpers working in Sector 45 usually come from?",
+        "a": "Many helpers live in Sadarpur village inside Sector 45 or in Chhalera in neighbouring Sector 44 and walk to work. This makes fixed morning and evening slots easy to fill in the towers and plotted blocks alike.",
+        "scope": "locality",
+        "tags": ["noida", "sector-45"]
+      },
+      {
+        "id": "faq-noida-sector-45-3",
+        "q": "Which areas near Sector 45 do you also serve?",
+        "a": "Sector 44, Sector 46 and Sector 47 adjoin Sector 45 and share the same helper pool. Sectors 43, 41, 37, 50 and 30 also fall within the same service radius, all under or beside pincode 201303.",
+        "scope": "locality",
+        "tags": ["noida", "sector-45"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-46": {
+    "neighbours": ["sector-45", "sector-47", "sector-44", "sector-50", "sector-43", "sector-41", "sector-37", "sector-51"],
+    "landmarks": ["Gardenia Glory", "Sector 46 Market", "Amrapali Sapphire (Sector 45)", "Sadarpur village (Sector 45)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Sadarpur"],
+    "localIntro": "Sector 46, under pincode 201303, lies on the south-eastern edge of central Noida between Sector 45 and Sector 47, and combines gated group-housing complexes such as Gardenia Glory with plotted blocks of independent houses and builder floors. The towers attract young families and working professionals who commute along the Noida–Greater Noida Expressway or to the offices of Sector 62 and Greater Noida, while the plotted blocks hold owner families who have been here since the sector was laid out, giving the neighbourhood a mix of society living and street-facing homes. The Sector 46 Market covers daily provisions, and the Amrapali Sapphire towers and the Sadarpur village bazaar in adjoining Sector 45 are a short walk away for larger shopping and services. Sector 45 adjoins on one side, Sector 47 on the other, and Sector 50 with its Aqua Line metro station lies a little further east, with Sector 44 and Sector 43 to the west. [VERIFY] Households here mostly want part-time cleaning and cooking help arranged around office hours, with the towers requiring gate registration and the plotted homes offering flexible timings.",
+    "commuteNotes": "Helpers reach the sector by shared auto along the sector roads from the Sector 37 crossing and the expressway side, and many walk in from Sadarpur in Sector 45. Noida Sector 50 on the Aqua Line is the nearest metro station, with Botanical Garden on the Blue Line further away. [VERIFY]",
+    "housingNotes": "Gated complexes such as Gardenia Glory register helpers at the gate and typically issue a society pass, while the plotted blocks have informal entry and flexible timings. Households in the towers should complete gate registration on the helper's first day.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-46-1",
+        "q": "Do helpers in Sector 46 need society gate passes?",
+        "a": "In the gated complexes such as Gardenia Glory, yes: helpers are registered at the gate with ID proof and usually carry a pass issued by the society office. Independent houses and builder floors in the plotted blocks have no such requirement.",
+        "scope": "locality",
+        "tags": ["noida", "sector-46"]
+      },
+      {
+        "id": "faq-noida-sector-46-2",
+        "q": "Which areas near Sector 46 do you also serve?",
+        "a": "Sector 45 and Sector 47 adjoin Sector 46 and share the same helper pool, as do Sector 44 and Sector 50 nearby. Sectors 43, 41, 37 and 51 also fall within the same service radius.",
+        "scope": "locality",
+        "tags": ["noida", "sector-46"]
+      },
+      {
+        "id": "faq-noida-sector-46-3",
+        "q": "Which pincode does Sector 46 fall under?",
+        "a": "Sector 46 is covered by pincode 201303, shared with neighbouring Sectors 44, 45 and 47. Helpers matched for this pincode are drawn from Sadarpur and the surrounding central Noida sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-46"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

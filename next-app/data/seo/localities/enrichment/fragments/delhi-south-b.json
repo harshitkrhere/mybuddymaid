@@ -1,0 +1,223 @@
+{
+  "greater-kailash": {
+    "neighbours": ["east-of-kailash", "kalkaji", "lajpat-nagar", "andrews-ganj", "defence-colony", "malviya-nagar", "hauz-khas", "saket"],
+    "landmarks": ["M Block Market GK 1", "M Block Market GK 2", "Kailash Colony Metro Station", "Greater Kailash Metro Station", "Lotus Temple"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Zamrudpur", "Chirag Delhi"],
+    "localIntro": "Greater Kailash, split into the well-known GK 1 and GK 2 blocks under pincode 110048, is one of South Delhi's most established residential colonies. The housing stock is dominated by builder floors — original plotted kothis rebuilt into three- and four-storey family floors — so most households run as independent family units rather than tower societies. Daily life centres on the M Block markets of both GK 1 and GK 2, with the Lotus Temple a short drive away on the Kalkaji side. Kailash Colony Metro Station on the Violet Line and the Greater Kailash station on the Magenta Line anchor connectivity for commuting workers. Households here are a mix of long-settled families, senior citizens living in ancestral floors, and professionals renting newer builder floors, so both full-day and part-time domestic help are in steady demand. East of Kailash, Kalkaji and Lajpat Nagar adjoin the colony, and helpers from the neighbouring Zamrudpur and Chirag Delhi villages work across its blocks.",
+    "commuteNotes": "Helpers reach Greater Kailash via Kailash Colony Metro Station on the Violet Line or the Greater Kailash Magenta Line station, and many walk in from the adjacent Zamrudpur and Chirag Delhi villages. Buses along the Outer Ring Road also serve the GK 2 side.",
+    "housingNotes": "The colony is mostly builder floors on private plots, so households usually manage their own timings and door access rather than society gate passes; a few blocks with RWA gates may ask visiting helpers to sign an entry register.",
+    "localFaqs": [
+      {"id": "faq-delhi-greater-kailash-1", "q": "Which areas near Greater Kailash do you also serve?", "a": "Alongside GK 1 and GK 2, service coverage extends to adjoining colonies such as East of Kailash, Kalkaji, Lajpat Nagar and Andrews Ganj. Helpers working in Greater Kailash often take up households in these neighbouring areas too.", "scope": "locality", "tags": ["delhi", "greater-kailash"]},
+      {"id": "faq-delhi-greater-kailash-2", "q": "Do helpers in Greater Kailash need society gate passes?", "a": "Most of Greater Kailash is builder floors on private plots, so entry is managed by the household itself. In blocks where the RWA has gated the lane, helpers may need to sign a visitor register at the gate, which the household can arrange on day one.", "scope": "locality", "tags": ["delhi", "greater-kailash"]},
+      {"id": "faq-delhi-greater-kailash-3", "q": "Which pincode does Greater Kailash service cover?", "a": "Greater Kailash falls under pincode 110048, which covers both the GK 1 and GK 2 blocks. Households around the M Block markets and towards Kailash Colony Metro Station are all within this coverage.", "scope": "locality", "tags": ["delhi", "greater-kailash"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "andrews-ganj": {
+    "neighbours": ["defence-colony", "lajpat-nagar", "greater-kailash", "east-of-kailash", "hauz-khas", "green-park", "safdarjung-enclave"],
+    "landmarks": ["Ansal Plaza", "Hudco Place", "South Extension Part II Market", "Siri Fort Auditorium"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Andrews Ganj sits between South Extension Part II and the Siri Fort belt under pincode 110049, a compact pocket that mixes government housing blocks with the Hudco Place apartment complex and adjoining private homes. Households range from serving and retired government employees in the older quarters to professionals and families in the Hudco Place flats, which keeps demand steady for both part-time cleaning help and full-day cooks. Ansal Plaza, one of Delhi's earliest malls, stands right beside the colony on Khel Gaon Marg, while the South Extension Part II market and Siri Fort Auditorium are within easy reach for shopping and evening outings. The mixed housing profile means domestic help arrangements vary: gated apartment entry registers at Hudco Place, and more informal, flexible timings in the older government blocks. Defence Colony and Lajpat Nagar lie towards the east, Greater Kailash to the south-east, and Hauz Khas and Green Park across Aurobindo Marg to the west.",
+    "commuteNotes": "Buses along the Ring Road and August Kranti Marg are the main way helpers reach Andrews Ganj, with the South Extension metro station on the Pink Line a short walk from the colony's northern side.",
+    "housingNotes": "Housing is a mix of government quarters and the gated Hudco Place complex; Hudco Place towers typically require helper entry registration at the gate, while the government blocks and private homes manage access informally.",
+    "localFaqs": [
+      {"id": "faq-delhi-andrews-ganj-1", "q": "Which areas near Andrews Ganj do you also serve?", "a": "Coverage around Andrews Ganj includes Defence Colony, Lajpat Nagar, Greater Kailash and the Hauz Khas–Green Park belt. Many helpers serving South Extension Part II households also take up work in Andrews Ganj since the areas adjoin each other.", "scope": "locality", "tags": ["delhi", "andrews-ganj"]},
+      {"id": "faq-delhi-andrews-ganj-2", "q": "Do helpers in Andrews Ganj need gate passes?", "a": "In the gated Hudco Place apartment complex, helpers are usually registered at the gate and issued an entry pass by the society office. In the government quarters and private homes of Andrews Ganj, entry is handled directly by the household.", "scope": "locality", "tags": ["delhi", "andrews-ganj"]},
+      {"id": "faq-delhi-andrews-ganj-3", "q": "Which pincode does Andrews Ganj service cover?", "a": "Andrews Ganj falls under pincode 110049. Households in Hudco Place, the government housing blocks and the lanes near Ansal Plaza are all covered within this pincode.", "scope": "locality", "tags": ["delhi", "andrews-ganj"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "vasant-vihar": {
+    "neighbours": ["munirka", "rk-puram", "vasant-kunj", "mahipalpur", "delhi-cantt", "chanakyapuri", "hauz-khas"],
+    "landmarks": ["Basant Lok Market", "Priya Cinema Complex", "Vasant Vihar Metro Station", "Modern School Vasant Vihar"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Munirka Village", "Kusumpur Pahari"],
+    "localIntro": "Vasant Vihar, under pincode 110057, is one of South Delhi's most exclusive residential colonies, laid out in lettered blocks of large independent houses and bungalows. Residents include long-settled business families, senior professionals, expatriates and diplomatic households, and many homes keep full-day or live-in domestic staff alongside part-time cleaners and cooks. The Basant Lok community centre with its Priya cinema complex is the colony's main social and shopping hub, and Modern School Vasant Vihar is a well-known institution on its edge. Vasant Vihar Metro Station on the Magenta Line sits along the Outer Ring Road side of the colony, making commutes straightforward for working households and helpers alike. Elderly parents living with families are common here, so elder-care and cook roles see steady demand. Munirka lies just across the Outer Ring Road, with R.K. Puram to the north-east and Vasant Kunj to the south; most helpers walk in from Munirka village and the adjacent Kusumpur Pahari settlement.",
+    "commuteNotes": "Vasant Vihar Metro Station on the Magenta Line serves the colony directly, and many helpers simply walk across from Munirka village or Kusumpur Pahari, both adjacent to the colony.",
+    "housingNotes": "The stock is almost entirely large independent houses and bungalows, so households set their own timings and door access without society formalities; homes with private security may keep their own visitor log.",
+    "localFaqs": [
+      {"id": "faq-delhi-vasant-vihar-1", "q": "Which areas near Vasant Vihar do you also serve?", "a": "Service around Vasant Vihar extends to Munirka, R.K. Puram, Vasant Kunj and the Shanti Niketan–Anand Niketan side towards Chanakyapuri. Helpers based in Munirka village commonly work across all of these adjoining areas.", "scope": "locality", "tags": ["delhi", "vasant-vihar"]},
+      {"id": "faq-delhi-vasant-vihar-2", "q": "Where do domestic helpers working in Vasant Vihar usually come from?", "a": "Most helpers in Vasant Vihar live in Munirka village or the Kusumpur Pahari settlement, both within walking distance of the colony's blocks. This keeps morning reporting times reliable even for early cook shifts.", "scope": "locality", "tags": ["delhi", "vasant-vihar"]},
+      {"id": "faq-delhi-vasant-vihar-3", "q": "Which pincode does Vasant Vihar service cover?", "a": "Vasant Vihar falls under pincode 110057, covering all its lettered blocks around Basant Lok Market. Households near the Vasant Vihar Metro Station and Modern School are within this coverage.", "scope": "locality", "tags": ["delhi", "vasant-vihar"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "pushp-vihar": {
+    "neighbours": ["saket", "malviya-nagar", "sangam-vihar", "mehrauli", "chhatarpur", "kalkaji"],
+    "landmarks": ["Select Citywalk", "Saket District Centre", "Max Hospital Saket", "Saket Court Complex", "Batra Hospital"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Madangir", "Dr. Ambedkar Nagar"],
+    "localIntro": "Pushp Vihar is a planned DDA neighbourhood under pincode 110062, its numbered sectors filled with low-rise apartment blocks that sit alongside the adjoining Madangir resettlement colony, giving the area a genuinely mixed housing character. Households are largely salaried families and working professionals in the DDA flats, many of them double-income homes that rely on part-time help for cleaning and cooking. The Saket District Centre with Select Citywalk lies just to the north, the Saket Court Complex and Max Hospital Saket are on the Press Enclave Road side, and Batra Hospital is close by towards the Mehrauli-Badarpur Road. This puts hospitals, courts and malls — all large employers — at the doorstep, adding demand from professionals who keep long work hours. Saket and Malviya Nagar adjoin Pushp Vihar to the north, with Sangam Vihar towards the east via Khanpur. Helpers overwhelmingly come from the neighbouring Madangir and Dr. Ambedkar Nagar settlements, often on foot.",
+    "commuteNotes": "Most helpers walk in from the adjacent Madangir and Dr. Ambedkar Nagar settlements; for longer commutes, Saket Metro Station on the Yellow Line and buses along Press Enclave Road and the Mehrauli-Badarpur Road serve the area.",
+    "housingNotes": "The DDA sector blocks are low-rise walk-up flats, usually without formal society gate systems, so households coordinate timings directly; a few gated pockets may keep a register at the sector gate.",
+    "localFaqs": [
+      {"id": "faq-delhi-pushp-vihar-1", "q": "Which areas near Pushp Vihar do you also serve?", "a": "Coverage around Pushp Vihar includes Saket, Malviya Nagar and the Khanpur side towards Sangam Vihar. Helpers based in Madangir commonly work across Pushp Vihar's sectors and these adjoining areas.", "scope": "locality", "tags": ["delhi", "pushp-vihar"]},
+      {"id": "faq-delhi-pushp-vihar-2", "q": "Where do helpers working in Pushp Vihar usually live?", "a": "Most helpers come from Madangir and Dr. Ambedkar Nagar, which directly adjoin Pushp Vihar's sectors. Walking distances are short, which makes early-morning and multiple-household shifts practical.", "scope": "locality", "tags": ["delhi", "pushp-vihar"]},
+      {"id": "faq-delhi-pushp-vihar-3", "q": "Which pincode does Pushp Vihar service cover?", "a": "Pushp Vihar falls under pincode 110062, covering its DDA sectors and the adjoining Madangir side. Households near the Saket Court Complex and Press Enclave Road edge are within this coverage.", "scope": "locality", "tags": ["delhi", "pushp-vihar"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "east-of-kailash": {
+    "neighbours": ["kalkaji", "greater-kailash", "lajpat-nagar", "new-friends-colony", "defence-colony", "okhla", "jangpura"],
+    "landmarks": ["ISKCON Temple", "Lotus Temple", "Nehru Place", "Kailash Colony Metro Station"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Garhi"],
+    "localIntro": "East of Kailash, under pincode 110065, is a settled South Delhi colony organised into lettered blocks of builder floors — plotted homes rebuilt into multi-storey family floors that now dominate the housing stock. The ISKCON Temple on Hare Krishna Hill rises inside the colony itself, the Lotus Temple sits just beyond its southern edge, and the Nehru Place commercial hub is a short distance away, bringing a daily flow of office-goers through the area. Kailash Colony Metro Station on the Violet Line serves the colony's western side. Households are a blend of families who have lived here for decades, elderly residents in older floors, and professionals renting newer builder floors, which keeps demand high for part-time cleaning, cooking and elder-care support. The urban village of Garhi lies within the colony and is where many local helpers live. Kalkaji, Greater Kailash and Lajpat Nagar adjoin East of Kailash, with New Friends Colony across the Mathura Road side.",
+    "commuteNotes": "Kailash Colony Metro Station on the Violet Line is the nearest metro, with Nehru Place station also close by; many helpers walk to work from Garhi village inside the colony.",
+    "housingNotes": "Builder floors on private plots dominate, so households control their own entry and timings; blocks with RWA gates may ask helpers to sign a simple register, but formal society passes are uncommon.",
+    "localFaqs": [
+      {"id": "faq-delhi-east-of-kailash-1", "q": "Which areas near East of Kailash do you also serve?", "a": "Coverage extends to the adjoining colonies of Kalkaji, Greater Kailash and Lajpat Nagar, and across to New Friends Colony. Helpers living in Garhi village often work in several of these areas in a single day.", "scope": "locality", "tags": ["delhi", "east-of-kailash"]},
+      {"id": "faq-delhi-east-of-kailash-2", "q": "Do helpers in East of Kailash need society gate passes?", "a": "Most of East of Kailash is builder floors where the household manages entry directly, so no society pass is needed. Where an RWA has gated a block, helpers may sign a visitor register at the gate.", "scope": "locality", "tags": ["delhi", "east-of-kailash"]},
+      {"id": "faq-delhi-east-of-kailash-3", "q": "Which pincode does East of Kailash service cover?", "a": "East of Kailash falls under pincode 110065, covering its lettered blocks around the ISKCON Temple. Homes towards the Lotus Temple and Kailash Colony Metro Station side are within this coverage.", "scope": "locality", "tags": ["delhi", "east-of-kailash"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "munirka": {
+    "neighbours": ["vasant-vihar", "rk-puram", "hauz-khas", "safdarjung-enclave", "vasant-kunj", "green-park"],
+    "landmarks": ["Jawaharlal Nehru University (JNU)", "IIT Delhi", "Munirka Metro Station", "Munirka Village Market"],
+    "housingProfile": "mixed",
+    "demandProfile": ["students", "working-professionals", "families"],
+    "helperSourceAreas": ["Munirka Village", "Kusumpur Pahari"],
+    "localIntro": "Munirka, under pincode 110067, pairs the dense lanes of old Munirka village with the planned DDA flats beside it, producing a mixed housing profile that houses students, young professionals and settled families side by side. Jawaharlal Nehru University lies directly across the road, and IIT Delhi is a short ride down the Outer Ring Road, so rented rooms and shared flats for students form a big part of the area's rental market. Munirka Metro Station on the Magenta Line sits on the Outer Ring Road edge, and the village market keeps daily needs close at hand. Households in the DDA flats — many of them working couples and families — take regular part-time help for cleaning and cooking, while student households typically want short, fixed-time visits. Vasant Vihar is just across the Outer Ring Road, with R.K. Puram to the north and Hauz Khas towards the east. Most helpers live within Munirka village itself or in nearby Kusumpur Pahari.",
+    "commuteNotes": "Munirka Metro Station on the Magenta Line and the busy Outer Ring Road bus corridor serve the area directly; a large share of helpers live within Munirka village and simply walk to nearby flats.",
+    "housingNotes": "The DDA flats are walk-up blocks with light gating at most, while village homes are independent multi-storey buildings; in both, timings and access are agreed directly with the household rather than through a society office.",
+    "localFaqs": [
+      {"id": "faq-delhi-munirka-1", "q": "Which areas near Munirka do you also serve?", "a": "Coverage around Munirka includes Vasant Vihar across the Outer Ring Road, R.K. Puram, and the Hauz Khas–Safdarjung Enclave belt. Helpers living in Munirka village routinely work across these adjoining colonies.", "scope": "locality", "tags": ["delhi", "munirka"]},
+      {"id": "faq-delhi-munirka-2", "q": "Can students near JNU and IIT Delhi book part-time help in Munirka?", "a": "Yes. Munirka's rental market around JNU and IIT Delhi includes many student households, and short fixed-time cleaning or cooking visits are a common arrangement here. Timings are agreed directly with the helper.", "scope": "locality", "tags": ["delhi", "munirka"]},
+      {"id": "faq-delhi-munirka-3", "q": "Which pincode does Munirka service cover?", "a": "Munirka falls under pincode 110067, covering both the DDA flats and Munirka village. Homes near the Munirka Metro Station and the village market are within this coverage.", "scope": "locality", "tags": ["delhi", "munirka"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "saket": {
+    "neighbours": ["malviya-nagar", "pushp-vihar", "mehrauli", "chhatarpur", "hauz-khas", "greater-kailash", "sangam-vihar"],
+    "landmarks": ["Select Citywalk", "DLF Avenue", "Saket Metro Station", "Max Hospital Saket", "Garden of Five Senses", "IGNOU Main Campus"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Hauz Rani", "Khirki Extension"],
+    "localIntro": "Saket combines planned residential blocks and builder floors with the Saket District Centre, home to Select Citywalk and DLF Avenue, two of South Delhi's busiest malls. The service belt here carries pincode 110068, taking in the IGNOU side around the colony's southern edge — the area's alternate name, the IGNOU belt, comes from the university's main campus nearby. Max Hospital Saket and the mall complex employ large numbers of professionals, and households in the area skew towards working couples and families who need dependable part-time or full-day help. Saket Metro Station on the Yellow Line anchors the area's connectivity, and the Garden of Five Senses lies towards the Saidul Ajaib side. Housing is genuinely mixed: DDA blocks, private builder floors and urban-village pockets sit close together, so helper arrangements range from gate registers to direct doorstep timings. Malviya Nagar and Pushp Vihar adjoin Saket, with Mehrauli to the west; most helpers come from the neighbouring Hauz Rani and Khirki Extension settlements.",
+    "commuteNotes": "Saket Metro Station on the Yellow Line and buses along Press Enclave Marg and the Mehrauli-Badarpur Road serve the area; many helpers walk in from Hauz Rani and Khirki Extension, which sit right beside Saket's blocks.",
+    "housingNotes": "DDA blocks, builder floors and village pockets sit side by side, so most households manage helper access directly; the gated apartment pockets keep an entry register or pass system at the gate.",
+    "localFaqs": [
+      {"id": "faq-delhi-saket-1", "q": "Which areas near Saket do you also serve?", "a": "Coverage around Saket includes Malviya Nagar, Pushp Vihar and the Mehrauli side, extending towards Chhatarpur. Helpers based in Hauz Rani and Khirki Extension commonly serve households across this whole belt.", "scope": "locality", "tags": ["delhi", "saket"]},
+      {"id": "faq-delhi-saket-2", "q": "Where do helpers working in Saket usually live?", "a": "Most helpers live in Hauz Rani and Khirki Extension, the settlements directly adjoining Saket's residential blocks and the District Centre. Short walking distances make multiple household shifts in a day practical.", "scope": "locality", "tags": ["delhi", "saket"]},
+      {"id": "faq-delhi-saket-3", "q": "Which pincode does the Saket service area cover?", "a": "This service area covers pincode 110068, the IGNOU belt on Saket's southern side. Households towards the Saket District Centre, Max Hospital and the Garden of Five Senses are served from the same coverage.", "scope": "locality", "tags": ["delhi", "saket"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "vasant-kunj": {
+    "neighbours": ["vasant-vihar", "munirka", "mahipalpur", "mehrauli", "chhatarpur", "rajokari"],
+    "landmarks": ["DLF Promenade", "DLF Emporio", "Ambience Mall Vasant Kunj", "Fortis Hospital Vasant Kunj"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Masoodpur", "Kishangarh"],
+    "localIntro": "Vasant Kunj, spread across pincodes 110070 and 110072, is a large planned neighbourhood of DDA sectors and pockets — apartment blocks arranged in gated clusters that make it one of South Delhi's biggest concentrations of flat-dwelling households. Residents are predominantly working professionals and families, many in double-income homes that depend on part-time or full-day domestic help. The mall cluster on Nelson Mandela Marg — DLF Promenade, DLF Emporio and Ambience Mall — is the area's best-known landmark strip, and Fortis Hospital Vasant Kunj serves the neighbourhood from within it. The urban villages of Masoodpur and Kishangarh sit inside and beside Vasant Kunj, and they are where a large share of the area's helpers live, keeping walking commutes short despite the neighbourhood's size. Vasant Vihar lies to the north, Mahipalpur to the west towards the airport side, and Mehrauli and Chhatarpur towards the east and south-east.",
+    "commuteNotes": "There is no metro station inside most of Vasant Kunj; Chhatarpur on the Yellow Line and Vasant Vihar on the Magenta Line are the closest stations, and buses run along Nelson Mandela Marg. Many helpers walk from Masoodpur and Kishangarh, which adjoin the sectors.",
+    "housingNotes": "Housing is overwhelmingly gated apartment pockets, so helpers typically need gate entry registration and, in many societies, a maid pass issued through the RWA or facility office before starting work.",
+    "localFaqs": [
+      {"id": "faq-delhi-vasant-kunj-1", "q": "Do helpers in Vasant Kunj need society gate passes?", "a": "Yes, in most cases. Vasant Kunj's DDA pockets and apartment societies are gated, and helpers are registered at the gate with an entry pass arranged through the society office. This is usually completed on the first working day.", "scope": "locality", "tags": ["delhi", "vasant-kunj"]},
+      {"id": "faq-delhi-vasant-kunj-2", "q": "Which areas near Vasant Kunj do you also serve?", "a": "Coverage extends to Vasant Vihar, Munirka, Mahipalpur and the Mehrauli–Chhatarpur side. Helpers living in Masoodpur and Kishangarh commonly work across Vasant Kunj's sectors and these adjoining areas.", "scope": "locality", "tags": ["delhi", "vasant-kunj"]},
+      {"id": "faq-delhi-vasant-kunj-3", "q": "Which pincodes does Vasant Kunj service cover?", "a": "Vasant Kunj service covers pincodes 110070 and 110072, taking in its sectors and pockets. Households near the Nelson Mandela Marg mall strip and Fortis Hospital are within this coverage.", "scope": "locality", "tags": ["delhi", "vasant-kunj"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "chhatarpur": {
+    "neighbours": ["mehrauli", "saket", "vasant-kunj", "arjun-garh", "pushp-vihar", "sangam-vihar"],
+    "landmarks": ["Chhatarpur Mandir", "Chhatarpur Metro Station", "Qutub Minar", "Garden of Five Senses"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Chhatarpur Extension"],
+    "localIntro": "Chhatarpur, under pincode 110074, stretches from the famous Chhatarpur Mandir complex out towards Delhi's southern edge, and its housing is genuinely mixed: farmhouse estates along the internal roads, the old village settlement, and dense builder-floor colonies in Chhatarpur Extension. This spread produces two very different kinds of demand — farmhouses and large independent homes often keep full-day or live-in staff, while families in the Extension's builder floors typically take part-time help for cleaning and cooking. Chhatarpur Metro Station on the Yellow Line connects the area along the Mehrauli-Gurgaon corridor, with the Qutub Minar just north in Mehrauli and the Garden of Five Senses towards the Saket side. Many of the area's helpers live within Chhatarpur Extension itself, keeping commutes short. Mehrauli adjoins Chhatarpur to the north, Saket lies to the north-east, and Vasant Kunj is across the ridge to the north-west.",
+    "commuteNotes": "Chhatarpur Metro Station on the Yellow Line is the main transit point, with buses and shared autos running along Chhatarpur Road towards the Mandir and the farmhouse lanes; many helpers live within Chhatarpur Extension and travel locally.",
+    "housingNotes": "Farmhouses and independent homes manage staff access privately and often prefer full-day or live-in arrangements, while the builder-floor colonies of Chhatarpur Extension work on flexible, directly agreed part-time timings.",
+    "localFaqs": [
+      {"id": "faq-delhi-chhatarpur-1", "q": "Which areas near Chhatarpur do you also serve?", "a": "Coverage around Chhatarpur includes Mehrauli, Saket and Vasant Kunj, extending down the MG Road corridor towards Arjun Garh. Helpers based in Chhatarpur Extension often serve households across this belt.", "scope": "locality", "tags": ["delhi", "chhatarpur"]},
+      {"id": "faq-delhi-chhatarpur-2", "q": "Do farmhouses in Chhatarpur get live-in help?", "a": "Farmhouse estates and large independent homes in Chhatarpur commonly opt for full-day or live-in staff, since properties are spread out and daily commuting is less practical. Part-time visits remain the norm in the builder-floor colonies of Chhatarpur Extension.", "scope": "locality", "tags": ["delhi", "chhatarpur"]},
+      {"id": "faq-delhi-chhatarpur-3", "q": "Which pincode does Chhatarpur service cover?", "a": "Chhatarpur falls under pincode 110074, covering the area from the Chhatarpur Mandir side through the village and Chhatarpur Extension. Homes near the Chhatarpur Metro Station are within this coverage.", "scope": "locality", "tags": ["delhi", "chhatarpur"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sarita-vihar": {
+    "neighbours": ["okhla", "badarpur", "new-friends-colony", "kalkaji", "east-of-kailash", "greater-kailash"],
+    "landmarks": ["Indraprastha Apollo Hospital", "Sarita Vihar Metro Station", "Jasola District Centre", "Kalindi Kunj Park"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Madanpur Khadar"],
+    "localIntro": "Sarita Vihar, under pincode 110076, is a planned DDA neighbourhood on the Mathura Road corridor, its lettered pockets made up of gated apartment blocks that house salaried families and working professionals. The Indraprastha Apollo Hospital stands at the colony's edge on Mathura Road and is a major local employer, alongside the offices of the Jasola District Centre next door — both feed steady demand from professional households for part-time and full-day help. Sarita Vihar Metro Station on the Violet Line serves the area directly, and Kalindi Kunj Park lies towards the Yamuna side. Because the pockets are gated, helpers here are usually registered at pocket gates before starting work. The adjoining Madanpur Khadar settlement is where most of the area's domestic workers live, a short walk from the pockets. Okhla adjoins Sarita Vihar to the north-west, Badarpur lies down Mathura Road to the south, and New Friends Colony is further up the same corridor.",
+    "commuteNotes": "Sarita Vihar Metro Station on the Violet Line and buses along Mathura Road serve the colony; most helpers walk in from the adjacent Madanpur Khadar settlement.",
+    "housingNotes": "The DDA pockets are gated apartment clusters, so helpers generally sign an entry register or carry a pocket gate pass; timings inside flats are then agreed directly with the household.",
+    "localFaqs": [
+      {"id": "faq-delhi-sarita-vihar-1", "q": "Do helpers in Sarita Vihar need gate passes?", "a": "Sarita Vihar's DDA pockets are gated, and helpers are typically registered at the pocket gate before their first working day. The household or the RWA office completes this registration, after which daily entry is routine.", "scope": "locality", "tags": ["delhi", "sarita-vihar"]},
+      {"id": "faq-delhi-sarita-vihar-2", "q": "Where do helpers working in Sarita Vihar usually live?", "a": "Most helpers live in Madanpur Khadar, the large settlement directly adjoining Sarita Vihar. Its proximity keeps walking commutes short and morning reporting times dependable.", "scope": "locality", "tags": ["delhi", "sarita-vihar"]},
+      {"id": "faq-delhi-sarita-vihar-3", "q": "Which pincode does Sarita Vihar service cover?", "a": "Sarita Vihar falls under pincode 110076, covering its lettered pockets along Mathura Road. Households near Indraprastha Apollo Hospital and the Sarita Vihar Metro Station are within this coverage.", "scope": "locality", "tags": ["delhi", "sarita-vihar"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sangam-vihar": {
+    "neighbours": ["pushp-vihar", "badarpur", "saket", "kalkaji", "chhatarpur", "mehrauli"],
+    "landmarks": ["Tughlakabad Fort", "Batra Hospital", "Khanpur Crossing on Mehrauli-Badarpur Road"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Deoli", "Tigri"],
+    "localIntro": "Sangam Vihar, under pincode 110080, is one of Delhi's largest and densest residential settlements, built almost entirely of independent multi-storey houses packed along narrow numbered blocks off the Mehrauli-Badarpur Road. Households are working families — many with both adults employed — and demand here leans towards affordable part-time help for cleaning and cooking rather than full-day staff. The historic Tughlakabad Fort spreads along the area's eastern side, Batra Hospital is close by on the MB Road, and the busy Khanpur crossing is the main junction connecting the blocks to the rest of South Delhi. Because most homes are self-built independent houses, there are no society gates or passes; helpers and households settle timings at the doorstep. Many helpers live within Sangam Vihar's own blocks or in the adjoining Deoli and Tigri settlements. Pushp Vihar lies to the west via Khanpur, Badarpur to the east past Tughlakabad, and Saket further along Press Enclave Road.",
+    "commuteNotes": "Buses and shared autos along the Mehrauli-Badarpur Road are the main links, with the Khanpur crossing as the key junction; most helpers live within Sangam Vihar or walk in from adjoining Deoli and Tigri.",
+    "housingNotes": "The area is wall-to-wall independent houses without society gating, so access and timings are agreed directly at the door; multi-floor homes often split help between floors occupied by different family units.",
+    "localFaqs": [
+      {"id": "faq-delhi-sangam-vihar-1", "q": "Which areas near Sangam Vihar do you also serve?", "a": "Coverage around Sangam Vihar includes the Khanpur side towards Pushp Vihar, the Tughlakabad side towards Badarpur, and Saket along Press Enclave Road. Helpers living in Sangam Vihar's blocks also serve these adjoining areas.", "scope": "locality", "tags": ["delhi", "sangam-vihar"]},
+      {"id": "faq-delhi-sangam-vihar-2", "q": "Do helpers in Sangam Vihar need gate passes?", "a": "No. Sangam Vihar is made up of independent houses without society gates, so there is no pass system. Entry and timings are agreed directly between the household and the helper.", "scope": "locality", "tags": ["delhi", "sangam-vihar"]},
+      {"id": "faq-delhi-sangam-vihar-3", "q": "Which pincode does Sangam Vihar service cover?", "a": "Sangam Vihar falls under pincode 110080, covering its numbered blocks off the Mehrauli-Badarpur Road. Homes near the Khanpur crossing and towards the Tughlakabad Fort side are within this coverage.", "scope": "locality", "tags": ["delhi", "sangam-vihar"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sarojini-nagar": {
+    "neighbours": ["chanakyapuri", "rk-puram", "safdarjung-enclave", "lodi-road", "green-park", "hauz-khas"],
+    "landmarks": ["Sarojini Nagar Market", "Dilli Haat", "INA Market", "Sarojini Nagar Metro Station", "Safdarjung Airport"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Sarojini Nagar, under pincode 110023, is best known city-wide for the Sarojini Nagar Market, but the locality itself is a central-government housing colony whose quarters house serving and retired officials and their families. Parts of the colony have been taken up for phased redevelopment into new government housing towers, so the residential stock today is a mix of older low-rise quarters and newer blocks. Dilli Haat and INA Market sit just across the Ring Road side, Safdarjung Airport lies to the east, and Sarojini Nagar Metro Station on the Pink Line puts the area on the metro map with the INA interchange one stop away. Households here are typically single-family government quarters, including many with elderly parents, and part-time cleaning and cooking help is the standard arrangement. Chanakyapuri adjoins the colony to the north-west, R.K. Puram lies to the south, and Safdarjung Enclave and Green Park are towards the south-east.",
+    "commuteNotes": "Sarojini Nagar Metro Station on the Pink Line serves the colony directly, with the INA interchange linking to the Yellow Line one stop away; Ring Road buses also stop along the market side.",
+    "housingNotes": "Government quarters and newer redeveloped blocks make up the stock; older quarters manage helper entry informally, while the new towers follow gate registration similar to private societies.",
+    "localFaqs": [
+      {"id": "faq-delhi-sarojini-nagar-1", "q": "Which areas near Sarojini Nagar do you also serve?", "a": "Coverage around Sarojini Nagar includes Chanakyapuri, R.K. Puram and the Safdarjung Enclave–Green Park belt, along with the Lodi Road side. Helpers serving the INA and Dilli Haat stretch commonly work across these areas.", "scope": "locality", "tags": ["delhi", "sarojini-nagar"]},
+      {"id": "faq-delhi-sarojini-nagar-2", "q": "Do helpers in Sarojini Nagar need gate passes?", "a": "In the older government quarters, entry is managed informally by the household. In the newer redeveloped towers, helpers are registered at the gate much like in private gated societies, which the household can arrange before the first visit.", "scope": "locality", "tags": ["delhi", "sarojini-nagar"]},
+      {"id": "faq-delhi-sarojini-nagar-3", "q": "Which pincode does Sarojini Nagar service cover?", "a": "Sarojini Nagar falls under pincode 110023. Households in the government quarters around the Sarojini Nagar Market and towards the Pink Line metro station are within this coverage.", "scope": "locality", "tags": ["delhi", "sarojini-nagar"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "badarpur": {
+    "neighbours": ["sarita-vihar", "sangam-vihar", "okhla", "kalkaji", "pushp-vihar", "saket"],
+    "landmarks": ["Badarpur Border Metro Station", "Tughlakabad Fort", "Former Badarpur Thermal Power Station"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Molarband", "Jaitpur"],
+    "localIntro": "Badarpur, under pincode 110044, sits at Delhi's south-eastern edge on the Faridabad border, a dense working locality of self-built independent houses along the lanes off Mathura Road. Households are predominantly working families, and the usual arrangement is part-time help for cleaning and cooking, with timings agreed directly at the doorstep since there are no society gates in most of the area. The Badarpur Border Metro Station on the Violet Line is the locality's main transit landmark, the Tughlakabad Fort spreads to the west, and the campus of the former Badarpur Thermal Power Station marks the area's eastern face along the highway. Helpers generally live locally, in Badarpur's own lanes or in the adjoining Molarband and Jaitpur settlements. Sarita Vihar lies up Mathura Road to the north, Sangam Vihar is to the west past Tughlakabad, and the Okhla belt is further along the same corridor.",
+    "commuteNotes": "The Violet Line serves the area through Badarpur Border and Tughlakabad stations, and buses run along Mathura Road; most helpers live locally in Badarpur, Molarband or Jaitpur and walk to work.",
+    "housingNotes": "The stock is almost entirely independent multi-storey houses without society gating, so households and helpers agree access and timings directly; flexible morning and evening slots are the norm.",
+    "localFaqs": [
+      {"id": "faq-delhi-badarpur-1", "q": "Which areas near Badarpur do you also serve?", "a": "Coverage around Badarpur includes Sarita Vihar up Mathura Road, the Tughlakabad side towards Sangam Vihar, and the Okhla belt further north. Helpers based in Molarband and Jaitpur often serve households across this corridor.", "scope": "locality", "tags": ["delhi", "badarpur"]},
+      {"id": "faq-delhi-badarpur-2", "q": "Do helpers in Badarpur need society gate passes?", "a": "No. Badarpur is made up of independent houses without gated societies, so there is no pass system. Households and helpers settle entry and timings directly.", "scope": "locality", "tags": ["delhi", "badarpur"]},
+      {"id": "faq-delhi-badarpur-3", "q": "Which pincode does Badarpur service cover?", "a": "Badarpur falls under pincode 110044, covering the lanes off Mathura Road up to the Faridabad border. Homes near the Badarpur Border Metro Station are within this coverage.", "scope": "locality", "tags": ["delhi", "badarpur"]}
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

@@ -1,0 +1,597 @@
+{
+  "fort": {
+    "neighbours": ["kalbadevi", "nariman-point", "colaba", "girgaon", "mazgaon", "grant-road", "mumbai-central"],
+    "landmarks": ["Chhatrapati Shivaji Maharaj Terminus", "Flora Fountain (Hutatma Chowk)", "Bombay Stock Exchange", "Horniman Circle", "Jehangir Art Gallery", "Bombay High Court"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Fort, under pincode 400001, is the historic business heart of South Mumbai, stretching from Chhatrapati Shivaji Maharaj Terminus and the General Post Office down to Flora Fountain, Horniman Circle and the Kala Ghoda art precinct. The area is predominantly commercial, with the Bombay Stock Exchange, the Bombay High Court and the old banking houses on Dalal Street and Mumbai Samachar Marg, but a steady residential population lives in the upper floors of heritage buildings, in older cooperative housing and in a few newer apartment blocks around Ballard Estate and Marine Lines. Residents are a mix of long-established families, elderly residents in inherited flats and working professionals who want to walk to offices in the district. Kalbadevi lies immediately to the north, Nariman Point to the west and Colaba to the south, and Marine Lines and Girgaon are a short ride away along Marine Drive. Households in Fort typically need part-time cleaning and cooking help on fixed morning or evening slots, and a growing number of older residents look for day-time elder-care support in buildings that often lack lifts.",
+    "commuteNotes": "Fort is one of the best-connected pockets in the city for helpers: Chhatrapati Shivaji Maharaj Terminus is the terminus of the Central and Harbour suburban lines, Churchgate on the Western line is a short walk away, and Hutatma Chowk and CSMT Metro stations on the Aqua Line 3 serve the district, with BEST bus routes converging on the CSMT and Hutatma Chowk stops.",
+    "housingNotes": "Housing here is mostly older multi-storey buildings and heritage structures rather than gated compounds, so entry is usually managed by the building watchman or the household itself, and timings can be flexible; the few newer towers near Marine Lines and Ballard Estate keep visitor registers for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-fort-1",
+        "q": "Which areas near Fort do you also serve?",
+        "a": "Kalbadevi to the north, Nariman Point to the west and Colaba to the south are all within walking distance of Fort and share the same helper pool. Girgaon, Grant Road and Mazgaon are covered as separate localities a short ride away.",
+        "scope": "locality",
+        "tags": ["mumbai", "fort"]
+      },
+      {
+        "id": "faq-mumbai-fort-2",
+        "q": "Which pincode does the Fort service area cover?",
+        "a": "Fort falls under pincode 400001, which covers the CSMT, Flora Fountain, Horniman Circle and Ballard Estate stretch. The Marine Lines and Churchgate side comes under 400020 and Kalbadevi to the north is 400002.",
+        "scope": "locality",
+        "tags": ["mumbai", "fort"]
+      },
+      {
+        "id": "faq-mumbai-fort-3",
+        "q": "Do helpers in Fort need building or society passes?",
+        "a": "Most residential buildings in Fort are older heritage or cooperative structures with a building watchman rather than a gated society, so households usually just inform the watchman about the helper's timings. Newer apartment buildings near Marine Lines may ask for the helper's ID to be recorded in a visitor register.",
+        "scope": "locality",
+        "tags": ["mumbai", "fort"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "colaba": {
+    "neighbours": ["fort", "nariman-point", "malabar-hill", "kalbadevi", "girgaon", "cumballa-hill"],
+    "landmarks": ["Gateway of India", "Colaba Causeway", "Regal Cinema", "Sassoon Dock", "Afghan Church", "World Trade Centre, Cuffe Parade"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Ambedkar Nagar (Cuffe Parade)", "Geeta Nagar"],
+    "localIntro": "Colaba occupies the southern tip of Mumbai under pincode 400005, running from Regal Cinema and the Gateway of India down Colaba Causeway to Sassoon Dock, the Afghan Church and the naval area at Navy Nagar, with the reclaimed high-rise district of Cuffe Parade on its western edge. Housing is genuinely mixed: sea-facing apartment buildings and old bungalow-style structures along the Causeway, defence housing and naval quarters in the south, and modern gated towers such as those around the World Trade Centre in Cuffe Parade. Residents include long-settled families, elderly residents who have lived here for decades, expatriates and working professionals connected to the Nariman Point and Fort office districts, which lie immediately to the north. Malabar Hill sits across Back Bay to the north-west and Kalbadevi and Girgaon are a short drive up the island. Households in Colaba typically look for full-day and part-time cooking and cleaning help, live-in staff for larger sea-facing flats, and elder-care support for senior residents living alone in older buildings.",
+    "commuteNotes": "Cuffe Parade and Vidhan Bhavan stations on the Aqua Line 3 serve the western side of Colaba, Churchgate on the Western line is the nearest suburban station, and BEST buses run the length of Colaba Causeway to the Navy Nagar and Colaba bus stations; many helpers also walk in from the Ambedkar Nagar and Geeta Nagar settlements nearby.",
+    "housingNotes": "Older Causeway buildings and bungalow compounds handle entry through the building watchman with flexible timings, while the Cuffe Parade towers and defence housing run formal visitor registers and often require the helper's ID and a resident's authorisation before regular entry.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-colaba-1",
+        "q": "Which areas near Colaba do you also serve?",
+        "a": "Fort and Nariman Point lie directly north of Colaba and share the same nearby helpers. Malabar Hill across Back Bay, and Kalbadevi and Girgaon further up the island, are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["mumbai", "colaba"]
+      },
+      {
+        "id": "faq-mumbai-colaba-2",
+        "q": "Which pincode does the Colaba service area cover?",
+        "a": "Colaba falls under pincode 400005, which covers Colaba Causeway, Cuffe Parade, Sassoon Dock and Navy Nagar. Fort to the north is 400001 and Nariman Point is 400021.",
+        "scope": "locality",
+        "tags": ["mumbai", "colaba"]
+      },
+      {
+        "id": "faq-mumbai-colaba-3",
+        "q": "Do helpers in Colaba need society gate passes?",
+        "a": "The gated towers of Cuffe Parade and the defence housing around Navy Nagar keep visitor registers and may require the helper's ID and a resident's authorisation. Older buildings along Colaba Causeway usually just need the building watchman to be informed of the helper's timings.",
+        "scope": "locality",
+        "tags": ["mumbai", "colaba"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "malabar-hill": {
+    "neighbours": ["cumballa-hill", "girgaon", "tardeo", "grant-road", "nariman-point", "colaba", "fort"],
+    "landmarks": ["Hanging Gardens", "Kamala Nehru Park", "Banganga Tank", "Raj Bhavan", "Priyadarshini Park", "Walkeshwar Temple"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Malabar Hill, under pincode 400006, is the wooded ridge that rises above Girgaon Chowpatty at the northern end of Marine Drive, taking in Walkeshwar, Napean Sea Road and the Ridge Road stretch around the Hanging Gardens and Kamala Nehru Park. Housing is dominated by well-maintained high-rise apartment buildings with their own security and parking, along with a small number of old bungalows and the heritage temple precinct around Banganga Tank at Walkeshwar. Raj Bhavan, the Governor's residence, sits at the tip of the hill, and Priyadarshini Park on the western shore is the neighbourhood's sports and walking ground. Residents are mostly established families, senior citizens who have lived in the same flats for decades, and professionals working in Nariman Point and Fort, both a short drive down the hill. Cumballa Hill and Kemps Corner lie immediately to the north, Girgaon at the foot of the hill to the east and Tardeo beyond Nana Chowk. Households typically need full-day cooks and housekeepers, live-in staff for larger apartments, and patient elder-care support for older residents.",
+    "commuteNotes": "There is no railway or metro station on the hill itself; helpers come by BEST bus up Walkeshwar Road and Napean Sea Road, or walk up from Girgaon and Grant Road stations on the Western line and the Aqua Line 3 metro stops at Girgaon and Grant Road. [VERIFY]",
+    "housingNotes": "Almost all homes are in apartment buildings with a security desk, so a helper normally needs the resident to register their name and ID with building security before regular entry; many buildings maintain fixed entry timings and a separate service lift.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-malabar-hill-1",
+        "q": "Which areas near Malabar Hill do you also serve?",
+        "a": "Cumballa Hill and Kemps Corner immediately to the north and Girgaon at the foot of the hill draw on the same helper network. Tardeo, Grant Road, Nariman Point and Colaba are covered as separate localities nearby.",
+        "scope": "locality",
+        "tags": ["mumbai", "malabar-hill"]
+      },
+      {
+        "id": "faq-mumbai-malabar-hill-2",
+        "q": "Which pincode does the Malabar Hill service area cover?",
+        "a": "Malabar Hill falls under pincode 400006, which covers Walkeshwar, Ridge Road and the Hanging Gardens side. Cumballa Hill and Breach Candy to the north come under 400026, and Girgaon below the hill is 400004.",
+        "scope": "locality",
+        "tags": ["mumbai", "malabar-hill"]
+      },
+      {
+        "id": "faq-mumbai-malabar-hill-3",
+        "q": "Do helpers in Malabar Hill need building security passes?",
+        "a": "Yes, in almost every case. Malabar Hill homes are in high-rise buildings with a security desk, so the resident needs to register the helper's name and ID with building security, and some buildings issue a card or restrict entry to fixed timings.",
+        "scope": "locality",
+        "tags": ["mumbai", "malabar-hill"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "worli": {
+    "neighbours": ["prabhadevi", "parel", "tardeo", "cumballa-hill", "dadar", "mahim", "mumbai-central"],
+    "landmarks": ["Worli Sea Face", "Bandra-Worli Sea Link", "Nehru Planetarium", "Nehru Science Centre", "Haji Ali Dargah", "Mahalaxmi Racecourse"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families", "elderly"],
+    "helperSourceAreas": ["BDD Chawls Worli", "Worli Koliwada"],
+    "localIntro": "Worli, under pincode 400018, stretches along the western shore of central Mumbai from Haji Ali and the Mahalaxmi Racecourse up to the Worli end of the Bandra-Worli Sea Link. Its housing is a real mix: tall sea-facing apartment towers along Worli Sea Face and Dr Annie Besant Road, older cooperative buildings and government housing behind them, the century-old BDD Chawls on the Worli side of the Jacob Circle road, and the fishing village of Worli Koliwada at the northern tip. Residents range from professionals working in the Lower Parel and Worli office corridor to families in long-standing societies and elderly residents in older buildings. The Nehru Planetarium and Nehru Science Centre sit at the southern end of the locality, with Haji Ali Dargah just beyond. Prabhadevi and Dadar lie to the north, Lower Parel and Parel to the east across Senapati Bapat Marg, and Tardeo and Cumballa Hill to the south. Households here typically look for daily cooking and cleaning slots, full-time housekeepers for larger apartments, and reliable weekday cover for dual-income families.",
+    "commuteNotes": "Worli, Acharya Atre Chowk and Science Museum stations on the Aqua Line 3 metro now serve the locality, Lower Parel and Prabhadevi on the Western line are within walking distance of the eastern side, and BEST buses run along Dr Annie Besant Road; many helpers live within Worli itself in the BDD Chawls and Worli Koliwada.",
+    "housingNotes": "The sea-facing towers and newer complexes run formal security with visitor registers and service lifts, so helpers need to be registered by the resident, while the older cooperative buildings and chawl-side housing rely on the building watchman and keep entry timings flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-worli-1",
+        "q": "Which areas near Worli do you also serve?",
+        "a": "Prabhadevi to the north and Lower Parel and Parel to the east are adjacent to Worli and share the same helper network. Tardeo, Cumballa Hill, Dadar and Mahim are covered as separate localities close by.",
+        "scope": "locality",
+        "tags": ["mumbai", "worli"]
+      },
+      {
+        "id": "faq-mumbai-worli-2",
+        "q": "Which pincode does the Worli service area cover?",
+        "a": "Worli falls under pincode 400018, which covers Worli Naka, Dr Annie Besant Road and the Sea Face stretch. Prabhadevi to the north comes under 400025 and Parel to the east is 400012.",
+        "scope": "locality",
+        "tags": ["mumbai", "worli"]
+      },
+      {
+        "id": "faq-mumbai-worli-3",
+        "q": "Do helpers in Worli need society gate passes?",
+        "a": "In the high-rise towers along Worli Sea Face and Dr Annie Besant Road, yes: residents register the helper's name and ID with security and helpers usually use the service lift. Older cooperative buildings and the chawl-side housing mostly just need the watchman to be informed.",
+        "scope": "locality",
+        "tags": ["mumbai", "worli"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "nariman-point": {
+    "neighbours": ["fort", "colaba", "girgaon", "malabar-hill", "kalbadevi", "cumballa-hill"],
+    "landmarks": ["Marine Drive", "National Centre for the Performing Arts (NCPA)", "Mantralaya", "Air India Building", "Churchgate Station", "Oval Maidan"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families", "elderly"],
+    "helperSourceAreas": ["Ambedkar Nagar (Cuffe Parade)", "Ganesh Murti Nagar"],
+    "localIntro": "Nariman Point, under pincode 400021, is the reclaimed office district at the southern end of Marine Drive, known for the Air India Building, Mantralaya, the National Centre for the Performing Arts and the corporate towers along Vinay K Shah Marg and Madame Cama Road. Residential housing here is limited but distinctive: high-rise apartment complexes such as those around the NCPA and the Marine Drive end, along with the sea-facing buildings on Marine Drive itself and the Oval Maidan side towards Churchgate. Residents are mainly senior professionals, business families and older residents in well-secured buildings, most of whom want help that fits around office hours and building entry rules. Fort and Churchgate lie directly to the north and east, Colaba and Cuffe Parade to the south, and Girgaon and Malabar Hill are a short drive up Marine Drive. Households in Nariman Point typically look for full-day cooks and housekeepers, part-time cleaning in fixed morning slots, and elder-care support for senior residents living in larger apartments.",
+    "commuteNotes": "Vidhan Bhavan and Churchgate stations on the Aqua Line 3 metro and Churchgate on the Western suburban line are all within walking distance, and BEST buses terminate at the Nariman Point and NCPA stops; helpers also walk in from the Ambedkar Nagar and Ganesh Murti Nagar settlements in adjacent Cuffe Parade.",
+    "housingNotes": "Residential buildings here are secured apartment complexes with security desks, so the resident must register the helper's name and ID before regular entry, and most buildings expect helpers to use a service entrance or lift within fixed timings.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-nariman-point-1",
+        "q": "Which areas near Nariman Point do you also serve?",
+        "a": "Fort and Churchgate immediately to the north and Colaba and Cuffe Parade to the south share the same helper pool as Nariman Point. Girgaon, Malabar Hill and Kalbadevi up the island are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["mumbai", "nariman-point"]
+      },
+      {
+        "id": "faq-mumbai-nariman-point-2",
+        "q": "Which pincode does the Nariman Point service area cover?",
+        "a": "Nariman Point falls under pincode 400021, which covers the office district, the NCPA and the southern end of Marine Drive. Churchgate and the Marine Lines side come under 400020, Fort is 400001 and Colaba is 400005.",
+        "scope": "locality",
+        "tags": ["mumbai", "nariman-point"]
+      },
+      {
+        "id": "faq-mumbai-nariman-point-3",
+        "q": "Do helpers in Nariman Point need building security passes?",
+        "a": "Yes. Homes in Nariman Point are in secured apartment complexes, so the resident registers the helper's name and ID with the security desk and the helper typically enters through a service lift within fixed timings.",
+        "scope": "locality",
+        "tags": ["mumbai", "nariman-point"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "prabhadevi": {
+    "neighbours": ["dadar", "worli", "parel", "mahim", "matunga", "sewri", "wadala"],
+    "landmarks": ["Siddhivinayak Temple", "Prabhadevi Railway Station", "Ravindra Natya Mandir", "Century Bazaar", "Dadar Chowpatty"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Prabhadevi, under pincode 400025, sits between Worli and Dadar on the western side of central Mumbai, best known for the Siddhivinayak Temple on SK Bole Road and for Prabhadevi railway station, formerly Elphinstone Road, on the Western line. Housing here is a mix of long-established Marathi-speaking cooperative societies and older buildings on the temple side, redeveloped high-rise towers along Veer Savarkar Marg and near Century Bazaar, and newer complexes on the former mill lands towards the station. Residents include multi-generational families, elderly residents in older societies, and professionals who work in the Lower Parel office corridor a few minutes away. Ravindra Natya Mandir on Sayani Road is the neighbourhood's cultural venue, and Dadar Chowpatty and the Shivaji Park side of Dadar begin just to the north. Worli lies immediately to the south, Parel and Lower Parel to the east and Mahim and Matunga a little further north. Households in Prabhadevi commonly look for morning cooking and cleaning slots, full-time help for families with young children, and day-time support for elderly parents.",
+    "commuteNotes": "Prabhadevi station on the Western line and Siddhivinayak station on the Aqua Line 3 metro both serve the locality directly, Dadar station is within walking distance to the north, and BEST buses run along Veer Savarkar Marg and SK Bole Road.",
+    "housingNotes": "Older cooperative societies and buildings on the temple side rely on the building watchman and keep entry timings flexible, while the redeveloped towers near Century Bazaar and the station run security desks where the resident must register the helper.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-prabhadevi-1",
+        "q": "Which areas near Prabhadevi do you also serve?",
+        "a": "Dadar to the north and Worli to the south are directly adjacent to Prabhadevi and share the same helpers. Parel and Lower Parel to the east, and Mahim and Matunga further north, are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["mumbai", "prabhadevi"]
+      },
+      {
+        "id": "faq-mumbai-prabhadevi-2",
+        "q": "Which pincode does the Prabhadevi service area cover?",
+        "a": "Prabhadevi falls under pincode 400025, which covers the Siddhivinayak Temple area, Century Bazaar and the station side. Dadar West to the north is 400028 and Worli to the south is 400018.",
+        "scope": "locality",
+        "tags": ["mumbai", "prabhadevi"]
+      },
+      {
+        "id": "faq-mumbai-prabhadevi-3",
+        "q": "Do helpers in Prabhadevi need society gate passes?",
+        "a": "It depends on the building. The redeveloped towers along Veer Savarkar Marg and near Prabhadevi station have security desks that register the helper's name and ID, while the older cooperative societies on the temple side usually just need the watchman to be informed of the helper's timings.",
+        "scope": "locality",
+        "tags": ["mumbai", "prabhadevi"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "cumballa-hill": {
+    "neighbours": ["malabar-hill", "tardeo", "grant-road", "girgaon", "mumbai-central", "worli", "nariman-point"],
+    "landmarks": ["Kemps Corner", "Breach Candy Hospital", "Jaslok Hospital", "Mahalaxmi Temple", "Haji Ali Dargah", "Bhulabhai Desai Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Cumballa Hill, under pincode 400026, is the residential ridge that runs north from Kemps Corner along Peddar Road and Bhulabhai Desai Road to Breach Candy and the Mahalaxmi Temple, with Haji Ali Dargah just beyond the temple. Housing is dominated by tall apartment buildings with their own security, many of them long-established cooperative societies on Altamount Road, Carmichael Road and Peddar Road, with a handful of old bungalows and newer redevelopment towers among them. Two of the city's well-known private hospitals, Breach Candy Hospital and Jaslok Hospital, sit within the locality. Residents are mostly established business families, senior citizens who have lived here for decades and professionals working in Nariman Point and Worli, both a short drive away. Malabar Hill lies immediately to the south-west, Tardeo and Grant Road to the east across Nana Chowk, and Girgaon at the foot of the hill near Chowpatty. Households on Cumballa Hill typically look for full-day cooks and housekeepers, live-in staff for larger flats, and experienced elder-care attendants for older family members.",
+    "commuteNotes": "There is no railway station on the hill; helpers arrive by BEST bus along Peddar Road and Bhulabhai Desai Road, or walk up from Grant Road station on the Western line and the Aqua Line 3 metro stops at Grant Road and Mahalaxmi. [VERIFY]",
+    "housingNotes": "Nearly every home is in a secured apartment building, so the resident needs to register the helper's name and ID with building security before regular entry, and many buildings ask helpers to use a designated service lift within fixed timings.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-cumballa-hill-1",
+        "q": "Which areas near Cumballa Hill do you also serve?",
+        "a": "Malabar Hill to the south-west and Tardeo and Grant Road to the east are all adjacent to Cumballa Hill and share the same helper network. Girgaon, Mumbai Central and Worli are covered as separate localities close by.",
+        "scope": "locality",
+        "tags": ["mumbai", "cumballa-hill"]
+      },
+      {
+        "id": "faq-mumbai-cumballa-hill-2",
+        "q": "Which pincode does the Cumballa Hill service area cover?",
+        "a": "Cumballa Hill falls under pincode 400026, which covers Kemps Corner, Peddar Road, Breach Candy and the Mahalaxmi Temple side. Malabar Hill to the south is 400006 and Tardeo to the east is 400034.",
+        "scope": "locality",
+        "tags": ["mumbai", "cumballa-hill"]
+      },
+      {
+        "id": "faq-mumbai-cumballa-hill-3",
+        "q": "Do helpers in Cumballa Hill need building security passes?",
+        "a": "Yes, almost always. Homes on Cumballa Hill are in apartment buildings with a security desk, so the resident registers the helper's name and ID with security, and some buildings restrict helper entry to fixed timings or a service lift.",
+        "scope": "locality",
+        "tags": ["mumbai", "cumballa-hill"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "tardeo": {
+    "neighbours": ["mumbai-central", "grant-road", "cumballa-hill", "malabar-hill", "girgaon", "worli", "mazgaon"],
+    "landmarks": ["Bhatia Hospital", "Tardeo AC Market", "Mahalaxmi Racecourse", "Mumbai Central Station", "Sobo Central Mall", "Imperial Towers"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Tardeo, under pincode 400034, lies between Nana Chowk and Haji Ali on the western side of South Mumbai, wedged between Cumballa Hill to the west and Mumbai Central to the east. Its housing is a striking mix: some of the tallest residential towers in the city, including the Imperial Towers on Tardeo Road, stand alongside old chawls, Parsi colony housing and mid-rise cooperative societies from the mid-twentieth century. Tardeo AC Market and the Sobo Central Mall near Haji Ali are the local shopping landmarks, Bhatia Hospital is on the Grant Road edge of the locality and the Mahalaxmi Racecourse opens up to the north. Residents range from business families in the new towers to long-settled families and elderly residents in the older buildings. Mumbai Central and Grant Road are a few minutes' walk to the east and south, Cumballa Hill and Malabar Hill rise to the west and Worli begins beyond Haji Ali. Households in Tardeo typically look for part-time cooking and cleaning help on fixed slots, full-time housekeepers for the larger tower apartments, and day-time elder-care support in the older societies.",
+    "commuteNotes": "Mumbai Central and Grant Road stations on the Western line are both within walking distance, Mumbai Central Metro and Mahalaxmi stations on the Aqua Line 3 serve the eastern and northern edges of Tardeo, and BEST buses run along Tardeo Road and Bhulabhai Desai Road.",
+    "housingNotes": "The new high-rise towers run strict security with visitor registers, ID checks and service lifts, so helpers must be registered by the resident, while the older chawls and cooperative societies rely on a watchman and keep timings flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-tardeo-1",
+        "q": "Which areas near Tardeo do you also serve?",
+        "a": "Mumbai Central and Grant Road are within walking distance of Tardeo and share the same helper pool. Cumballa Hill, Malabar Hill, Girgaon and Worli are covered as separate localities nearby.",
+        "scope": "locality",
+        "tags": ["mumbai", "tardeo"]
+      },
+      {
+        "id": "faq-mumbai-tardeo-2",
+        "q": "Which pincode does the Tardeo service area cover?",
+        "a": "Tardeo falls under pincode 400034, which covers Tardeo Road, the AC Market side and the Haji Ali end. Mumbai Central to the east is 400008, Grant Road is 400007 and Cumballa Hill to the west is 400026.",
+        "scope": "locality",
+        "tags": ["mumbai", "tardeo"]
+      },
+      {
+        "id": "faq-mumbai-tardeo-3",
+        "q": "Do helpers in Tardeo need society gate passes?",
+        "a": "In the high-rise towers such as those on Tardeo Road, yes: the resident registers the helper's name and ID with security and the helper uses the service lift within fixed timings. The older chawls and cooperative societies usually just need the watchman to be told about the helper's schedule.",
+        "scope": "locality",
+        "tags": ["mumbai", "tardeo"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "kalbadevi": {
+    "neighbours": ["fort", "girgaon", "mazgaon", "grant-road", "nariman-point", "mumbai-central", "colaba"],
+    "landmarks": ["Crawford Market (Mahatma Jyotiba Phule Mandai)", "Zaveri Bazaar", "Mumbadevi Temple", "Mangaldas Market", "Marine Lines Station", "Bhuleshwar"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "localIntro": "Kalbadevi, under pincode 400002, is the dense old market quarter of South Mumbai that runs north from Crawford Market and Dhobi Talao past Zaveri Bazaar, the Mumbadevi Temple and Mangaldas Market towards Bhuleshwar and Girgaon. Housing here is mostly old multi-storey tenement buildings and wadis, many of them under the pagdi system, with families living above ground-floor shops and godowns, alongside a growing number of redeveloped mid-rise buildings. Residents are largely long-settled Gujarati, Marwari and Maharashtrian trading families, with many elderly residents who have lived in the same buildings for generations, as well as professionals who value the walk to Fort. The locality is a short walk from Marine Lines station on the Western line and from Chhatrapati Shivaji Maharaj Terminus. Fort lies immediately to the south, Girgaon to the west, Grant Road to the north and Mazgaon and Dongri to the east. Households in Kalbadevi typically need part-time cooking and cleaning help in morning slots that fit around shop timings, and day-time elder-care support in older buildings that often have no lift.",
+    "helperSourceAreas": [],
+    "commuteNotes": "Kalbadevi station on the Aqua Line 3 metro serves the locality directly, Marine Lines and Charni Road on the Western line and CSMT and Masjid on the Central line are all within walking distance, and BEST buses run along Kalbadevi Road and JSS Road.",
+    "housingNotes": "Most homes are in older tenement and wadi buildings without gated security, so entry is arranged directly with the household or the building watchman and timings stay flexible; the few redeveloped buildings keep a visitor register for domestic staff.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-kalbadevi-1",
+        "q": "Which areas near Kalbadevi do you also serve?",
+        "a": "Fort to the south, Girgaon to the west and Grant Road to the north are all within walking distance of Kalbadevi and share the same helper pool. Mazgaon and Dongri to the east and Mumbai Central are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["mumbai", "kalbadevi"]
+      },
+      {
+        "id": "faq-mumbai-kalbadevi-2",
+        "q": "Which pincode does the Kalbadevi service area cover?",
+        "a": "Kalbadevi falls under pincode 400002, which covers Kalbadevi Road, Zaveri Bazaar, Mumbadevi and Bhuleshwar. Fort to the south is 400001 and Girgaon to the west is 400004.",
+        "scope": "locality",
+        "tags": ["mumbai", "kalbadevi"]
+      },
+      {
+        "id": "faq-mumbai-kalbadevi-3",
+        "q": "Do helpers in Kalbadevi need society gate passes?",
+        "a": "Rarely. Most Kalbadevi homes are in older tenement and wadi buildings without a gated society, so the household arranges entry directly and simply informs the building watchman where there is one. Only the handful of redeveloped buildings keep a visitor register.",
+        "scope": "locality",
+        "tags": ["mumbai", "kalbadevi"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "girgaon": {
+    "neighbours": ["kalbadevi", "grant-road", "malabar-hill", "fort", "nariman-point", "cumballa-hill", "tardeo"],
+    "landmarks": ["Girgaon Chowpatty", "Charni Road Station", "Royal Opera House", "Wilson College", "Saifee Hospital", "Marine Drive"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Girgaon, under pincode 400004, is the old Marathi heartland of South Mumbai that lies between Marine Drive and Kalbadevi, from Charni Road station up to the Royal Opera House and the foot of Malabar Hill. Housing is a mix of the locality's traditional wadis and chawls, older cooperative buildings on Girgaon Road and the lanes around Thakurdwar, and a growing number of redeveloped high-rise towers replacing them, along with sea-facing buildings along Marine Drive. Residents include multi-generational Maharashtrian families, elderly residents who have lived here all their lives, and younger professionals drawn by the location. Girgaon Chowpatty is the neighbourhood's beach and Ganesh immersion ground, Wilson College stands opposite it and Saifee Hospital is on the Charni Road side. Kalbadevi lies immediately to the east, Grant Road to the north, Malabar Hill above Chowpatty to the west and Fort and Nariman Point a short ride south along Marine Drive. Households in Girgaon typically look for morning cooking and cleaning help, full-time housekeepers in the newer towers, and day-time support for elderly parents in older walk-up buildings.",
+    "commuteNotes": "Charni Road station on the Western line and Girgaon station on the Aqua Line 3 metro both serve the locality directly, Grant Road station is a short walk north, and BEST buses run along Jagannath Shankarsheth Marg and Marine Drive.",
+    "housingNotes": "The old wadis and chawls have no gated security, so entry is arranged directly with the household and timings are flexible, while the redeveloped towers and Marine Drive buildings keep security desks where the resident must register the helper's ID.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-girgaon-1",
+        "q": "Which areas near Girgaon do you also serve?",
+        "a": "Kalbadevi to the east and Grant Road to the north are adjacent to Girgaon and share the same helpers. Malabar Hill above Chowpatty, and Fort and Nariman Point along Marine Drive, are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["mumbai", "girgaon"]
+      },
+      {
+        "id": "faq-mumbai-girgaon-2",
+        "q": "Which pincode does the Girgaon service area cover?",
+        "a": "Girgaon falls under pincode 400004, which covers Girgaon Road, Thakurdwar, Chowpatty and the Opera House side. Kalbadevi to the east is 400002, Grant Road to the north is 400007 and Malabar Hill is 400006.",
+        "scope": "locality",
+        "tags": ["mumbai", "girgaon"]
+      },
+      {
+        "id": "faq-mumbai-girgaon-3",
+        "q": "Do helpers in Girgaon need society gate passes?",
+        "a": "In the older wadis and chawls, no: the household arranges entry directly and timings are flexible. In the redeveloped towers and the buildings along Marine Drive, the resident needs to register the helper's name and ID with the security desk.",
+        "scope": "locality",
+        "tags": ["mumbai", "girgaon"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "grant-road": {
+    "neighbours": ["girgaon", "tardeo", "mumbai-central", "cumballa-hill", "kalbadevi", "malabar-hill", "mazgaon"],
+    "landmarks": ["Grant Road Station", "Nana Chowk", "Lamington Road", "Bhatia Hospital", "August Kranti Maidan (Gowalia Tank)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Grant Road, under pincode 400007, is the busy stretch of South Mumbai around Grant Road station on the Western line, spreading west to Nana Chowk and Gowalia Tank and east along Lamington Road, the city's long-standing electronics and computer market. Housing is a mix of old chawls and tenement buildings around the station and Lamington Road, established cooperative societies and Parsi colony housing on the Nana Chowk side, and redeveloped towers rising on former chawl plots. Residents include long-settled Maharashtrian, Gujarati and Parsi families, elderly residents in older buildings, and working professionals who use the station daily. Bhatia Hospital on Tardeo Road is the neighbourhood's main hospital and August Kranti Maidan is its historic open ground. Girgaon lies immediately to the south, Tardeo to the west across Nana Chowk, Mumbai Central to the north and Kalbadevi to the east. Households in Grant Road typically look for part-time cooking and cleaning help on morning and evening slots, full-time housekeepers in the newer towers, and day-time elder-care support in older buildings without lifts.",
+    "commuteNotes": "Grant Road station on the Western line and Grant Road station on the Aqua Line 3 metro both serve the locality directly, Charni Road and Mumbai Central stations are a short walk in either direction, and BEST buses run through Nana Chowk and along Lamington Road.",
+    "housingNotes": "Older chawls and tenement buildings have no gated security, so households arrange entry directly and timings are flexible, while the redeveloped towers and larger societies near Nana Chowk keep security desks where the resident registers the helper.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-grant-road-1",
+        "q": "Which areas near Grant Road do you also serve?",
+        "a": "Girgaon to the south, Tardeo across Nana Chowk and Mumbai Central to the north are all within walking distance of Grant Road and share the same helper pool. Cumballa Hill, Kalbadevi and Malabar Hill are covered as separate localities nearby.",
+        "scope": "locality",
+        "tags": ["mumbai", "grant-road"]
+      },
+      {
+        "id": "faq-mumbai-grant-road-2",
+        "q": "Which pincode does the Grant Road service area cover?",
+        "a": "Grant Road falls under pincode 400007, which covers the station area, Nana Chowk and Lamington Road. Girgaon to the south is 400004, Tardeo to the west is 400034 and Mumbai Central to the north is 400008.",
+        "scope": "locality",
+        "tags": ["mumbai", "grant-road"]
+      },
+      {
+        "id": "faq-mumbai-grant-road-3",
+        "q": "Do helpers in Grant Road need society gate passes?",
+        "a": "It depends on the building. The older chawls and tenement buildings around the station have no gated security, so the household simply arranges timings directly, while the redeveloped towers and larger societies towards Nana Chowk register the helper's name and ID at the security desk.",
+        "scope": "locality",
+        "tags": ["mumbai", "grant-road"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mumbai-central": {
+    "neighbours": ["tardeo", "grant-road", "mazgaon", "cumballa-hill", "parel", "kalbadevi", "worli"],
+    "landmarks": ["Mumbai Central Railway Station", "Nair Hospital", "MSRTC Mumbai Central Bus Depot", "Maratha Mandir", "Jacob Circle (Saat Rasta)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Mumbai Central, under pincode 400008, is the neighbourhood around the Western Railway terminus of the same name, taking in the MSRTC state bus depot, Nair Hospital, the old Maratha Mandir cinema and the residential pockets of Agripada and Jacob Circle to the north. Housing is a mix of old chawls and tenement buildings close to the station and along Bellasis Road, established cooperative societies and BIT chawls in Agripada, and a wave of redeveloped high-rise towers on the Jacob Circle and Saat Rasta side. Residents include long-settled Maharashtrian and Muslim families, elderly residents in older buildings, and working professionals who use the station and the nearby Lower Parel and Worli office corridor. Tardeo lies immediately to the west, Grant Road to the south, Mazgaon and Byculla to the east across the railway lines, and Worli and Parel to the north. Households in Mumbai Central typically look for part-time cooking and cleaning help on fixed slots, full-time housekeepers for the newer tower apartments, and day-time support for older family members.",
+    "commuteNotes": "Mumbai Central station on the Western line and Mumbai Central Metro on the Aqua Line 3 both serve the locality directly, Byculla on the Central line is a short walk east, and BEST buses and state buses converge on the Mumbai Central depot; the Sant Gadge Maharaj Chowk monorail station at Jacob Circle is also nearby. [VERIFY]",
+    "housingNotes": "The older chawls and tenement buildings near the station rely on the household or a watchman for entry with flexible timings, while the redeveloped towers around Jacob Circle and Agripada run security desks with visitor registers and service lifts.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-mumbai-central-1",
+        "q": "Which areas near Mumbai Central do you also serve?",
+        "a": "Tardeo to the west and Grant Road to the south are within walking distance of Mumbai Central and share the same helpers. Mazgaon and Byculla across the railway lines, and Cumballa Hill, Parel and Worli, are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["mumbai", "mumbai-central"]
+      },
+      {
+        "id": "faq-mumbai-mumbai-central-2",
+        "q": "Which pincode does the Mumbai Central service area cover?",
+        "a": "Mumbai Central falls under pincode 400008, which covers the station, Bellasis Road and the Agripada side. Tardeo to the west is 400034, Grant Road to the south is 400007 and Mazgaon to the east is 400010.",
+        "scope": "locality",
+        "tags": ["mumbai", "mumbai-central"]
+      },
+      {
+        "id": "faq-mumbai-mumbai-central-3",
+        "q": "Do helpers in Mumbai Central need society gate passes?",
+        "a": "In the redeveloped towers around Jacob Circle and Agripada, yes: the resident registers the helper's name and ID with security and the helper typically uses the service lift. In the older chawls and buildings near the station, the household arranges entry directly.",
+        "scope": "locality",
+        "tags": ["mumbai", "mumbai-central"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mazgaon": {
+    "neighbours": ["mumbai-central", "sewri", "kalbadevi", "parel", "grant-road", "fort", "wadala"],
+    "landmarks": ["Mazagon Dock", "Veermata Jijabai Bhosale Udyan (Byculla Zoo)", "Dr Bhau Daji Lad Museum", "Joseph Baptista Garden", "Dockyard Road Station", "Byculla Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Mazgaon, under pincode 400010, is the old dockside neighbourhood on the eastern shore of South Mumbai, stretching from Dockyard Road and the Mazagon Dock shipyard up Bhandarwada Hill, where Joseph Baptista Garden looks out over the harbour, to the edge of Byculla. Housing is a mix of old Catholic and Parsi colony buildings, chawls and tenements in the lanes off Mazgaon Road, established cooperative societies around Nesbit Road, and newer high-rise redevelopment towers, with the Byculla side adding the historic Veermata Jijabai Bhosale Udyan and the Dr Bhau Daji Lad Museum. Residents include long-settled East Indian, Parsi, Muslim and Maharashtrian families, many elderly residents, and working professionals employed at the docks and in Fort. Mumbai Central and Byculla lie to the west across the railway lines, Sewri and Cotton Green to the north along the Harbour line, and Kalbadevi and Fort to the south. Households in Mazgaon typically look for part-time cooking and cleaning help on morning slots, full-time housekeepers in the newer towers, and patient elder-care support in older walk-up buildings.",
+    "commuteNotes": "Dockyard Road and Reay Road stations on the Harbour line and Byculla and Sandhurst Road on the Central line all sit within walking distance of Mazgaon, and BEST buses run along Mazgaon Road and Sant Savta Marg.",
+    "housingNotes": "The older colony buildings, chawls and cooperative societies rely on a watchman or the household for entry and keep timings flexible, while the redeveloped towers run security desks where the resident registers the helper's name and ID.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-mazgaon-1",
+        "q": "Which areas near Mazgaon do you also serve?",
+        "a": "Mumbai Central and Byculla to the west and Sewri to the north are close to Mazgaon and share the same helper network. Kalbadevi, Fort, Parel and Wadala are covered as separate localities nearby.",
+        "scope": "locality",
+        "tags": ["mumbai", "mazgaon"]
+      },
+      {
+        "id": "faq-mumbai-mazgaon-2",
+        "q": "Which pincode does the Mazgaon service area cover?",
+        "a": "Mazgaon falls under pincode 400010, which covers Mazgaon Road, Dockyard Road and the Bhandarwada Hill side. Byculla to the west comes under 400027, Sewri to the north is 400015 and Mumbai Central is 400008.",
+        "scope": "locality",
+        "tags": ["mumbai", "mazgaon"]
+      },
+      {
+        "id": "faq-mumbai-mazgaon-3",
+        "q": "Do helpers in Mazgaon need society gate passes?",
+        "a": "In the newer high-rise towers, yes: the resident registers the helper's name and ID with the security desk. The older colony buildings, chawls and cooperative societies in the lanes off Mazgaon Road mostly just need the watchman to be told about the helper's timings.",
+        "scope": "locality",
+        "tags": ["mumbai", "mazgaon"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "parel": {
+    "neighbours": ["prabhadevi", "sewri", "worli", "dadar", "mumbai-central", "mazgaon", "wadala", "matunga"],
+    "landmarks": ["KEM Hospital", "Tata Memorial Hospital", "Parel Railway Station", "Lower Parel Railway Station", "Phoenix Palladium (High Street Phoenix)", "Kamala Mills"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Parel, under pincode 400012, together with Lower Parel to its west, is the former mill district of central Mumbai that has become one of the city's biggest office and high-rise residential belts. Housing is a pronounced mix: the old chawls of Lalbaug, Parel Village and the BDD-era tenements still house long-settled Maharashtrian families, while the former mill compounds along Senapati Bapat Marg and Dr Ambedkar Road have been redeveloped into gated residential towers and office complexes such as Kamala Mills and the Phoenix Palladium retail hub. Two of the city's largest public hospitals, KEM Hospital and Tata Memorial Hospital, sit in the heart of Parel. Residents range from young professionals in the new towers to multi-generational families and elderly residents in the chawls. Prabhadevi and Worli lie to the west, Dadar to the north, Sewri and Wadala to the east and Mumbai Central and Mazgaon to the south. Households in Parel typically look for full-time housekeepers and cooks for tower apartments, part-time cleaning slots for working couples, and day-time elder-care support in older buildings.",
+    "commuteNotes": "Parel station on the Central line and Lower Parel and Prabhadevi stations on the Western line serve the locality directly, with Dadar and Currey Road stations close by; BEST buses run along Dr Ambedkar Road and Senapati Bapat Marg, and Lower Parel also has a monorail station. [VERIFY]",
+    "housingNotes": "The gated towers on the former mill lands run formal security with visitor registers, ID checks and service lifts, so helpers must be registered by the resident, while the chawls and older buildings of Lalbaug and Parel Village rely on the household or a watchman and keep timings flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-parel-1",
+        "q": "Which areas near Parel do you also serve?",
+        "a": "Prabhadevi and Worli to the west and Sewri to the east are adjacent to Parel and share the same helper pool. Dadar, Mumbai Central, Mazgaon, Wadala and Matunga are covered as separate localities close by.",
+        "scope": "locality",
+        "tags": ["mumbai", "parel"]
+      },
+      {
+        "id": "faq-mumbai-parel-2",
+        "q": "Which pincode does the Parel service area cover?",
+        "a": "Parel falls under pincode 400012, which covers Parel Village, Lalbaug and the KEM Hospital side, while the Lower Parel stretch along Senapati Bapat Marg comes under 400013. Prabhadevi to the west is 400025 and Sewri to the east is 400015.",
+        "scope": "locality",
+        "tags": ["mumbai", "parel"]
+      },
+      {
+        "id": "faq-mumbai-parel-3",
+        "q": "Do helpers in Parel need society gate passes?",
+        "a": "In the gated towers built on the former mill lands, yes: the resident registers the helper's name and ID with security and helpers usually use a service lift. In the chawls and older buildings of Lalbaug and Parel Village, the household arranges entry directly.",
+        "scope": "locality",
+        "tags": ["mumbai", "parel"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sewri": {
+    "neighbours": ["parel", "wadala", "mazgaon", "antop-hill", "dadar", "prabhadevi"],
+    "landmarks": ["Sewri Fort", "Sewri Mudflats (flamingo viewing point)", "Sewri Railway Station", "Atal Setu (Mumbai Trans Harbour Link)", "Cotton Green Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Sewri Koliwada"],
+    "localIntro": "Sewri, under pincode 400015, sits on the eastern waterfront of central Mumbai between Cotton Green and Wadala, known for the old Sewri Fort on its hill, the mudflats where flamingos gather in the winter months, and the Mumbai end of the Atal Setu sea link to Navi Mumbai. Housing is a mix of old chawls and cooperative buildings on the Sewri Cross Road and Acharya Donde Marg side near the station, established residential colonies further inland towards Parel and Wadala, and a growing number of redeveloped high-rise towers on former industrial and warehouse plots, along with the original fishing settlement of Sewri Koliwada. Residents are largely long-settled Maharashtrian families, elderly residents in older societies, and working professionals drawn by the proximity to the Parel and Lower Parel office corridor. Parel lies immediately to the west, Wadala and Antop Hill to the north, Mazgaon and Cotton Green to the south and Dadar a short ride north-west. Households in Sewri typically look for part-time cooking and cleaning help, full-time housekeepers in the new towers, and day-time elder-care support in older buildings.",
+    "commuteNotes": "Sewri station on the Harbour line serves the locality directly, Parel and Currey Road stations on the Central line are a short walk west, and BEST buses run along Acharya Donde Marg and the Sewri-Wadala road; many helpers live locally in Sewri Koliwada and the nearby chawls.",
+    "housingNotes": "The new towers on redeveloped industrial plots run security desks with visitor registers and service lifts, so the resident must register the helper, while the older chawls and cooperative buildings near the station rely on a watchman and keep timings flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-sewri-1",
+        "q": "Which areas near Sewri do you also serve?",
+        "a": "Parel to the west and Wadala to the north are directly adjacent to Sewri and share the same helpers. Mazgaon, Antop Hill, Dadar and Prabhadevi are covered as separate localities nearby.",
+        "scope": "locality",
+        "tags": ["mumbai", "sewri"]
+      },
+      {
+        "id": "faq-mumbai-sewri-2",
+        "q": "Which pincode does the Sewri service area cover?",
+        "a": "Sewri falls under pincode 400015, which covers the station area, Sewri Cross Road and the fort side. Parel to the west is 400012, Wadala to the north is 400031 and Mazgaon to the south is 400010.",
+        "scope": "locality",
+        "tags": ["mumbai", "sewri"]
+      },
+      {
+        "id": "faq-mumbai-sewri-3",
+        "q": "Do helpers in Sewri need society gate passes?",
+        "a": "In the newer high-rise towers, yes: the resident registers the helper's name and ID with the security desk. In the older chawls and cooperative buildings near Sewri station, the household usually just informs the watchman of the helper's timings.",
+        "scope": "locality",
+        "tags": ["mumbai", "sewri"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "wadala": {
+    "neighbours": ["antop-hill", "matunga", "sewri", "sion", "dadar", "parel", "mazgaon"],
+    "landmarks": ["Wadala Road Railway Station", "Wadala Depot Monorail Station", "Five Gardens", "Wadala Ram Mandir", "Bhakti Park"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Korba Mithagar"],
+    "localIntro": "Wadala, under pincode 400031, lies on the eastern side of central Mumbai between Matunga and Sewri, centred on Wadala Road station on the Harbour line and the Wadala Depot monorail station beside the BEST depot. Housing is a mix of long-established cooperative societies and mid-rise buildings around Katrak Road and the Five Gardens side that Wadala shares with Matunga, older colonies near the station, and newer high-rise complexes rising on the eastern side towards Bhakti Park and the truck terminal. Wadala Ram Mandir on Ram Mandir Road is the neighbourhood's best-known temple. Residents are largely settled Maharashtrian, Gujarati and South Indian families, many elderly residents who have lived in the same societies for decades, and working professionals commuting to Parel, Fort and BKC. Antop Hill lies immediately to the east, Matunga and Dadar to the west, Sion to the north and Sewri to the south. Households in Wadala typically look for morning and evening cooking and cleaning slots, full-time housekeepers in the newer complexes, and day-time elder-care support in older walk-up societies.",
+    "commuteNotes": "Wadala Road station on the Harbour line serves the locality directly, Matunga and Dadar stations on the Central line are within walking distance to the west, and the Wadala Depot monorail station and BEST buses from the Wadala depot connect the eastern side. [VERIFY]",
+    "housingNotes": "The older cooperative societies and mid-rise buildings rely on a watchman or the household for entry and keep timings flexible, while the newer high-rise complexes on the eastern side run security desks with visitor registers where the resident registers the helper.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-wadala-1",
+        "q": "Which areas near Wadala do you also serve?",
+        "a": "Antop Hill to the east and Matunga to the west are directly adjacent to Wadala and share the same helper pool. Sewri, Sion, Dadar and Parel are covered as separate localities close by.",
+        "scope": "locality",
+        "tags": ["mumbai", "wadala"]
+      },
+      {
+        "id": "faq-mumbai-wadala-2",
+        "q": "Which pincode does the Wadala service area cover?",
+        "a": "Wadala falls under pincode 400031, which covers the station area, Katrak Road and the Ram Mandir side. Antop Hill and Wadala East to the east come under 400037, Matunga to the west is 400019 and Sewri to the south is 400015.",
+        "scope": "locality",
+        "tags": ["mumbai", "wadala"]
+      },
+      {
+        "id": "faq-mumbai-wadala-3",
+        "q": "Do helpers in Wadala need society gate passes?",
+        "a": "It depends on the building. The older cooperative societies around Katrak Road and Five Gardens usually just need the watchman to be told about the helper's timings, while the newer high-rise complexes on the eastern side register the helper's name and ID at the security desk.",
+        "scope": "locality",
+        "tags": ["mumbai", "wadala"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "antop-hill": {
+    "neighbours": ["wadala", "sion", "sewri", "matunga", "dadar", "chembur"],
+    "landmarks": ["Bhakti Park", "Vidyalankar Institute of Technology", "Wadala Truck Terminal", "Antop Hill Monorail Station", "Antop Hill Warehousing Complex", "Sardar Nagar"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Korba Mithagar", "Sardar Nagar"],
+    "localIntro": "Antop Hill, under pincode 400037, covers the eastern side of Wadala between Sion and Sewri, from the hill itself with its central government staff quarters and older colonies down to the Wadala Truck Terminal, the Antop Hill Warehousing Complex and the new residential district of Bhakti Park on the reclaimed land near the Eastern Freeway. Housing is a mix of government housing colonies and mid-rise cooperative societies on the hill, the older settlements of Sardar Nagar and Korba Mithagar, and large gated high-rise complexes at Bhakti Park that have drawn a younger population of working professionals. Vidyalankar Institute of Technology on the Wadala East side is the locality's best-known college. Residents range from government employees and long-settled families to elderly residents in the older colonies and professionals commuting to BKC, Parel and Fort via the freeway. Wadala lies immediately to the west, Sion to the north, Sewri to the south and Chembur across the Sion-Trombay road to the east. Households in Antop Hill typically look for part-time cooking and cleaning help, full-time housekeepers for the Bhakti Park towers, and day-time elder-care support in the older colonies.",
+    "commuteNotes": "Antop Hill and Bhakti Park stations on the Mumbai Monorail sit within the locality, Wadala Road on the Harbour line and GTB Nagar and Sion on the Central line are the nearest suburban stations, and BEST buses run along the Sion-Wadala road and the Antop Hill loop. [VERIFY]",
+    "housingNotes": "The Bhakti Park complexes are fully gated with security desks, visitor registers and service lifts, so the resident must register the helper, while the government quarters and older cooperative colonies on the hill rely on a watchman or the household and keep timings flexible.",
+    "localFaqs": [
+      {
+        "id": "faq-mumbai-antop-hill-1",
+        "q": "Which areas near Antop Hill do you also serve?",
+        "a": "Wadala to the west and Sion to the north are directly adjacent to Antop Hill and share the same helper network. Sewri, Matunga, Dadar and Chembur across the Sion-Trombay road are covered as separate localities.",
+        "scope": "locality",
+        "tags": ["mumbai", "antop-hill"]
+      },
+      {
+        "id": "faq-mumbai-antop-hill-2",
+        "q": "Which pincode does the Antop Hill service area cover?",
+        "a": "Antop Hill falls under pincode 400037, which also covers Wadala East, Bhakti Park and the truck terminal side. Wadala to the west is 400031, Sion to the north is 400022 and Sewri to the south is 400015.",
+        "scope": "locality",
+        "tags": ["mumbai", "antop-hill"]
+      },
+      {
+        "id": "faq-mumbai-antop-hill-3",
+        "q": "Do helpers in Antop Hill need society gate passes?",
+        "a": "In the gated Bhakti Park complexes, yes: the resident registers the helper's name and ID with the security desk and the helper uses the service lift within the society's timings. In the government quarters and older colonies on the hill, the household arranges entry directly with the watchman.",
+        "scope": "locality",
+        "tags": ["mumbai", "antop-hill"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

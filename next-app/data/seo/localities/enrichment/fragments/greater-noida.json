@@ -1,0 +1,422 @@
+{
+  "gaur-city": {
+    "neighbours": ["techzone", "surajpur", "knowledge-park", "dadri", "gamma", "delta", "pari-chowk", "alpha"],
+    "landmarks": ["Gaur City Mall", "Gaur Chowk (Char Murti)", "Gaur City Centre", "Yatharth Super Speciality Hospital", "Ek Murti Chowk"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Shahberi", "Bisrakh", "Itaida"],
+    "localIntro": "Gaur City is the largest residential cluster in Greater Noida West, the belt still widely called Noida Extension, and it falls under pincode 201306. Gaur City 1 and Gaur City 2 together hold dozens of high-rise towers arranged around Gaur Chowk, the Char Murti roundabout that links the township to Noida's Sector 121 side across the Hindon. Almost every home here is a flat inside a gated society with its own security desk and visitor-entry system, and residents are largely young families and working couples who commute to Noida, Delhi and the Greater Noida office belts. That mix produces steady demand for full-day and part-time help with cooking, cleaning and child care. Gaur City Mall and Gaur City Centre are the everyday shopping and dining hubs, with Yatharth Super Speciality Hospital close by. Techzone sits immediately alongside on the Bisrakh road, Surajpur lies further along the road toward central Greater Noida, and Dadri is reached via the Bisrakh–Dadri route, so helpers move between these areas by shared auto and bus.",
+    "commuteNotes": "Greater Noida West has no metro station yet; helpers reach Gaur City by shared auto or bus from Noida's Sector 52 and Sector 51 metro stations via Gaur Chowk, or on foot from the adjoining villages of Shahberi, Bisrakh and Itaida.",
+    "housingNotes": "Gaur City is almost entirely gated high-rise societies, so helpers must be registered with the society's security desk and typically carry an entry pass or app-based visitor approval for each tower they work in.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-gaur-city-1",
+        "q": "Do helpers in Gaur City need society gate passes?",
+        "a": "Yes. Gaur City 1 and Gaur City 2 are gated high-rise societies with security at every tower, and most require the helper to be registered with the society office or a visitor-management app before the first visit. The household usually renews the pass periodically once the helper is on the society's record.",
+        "scope": "locality",
+        "tags": ["greater-noida", "gaur-city"]
+      },
+      {
+        "id": "faq-greater-noida-gaur-city-2",
+        "q": "Which areas near Gaur City are also covered?",
+        "a": "Coverage extends across Greater Noida West, including Techzone next door on the Bisrakh road and the Surajpur side toward central Greater Noida. Because these areas share pincode 201306 and the same shared-auto routes from Gaur Chowk, helpers often work in more than one of them.",
+        "scope": "locality",
+        "tags": ["greater-noida", "gaur-city"]
+      },
+      {
+        "id": "faq-greater-noida-gaur-city-3",
+        "q": "Which pincode does the Gaur City service cover?",
+        "a": "Gaur City 1 and Gaur City 2 fall under pincode 201306, and the service covers the towers on both sides of Gaur Chowk. Households near Gaur City Mall and along the road toward Techzone are all within this pincode.",
+        "scope": "locality",
+        "tags": ["greater-noida", "gaur-city"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "techzone": {
+    "neighbours": ["gaur-city", "surajpur", "knowledge-park", "dadri", "gamma", "delta", "pari-chowk"],
+    "landmarks": ["Ek Murti Chowk", "Gaur City Mall", "Gaur Chowk (Char Murti)", "Bisrakh Road"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Bisrakh", "Itaida"],
+    "localIntro": "Techzone, officially Techzone 4, is a residential sector of Greater Noida West that grew up alongside Gaur City along the road toward Bisrakh village, and it falls under pincode 201306. Despite the name, the sector is dominated by large gated apartment complexes rather than offices, with tower after tower of two- and three-bedroom flats bought largely by first-time home owners. Households are typically young families with school-going children and double-income couples working in Noida's sector offices or Delhi, which keeps demand high for morning cooks, part-time cleaners and full-day nannies. Ek Murti Chowk is the main local landmark and shared-auto point, while Gaur City Mall and Gaur Chowk (Char Murti) a short ride away serve as the shopping and transit hub for the whole belt. Gaur City is the immediate neighbour, Surajpur lies down the road toward the district collectorate and central Greater Noida, and Dadri town is reached via the Bisrakh–Dadri road, so helpers based in the villages along this stretch move easily between the societies here.",
+    "commuteNotes": "There is no metro station in Techzone yet; helpers come by shared auto from Gaur Chowk and Ek Murti Chowk, which connect onward to Noida's Sector 52 metro station, or walk in from the neighbouring villages of Bisrakh and Itaida.",
+    "housingNotes": "Techzone is made up of gated group-housing societies with security-managed entry, so helpers are registered with the society and carry passes; timings are usually fixed slots agreed with the household and cleared with the tower's security desk.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-techzone-1",
+        "q": "Is this the same as Techzone 4 in Greater Noida West?",
+        "a": "Yes. This page covers Techzone 4, the residential sector of Greater Noida West around Ek Murti Chowk, next to Gaur City. It is a different area from Techzone II near the Yamuna Expressway, which is on the far side of the city.",
+        "scope": "locality",
+        "tags": ["greater-noida", "techzone"]
+      },
+      {
+        "id": "faq-greater-noida-techzone-2",
+        "q": "Which areas near Techzone are also served?",
+        "a": "Gaur City immediately next door and the rest of the Greater Noida West belt in pincode 201306 are covered, along with Surajpur further down the road. Helpers from the Bisrakh side commonly work across Techzone and Gaur City on the same day.",
+        "scope": "locality",
+        "tags": ["greater-noida", "techzone"]
+      },
+      {
+        "id": "faq-greater-noida-techzone-3",
+        "q": "Do helpers in Techzone need society gate passes?",
+        "a": "Yes, almost every home in Techzone is inside a gated society, so the helper needs to be registered with the society office or its visitor app before starting. The household normally handles the registration and any renewal with the security desk.",
+        "scope": "locality",
+        "tags": ["greater-noida", "techzone"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "surajpur": {
+    "neighbours": ["knowledge-park", "techzone", "gaur-city", "jaypee-greens", "alpha", "pari-chowk", "dadri", "gamma", "kasna"],
+    "landmarks": ["Gautam Buddh Nagar District Collectorate", "Surajpur Wetland (Bird Sanctuary)", "Surajpur Industrial Area", "Honda Cars India plant (Surajpur–Kasna Road)", "Surajpur–Kasna Road"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Surajpur sits at the junction where the road from Greater Noida West meets the Surajpur–Kasna Road running into central Greater Noida, and it falls under pincode 201306. It is an older settlement that has become an administrative and industrial hub: the Gautam Buddh Nagar District Collectorate is located here, the Surajpur Industrial Area and the Honda Cars India plant on the Surajpur–Kasna Road employ thousands, and the Surajpur Wetland bird sanctuary lies just off the main road. Housing is mixed, with the original village core of independent houses and rented rooms sitting beside newer plotted colonies and a few apartment projects, so the households seeking help range from long-settled families to workers and officials posted at the collectorate and factories. Domestic help here is usually part-time, with cooking and cleaning the most common requirements. Knowledge Park begins a short distance down the Surajpur–Kasna Road, Techzone and Gaur City lie to the north-west along the Greater Noida West road, and Dadri town is reached eastward, which makes Surajpur a natural crossing point for helpers travelling between all three.",
+    "commuteNotes": "Surajpur has no metro station; helpers travel by bus or shared auto along the Surajpur–Kasna Road from Pari Chowk and the Knowledge Park II side, or from Gaur Chowk in Greater Noida West, and many live within Surajpur village itself.",
+    "housingNotes": "Housing is a mix of village-core independent houses, plotted colonies and a few gated apartment projects, so gate passes are needed only in the newer societies while independent homes manage entry and timings directly.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-surajpur-1",
+        "q": "Which areas near Surajpur are also served?",
+        "a": "Service covers Knowledge Park down the Surajpur–Kasna Road, Techzone and Gaur City on the Greater Noida West side, and Dadri town to the east. Surajpur sits at the crossing of these routes, so helpers based here regularly work in the neighbouring areas as well.",
+        "scope": "locality",
+        "tags": ["greater-noida", "surajpur"]
+      },
+      {
+        "id": "faq-greater-noida-surajpur-2",
+        "q": "Which pincode does the Surajpur service cover?",
+        "a": "Surajpur falls under pincode 201306, the same pincode used by Gaur City and Techzone in Greater Noida West. Homes in the village core, the plotted colonies near the District Collectorate and the newer apartment projects are all covered.",
+        "scope": "locality",
+        "tags": ["greater-noida", "surajpur"]
+      },
+      {
+        "id": "faq-greater-noida-surajpur-3",
+        "q": "Do helpers in Surajpur need society gate passes?",
+        "a": "It depends on the home. Independent houses and rented floors in Surajpur village and the plotted colonies manage entry themselves, while the handful of gated apartment projects require the helper to be registered with their security desk.",
+        "scope": "locality",
+        "tags": ["greater-noida", "surajpur"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "alpha": {
+    "neighbours": ["pari-chowk", "beta", "jaypee-greens", "gamma", "delta", "knowledge-park", "kasna", "surajpur"],
+    "landmarks": ["Alpha 1 Metro Station (Aqua Line)", "Alpha Commercial Belt", "Pari Chowk", "Jagat Farm Market (Gamma 1)", "Ansal Plaza Mall"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Tugalpur"],
+    "localIntro": "Alpha is one of the original residential sectors of Greater Noida, laid out by the authority as Alpha 1 and Alpha 2 on the ring around Pari Chowk, and it falls under pincode 201310. The sectors are plotted, so the dominant housing is independent houses and kothis, many with an extra floor let out to tenants, alongside a smaller number of group-housing blocks. Households are a mix of settled families, retired couples who bought plots in the early years of the city, and professionals renting floors close to the office and institutional belt. Alpha 1 Metro Station on the Aqua Line and the Alpha Commercial Belt market give the sector a working centre, and Pari Chowk with its malls is within walking distance. Demand for help is spread across full-time cooks, part-time cleaners and elder-care support for older residents. Beta lies immediately across the sector road, Gamma with the Jagat Farm market is close by, and Jaypee Greens is on the far side of Pari Chowk, so helpers often serve homes in two or three of these sectors on a single route.",
+    "commuteNotes": "Alpha 1 Metro Station on the Aqua Line serves the sector directly, and shared autos from Pari Chowk cover the internal roads; helpers also walk in from Tugalpur village on the Knowledge Park side.",
+    "housingNotes": "Alpha is mostly independent plotted houses with rented floors, so entry and timings are set by each household rather than a society gate, though the few group-housing complexes do require registration with security.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-alpha-1",
+        "q": "Which pincode does the Alpha service cover?",
+        "a": "Both Alpha 1 and Alpha 2 fall under pincode 201310, and the service covers the plotted houses and the group-housing blocks across the two sectors. Homes around Alpha 1 Metro Station and the Alpha Commercial Belt are all included.",
+        "scope": "locality",
+        "tags": ["greater-noida", "alpha"]
+      },
+      {
+        "id": "faq-greater-noida-alpha-2",
+        "q": "Which sectors near Alpha are also served?",
+        "a": "The adjoining authority sectors of Beta, Gamma and Delta are covered, along with Pari Chowk and Knowledge Park. Helpers commonly work across Alpha and Beta on the same day because the sectors sit side by side around Pari Chowk.",
+        "scope": "locality",
+        "tags": ["greater-noida", "alpha"]
+      },
+      {
+        "id": "faq-greater-noida-alpha-3",
+        "q": "Do helpers in Alpha need society gate passes?",
+        "a": "Mostly no. Alpha is a plotted sector of independent houses where each household manages its own entry, so verification records stay with the family. Helpers working in the few gated group-housing complexes in Alpha 2 do need to be registered with that society's security.",
+        "scope": "locality",
+        "tags": ["greater-noida", "alpha"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "beta": {
+    "neighbours": ["alpha", "pari-chowk", "gamma", "delta", "jaypee-greens", "knowledge-park", "kasna"],
+    "landmarks": ["Omaxe Connaught Place Mall (Beta 2)", "Pari Chowk", "Pari Chowk Metro Station (Aqua Line)", "Jagat Farm Market (Gamma 1)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Beta 1 and Beta 2 are plotted residential sectors that sit just beyond Pari Chowk in central Greater Noida, under pincode 201310. Like the other early authority sectors, the housing is mostly independent houses on individual plots, often with a floor or two rented to professionals and faculty from the nearby institutions, so households range from settled families to tenants who need part-time cooking and cleaning support. Beta 2 is home to the Omaxe Connaught Place Mall, which along with Pari Chowk gives the sector its shopping and transport focus, and Pari Chowk Metro Station on the Aqua Line is a short ride away. Alpha lies across the road on the Pari Chowk side, Gamma with the Jagat Farm market is close by, and Delta continues beyond toward the Delta 1 metro station. Helpers who work in Beta typically cover several homes across these adjoining sectors, moving between them by shared auto or on foot, and the wide sector roads and low-rise plots make it easy to fit two or three households into a morning.",
+    "commuteNotes": "Pari Chowk Metro Station on the Aqua Line is the nearest station, with shared autos running from Pari Chowk into Beta 1 and Beta 2; helpers also walk across from Alpha and Gamma.",
+    "housingNotes": "Beta is largely independent plotted houses with rented floors, so households set entry and timings themselves; only the occasional group-housing block near Omaxe Connaught Place requires society registration.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-beta-1",
+        "q": "Which areas near Beta are also served?",
+        "a": "Alpha on the Pari Chowk side, Gamma around Jagat Farm and Delta beyond it are all covered, as is Pari Chowk itself. The sectors adjoin each other, so a helper working in Beta 1 or Beta 2 can usually take on homes in the neighbouring sectors too.",
+        "scope": "locality",
+        "tags": ["greater-noida", "beta"]
+      },
+      {
+        "id": "faq-greater-noida-beta-2",
+        "q": "Which pincode does the Beta service cover?",
+        "a": "Beta 1 and Beta 2 fall under pincode 201310, and homes throughout both sectors are covered. Households near the Omaxe Connaught Place Mall in Beta 2 and along the sector roads toward Pari Chowk are all within this pincode.",
+        "scope": "locality",
+        "tags": ["greater-noida", "beta"]
+      },
+      {
+        "id": "faq-greater-noida-beta-3",
+        "q": "Do helpers in Beta need society gate passes?",
+        "a": "Usually not, because Beta is a plotted sector where independent houses manage their own entry. Helpers placed in a gated group-housing block do need to be registered with that society's security desk, which the household arranges.",
+        "scope": "locality",
+        "tags": ["greater-noida", "beta"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "gamma": {
+    "neighbours": ["beta", "alpha", "delta", "pari-chowk", "knowledge-park", "surajpur", "jaypee-greens", "kasna"],
+    "landmarks": ["Jagat Farm Market (Gamma 1)", "Pari Chowk", "Alpha 1 Metro Station (Aqua Line)", "Omaxe Connaught Place Mall (Beta 2)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Gamma 1 and Gamma 2 are among the earliest plotted sectors of Greater Noida and fall under pincode 201310. Gamma 1 is best known for Jagat Farm, the city's original market where residents from across the authority sectors come for groceries, tailoring, banks and eateries, and that market gives the sector a busier, more established feel than the newer townships. Housing is dominated by independent houses on individual plots, many built in the late 1990s and 2000s, with extra floors let out to tenants, so the households are a mix of long-settled families, elderly couples living on their own and renters connected to the nearby colleges and offices. Cooks, part-time cleaners and elder-care attendants are the most common requirements. Beta adjoins Gamma on the Pari Chowk side, Alpha with its Aqua Line metro station is a short walk beyond, and Delta continues on toward the Delta 1 metro station. Because the sectors are laid out on a grid with wide internal roads, helpers serving Gamma usually cover homes in two or three of these neighbouring sectors as well.",
+    "commuteNotes": "Alpha 1 Metro Station on the Aqua Line is the closest station to Gamma, and shared autos from Pari Chowk and Jagat Farm run through the sector; many helpers also walk across from Beta and Delta.",
+    "housingNotes": "Gamma is almost entirely independent plotted houses with rented floors, so entry and timings are agreed directly with each household and no society gate pass is involved.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-gamma-1",
+        "q": "Which areas near Gamma are also served?",
+        "a": "The adjoining sectors of Beta, Alpha and Delta are covered, along with Pari Chowk and Knowledge Park. Helpers working around Jagat Farm in Gamma 1 commonly take on homes in Beta 1 and Alpha 1 on the same route.",
+        "scope": "locality",
+        "tags": ["greater-noida", "gamma"]
+      },
+      {
+        "id": "faq-greater-noida-gamma-2",
+        "q": "Which pincode does the Gamma service cover?",
+        "a": "Gamma 1 and Gamma 2 fall under pincode 201310, and the service covers the plotted houses across both sectors. Homes around Jagat Farm market and along the road toward Pari Chowk are all included.",
+        "scope": "locality",
+        "tags": ["greater-noida", "gamma"]
+      },
+      {
+        "id": "faq-greater-noida-gamma-3",
+        "q": "Do helpers in Gamma need society gate passes?",
+        "a": "No. Gamma is a plotted sector of independent houses where each household manages its own entry, so the family keeps the helper's ID and verification record directly rather than a society office.",
+        "scope": "locality",
+        "tags": ["greater-noida", "gamma"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "delta": {
+    "neighbours": ["alpha", "gamma", "beta", "pari-chowk", "knowledge-park", "surajpur", "kasna", "dadri"],
+    "landmarks": ["Delta 1 Metro Station (Aqua Line)", "Pari Chowk", "Jagat Farm Market (Gamma 1)", "Alpha 1 Metro Station (Aqua Line)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Delta 1 and Delta 2 are plotted residential sectors on the eastern side of central Greater Noida, under pincode 201310. They are among the few authority sectors with a metro station of their own: Delta 1 Metro Station on the Aqua Line stops at the sector's edge, which has made the rented floors here popular with professionals commuting to Noida. The housing is dominated by independent houses on individual plots, typically two or three storeys with the owner's family on one floor and tenants on the others, so households range from settled families to working couples who need part-time cooking and cleaning support at fixed morning or evening hours. Alpha lies next door with its own Aqua Line station, Gamma with the Jagat Farm market is a short walk away, and Beta sits beyond that toward Pari Chowk. The grid layout and wide sector roads mean helpers can walk between homes in Delta, Alpha and Gamma without needing transport, and a single helper often serves households in more than one of these sectors.",
+    "commuteNotes": "Delta 1 Metro Station on the Aqua Line serves the sector directly, and shared autos from Pari Chowk and Jagat Farm run along the sector roads; helpers also walk in from Alpha and Gamma.",
+    "housingNotes": "Delta is mostly independent plotted houses with rented floors, so entry and timings are set by each household; there is no society gate to clear except in the occasional group-housing block.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-delta-1",
+        "q": "Is there a metro station serving Delta?",
+        "a": "Yes. Delta 1 Metro Station on the Aqua Line is at the edge of the sector, and Alpha 1 Metro Station is the next stop toward Pari Chowk. Helpers travelling from Noida can reach Delta 1 and Delta 2 directly by metro and then walk or take a shared auto into the sector.",
+        "scope": "locality",
+        "tags": ["greater-noida", "delta"]
+      },
+      {
+        "id": "faq-greater-noida-delta-2",
+        "q": "Which areas near Delta are also served?",
+        "a": "Alpha, Gamma and Beta are all covered, along with Pari Chowk and Knowledge Park. The sectors adjoin one another on a grid, so helpers regularly work in Delta and Alpha or Gamma on the same day.",
+        "scope": "locality",
+        "tags": ["greater-noida", "delta"]
+      },
+      {
+        "id": "faq-greater-noida-delta-3",
+        "q": "Which pincode does the Delta service cover?",
+        "a": "Delta 1 and Delta 2 fall under pincode 201310, and the service covers homes across both sectors. Households near Delta 1 Metro Station and along the road toward Jagat Farm are all included.",
+        "scope": "locality",
+        "tags": ["greater-noida", "delta"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "knowledge-park": {
+    "neighbours": ["pari-chowk", "alpha", "surajpur", "jaypee-greens", "beta", "gamma", "delta", "techzone", "gaur-city", "kasna"],
+    "landmarks": ["Knowledge Park II Metro Station (Aqua Line)", "India Expo Centre & Mart (Knowledge Park II)", "Sharda University (Knowledge Park III)", "Sharda Hospital", "Galgotias College of Engineering (Knowledge Park II)", "Pari Chowk"],
+    "housingProfile": "mixed",
+    "demandProfile": ["students", "working-professionals", "families"],
+    "helperSourceAreas": ["Tugalpur"],
+    "localIntro": "Knowledge Park is the institutional belt of Greater Noida, spread across Knowledge Park I, II and III between the Greater Noida Expressway and the Surajpur–Kasna Road, and it falls under pincode 201310. It is home to Sharda University and Sharda Hospital in Knowledge Park III, Galgotias College of Engineering and the India Expo Centre & Mart in Knowledge Park II, and dozens of other colleges, which shape the households here: faculty families in campus and rented housing, professionals in the apartment complexes along the expressway, and large numbers of students in hostels and paying-guest rooms. Housing is therefore mixed, from gated group-housing towers to independent houses with student floors, and the help required is equally varied, from daily cooks for shared student flats to full-time support for faculty families with young children. Knowledge Park II Metro Station on the Aqua Line and Pari Chowk at the southern end anchor the area's transport. Pari Chowk and Alpha adjoin it on one side, Surajpur lies at the northern end of the Surajpur–Kasna Road, and Jaypee Greens is across the road near Pari Chowk, so helpers move between these areas on well-used shared-auto routes.",
+    "commuteNotes": "Knowledge Park II Metro Station on the Aqua Line serves the belt directly, with shared autos and buses running along the Surajpur–Kasna Road and from Pari Chowk; helpers also walk in from Tugalpur village adjoining Knowledge Park I.",
+    "housingNotes": "Housing is mixed, so gated apartment complexes and campus housing require helper registration with security, while independent houses and paying-guest buildings manage entry directly and often need flexible timings around class schedules.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-knowledge-park-1",
+        "q": "Which parts of Knowledge Park are covered?",
+        "a": "Knowledge Park I, II and III are all covered under pincode 201310, from the housing near Sharda University in Knowledge Park III to the apartment complexes near Knowledge Park II Metro Station and the India Expo Centre. Homes in the adjoining Pari Chowk and Alpha side are also included.",
+        "scope": "locality",
+        "tags": ["greater-noida", "knowledge-park"]
+      },
+      {
+        "id": "faq-greater-noida-knowledge-park-2",
+        "q": "Can students in Knowledge Park book a cook for a shared flat?",
+        "a": "Yes. Many bookings in Knowledge Park come from students and young professionals in shared flats and paying-guest accommodation near Galgotias College and Sharda University, usually for a daily cook or a part-time cleaner. Timings are typically set around morning and evening class schedules.",
+        "scope": "locality",
+        "tags": ["greater-noida", "knowledge-park"]
+      },
+      {
+        "id": "faq-greater-noida-knowledge-park-3",
+        "q": "Which areas near Knowledge Park are also served?",
+        "a": "Pari Chowk, Alpha, Beta and Jaypee Greens at the southern end are covered, as is Surajpur at the northern end of the Surajpur–Kasna Road. Helpers who reach the area by the Aqua Line or the Surajpur–Kasna Road routes commonly work across two or three of these.",
+        "scope": "locality",
+        "tags": ["greater-noida", "knowledge-park"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "pari-chowk": {
+    "neighbours": ["alpha", "beta", "knowledge-park", "jaypee-greens", "gamma", "delta", "kasna", "surajpur"],
+    "landmarks": ["Pari Chowk Metro Station (Aqua Line)", "Ansal Plaza Mall", "The Grand Venice Mall", "Omaxe Connaught Place Mall (Beta 2)", "Greater Noida Expressway"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Tugalpur"],
+    "localIntro": "Pari Chowk is the central roundabout of Greater Noida, the point where the Greater Noida Expressway from Noida ends and the city's sector roads radiate outward, and the area around it falls under pincode 201310. It functions as the city's downtown: Pari Chowk Metro Station on the Aqua Line, Ansal Plaza Mall and The Grand Venice Mall are all within a short walk, with the Omaxe Connaught Place Mall in Beta 2 just beyond. Housing around the chowk is mixed, with gated group-housing towers on the Site IV and expressway side and the plotted independent houses of Alpha and Beta beginning immediately behind them, so households range from working professionals in apartments who need a part-time cook and cleaner to established families in kothis with full-time help. Alpha and Beta adjoin the chowk directly, Knowledge Park runs north along the expressway, and Jaypee Greens lies across the Surajpur–Kasna Road. Because nearly every shared-auto and bus route in the city passes through Pari Chowk, helpers find it the easiest part of Greater Noida to reach and typically serve homes in two or three of the surrounding sectors.",
+    "commuteNotes": "Pari Chowk Metro Station on the Aqua Line stops right at the roundabout, and shared autos and buses from every part of Greater Noida and from Noida terminate here; helpers also walk in from Tugalpur village on the Knowledge Park side.",
+    "housingNotes": "Housing is mixed: the group-housing towers near the chowk require helper registration with society security, while the independent houses of the adjoining Alpha and Beta sectors manage entry and timings directly.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-pari-chowk-1",
+        "q": "Which areas around Pari Chowk are covered?",
+        "a": "Homes in the group-housing complexes near Pari Chowk Metro Station and The Grand Venice Mall are covered, along with the adjoining plotted sectors of Alpha and Beta. Knowledge Park to the north and Jaypee Greens across the Surajpur–Kasna Road are also served.",
+        "scope": "locality",
+        "tags": ["greater-noida", "pari-chowk"]
+      },
+      {
+        "id": "faq-greater-noida-pari-chowk-2",
+        "q": "Which pincode does the Pari Chowk service cover?",
+        "a": "The area around Pari Chowk falls under pincode 201310, the same pincode as Alpha, Beta and Knowledge Park. Households near Ansal Plaza Mall and along the expressway approach are all within this pincode.",
+        "scope": "locality",
+        "tags": ["greater-noida", "pari-chowk"]
+      },
+      {
+        "id": "faq-greater-noida-pari-chowk-3",
+        "q": "How do helpers reach homes near Pari Chowk?",
+        "a": "Pari Chowk is the transport hub of Greater Noida, with the Aqua Line metro station at the roundabout and shared autos and buses from all the sectors and from Noida stopping here. Most helpers reach the surrounding homes on foot from the chowk within a few minutes.",
+        "scope": "locality",
+        "tags": ["greater-noida", "pari-chowk"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "jaypee-greens": {
+    "neighbours": ["pari-chowk", "alpha", "knowledge-park", "beta", "kasna", "surajpur", "gamma", "delta"],
+    "landmarks": ["Jaypee Greens Golf Course", "Jaypee Public School", "Pari Chowk", "Surajpur–Kasna Road", "The Grand Venice Mall"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Jaypee Greens is a gated golf township near Pari Chowk in central Greater Noida, under pincode 201310. Spread over several hundred acres around the Jaypee Greens Golf Course, it combines villas, town houses and high-rise apartment towers within a single secured estate, with Jaypee Public School inside the township and its own club and sports facilities. Households here are typically established families, senior professionals and retired couples living in larger homes than elsewhere in the city, which makes full-time cooks, live-in help, drivers' families and elder-care attendants more common than the part-time arrangements seen in the plotted sectors. Entry is through manned gates with visitor and staff registration, and every helper works within the estate's security system. The township opens onto the Surajpur–Kasna Road with The Grand Venice Mall and Pari Chowk a short drive away, Alpha and the other authority sectors lie just across the chowk, and Knowledge Park runs along the expressway to the north. Helpers usually reach the gates by shared auto from Pari Chowk and are collected or cleared from there.",
+    "commuteNotes": "Pari Chowk Metro Station on the Aqua Line is the nearest station, and shared autos along the Surajpur–Kasna Road drop helpers at the township gates; there is no metro station inside Jaypee Greens itself.",
+    "housingNotes": "Jaypee Greens is a fully gated estate of villas and towers, so every helper must be registered with the township's security and carry a staff pass, and timings are cleared through the estate's visitor-management system.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-jaypee-greens-1",
+        "q": "Do helpers in Jaypee Greens need a gate pass?",
+        "a": "Yes. Jaypee Greens is a fully gated township with manned entry, so helpers need to be registered with the estate security and carry a staff pass before they can enter. The household arranges this registration, and towers within the township may have their own additional check.",
+        "scope": "locality",
+        "tags": ["greater-noida", "jaypee-greens"]
+      },
+      {
+        "id": "faq-greater-noida-jaypee-greens-2",
+        "q": "Is live-in help available for villas in Jaypee Greens?",
+        "a": "Yes. The villas and larger apartments in Jaypee Greens often engage full-time or live-in cooks, housekeepers and elder-care attendants, and the township's staff-registration process applies to them as well. Part-time cooks and cleaners are also available for the apartment towers.",
+        "scope": "locality",
+        "tags": ["greater-noida", "jaypee-greens"]
+      },
+      {
+        "id": "faq-greater-noida-jaypee-greens-3",
+        "q": "Which areas near Jaypee Greens are also served?",
+        "a": "Pari Chowk and the adjoining Alpha and Beta sectors are covered, along with Knowledge Park to the north along the expressway and Kasna further down the Surajpur–Kasna Road. All of these fall within the same pincode 201310 as Jaypee Greens.",
+        "scope": "locality",
+        "tags": ["greater-noida", "jaypee-greens"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "kasna": {
+    "neighbours": ["jaypee-greens", "pari-chowk", "beta", "alpha", "knowledge-park", "gamma", "delta", "surajpur"],
+    "landmarks": ["Government Institute of Medical Sciences (GIMS), Kasna", "Gautam Buddha University", "Kasna Industrial Area", "Yamuna Expressway (Zero Point)", "Buddh International Circuit"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "students"],
+    "helperSourceAreas": [],
+    "localIntro": "Kasna lies at the southern end of the Surajpur–Kasna Road, where central Greater Noida meets the Yamuna Expressway, and it falls under pincode 201310. The area combines an old village core with the Kasna Industrial Area, the Government Institute of Medical Sciences (GIMS) and the nearby Gautam Buddha University campus, with the Buddh International Circuit a short distance down the expressway. Housing is mixed: the village and its lanes hold independent houses and rented rooms for factory and hospital staff, while the adjoining sectors toward Pari Chowk such as Chi, Phi, Omicron and Zeta have gated group-housing societies that draw young families and professionals looking for lower prices than the central sectors. Demand for help therefore ranges from part-time cooks for hospital and university staff to full-day support for families in the newer towers. Jaypee Greens and Pari Chowk are reached northward along the Surajpur–Kasna Road, with Beta and Alpha just beyond the chowk, and Knowledge Park lies along the expressway side. Helpers from Kasna village itself commonly serve the societies in the surrounding sectors.",
+    "commuteNotes": "Kasna has no metro station; helpers reach the area by bus or shared auto along the Surajpur–Kasna Road from Pari Chowk, and many live in Kasna village or the settlements around the industrial area and walk to the nearby societies.",
+    "housingNotes": "Housing is mixed, so helpers in the gated societies of the Chi, Phi, Omicron and Zeta sectors need society registration and passes, while the independent houses of Kasna village manage entry and timings directly.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-kasna-1",
+        "q": "Which areas around Kasna are covered?",
+        "a": "Kasna village, the housing near GIMS and the Kasna Industrial Area, and the gated societies in the adjoining Chi, Phi, Omicron and Zeta sectors are covered under pincode 201310. Jaypee Greens and Pari Chowk further up the Surajpur–Kasna Road are also served.",
+        "scope": "locality",
+        "tags": ["greater-noida", "kasna"]
+      },
+      {
+        "id": "faq-greater-noida-kasna-2",
+        "q": "Do helpers in Kasna need society gate passes?",
+        "a": "Only in the gated societies. The group-housing towers in the sectors around Kasna require helpers to be registered with society security, while independent houses in Kasna village and near the industrial area manage entry themselves.",
+        "scope": "locality",
+        "tags": ["greater-noida", "kasna"]
+      },
+      {
+        "id": "faq-greater-noida-kasna-3",
+        "q": "Is help available for staff housing near GIMS and Gautam Buddha University?",
+        "a": "Yes. Part-time cooks and cleaners are commonly booked by doctors, staff and students living in rented houses and flats near the Government Institute of Medical Sciences and the university side of Kasna. Timings are usually fixed around shift and class schedules.",
+        "scope": "locality",
+        "tags": ["greater-noida", "kasna"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "dadri": {
+    "neighbours": ["surajpur", "techzone", "gaur-city", "knowledge-park", "delta", "gamma", "alpha"],
+    "landmarks": ["Dadri Railway Station", "NTPC Dadri (National Capital Power Station)", "Mihir Bhoj PG College", "NH-91 (GT Road, Delhi–Hapur)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": [],
+    "localIntro": "Dadri is an old town and tehsil headquarters in Gautam Buddh Nagar district, lying on NH-91, the Grand Trunk Road between Delhi and Hapur, at the eastern edge of Greater Noida, and it has its own pincode, 203207. Unlike the planned sectors and townships of the city, Dadri is a traditional market town of independent houses, joint-family homes and shop-cum-residences along its bazaar lanes, with newer plotted colonies spreading out along the highway. Dadri Railway Station on the Delhi–Kanpur line, the NTPC Dadri power station on the town's outskirts and Mihir Bhoj PG College are the landmarks residents use to give directions. Households here are mostly long-settled families, often with elderly members at home, so the demand is for regular cooks, cleaners and elder-care support at flexible timings rather than the pass-based routines of gated societies. Surajpur is the nearest part of Greater Noida along the road toward the district collectorate, and Techzone and Gaur City in Greater Noida West are reached via the Bisrakh–Dadri road, so helpers from Dadri and its surrounding villages also travel to work in those areas.",
+    "commuteNotes": "Dadri has no metro; helpers move within the town on foot or by cycle rickshaw, reach it by bus along NH-91 or by train to Dadri Railway Station, and use the Surajpur and Bisrakh roads to travel toward Greater Noida.",
+    "housingNotes": "Dadri is dominated by independent houses and joint-family homes, so entry and timings are arranged directly with the household and no society gate pass is involved.",
+    "localFaqs": [
+      {
+        "id": "faq-greater-noida-dadri-1",
+        "q": "Which pincode does the Dadri service cover?",
+        "a": "Dadri town falls under pincode 203207, which is separate from the 201310 and 201306 pincodes used by central Greater Noida and Greater Noida West. Homes in the bazaar area near Dadri Railway Station and the colonies along NH-91 are all covered.",
+        "scope": "locality",
+        "tags": ["greater-noida", "dadri"]
+      },
+      {
+        "id": "faq-greater-noida-dadri-2",
+        "q": "Which areas near Dadri are also served?",
+        "a": "Surajpur is the nearest part of Greater Noida on the road toward the district collectorate, and Techzone and Gaur City in Greater Noida West are reached via the Bisrakh–Dadri road. Helpers based in Dadri often work in those areas as well as in the town itself.",
+        "scope": "locality",
+        "tags": ["greater-noida", "dadri"]
+      },
+      {
+        "id": "faq-greater-noida-dadri-3",
+        "q": "Do helpers in Dadri need society gate passes?",
+        "a": "No. Dadri is a town of independent houses and family homes rather than gated societies, so each household manages entry itself and keeps the helper's ID and verification record directly.",
+        "scope": "locality",
+        "tags": ["greater-noida", "dadri"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

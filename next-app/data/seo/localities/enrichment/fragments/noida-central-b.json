@@ -1,0 +1,597 @@
+{
+  "sector-47": {
+    "neighbours": ["sector-46", "sector-41", "sector-45", "sector-50", "sector-44", "sector-51", "sector-43", "sector-37"],
+    "landmarks": ["Noida Golf Course", "Golf Course Metro Station (Blue Line)", "Sector 50 Metro Station (Aqua Line)", "Barola village market"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": ["Barola"],
+    "localIntro": "Sector 47, under pincode 201303, is one of the older plotted residential sectors of central Noida, where most households live in independent houses built on individual plots rather than in high-rise towers. Many of the families here have been settled for years, and a good share of homes include elderly parents, which shapes the kind of domestic help people look for: regular morning cleaning, cooking support and, increasingly, daytime care for seniors. The sector sits close to the Noida Golf Course and the Golf Course Metro Station on the Blue Line, while the Sector 50 Metro Station on the Aqua Line lies a short ride away on the other side. Sector 46 and Sector 41 are immediately adjacent, with Sector 50 and Sector 45 within easy walking or cycling distance, so households and helpers move freely between these neighbouring sectors. Barola, the large urban village beside Sector 49 and 50, is where many of the area's helpers live, which keeps commute times short and makes fixed daily slots practical.",
+    "commuteNotes": "Golf Course Metro Station on the Blue Line and Sector 50 Metro Station on the Aqua Line are both within a short auto or e-rickshaw ride, and many helpers walk in from Barola village next to Sector 49 and 50.",
+    "housingNotes": "Independent plotted houses dominate, so households manage entry and timings directly with the helper; there are only a few gated group-housing pockets that need society passes.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-47-1",
+        "q": "Which areas near Sector 47 do you also serve?",
+        "a": "Sector 46, Sector 41, Sector 45 and Sector 50 are all adjacent and served by the same nearby helper pool. Sector 44, Sector 51 and Sector 43 are also close enough for helpers to take up work in both.",
+        "scope": "locality",
+        "tags": ["noida", "sector-47"]
+      },
+      {
+        "id": "faq-noida-sector-47-2",
+        "q": "Which pincode does the Sector 47 service area cover?",
+        "a": "Sector 47 falls under pincode 201303, which it shares with neighbouring Sectors 41, 43, 44, 45 and 46. Sector 50 and Sector 51 next door come under 201301 but are covered by the same helper network.",
+        "scope": "locality",
+        "tags": ["noida", "sector-47"]
+      },
+      {
+        "id": "faq-noida-sector-47-3",
+        "q": "Do helpers in Sector 47 need society gate passes?",
+        "a": "Most homes in Sector 47 are independent plotted houses, so formal society passes are usually not needed and families set timings directly. The few group-housing complexes in the sector may ask for a resident-issued entry pass or ID registration at the gate.",
+        "scope": "locality",
+        "tags": ["noida", "sector-47"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-50": {
+    "neighbours": ["sector-51", "sector-47", "sector-71", "sector-76", "sector-52", "sector-46", "sector-75", "sector-61"],
+    "landmarks": ["Sector 50 Metro Station (Aqua Line)", "Mahagun Maestro", "Barola village", "Sector 51 Metro Station (Aqua Line interchange)"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Barola"],
+    "localIntro": "Sector 50, with pincode 201301, is an established residential sector in central Noida dominated by gated group-housing societies, with well-known complexes such as Mahagun Maestro alongside several cooperative housing towers. Households are a mix of long-settled families, working couples commuting to the Sector 62 and Sector 18 office belts, and older residents who have lived here since the sector was developed. The Sector 50 Metro Station on the Aqua Line sits right at the sector's edge, and the Sector 51 interchange station connecting the Aqua and Blue Lines is only one stop away, which makes the area easy to reach for helpers from across Noida. Sector 51 lies directly to the north and Sector 47 to the west, while Sector 71 and Sector 76 sit across the main road on the eastern side. Barola village, immediately adjacent, is home to a large number of the domestic helpers who work in these societies, so full-day and part-time arrangements are both common and easy to fill.",
+    "commuteNotes": "Sector 50 Metro Station on the Aqua Line is at the sector boundary and Sector 51 interchange station is next door; most helpers, however, walk in from Barola village or take a shared e-rickshaw.",
+    "housingNotes": "Gated group-housing societies make up most of the sector, so helpers generally need a resident-issued gate pass or society app registration, and timings tend to follow fixed society entry hours.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-50-1",
+        "q": "Which areas near Sector 50 do you also serve?",
+        "a": "Sector 51, Sector 47 and Sector 71 are directly adjacent and served by the same helper pool. Sector 76, Sector 52 and Sector 46 are also within a short commute, so helpers often take up homes in more than one of these sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-50"]
+      },
+      {
+        "id": "faq-noida-sector-50-2",
+        "q": "Do helpers in Sector 50 need society gate passes?",
+        "a": "Yes, in most cases. Sector 50 is made up largely of gated societies such as Mahagun Maestro and various cooperative housing complexes, so the resident usually needs to register the helper with the society office or gate app before the first visit.",
+        "scope": "locality",
+        "tags": ["noida", "sector-50"]
+      },
+      {
+        "id": "faq-noida-sector-50-3",
+        "q": "How do helpers usually reach Sector 50?",
+        "a": "Many helpers live in Barola village next to the sector and walk in, while others arrive by the Aqua Line at Sector 50 Metro Station or via the Sector 51 interchange. Shared e-rickshaws run along the sector roads for the last stretch.",
+        "scope": "locality",
+        "tags": ["noida", "sector-50"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-51": {
+    "neighbours": ["sector-52", "sector-50", "sector-61", "sector-71", "sector-47", "sector-72", "sector-55", "sector-46"],
+    "landmarks": ["Sector 51 Metro Station (Aqua Line interchange)", "Sector 52 Metro Station (Blue Line)", "Hoshiarpur village", "Sai Mandir, Sector 61"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Hoshiarpur"],
+    "localIntro": "Sector 51, under pincode 201301, is a well-settled residential sector in central Noida with a mix of plotted independent houses and gated group-housing societies, which gives it a broader range of household types than many neighbouring sectors. Families with school-going children, working professionals commuting to the Sector 62 IT belt and retired residents all live here, so demand for domestic help spans daily cleaning, cooking, and steady daytime support for older family members. The sector is unusually well connected: the Sector 51 Metro Station is the interchange between the Aqua Line and the Blue Line's Sector 52 station, placing both corridors within walking distance. Hoshiarpur, the urban village that sits inside Sector 51, is home to many of the helpers who work in the surrounding homes. Sector 52 lies to the north, Sector 50 to the south and Sector 61 and Sector 71 across the main roads, while the well-known Sai Mandir in Sector 61 is a short walk away.",
+    "commuteNotes": "The Aqua Line's Sector 51 station and the Blue Line's Sector 52 station form an interchange at the sector's edge, so helpers can arrive from either corridor; a large share simply walk in from Hoshiarpur village within the sector.",
+    "housingNotes": "Housing is split between plotted independent houses, where timings are arranged directly with the family, and gated societies that require a resident-issued gate pass or society app registration.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-51-1",
+        "q": "Which areas near Sector 51 do you also serve?",
+        "a": "Sector 52, Sector 50, Sector 61 and Sector 71 are all adjacent to Sector 51 and are covered by the same helper pool. Sector 47, Sector 72 and Sector 55 are also close by.",
+        "scope": "locality",
+        "tags": ["noida", "sector-51"]
+      },
+      {
+        "id": "faq-noida-sector-51-2",
+        "q": "How do helpers reach Sector 51 by metro?",
+        "a": "Sector 51 is the interchange point between the Aqua Line (Sector 51 station) and the Blue Line (Sector 52 station), so helpers can come from Greater Noida West, Delhi or other parts of Noida on either line. Many also live in Hoshiarpur village inside the sector and walk to work.",
+        "scope": "locality",
+        "tags": ["noida", "sector-51"]
+      },
+      {
+        "id": "faq-noida-sector-51-3",
+        "q": "Do helpers in Sector 51 need society gate passes?",
+        "a": "It depends on the block. The gated group-housing societies in Sector 51 usually require a resident to register the helper at the gate or on the society app, whereas the plotted independent houses handle entry and timings directly.",
+        "scope": "locality",
+        "tags": ["noida", "sector-51"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-52": {
+    "neighbours": ["sector-51", "sector-61", "sector-71", "sector-55", "sector-50", "sector-72", "sector-62", "sector-56"],
+    "landmarks": ["Sector 52 Metro Station (Blue Line)", "Sector 51 Metro Station (Aqua Line)", "Sai Mandir, Sector 61", "Gijhore village"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Gijhore", "Hoshiarpur"],
+    "localIntro": "Sector 52, with pincode 201301, sits at the junction of Noida's two metro corridors and combines plotted independent houses with a number of gated group-housing societies, making it a mixed residential sector with a steady turnover of tenants as well as long-settled owners. Many residents are working professionals who chose the sector for its connectivity, along with families who value the proximity to schools and the markets of the Sector 61 and Sector 71 belt. The Sector 52 Metro Station on the Blue Line stands at the sector's edge, directly linked to the Aqua Line's Sector 51 station, and the Sai Mandir in Sector 61 is one of the best-known landmarks nearby. Sector 51 lies to the south, Sector 61 to the north-east and Sector 71 across the main road to the east. Gijhore village, adjoining the sector, and Hoshiarpur in Sector 51 are where many of the helpers serving these homes live, which keeps early-morning and evening slots easy to arrange.",
+    "commuteNotes": "Sector 52 Metro Station on the Blue Line and the connected Sector 51 Aqua Line station sit at the sector's boundary, and most helpers walk in from Gijhore or Hoshiarpur villages or use shared e-rickshaws on the sector roads.",
+    "housingNotes": "The sector mixes plotted houses with flexible, family-managed timings and gated societies where helpers need a resident-issued gate pass or registration on the society app.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-52-1",
+        "q": "Which areas near Sector 52 do you also serve?",
+        "a": "Sector 51, Sector 61 and Sector 71 are directly adjacent and served by the same helper pool. Sector 55, Sector 50, Sector 72 and Sector 62 are also within a short commute of Sector 52.",
+        "scope": "locality",
+        "tags": ["noida", "sector-52"]
+      },
+      {
+        "id": "faq-noida-sector-52-2",
+        "q": "Which pincode does Sector 52 service cover?",
+        "a": "Sector 52 comes under pincode 201301, the same pin as neighbouring Sector 51, Sector 61 and Sector 71. The helper network is shared across these sectors, so a helper working in one can usually take up homes in the others.",
+        "scope": "locality",
+        "tags": ["noida", "sector-52"]
+      },
+      {
+        "id": "faq-noida-sector-52-3",
+        "q": "Where do helpers working in Sector 52 usually come from?",
+        "a": "Most helpers live in Gijhore village adjoining the sector or in Hoshiarpur within Sector 51, both within walking distance. Others travel in on the Blue Line to Sector 52 Metro Station or on the Aqua Line to the connected Sector 51 station.",
+        "scope": "locality",
+        "tags": ["noida", "sector-52"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-55": {
+    "neighbours": ["sector-56", "sector-61", "sector-52", "sector-51", "sector-62", "sector-71", "sector-72"],
+    "landmarks": ["Sector 61 Metro Station (Blue Line)", "Sai Mandir, Sector 61", "Sector 58 Industrial Area", "Sector 52 Metro Station (Blue Line)"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": ["Hoshiarpur", "Gijhore"],
+    "localIntro": "Sector 55, under pincode 201301, is a quiet plotted residential sector in central Noida where most households live in independent houses built on individual plots, many of them owner-occupied by families who have been in Noida for a long time. Older residents are common here, so alongside routine cleaning and cooking help there is steady demand for daytime attendants and helpers comfortable supporting elderly family members. The sector lies just west of the Blue Line corridor, with the Sector 61 Metro Station and the well-known Sai Mandir in Sector 61 both a short walk across the main road, and the Sector 58 Industrial Area on its other flank. Sector 56 is immediately adjacent, sharing the same lanes and markets, while Sector 52 and Sector 51 lie to the south and Sector 62 to the north-east. Helpers serving this belt often live in Hoshiarpur or Gijhore villages nearby, making fixed morning slots practical for households that prefer the same helper every day.",
+    "commuteNotes": "Sector 61 Metro Station on the Blue Line is the nearest station and Sector 52 station is also close; many helpers walk in from Hoshiarpur or Gijhore villages or take a shared e-rickshaw along the sector roads.",
+    "housingNotes": "Independent plotted houses dominate, so entry and timings are arranged directly with the family and there is little need for formal society gate passes.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-55-1",
+        "q": "Which areas near Sector 55 do you also serve?",
+        "a": "Sector 56 is directly adjacent and effectively shares the same helper pool, along with Sector 61, Sector 52 and Sector 51 nearby. Sector 62, Sector 71 and Sector 72 are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-55"]
+      },
+      {
+        "id": "faq-noida-sector-55-2",
+        "q": "Do helpers in Sector 55 need society gate passes?",
+        "a": "Generally no. Sector 55 is a plotted sector of independent houses, so families manage entry and timings directly with the helper rather than through a society office.",
+        "scope": "locality",
+        "tags": ["noida", "sector-55"]
+      },
+      {
+        "id": "faq-noida-sector-55-3",
+        "q": "Which metro station is closest to Sector 55?",
+        "a": "Sector 61 Metro Station on the Blue Line is the nearest, a short walk across the main road, with Sector 52 station also close by. Helpers coming from Delhi or other parts of Noida usually get down at one of these two stations.",
+        "scope": "locality",
+        "tags": ["noida", "sector-55"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-56": {
+    "neighbours": ["sector-55", "sector-61", "sector-62", "sector-52", "sector-51", "sector-63", "sector-72"],
+    "landmarks": ["Sector 61 Metro Station (Blue Line)", "Sector 59 Metro Station (Blue Line)", "Sai Mandir, Sector 61", "Sector 58 Industrial Area"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": ["Hoshiarpur", "Gijhore"],
+    "localIntro": "Sector 56, with pincode 201301, is a plotted residential sector in central Noida made up largely of independent houses on individual plots, home to established families and a noticeable number of retired residents. Demand for domestic help here leans towards reliable daily cleaning and cooking support, with many households also looking for helpers who can assist elderly parents during the day. The sector sits beside the Blue Line corridor, with the Sector 61 and Sector 59 metro stations within walking distance, and the Sai Mandir in Sector 61 just across the main road; the Sector 58 Industrial Area lies on its western side. Sector 55 is immediately adjacent and shares the same lanes and local market, Sector 61 faces it across the metro road, and Sector 62 with its offices and hospitals lies to the north. Helpers for this belt commonly live in Hoshiarpur or Gijhore villages nearby, so fixed early-morning and evening slots are easy to sustain over the long term.",
+    "commuteNotes": "Sector 61 and Sector 59 metro stations on the Blue Line are both close, and most helpers walk in from nearby Hoshiarpur or Gijhore villages or use shared e-rickshaws along the sector roads.",
+    "housingNotes": "The sector is mostly independent plotted houses, so families deal with helpers directly and timings stay flexible; society passes are rarely required.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-56-1",
+        "q": "Which areas near Sector 56 do you also serve?",
+        "a": "Sector 55, Sector 61 and Sector 62 are directly adjacent and served by the same helper pool. Sector 52, Sector 51, Sector 63 and Sector 72 are also close enough for helpers to cover.",
+        "scope": "locality",
+        "tags": ["noida", "sector-56"]
+      },
+      {
+        "id": "faq-noida-sector-56-2",
+        "q": "Which pincode does Sector 56 service cover?",
+        "a": "Sector 56 falls under pincode 201301, shared with Sector 55, Sector 61 and Sector 62 next door. Helpers working in this pin usually move freely between these adjoining sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-56"]
+      },
+      {
+        "id": "faq-noida-sector-56-3",
+        "q": "Do helpers in Sector 56 need society gate passes?",
+        "a": "Usually not, because Sector 56 is a plotted sector of independent houses where entry is managed by the family. Only the occasional apartment block may ask for an ID to be registered at its gate.",
+        "scope": "locality",
+        "tags": ["noida", "sector-56"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-61": {
+    "neighbours": ["sector-62", "sector-52", "sector-51", "sector-71", "sector-56", "sector-55", "sector-72", "sector-63"],
+    "landmarks": ["Sai Mandir, Sector 61", "Sector 61 Metro Station (Blue Line)", "Sector 59 Metro Station (Blue Line)", "Fortis Hospital, Sector 62"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Hoshiarpur", "Gijhore"],
+    "localIntro": "Sector 61, under pincode 201301, is one of central Noida's most sought-after residential sectors, known for its dense cluster of cooperative group-housing societies and gated apartment complexes, with a smaller share of plotted houses along its edges. Households range from young working couples commuting to the Sector 62 IT belt next door to families with children and retired residents who have lived in the same society for decades, so demand covers daily cleaning, cooking, childcare support and elder care. The Sai Mandir in Sector 61 is a landmark known across Noida and the Sector 61 Metro Station on the Blue Line sits at the sector's edge, with Sector 59 station also close and Fortis Hospital in Sector 62 a few minutes away. Sector 62 lies to the north, Sector 52 and Sector 51 to the south-west and Sector 71 across the main road to the east. Helpers serving these societies commonly live in Hoshiarpur or Gijhore villages nearby and usually hold gate passes for several complexes at once.",
+    "commuteNotes": "Sector 61 Metro Station on the Blue Line is at the sector boundary, with Sector 59 station also nearby; most helpers walk or take a shared e-rickshaw from Hoshiarpur or Gijhore villages.",
+    "housingNotes": "Gated cooperative societies and apartment complexes dominate, so helpers generally need a resident-issued gate pass or society app registration and work within the society's fixed entry hours.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-61-1",
+        "q": "Which areas near Sector 61 do you also serve?",
+        "a": "Sector 62, Sector 52, Sector 51 and Sector 71 are all adjacent and covered by the same helper pool. Sector 56, Sector 55, Sector 72 and Sector 63 are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-61"]
+      },
+      {
+        "id": "faq-noida-sector-61-2",
+        "q": "Do helpers in Sector 61 need society gate passes?",
+        "a": "Yes, almost always. Sector 61 is made up mostly of gated cooperative group-housing societies, so the resident needs to register the helper with the society office or gate app before the first visit. Many helpers already hold passes for several societies in the sector.",
+        "scope": "locality",
+        "tags": ["noida", "sector-61"]
+      },
+      {
+        "id": "faq-noida-sector-61-3",
+        "q": "How do helpers reach Sector 61?",
+        "a": "Sector 61 Metro Station on the Blue Line sits at the sector's edge and Sector 59 station is close by. A large share of helpers live in Hoshiarpur or Gijhore villages nearby and walk in or take a shared e-rickshaw.",
+        "scope": "locality",
+        "tags": ["noida", "sector-61"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-62": {
+    "neighbours": ["sector-63", "sector-61", "sector-56", "sector-55", "sector-52", "sector-72", "sector-71", "sector-51"],
+    "landmarks": ["Fortis Hospital, Sector 62", "Noida Electronic City Metro Station (Blue Line)", "Sector 62 Metro Station (Blue Line)", "Jaypee Institute of Information Technology (JIIT)", "Mamura Chowk"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Mamura", "Chhijarsi", "Khoda Colony"],
+    "localIntro": "Sector 62, with pincode 201301, is best known as Noida's institutional and IT hub, home to corporate campuses, Fortis Hospital and the Jaypee Institute of Information Technology, but it also has a sizeable residential side made up of gated group-housing societies and apartment blocks alongside a few plotted pockets. Households here are largely working professionals, many of them tenants employed in the nearby offices, together with families who value the short commute and the hospitals and schools within the sector. The Sector 62 and Noida Electronic City metro stations on the Blue Line serve the sector, and Mamura Chowk on the NH-9 side is a well-known junction. Sector 63 lies to the east, Sector 61 to the south and Sector 56 and Sector 55 to the south-west. Helpers serving Sector 62 commonly live in the adjoining settlements of Mamura and Chhijarsi or across the highway in Khoda Colony, so early-morning and evening slots timed around office hours are easy to fill.",
+    "commuteNotes": "Sector 62 and Noida Electronic City metro stations on the Blue Line serve the sector, and buses ply NH-9; most helpers walk in from Mamura, Chhijarsi or Khoda Colony or take a shared auto from Mamura Chowk.",
+    "housingNotes": "Residential blocks are mostly gated societies and apartment complexes where helpers need a resident-issued gate pass or app registration, with a few plotted pockets where timings are arranged directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-62-1",
+        "q": "Which areas near Sector 62 do you also serve?",
+        "a": "Sector 63, Sector 61, Sector 56 and Sector 55 are directly adjacent and covered by the same helper pool. Sector 52, Sector 72 and Sector 71 are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-62"]
+      },
+      {
+        "id": "faq-noida-sector-62-2",
+        "q": "Where do helpers working in Sector 62 usually come from?",
+        "a": "Most helpers live in Mamura or Chhijarsi, the settlements adjoining the sector, or in Khoda Colony across NH-9, and walk or take a shared auto from Mamura Chowk. Others arrive by the Blue Line at Sector 62 or Noida Electronic City stations.",
+        "scope": "locality",
+        "tags": ["noida", "sector-62"]
+      },
+      {
+        "id": "faq-noida-sector-62-3",
+        "q": "Can I get a helper in Sector 62 whose timings fit office hours?",
+        "a": "Yes. Because so many Sector 62 households are working professionals, helpers in this sector are used to early-morning slots before office hours and evening slots after, and many take multiple part-time homes within the same society complex.",
+        "scope": "locality",
+        "tags": ["noida", "sector-62"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-63": {
+    "neighbours": ["sector-62", "sector-61", "sector-72", "sector-71", "sector-56", "sector-52"],
+    "landmarks": ["Noida Electronic City Metro Station (Blue Line)", "Sector 63 Industrial Area", "Chhijarsi village", "Behlolpur village", "Delhi–Meerut Expressway (NH-9)"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Chhijarsi", "Mamura", "Behlolpur"],
+    "localIntro": "Sector 63, under pincode 201301, is primarily an industrial and office sector in north-east Noida, lined with electronics units, IT offices and warehouses, but it also carries a growing residential population in apartment blocks, builder-floor rentals and the dense housing of the villages that adjoin it. Households here are mostly working professionals and young families renting close to their workplaces, with a smaller number of long-settled owners in the plotted pockets. The Noida Electronic City Metro Station on the Blue Line serves the sector, and the Delhi–Meerut Expressway (NH-9) runs along its northern edge, giving quick road access towards Ghaziabad and Delhi. Sector 62 lies immediately to the west, Sector 61 to the south-west and Sector 72 and Sector 71 to the south. Chhijarsi and Behlolpur, the villages bordering the sector, along with Mamura beside Sector 62, are where most of the area's domestic helpers live, so early-morning and evening slots timed around office hours are straightforward to arrange.",
+    "commuteNotes": "Noida Electronic City Metro Station on the Blue Line is the nearest station, and shared autos run along the sector roads from Mamura Chowk; most helpers walk in from Chhijarsi, Behlolpur or Mamura.",
+    "housingNotes": "Housing is mixed, with apartment blocks and builder-floor rentals alongside village housing, so gate-pass rules vary: gated blocks need resident registration while builder floors and plotted houses handle entry directly.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-63-1",
+        "q": "Which areas near Sector 63 do you also serve?",
+        "a": "Sector 62 and Sector 61 are directly adjacent and served by the same helper pool, along with Sector 72 and Sector 71 to the south. Sector 56 and Sector 52 are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-63"]
+      },
+      {
+        "id": "faq-noida-sector-63-2",
+        "q": "Where do helpers working in Sector 63 usually live?",
+        "a": "Most helpers come from Chhijarsi and Behlolpur, the villages bordering Sector 63, or from Mamura next to Sector 62, all within walking distance. Others arrive by the Blue Line at Noida Electronic City Metro Station.",
+        "scope": "locality",
+        "tags": ["noida", "sector-63"]
+      },
+      {
+        "id": "faq-noida-sector-63-3",
+        "q": "Do helpers in Sector 63 need society gate passes?",
+        "a": "Only in the gated apartment blocks, where a resident needs to register the helper at the gate. Builder floors and plotted houses in Sector 63, which are common, manage entry and timings directly with the family.",
+        "scope": "locality",
+        "tags": ["noida", "sector-63"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-71": {
+    "neighbours": ["sector-72", "sector-52", "sector-51", "sector-61", "sector-50", "sector-74", "sector-75", "sector-62"],
+    "landmarks": ["Sector 71 Chowk and underpass", "Sector 52 Metro Station (Blue Line)", "Sector 51 Metro Station (Aqua Line)", "Sai Mandir, Sector 61"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Sarfabad"],
+    "localIntro": "Sector 71, with pincode 201301, sits at one of central Noida's busiest junctions, the Sector 71 Chowk, where the road from Sector 61 meets the corridor running towards Sector 74 and the Greater Noida West link. Housing is mixed: plotted independent houses on the sector's inner lanes sit alongside apartment blocks and builder floors, and residents are a blend of long-settled families and working professionals who rent here for the easy access to the Sector 62 offices and the metro. The Sector 52 station on the Blue Line and the Sector 51 station on the Aqua Line are both within a short ride, and the Sai Mandir in Sector 61 is nearby. Sector 72 lies directly to the north-east, Sector 52 and Sector 51 across the road to the west and Sector 74 to the east. Sarfabad village, adjoining the Sector 72 and Sector 74 side, is where many helpers who work in this belt live, and shared e-rickshaws from the chowk make the last stretch to any block quick.",
+    "commuteNotes": "Sector 52 (Blue Line) and Sector 51 (Aqua Line) metro stations are a short e-rickshaw ride away, and shared autos and e-rickshaws run from Sector 71 Chowk; many helpers walk in from Sarfabad village.",
+    "housingNotes": "The sector mixes plotted houses and builder floors, where timings are arranged with the family, with apartment blocks that require a resident-issued gate pass.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-71-1",
+        "q": "Which areas near Sector 71 do you also serve?",
+        "a": "Sector 72, Sector 52, Sector 51 and Sector 61 are all adjacent to Sector 71 and served by the same helper pool. Sector 50, Sector 74 and Sector 75 are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-71"]
+      },
+      {
+        "id": "faq-noida-sector-71-2",
+        "q": "Which pincode does Sector 71 service cover?",
+        "a": "Sector 71 falls under pincode 201301, shared with neighbouring Sector 72, Sector 61 and Sector 52. Helpers working in this pin usually take up homes across several of these adjoining sectors.",
+        "scope": "locality",
+        "tags": ["noida", "sector-71"]
+      },
+      {
+        "id": "faq-noida-sector-71-3",
+        "q": "Do helpers in Sector 71 need society gate passes?",
+        "a": "It depends on the building. Apartment blocks in Sector 71 usually need a resident to register the helper at the gate, while the plotted houses and builder floors that make up much of the sector handle entry and timings directly.",
+        "scope": "locality",
+        "tags": ["noida", "sector-71"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-72": {
+    "neighbours": ["sector-71", "sector-61", "sector-62", "sector-74", "sector-52", "sector-63", "sector-75", "sector-51"],
+    "landmarks": ["Sarfabad village", "Sector 71 Chowk", "Sector 61 Metro Station (Blue Line)", "Sai Mandir, Sector 61"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Sarfabad"],
+    "localIntro": "Sector 72, under pincode 201301, lies between the established Sector 61 belt and the newer high-rise corridor of Sectors 74 to 79, and its housing reflects that position: plotted independent houses and builder floors share the sector with a number of apartment complexes. Residents include long-settled families as well as working professionals and tenants employed in the nearby Sector 62 and Sector 63 office areas, so demand runs from daily cleaning and cooking to part-time help timed around office hours. Sarfabad village adjoins the sector and is home to many of the helpers who work in these homes, while Sector 71 Chowk and the Sector 61 Metro Station on the Blue Line are both a short e-rickshaw ride away; the Sai Mandir in Sector 61 is the best-known landmark close by. Sector 71 is immediately to the south-west, Sector 61 and Sector 62 to the west and north, and Sector 74 across the road to the east, which keeps this sector well linked with its neighbours on every side.",
+    "commuteNotes": "Sector 61 Metro Station on the Blue Line is the nearest station, with shared e-rickshaws running from Sector 71 Chowk; a large share of helpers walk in from Sarfabad village next to the sector.",
+    "housingNotes": "Plotted houses and builder floors with family-managed timings sit alongside apartment complexes that require a resident-issued gate pass or society app registration.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-72-1",
+        "q": "Which areas near Sector 72 do you also serve?",
+        "a": "Sector 71, Sector 61, Sector 62 and Sector 74 are directly adjacent and covered by the same helper pool. Sector 52, Sector 63 and Sector 75 are also close enough for helpers to take up work in both.",
+        "scope": "locality",
+        "tags": ["noida", "sector-72"]
+      },
+      {
+        "id": "faq-noida-sector-72-2",
+        "q": "Where do helpers working in Sector 72 usually come from?",
+        "a": "Most helpers live in Sarfabad village, which adjoins Sector 72, and walk to work. Others come by the Blue Line to Sector 61 Metro Station and take a shared e-rickshaw from Sector 71 Chowk.",
+        "scope": "locality",
+        "tags": ["noida", "sector-72"]
+      },
+      {
+        "id": "faq-noida-sector-72-3",
+        "q": "Do helpers in Sector 72 need society gate passes?",
+        "a": "Only in the apartment complexes, where a resident needs to register the helper with the society office or gate app. The plotted houses and builder floors in Sector 72 arrange entry and timings directly with the helper.",
+        "scope": "locality",
+        "tags": ["noida", "sector-72"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-74": {
+    "neighbours": ["sector-75", "sector-76", "sector-72", "sector-71", "sector-77", "sector-78", "sector-61", "sector-62"],
+    "landmarks": ["Supertech Cape Town", "Sector 76 Metro Station (Aqua Line)", "Sarfabad village", "Spectrum Metro mall, Sector 75"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Sarfabad"],
+    "localIntro": "Sector 74, with pincode 201301, marks the start of Noida's newer high-rise belt, and it is dominated by large gated group-housing societies, the best known being Supertech Cape Town, one of the biggest residential complexes in the city. Households here are mostly young working professionals and nuclear families, many of them tenants, who commute to the Sector 62 IT area, the Sector 18 business district or across to Delhi, so demand for domestic help is heavy on part-time cleaning and cooking slots timed around office hours as well as full-day help for families with small children. The Sector 76 Metro Station on the Aqua Line is a short walk away and Spectrum Metro mall in neighbouring Sector 75 is the main shopping and dining stop for the area. Sector 75 and Sector 76 lie to the east and south, Sector 72 and Sector 71 to the west across the main road. Sarfabad village, immediately adjoining the sector, is where a large number of the helpers working in these towers live, which makes early-morning slots easy to sustain.",
+    "commuteNotes": "Sector 76 Metro Station on the Aqua Line is within walking distance and shared e-rickshaws run along the Sector 71–Sector 78 road; many helpers walk in from Sarfabad village next to the sector.",
+    "housingNotes": "The sector is almost entirely gated high-rise societies, so helpers need a resident-issued gate pass or society app registration and usually work several flats within the same complex.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-74-1",
+        "q": "Which areas near Sector 74 do you also serve?",
+        "a": "Sector 75, Sector 76, Sector 72 and Sector 71 are directly adjacent and served by the same helper pool. Sector 77 and Sector 78 further along the high-rise belt are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-74"]
+      },
+      {
+        "id": "faq-noida-sector-74-2",
+        "q": "Do helpers in Sector 74 need society gate passes?",
+        "a": "Yes. Sector 74 is made up of large gated societies such as Supertech Cape Town, and each requires the resident to register the helper with the society office or gate app before the first visit. Many helpers already hold passes for the bigger complexes.",
+        "scope": "locality",
+        "tags": ["noida", "sector-74"]
+      },
+      {
+        "id": "faq-noida-sector-74-3",
+        "q": "How do helpers reach Sector 74?",
+        "a": "Sector 76 Metro Station on the Aqua Line is a short walk from the sector, and shared e-rickshaws run along the main road from Sector 71 Chowk. A large share of helpers live in Sarfabad village adjoining Sector 74 and walk in.",
+        "scope": "locality",
+        "tags": ["noida", "sector-74"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-75": {
+    "neighbours": ["sector-74", "sector-76", "sector-77", "sector-78", "sector-71", "sector-72", "sector-79", "sector-50"],
+    "landmarks": ["Spectrum Metro mall", "Sector 76 Metro Station (Aqua Line)", "Supertech Cape Town, Sector 74", "Sector 71 Chowk"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Sarfabad"],
+    "localIntro": "Sector 75, under pincode 201301, is a densely built high-rise sector in Noida's newer residential belt, made up almost entirely of gated group-housing societies that were completed over the past decade. The residents are largely working professionals and young families, a good share of them tenants, commuting to the Sector 62 IT belt, Sector 18 and Delhi, so domestic-help demand centres on part-time morning and evening slots along with full-day help for households with young children. Spectrum Metro, the mall built beside the Aqua Line, is the sector's best-known landmark and its main shopping and dining stop, and the Sector 76 Metro Station on the Aqua Line sits right next to it. Sector 74, with Supertech Cape Town, lies to the west, Sector 76 and Sector 77 to the south and east, and Sector 71 across the main road towards Sector 71 Chowk. Many helpers who work in these towers live in Sarfabad village nearby, and shared e-rickshaws running along the sector roads make the last stretch to any society gate quick.",
+    "commuteNotes": "Sector 76 Metro Station on the Aqua Line adjoins the sector beside Spectrum Metro mall, and shared e-rickshaws run along the Sector 71–Sector 78 road; many helpers walk in from Sarfabad village.",
+    "housingNotes": "Gated high-rise societies make up virtually the whole sector, so every helper needs a resident-issued gate pass or society app registration and typically serves several flats in one complex.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-75-1",
+        "q": "Which areas near Sector 75 do you also serve?",
+        "a": "Sector 74, Sector 76, Sector 77 and Sector 78 are all adjacent and covered by the same helper pool. Sector 71 and Sector 72 across the main road, and Sector 79 further along, are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-75"]
+      },
+      {
+        "id": "faq-noida-sector-75-2",
+        "q": "Which metro station serves Sector 75?",
+        "a": "Sector 76 Metro Station on the Aqua Line sits at the edge of Sector 75, right beside Spectrum Metro mall. Helpers coming from Greater Noida West or other parts of Noida on the Aqua Line usually get down here and walk or take an e-rickshaw to the society gate.",
+        "scope": "locality",
+        "tags": ["noida", "sector-75"]
+      },
+      {
+        "id": "faq-noida-sector-75-3",
+        "q": "Do helpers in Sector 75 need society gate passes?",
+        "a": "Yes. Sector 75 consists of gated high-rise societies, and each one requires the resident to register the helper with the society office or gate app before work begins. Once registered, helpers can usually take up multiple flats in the same complex.",
+        "scope": "locality",
+        "tags": ["noida", "sector-75"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-76": {
+    "neighbours": ["sector-75", "sector-77", "sector-74", "sector-50", "sector-78", "sector-51", "sector-79", "sector-71"],
+    "landmarks": ["Sector 76 Metro Station (Aqua Line)", "Amrapali Princely Estate", "Spectrum Metro mall, Sector 75", "Sector 50 Metro Station (Aqua Line)"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 76, with pincode 201301, is a high-rise residential sector in Noida's newer belt, built up almost entirely with gated group-housing societies, among them the large Amrapali Princely Estate complex. Households are predominantly working professionals and young nuclear families, with a high proportion of tenants, who chose the sector for its direct Aqua Line access and its position between the Sector 62 offices and the Expressway corridor. The Sector 76 Metro Station on the Aqua Line stands at the sector's edge, with Spectrum Metro mall in neighbouring Sector 75 beside it, and the Sector 50 station is one stop away. Sector 75 lies to the north, Sector 77 to the east and Sector 50 across the main road to the west, so helpers and households move easily between these sectors. Demand for domestic help here is heavy on part-time cleaning and cooking slots timed around office hours, with full-day help and nanny support common among families with small children, and most helpers serve several flats within the same society.",
+    "commuteNotes": "Sector 76 Metro Station on the Aqua Line is at the sector boundary and Sector 50 station is one stop away; shared e-rickshaws cover the last stretch to the society gates from the main road.",
+    "housingNotes": "The sector is almost entirely gated high-rise societies, so a resident-issued gate pass or society app registration is required, and helpers typically work multiple flats within one complex.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-76-1",
+        "q": "Which areas near Sector 76 do you also serve?",
+        "a": "Sector 75, Sector 77 and Sector 74 are directly adjacent and served by the same helper pool, along with Sector 50 across the main road. Sector 78, Sector 51 and Sector 79 are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-76"]
+      },
+      {
+        "id": "faq-noida-sector-76-2",
+        "q": "Do helpers in Sector 76 need society gate passes?",
+        "a": "Yes. Sector 76 is made up of gated societies such as Amrapali Princely Estate, and each requires the resident to register the helper at the society office or on the gate app before the first visit.",
+        "scope": "locality",
+        "tags": ["noida", "sector-76"]
+      },
+      {
+        "id": "faq-noida-sector-76-3",
+        "q": "Which metro station is closest to Sector 76?",
+        "a": "Sector 76 Metro Station on the Aqua Line sits at the sector's edge, next to Spectrum Metro mall, and Sector 50 station is one stop away. Helpers travelling on the Aqua Line from Greater Noida West or the Sector 51 interchange get down here.",
+        "scope": "locality",
+        "tags": ["noida", "sector-76"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-77": {
+    "neighbours": ["sector-76", "sector-78", "sector-75", "sector-79", "sector-74", "sector-50", "sector-71", "sector-72"],
+    "landmarks": ["Prateek Wisteria", "Sector 76 Metro Station (Aqua Line)", "Mahagun Moderne, Sector 78", "Spectrum Metro mall, Sector 75"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Sector 77, under pincode 201301, is part of the continuous high-rise corridor that runs from Sector 74 to Sector 79, and like its neighbours it is built up with gated group-housing societies, Prateek Wisteria being one of the best known. Households here are mostly working professionals and young families, a large share of them tenants, commuting to the Sector 62 IT belt, the Sector 18 business district or Delhi; the presence of many double-income families means part-time cleaning and cooking slots timed around office hours are the most common requirement, followed by full-day help and nanny support for those with young children. The Sector 76 Metro Station on the Aqua Line is the nearest station and Spectrum Metro mall in Sector 75 is the main shopping and dining stop. Sector 76 lies to the west, Sector 78 with Mahagun Moderne to the east, and Sector 75 to the north, so helpers usually cover flats across several of these adjoining sectors within a single day.",
+    "commuteNotes": "Sector 76 Metro Station on the Aqua Line is the nearest station, and shared e-rickshaws run along the main road through the Sector 74–Sector 79 belt to each society gate.",
+    "housingNotes": "Gated high-rise societies make up the sector, so helpers need a resident-issued gate pass or society app registration and generally serve several flats in the same complex.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-77-1",
+        "q": "Which areas near Sector 77 do you also serve?",
+        "a": "Sector 76, Sector 78 and Sector 75 are directly adjacent and covered by the same helper pool. Sector 79, Sector 74 and Sector 50 are also within a short commute along the same main road.",
+        "scope": "locality",
+        "tags": ["noida", "sector-77"]
+      },
+      {
+        "id": "faq-noida-sector-77-2",
+        "q": "Do helpers in Sector 77 need society gate passes?",
+        "a": "Yes. Sector 77 is made up of gated societies such as Prateek Wisteria, and the resident needs to register the helper with the society office or gate app before work starts. Helpers already working in the complex usually have a pass on file.",
+        "scope": "locality",
+        "tags": ["noida", "sector-77"]
+      },
+      {
+        "id": "faq-noida-sector-77-3",
+        "q": "Which pincode does Sector 77 service cover?",
+        "a": "Sector 77 falls under pincode 201301, the same pin as neighbouring Sector 76, Sector 78 and Sector 75. The helper network is shared across this whole high-rise belt.",
+        "scope": "locality",
+        "tags": ["noida", "sector-77"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-78": {
+    "neighbours": ["sector-77", "sector-79", "sector-76", "sector-75", "sector-74", "sector-72"],
+    "landmarks": ["Mahagun Moderne", "Hyde Park", "Antriksh Golf View", "Sector 76 Metro Station (Aqua Line)", "Sorkha village"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Sorkha Jahidabad"],
+    "localIntro": "Sector 78, with pincode 201301, is one of the most densely populated sectors in Noida's newer high-rise belt, built up with large gated group-housing societies such as Mahagun Moderne, Hyde Park and Antriksh Golf View. Households are largely working professionals and young families, many of them tenants, who commute to the Sector 62 IT area, Sector 18 or Delhi, so the typical requirement is part-time cleaning and cooking help timed around office hours, with full-day helpers and nannies in demand among families with small children. The Sector 76 Metro Station on the Aqua Line is the nearest station, a short e-rickshaw ride away, and Spectrum Metro mall in Sector 75 is the main shopping stop for the area. Sector 77 lies to the west, Sector 79 to the east and Sector 76 and Sector 75 towards the metro. Sorkha village, adjoining the sector on its outer side, is home to many of the helpers who work in these societies, which makes early-morning and evening slots easy to fill on a regular basis.",
+    "commuteNotes": "Sector 76 Metro Station on the Aqua Line is the nearest station, reached by shared e-rickshaw along the main road; many helpers walk in from Sorkha village adjoining the sector.",
+    "housingNotes": "Large gated high-rise societies make up the sector, so helpers must be registered by the resident with the society office or gate app, and most serve several flats within one complex.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-78-1",
+        "q": "Which areas near Sector 78 do you also serve?",
+        "a": "Sector 77 and Sector 79 are directly adjacent and covered by the same helper pool, along with Sector 76 and Sector 75 towards the metro. Sector 74 and Sector 72 are also within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-78"]
+      },
+      {
+        "id": "faq-noida-sector-78-2",
+        "q": "Do helpers in Sector 78 need society gate passes?",
+        "a": "Yes. Societies such as Mahagun Moderne, Hyde Park and Antriksh Golf View all require the resident to register the helper with the society office or gate app before the first visit. Many helpers already hold passes for the larger complexes in Sector 78.",
+        "scope": "locality",
+        "tags": ["noida", "sector-78"]
+      },
+      {
+        "id": "faq-noida-sector-78-3",
+        "q": "Where do helpers working in Sector 78 usually come from?",
+        "a": "A large number live in Sorkha village adjoining the sector and walk to work. Others travel on the Aqua Line to Sector 76 Metro Station and take a shared e-rickshaw along the main road to the society gate.",
+        "scope": "locality",
+        "tags": ["noida", "sector-78"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "sector-79": {
+    "neighbours": ["sector-78", "sector-77", "sector-76", "sector-75", "sector-74", "sector-72"],
+    "landmarks": ["Mahagun Moderne, Sector 78", "Hyde Park, Sector 78", "Sorkha village", "Sector 76 Metro Station (Aqua Line)"],
+    "housingProfile": "gated-societies",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Sorkha Jahidabad"],
+    "localIntro": "Sector 79, under pincode 201301, is the outermost sector of Noida's high-rise residential belt, and its housing is made up of gated group-housing societies, several of them completed within the last few years, along with pockets of land still under development; Civitech Stadia is among the larger complexes here [VERIFY]. Households are mostly young working professionals and nuclear families, a high share of them tenants, who commute to the Sector 62 IT belt, Sector 18 or Delhi and therefore look for part-time cleaning and cooking help timed around office hours, plus full-day helpers and nannies where there are small children. Sector 78, with Mahagun Moderne and Hyde Park, lies immediately to the west, Sector 77 and Sector 76 beyond it towards the Sector 76 Metro Station on the Aqua Line, and Sector 75 with Spectrum Metro mall a little further along the same main road. Sorkha village adjoins the sector and is where many of the helpers serving these towers live, which keeps daily commute times short despite the sector's position at the edge of the belt.",
+    "commuteNotes": "Sector 76 Metro Station on the Aqua Line is the nearest station, reached by a shared e-rickshaw along the main road through Sectors 77 and 78; many helpers walk in from Sorkha village next to the sector.",
+    "housingNotes": "Gated high-rise societies make up the built-up part of the sector, so helpers need a resident-issued gate pass or society app registration and usually take up several flats within the same complex.",
+    "localFaqs": [
+      {
+        "id": "faq-noida-sector-79-1",
+        "q": "Which areas near Sector 79 do you also serve?",
+        "a": "Sector 78 is directly adjacent and shares the same helper pool, with Sector 77, Sector 76 and Sector 75 along the same main road also covered. Sector 74 and Sector 72 are within a short commute.",
+        "scope": "locality",
+        "tags": ["noida", "sector-79"]
+      },
+      {
+        "id": "faq-noida-sector-79-2",
+        "q": "Do helpers in Sector 79 need society gate passes?",
+        "a": "Yes. Sector 79 is made up of gated societies, and each requires the resident to register the helper with the society office or gate app before the first visit. Helpers already working in neighbouring Sector 78 complexes are usually familiar with the process.",
+        "scope": "locality",
+        "tags": ["noida", "sector-79"]
+      },
+      {
+        "id": "faq-noida-sector-79-3",
+        "q": "How do helpers reach Sector 79?",
+        "a": "Many helpers live in Sorkha village adjoining the sector and walk in. Others come on the Aqua Line to Sector 76 Metro Station and take a shared e-rickshaw along the main road through Sector 77 and Sector 78.",
+        "scope": "locality",
+        "tags": ["noida", "sector-79"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}

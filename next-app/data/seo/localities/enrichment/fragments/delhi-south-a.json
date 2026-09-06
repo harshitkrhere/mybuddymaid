@@ -1,0 +1,492 @@
+{
+  "nizamuddin": {
+    "neighbours": ["jangpura", "lodi-road", "defence-colony", "lajpat-nagar", "daryaganj", "east-of-kailash", "new-friends-colony"],
+    "landmarks": ["Humayun's Tomb", "Hazrat Nizamuddin Dargah", "Sunder Nursery", "Hazrat Nizamuddin Railway Station"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Nizamuddin Basti", "Sarai Kale Khan"],
+    "localIntro": "Nizamuddin, under pincode 110013, is one of South Delhi's most distinctive heritage quarters, split between the quiet plotted lanes of Nizamuddin East and the busier Nizamuddin West beside the historic basti. Households here are largely long-settled families and senior professionals living in low-rise independent houses, many of them older bungalows on tree-lined streets, with a steady mix of tenants drawn by the central location. The neighbourhood sits beside some of Delhi's best-known monuments — Humayun's Tomb and Sunder Nursery border Nizamuddin East, while the Hazrat Nizamuddin Dargah anchors the western side — and Hazrat Nizamuddin Railway Station keeps the area well connected for intercity travel. Jangpura lies immediately across Mathura Road, with Defence Colony and Lajpat Nagar a short drive south and Lodi Road to the west. Daily cleaning help, cooking support and elder care are the common requirements, given the number of older residents and single-family homes that prefer consistent, long-term domestic staff.",
+    "commuteNotes": "Hazrat Nizamuddin Metro Station on the Pink Line and the nearby Sarai Kale Khan ISBT make the area easy to reach, with buses running along Mathura Road. Many helpers also walk in from Nizamuddin Basti and the Bhogal side of Jangpura.",
+    "housingNotes": "Mostly low-rise independent houses and older bungalows, especially in Nizamuddin East, so households deal with staff directly and timings stay flexible. There are few gated towers or formal entry-pass systems here.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-nizamuddin-1",
+        "q": "Which areas near Nizamuddin do you also serve?",
+        "a": "The surrounding colonies — Jangpura, Defence Colony, Lajpat Nagar and Lodi Road — are covered by the same nearby helper pool. Both Nizamuddin East and Nizamuddin West fall under this locality's coverage.",
+        "scope": "locality",
+        "tags": ["delhi", "nizamuddin"]
+      },
+      {
+        "id": "faq-delhi-nizamuddin-2",
+        "q": "Which pincode does the Nizamuddin service area cover?",
+        "a": "Nizamuddin falls under pincode 110013, which includes both Nizamuddin East and Nizamuddin West. Neighbouring Jangpura carries its own pincode, 110014, but is served by the same nearby helper network.",
+        "scope": "locality",
+        "tags": ["delhi", "nizamuddin"]
+      },
+      {
+        "id": "faq-delhi-nizamuddin-3",
+        "q": "Do helpers in Nizamuddin need society gate passes?",
+        "a": "Most homes here are independent houses rather than gated towers, so formal society passes are generally not required. Households usually manage entry and timings directly with the helper.",
+        "scope": "locality",
+        "tags": ["delhi", "nizamuddin"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "jangpura": {
+    "neighbours": ["nizamuddin", "defence-colony", "lajpat-nagar", "lodi-road", "east-of-kailash", "andrews-ganj", "daryaganj"],
+    "landmarks": ["Jangpura Metro Station", "Bhogal Market", "Hazrat Nizamuddin Railway Station", "Humayun's Tomb"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Bhogal"],
+    "localIntro": "Jangpura, with pincode 110014, sits between the Nizamuddin heritage belt and the busy markets of Lajpat Nagar, and combines three distinct pockets — Jangpura proper, Jangpura Extension and the old Bhogal settlement. Housing is dominated by builder floors raised on compact plots, home to a mix of long-settled families and younger working professionals who rent here for the central location. Bhogal Market gives the area its everyday commercial pulse, while Jangpura Metro Station on the Violet Line and the nearby Hazrat Nizamuddin Railway Station keep it well connected; Humayun's Tomb stands a short distance away on the Nizamuddin side. Defence Colony lies to the west and Lajpat Nagar just across the Ring Road to the south, so households, helpers and services move fluidly between these colonies. Families here typically look for part-time cleaning and cooking help on fixed morning and evening slots, and many helpers live within walking distance in Bhogal itself.",
+    "commuteNotes": "Jangpura Metro Station on the Violet Line sits at the colony's edge and buses ply Mathura Road. A large share of helpers live in Bhogal and simply walk to work.",
+    "housingNotes": "Builder floors on compact plots dominate, with individual landlords rather than housing societies, so entry is informal and part-time slots are easy to arrange.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-jangpura-1",
+        "q": "Which areas near Jangpura do you also serve?",
+        "a": "Nizamuddin, Defence Colony, Lajpat Nagar and Lodi Road are all close by and served by the same helper pool. Bhogal and Jangpura Extension are covered as part of Jangpura itself.",
+        "scope": "locality",
+        "tags": ["delhi", "jangpura"]
+      },
+      {
+        "id": "faq-delhi-jangpura-2",
+        "q": "Which pincode does Jangpura service cover?",
+        "a": "Jangpura falls under pincode 110014, which takes in Jangpura, Jangpura Extension and Bhogal. Neighbouring Nizamuddin is 110013 and Lajpat Nagar is 110024.",
+        "scope": "locality",
+        "tags": ["delhi", "jangpura"]
+      },
+      {
+        "id": "faq-delhi-jangpura-3",
+        "q": "How do helpers usually reach homes in Jangpura?",
+        "a": "Many helpers live in Bhogal and walk to nearby homes, while others arrive via Jangpura Metro Station on the Violet Line or by bus along Mathura Road. Fixed morning and evening time slots are the norm here.",
+        "scope": "locality",
+        "tags": ["delhi", "jangpura"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "hauz-khas": {
+    "neighbours": ["green-park", "safdarjung-enclave", "malviya-nagar", "munirka", "saket", "greater-kailash", "rk-puram"],
+    "landmarks": ["Hauz Khas Fort and Lake", "Deer Park", "Hauz Khas Metro Station", "IIT Delhi", "Aurobindo Market"],
+    "housingProfile": "mixed",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": [],
+    "localIntro": "Hauz Khas, under pincode 110016, pairs one of Delhi's most visited heritage precincts — the Hauz Khas Fort and lake beside Deer Park — with established residential pockets such as Hauz Khas Enclave, Safdarjung Development Area and Hauz Khas Apartments. The housing stock is genuinely mixed: plotted houses and builder floors in the Enclave blocks, DDA-built flats in SDA, and group-housing blocks closer to the Outer Ring Road. Residents are largely working professionals and families, including many connected to IIT Delhi and the institutional belt across the Ring Road, alongside older households that have lived here for decades. Aurobindo Market and the SDA market complex handle daily needs, and Hauz Khas Metro Station, an interchange between the Yellow and Magenta lines, makes commuting straightforward. Green Park adjoins to the north, Safdarjung Enclave to the north-west and Malviya Nagar across the Outer Ring Road to the south, so domestic help arrangements here often mirror those in the surrounding colonies.",
+    "commuteNotes": "Hauz Khas Metro Station, an interchange of the Yellow and Magenta lines, is the main access point, supported by buses along the Outer Ring Road and Aurobindo Marg.",
+    "housingNotes": "A mix of plotted builder floors in Hauz Khas Enclave, DDA flats in SDA and some group-housing blocks; the apartment blocks usually require helper registration at the gate, while builder floors and plotted houses do not.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-hauz-khas-1",
+        "q": "Which areas near Hauz Khas do you also serve?",
+        "a": "Green Park, Safdarjung Enclave, Malviya Nagar and Munirka are all adjacent and use the same helper network. SDA and Hauz Khas Enclave are covered within Hauz Khas itself.",
+        "scope": "locality",
+        "tags": ["delhi", "hauz-khas"]
+      },
+      {
+        "id": "faq-delhi-hauz-khas-2",
+        "q": "Do helpers in Hauz Khas need society gate passes?",
+        "a": "In SDA flats and the apartment blocks near the Outer Ring Road, helpers are usually registered at the gate. Builder floors and plotted houses in Hauz Khas Enclave normally have no formal pass requirement.",
+        "scope": "locality",
+        "tags": ["delhi", "hauz-khas"]
+      },
+      {
+        "id": "faq-delhi-hauz-khas-3",
+        "q": "Which pincode does Hauz Khas service cover?",
+        "a": "Hauz Khas falls under pincode 110016, which it shares with neighbouring Green Park. Coverage includes Hauz Khas Enclave, SDA and the blocks around the Hauz Khas market area.",
+        "scope": "locality",
+        "tags": ["delhi", "hauz-khas"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "green-park": {
+    "neighbours": ["hauz-khas", "safdarjung-enclave", "malviya-nagar", "munirka", "rk-puram", "sarojini-nagar"],
+    "landmarks": ["Green Park Metro Station", "Green Park Main Market", "Deer Park", "AIIMS Delhi"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Gautam Nagar", "Yusuf Sarai"],
+    "localIntro": "Green Park, sharing pincode 110016 with neighbouring Hauz Khas, is a leafy plotted colony split into Green Park Main and Green Park Extension. Most homes are builder floors raised on the original plots, with two to four independent apartments per building, which keeps the area popular with families and working professionals who want low-rise living near the Yellow Line. Green Park Metro Station sits on Aurobindo Marg at the colony's edge, Green Park Main Market and its surrounding lanes cover daily shopping, and Deer Park offers morning-walk greenery next door; AIIMS Delhi is a short distance up Aurobindo Marg, so many doctors and hospital staff rent homes here. Hauz Khas adjoins to the south, Safdarjung Enclave lies across to the west, and the busy Yusuf Sarai market strip runs along the northern edge. Households commonly hire part-time maids and cooks on morning shifts, with helpers walking in from the adjacent Gautam Nagar and Yusuf Sarai settlements.",
+    "commuteNotes": "Green Park Metro Station on the Yellow Line sits on Aurobindo Marg at the colony's edge. Helpers typically arrive by metro or walk in from the adjacent Gautam Nagar and Yusuf Sarai settlements.",
+    "housingNotes": "Almost entirely builder floors on private plots with individual owners, so there are no society gate passes and households set their own timings.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-green-park-1",
+        "q": "Which pincode does Green Park service cover?",
+        "a": "Green Park falls under pincode 110016, which it shares with adjacent Hauz Khas. Coverage takes in both Green Park Main and Green Park Extension.",
+        "scope": "locality",
+        "tags": ["delhi", "green-park"]
+      },
+      {
+        "id": "faq-delhi-green-park-2",
+        "q": "Which areas near Green Park do you also serve?",
+        "a": "Hauz Khas, Safdarjung Enclave, Malviya Nagar and Munirka are all nearby and covered by the same helper network. Many helpers work in more than one of these colonies on the same day.",
+        "scope": "locality",
+        "tags": ["delhi", "green-park"]
+      },
+      {
+        "id": "faq-delhi-green-park-3",
+        "q": "How do helpers usually reach homes in Green Park?",
+        "a": "Most helpers walk in from the adjacent Gautam Nagar and Yusuf Sarai settlements, while others use Green Park Metro Station on the Yellow Line. Morning shifts before office hours are the most common arrangement.",
+        "scope": "locality",
+        "tags": ["delhi", "green-park"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "safdarjung-enclave": {
+    "neighbours": ["green-park", "hauz-khas", "rk-puram", "sarojini-nagar", "munirka", "vasant-vihar"],
+    "landmarks": ["AIIMS Delhi", "Safdarjung Hospital", "Bhikaji Cama Place", "Deer Park"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["working-professionals", "families"],
+    "helperSourceAreas": ["Humayunpur"],
+    "localIntro": "Safdarjung Enclave, under pincode 110029, is a well-established South Delhi colony of lettered blocks where the original plots now mostly carry builder floors, giving it a low-rise, family-oriented character. The urban village of Humayunpur sits within the colony and adds a dense pocket of shops, eateries and rental housing. The medical belt defines much of daily life here: AIIMS Delhi and Safdarjung Hospital lie just across the Ring Road, so many households are doctors, hospital staff and medical families on shift-based schedules. Bhikaji Cama Place, one of South Delhi's major office complexes, adjoins the colony's western side, and Deer Park's green spread lies towards Hauz Khas. Green Park adjoins to the east, with Hauz Khas beyond it and R.K. Puram to the west. Demand runs strongly to part-time cleaning, cooking and elder-care support, and many helpers live within walking distance in Humayunpur itself.",
+    "commuteNotes": "Green Park on the Yellow Line and Bhikaji Cama Place on the Pink Line are the nearest metro stations, with Ring Road buses close by. Many helpers live in Humayunpur inside the colony and walk to work.",
+    "housingNotes": "Builder floors across the lettered blocks with a few apartment pockets; entry is generally informal and managed by individual households rather than society gates.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-safdarjung-enclave-1",
+        "q": "Which pincode does Safdarjung Enclave service cover?",
+        "a": "Safdarjung Enclave falls under pincode 110029, covering the colony's lettered blocks and the Humayunpur village pocket within it. Neighbouring Green Park and Hauz Khas fall under 110016.",
+        "scope": "locality",
+        "tags": ["delhi", "safdarjung-enclave"]
+      },
+      {
+        "id": "faq-delhi-safdarjung-enclave-2",
+        "q": "Which areas near Safdarjung Enclave do you also serve?",
+        "a": "Green Park, Hauz Khas, R.K. Puram and Munirka are all close by and share the same helper network. The Bhikaji Cama Place office district adjoins the colony as well.",
+        "scope": "locality",
+        "tags": ["delhi", "safdarjung-enclave"]
+      },
+      {
+        "id": "faq-delhi-safdarjung-enclave-3",
+        "q": "Can helpers in Safdarjung Enclave work around hospital shift timings?",
+        "a": "Yes — many households here are AIIMS and Safdarjung Hospital staff, so early-morning and evening slots are common requests. Since most helpers live in adjacent Humayunpur, flexible walk-in timings are usually workable.",
+        "scope": "locality",
+        "tags": ["delhi", "safdarjung-enclave"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "malviya-nagar": {
+    "neighbours": ["saket", "hauz-khas", "pushp-vihar", "mehrauli", "green-park", "greater-kailash"],
+    "landmarks": ["Malviya Nagar Metro Station", "Malviya Nagar Main Market", "Select Citywalk", "Max Super Speciality Hospital Saket"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["working-professionals", "students", "families"],
+    "helperSourceAreas": ["Khirki Extension", "Begumpur"],
+    "localIntro": "Malviya Nagar, pincode 110017, is one of South Delhi's busiest mid-market residential hubs, packed with builder floors on compact plots and a rental market that draws young working professionals, students and families alike. The colony's spine is the Malviya Nagar Main Market, one of the area's oldest shopping streets, with Malviya Nagar Metro Station on the Yellow Line at its edge making daily commutes easy. Saket adjoins to the south, which puts Select Citywalk and the mall belt, along with Max Super Speciality Hospital, within a few minutes of most homes. Hauz Khas lies across the Outer Ring Road to the north and Pushp Vihar to the south-east, while the old settlements of Begumpur and Khirki Extension sit along the colony's edges and supply much of the area's domestic workforce. Households here typically want part-time maids and cooks on tight morning slots that fit office and metro timings.",
+    "commuteNotes": "Malviya Nagar Metro Station on the Yellow Line serves the colony directly, and helpers commonly walk in from Khirki Extension and Begumpur along its edges.",
+    "housingNotes": "Dense builder floors with individual landlords dominate, so society gate passes are rarely needed; a few group-housing pockets nearby keep gate registers, but most homes arrange help directly.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-malviya-nagar-1",
+        "q": "Which areas near Malviya Nagar do you also serve?",
+        "a": "Saket, Hauz Khas, Pushp Vihar and Green Park are all nearby and covered by the same helper network. Pockets such as Shivalik and Khirki Extension along the colony's edges are also within reach.",
+        "scope": "locality",
+        "tags": ["delhi", "malviya-nagar"]
+      },
+      {
+        "id": "faq-delhi-malviya-nagar-2",
+        "q": "Which pincode does Malviya Nagar service cover?",
+        "a": "Malviya Nagar falls under pincode 110017. Neighbouring Saket carries its own pincode, but homes on both sides are served by the same nearby helper pool.",
+        "scope": "locality",
+        "tags": ["delhi", "malviya-nagar"]
+      },
+      {
+        "id": "faq-delhi-malviya-nagar-3",
+        "q": "Do helpers in Malviya Nagar need society gate passes?",
+        "a": "Most homes are builder floors with individual landlords, so no formal pass is needed and entry is arranged directly with the household. Helpers living in adjacent Khirki Extension and Begumpur usually walk to work.",
+        "scope": "locality",
+        "tags": ["delhi", "malviya-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "kalkaji": {
+    "neighbours": ["greater-kailash", "east-of-kailash", "okhla", "new-friends-colony", "lajpat-nagar", "sarita-vihar"],
+    "landmarks": ["Kalkaji Mandir", "Lotus Temple", "Nehru Place", "Kalkaji Mandir Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Govindpuri"],
+    "localIntro": "Kalkaji, under pincode 110019, mixes DDA-built flats, plotted houses and busy market blocks, making it one of South Delhi's most varied residential pockets. The colony takes its name from the historic Kalkaji Mandir, and the Lotus Temple's gardens sit directly alongside, while Nehru Place — one of Delhi's biggest commercial and IT hardware hubs — adjoins the northern edge and brings a constant flow of office-goers. Kalkaji Mandir Metro Station, an interchange between the Violet and Magenta lines, plus the Nehru Place and Govindpuri stations, keep connectivity strong on every side. Chittaranjan Park and Greater Kailash II lie to the west, Okhla to the east and East of Kailash just beyond Nehru Place. Households range from government-flat families to professionals in rebuilt builder floors, and most hire part-time help for cleaning and cooking; the dense Govindpuri settlement next door is where a large share of local domestic helpers live.",
+    "commuteNotes": "Kalkaji Mandir (a Violet-Magenta interchange), Nehru Place and Govindpuri metro stations ring the colony, with buses along the Outer Ring Road. Most helpers walk across from adjacent Govindpuri.",
+    "housingNotes": "DDA flat blocks and plotted builder floors sit side by side; some DDA pockets follow RWA gate norms, but formal society passes are rare compared with gated townships.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-kalkaji-1",
+        "q": "Which areas near Kalkaji do you also serve?",
+        "a": "Greater Kailash, East of Kailash, Okhla and New Friends Colony are all nearby and use the same helper network. The Nehru Place office hub adjoining Kalkaji is covered too.",
+        "scope": "locality",
+        "tags": ["delhi", "kalkaji"]
+      },
+      {
+        "id": "faq-delhi-kalkaji-2",
+        "q": "Which pincode does Kalkaji service cover?",
+        "a": "Kalkaji falls under pincode 110019, taking in the DDA blocks and plotted lanes around Kalkaji Mandir. Neighbouring Okhla is covered under 110020 and 110025.",
+        "scope": "locality",
+        "tags": ["delhi", "kalkaji"]
+      },
+      {
+        "id": "faq-delhi-kalkaji-3",
+        "q": "Where do most domestic helpers in Kalkaji live?",
+        "a": "A large share of helpers serving Kalkaji live in the adjacent Govindpuri settlement and walk to work. Others arrive via the Kalkaji Mandir or Govindpuri metro stations on the Violet Line.",
+        "scope": "locality",
+        "tags": ["delhi", "kalkaji"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "chanakyapuri": {
+    "neighbours": ["rk-puram", "sarojini-nagar", "delhi-cantt", "vasant-vihar", "safdarjung-enclave", "green-park"],
+    "landmarks": ["Nehru Park", "National Rail Museum", "The Ashok Hotel", "Santushti Shopping Complex", "Shanti Path embassy row"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": ["Sanjay Camp", "Vivekanand Camp"],
+    "localIntro": "Chanakyapuri, Delhi's Diplomatic Enclave under pincode 110021, is unlike any other locality in the city: wide avenues along Shanti Path lined with embassies and high commissions, large independent bungalows, diplomatic residences and pockets of government housing. Households here are typically diplomatic families, senior officials and long-posted professionals, many running full households with cooks and full-time domestic staff rather than hourly help. Nehru Park anchors the enclave's green space and draws morning walkers year-round, the National Rail Museum sits within the enclave, and The Ashok hotel and the Santushti shopping complex are local fixtures. R.K. Puram adjoins to the south, Sarojini Nagar's government colonies and market lie to the south-east, and Delhi Cantt spreads to the west. Staffing here often involves gate protocols and verification formalities stricter than in regular colonies, and demand leans towards experienced cooks, housekeepers and nannies comfortable working in large single-family homes.",
+    "commuteNotes": "There is no metro station inside the enclave itself; staff typically arrive by bus along Shanti Path and Ring Road, or from Pink Line stations towards Bhikaji Cama Place and the South Campus side. Many helpers live close by in the enclave's camps and staff quarters.",
+    "housingNotes": "Large bungalows, diplomatic residences and government quarters dominate; staff typically undergo stricter verification, and embassy or government premises follow formal gate and pass procedures.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-chanakyapuri-1",
+        "q": "Which pincode does Chanakyapuri service cover?",
+        "a": "Chanakyapuri falls under pincode 110021, covering the Diplomatic Enclave's residential avenues and government housing pockets. Neighbouring R.K. Puram is covered separately under 110022 and 110066.",
+        "scope": "locality",
+        "tags": ["delhi", "chanakyapuri"]
+      },
+      {
+        "id": "faq-delhi-chanakyapuri-2",
+        "q": "Do helpers in Chanakyapuri need special entry clearances?",
+        "a": "Homes in the Diplomatic Enclave often require identity checks and gate formalities stricter than in regular colonies, especially in embassy and government premises. Households should register their helper with the premises' security where applicable.",
+        "scope": "locality",
+        "tags": ["delhi", "chanakyapuri"]
+      },
+      {
+        "id": "faq-delhi-chanakyapuri-3",
+        "q": "Which areas near Chanakyapuri do you also serve?",
+        "a": "R.K. Puram, Sarojini Nagar, Delhi Cantt and Vasant Vihar are all nearby and covered by the same helper network. Many helpers serving the enclave live locally in settlements such as Sanjay Camp.",
+        "scope": "locality",
+        "tags": ["delhi", "chanakyapuri"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "rk-puram": {
+    "neighbours": ["munirka", "vasant-vihar", "safdarjung-enclave", "sarojini-nagar", "chanakyapuri", "hauz-khas", "green-park"],
+    "landmarks": ["Delhi Public School R.K. Puram", "Sangam Courtyard", "Bhikaji Cama Place", "R.K. Puram Metro Station"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals", "elderly"],
+    "helperSourceAreas": ["Munirka village", "Mohammadpur"],
+    "localIntro": "R.K. Puram, spread across pincodes 110022 and 110066, is one of Delhi's largest government housing colonies, its numbered sectors filled with Central Government quarters alongside pockets of private flats and sector markets. Households are predominantly government-employee families, many with elderly parents at home, which keeps demand steady for daily cleaning help, cooks and elder-care support. Delhi Public School R.K. Puram, one of the country's best-known schools, sits inside the colony, the Sangam Courtyard retail and dining complex is a local hub, and the Bhikaji Cama Place office district adjoins the north-eastern edge. R.K. Puram and Munirka stations on the Magenta Line and Bhikaji Cama Place on the Pink Line cover the metro connections. Munirka lies immediately south, Vasant Vihar to the west and Safdarjung Enclave to the north-east; helpers commonly walk in from Munirka village and the Mohammadpur settlement beside Bhikaji Cama Place.",
+    "commuteNotes": "R.K. Puram and Munirka stations on the Magenta Line and Bhikaji Cama Place on the Pink Line serve different sectors, with DTC buses on the Ring Road. Helpers often walk in from Munirka village and Mohammadpur.",
+    "housingNotes": "Government quarters arranged in numbered sectors rather than private societies; entry is straightforward, though households often prefer verified, long-term help given transferable postings.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-rk-puram-1",
+        "q": "Which pincodes does R.K. Puram service cover?",
+        "a": "R.K. Puram is covered under pincodes 110022 and 110066, spanning its numbered government-housing sectors. Adjacent Munirka and Safdarjung Enclave fall under their own pincodes but share the same helper pool.",
+        "scope": "locality",
+        "tags": ["delhi", "rk-puram"]
+      },
+      {
+        "id": "faq-delhi-rk-puram-2",
+        "q": "Which areas near R.K. Puram do you also serve?",
+        "a": "Munirka, Vasant Vihar, Safdarjung Enclave and Sarojini Nagar are all adjacent and served by the same network. The Bhikaji Cama Place side of the colony is covered as well.",
+        "scope": "locality",
+        "tags": ["delhi", "rk-puram"]
+      },
+      {
+        "id": "faq-delhi-rk-puram-3",
+        "q": "Do helpers need gate passes in R.K. Puram's government quarters?",
+        "a": "The sectors are government housing rather than gated private societies, so formal society passes are not the norm and households manage entry directly. Many families still prefer identity-verified helpers since postings are transferable and staff changes are common.",
+        "scope": "locality",
+        "tags": ["delhi", "rk-puram"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "lajpat-nagar": {
+    "neighbours": ["defence-colony", "jangpura", "east-of-kailash", "andrews-ganj", "greater-kailash", "nizamuddin", "new-friends-colony"],
+    "landmarks": ["Lajpat Nagar Central Market", "Lajpat Nagar Metro Station", "Moolchand Hospital", "Amar Colony Market"],
+    "housingProfile": "builder-floors",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Lajpat Nagar, under pincode 110024, is best known for its Central Market, one of Delhi's busiest shopping destinations, but its four residential parts are equally lively — dense builder floors housing long-settled trading families, working professionals and a sizeable community of international residents. Amar Colony Market in Lajpat Nagar IV adds a second commercial hub, and Moolchand Hospital sits at the colony's Ring Road corner. Lajpat Nagar Metro Station is an interchange between the Violet and Pink lines, which makes the area one of South Delhi's best-connected addresses for residents and domestic helpers alike. Defence Colony adjoins directly across the Ring Road side, Jangpura lies to the north and East of Kailash to the south-west. Flats here are compact and stacked, so most households hire part-time maids and cooks on fixed one-to-two-hour slots, and buildings generally have straightforward entry compared with gated towers.",
+    "commuteNotes": "Lajpat Nagar Metro Station, an interchange of the Violet and Pink lines, plus Ring Road buses, make this one of the easiest South Delhi colonies for helpers to reach.",
+    "housingNotes": "Stacked builder floors with individual owners are the norm, so there are no society formalities; homes are compact, which keeps most engagements to part-time slots.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-lajpat-nagar-1",
+        "q": "Which pincode does Lajpat Nagar service cover?",
+        "a": "Lajpat Nagar falls under pincode 110024, which it shares with neighbouring Defence Colony. Coverage spans Lajpat Nagar parts I to IV, including Amar Colony.",
+        "scope": "locality",
+        "tags": ["delhi", "lajpat-nagar"]
+      },
+      {
+        "id": "faq-delhi-lajpat-nagar-2",
+        "q": "Which areas near Lajpat Nagar do you also serve?",
+        "a": "Defence Colony, Jangpura, East of Kailash and Andrews Ganj are all close by and served by the same helper pool. Helpers often take up homes in two or three of these colonies in a single day.",
+        "scope": "locality",
+        "tags": ["delhi", "lajpat-nagar"]
+      },
+      {
+        "id": "faq-delhi-lajpat-nagar-3",
+        "q": "How do helpers usually reach homes in Lajpat Nagar?",
+        "a": "The Lajpat Nagar Metro Station interchange on the Violet and Pink lines brings helpers in from across the city, and Ring Road buses add another option. Builder-floor buildings here have straightforward entry, so fixed part-time slots are easy to keep.",
+        "scope": "locality",
+        "tags": ["delhi", "lajpat-nagar"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "defence-colony": {
+    "neighbours": ["lajpat-nagar", "jangpura", "andrews-ganj", "nizamuddin", "east-of-kailash", "lodi-road", "greater-kailash"],
+    "landmarks": ["Defence Colony Market", "Moolchand Hospital", "Lajpat Nagar Central Market", "Jangpura Metro Station"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly", "working-professionals"],
+    "helperSourceAreas": ["Kotla Mubarakpur"],
+    "localIntro": "Defence Colony, pincode 110024, remains one of South Delhi's classic plotted neighbourhoods, laid out in lettered blocks around a central market well known for its restaurants and cafes. The dominant housing form is the independent house, though many plots have been rebuilt as spacious builder floors, and residents are typically established families, retired officers and senior professionals, with a noticeable expatriate presence. Moolchand Hospital stands nearby on Ring Road, Lajpat Nagar's Central Market is directly across, and Jangpura Metro Station on the Violet Line is the closest metro point for most blocks. Lajpat Nagar adjoins to the east, Jangpura to the north and Andrews Ganj towards the western side. Households here often want full-day or long-shift domestic help — cooks, housekeepers and elder-care attendants — and the adjacent Kotla Mubarakpur village has long been the main residential base for domestic workers serving the colony.",
+    "commuteNotes": "Jangpura and Lajpat Nagar metro stations on the Violet Line flank the colony, with buses along Ring Road. Most helpers walk in from adjacent Kotla Mubarakpur.",
+    "housingNotes": "Independent houses and roomy builder floors on large plots; many households employ full-day or live-in staff and handle verification individually rather than through society gates.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-defence-colony-1",
+        "q": "Which pincode does Defence Colony service cover?",
+        "a": "Defence Colony falls under pincode 110024, shared with neighbouring Lajpat Nagar. Coverage takes in the colony's lettered blocks around the central market.",
+        "scope": "locality",
+        "tags": ["delhi", "defence-colony"]
+      },
+      {
+        "id": "faq-delhi-defence-colony-2",
+        "q": "Where do most domestic helpers in Defence Colony live?",
+        "a": "The adjacent Kotla Mubarakpur village has long been the main residential base for domestic workers serving Defence Colony, and most helpers walk in from there. Others arrive via the Jangpura or Lajpat Nagar metro stations on the Violet Line.",
+        "scope": "locality",
+        "tags": ["delhi", "defence-colony"]
+      },
+      {
+        "id": "faq-delhi-defence-colony-3",
+        "q": "Which areas near Defence Colony do you also serve?",
+        "a": "Lajpat Nagar, Jangpura, Andrews Ganj and Nizamuddin are all close by and covered by the same helper network. Households needing full-day cooks or elder-care attendants can draw from the same nearby pool.",
+        "scope": "locality",
+        "tags": ["delhi", "defence-colony"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "new-friends-colony": {
+    "neighbours": ["okhla", "east-of-kailash", "kalkaji", "sarita-vihar", "lajpat-nagar", "nizamuddin"],
+    "landmarks": ["New Friends Colony Community Centre", "The Suryaa New Delhi", "Jamia Millia Islamia", "Holy Family Hospital", "Ashram Chowk"],
+    "housingProfile": "independent-houses",
+    "demandProfile": ["families", "elderly"],
+    "helperSourceAreas": ["Taimoor Nagar"],
+    "localIntro": "New Friends Colony, under pincode 110025, is a large plotted colony of generous independent houses arranged in lettered blocks, long favoured by established business families, senior professionals and diplomats. The Community Centre is the colony's social hub, ringed by restaurants and offices, and The Suryaa hotel stands at its edge; Jamia Millia Islamia's campus and Holy Family Hospital adjoin the colony on the Okhla side, adding a steady academic and medical population to the neighbourhood. Ashram Chowk connects the area to Ring Road and Mathura Road traffic, with the Ashram Pink Line and Sukhdev Vihar Magenta Line stations the nearest metro points. Okhla lies directly south-east, Kalkaji across the Mathura Road belt and Sarita Vihar further down towards the industrial phases. Large homes here typically employ full-time or full-day staff — cooks, housekeepers and drivers — and many domestic workers serving the colony live in the adjacent Taimoor Nagar settlement.",
+    "commuteNotes": "Ashram on the Pink Line and Sukhdev Vihar on the Magenta Line are the nearest metro stations, with buses along Mathura Road. Many helpers walk in from the adjacent Taimoor Nagar settlement.",
+    "housingNotes": "Large independent homes on big plots, many with staff quarters, so full-time and live-in arrangements are common and entry is managed by each household.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-new-friends-colony-1",
+        "q": "Which pincode does New Friends Colony service cover?",
+        "a": "New Friends Colony falls under pincode 110025, which it shares with part of the neighbouring Okhla belt. Coverage spans the colony's lettered blocks around the Community Centre.",
+        "scope": "locality",
+        "tags": ["delhi", "new-friends-colony"]
+      },
+      {
+        "id": "faq-delhi-new-friends-colony-2",
+        "q": "Are live-in helpers available for homes in New Friends Colony?",
+        "a": "Yes — many houses here are large plots with staff quarters, so live-in and full-day arrangements for cooks and housekeepers are common. Part-time help is also available from nearby settlements such as Taimoor Nagar.",
+        "scope": "locality",
+        "tags": ["delhi", "new-friends-colony"]
+      },
+      {
+        "id": "faq-delhi-new-friends-colony-3",
+        "q": "Which areas near New Friends Colony do you also serve?",
+        "a": "Okhla, East of Kailash, Kalkaji and Sarita Vihar are all nearby and covered by the same helper network. The Jamia Millia Islamia and Holy Family Hospital belt adjoining the colony is included too.",
+        "scope": "locality",
+        "tags": ["delhi", "new-friends-colony"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "okhla": {
+    "neighbours": ["new-friends-colony", "sarita-vihar", "kalkaji", "badarpur", "east-of-kailash", "lajpat-nagar"],
+    "landmarks": ["Jamia Millia Islamia", "Holy Family Hospital", "Okhla NSIC Metro Station", "Okhla Bird Sanctuary"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "students", "working-professionals"],
+    "helperSourceAreas": ["Jamia Nagar"],
+    "localIntro": "Okhla, spanning pincodes 110020 and 110025, covers a broad belt of south-east Delhi that includes the Okhla Industrial Area's phases, the residential stretches around Jamia Nagar and Okhla Vihar, and major institutional campuses. Jamia Millia Islamia university shapes much of the area's character, bringing student, faculty and staff households, while Holy Family Hospital is the major medical landmark. Housing is genuinely mixed — walk-up apartments and dense family homes in the residential pockets, with offices, factories and media houses concentrated in the industrial phases; the Okhla Bird Sanctuary lies at the area's eastern edge near the Yamuna. The Magenta Line runs through with stations at Jamia Millia Islamia, Sukhdev Vihar and Okhla NSIC, keeping commutes practical for residents and helpers alike. New Friends Colony adjoins to the north-west, Sarita Vihar to the south and Kalkaji across the Mathura Road side; households here typically hire part-time help for cleaning and cooking, often from within the surrounding residential settlements.",
+    "commuteNotes": "The Magenta Line's Jamia Millia Islamia, Sukhdev Vihar and Okhla NSIC stations run through the area. Most helpers live within the surrounding residential pockets and reach homes on foot or by shared auto.",
+    "housingNotes": "A genuine mix — walk-up apartments and dense family housing in the residential pockets, with a handful of societies near the industrial phases; most homes arrange help directly without gate-pass systems.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-okhla-1",
+        "q": "Which pincodes does Okhla service cover?",
+        "a": "Okhla is covered under pincodes 110020 and 110025, spanning the industrial phases and the residential belt around Jamia Nagar. Neighbouring New Friends Colony also falls under 110025.",
+        "scope": "locality",
+        "tags": ["delhi", "okhla"]
+      },
+      {
+        "id": "faq-delhi-okhla-2",
+        "q": "Which areas near Okhla do you also serve?",
+        "a": "New Friends Colony, Sarita Vihar, Kalkaji and Badarpur are all nearby and served by the same helper network. Homes around the Jamia Millia Islamia campus are covered within Okhla itself.",
+        "scope": "locality",
+        "tags": ["delhi", "okhla"]
+      },
+      {
+        "id": "faq-delhi-okhla-3",
+        "q": "How do helpers usually reach homes in Okhla?",
+        "a": "Most helpers live in the dense residential pockets around Jamia Nagar and Okhla Vihar and walk or take a shared auto to nearby homes. The Magenta Line's Jamia Millia Islamia, Sukhdev Vihar and Okhla NSIC stations cover longer commutes.",
+        "scope": "locality",
+        "tags": ["delhi", "okhla"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  },
+  "mehrauli": {
+    "neighbours": ["chhatarpur", "saket", "vasant-kunj", "malviya-nagar", "pushp-vihar", "arjun-garh"],
+    "landmarks": ["Qutub Minar", "Mehrauli Archaeological Park", "Garden of Five Senses", "Qutab Minar Metro Station", "Ahinsa Sthal"],
+    "housingProfile": "mixed",
+    "demandProfile": ["families", "working-professionals"],
+    "helperSourceAreas": [],
+    "localIntro": "Mehrauli, under pincode 110030, is one of Delhi's oldest continuously inhabited areas, wrapped around the Qutub Minar and the sprawling Mehrauli Archaeological Park. The locality blends a historic village core of narrow lanes and independent houses with newer builder floors, urbanised village pockets and, towards the outskirts, farmhouse estates — a genuinely mixed housing stock that shapes very different domestic-help needs street by street. The Garden of Five Senses lies on the Saket side, Ahinsa Sthal marks the approach near the Qutub complex, and Qutab Minar Metro Station on the Yellow Line connects the area to the rest of the city. Chhatarpur adjoins to the south with its farmhouse belt and temple complex, Saket and its malls lie to the east, and Vasant Kunj sits across the ridge to the west. Households range from old Mehrauli families in ancestral homes to professionals in newly built floors, with steady demand for part-time cleaning and cooking help, much of it met locally from within Mehrauli's own settlements.",
+    "commuteNotes": "Qutab Minar Metro Station on the Yellow Line and buses along the Mehrauli-Badarpur and Mehrauli-Gurgaon roads connect the area. Many helpers live within Mehrauli's own village lanes and walk to work.",
+    "housingNotes": "Village-core houses, rebuilt builder floors and outlying farmhouse estates make the stock highly varied; farmhouses often want live-in staff, while village and colony homes prefer part-time help.",
+    "localFaqs": [
+      {
+        "id": "faq-delhi-mehrauli-1",
+        "q": "Which pincode does Mehrauli service cover?",
+        "a": "Mehrauli falls under pincode 110030, covering the village core near the Qutub Minar as well as the newer residential pockets around it. Neighbouring Chhatarpur and Saket carry their own pincodes but share the same helper network.",
+        "scope": "locality",
+        "tags": ["delhi", "mehrauli"]
+      },
+      {
+        "id": "faq-delhi-mehrauli-2",
+        "q": "Which areas near Mehrauli do you also serve?",
+        "a": "Chhatarpur, Saket, Vasant Kunj and Pushp Vihar are all nearby and covered by the same helper pool. Coverage runs from the lanes around the Mehrauli Archaeological Park out towards the farmhouse belt.",
+        "scope": "locality",
+        "tags": ["delhi", "mehrauli"]
+      },
+      {
+        "id": "faq-delhi-mehrauli-3",
+        "q": "Can farmhouses around Mehrauli get live-in help?",
+        "a": "Yes — the farmhouse estates towards the Chhatarpur side commonly employ live-in cooks and housekeepers, and such placements are supported here. Homes in the village core and colony pockets more often take part-time morning or evening slots.",
+        "scope": "locality",
+        "tags": ["delhi", "mehrauli"]
+      }
+    ],
+    "sourceRefs": ["general-knowledge-2026"],
+    "reviewed": false
+  }
+}
