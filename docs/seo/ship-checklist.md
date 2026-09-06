@@ -8,9 +8,9 @@ until this list is done. Owner-only items are marked **[owner]**.
 
 | # | Check | How to prove it | State |
 |---|---|---|---|
-| A1 | `www.mybuddymaid.in` TLS certificate valid | Vercel → Project → Domains: `www` shows a valid cert; `curl -I https://www.mybuddymaid.in` returns 308 to apex | **[owner]** — expired today; the merge waits on this |
+| A1 | `www.mybuddymaid.in` TLS certificate valid | Vercel → Project → Domains: `www` shows a valid cert; `curl -I https://www.mybuddymaid.in` returns 308 to apex | **DONE 2026-09-07** — the domain had never been attached to the Vercel project, so nothing renewed it; re-added as a 308 to apex. Verified `https://www.mybuddymaid.in` → 308 → `https://mybuddymaid.in` → 200, cert valid |
 | A2 | Vercel Root Directory = `next-app` | Project Settings → General → Root Directory | done (preview built) |
-| A3 | Production env vars set | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`, `NEXT_PUBLIC_BING_SITE_VERIFICATION`; `MAINTENANCE_MODE` unset; `LEADS_ENABLED` / `NEXT_PUBLIC_LEADS_ENABLED` unset until the `leads` migration is applied | **[owner]** |
+| A3 | Production env vars set | Required: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`; `MAINTENANCE_MODE` unset; `LEADS_ENABLED` / `NEXT_PUBLIC_LEADS_ENABLED` unset until the `leads` migration is applied. Not required: `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (GSC is a DNS-verified Domain property — no meta tag needed). Pending, not blocking: `NEXT_PUBLIC_BING_SITE_VERIFICATION` (Bing will be created by importing from GSC, which needs no tag) | **[owner]** — Supabase vars |
 | A4 | `tsc --noEmit` clean, `next build` green | `cd next-app; npx tsc --noEmit; npm run build` | run before merge |
 | A5 | `seo:validate` GREEN | `npm run seo:validate` | see §C |
 | A6 | `seo:gate` — 0 duplicate pairs, indexable count recorded | `npm run seo:gate` | see §C |
@@ -18,9 +18,9 @@ until this list is done. Owner-only items are marked **[owner]**.
 | A8 | No locality carries another locality's coordinates | `npm run seo:geocode` prints `0 rejected as a sibling's point`; the audit in ASSUMPTIONS.md #45 | see §C |
 | A9 | Preview deploy of the merge candidate passes `seo:check-redirects` (single-hop 301s, deliberate 410s, 0 chains, 0 loops) | needs the Deployment-Protection bypass secret; PowerShell block in README §5.4 | **[owner: create secret]** then run |
 | A10 | Same preview passes `seo:crawl` (0 broken links, 0 orphans, click depth ≤ 3) | same block | as A9 |
-| A11 | Booking SPA rebuilt into `next-app/public/_spa` | `node scripts/build-spa.mjs` from the repo root, then `/app/` loads on the preview | run before merge |
+| A11 | Booking SPA rebuilt into `next-app/public/_spa` | `node scripts/build-spa.mjs` from the repo root, then `/app/` loads on the preview | done — `_spa` was rebuilt in the same commit as the last `serviceability.json` export (`a31abe5e`) and the bundle carries the 8-city footprint. **Do not rebuild on this machine**: there is no `app/.env`, so a rebuild would inline empty Supabase/Razorpay keys. Rebuild only where the `VITE_*` vars are set, and only after the next `seo:export-spa` |
 | A12 | IndexNow key file present in `next-app/public/<key>.txt` | §D — generated and committed | done (`b8604069…`) |
-| A13 | `robots.txt` on the preview allows crawling and points at `/sitemap.xml` | `curl https://<preview>/robots.txt` | check on A9's preview |
+| A13 | `robots.txt` allows crawling and points at `/sitemap.xml` | `curl https://<preview>/robots.txt` | verified on the local build 2026-09-07: `Allow: /`, disallows only `/api/`, `/app`, `/_spa/`, `/maintenance`, `/og` and query-string URLs; `Sitemap: https://mybuddymaid.in/sitemap.xml`. Same file ships to the preview |
 | A14 | `entities.json` has 0 `ready` unless their facts are sourced | `npm run seo:stats` shows entity pages = 0 | true today (614 drafts, 0 ready) |
 
 Merge only when every row is true. Nothing in A can be waived by a later fix.
@@ -51,29 +51,24 @@ The site already emits both verification meta tags from environment variables
 `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`, and `msvalidate.01` from
 `NEXT_PUBLIC_BING_SITE_VERIFICATION`. You never edit code for this — you set two env vars.
 
-**Google Search Console** **[owner]**
+**Google Search Console — VERIFIED 2026-09-07.** A **Domain** property
+(`mybuddymaid.in`, covers apex, `www`, http and https), auto-verified through DNS at the
+registrar. Because verification is by DNS, `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` is
+redundant and the meta tag is not required — leave the var unset. The property already
+holds ~10,486 clicks over 16 months from the legacy site, which is the baseline every
+post-cutover number is measured against.
 
-1. search.google.com/search-console → Add property → **Domain** property `mybuddymaid.in`
-   (covers apex, `www`, http and https in one property). This needs a DNS TXT record —
-   add it at the registrar / Vercel DNS. If DNS is awkward, add a **URL-prefix** property
-   `https://mybuddymaid.in/` instead and choose **HTML tag**.
-2. For the HTML-tag route: copy only the `content="…"` value of the tag GSC shows.
-3. Vercel → Project → Settings → Environment Variables → `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
-   = that value, environment **Production** (Preview too if you want to verify previews).
-   Redeploy — `NEXT_PUBLIC_*` values are baked in at build time.
-4. `curl -s https://mybuddymaid.in | Select-String google-site-verification` shows the tag;
-   click **Verify** in GSC.
-5. Sitemaps → add `https://mybuddymaid.in/sitemap.xml` (the index; the shards under
-   `/sitemaps/<shard>.xml` are discovered from it).
+Remaining, after the production deploy: Sitemaps → add
+`https://mybuddymaid.in/sitemap.xml` (the index; the shards under `/sitemaps/<shard>.xml`
+are discovered from it).
 
-**Bing Webmaster Tools** **[owner]**
-
-1. bing.com/webmasters → Add site. Fastest: **Import from Google Search Console** after
-   GSC is verified — it copies the property and sitemaps, no token needed.
-2. Otherwise Add manually → **HTML Meta Tag** → copy the `content` value of the
-   `msvalidate.01` tag → Vercel env `NEXT_PUBLIC_BING_SITE_VERIFICATION` → redeploy →
-   Verify.
-3. Sitemaps → submit `https://mybuddymaid.in/sitemap.xml`.
+**Bing Webmaster Tools — pending, not blocking.** bing.com/webmasters → Add site →
+**Import from Google Search Console**: it copies the verified property and its sitemaps,
+so `NEXT_PUBLIC_BING_SITE_VERIFICATION` is very likely unnecessary too. Only if the import
+is refused: Add manually → **HTML Meta Tag** → copy the `content` value of the
+`msvalidate.01` tag → Vercel env `NEXT_PUBLIC_BING_SITE_VERIFICATION` (Production) →
+redeploy → Verify. Then Sitemaps → `https://mybuddymaid.in/sitemap.xml` if the import did
+not carry it over.
 
 Do **not** use the Google Indexing API for these pages — it is only for `JobPosting` and
 `BroadcastEvent`; misuse risks a manual action. Google finds the pages through the sitemap.
