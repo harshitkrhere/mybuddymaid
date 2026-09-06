@@ -34,7 +34,7 @@ core pages indexed within 8 weeks.
 
 | Week | Date | GSC indexed (core) | Bing indexed | Notes |
 |---|---|---|---|---|
-| 0 | 2026-09-07 | — | — | deployed; IndexNow submitted (see ship-checklist §E) |
+| 0 | 2026-09-07 | — | — | deployed; IndexNow accepted 2,496 URLs (HTTP 200) on the second attempt, 5 min after the first returned SiteVerificationNotCompleted |
 | 1 | | | | |
 | 3 | | | | |
 | 8 | | | | |

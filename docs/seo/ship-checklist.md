@@ -105,7 +105,8 @@ That first run submits every indexable core URL (2,496 today). Expect HTTP 200 o
 `SiteVerificationNotCompleted` — "Site Verification is not completed. Please wait for
 some time for the verification to complete and try again." The key file was already
 serving 200 with the right content; IndexNow verifies it asynchronously and needs time
-after a brand-new host/key. Retry the same command; a 200/202 closes this row.
+after a brand-new host/key. **Retry 5 minutes later: HTTP 200, 2,496 URLs submitted.**
+Row closed 2026-09-07.
 
 **After any later deploy that changes content:**
 ```powershell
