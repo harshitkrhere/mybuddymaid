@@ -17,7 +17,10 @@ export type IconName =
   | 'heart'
   | 'check'
   | 'arrow-right'
-  | 'users';
+  | 'users'
+  | 'message'
+  | 'lock'
+  | 'scale';
 
 const PATHS: Record<IconName, React.ReactNode> = {
   shield: (
@@ -112,6 +115,25 @@ const PATHS: Record<IconName, React.ReactNode> = {
       <path d="M2.5 20a6.5 6.5 0 0 1 13 0" />
       <path d="M16 4.5a3.5 3.5 0 0 1 0 7" />
       <path d="M17.5 13.5a6.5 6.5 0 0 1 4 6.5" />
+    </>
+  ),
+  message: (
+    <>
+      <path d="M4 5h16v11H9l-5 4V5z" />
+      <path d="M8 9h8M8 12h5" />
+    </>
+  ),
+  lock: (
+    <>
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+    </>
+  ),
+  scale: (
+    <>
+      <path d="M12 3v18M5 21h14" />
+      <path d="M4 8h16" />
+      <path d="M7 8l-3 6a3 3 0 0 0 6 0L7 8zM17 8l-3 6a3 3 0 0 0 6 0l-3-6z" />
     </>
   ),
 };

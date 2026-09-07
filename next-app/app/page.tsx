@@ -65,6 +65,9 @@ const SERVICE_ICONS: Record<ServiceSlug, IconName> = {
   'domestic-help': 'users',
 };
 
+// One icon per booking step (tell us → shortlist → confirm).
+const STEP_ICONS: IconName[] = ['message', 'search', 'check'];
+
 // The three guides the original landing page featured; falls back to the newest posts if a
 // slug is ever removed. Images are the same photographs the original page used.
 const HOME_POST_SLUGS = ['find-reliable-maid-delhi', 'elderly-care-at-home-guide', 'maid-vs-cook-vs-nanny'];
@@ -128,6 +131,17 @@ export default function HomePage() {
           Verified home help in {CITIES.length} cities
         </p>
 
+        {/* the six services as chips — real links to the service hubs */}
+        <nav className="home-chips" aria-label="Services">
+          <span className="home-chips__label">Book a</span>
+          {model.serviceCards.map((c) => (
+            <a key={c.path} href={c.path} className="home-chip">
+              <Icon name={SERVICE_ICONS[c.service.slug]} size={15} />
+              {c.service.name}
+            </a>
+          ))}
+        </nav>
+
         <p className="home-anchor">
           <Icon name="tag" size={16} />
           <span>
@@ -136,14 +150,28 @@ export default function HomePage() {
         </p>
 
         <div className="home-visual">
-          <Image src="/hero-new.png" alt="Family at home with a helper serving tea in the living room" width={1024} height={1024} priority quality={75} sizes="(min-width: 992px) 520px, 100vw" />
-          <div className="home-visual__card">
+          <div className="home-visual__main">
+            <Image src="/hero-new.png" alt="Family at home with a helper serving tea in the living room" width={1024} height={1024} priority quality={75} sizes="(min-width: 992px) 520px, 100vw" />
+          </div>
+          <div className="home-visual__small">
+            <Image src="/cook.jpg" alt="" width={800} height={640} sizes="220px" />
+          </div>
+          <div className="home-visual__card home-visual__card--time">
             <span className="home-visual__icon">
               <Icon name="clock" size={20} />
             </span>
             <span className="home-visual__text">
               <strong>48 hrs</strong>
               <span>Aim to share a replacement profile</span>
+            </span>
+          </div>
+          <div className="home-visual__card home-visual__card--verify">
+            <span className="home-visual__icon">
+              <Icon name="shield" size={20} />
+            </span>
+            <span className="home-visual__text">
+              <strong>Every helper verified</strong>
+              <span>Aadhaar · references · behavioural assessment</span>
             </span>
           </div>
         </div>
@@ -271,6 +299,9 @@ export default function HomePage() {
                   <li key={i} className="home-step">
                     <span className="home-step__n" aria-hidden="true">
                       {i + 1}
+                    </span>
+                    <span className="home-step__icon" aria-hidden="true">
+                      <Icon name={STEP_ICONS[i] ?? 'check'} size={26} />
                     </span>
                     <p>{b}</p>
                   </li>

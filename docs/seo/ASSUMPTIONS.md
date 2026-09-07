@@ -292,3 +292,12 @@ editing one data file unless noted.
     bands in `services.ts` (identical across tiers today) with a service and a city-tier
     select; the original hours slider had no data behind it and is dropped. `domestic-help`
     has no photograph and uses a mint placeholder rather than the postnatal image.
+48. **Landing hero, process section and blog index refined (owner requests, 2026-09-07).**
+    Hero: two-tone headline via a CSS gradient fill (the h1 text is unchanged), service
+    chips linking to the six service hubs, "Call" as a quiet text button, a layered photo
+    composition with the 48-hour replacement card and a card naming the actual checks
+    (Aadhaar, references, behavioural assessment). Process: the three `composeHome()`
+    steps as a three-column timeline. `/blog`: the 35 ported posts grouped into six topics
+    by keyword on their 33 legacy category labels (`app/blog/page.tsx` `TOPICS`), newest
+    post spotlighted, ported excerpts closed with an ellipsis where they were cut at 200
+    characters; styling in `styles/blog.css` under `.blog`. Post pages are untouched.
