@@ -131,17 +131,6 @@ export default function HomePage() {
           Verified home help in {CITIES.length} cities
         </p>
 
-        {/* the six services as chips — real links to the service hubs */}
-        <nav className="home-chips" aria-label="Services">
-          <span className="home-chips__label">Book a</span>
-          {model.serviceCards.map((c) => (
-            <a key={c.path} href={c.path} className="home-chip">
-              <Icon name={SERVICE_ICONS[c.service.slug]} size={15} />
-              {c.service.name}
-            </a>
-          ))}
-        </nav>
-
         <p className="home-anchor">
           <Icon name="tag" size={16} />
           <span>
@@ -150,28 +139,14 @@ export default function HomePage() {
         </p>
 
         <div className="home-visual">
-          <div className="home-visual__main">
-            <Image src="/hero-new.png" alt="Family at home with a helper serving tea in the living room" width={1024} height={1024} priority quality={75} sizes="(min-width: 992px) 520px, 100vw" />
-          </div>
-          <div className="home-visual__small">
-            <Image src="/cook.jpg" alt="" width={800} height={640} sizes="220px" />
-          </div>
-          <div className="home-visual__card home-visual__card--time">
+          <Image src="/hero-new.png" alt="Family at home with a helper serving tea in the living room" width={1024} height={1024} priority quality={75} sizes="(min-width: 992px) 520px, 100vw" />
+          <div className="home-visual__card">
             <span className="home-visual__icon">
               <Icon name="clock" size={20} />
             </span>
             <span className="home-visual__text">
               <strong>48 hrs</strong>
               <span>Aim to share a replacement profile</span>
-            </span>
-          </div>
-          <div className="home-visual__card home-visual__card--verify">
-            <span className="home-visual__icon">
-              <Icon name="shield" size={20} />
-            </span>
-            <span className="home-visual__text">
-              <strong>Every helper verified</strong>
-              <span>Aadhaar · references · behavioural assessment</span>
             </span>
           </div>
         </div>
