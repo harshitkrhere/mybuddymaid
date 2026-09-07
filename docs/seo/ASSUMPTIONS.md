@@ -271,3 +271,24 @@ editing one data file unless noted.
     — the same counts as before the fix, with **0 verdict flips** and 282 pages whose
     measured content changed (the neighbour names in their prose and descriptions). Sector
     150 no longer lists Sector 18; Sector 18 no longer lists any Expressway sector.
+47. **Landing page restored to the original obsidian + mint design, on the SEO skeleton.**
+    The owner rejected the Modernist port (`landing-redesign`, commits 37bb69bb and 11425e5c)
+    and asked for the look of the company's original static landing page (dark hero, rounded
+    white cards, Plus Jakarta Sans headings, mint accent, stats strip, services grid, process
+    steps, plans, salary estimator, guides, FAQ, floating WhatsApp button). It is rebuilt on
+    branch `landing-classic` in `app/page.tsx`, `styles/home.css` (all rules under `.home`),
+    `components/home/SalaryEstimator.tsx` (the only client component) and
+    `components/home/HomeIcons.tsx` (inline SVG, no icon CDN). `SeoPage` still renders the
+    JSON-LD, breadcrumb, single `<h1>` from `homeMeta()`, tracked CTAs, trust links, closing
+    CTA and sticky bar; `composeHome()` is unchanged, so `seo:gate` cannot move. The only
+    shared-file change remains the approved `.page:has(> .home)` line in `globals.css`.
+    Owner decisions, 2026-09-07: **same look, real facts only** — the original page's
+    "12,000+ happy families", "4.9/5 — 500+ reviews", "#1 verified home help", "100% police
+    verified", "1-year free replacement", "1 in 10 applicants" and four named testimonials
+    are not reproduced (brief hard rule; nothing in the data layer supports them). They are
+    replaced by data-layer facts: 342 localities, 8 cities, 6 services, the plans in
+    `plans.ts`, the 48-hour replacement-profile aim, blog cards from `data/blog/posts.ts`.
+    The shared header and footer stay (no home-only header). The salary estimator reads the
+    bands in `services.ts` (identical across tiers today) with a service and a city-tier
+    select; the original hours slider had no data behind it and is dropped. `domestic-help`
+    has no photograph and uses a mint placeholder rather than the postnatal image.

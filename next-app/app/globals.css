@@ -41,6 +41,9 @@ p { margin: 0 0 1rem; }
 ul { padding-left: 1.2rem; }
 .muted { color: var(--muted); font-size: 0.95rem; }
 .page { max-width: var(--max); margin: 0 auto; padding: 0 1rem 2rem; }
+/* The landing page is full-bleed (owner-approved, 2026-09-07): the container stands down
+   only when the home wrapper is its direct child, so every other page keeps --max. */
+.page:has(> .home) { max-width: none; padding: 0; }
 
 /* header */
 .site-header { position: fixed; top: 0; left: 0; right: 0; height: var(--header-h); background: var(--obsidian); color: #fff; z-index: 50; border-bottom: 1px solid rgba(255,255,255,0.06); }
