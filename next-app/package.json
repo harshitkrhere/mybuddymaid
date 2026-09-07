@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "tsx --test lib/**/*.test.ts",
     "seo:validate": "tsx scripts/seo/validate.ts",
     "seo:stats": "tsx scripts/seo/stats.ts",
     "seo:gate": "tsx scripts/seo/uniqueness.ts",

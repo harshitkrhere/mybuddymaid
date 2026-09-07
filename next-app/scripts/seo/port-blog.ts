@@ -5,6 +5,7 @@
 // Run: npx tsx scripts/seo/port-blog.ts
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { stripLegacyHeader } from '../../lib/blog/legacy-header';
 
 const ROOT = process.cwd();
 const LEGACY = path.resolve(ROOT, '..', 'mybuddymaid');
@@ -40,7 +41,8 @@ function extract(file: string, slug: string): Post | null {
   const minutes = Number(pick(/⏱️\s*(\d+)\s*min/, raw)) || 6;
   const category = decode(pick(/<div class="badge">([\s\S]*?)<\/div>/, raw).replace(/<[^>]+>/g, '')) || 'Guide';
 
-  let html = article
+  // the template renders its own <h1>/badge/date line, so drop the legacy header fragment
+  const html = stripLegacyHeader(article)
     // drop the legacy CTA blocks (they point at the old app routes)
     .replace(/<div class="blog-cta">[\s\S]*?<\/div>/g, '')
     // drop the legacy related-link grids; the new template renders its own
