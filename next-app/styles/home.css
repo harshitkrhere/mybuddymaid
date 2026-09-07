@@ -92,7 +92,8 @@
 .home h3 { font-size: 1.375rem; }
 .home h4 { font-size: 1.125rem; font-weight: 600; }
 .home p { color: var(--text-secondary); line-height: 1.7; margin: 0 0 1rem; }
-.home ul, .home ol { list-style: none; padding: 0; margin: 0; }
+/* :where() keeps this reset at zero weight so .home-stats, .home-plans etc. can set their own box */
+.home :where(ul, ol) { list-style: none; padding: 0; margin: 0; }
 .home a { color: var(--mint-hover); }
 .home a:hover { text-decoration: none; }
 .home ::selection { background: var(--mint); color: var(--obsidian); }
