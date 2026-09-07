@@ -4,7 +4,6 @@
 // links inline showed nothing. The checkbox keeps the toggle CSS-only and the nav links
 // always in the server-rendered HTML (they carry the site-wide internal linking).
 import Image from 'next/image';
-import { CITIES } from '@/data/seo';
 
 export function Header() {
   return (
@@ -22,11 +21,9 @@ export function Header() {
           <nav className="nav" aria-label="Primary">
             <a href="/services/maid-service">Maid service</a>
             <a href="/services">Services</a>
-            {CITIES.map((c) => (
-              <a key={c.slug} href={`/${c.slug}`}>
-                {c.name}
-              </a>
-            ))}
+            {/* one "Cities" entry that jumps to the city list on the landing page (owner request,
+                2026-09-07); every city hub stays linked site-wide from the footer */}
+            <a href="/#cities">Cities</a>
             <a href="/pricing">Pricing</a>
             <a href="/how-we-verify">Verification</a>
             <a href="/blog">Blog</a>
