@@ -301,3 +301,13 @@ editing one data file unless noted.
     by keyword on their 33 legacy category labels (`app/blog/page.tsx` `TOPICS`), newest
     post spotlighted, ported excerpts closed with an ellipsis where they were cut at 200
     characters; styling in `styles/blog.css` under `.blog`. Post pages are untouched.
+49. **Site-wide restyle of the SEO, trust and blog-post pages (owner request, 2026-09-07).**
+    `app/globals.css` alone: obsidian hero card with check-mark badges and mint CTAs, prose
+    sections with a mint rule and check-mark lists (a neutral dash under `#excluded`),
+    3-column service cards, styled pricing tables, accordion FAQs, pin-marked nearby links,
+    and on screens >= 1024px the closing "Ready to book?" card becomes a sticky sidebar
+    (scoped with `.page > .content:has(> .final-cta)` so the landing page and blog index
+    are unaffected). No markup, data, route or metadata change; SeoPage untouched; Inter
+    remains the only font. Desktop nav now shows one "Cities" link (`/#cities`); the city
+    hubs stay linked from every footer. Known, out of scope here: ported blog posts carry a
+    second `<h1>` inside their HTML (tracked as a separate task).
