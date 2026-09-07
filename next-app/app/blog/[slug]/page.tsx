@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BLOG_BY_SLUG, BLOG_POSTS } from '@/data/blog/posts';
+import { stripLegacyHeader } from '@/lib/blog/legacy-header';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbLd, ORGANIZATION } from '@/lib/seo-engine/jsonld';
@@ -61,7 +62,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <p className="muted">
           {post.category} · Published {post.datePublished} · {post.readingMinutes} min read
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: stripLegacyHeader(post.html) }} />
         {related.length > 0 && (
           <>
             <h2>Related guides</h2>
