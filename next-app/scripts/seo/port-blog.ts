@@ -42,7 +42,7 @@ function extract(file: string, slug: string): Post | null {
   const category = decode(pick(/<div class="badge">([\s\S]*?)<\/div>/, raw).replace(/<[^>]+>/g, '')) || 'Guide';
 
   // the template renders its own <h1>/badge/date line, so drop the legacy header fragment
-  let html = stripLegacyHeader(article)
+  const html = stripLegacyHeader(article)
     // drop the legacy CTA blocks (they point at the old app routes)
     .replace(/<div class="blog-cta">[\s\S]*?<\/div>/g, '')
     // drop the legacy related-link grids; the new template renders its own
