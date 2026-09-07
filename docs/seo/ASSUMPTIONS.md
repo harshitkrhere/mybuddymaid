@@ -301,3 +301,17 @@ editing one data file unless noted.
     by keyword on their 33 legacy category labels (`app/blog/page.tsx` `TOPICS`), newest
     post spotlighted, ported excerpts closed with an ellipsis where they were cut at 200
     characters; styling in `styles/blog.css` under `.blog`. Post pages are untouched.
+50. **Plan prices raised and online checkout paused (owner decisions, 2026-09-07).**
+    Silver is now ₹4,999 (was ₹3,999) and Gold ₹5,499 (was ₹4,999); Diamond stays ₹6,999.
+    Changed in the single source `data/seo/plans.ts` (fee + feePaise), exported to the
+    booking app through `seo:export-spa`, and mirrored in the two Razorpay edge functions.
+    The owner's Razorpay account is on hold, so the booking app is built without
+    `VITE_RZP_KEY` and its existing `PURCHASES_PAUSED` switch stays on: choosing a plan
+    opens a "Complete your booking with our team" modal with a WhatsApp link (prefilled
+    with the plan name) and the +91 93551 14869 call button (the modal previously showed a
+    wrong number, 93184 29135). Landing-page plan buttons keep linking to `/app/auth`.
+    The Supabase project behind the app (`bflnsgxsyovpovoebgmz`) no longer resolves in
+    DNS; the app is rebuilt against the owner's new project `irqsjuwkbcmnooyivakq`
+    (URL and anon key in the untracked `app/.env`). The new project needs the schema
+    scripts, the Google provider, the `/app/splash` redirect URL and the edge functions
+    deployed before sign-in and booking work end to end.

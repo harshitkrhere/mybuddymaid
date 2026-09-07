@@ -11,7 +11,9 @@ import {
 // ── TEMPORARY: Set to true to pause purchases ──
 const PURCHASES_PAUSED = true;
 const SUPPORT_PHONE = '+919355114869';
-const SUPPORT_WHATSAPP = `https://wa.me/919355114869?text=${encodeURIComponent('Hi MyBuddyMaid! I\'m interested in purchasing a package. Please help me with the details.')}`;
+const SUPPORT_PHONE_DISPLAY = '+91 93551 14869';
+const supportWhatsApp = (planName) =>
+  `https://wa.me/919355114869?text=${encodeURIComponent(`Hi MyBuddyMaid, I would like to book the ${planName || 'Gold'} package. Please help me complete the booking.`)}`;
 
 // Testimonials removed: the three entries here were invented names with 5-star
 // ratings. We publish real reviews or none at all.
@@ -166,16 +168,17 @@ export default function PricingPage() {
               <Shield size={32} />
             </div>
 
-            <h2 className="paused-modal-title">Online Purchases Temporarily on Hold</h2>
+            <h2 className="paused-modal-title">Complete your booking with our team</h2>
 
             <p className="paused-modal-desc">
-              We're upgrading our systems to serve you better. To purchase the
-              <strong> {pausedPlanName}</strong> package, please reach out to our team directly — we'll get you set up instantly.
+              Online payment is temporarily unavailable. To book the
+              <strong> {pausedPlanName}</strong> package, message us on WhatsApp or call us. Our team will confirm your plan,
+              share verified profiles for your area and complete the booking with you. Nothing is charged until you confirm.
             </p>
 
             <div className="paused-modal-actions">
               <a
-                href={SUPPORT_WHATSAPP}
+                href={supportWhatsApp(pausedPlanName)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="paused-modal-btn paused-btn-whatsapp"
@@ -183,7 +186,7 @@ export default function PricingPage() {
                 <MessageCircle size={20} />
                 <div>
                   <span className="paused-btn-label">Chat on WhatsApp</span>
-                  <span className="paused-btn-sub">Instant response · Available 24/7</span>
+                  <span className="paused-btn-sub">Fastest way to reach us</span>
                 </div>
               </a>
 
@@ -194,7 +197,7 @@ export default function PricingPage() {
                 <PhoneCall size={20} />
                 <div>
                   <span className="paused-btn-label">Call Us Now</span>
-                  <span className="paused-btn-sub">+91 93184 29135 · Mon–Sun 9AM–9PM</span>
+                  <span className="paused-btn-sub">{SUPPORT_PHONE_DISPLAY} · Mon–Sun 9 AM–9 PM</span>
                 </div>
               </a>
             </div>

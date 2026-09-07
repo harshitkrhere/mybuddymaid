@@ -21,8 +21,8 @@ function jsonResponse(body: Record<string, unknown>, status = 200): Response {
 
 // Server-side plan definitions — client cannot override these
 const PLAN_DETAILS: Record<string, { name: string; pricePaise: number; durationMonths: number; replacementsTotal: number }> = {
-  silver:   { name: 'Silver',   pricePaise: 399900,  durationMonths: 10,  replacementsTotal: 3 },
-  gold:     { name: 'Gold',     pricePaise: 499900,  durationMonths: 12,  replacementsTotal: 5 },
+  silver:   { name: 'Silver',   pricePaise: 499900,  durationMonths: 10,  replacementsTotal: 3 },
+  gold:     { name: 'Gold',     pricePaise: 549900,  durationMonths: 12,  replacementsTotal: 5 },
   diamond:  { name: 'Diamond',  pricePaise: 699900,  durationMonths: 18,  replacementsTotal: 10 },
 };
 
