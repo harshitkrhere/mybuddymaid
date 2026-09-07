@@ -312,7 +312,7 @@ editing one data file unless noted.
     hubs stay linked from every footer. Known, out of scope here: ported blog posts carry a
     second `<h1>` inside their HTML (tracked as a separate task).
 50. **Plan prices raised and online checkout paused (owner decisions, 2026-09-07).**
-    Silver is now ₹4,999 (was ₹3,999) and Gold ₹5,499 (was ₹4,999); Diamond stays ₹6,999.
+    Silver is now ₹4,999 (was ₹3,999) and Gold ₹5,999 (was ₹4,999, briefly ₹5,499 the same day); Diamond stays ₹6,999.
     Changed in the single source `data/seo/plans.ts` (fee + feePaise), exported to the
     booking app through `seo:export-spa`, and mirrored in the two Razorpay edge functions.
     The owner's Razorpay account is on hold, so the booking app is built without

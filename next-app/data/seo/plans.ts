@@ -32,8 +32,8 @@ export const PLANS: Plan[] = [
   {
     key: 'gold',
     name: 'Gold',
-    fee: 5499,
-    feePaise: 549900,
+    fee: 5999,
+    feePaise: 599900,
     termMonths: 12,
     replacements: 5,
     verifiedProfiles: 3,
