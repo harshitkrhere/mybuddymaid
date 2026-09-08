@@ -84,3 +84,16 @@ an authenticated account or a step beyond opening the site.
 | FIN-PF03 | Performance | LOW | CONFIRMED | `app/page.tsx:27`, `blog/page.tsx:17` | Second font family at 5 weights on the two highest-traffic pages | The exact cost `layout.tsx:12-14` documents avoiding | Trim to 2 weights or drop | 1 h |
 | FIN-PF04 | Performance | LOW | CONFIRMED | `sitemaps/[shard]/route.ts:7,13` | `buildShards()` recomputes 2,513 models ~19× per build | Build time only; grows with the footprint | Memoise at module scope | 15 m |
 | FIN-PF05 | Performance | INFO | NOT MEASURED | — | Core Web Vitals never read, though Speed Insights is already collecting them | Cannot prioritise performance work without data | Read the Vercel dashboard | 30 m |
+
+---
+
+## Added during remediation
+
+Findings raised while implementing a phase, recorded here rather than fixed in place. The
+"Found" column says which phase turned them up.
+
+| ID | Category | Sev | Conf | File | Problem | Impact | Fix | Effort | Found |
+|---|---|---|---|---|---|---|---|---|---|
+| FIN-S11 | Security / Email | LOW | CONFIRMED | `send-booking-email/handler.ts:276`, `send-package-email/handler.ts:309` | Email templates interpolate `user_name`, `city`, `notes` and `booking_id` into HTML with no escaping — `grep -n "escapeHtml\|sanitiz"` over both returns nothing | Since FIN-S01 the recipient is always the token owner, so this is HTML injected into one's own email, not a phishing vector. It is still arbitrary `<a href>` inside a DKIM-signed mybuddymaid.in message, and `notes`/`city` are never re-read from the `bookings` row | Escape at interpolation, or re-read the booking by `booking_id` + `user.id` | 2 h | Phase 0 |
+| FIN-S12 | Security / Email | LOW | CONFIRMED | `send-plan-email/index.ts:142,155,180` | Has the identical FIN-S01 defect — no auth, `to: [user_email]` straight from the body — but is not in FIN-S01's Location, which names only the two deployed functions | Not live: the audit verified it returns 404, and it has no caller anywhere in the repo. If it were ever deployed it is an open relay that no finding points at. It also fails `deno check` with four implicit-`any` errors, so it will break a repo-wide type gate in Phase 1 CI | Falls out of FIN-D01 (delete it). Until then, do not deploy it | — | Phase 0 |
+| FIN-DOC01 | Documentation | MED | CONFIRMED | `AUDIT/04-SECURITY.md:257`, `AUDIT/09-DATABASE.md:35`, `AUDIT/18-REMEDIATION-PLAN.md:42` | Two pieces of remediation advice in this audit are wrong and will be followed. (a) FIN-S04's `GRANT UPDATE (notes, city, society, locality_slug, city_slug, pincode, updated_at)` names four columns the unapplied leads migration adds — run verbatim it aborts on `column "society" does not exist`, taking the REVOKE with it and leaving the hole open while looking applied. `18-REMEDIATION-PLAN.md` §0.5 has the correct list. (b) "Deploy the unique index first … regression risk: low" is unsafe: with `uq_user_plans_rzp_payment` live and the old `verify-razorpay-payment` still deployed, a replay or double-submit runs the unconditional deactivate, then fails the insert on 23505 and returns 500 — turning a free renewal into a wipe of the customer's own plan | Correct both passages. Fixed in the Phase 0 migrations, which ship the index and the reordered function together | 30 m | Phase 0 |
