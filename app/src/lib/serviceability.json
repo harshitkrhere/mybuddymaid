@@ -3427,6 +3427,7 @@
       "policeVerification": true
     }
   ],
+  "purchasesPaused": true,
   "spaServiceMap": {
     "part-time": "part-time-maid",
     "full-time": "full-time-maid",

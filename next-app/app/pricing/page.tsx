@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TrustPage } from '@/components/seo/TrustPage';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
-import { SERVICES, CITIES, PLANS, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD } from '@/data/seo';
+import { SERVICES, CITIES, PLANS, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD, PURCHASES_PAUSED } from '@/data/seo';
 import { inr } from '@/lib/seo-engine/compose';
 
 export const dynamic = 'force-static';
@@ -26,6 +26,11 @@ export default function PricingPage() {
         The platform fee is a one-time charge for access to our verified pool, the matching and interview process, and the replacement cover described on our{' '}
         <Link href="/replacement-policy">replacement policy</Link> page.
       </p>
+      {PURCHASES_PAUSED && (
+        <p>
+          <strong>Online payment is paused right now.</strong> We complete bookings over WhatsApp or by phone: message us with the plan you want.
+        </p>
+      )}
       <div className="table-wrap">
         <table>
           <thead>

@@ -2,14 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
 import { PLAN_DETAILS } from '../lib/constants';
+// The paused-checkout switch is the owner's, set in next-app/data/seo/plans.ts and exported here.
+import { PURCHASES_PAUSED } from '../lib/serviceability';
 import {
   Crown, Check, Loader2, AlertCircle, Shield, Clock, Users,
   ChevronRight, Zap, Award, HeartHandshake, Mail, Phone,
   Sparkles, MessageCircle, X, PhoneCall
 } from 'lucide-react';
 
-// ── TEMPORARY: Set to true to pause purchases ──
-const PURCHASES_PAUSED = true;
 const SUPPORT_PHONE = '+919355114869';
 const SUPPORT_PHONE_DISPLAY = '+91 93551 14869';
 const supportWhatsApp = (planName) =>
