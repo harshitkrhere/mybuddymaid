@@ -58,3 +58,12 @@ export const PLAN_BY_KEY = new Map(PLANS.map((p) => [p.key, p]));
 export const REFUND_WINDOW_DAYS = 60;
 /** Profiles we must supply within the refund window for the fee to be non-refundable. */
 export const REFUND_PROFILE_THRESHOLD = 3;
+
+/**
+ * Online checkout is paused while the Razorpay account is on hold (docs/seo/ASSUMPTIONS.md #50).
+ * This is the owner's switch and the only one: the site's plan CTAs and notices read it directly,
+ * and the booking app reads it from serviceability.json. Flip it only when every box in
+ * AUDIT/11-PAYMENTS.md "Verification checklist before re-enabling checkout" is ticked, then run
+ * `npm run seo:export-spa` here and `npm run build:spa` from the repo root, and commit both.
+ */
+export const PURCHASES_PAUSED = true;

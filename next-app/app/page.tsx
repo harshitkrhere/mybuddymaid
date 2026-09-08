@@ -19,8 +19,8 @@ import { SalaryEstimator, type EstimatorRow, type EstimatorTier, type EstimatorT
 import { Icon, type IconName } from '@/components/home/HomeIcons';
 import { composeHome, inr, type PageModel } from '@/lib/seo-engine/compose';
 import { metadataFor } from '@/lib/seo-engine/page-metadata';
-import { whatsappUrl } from '@/lib/seo-engine/links';
-import { ALL_LOCALITIES, CITIES, SERVICES, PLANS, REFUND_WINDOW_DAYS } from '@/data/seo';
+import { whatsappUrl, planCtaHref } from '@/lib/seo-engine/links';
+import { ALL_LOCALITIES, CITIES, SERVICES, PLANS, REFUND_WINDOW_DAYS, PURCHASES_PAUSED } from '@/data/seo';
 import type { ServiceSlug } from '@/data/seo/types';
 import { BLOG_POSTS, type BlogPost } from '@/data/blog/posts';
 
@@ -292,6 +292,7 @@ export default function HomePage() {
               <span className="home-badge">Transparent pricing</span>
               <h2>Platform plans</h2>
               <p>One-time platform fee. The helper&apos;s monthly salary is agreed at interview and paid directly to them.</p>
+              {PURCHASES_PAUSED && <p className="home-plan-note">Online payment is paused right now. We complete bookings over WhatsApp or by phone.</p>}
             </header>
             <ul className="home-plans">
               {PLANS.map((p) => (
@@ -311,9 +312,15 @@ export default function HomePage() {
                     <li>{p.policeVerification ? 'Police verification included' : 'Aadhaar and reference checks'}</li>
                     <li>{REFUND_WINDOW_DAYS}-day refund window (see terms)</li>
                   </ul>
-                  <a className={p.popular ? 'btn btn-primary' : 'btn btn-outline'} href={appHref()} {...track('app_click')}>
-                    Choose {p.name}
-                  </a>
+                  {PURCHASES_PAUSED ? (
+                    <a className={p.popular ? 'btn btn-primary' : 'btn btn-outline'} href={planCtaHref(p, true)} target="_blank" rel="noopener" {...track('whatsapp_click')}>
+                      Book {p.name} on WhatsApp
+                    </a>
+                  ) : (
+                    <a className={p.popular ? 'btn btn-primary' : 'btn btn-outline'} href={planCtaHref(p, false)} {...track('app_click')}>
+                      Choose {p.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

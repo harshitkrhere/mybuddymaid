@@ -6,7 +6,7 @@
 // Run: npx tsx scripts/seo/export-serviceability.ts
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { ALL_LOCALITIES, CITIES, PINCODES, PLANS, SERVICES, ZONES } from '../../data/seo';
+import { ALL_LOCALITIES, CITIES, PINCODES, PLANS, PURCHASES_PAUSED, SERVICES, ZONES } from '../../data/seo';
 
 const ROOT = process.cwd();
 const OUT = path.resolve(ROOT, '..', 'app', 'src', 'lib', 'serviceability.json');
@@ -32,6 +32,8 @@ const payload = {
     to: s.pricing.metro.to,
   })),
   plans: PLANS,
+  /** Online checkout switch; the owner's decision, made in data/seo/plans.ts (FIN-U01). */
+  purchasesPaused: PURCHASES_PAUSED,
   /** Booking-app service id -> data/seo service slug. */
   spaServiceMap: {
     'part-time': 'part-time-maid',

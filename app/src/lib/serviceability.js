@@ -13,6 +13,8 @@ export const SERVICES_LIST = data.services;
 export const PLANS = data.plans;
 export const SPA_SERVICE_MAP = data.spaServiceMap;
 export const PINCODES = data.pincodes;
+/** Online checkout switch. The owner's decision, made in next-app/data/seo/plans.ts (FIN-U01). */
+export const PURCHASES_PAUSED = data.purchasesPaused === true;
 
 /** Localities we serve in a city, alphabetically. */
 export function localitiesForCity(citySlug) {
