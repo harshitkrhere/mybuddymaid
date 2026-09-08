@@ -57,6 +57,8 @@ let duringOrderFetch: (() => void) | null = null;
  * repair branch could observe an inactive row for this payment and "restore" it.
  */
 let afterDeactivate: (() => void) | null = null;
+/** Force the order endpoint to answer with this status, to model gateway/config faults. */
+let orderFetchStatus: number | null = null;
 
 function resetWorld(): void {
   userPlans.length = 0;
@@ -65,6 +67,7 @@ function resetWorld(): void {
   orderFetches = 0;
   duringOrderFetch = null;
   afterDeactivate = null;
+  orderFetchStatus = null;
   orders.set(ORDER_ID, {
     id: ORDER_ID,
     amount: GOLD_PAISE,
@@ -163,6 +166,9 @@ globalThis.fetch = async (input: string | URL | Request, init?: RequestInit): Pr
       const fire = duringOrderFetch;
       duringOrderFetch = null;
       fire();
+    }
+    if (orderFetchStatus !== null) {
+      return json({ error: { description: 'forced' } }, orderFetchStatus);
     }
     const order = orders.get(orderMatch[1]);
     return order ? json(order) : json({ error: { description: 'not found' } }, 400);
@@ -576,4 +582,32 @@ Deno.test('a refund landing between the deactivate and the insert is not overrul
   if (row?.is_active !== false) {
     throw new Error('a refunded plan was reactivated by the 23505 repair branch');
   }
+});
+
+Deno.test('a 401 from the Razorpay API is retried, not discarded as "not ours"', async () => {
+  resetWorld();
+  // The webhook registered in live mode while RAZORPAY_KEY_ID/_SECRET are test-mode, or a
+  // rotated key. Answering 200 here would tell Razorpay the event is handled and lose a real
+  // capture forever — and the order lookup is now the only way to bind a payment to a plan.
+  orderFetchStatus = 401;
+
+  const res = await handler(await event(capturedEvent));
+  assertStatus(res, 503, 'a credential fault must ask Razorpay to redeliver');
+  if (userPlans.length !== 0) throw new Error('a plan was created despite an unreadable order');
+});
+
+Deno.test('a 500 from the Razorpay API is retried', async () => {
+  resetWorld();
+  orderFetchStatus = 500;
+  assertStatus(await handler(await event(capturedEvent)), 503);
+});
+
+Deno.test('a 404 from the Razorpay API is acknowledged as not ours', async () => {
+  resetWorld();
+  // A genuine "this order does not exist" IS a verdict, and retrying for 24 hours will not
+  // change it.
+  orderFetchStatus = 404;
+  const res = await handler(await event(capturedEvent));
+  assertStatus(res, 200);
+  if ((await res.json()).handled !== false) throw new Error('an unknown order was reported as handled');
 });

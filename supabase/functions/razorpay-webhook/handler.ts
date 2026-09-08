@@ -306,9 +306,21 @@ async function resolvePlanBinding(payment: Record<string, unknown>): Promise<Bin
   }
 
   if (!orderRes.ok) {
-    // 4xx means the order is not ours or does not exist; 5xx and 429 are worth retrying.
-    const retryable = orderRes.status >= 500 || orderRes.status === 429;
-    return { ok: false, retryable, reason: `order lookup returned ${orderRes.status}` };
+    // Only 400 and 404 mean "this order is not ours". Everything else is our problem, not a
+    // verdict about the payment, and must be retried.
+    //
+    // 401/403 in particular are a configuration fault, not an answer: a webhook registered in
+    // live mode while RAZORPAY_KEY_ID/_SECRET are test-mode credentials, or a rotated key.
+    // Treating those as "not ours" would answer 200 and discard a real capture permanently —
+    // and since the payment.notes shortcut is gone, this lookup is the only way to bind a
+    // payment to a plan, so a misclassification here loses the payment outright.
+    const notOurs = orderRes.status === 400 || orderRes.status === 404;
+    if (!notOurs) {
+      console.error(
+        `[razorpay-webhook] Order lookup for ${orderId} returned ${orderRes.status} — treating as transient. If this is 401/403, the webhook and the API keys are in different Razorpay modes.`,
+      );
+    }
+    return { ok: false, retryable: !notOurs, reason: `order lookup returned ${orderRes.status}` };
   }
 
   const order = await orderRes.json();
