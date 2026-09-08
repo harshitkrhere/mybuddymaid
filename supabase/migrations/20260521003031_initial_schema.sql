@@ -5,10 +5,10 @@
 -- under FIN-DB06 so the repository has an ordered, replayable history. Mark it applied
 -- rather than running it again:  supabase migration repair --status applied 20260521003031
 --
--- Every statement is now idempotent (the CREATE POLICY statements were not), so a replay in
--- timestamp order is survivable. Replaying THIS FILE ALONE is not: it ends with
--- `ALTER TABLE email_logs DISABLE ROW LEVEL SECURITY`, which 20260605055353_security_hardening
--- reverses. Out of order, that leaves every email log readable by any authenticated user.
+-- Every statement is now idempotent (the CREATE POLICY statements were not) and none of them is
+-- destructive, so this file can be replayed, and a fresh environment can be built from
+-- migrations/ in timestamp order. See the note above email_logs for the one line that had to be
+-- removed to make that true.
 -- ═══════════════════════════════════════════════════════
 
 -- 1. PROFILES TABLE (auto-created on signup)
@@ -167,10 +167,11 @@ CREATE TABLE IF NOT EXISTS email_logs (
   created_at TIMESTAMPTZ DEFAULT now()
 );
 
--- No RLS — this is internal server-side logging, not user-facing
--- SUPERSEDED by 20260605055353_security_hardening (H1), which enables RLS here. See the
--- header: this statement is why replaying this file on its own is unsafe.
-ALTER TABLE email_logs DISABLE ROW LEVEL SECURITY;
+-- email_logs is service-role-only. RLS is enabled by 20260605055353_security_hardening (H1).
+-- The original file had `ALTER TABLE email_logs DISABLE ROW LEVEL SECURITY` here. It has been
+-- removed rather than kept: Postgres creates tables with RLS already off, so it was a no-op on
+-- a fresh build and a silent security regression on any replay — it would reopen every
+-- transactional email log to any authenticated user. Removing it is end-state identical.
 
 CREATE INDEX IF NOT EXISTS idx_email_logs_user_id ON email_logs(user_id);
 CREATE INDEX IF NOT EXISTS idx_email_logs_status ON email_logs(status);

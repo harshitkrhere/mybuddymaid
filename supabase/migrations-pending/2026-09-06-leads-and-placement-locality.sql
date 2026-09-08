@@ -1,6 +1,14 @@
 -- ═══════════════════════════════════════════════════════════════
 -- PROPOSAL — NOT APPLIED. Review docs/seo/leads-schema-proposal.md first.
--- Run in Supabase SQL Editor (Dashboard → SQL Editor) after approval.
+--
+-- This file lives in migrations-pending/, NOT migrations/, on purpose: anything under
+-- supabase/migrations/ is applied by the next `supabase db push`, and applying this is Phase 1
+-- task 1.4, not a side effect of running a deploy. To ship it, `git mv` it into ../migrations/
+-- with a FRESH timestamp later than every applied migration — the CLI orders by filename, and a
+-- back-dated file is applied out of order or skipped. It must ship together with the two things
+-- that depend on it: /api/lead's column names (FIN-B03) and, if a customer edit path ever
+-- appears for the new bookings columns, an extension of the GRANT in
+-- 20260908052000_restrict_booking_update_columns.sql.
 --
 -- Two things:
 --   1. the `leads` table the SEO site's lead form has been waiting on
