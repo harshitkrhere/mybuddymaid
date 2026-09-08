@@ -1,11 +1,14 @@
 // supabase/functions/_shared/auth.ts
 // The caller-identity check, in one place — FIN-S01.
 //
-// create-razorpay-order, verify-razorpay-payment and delete-account each carry their own copy
-// of this six-line check. send-package-email and send-booking-email did not, and were deployed
-// that way: both would send a fully attacker-controlled, DKIM-signed email from
-// noreply@mybuddymaid.in to any address on earth. There was no shared middleware, so the check
-// had to be remembered per file, and it was not.
+// send-package-email and send-booking-email were deployed with no caller check at all: both
+// would send a fully attacker-controlled, DKIM-signed email from noreply@mybuddymaid.in to any
+// address on earth. There was no shared middleware, so the check had to be remembered per file,
+// and it was not.
+//
+// Used by send-package-email, send-booking-email and verify-razorpay-payment.
+// create-razorpay-order and delete-account still carry their own inline copies — both correct,
+// just duplicated. Converting them is safe but was out of scope for the phase that added this.
 //
 // WHY THE GATEWAY IS NOT ENOUGH. Supabase's Edge Function gateway rejects a request with no
 // Authorization header, which looks like protection. It also accepts the project ANON KEY —
