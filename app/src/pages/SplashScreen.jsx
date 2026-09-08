@@ -8,18 +8,19 @@ export default function SplashScreen() {
   const { isAuthenticated, loading } = useAuth();
   const [timerDone, setTimerDone] = useState(false);
 
-  // 4-second branding timer
+  // Minimum branding time. It used to be a four-second wait on every entry; the real gate
+  // is auth resolving in the effect below (FIN-B08).
   useEffect(() => {
-    const t = setTimeout(() => setTimerDone(true), 4000);
+    const t = setTimeout(() => setTimerDone(true), 800);
     return () => clearTimeout(t);
   }, []);
 
-  // Navigate after timer — don't get stuck waiting for auth
+  // Navigate once the timer has elapsed AND auth has resolved. Re-evaluated when either
+  // changes, so a session that resolves late is never sent to /home and bounced to /auth.
   useEffect(() => {
-    if (!timerDone) return;
+    if (!timerDone || loading) return;
 
-    // If auth is still loading after 4s, just go to /home — ProtectedRoute handles the rest
-    if (!isAuthenticated && !loading) {
+    if (!isAuthenticated) {
       navigate('/auth', { replace: true });
       return;
     }
@@ -37,7 +38,7 @@ export default function SplashScreen() {
     }
 
     navigate(destination, { replace: true });
-  }, [timerDone]);
+  }, [timerDone, loading, isAuthenticated, navigate, location.state]);
 
   return (
     <div className="splash-screen">

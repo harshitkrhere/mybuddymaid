@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
@@ -19,6 +19,13 @@ export default function ServiceDetailPage() {
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [bookEmail] = useState(user?.email || '');
   const [bookPhone, setBookPhone] = useState(profile?.phone || '');
+  // AuthContext unblocks the app before the profile query resolves, so the initial state
+  // above is almost always empty. Fill from the profile once it arrives, unless the user has
+  // already typed a number (FIN-B05).
+  const phoneTouched = useRef(false);
+  useEffect(() => {
+    if (profile?.phone && !phoneTouched.current) setBookPhone(profile.phone);
+  }, [profile?.phone]);
   // Location comes from the SEO data layer (app/src/lib/serviceability.json), so the
   // form can only ever offer areas we actually serve.
   const [citySlug, setCitySlug] = useState('');
@@ -131,7 +138,7 @@ export default function ServiceDetailPage() {
                   </div>
                   <div className="booking-field">
                     <label><Phone size={14} /> Mobile Number *</label>
-                    <input type="tel" value={bookPhone} onChange={e => setBookPhone(e.target.value)} placeholder="+91 XXXXX XXXXX" required />
+                    <input type="tel" value={bookPhone} onChange={e => { phoneTouched.current = true; setBookPhone(e.target.value); }} placeholder="+91 XXXXX XXXXX" required />
                   </div>
                   <div className="booking-field">
                     <label><MapPin size={14} /> City *</label>
