@@ -124,7 +124,7 @@ export default function ServiceDetailPage() {
             {success ? (
               <div className="booking-success">
                 <CheckCircle2 size={56} color="#34D399" />
-                <h3>Booking Confirmed!</h3>
+                <h3>Request received</h3>
                 <p>We'll contact you shortly to finalize details.</p>
                 <p className="booking-success-redirect">Redirecting to bookings...</p>
               </div>
