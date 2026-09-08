@@ -29,7 +29,7 @@ const PLATFORM_FEATURES = [
 ];
 
 export default function PricingPage() {
-  const { user, profile, userPlan, purchasePlan, refreshUserPlan } = useAuth();
+  const { user, profile, userPlan, refreshUserPlan } = useAuth();
   const [purchasing, setPurchasing] = useState(null);
   const [payError, setPayError] = useState('');
   const buyEmail = user?.email || '';

@@ -36,7 +36,7 @@ export default function ProfilePage() {
       await updateProfile({ full_name: fullName, phone, email: authEmail, city: state });
       setSaveMsg('Profile saved!');
       setTimeout(() => setSaveMsg(''), 3000);
-    } catch (err) {
+    } catch {
       setSaveMsg('Unable to save. Please try again.');
     } finally {
       setSaving(false);
