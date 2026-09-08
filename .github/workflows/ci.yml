@@ -1,0 +1,121 @@
+# CI for the three sub-projects (FIN-T02). Every check here also runs locally; the list is
+# in AUDIT/20-IMPLEMENTATION-PROMPT.md under "Checks that must pass before every commit".
+#
+# The booking-app job needs three repository variables (Settings > Secrets and variables >
+# Actions > Variables): VITE_SUPABASE_URL, VITE_SUPABASE_ANON_KEY and VITE_RZP_KEY, with the
+# same public values as app/.env. They are inlined into the bundle at build time, so without
+# them a fresh build can never match the committed one.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  site:
+    name: next-app — tsc, lint, tests, SEO gates
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: next-app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: next-app/package-lock.json
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npm run lint
+      - run: npm test
+      - run: npm run seo:validate
+      - run: npm run seo:gate
+
+  booking-app:
+    name: app — lint, tests, committed bundle is current
+    runs-on: ubuntu-latest
+    env:
+      VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+      VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+      VITE_RZP_KEY: ${{ vars.VITE_RZP_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+        working-directory: app
+      - run: npm run lint
+        working-directory: app
+      - run: npm test
+        working-directory: app
+      # Vercel only ever runs `next build`; the booking app is served from the committed
+      # next-app/public/_spa. If someone changes app/src and forgets to rebuild, production
+      # silently keeps the old app (FIN-E02). Rebuild with the same script developers use and
+      # fail if anything under public/_spa would change.
+      - name: Rebuild the bundle and compare with next-app/public/_spa
+        run: |
+          if [ -z "$VITE_SUPABASE_URL" ] || [ -z "$VITE_SUPABASE_ANON_KEY" ]; then
+            echo "::error::Repository variables VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY are not set, so the bundle cannot be rebuilt for comparison. Add them (public values, from app/.env) under Settings > Secrets and variables > Actions > Variables."
+            exit 1
+          fi
+          node scripts/build-spa.mjs
+          git add -A next-app/public/_spa
+          if ! git diff --cached --quiet -- next-app/public/_spa; then
+            git --no-pager diff --cached --stat -- next-app/public/_spa
+            echo "::error::next-app/public/_spa is stale. Run 'npm run build:spa' from the repo root and commit the result."
+            exit 1
+          fi
+          echo "public/_spa matches a fresh build."
+
+  functions:
+    name: supabase/functions — deno check, tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      # The six deployed functions, by name. send-plan-email is deliberately absent: it is
+      # not deployed, has no caller, and fails deno check (FIN-S12).
+      - name: Type-check the deployed functions
+        run: |
+          for f in create-razorpay-order verify-razorpay-payment delete-account send-package-email send-booking-email razorpay-webhook; do
+            deno check --no-lock "supabase/functions/$f/index.ts"
+          done
+      # --no-check because the esm.sh supabase-js chain pulls an unresolvable npm:@types/node
+      # reference; types are gated by the step above. Everything is stubbed at the fetch
+      # boundary, so nothing here sends an email or touches a database.
+      - run: deno test --no-lock --no-check --allow-env --allow-net supabase/functions/__tests__/
+
+  # The RLS suite drives two throwaway users through a REAL Supabase project and deletes them
+  # again. There is no staging project, so it runs only when someone triggers it by hand, and
+  # only if the three secrets have been added.
+  rls:
+    name: RLS suite (manual — creates throwaway users on the target project)
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ] || [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "::error::Add the repository secrets SUPABASE_URL, SUPABASE_ANON_KEY (the sb_publishable_ key) and SUPABASE_SERVICE_ROLE_KEY (the sb_secret_ key) before running this job."
+            exit 1
+          fi
+          deno test --no-lock --no-check --allow-env --allow-net supabase/__tests__/rls.test.ts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}

@@ -92,15 +92,17 @@ to `main`.
 ## Checks that must pass before every commit
 
 ```
-cd next-app && npx tsc --noEmit          # currently clean — keep it clean
-cd next-app && npm test                  # currently 7/7 — keep it green
+cd next-app && npx tsc --noEmit          # clean; keep it clean
+cd next-app && npm run lint              # 0 errors since Phase 1b (4 warnings); keep it at 0
+cd next-app && npm test                  # 13/13; keep it green
 cd next-app && npm run seo:validate      # data-layer gate; prebuild runs this too
 ```
 
 If you touched `app/src/**`, also:
 ```
-cd app && npx vite build
-npm run build:spa      # from the repo root, then COMMIT next-app/public/_spa
+cd app && npm run lint  # 0 errors since Phase 1b
+cd app && npm test      # vitest, 18/18
+npm run build:spa       # from the repo root, then COMMIT next-app/public/_spa; CI diffs it
 ```
 
 If you touched `supabase/functions/**`:
@@ -177,7 +179,7 @@ copies of that check.
 
 **Testing.** Deno is not installed; use `npx deno@2`. `deno test` needs `--no-check` because the
 esm.sh supabase-js chain pulls an unresolvable `npm:@types/node` reference; types are gated
-separately by `deno check`. There are 47 assertions in `supabase/functions/__tests__/` (all
+separately by `deno check`. The booking app has a vitest runner (`cd app && npm test`, 18 assertions, jsdom component tests). There are 48 assertions in `supabase/functions/__tests__/` (all
 offline, everything stubbed at the `fetch` boundary) and an RLS suite in `supabase/__tests__/`
 that needs a live project and creates throwaway users.
 
@@ -243,6 +245,8 @@ Paste the matching card under the prompt above.
 Findings: FIN-B01, FIN-U01, FIN-B02, FIN-B09, FIN-B03, FIN-B06, FIN-S06, FIN-DB03, FIN-U02,
 FIN-API01, FIN-API02, FIN-T01, FIN-T02, FIN-DEP03, FIN-B04, FIN-B05, FIN-U03, FIN-C07, FIN-B07,
 FIN-B08, FIN-PF01, FIN-C01, FIN-C02, FIN-SEO04.
+
+**Status 2026-09-08:** 1a merged to main in `ec9873c0`. 1b done on `fix/phase-1b-ci`.
 
 This is the biggest phase in the plan. **Do it in four separate sessions**, one per group below,
 merging between them. Do not attempt it in one pass.
@@ -330,23 +334,27 @@ git rev-parse --abbrev-ref HEAD        # expect a fix/ branch, not main
 git status --short                     # expect clean
 ls AUDIT/ | wc -l                      # expect 21
 cd next-app && npx tsc --noEmit        # expect clean
-cd next-app && npm test                # expect 7 pass / 0 fail
+cd next-app && npm run lint            # expect 0 errors
+cd next-app && npm test                # expect 13 pass / 0 fail
+cd app && npm run lint && npm test     # expect 0 errors; 18 pass
 npx deno@2 test --no-lock --no-check --allow-env --allow-net supabase/functions/__tests__/
-                                       # expect 47 passed / 0 failed
+                                       # expect 48 passed / 0 failed
 npx supabase migration list            # expect 5 migrations, all present on remote
 npx supabase functions list            # expect 6 ACTIVE; razorpay-webhook verify_jwt=false;
                                        # send-plan-email absent
 ```
 
-Baseline after Phase 0 — commit `e9d8d00d`:
+Baseline after Phase 1b, 2026-09-08 (after Phase 0 it was 7 and 47 tests and 119 lint errors):
 
 | Check | Baseline |
 |---|---|
 | `tsc --noEmit` | clean |
-| `npm test` (next-app) | 7 pass / 0 fail |
-| `deno test` (functions) | 47 pass / 0 fail |
+| `npm test` (next-app) | 13 pass / 0 fail |
+| `npm test` (app, vitest) | 18 pass / 0 fail |
+| `deno test` (functions) | 48 pass / 0 fail |
 | RLS suite | 9 steps pass (needs a live project) |
-| `npm run lint` | ~1,259 problems / 119 errors (65 in source, 64 deliberate) |
+| `npm run lint` (both projects) | 0 errors; 4 warnings (gated in CI since Phase 1b) |
+| CI | `.github/workflows/ci.yml`: site, booking-app (bundle diff), functions; RLS suite on manual dispatch |
 | Gated SEO pages | 2,513 composed · 2,489 indexable · 24 noindexed |
 | Edge functions live | 6 of 7 (`send-plan-email` deliberately not deployed) |
 | Applied migrations | 5 |
