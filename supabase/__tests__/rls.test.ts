@@ -13,7 +13,12 @@
 //
 // Run:
 //   SUPABASE_URL=... SUPABASE_ANON_KEY=... SUPABASE_SERVICE_ROLE_KEY=... \
-//     npx deno@2 test --allow-env --allow-net supabase/__tests__/rls.test.ts
+//     npx deno@2 test --no-lock --no-check --allow-env --allow-net supabase/__tests__/rls.test.ts
+//
+// --no-check because deno test type-checks the runtime module graph, and esm.sh's supabase-js
+// chain pulls a transitive `npm:@types/node` reference that will not resolve without a
+// node_modules directory. `deno check supabase/__tests__/rls.test.ts` resolves the .d.ts graph
+// instead and does pass, so types are still gated — just by a separate command.
 //
 // The "cannot change their own booking's status" step is the FIN-S04 assertion. It FAILS
 // against the schema as shipped in 20260605055353_security_hardening, where the column

@@ -10,7 +10,7 @@
 // the point: the defect being tested is "this function will email anyone", and verifying that
 // by actually emailing someone is not an option.
 //
-// Run:  npx deno@2 test --no-lock --allow-env --allow-net supabase/functions/__tests__/
+// Run:  npx deno@2 test --no-lock --no-check --allow-env --allow-net supabase/functions/__tests__/
 //
 // The stub must be installed before the handler modules are imported, because
 // send-booking-email builds its Supabase client at module scope.
