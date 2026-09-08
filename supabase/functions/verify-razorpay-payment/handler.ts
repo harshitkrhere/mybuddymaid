@@ -56,6 +56,9 @@ const PLAN_DETAILS: Record<string, { name: string; pricePaise: number; durationM
 // a single blip should not strand somebody who has already been charged.
 const RAZORPAY_TIMEOUT_MS = 8000;
 
+// Shape of a Razorpay identifier (`pay_…`, `order_…`).
+const RAZORPAY_ID = /^[A-Za-z0-9_]{1,64}$/;
+
 // HMAC SHA256 verification using Web Crypto API (Deno-native)
 async function verifySignature(
   orderId: string,
@@ -167,6 +170,13 @@ export async function handler(req: Request): Promise<Response> {
       return jsonResponse({ error: 'Missing required payment fields' }, 400);
     }
 
+    // Razorpay ids are `pay_`/`order_` plus alphanumerics. Asserting that here keeps the id safe
+    // to interpolate into the PostgREST `.or()` filter below, where a comma or dot would
+    // otherwise be read as filter syntax rather than as a value.
+    if (!RAZORPAY_ID.test(razorpay_payment_id) || !RAZORPAY_ID.test(razorpay_order_id)) {
+      return jsonResponse({ error: 'Malformed payment identifiers' }, 400);
+    }
+
     // ── Has this payment already been redeemed? (FIN-S02) ──
     // FIRST, before any write. uq_user_plans_rzp_payment makes a second insert impossible; the
     // point of checking here is that a replay returns the customer's existing plan calmly
@@ -189,6 +199,19 @@ export async function handler(req: Request): Promise<Response> {
         );
         return jsonResponse({ error: 'Payment already redeemed' }, 409);
       }
+      if (existing.is_active === false) {
+        // The payment is spent but the plan it bought has since been deactivated — a refund, or
+        // a later purchase superseding it. Replying "already active" would be untrue, and this
+        // is exactly the state a human needs to look at.
+        console.error(
+          `[verify-razorpay-payment] MANUAL RECONCILE REQUIRED — payment ${razorpay_payment_id} is redeemed as plan ${existing.id} for user ${user.id}, but that plan is not active`,
+        );
+        return jsonResponse(
+          { error: 'This payment has already been used and that plan is no longer active. Please contact support.' },
+          409,
+        );
+      }
+
       return jsonResponse({
         success: true,
         plan: existing,
@@ -295,11 +318,23 @@ export async function handler(req: Request): Promise<Response> {
     // check that can fail has already run, so the only remaining failure is the insert itself,
     // which is handled below. There is no transaction across two PostgREST calls, so the
     // window is real but as narrow as it can be made without a SECURITY DEFINER rpc.
+    //
+    // The `.or()` excludes the row for THIS payment, and it is load-bearing. razorpay-webhook is
+    // racing this function for the same capture, and this function spends most of its runtime in
+    // two cross-region calls to api.razorpay.com. Without the exclusion, a webhook insert landing
+    // in that window would be switched off here, the insert below would hit 23505, and the 23505
+    // branch would hand the browser `success: true` over a plan with is_active = false — paid
+    // customer, no active plan, and nothing to recover it, since the webhook already answered
+    // 200 and Razorpay will not redeliver.
+    //
+    // `neq` alone would not do: in SQL, NULL <> 'x' is NULL, so a legacy row with no payment id
+    // would be excluded from the deactivate and left active.
     const { error: deactivateError } = await supabaseAdmin
       .from('user_plans')
       .update({ is_active: false })
       .eq('user_id', user.id)
-      .eq('is_active', true);
+      .eq('is_active', true)
+      .or(`razorpay_payment_id.is.null,razorpay_payment_id.neq.${razorpay_payment_id}`);
 
     if (deactivateError) {
       // Previously this error was discarded entirely — no binding, no check (FIN-DB02).
@@ -339,6 +374,15 @@ export async function handler(req: Request): Promise<Response> {
           .maybeSingle();
 
         if (winner) {
+          // The webhook got there first. The deactivate above excluded this payment id, so we
+          // did not touch this row — whatever is_active says is somebody else's correct
+          // decision, and reporting success over an inactive one would be a lie.
+          if (winner.is_active === false) {
+            console.error(
+              `[verify-razorpay-payment] MANUAL RECONCILE REQUIRED — payment ${razorpay_payment_id} was activated concurrently as plan ${winner.id} and is already inactive`,
+            );
+            return jsonResponse({ error: 'Your plan could not be confirmed. Please contact support.' }, 409);
+          }
           return jsonResponse({ success: true, plan: winner, message: 'Plan already active' });
         }
       }

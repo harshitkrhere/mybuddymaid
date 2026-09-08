@@ -69,6 +69,9 @@ const PLAN_DETAILS: Record<string, { name: string; pricePaise: number; durationM
 // Razorpay expects an answer within seconds. One outbound call, capped well inside that.
 const ORDER_FETCH_TIMEOUT_MS = 3000;
 
+// Shape of a Razorpay identifier (`pay_…`, `order_…`).
+const RAZORPAY_ID = /^[A-Za-z0-9_]{1,64}$/;
+
 // ─── Signature verification ──────────────────────────────────────────────────────────────────
 
 // HMAC-SHA256 over the RAW request bytes. Razorpay signs exactly the bytes it sent, so this
@@ -149,14 +152,25 @@ async function activatePlan(
     return { status: 'already', planId: String(existing.id) };
   }
 
-  // ── 2. Deactivate any other active plan for this user ──
+  // ── 2. Deactivate any OTHER active plan for this user ──
   // Same order verify-razorpay-payment uses, so whichever path wins the race behaves the same.
   // Required by uq_user_plans_one_active.
+  //
+  // The `.or()` is load-bearing, not tidiness. Without it, this update matches the row for THIS
+  // payment if the other activation path inserted it between step 1 and here — we would switch
+  // off the plan we are about to conclude already exists, and the caller would report success
+  // over a deactivated plan. Excluding it also means we can never need to "repair" a row we
+  // turned off, which is what makes the 23505 branch below safe: it has no reactivation logic,
+  // so it cannot resurrect a plan that a refund legitimately deactivated.
+  //
+  // `neq` alone would not do: in SQL, NULL <> 'x' is NULL, so a legacy row with no payment id
+  // would be excluded from the deactivate and left active.
   const { error: deactivateError } = await supabaseAdmin
     .from('user_plans')
     .update({ is_active: false })
     .eq('user_id', args.userId)
-    .eq('is_active', true);
+    .eq('is_active', true)
+    .or(`razorpay_payment_id.is.null,razorpay_payment_id.neq.${args.paymentId}`);
 
   if (deactivateError) return { status: 'retry', reason: `deactivate failed: ${deactivateError.message}` };
 
@@ -198,30 +212,19 @@ async function activatePlan(
 
     if (winner) {
       // uq_user_plans_rzp_payment: verify-razorpay-payment, or a concurrent retry of this
-      // webhook, wrote the row between step 1 and step 3. That is the desired outcome.
-      //
-      // One repair: if their insert landed before our step-2 update, we just deactivated the
-      // row they had made active. Safe to undo, because step 1 proved this row did not exist
-      // moments ago — it is too young to have been refunded.
-      if (winner.is_active === false) {
-        const { error: repairError } = await supabaseAdmin
-          .from('user_plans')
-          .update({ is_active: true })
-          .eq('id', winner.id);
-        if (repairError) {
-          console.error(
-            `[razorpay-webhook] MANUAL RECONCILE REQUIRED — could not reactivate raced plan ${winner.id} for payment ${args.paymentId}: ${repairError.message}`,
-          );
-        }
-      }
+      // webhook, wrote the row between step 1 and step 3. That is the desired outcome, and step
+      // 2 excluded this payment id, so we did not touch it. Whatever is_active says now is
+      // somebody else's correct decision — a refund, or a later purchase superseding it — and
+      // this handler must not overrule it.
       return { status: 'already', planId: String(winner.id) };
     }
 
-    // uq_user_plans_one_active: a different active plan blocks this user. Retrying hits the
-    // same wall for 24 hours and then the event is gone, so acknowledge and shout instead.
+    // uq_user_plans_one_active: another active plan appeared for this user between step 2 and
+    // step 3. That is a race, not a permanent state — the other writer's row may itself be
+    // superseded — so ask Razorpay to redeliver rather than acknowledging and losing the event.
     return {
-      status: 'conflict',
-      reason: `one-active-plan conflict: ${insertError.details ?? insertError.message}`,
+      status: 'retry',
+      reason: `one-active-plan contention: ${insertError.details ?? insertError.message}`,
     };
   }
 
@@ -250,11 +253,15 @@ type BindingResult =
 /**
  * Find which user and plan a payment belongs to.
  *
- * user_id and plan_name are written into the ORDER's notes by create-razorpay-order. The
- * payment entity has a `notes` field of its own, but it is populated from the notes passed to
- * Razorpay Checkout — and PricingPage.jsx passes no notes option at all. So the payment's notes
- * are treated as an optimisation that will usually be empty, and the order is fetched, which is
- * where the binding data is known to have been written.
+ * ALWAYS from the ORDER's notes, which create-razorpay-order writes server-side. Never from
+ * `payment.notes`.
+ *
+ * That distinction is the whole security of this function. Razorpay Checkout accepts a `notes`
+ * option in its options object, and those notes are attached to the PAYMENT entity — and that
+ * object is browser JavaScript. A buyer holding the key_id and order_id this system hands them
+ * can pay a ₹4,999 Silver order while passing `notes: {user_id: <own>, plan_name: 'diamond'}`,
+ * or somebody else's user_id. verify-razorpay-payment refuses that because it reads the order;
+ * this function must too, or FIN-P01 is closed on one activation path and open on the other.
  *
  * The two failure modes are kept apart deliberately. A payment whose order genuinely has no
  * plan notes is not ours — a payment link, a manual charge — and must be acknowledged, or
@@ -274,12 +281,11 @@ async function resolvePlanBinding(payment: Record<string, unknown>): Promise<Bin
     return null;
   };
 
-  const direct = fromNotes(payment.notes, 'payment.notes');
-  if (direct) return { ok: true, binding: direct };
-
   const orderId = typeof payment.order_id === 'string' ? payment.order_id : '';
   if (!orderId) {
-    return { ok: false, retryable: false, reason: 'payment has no order_id and no usable notes' };
+    // No order means nothing server-side ever recorded who this payment is for. There is no
+    // safe fallback: payment.notes is caller-controlled.
+    return { ok: false, retryable: false, reason: 'payment has no order_id' };
   }
 
   const rzpKeyId = Deno.env.get('RAZORPAY_KEY_ID');
@@ -325,6 +331,16 @@ async function handlePaymentCaptured(
   }
 
   const paymentId = String(payment.id);
+
+  // Razorpay ids are `pay_` plus alphanumerics. Asserting that keeps the id safe to interpolate
+  // into the PostgREST `.or()` filter in activatePlan, where a comma or dot would otherwise be
+  // read as filter syntax rather than as a value. The body is signature-verified by this point,
+  // so this is belt-and-braces rather than a trust boundary.
+  if (!RAZORPAY_ID.test(paymentId)) {
+    console.error(`[razorpay-webhook] payment.captured with a malformed payment id: ${paymentId}`);
+    return jsonResponse({ received: true, handled: false, reason: 'malformed payment id' });
+  }
+
   const resolved = await resolvePlanBinding(payment);
 
   if (!resolved.ok) {
@@ -350,10 +366,28 @@ async function handlePaymentCaptured(
     return jsonResponse({ received: true, handled: false, reason: 'unknown plan' });
   }
 
+  // Refuse on an amount mismatch rather than warn and activate. The captured amount is the one
+  // number that cannot be forged, so if it disagrees with PLAN_DETAILS either a price changed
+  // between order creation and capture (FIN-P05 — the prices are hand-mirrored across three
+  // files) or something is wrong. Granting a plan the customer did not pay for, or a smaller one
+  // than they did, both need a human. 200 so Razorpay stops retrying; the log is the record.
   if (typeof payment.amount === 'number' && payment.amount !== plan.pricePaise) {
     console.error(
-      `[razorpay-webhook] Amount mismatch on payment ${paymentId}: captured ${payment.amount}, ${binding.planName} costs ${plan.pricePaise}. Activating with the captured amount — check whether a price changed mid-flight (FIN-P05).`,
+      `[razorpay-webhook] MANUAL RECONCILE REQUIRED — amount mismatch on payment ${paymentId}: captured ${payment.amount}, ${binding.planName} costs ${plan.pricePaise}. NOT activated. Check whether a price changed mid-flight (FIN-P05).`,
     );
+    return jsonResponse({ received: true, handled: false, reason: 'amount mismatch' });
+  }
+
+  // A payment refunded before this event was delivered must not grant a plan. Razorpay still
+  // reports status "captured" on a refunded payment; only amount_refunded moves. This is the
+  // ordering handleRefundProcessed cannot cover: a refund that arrives before the plan row
+  // exists finds nothing to revoke, and without this check a retried capture then grants it.
+  const amountRefunded = typeof payment.amount_refunded === 'number' ? payment.amount_refunded : 0;
+  if (amountRefunded > 0) {
+    console.log(
+      `[razorpay-webhook] payment ${paymentId} has been refunded (${amountRefunded} paise) — not activating`,
+    );
+    return jsonResponse({ received: true, handled: false, reason: 'already refunded' });
   }
 
   const result = await activatePlan(supabaseAdmin, {

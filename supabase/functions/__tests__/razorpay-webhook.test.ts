@@ -47,12 +47,24 @@ let nextPlanId = 1;
 const orders = new Map<string, Record<string, unknown>>();
 /** Set true to assert the handler never reached the Razorpay API. */
 let orderFetches = 0;
+/**
+ * Fired when the handler fetches the order. That call is where a concurrent
+ * verify-razorpay-payment activation for the same capture realistically lands.
+ */
+let duringOrderFetch: (() => void) | null = null;
+/**
+ * Fired immediately after the deactivate PATCH is applied — the one window in which the old
+ * repair branch could observe an inactive row for this payment and "restore" it.
+ */
+let afterDeactivate: (() => void) | null = null;
 
 function resetWorld(): void {
   userPlans.length = 0;
   nextPlanId = 1;
   orders.clear();
   orderFetches = 0;
+  duringOrderFetch = null;
+  afterDeactivate = null;
   orders.set(ORDER_ID, {
     id: ORDER_ID,
     amount: GOLD_PAISE,
@@ -85,12 +97,25 @@ globalThis.fetch = async (input: string | URL | Request, init?: RequestInit): Pr
     }
 
     if (method === 'PATCH') {
+      // The deactivate carries an `or=(razorpay_payment_id.is.null,razorpay_payment_id.neq.X)`
+      // filter excluding the payment being activated. Honouring it is what makes the race test
+      // below mean anything.
       const userId = paramOf(url, 'user_id');
       const planId = paramOf(url, 'id');
+      const excluded = new URL(url).searchParams
+        .get('or')
+        ?.match(/razorpay_payment_id\.neq\.([^,)]+)/)?.[1] ?? null;
+
       for (const row of userPlans) {
+        if (excluded && row.razorpay_payment_id === excluded) continue;
         if ((userId && row.user_id === userId && row.is_active) || (planId && row.id === planId)) {
           Object.assign(row, JSON.parse(String(init?.body ?? '{}')));
         }
+      }
+      if (afterDeactivate) {
+        const fire = afterDeactivate;
+        afterDeactivate = null;
+        fire();
       }
       return new Response(null, { status: 204 });
     }
@@ -134,6 +159,11 @@ globalThis.fetch = async (input: string | URL | Request, init?: RequestInit): Pr
   const orderMatch = url.match(/^https:\/\/api\.razorpay\.com\/v1\/orders\/(.+)$/);
   if (orderMatch) {
     orderFetches++;
+    if (duringOrderFetch) {
+      const fire = duringOrderFetch;
+      duringOrderFetch = null;
+      fire();
+    }
     const order = orders.get(orderMatch[1]);
     return order ? json(order) : json({ error: { description: 'not found' } }, 400);
   }
@@ -366,4 +396,184 @@ Deno.test('payment.failed is recorded and writes nothing', async () => {
   const res = await handler(await event(failed));
   assertStatus(res, 200);
   if (userPlans.length !== 0) throw new Error('a failed payment created a plan');
+});
+
+// ─── The binding must come from the order, never from the payment ────────────────────────────
+// Razorpay Checkout accepts a `notes` option, and those notes land on the PAYMENT entity. That
+// options object is browser JavaScript, so payment.notes is attacker-controlled. The order's
+// notes are written server-side by create-razorpay-order and are the only trustworthy source.
+
+Deno.test('forged payment.notes cannot choose the plan (FIN-P01)', async () => {
+  resetWorld();
+  const forged = {
+    event: 'payment.captured',
+    payload: {
+      payload: undefined,
+      payment: {
+        entity: {
+          ...capturedEvent.payload.payment.entity,
+          // Paid for Silver-priced Gold, asking for Diamond: 18 months and 10 replacements.
+          notes: { user_id: BUYER_ID, plan_name: 'diamond', user_email: 'buyer@example.test' },
+        },
+      },
+    },
+  };
+
+  const res = await handler(await event(forged));
+  assertStatus(res, 200);
+
+  if (userPlans.length !== 1) throw new Error(`expected one plan, got ${userPlans.length}`);
+  if (userPlans[0].plan_name !== 'gold') {
+    throw new Error(`granted "${userPlans[0].plan_name}" — the ORDER says gold, and only the order is trustworthy`);
+  }
+  if (userPlans[0].replacements_total !== 5) {
+    throw new Error('replacements came from the forged notes, not the order');
+  }
+  if (orderFetches !== 1) {
+    throw new Error('the handler took the binding from payment.notes and never fetched the order');
+  }
+});
+
+Deno.test('forged payment.notes cannot choose the user (FIN-P01)', async () => {
+  resetWorld();
+  const victim = 'cccccccc-0000-4000-8000-000000000003';
+  // A victim with an active plan, which the forged user_id would otherwise deactivate.
+  userPlans.push({
+    id: 'plan_victim',
+    user_id: victim,
+    plan_name: 'gold',
+    amount_paid: GOLD_PAISE,
+    razorpay_payment_id: 'pay_victim_1',
+    replacements_total: 5,
+    replacements_used: 0,
+    expires_at: '2027-01-01T00:00:00.000Z',
+    is_active: true,
+    email: 'victim@example.test',
+    phone: '',
+  });
+
+  const forged = {
+    event: 'payment.captured',
+    payload: {
+      payment: {
+        entity: {
+          ...capturedEvent.payload.payment.entity,
+          notes: { user_id: victim, plan_name: 'gold' },
+        },
+      },
+    },
+  };
+
+  assertStatus(await handler(await event(forged)), 200);
+
+  const granted = userPlans.find((p) => p.razorpay_payment_id === PAYMENT_ID);
+  if (granted?.user_id !== BUYER_ID) {
+    throw new Error(`plan was attributed to ${granted?.user_id}, not the order's user`);
+  }
+  const victimPlan = userPlans.find((p) => p.id === 'plan_victim');
+  if (victimPlan?.is_active !== true) {
+    throw new Error("the forged user_id deactivated the victim's plan");
+  }
+});
+
+Deno.test('an amount mismatch is refused, not warned about', async () => {
+  resetWorld();
+  const underpaid = {
+    event: 'payment.captured',
+    payload: { payment: { entity: { ...capturedEvent.payload.payment.entity, amount: 100 } } },
+  };
+
+  const res = await handler(await event(underpaid));
+  assertStatus(res, 200);
+  if ((await res.json()).handled !== false) throw new Error('an underpaid capture was reported as handled');
+  if (userPlans.length !== 0) throw new Error('a plan was granted for ₹1 against a ₹5,999 order');
+});
+
+Deno.test('a capture that has already been refunded does not activate (FIN-P03)', async () => {
+  resetWorld();
+  // A refund arriving before the plan row exists finds nothing to revoke, so the retried capture
+  // is the only place this can be caught.
+  const refunded = {
+    event: 'payment.captured',
+    payload: {
+      payment: { entity: { ...capturedEvent.payload.payment.entity, amount_refunded: GOLD_PAISE } },
+    },
+  };
+
+  assertStatus(await handler(await event(refunded)), 200);
+  if (userPlans.length !== 0) throw new Error('a refunded payment was granted a plan');
+});
+
+Deno.test('a concurrent activation of the same payment is not deactivated', async () => {
+  resetWorld();
+  // verify-razorpay-payment wins while this handler is fetching the order.
+  duringOrderFetch = () => {
+    userPlans.push({
+      id: 'plan_from_verify',
+      user_id: BUYER_ID,
+      plan_name: 'gold',
+      amount_paid: GOLD_PAISE,
+      razorpay_payment_id: PAYMENT_ID,
+      replacements_total: 5,
+      replacements_used: 0,
+      expires_at: '2027-09-01T00:00:00.000Z',
+      is_active: true,
+      email: 'buyer@example.test',
+      phone: '',
+    });
+  };
+
+  assertStatus(await handler(await event(capturedEvent)), 200);
+
+  if (userPlans.length !== 1) throw new Error(`expected one plan, got ${userPlans.length}`);
+  if (userPlans[0].is_active !== true) {
+    throw new Error("this handler deactivated the plan the other path had just activated");
+  }
+});
+
+Deno.test('a refunded plan is not resurrected by a redelivered capture racing the refund', async () => {
+  resetWorld();
+  assertStatus(await handler(await event(capturedEvent)), 200);
+  assertStatus(await handler(await event(refundEvent)), 200);
+  if (userPlans[0].is_active !== false) throw new Error('setup failed: the refund did not revoke');
+
+  // A duplicate delivery of the original capture arrives after the refund. The old repair branch
+  // would have seen an inactive row it believed it had just deactivated, and set it back to true.
+  assertStatus(await handler(await event(capturedEvent)), 200);
+  if (userPlans[0].is_active !== false) {
+    throw new Error('a redelivered capture reactivated a refunded plan');
+  }
+});
+
+Deno.test('a refund landing between the deactivate and the insert is not overruled', async () => {
+  resetWorld();
+  // The interleaving the removed repair branch got wrong. This delivery finds no row at step 1,
+  // then during its own deactivate another writer inserts the row for this payment AND a refund
+  // immediately revokes it. The insert then hits 23505 and re-reads an inactive row.
+  //
+  // The old code assumed such a row could only be inactive because IT had just deactivated it
+  // ("too young to have been refunded") and set is_active back to true — handing a refunded
+  // customer their plan back and logging it as a no-op.
+  afterDeactivate = () => {
+    userPlans.push({
+      id: 'plan_refunded_mid_flight',
+      user_id: BUYER_ID,
+      plan_name: 'gold',
+      amount_paid: GOLD_PAISE,
+      razorpay_payment_id: PAYMENT_ID,
+      replacements_total: 5,
+      replacements_used: 0,
+      expires_at: '2027-09-01T00:00:00.000Z',
+      is_active: false,
+      email: 'buyer@example.test',
+      phone: '',
+    });
+  };
+
+  assertStatus(await handler(await event(capturedEvent)), 200);
+
+  const row = userPlans.find((p) => p.id === 'plan_refunded_mid_flight');
+  if (row?.is_active !== false) {
+    throw new Error('a refunded plan was reactivated by the 23505 repair branch');
+  }
 });

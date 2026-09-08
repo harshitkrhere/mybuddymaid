@@ -62,6 +62,12 @@ const orders = new Map<string, Record<string, unknown>>();
 const payments = new Map<string, Record<string, unknown>>();
 /** Paths the stub should answer with a 500, to simulate a gateway outage. */
 const razorpayOutage = new Set<string>();
+/**
+ * Fired when the handler calls the Razorpay API. The handler spends most of its runtime in
+ * those two cross-region calls, so this is where a concurrent razorpay-webhook activation for
+ * the same capture realistically lands — which makes it the honest place to simulate the race.
+ */
+let duringRazorpayCall: (() => void) | null = null;
 
 function resetWorld(): void {
   userPlans.length = 0;
@@ -69,6 +75,7 @@ function resetWorld(): void {
   orders.clear();
   payments.clear();
   razorpayOutage.clear();
+  duringRazorpayCall = null;
 
   orders.set(ORDER_ID, {
     id: ORDER_ID,
@@ -123,10 +130,18 @@ globalThis.fetch = async (input: string | URL | Request, init?: RequestInit): Pr
     }
 
     if (method === 'PATCH') {
-      // The only PATCH either function issues is the deactivate.
+      // The only PATCH the function issues is the deactivate. It carries an
+      // `or=(razorpay_payment_id.is.null,razorpay_payment_id.neq.X)` filter excluding the
+      // payment being redeemed; honouring it here is what makes the race test below mean
+      // anything.
       const userId = paramOf(url, 'user_id');
       const planId = paramOf(url, 'id');
+      const excluded = new URL(url).searchParams
+        .get('or')
+        ?.match(/razorpay_payment_id\.neq\.([^,)]+)/)?.[1] ?? null;
+
       for (const row of userPlans) {
+        if (excluded && row.razorpay_payment_id === excluded) continue;
         if ((userId && row.user_id === userId && row.is_active) || (planId && row.id === planId)) {
           Object.assign(row, JSON.parse(String(init?.body ?? '{}')));
         }
@@ -175,6 +190,11 @@ globalThis.fetch = async (input: string | URL | Request, init?: RequestInit): Pr
   // ── Razorpay ──
   if (url.startsWith('https://api.razorpay.com/v1/')) {
     const path = url.replace('https://api.razorpay.com/v1', '');
+    if (duringRazorpayCall) {
+      const fire = duringRazorpayCall;
+      duringRazorpayCall = null;
+      fire();
+    }
     if (razorpayOutage.has(path)) return json({ error: { description: 'server error' } }, 500);
 
     const orderMatch = path.match(/^\/orders\/(.+)$/);
@@ -383,4 +403,124 @@ Deno.test("another user's payment_id is refused (FIN-S02)", async () => {
   assertStatus(res, 409);
   if (userPlans.length !== 1) throw new Error('a second plan was created from one payment');
   if (activePlansFor(OTHER.id).length !== 0) throw new Error('the other account received a plan');
+});
+
+// ─── Races against razorpay-webhook ──────────────────────────────────────────────────────────
+// Both activation paths run for the same capture: Razorpay fires payment.captured within seconds
+// of the browser callback. These are the ordinary case once checkout is live, not exotic ones.
+
+Deno.test('a webhook activation landing mid-verification is not deactivated', async () => {
+  resetWorld();
+
+  // The webhook wins while this function is waiting on api.razorpay.com — which is where it
+  // spends nearly all of its wall-clock time.
+  duringRazorpayCall = () => {
+    userPlans.push({
+      id: 'plan_from_webhook',
+      user_id: BUYER.id,
+      plan_name: 'gold',
+      amount_paid: GOLD_PAISE,
+      razorpay_payment_id: PAYMENT_ID,
+      replacements_total: 5,
+      replacements_used: 0,
+      expires_at: '2027-09-01T00:00:00.000Z',
+      is_active: true,
+      email: BUYER.email,
+      phone: '',
+    });
+  };
+
+  const res = await handler(post(await validBody(), `Bearer ${VALID_TOKEN}`));
+  assertStatus(res, 200);
+
+  if (userPlans.length !== 1) throw new Error(`expected one plan, got ${userPlans.length}`);
+  if (userPlans[0].is_active !== true) {
+    throw new Error(
+      'the webhook\'s plan was deactivated by this function and never restored — paid customer, no active plan',
+    );
+  }
+  const body = await res.json();
+  if (body.success !== true || body.plan?.id !== 'plan_from_webhook') {
+    throw new Error(`expected success over the webhook's plan, got ${JSON.stringify(body)}`);
+  }
+});
+
+Deno.test('an older plan is still superseded while the current payment is spared', async () => {
+  resetWorld();
+  // The exclusion must not stop the upgrade path from deactivating the previous plan.
+  userPlans.push({
+    id: 'plan_old',
+    user_id: BUYER.id,
+    plan_name: 'silver',
+    amount_paid: 499900,
+    razorpay_payment_id: 'pay_older_1',
+    replacements_total: 3,
+    replacements_used: 0,
+    expires_at: '2026-12-01T00:00:00.000Z',
+    is_active: true,
+    email: BUYER.email,
+    phone: '',
+  });
+
+  assertStatus(await handler(post(await validBody(), `Bearer ${VALID_TOKEN}`)), 200);
+
+  const old = userPlans.find((p) => p.id === 'plan_old');
+  if (old?.is_active !== false) throw new Error('the superseded plan was left active');
+  if (activePlansFor(BUYER.id).length !== 1) {
+    throw new Error(`buyer has ${activePlansFor(BUYER.id).length} active plans, expected 1`);
+  }
+});
+
+Deno.test('a legacy plan with no payment id is still superseded', async () => {
+  resetWorld();
+  // `neq` alone would skip this row, because NULL <> 'x' is NULL rather than true.
+  userPlans.push({
+    id: 'plan_legacy',
+    user_id: BUYER.id,
+    plan_name: 'silver',
+    amount_paid: 499900,
+    razorpay_payment_id: null,
+    replacements_total: 3,
+    replacements_used: 0,
+    expires_at: '2026-12-01T00:00:00.000Z',
+    is_active: true,
+    email: BUYER.email,
+    phone: '',
+  });
+
+  assertStatus(await handler(post(await validBody(), `Bearer ${VALID_TOKEN}`)), 200);
+
+  const legacy = userPlans.find((p) => p.id === 'plan_legacy');
+  if (legacy?.is_active !== false) {
+    throw new Error('the legacy plan with a NULL payment id was left active');
+  }
+});
+
+Deno.test('a spent payment whose plan is no longer active is not reported as success', async () => {
+  resetWorld();
+  userPlans.push({
+    id: 'plan_refunded',
+    user_id: BUYER.id,
+    plan_name: 'gold',
+    amount_paid: GOLD_PAISE,
+    razorpay_payment_id: PAYMENT_ID,
+    replacements_total: 5,
+    replacements_used: 0,
+    expires_at: '2027-09-01T00:00:00.000Z',
+    is_active: false,
+    email: BUYER.email,
+    phone: '',
+  });
+
+  const res = await handler(post(await validBody(), `Bearer ${VALID_TOKEN}`));
+  assertStatus(res, 409, 'a refunded or superseded plan must not be reported as active');
+  if (userPlans.length !== 1) throw new Error('a second plan was created');
+});
+
+Deno.test('malformed payment identifiers are refused', async () => {
+  resetWorld();
+  // Keeps the id safe to interpolate into the PostgREST or= filter.
+  const body = await validBody({ razorpay_payment_id: 'pay_1,is_active.eq.true' });
+  assertStatus(await handler(post(body, `Bearer ${VALID_TOKEN}`)), 400);
+  if (userPlans.length !== 0) throw new Error('a plan was written for a malformed payment id');
 });
