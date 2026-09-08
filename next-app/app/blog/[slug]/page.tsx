@@ -7,7 +7,6 @@ import { staticMetadata } from '@/lib/seo-engine/page-metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbLd, ORGANIZATION } from '@/lib/seo-engine/jsonld';
 import { SITE_URL } from '@/lib/seo-engine/meta';
-import { AdSense } from '@/components/shared/Analytics';
 
 export const dynamicParams = false;
 
@@ -76,7 +75,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </>
         )}
       </main>
-      <AdSense />
     </>
   );
 }

@@ -1,4 +1,4 @@
-// components/seo/TrustPage.tsx — shared shell for the five trust pages. They carry the
+// components/seo/TrustPage.tsx — shared shell for the trust and legal pages. They carry the
 // site-wide Organization schema (from the root layout) plus their own breadcrumbs, and
 // are linked from every location page.
 import Link from 'next/link';

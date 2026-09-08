@@ -34,6 +34,8 @@ editing one data file unless noted.
 7. **AdSense is removed from all location/service (money) pages and kept only on blog
    pages.** Rationale: ad scripts hurt CWV and quality signals exactly where rankings are
    being fought for; blog keeps the revenue surface. Reverting = re-adding one component.
+   Superseded 2026-09-08 (FIN-PF01): the loader is gone from the blog and the SPA shell as
+   well, because it ran with no ad unit anywhere. `ads.txt` stays until monetising is decided.
 8. **domestic-help is kept as the sixth page-generating service** per Appendix A's default
    architecture (the brief reserves dropping it as an option; nothing legacy redirects to
    it either way).
@@ -121,6 +123,7 @@ editing one data file unless noted.
     `/services` and `/services/[service]` are indexable hubs. The old robots.txt disallow
     on `/services` is gone.
 29. **AdSense remains only on blog pages.** It is loaded lazily there and nowhere else.
+    Superseded 2026-09-08 (FIN-PF01): removed everywhere; see #7.
 30. **The lead form ships disabled.** `LEADS_ENABLED` and `NEXT_PUBLIC_LEADS_ENABLED`
     default to unset, because the `leads` table and its RLS policy need a Supabase
     migration this repository cannot apply. Until then the CTAs are WhatsApp, phone and
