@@ -1,0 +1,5 @@
+# The booking app's committed build output is compared byte-for-byte with a fresh Linux build
+# in CI (.github/workflows/ci.yml). Vite copies app/index.html with whatever line endings the
+# checkout has, and git had classed the result as binary, so a Windows commit stored CRLF and
+# the comparison failed on every line. Store and check out the whole bundle as LF.
+next-app/public/_spa/** text eol=lf
