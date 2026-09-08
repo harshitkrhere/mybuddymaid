@@ -6,10 +6,16 @@
 // bookings and user_plans. These assertions are the only automated thing standing between
 // one customer and another's data.
 //
-// This suite runs against a REAL Supabase project. It creates two throwaway users with the
-// service-role key, drives them through the public anon key exactly as a browser would, and
-// deletes them again in a finally block. Point it at a scratch project if you have one; the
-// repo has no staging environment, so assume any credential you hold is production.
+// This suite runs against a REAL Supabase project. It creates two throwaway users with a secret
+// key, drives them through the public browser key exactly as a browser would, and deletes them
+// again in a finally block. Point it at a scratch project if you have one; the repo has no
+// staging environment, so assume any credential you hold is production.
+//
+// KEY FORMATS. The project moved to Supabase's newer API keys on 2026-09-08 and the legacy
+// anon/service_role JWTs are disabled, so supply the `sb_publishable_…` key as
+// SUPABASE_ANON_KEY and the `sb_secret_…` key as SUPABASE_SERVICE_ROLE_KEY. The variable names
+// are kept as-is because that is what the Supabase CLI and edge-function runtime still call
+// them; only the values changed.
 //
 // Run:
 //   SUPABASE_URL=... SUPABASE_ANON_KEY=... SUPABASE_SERVICE_ROLE_KEY=... \
