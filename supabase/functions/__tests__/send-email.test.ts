@@ -53,23 +53,26 @@ globalThis.fetch = async (input: string | URL | Request, init?: RequestInit): Pr
   }
 
   // ── PostgREST ──
+  // A GET behind .maybeSingle() must answer with an ARRAY: postgrest-js collapses [] to null
+  // and [row] to the row. A bare object happens to work too, but the array is what PostgREST
+  // actually sends, and it is the only shape that can express "no rows" on this path.
   if (url.startsWith(`${SUPABASE_URL}/rest/v1/user_plans`)) {
     // The handler must have scoped this to the token owner, never to the body's user_id.
     if (!url.includes(`user_id=eq.${TOKEN_OWNER.id}`)) {
       return json({ message: `plan lookup was not scoped to the token owner: ${url}` }, 500);
     }
-    return json({
+    return json([{
       plan_name: 'gold',
       amount_paid: 599900,
       razorpay_payment_id: 'pay_stub123',
       replacements_total: 5,
       purchased_at: '2026-09-01T00:00:00.000Z',
       expires_at: '2027-09-01T00:00:00.000Z',
-    });
+    }]);
   }
 
   if (url.startsWith(`${SUPABASE_URL}/rest/v1/profiles`)) {
-    return json({ full_name: 'Owner Name' });
+    return json([{ full_name: 'Owner Name' }]);
   }
 
   if (url.startsWith(`${SUPABASE_URL}/rest/v1/email_logs`)) {
