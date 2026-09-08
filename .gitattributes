@@ -1,5 +1,22 @@
-# The booking app's committed build output is compared byte-for-byte with a fresh Linux build
-# in CI (.github/workflows/ci.yml). Vite copies app/index.html with whatever line endings the
-# checkout has, and git had classed the result as binary, so a Windows commit stored CRLF and
-# the comparison failed on every line. Store and check out the whole bundle as LF.
-next-app/public/_spa/** text eol=lf
+# Line endings. The booking app's committed build output (next-app/public/_spa) is compared
+# byte-for-byte with a fresh Linux build in CI (.github/workflows/ci.yml). Vite copies
+# app/index.html with the line endings of the checkout, so a Windows commit stored CRLF while
+# the Linux runner produced LF. Text files in the bundle are stored and checked out as LF.
+# Images are binary and must never be touched by line-ending conversion.
+next-app/public/_spa/**/*.html text eol=lf
+next-app/public/_spa/**/*.js   text eol=lf
+next-app/public/_spa/**/*.css  text eol=lf
+next-app/public/_spa/**/*.svg  text eol=lf
+next-app/public/_spa/**/*.txt  text eol=lf
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.ico   binary
+*.webp  binary
+*.woff  binary
+*.woff2 binary
+
+# Vite builds the bundle's index.html from this file and keeps its line endings, and its
+# transform can leave a lone CR behind. Check the source out as LF everywhere so Windows and
+# Linux builds are byte-identical.
+app/index.html text eol=lf
