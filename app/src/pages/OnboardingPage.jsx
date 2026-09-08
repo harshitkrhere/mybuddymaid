@@ -10,7 +10,7 @@ export default function OnboardingPage() {
 
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
-  const [state, setState] = useState('');
+  const [city, setCity] = useState('');
   const authEmail = user?.email || '';
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
@@ -22,7 +22,7 @@ export default function OnboardingPage() {
       setError('Please enter a valid 10-digit mobile number'); return;
     }
 
-    if (!state) { setError('Please select your state'); return; }
+    if (!city) { setError('Please select your city'); return; }
 
     setSaving(true);
     setError('');
@@ -31,7 +31,7 @@ export default function OnboardingPage() {
         full_name: fullName.trim(),
         phone: phone.trim(),
         email: authEmail,
-        city: state,
+        city,
       });
       navigate('/home', { replace: true });
     } catch (err) {
@@ -83,11 +83,11 @@ export default function OnboardingPage() {
 
           <div className="onboarding-field">
             <label><MapPin size={14} /> City</label>
-            <select value={state} onChange={e => setState(e.target.value)}>
+            <select value={city} onChange={e => setCity(e.target.value)}>
               <option value="">Select your city</option>
               {CITIES.map(c => <option key={c.slug} value={c.name}>{c.name}</option>)}
               {/* keep a previously saved value selectable even if it is not a served city */}
-              {state && !CITIES.some(c => c.name === state) && <option value={state}>{state}</option>}
+              {city && !CITIES.some(c => c.name === city) && <option value={city}>{city}</option>}
             </select>
           </div>
 

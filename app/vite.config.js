@@ -8,4 +8,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: process.env.SPA_BASE || '/',
   plugins: [react()],
+  // Vitest reads this block. Component tests need a DOM; `npm test` runs them once.
+  test: { environment: 'jsdom' },
 })

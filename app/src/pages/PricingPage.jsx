@@ -92,7 +92,7 @@ export default function PricingPage() {
         amount: orderData.amount,
         currency: orderData.currency,
         name: 'MyBuddyMaid',
-        description: `${orderData.plan_display_name} Package — ${orderData.plan_duration} days`,
+        description: `${orderData.plan_display_name} Package — ${orderData.plan_duration} months`,
         image: '/logo.png',
         order_id: orderData.order_id,
         prefill: { name: profile?.full_name || '', email: buyEmail, contact: buyPhone },
