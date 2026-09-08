@@ -40,7 +40,7 @@ export default function MaintenancePage() {
         {/* Glass Main Card */}
         <div className="maint-card">
           <h1 className="maint-title">
-            We're Making <span>MyBuddyMaid</span> Better!
+            We&apos;re Making <span>MyBuddyMaid</span> Better!
           </h1>
           <p className="maint-subtitle">
             {MAINTENANCE_CONFIG.subtitle}
