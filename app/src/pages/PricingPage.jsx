@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
 import { PLAN_DETAILS } from '../lib/constants';
@@ -34,6 +34,13 @@ export default function PricingPage() {
   const [payError, setPayError] = useState('');
   const buyEmail = user?.email || '';
   const [buyPhone, setBuyPhone] = useState(profile?.phone || '');
+  // AuthContext unblocks the app before the profile query resolves, so the initial state
+  // above is almost always empty. Fill from the profile once it arrives, unless the user has
+  // already typed a number (FIN-B05).
+  const phoneTouched = useRef(false);
+  useEffect(() => {
+    if (profile?.phone && !phoneTouched.current) setBuyPhone(profile.phone);
+  }, [profile?.phone]);
   const [contactError, setContactError] = useState('');
   const [selectedPlan, setSelectedPlan] = useState('gold');
   const [showPausedModal, setShowPausedModal] = useState(false);
@@ -92,7 +99,7 @@ export default function PricingPage() {
         amount: orderData.amount,
         currency: orderData.currency,
         name: 'MyBuddyMaid',
-        description: `${orderData.plan_display_name} Package — ${orderData.plan_duration} days`,
+        description: `${orderData.plan_display_name} Package — ${orderData.plan_duration} months`,
         image: '/logo.png',
         order_id: orderData.order_id,
         prefill: { name: profile?.full_name || '', email: buyEmail, contact: buyPhone },
@@ -310,7 +317,7 @@ export default function PricingPage() {
                   <input
                     type="tel"
                     value={buyPhone}
-                    onChange={e => setBuyPhone(e.target.value)}
+                    onChange={e => { phoneTouched.current = true; setBuyPhone(e.target.value); }}
                     placeholder="+91 mobile number"
                   />
                 </div>

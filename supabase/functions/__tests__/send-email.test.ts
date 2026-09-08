@@ -29,6 +29,8 @@ Deno.env.set('RESEND_API_KEY', 'stub-resend-key');
 const sentTo: string[] = [];
 /** Every subject line Resend was handed, which is how the plan tier shows up. */
 const sentSubjects: string[] = [];
+/** Every HTML body Resend was handed. */
+const sentHtml: string[] = [];
 /** Every user_id written to email_logs during a test. */
 const loggedUserIds: unknown[] = [];
 
@@ -86,6 +88,7 @@ globalThis.fetch = async (input: string | URL | Request, init?: RequestInit): Pr
     const body = JSON.parse(String(init?.body ?? '{}'));
     sentTo.push(...(body.to ?? []));
     sentSubjects.push(body.subject ?? '');
+    sentHtml.push(body.html ?? '');
     return json({ id: 'resend-stub-id' });
   }
 
@@ -98,6 +101,7 @@ const { handler: sendBookingEmail } = await import('../send-booking-email/handle
 function reset(): void {
   sentTo.length = 0;
   sentSubjects.length = 0;
+  sentHtml.length = 0;
   loggedUserIds.length = 0;
 }
 
@@ -190,6 +194,24 @@ Deno.test('send-package-email describes the plan the database holds, not the one
   if (!sentSubjects[0].startsWith('Gold Plan Confirmed')) {
     throw new Error(`subject was "${sentSubjects[0]}" — expected the Gold subject, from the database row`);
   }
+});
+
+/** The SPA's service ids — the keys of SERVICE_VARIANTS in the handler. */
+const SERVICE_TYPES = ['part-time', 'full-time', 'elderly-care', 'cook', 'nanny', 'postnatal'];
+
+Deno.test('send-booking-email never tells the customer the request is confirmed (FIN-U03)', async () => {
+  reset();
+  // The booking row is written with status 'pending' and nothing confirms it until a person
+  // does. Four of the six subjects, and the header of every template, said "Confirmed".
+  for (const service_type of SERVICE_TYPES) {
+    const body = { ...forgedBookingBody, service_type, booking_id: `bk_${service_type}` };
+    assertStatus(await sendBookingEmail(post(body, `Bearer ${VALID_TOKEN}`)), 200);
+  }
+  if (sentSubjects.length !== SERVICE_TYPES.length) {
+    throw new Error(`expected ${SERVICE_TYPES.length} sends, got ${sentSubjects.length}`);
+  }
+  const confirmed = SERVICE_TYPES.filter((_, i) => /confirmed/i.test(sentSubjects[i]) || /confirmed/i.test(sentHtml[i]));
+  if (confirmed.length) throw new Error(`still says "confirmed": ${confirmed.join(', ')}`);
 });
 
 function assertStatus(res: Response, expected: number): void {

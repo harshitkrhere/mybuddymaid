@@ -1,9 +1,12 @@
 import { Outlet, NavLink } from 'react-router-dom';
 import { Home, Grid, CalendarDays, User, MapPin, Bell, Search, Sparkles, Crown } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { PLAN_DETAILS } from '../lib/constants';
 
 export default function AppLayout() {
-  const { profile } = useAuth();
+  const { user, profile, userPlan } = useAuth();
+  // The sidebar used to say "Premium Plus" for everyone, a tier that does not exist (FIN-C07).
+  const planName = userPlan ? (PLAN_DETAILS[userPlan.plan_name]?.name || userPlan.plan_name) : null;
 
   return (
     <div className="app-layout" style={{ background: '#0F0F0F', color: '#F1F5F9' }}>
@@ -43,8 +46,12 @@ export default function AppLayout() {
           <div className="sidebar-user-mini">
             <div className="sum-avatar" style={{ background: 'linear-gradient(135deg, #34D399, #10B981)', color: '#0F0F0F' }}>{profile?.full_name?.charAt(0) || 'U'}</div>
             <div className="sum-info">
-              <div className="sum-name" style={{ color: '#F1F5F9' }}>{profile?.full_name || 'Demo User'}</div>
-              <div className="sum-plan" style={{ color: '#34D399' }}><Sparkles size={12}/> Premium Plus</div>
+              <div className="sum-name" style={{ color: '#F1F5F9' }}>{profile?.full_name || user?.email || ''}</div>
+              {planName ? (
+                <div className="sum-plan" style={{ color: '#34D399' }}><Sparkles size={12}/> {planName} Plan</div>
+              ) : (
+                <NavLink to="/pricing" className="sum-plan" style={{ color: '#94A3B8' }}>No active plan</NavLink>
+              )}
             </div>
           </div>
         </div>

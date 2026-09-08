@@ -78,7 +78,7 @@ const supabaseAdmin = createClient(
 // ─── Service Variants ───────────────────────────────────────────────────────────
 const SERVICE_VARIANTS: Record<ServiceType, ServiceVariant> = {
   'part-time': {
-    subject: 'Booking Confirmed — Your Part-Time Home Helper is Being Arranged 🏠',
+    subject: 'Request Received — Your Part-Time Home Helper is Being Arranged 🏠',
     serviceLabel: 'Part-Time Cleaning',
     emoji: '🏠',
     opening: (name: string) =>
@@ -127,7 +127,7 @@ const SERVICE_VARIANTS: Record<ServiceType, ServiceVariant> = {
   },
 
   'elderly-care': {
-    subject: 'Your Elderly Care Request is Confirmed — Compassionate Support is Coming 🤍',
+    subject: 'Elderly Care Request Received — Compassionate Support is Coming 🤍',
     serviceLabel: 'Elderly Care Companion',
     emoji: '🤍',
     opening: (name: string) =>
@@ -151,7 +151,7 @@ const SERVICE_VARIANTS: Record<ServiceType, ServiceVariant> = {
   },
 
   cook: {
-    subject: 'Cook Booking Confirmed — Great Food is Coming to Your Kitchen 👨‍🍳',
+    subject: 'Cook Request Received — Great Food is Coming to Your Kitchen 👨‍🍳',
     serviceLabel: 'Professional Cook',
     emoji: '👨‍🍳',
     opening: (name: string) =>
@@ -199,7 +199,7 @@ const SERVICE_VARIANTS: Record<ServiceType, ServiceVariant> = {
   },
 
   postnatal: {
-    subject: 'Postnatal Care Booking Confirmed — You\'re in Caring Hands 🌸',
+    subject: 'Postnatal Care Request Received — You\'re in Caring Hands 🌸',
     serviceLabel: 'Postnatal Care Specialist',
     emoji: '🌸',
     opening: (name: string) =>
@@ -347,7 +347,7 @@ function buildEmailHtml(payload: BookingPayload, variant: ServiceVariant): strin
                 <tr>
                   <td style="padding: 0 0 8px 0;">
                     <p style="margin: 0; font-family: ${BRAND.font}; font-size: 13px; font-weight: 600; color: ${BRAND.accent}; text-transform: uppercase; letter-spacing: 1px;">
-                      Booking Confirmed ${variant.emoji}
+                      Request Received ${variant.emoji}
                     </p>
                   </td>
                 </tr>

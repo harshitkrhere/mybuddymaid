@@ -13,7 +13,8 @@
 // responsive during the window INP measures. Clicks are queued and still recorded; the
 // only loss is a page_view for a visitor who leaves within a few seconds without
 // interacting at all.
-// AdSense is NOT loaded here — only on blog pages (see ASSUMPTIONS.md #7).
+// AdSense is not loaded anywhere. Its loader ran on blog posts and in the SPA shell with no ad
+// unit on any page, so it was removed (FIN-PF01; ASSUMPTIONS.md #7 and #29 record the change).
 import Script from 'next/script';
 
 export const GA_ID = 'G-R24QC81J4P';
@@ -59,16 +60,5 @@ export function Analytics() {
     <Script id="mbm-analytics" strategy="afterInteractive">
       {BOOTSTRAP}
     </Script>
-  );
-}
-
-export function AdSense() {
-  return (
-    <Script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4135055194908677"
-      crossOrigin="anonymous"
-      strategy="lazyOnload"
-    />
   );
 }
