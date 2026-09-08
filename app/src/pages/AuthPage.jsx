@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 // M2: Map raw Supabase errors to user-friendly messages (L2 fix)
@@ -11,6 +11,9 @@ const FRIENDLY_ERRORS = {
   'Password should be at least 6 characters': 'Password must be at least 8 characters.',
   'For security purposes, you can only request this after': 'Too many attempts. Please wait a moment before trying again.',
 };
+
+// Shown when someone tries to create an account without ticking the consent box.
+const CONSENT_REQUIRED = 'Please tick the box to agree to the Terms of Service and Privacy Policy before creating an account.';
 
 function friendlyError(rawMsg) {
   if (!rawMsg) return 'Something went wrong. Please try again.';
@@ -34,6 +37,8 @@ export default function AuthPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
+  // Consent to the terms is required to create an account, not to sign in to an existing one.
+  const [agreed, setAgreed] = useState(false);
 
   // M2: Rate limiting — cooldown after failed attempts
   const failCountRef = useRef(0);
@@ -59,6 +64,7 @@ export default function AuthPage() {
     setPassword('');
     setError('');
     setSuccessMsg('');
+    setAgreed(false);
   };
 
   const handleGoogleLogin = async () => {
@@ -68,6 +74,11 @@ export default function AuthPage() {
     } catch (err) {
       setError(friendlyError(err.message));
     }
+  };
+
+  const handleGoogleSignUp = async () => {
+    if (!agreed) { setError(CONSENT_REQUIRED); return; }
+    await handleGoogleLogin();
   };
 
   const handleEmailSignIn = async (e) => {
@@ -99,6 +110,7 @@ export default function AuthPage() {
     e?.preventDefault();
     if (!email || !password) { setError('Please enter email and password'); return; }
     if (password.length < 8) { setError('Password must be at least 8 characters'); return; }
+    if (!agreed) { setError(CONSENT_REQUIRED); return; }
     setError('');
     setSuccessMsg('');
     setLoading(true);
@@ -156,10 +168,6 @@ export default function AuthPage() {
         {loading ? 'Signing in...' : cooldown > 0 ? `Wait ${cooldown}s...` : 'Sign In'}
       </button>
 
-      <p className="auth-terms">
-        By signing in, you agree to our <Link to="/terms">Terms & Conditions</Link>.
-      </p>
-
       <div className="auth-mobile-toggle">
         Don't have an account?
         <button type="button" onClick={() => handleModeSwitch(true)}>Sign Up</button>
@@ -171,7 +179,7 @@ export default function AuthPage() {
     <div className="auth-form">
       <h1>Create Account</h1>
 
-      <button type="button" className="btn-auth-google" onClick={handleGoogleLogin}>
+      <button type="button" className="btn-auth-google" onClick={handleGoogleSignUp}>
         {googleIcon}
         <span>Continue with Google</span>
       </button>
@@ -199,13 +207,18 @@ export default function AuthPage() {
         onKeyDown={(e) => e.key === 'Enter' && handleEmailSignUp()}
       />
 
-      <button type="button" className="btn-auth" onClick={handleEmailSignUp} disabled={loading || !email || !password}>
+      <label className="auth-consent">
+        <input type="checkbox" checked={agreed} onChange={(e) => setAgreed(e.target.checked)} />
+        {/* Site routes outside the app's /app basename, so plain anchors; a new tab keeps the half-filled form. */}
+        <span>
+          I agree to the <a href="/terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</a> and{' '}
+          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+        </span>
+      </label>
+
+      <button type="button" className="btn-auth" onClick={handleEmailSignUp} disabled={loading || !email || !password || !agreed}>
         {loading ? 'Creating account...' : 'Sign Up'}
       </button>
-
-      <p className="auth-terms">
-        By signing up, you agree to our <Link to="/terms">Terms & Conditions</Link>.
-      </p>
 
       <div className="auth-mobile-toggle">
         Already have an account?

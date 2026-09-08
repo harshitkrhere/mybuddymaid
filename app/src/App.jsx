@@ -10,7 +10,6 @@ import ServiceDetailPage from './pages/ServiceDetailPage';
 import BookingsPage from './pages/BookingsPage';
 import ProfilePage from './pages/ProfilePage';
 import PricingPage from './pages/PricingPage';
-import TermsPage from './pages/TermsPage';
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated, loading } = useAuth();
@@ -32,7 +31,6 @@ function App() {
   return (
     <Routes>
       <Route path="/auth" element={<AuthPage />} />
-      <Route path="/terms" element={<TermsPage />} />
       <Route path="/splash" element={<SplashScreen />} />
       <Route path="/onboarding" element={
         <ProtectedRoute>
