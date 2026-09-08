@@ -59,14 +59,28 @@ Deno.serve(async (req: Request): Promise<Response> => {
     const plan = PLAN_DETAILS[plan_name];
 
     // ── Check if user already has an active plan ──
-    const { data: existingPlan } = await supabaseAdmin
+    // FIN-DB02: this used to be .maybeSingle() with the error discarded. maybeSingle() errors
+    // when more than one row matches, so the moment a user ended up with two active plans the
+    // query started failing, the unbound error was thrown away, `existingPlan` came back
+    // undefined and the guard waved them through — the guard's failure mode was to disable
+    // itself. .limit(1) cannot error that way, and the error is now handled.
+    //
+    // This is still check-then-act and two concurrent calls can both pass it. The real
+    // enforcement is uq_user_plans_one_active (migration 20260908051500); this check exists to
+    // give an honest 409 instead of a constraint violation at the end of a payment.
+    const { data: existingPlans, error: existingPlanError } = await supabaseAdmin
       .from('user_plans')
-      .select('id, plan_name, is_active')
+      .select('id')
       .eq('user_id', user.id)
       .eq('is_active', true)
-      .maybeSingle();
+      .limit(1);
 
-    if (existingPlan) {
+    if (existingPlanError) {
+      console.error('[create-razorpay-order] Could not check plan status:', existingPlanError);
+      return jsonResponse({ error: 'Could not check plan status' }, 500);
+    }
+
+    if (existingPlans?.length) {
       return jsonResponse({ error: 'You already have an active plan' }, 409);
     }
 

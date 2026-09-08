@@ -1,7 +1,17 @@
 -- ═══════════════════════════════════════════════════════════════
 -- MyBuddyMaid Security Migration
--- Run this in Supabase SQL Editor (Dashboard → SQL Editor)
 -- Fixes: C3, H1, H2, M4 from security audit
+--
+-- BASELINE — already applied to the live project. Was app/security-migration.sql, moved here
+-- under FIN-DB06. Mark it applied rather than running it again:
+--   supabase migration repair --status applied 20260605055353
+--
+-- Must run AFTER 20260521003031_initial_schema: it drops policies that file creates and
+-- re-enables the RLS that file disables.
+--
+-- The H2 fix below did not do what its own title says. That is FIN-S04, corrected by
+-- 20260908052000_restrict_booking_update_columns. The policy is left here as written so the
+-- history stays honest about what was actually shipped.
 -- ═══════════════════════════════════════════════════════════════
 
 -- ─── C3 FIX: Remove direct INSERT/UPDATE on user_plans ───────
@@ -25,9 +35,15 @@ ALTER TABLE email_logs ENABLE ROW LEVEL SECURITY;
 
 -- ─── H2 FIX: Restrict booking UPDATE to safe columns only ───
 -- Users should only be able to update notes and city, NOT status/amount/payment_id
+--
+-- FIN-S04: this did not work. The WITH CHECK below is identical to the USING clause, so the
+-- "restriction" is a comment and nothing more — Postgres RLS cannot express a per-column
+-- rule in a policy at all. 20260908052000_restrict_booking_update_columns replaces it with
+-- column privileges, which can.
 
 DROP POLICY IF EXISTS "Users can update own bookings" ON bookings;
 
+DROP POLICY IF EXISTS "Users can update own bookings (restricted)" ON bookings;
 CREATE POLICY "Users can update own bookings (restricted)"
   ON bookings FOR UPDATE
   USING (auth.uid() = user_id)
@@ -59,7 +75,7 @@ $$ LANGUAGE plpgsql SECURITY DEFINER SET search_path = public;
 -- ═══════════════════════════════════════════════════════════════
 
 -- Check RLS is enabled on all tables:
--- SELECT tablename, rowsecurity FROM pg_tables 
+-- SELECT tablename, rowsecurity FROM pg_tables
 --   WHERE schemaname = 'public' AND tablename IN ('profiles', 'bookings', 'user_plans', 'email_logs');
 -- Expected: all should show rowsecurity = true
 

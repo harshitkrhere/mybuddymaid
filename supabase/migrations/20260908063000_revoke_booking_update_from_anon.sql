@@ -1,0 +1,21 @@
+-- ═══════════════════════════════════════════════════════════════
+-- Complete the FIN-S04 column restriction — also revoke from `anon`
+--
+-- 20260908052000_restrict_booking_update_columns revoked table-level UPDATE from `authenticated`
+-- and granted back only (notes, city, updated_at). It did not name `anon`, which Supabase also
+-- grants UPDATE to by default on public tables.
+--
+-- This is defence in depth, not an open hole: the bookings UPDATE policy is
+-- `USING (auth.uid() = user_id)`, and for the `anon` role auth.uid() is NULL, so RLS refuses
+-- every row regardless of column privileges. But FIN-S04 was itself a control that existed only
+-- on paper, and leaving the second role holding full-column UPDATE means one future policy edit
+-- is all that stands between here and the same finding again. Revoke it and rely on two
+-- independent controls rather than one.
+--
+-- No GRANT back: anonymous callers have no legitimate reason to update a booking, and never did.
+--
+-- Rollback (restores Supabase's default grant, deliberately):
+--   GRANT UPDATE ON bookings TO anon;
+-- ═══════════════════════════════════════════════════════════════
+
+REVOKE UPDATE ON bookings FROM anon;

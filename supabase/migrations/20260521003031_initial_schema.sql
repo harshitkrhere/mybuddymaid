@@ -1,6 +1,14 @@
 -- ═══════════════════════════════════════════════════════
 -- MyBuddyMaid Supabase Schema
--- Run this in Supabase SQL Editor (Dashboard → SQL Editor)
+--
+-- BASELINE — already applied to the live project. Was app/supabase-schema.sql, moved here
+-- under FIN-DB06 so the repository has an ordered, replayable history. Mark it applied
+-- rather than running it again:  supabase migration repair --status applied 20260521003031
+--
+-- Every statement is now idempotent (the CREATE POLICY statements were not) and none of them is
+-- destructive, so this file can be replayed, and a fresh environment can be built from
+-- migrations/ in timestamp order. See the note above email_logs for the one line that had to be
+-- removed to make that true.
 -- ═══════════════════════════════════════════════════════
 
 -- 1. PROFILES TABLE (auto-created on signup)
@@ -38,14 +46,17 @@ CREATE TABLE IF NOT EXISTS bookings (
 -- Profiles: users see only their own profile
 ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Users can view own profile" ON profiles;
 CREATE POLICY "Users can view own profile"
   ON profiles FOR SELECT
   USING (auth.uid() = id);
 
+DROP POLICY IF EXISTS "Users can insert own profile" ON profiles;
 CREATE POLICY "Users can insert own profile"
   ON profiles FOR INSERT
   WITH CHECK (auth.uid() = id);
 
+DROP POLICY IF EXISTS "Users can update own profile" ON profiles;
 CREATE POLICY "Users can update own profile"
   ON profiles FOR UPDATE
   USING (auth.uid() = id);
@@ -53,14 +64,17 @@ CREATE POLICY "Users can update own profile"
 -- Bookings: users see only their own bookings
 ALTER TABLE bookings ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Users can view own bookings" ON bookings;
 CREATE POLICY "Users can view own bookings"
   ON bookings FOR SELECT
   USING (auth.uid() = user_id);
 
+DROP POLICY IF EXISTS "Users can insert own bookings" ON bookings;
 CREATE POLICY "Users can insert own bookings"
   ON bookings FOR INSERT
   WITH CHECK (auth.uid() = user_id);
 
+DROP POLICY IF EXISTS "Users can update own bookings" ON bookings;
 CREATE POLICY "Users can update own bookings"
   ON bookings FOR UPDATE
   USING (auth.uid() = user_id);
@@ -113,14 +127,20 @@ CREATE TABLE IF NOT EXISTS user_plans (
 -- RLS for user_plans
 ALTER TABLE user_plans ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Users can view own plans" ON user_plans;
 CREATE POLICY "Users can view own plans"
   ON user_plans FOR SELECT
   USING (auth.uid() = user_id);
 
+-- NOTE: the INSERT and UPDATE policies that were created here are dropped again by
+-- 20260605055353_security_hardening (C3). They are left in place, and idempotent, so this
+-- file still reproduces the schema as it was on 2026-05-21.
+DROP POLICY IF EXISTS "Users can insert own plans" ON user_plans;
 CREATE POLICY "Users can insert own plans"
   ON user_plans FOR INSERT
   WITH CHECK (auth.uid() = user_id);
 
+DROP POLICY IF EXISTS "Users can update own plans" ON user_plans;
 CREATE POLICY "Users can update own plans"
   ON user_plans FOR UPDATE
   USING (auth.uid() = user_id);
@@ -147,8 +167,11 @@ CREATE TABLE IF NOT EXISTS email_logs (
   created_at TIMESTAMPTZ DEFAULT now()
 );
 
--- No RLS — this is internal server-side logging, not user-facing
-ALTER TABLE email_logs DISABLE ROW LEVEL SECURITY;
+-- email_logs is service-role-only. RLS is enabled by 20260605055353_security_hardening (H1).
+-- The original file had `ALTER TABLE email_logs DISABLE ROW LEVEL SECURITY` here. It has been
+-- removed rather than kept: Postgres creates tables with RLS already off, so it was a no-op on
+-- a fresh build and a silent security regression on any replay — it would reopen every
+-- transactional email log to any authenticated user. Removing it is end-state identical.
 
 CREATE INDEX IF NOT EXISTS idx_email_logs_user_id ON email_logs(user_id);
 CREATE INDEX IF NOT EXISTS idx_email_logs_status ON email_logs(status);

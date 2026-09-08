@@ -1,0 +1,19 @@
+# supabase/config.toml — Supabase CLI project configuration.
+#
+# Added for FIN-DB06. Before this file existed there was no migration tool, no ordering and
+# no history: schema changes were SQL files somebody was expected to paste into the dashboard
+# SQL editor, and nobody could answer "what schema is production running?" from the repository.
+#
+# The two files in migrations/ that predate this config (20260521003031_initial_schema and
+# 20260605055353_security_hardening) are BASELINES: they are already applied to the live
+# project. Mark them applied rather than running them again —
+#
+#   supabase link --project-ref irqsjuwkbcmnooyivakq
+#   supabase migration repair --status applied 20260521003031
+#   supabase migration repair --status applied 20260605055353
+#   supabase db push          # applies only what is genuinely new
+#
+# They are written to be idempotent anyway, so a replay in the right order is survivable; the
+# repair is what stops the replay happening at all.
+
+project_id = "irqsjuwkbcmnooyivakq"
