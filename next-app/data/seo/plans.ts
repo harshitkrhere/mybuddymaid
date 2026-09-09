@@ -26,7 +26,7 @@ export const PLANS: Plan[] = [
     feePaise: 499900,
     termMonths: 10,
     replacements: 3,
-    verifiedProfiles: 1,
+    verifiedProfiles: 3,
     policeVerification: false,
   },
   {
@@ -36,7 +36,7 @@ export const PLANS: Plan[] = [
     feePaise: 599900,
     termMonths: 12,
     replacements: 5,
-    verifiedProfiles: 3,
+    verifiedProfiles: 4,
     policeVerification: true,
     popular: true,
   },

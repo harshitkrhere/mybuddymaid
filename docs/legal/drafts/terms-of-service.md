@@ -1,6 +1,6 @@
 # Terms of Service
 
-Effective date: [EFFECTIVE DATE]
+Effective date: 15 September 2026
 Version: 2.0 (draft for legal review; not yet in force)
 Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions dated March 2026 (booking app)
 
@@ -8,17 +8,17 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 - MyBuddyMaid introduces you to verified domestic helpers. You interview them, you decide, and you employ the helper directly and pay their salary yourself.
 - You pay us a one-time platform fee for a plan (Silver, Gold or Diamond). The fee buys verification, shortlisting, interviews and replacement cover for the plan term. No part of it is the helper's wages.
-- The fee is refundable, less a processing fee, only if we cannot introduce three suitable verified profiles within 60 days of payment. Once a helper has been hired there is no refund. Approved refunds take 45 business days to reach your account.
+- The fee is refundable, less a processing fee, only if we cannot introduce three suitable verified profiles within 60 days of payment. Once a helper has been hired there is no refund. Approved refunds are initiated within 14 business days; your bank then credits it.
 - Cancel or reschedule a confirmed interview or trial with at least 24 hours' notice, or it counts against your plan.
 - Provide safe, lawful access to your home. We can withdraw a helper immediately, with no refund, from an unsafe or abusive household.
-- Do not hire a helper we introduced outside the platform for 24 months. Doing so costs liquidated damages of [₹1,00,000] per helper.
+- Do not hire a helper we introduced outside the platform for 12 months. Doing so costs liquidated damages of ₹21,000 per helper.
 - Our liability to you is capped at the lesser of ₹5,000 or the fee you paid. Disputes go to a grievance officer first, then binding arbitration in Bengaluru. Your rights under the Consumer Protection Act are not taken away.
 
 ## 1. About these Terms {#about}
 
 > **Summary:** These Terms are a contract between you and the company that runs MyBuddyMaid. You accept them by creating an account, sending a request, or paying for a plan. You must be an adult acting for your own household.
 
-1.1 **Who we are.** [LEGAL ENTITY NAME], a [ENTITY TYPE, e.g. private limited company] registered under the laws of India with registration number [CIN / REGISTRATION NUMBER] and GSTIN [GSTIN], having its registered office at 175, 5th Floor, Main Road, Chandra Layout, Bengaluru, Karnataka 560040, India, operates the MyBuddyMaid platform (the "Company", "MyBuddyMaid", "we", "us" or "our").
+1.1 **Who we are.** MyBuddyMaid Pvt Limited, a private limited company registered under the laws of India with registration number [CIN / REGISTRATION NUMBER] and GSTIN [GSTIN], having its registered office at 175, 5th Floor, Main Road, Chandra Layout, Bengaluru, Karnataka 560040, India, operates the MyBuddyMaid platform (the "Company", "MyBuddyMaid", "we", "us" or "our").
 
 1.2 **What these Terms govern.** These Terms of Service (the "Terms") govern your access to and use of the website at mybuddymaid.in, the booking application at mybuddymaid.in/app, our WhatsApp, telephone and email channels, and every service we provide through them (together, the "Platform"). They apply to every visitor, account holder and household that uses the Platform (the "Client", "you" or "your").
 
@@ -55,7 +55,9 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 2.2 **Independent status of Helpers.** Helpers are independent individuals. They are not employees, workers, agents, partners, contractors or representatives of the Company, and nothing in these Terms or in any Introduction creates such a relationship. The Company does not employ Helpers, does not direct or supervise their day-to-day work, does not fix or pay their wages, and does not control their hours, methods, conduct or attendance in your home.
 
-2.3 **You are the employer.** Every Engagement is a contract between you and the Helper alone. As between you, the Helper and the Company, you are the employer or principal of the Helper for all purposes, including wages, hours, rest days, leave, working conditions, accommodation for live-in Helpers, discipline, termination and compliance with every law that applies to the employment of domestic workers in your State. The Company is not a party to the Engagement and has no liability under it.
+2.3 **You are the employer.** Every Engagement is a contract between you and the Helper alone. As between you, the Helper and the Company, you are responsible for the terms on which the Helper works in your household, including wages, hours, rest days, leave, working conditions, accommodation for live-in Helpers, discipline, termination and compliance with every law that applies to the employment of domestic workers in your State. The Company is not a party to the Engagement and has no liability under it.
+
+2.3.1 **What this allocation does and does not do.** Sections 2.2 and 2.3 allocate responsibility between you, the Helper and the Company. They do not, and cannot, determine how any court, tribunal or authority characterises a relationship for the purposes of any law; that depends on the substance of the arrangement and the conduct of the parties. Where a law applies to the arrangement regardless of what this contract says, it applies.
 
 2.4 **The Company's role.** The Company is an introduction and verification service. Its obligations are those set out in Section 3 and Section 6, and no others.
 
@@ -96,7 +98,7 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 4.2 **Nature of the Platform Fee.** The Platform Fee is a one-time, non-recurring charge for the Company's own services under Section 3.3: verification, shortlisting, interview arrangement, the sharing of Verification Dossiers, and replacement cover during the Plan Term. It is not a wage, an advance on wages, a deposit, or a payment held for the Helper, and no part of it is paid to any Helper.
 
-4.3 **When and how the Platform Fee is paid.** The Platform Fee is payable in full when you confirm a Plan and before the first Introduction is made. Payment is accepted only through the channels we designate: the online checkout on the Platform, operated by Razorpay Software Private Limited and accepting cards, UPI and net banking, or a payment link or bank account details issued to you in writing by the Company. We will never ask you to pay the Platform Fee in cash, to a personal account, or to a Helper, and any such request should be reported to us immediately.
+4.3 **When and how the Platform Fee is paid.** The Platform Fee is payable in full when you confirm a Plan and before the first Introduction is made. Payment is accepted only through the channels we designate: the online checkout on the Platform, operated by PayU Payments Private Limited and accepting cards, UPI and net banking, or a payment link or bank account details issued to you in writing by the Company. We will never ask you to pay the Platform Fee in cash, to a personal account, or to a Helper, and any such request should be reported to us immediately.
 
 4.4 **Helper's remuneration.** The Helper's salary, working hours, rest days, leave, food, accommodation and every other term of the Engagement are agreed between you and the Helper and are paid by you directly to the Helper. Salary ranges published on the Platform are indicative guidance only. The Company does not collect, hold, guarantee or arbitrate wages, and is not responsible for any dispute about them.
 
@@ -153,9 +155,9 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 ## 7. Refunds {#refunds}
 
-> **Summary:** The plan fee is refundable, less a processing fee, in one situation only: we fail to introduce three suitable verified profiles matching your original requirements within 60 days of payment. Claim within 15 days after that window closes. There is no refund once a Helper has been hired. Approved refunds take 45 business days to be credited.
+> **Summary:** The plan fee is refundable, less a processing fee, in one situation only: we fail to introduce three suitable verified profiles matching your original requirements within 60 days of payment. Claim within 15 days after that window closes. There is no refund once a Helper has been hired. Approved refunds are initiated within 14 Business Days of approval.
 
-> **Critical:** Approved refunds are credited to the original payment method within forty-five (45) Business Days of approval. A refund claim must be filed by the 75th day after payment or it will not be considered.
+> **Critical:** Approved refunds are initiated to the original payment method within fourteen (14) Business Days of approval; the credit then depends on your bank or card issuer. A refund claim must be filed by the 75th day after payment or it will not be considered.
 
 7.1 **General rule.** Except as expressly provided in this Section 7 and in Sections 4.8 and 8.5, the Platform Fee is non-refundable. You acknowledge that our verification and matching work begins as soon as the Platform Fee is received and that the Platform Fee is consideration for that work and for replacement cover, not for the outcome of any Engagement.
 
@@ -178,13 +180,13 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 - (i) the claim, or any information given in support of it or of the original Request, is false, misleading or fabricated; or
 - (j) the Plan was purchased under a promotion, discount or bundle expressly stated to be non-refundable.
 
-7.4 **How to claim.** A refund claim must be filed within fifteen (15) days after the end of the Refund Window, that is, by the seventy-fifth (75th) day after payment, through the refund facility in your Account dashboard or, until that facility is available, by email to [REFUND EMAIL, e.g. refunds@mybuddymaid.in] sent from the email address registered to your Account. The claim must state your Plan reference, the payment identifier, the requirements you stated at confirmation, and each Introduction you received, with your reasons for regarding it as unsuitable. Claims filed late, from an unregistered address, or without this information are not accepted.
+7.4 **How to claim.** A refund claim must be filed within fifteen (15) days after the end of the Refund Window, that is, by the seventy-fifth (75th) day after payment, through the refund facility in your Account dashboard or, until that facility is available, by email to info@mybuddymaid.in sent from the email address registered to your Account. The claim must state your Plan reference, the payment identifier, the requirements you stated at confirmation, and each Introduction you received, with your reasons for regarding it as unsuitable. Claims filed late, from an unregistered address, or without this information are not accepted.
 
 7.5 **Evidence for incident reports.** Property damage, theft, misconduct or non-attendance by a Helper is addressed through a Replacement under Section 6 and, where appropriate, by the police; it is not a ground for a refund. Any such incident must be reported to us within forty-eight (48) hours of its occurrence or discovery, with a written description and, where the incident concerns damage or the condition of the premises, time-stamped photographs taken at the time, and, where theft or another offence is alleged, a copy of the complaint made to the police. A report made outside this period, or without this evidence, will not be treated as substantiated for the purposes of Section 6.
 
 7.6 **Assessment.** We will acknowledge a complete refund claim within two (2) Business Days and decide it within ten (10) Business Days of receipt. We may ask once for additional information, and the assessment period is extended by the time taken to provide it. Our decision, with reasons, is communicated to your registered email address.
 
-7.7 **Processing time and method.** An approved refund is processed to the original payment method only and will be credited to your account within forty-five (45) Business Days from the date of approval. Refunds are not paid in cash, to a different account, or to a third party. Payment-system charges, bank charges and currency differences, if any, are borne by you.
+7.7 **Processing time and method.** An approved refund is processed to the original payment method only. We will **initiate** the refund with our payment gateway within fourteen (14) Business Days from the date of approval, and we will give you the gateway's refund reference on request. Once initiated, the time the amount takes to appear in your account is set by the gateway and by your bank or card issuer and is outside our control; for most cards and UPI accounts it is a further few working days. Refunds are not paid in cash, to a different account, or to a third party. Payment-system charges, bank charges and currency differences, if any, are borne by you.
 
 7.8 **Abuse prevention.** No household is eligible for more than one refund in any period of twelve (12) months. Accounts created to circumvent this limit, to obtain a second Refund Window, or in a name other than that of the person paying are void, and any Plan purchased through them is non-refundable. Where a claim is denied under Section 7.3(i), we may terminate your Account under Section 16 and recover from you the costs we incurred in providing Introductions under the Plan.
 
@@ -236,11 +238,11 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 ## 10. Non-solicitation and direct engagement {#non-solicitation}
 
-> **Summary:** The plan fee pays for the introduction. For 24 months after your last introduction or placement you may not hire, re-hire or refer a Helper we introduced except through a placement under a plan. Keeping a Helper we placed with you, even after the plan term ends, is fine. Bypassing the platform costs [₹1,00,000] per Helper.
+> **Summary:** The plan fee pays for the introduction. For 12 months after your last introduction or placement you may not hire, re-hire or refer a Helper we introduced except through a placement under a plan. Keeping a Helper we placed with you, even after the plan term ends, is fine. Bypassing the platform costs ₹21,000 per Helper.
 
-> **Warning:** Liquidated damages of [₹1,00,000] per Helper per violation are payable within fifteen (15) days of demand, without prejudice to our right to an injunction. Counsel's note: this figure must be a genuine pre-estimate of loss to be enforceable under Section 74 of the Indian Contract Act, 1872; see the review notes.
+> **Warning:** Liquidated damages of ₹21,000 per Helper per violation are payable within fifteen (15) days of demand, without prejudice to our right to an injunction. Counsel's note: this figure must be a genuine pre-estimate of loss to be enforceable under Section 74 of the Indian Contract Act, 1872; see the review notes.
 
-10.1 **Restriction.** During the Plan Term and for twenty-four (24) months after the later of your last Introduction and the end of your last Placement (the "Restricted Period"), you shall not, directly or indirectly, whether personally, through a family member, another household, an employer, a friend, another agency, or any other person:
+10.1 **Restriction.** During the Plan Term and for twelve (12) months after the later of your last Introduction and the end of your last Placement (the "Restricted Period"), you shall not, directly or indirectly, whether personally, through a family member, another household, an employer, a friend, another agency, or any other person:
 
 - (a) engage, hire, employ or re-engage any Helper introduced to you by the Company, otherwise than through a Placement under a Plan;
 - (b) solicit, refer or recommend any such Helper to any other person for engagement outside the Platform; or
@@ -248,7 +250,9 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 10.2 **What is permitted.** Continuing an Engagement that began as a Placement under a Plan, including after the Plan Term has ended and on terms agreed directly between you and the Helper, is not a breach of this Section. The restriction is directed at obtaining or passing on the benefit of an Introduction without a Plan.
 
-10.3 **Liquidated damages.** The Platform Fee is priced on the basis that Introductions are used only through the Platform, and the Company's loss from a breach of Section 10.1, comprising the Platform Fee foregone, the cost of verifying, assessing and matching the Helper, and the loss of the Helper from the verified pool, is real but difficult to quantify precisely. You therefore agree to pay the Company, as liquidated damages and as a genuine pre-estimate of that loss and not as a penalty, the sum stated in Annexure B for each Helper engaged, solicited or induced in breach of Section 10.1, within fifteen (15) days of written demand.
+10.3 **Liquidated damages.** The Platform Fee is priced on the basis that Introductions are used only through the Platform, and the Company's loss from a breach of Section 10.1, comprising the Platform Fee foregone, the cost of verifying, assessing and matching the Helper, and the loss of the Helper from the verified pool, is real but difficult to quantify precisely. You therefore agree to pay the Company, as liquidated damages and as a genuine pre-estimate of that loss and not as a penalty, the sum stated in Annexure B for each Helper engaged, solicited or induced in breach of Section 10.1, within fifteen (15) days of written demand. That sum is set at approximately three times the highest Platform Fee, reflecting the fee foregone together with the sourcing, verification and assessment cost of the Helper concerned. Nothing in this Section displaces Section 74 of the Indian Contract Act, 1872, and the sum is subject to reduction by a court or arbitrator to reasonable compensation where that provision so requires.
+
+10.3.1 **Regularising instead.** If you wish to engage a Helper introduced by us outside the Platform, you may instead purchase the Diamond Plan for that Helper before the Engagement begins, in which case Section 10.3 does not apply to that Helper. This Section is intended to protect the Company's investment in verification, not to prevent a household from employing someone it wishes to employ.
 
 10.4 **Other remedies.** Payment of liquidated damages is without prejudice to the Company's right to seek an injunction restraining a continuing breach, to terminate your Account and Plan under Section 16, and to recover the costs of enforcement.
 
@@ -328,7 +332,11 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 14.3 **Communications.** By using the Platform you agree that we may contact you by email, SMS, WhatsApp, telephone and notifications in the application about your Requests, Plan, interviews, Replacements, payments, safety matters and changes to these Terms. These are service communications and are sent regardless of any marketing preference. We will send promotional communications only with your consent, which you may withdraw at any time as described in the Privacy Policy. Where we record a telephone call for quality or training purposes we will say so at the start of the call.
 
-14.4 **Feedback and reviews.** If you give us feedback, a review or a testimonial, you grant the Company a non-exclusive, royalty-free, perpetual licence to use, reproduce and publish it, with your first name and city only, on the Platform and in our marketing, and you confirm that it is genuine and reflects your own experience. We will not publish a testimonial with your full name or photograph without your separate written consent. We do not pay for reviews and do not publish reviews we know to be false.
+14.4 **Support chat and the automated assistant.** Our support chat is answered first by an automated assistant and, when you ask for a person or the assistant cannot help, by a member of our team during the support hours published on the Platform. Outside those hours the assistant takes your message and we will respond within twenty-four (24) hours. We keep a record of support conversations on every channel, as described in the Privacy Policy.
+
+The assistant's answers are drawn from the service, pricing and policy information published on the Platform and are provided for convenience only. **If anything the assistant says conflicts with these Terms, the Annexures or the Plan you purchased, these Terms prevail**, and nothing the assistant says varies these Terms, creates a discount, extends Replacement cover, or approves a refund. Only a written confirmation from the Company does that. Do not send card numbers, UPI PINs, passwords or one-time passwords through the chat; we will never ask for them, and Clause 13 applies to any request that appears to do so.
+
+14.5 **Feedback and reviews.** If you give us feedback, a review or a testimonial, you grant the Company a non-exclusive, royalty-free, perpetual licence to use, reproduce and publish it, with your first name and city only, on the Platform and in our marketing, and you confirm that it is genuine and reflects your own experience. We will not publish a testimonial with your full name or photograph without your separate written consent. We do not pay for reviews and do not publish reviews we know to be false.
 
 ## 15. Intellectual property {#intellectual-property}
 
@@ -340,7 +348,7 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 15.3 **Restrictions.** You must not modify, adapt, translate, reverse-engineer, decompile, create derivative works from, frame, mirror, sell, rent or sublicense any part of the Platform, or remove any proprietary notice from it.
 
-15.4 **Third-party marks.** Razorpay, Google, WhatsApp and other names and marks appearing on the Platform belong to their owners and are used for identification only.
+15.4 **Third-party marks.** PayU, Google, WhatsApp and other names and marks appearing on the Platform belong to their owners and are used for identification only.
 
 ## 16. Term, suspension and termination {#termination}
 
@@ -393,7 +401,7 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 18.5 **No waiver.** A failure or delay by either party in exercising any right or remedy is not a waiver of it, and a single or partial exercise of a right or remedy does not prevent any further exercise.
 
-18.6 **Notices.** Notices to you are sent to the email address or mobile number registered to your Account and are deemed received on the day of sending. Notices to the Company must be sent by email to [LEGAL NOTICES EMAIL, e.g. legal@mybuddymaid.in] or by registered post to the registered office in Section 1.1, and are deemed received on the Business Day after delivery.
+18.6 **Notices.** Notices to you are sent to the email address or mobile number registered to your Account and are deemed received on the day of sending. Notices to the Company must be sent by email to legal@mybuddymaid.in or by registered post to the registered office in Section 1.1, and are deemed received on the Business Day after delivery.
 
 18.7 **Relationship of the parties.** Nothing in these Terms creates a partnership, joint venture, agency, franchise or employment relationship between you and the Company, or between the Company and any Helper.
 
@@ -403,7 +411,7 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 18.10 **Electronic records.** These Terms, your acceptance, every Plan confirmation and every communication between us are electronic records within the meaning of the Information Technology Act, 2000, and require no physical or digital signature.
 
-18.11 **Contact.** Questions about these Terms may be sent to [LEGAL NOTICES EMAIL] or to the Grievance Officer in Annexure C.
+18.11 **Contact.** Questions about these Terms may be sent to legal@mybuddymaid.in or to the Grievance Officer in Annexure C.
 
 ## Annexure A: Plans {#annexure-a}
 
@@ -411,9 +419,14 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 | Plan | Platform Fee | Plan Term | Replacements included | Verified Profiles per matching round | Police verification |
 |---|---|---|---|---|---|
-| Silver | ₹4,999 | 10 months | 3 | 1 | Not included |
-| Gold | ₹5,999 | 12 months | 5 | 3 | Included |
+| Silver | ₹4,999 | 10 months | 3 | 3 | Not included |
+| Gold | ₹5,999 | 12 months | 5 | 4 | Included |
 | Diamond | ₹6,999 | 18 months | 10 | 5 | Included |
+
+> **Profile counts changed on 2026-09-10** by owner decision — Silver from 1 to 3, Gold from 3
+> to 4, Diamond unchanged. `next-app/data/seo/plans.ts`, `app/src/lib/serviceability.json` and
+> the embedded booking-app bundle were updated in the same change, so this table and the pricing
+> page agree. If either is edited again, both must be.
 
 A.1 The Plan Term runs from the date of the first Placement under the Plan.
 
@@ -428,11 +441,11 @@ A.3 Fees may be revised prospectively under Section 4.6. The fee stated in your 
 | Refund processing fee | [AMOUNT OR PERCENTAGE, e.g. 10% of the Platform Fee] | Deducted from a refund under Section 7.2 |
 | Refund claim window | Days 61 to 75 after payment | Section 7.4 |
 | Refund assessment | Acknowledged within 2 Business Days; decided within 10 Business Days | Section 7.6 |
-| Refund processing time | 45 Business Days from approval, to the original payment method | Section 7.7 |
+| Refund initiation time | 14 Business Days from approval, to the original payment method | Section 7.7 |
 | Interview or trial session fee | [AMOUNT, or "Not applicable"] | Forfeited on a late cancellation or No-Show under Section 8.2 |
-| Liquidated damages for direct engagement | [₹1,00,000] per Helper per violation | Section 10.3 |
+| Liquidated damages for direct engagement | ₹21,000 per Helper per violation | Section 10.3 |
 | Grievance acknowledgement and resolution | 48 hours; 30 days | Section 17.2 |
-| Support hours | Monday to Sunday, 9:00 AM to 9:00 PM IST | Section 3.3(e) |
+| Support hours | Monday to Saturday, 10:00 AM to 7:00 PM IST | Section 3.3(e) |
 | Replacement target | New Verified Profile within 48 hours of a valid request | Section 6.3 (a target, not a guarantee) |
 
 ## Annexure C: Grievance Officer {#annexure-c}
@@ -440,9 +453,9 @@ A.3 Fees may be revised prospectively under Section 4.6. The fee stated in your 
 C.1 In accordance with the Consumer Protection (E-Commerce) Rules, 2020, the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and the Digital Personal Data Protection Act, 2023, the Company has appointed the following Grievance Officer:
 
 - **Name:** [GRIEVANCE OFFICER NAME]
-- **Designation:** Grievance Officer, [LEGAL ENTITY NAME]
-- **Email:** [GRIEVANCE EMAIL, e.g. grievance@mybuddymaid.in]
-- **Telephone:** +91 93551 14869 (Monday to Sunday, 9:00 AM to 9:00 PM IST)
+- **Designation:** Grievance Officer, MyBuddyMaid Pvt Limited
+- **Email:** governance@mybuddymaid.in
+- **Telephone:** +91 93551 14869 (Monday to Saturday, 10:00 AM to 7:00 PM IST)
 - **Address:** 175, 5th Floor, Main Road, Chandra Layout, Bengaluru, Karnataka 560040, India
 
 C.2 Grievances are acknowledged within forty-eight (48) hours of receipt and resolved within thirty (30) days. A grievance relating to personal data that is not resolved to your satisfaction may be escalated to the Data Protection Board of India as described in the Privacy Policy.
