@@ -46,7 +46,7 @@ Supersedes: the TrustPage rendering of /privacy-policy and /terms-of-service shi
 |---|---|---|---|---|
 | Note | Context, cross-references, "this number comes from the pricing data" | `#f1f5f9` fill, `#334155` text | 1px `#94a3b8` | Information circle |
 | Warning | An obligation with a consequence: the non-solicitation restriction, chargebacks, safety withdrawal | `#fffbeb` fill, `#92400e` text | 1.5px `#f59e0b`, left edge 4px | Triangle |
-| Critical | A number that governs money: the 45-business-day refund timeline, the ₹5,000 liability cap, the liquidated-damages figure | `#fff1f2` fill, `#9f1239` text | 2px `#e11d48`, left edge 4px | Exclamation octagon |
+| Critical | A number that governs money: the 14-Business-Day refund initiation window, the ₹5,000 liability cap, the ₹21,000 liquidated-damages figure | `#fff1f2` fill, `#9f1239` text | 2px `#e11d48`, left edge 4px | Exclamation octagon |
 
 - Callouts use the semantic colours only. The brand accent never appears inside a callout, so mint always means "the brand or a link" and amber or rose always means "read this".
 - Icons are inline SVG at 20 pixels, set in the text colour of the block, with the level spoken to screen readers through a visually hidden label ("Warning:").
