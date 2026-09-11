@@ -108,5 +108,25 @@ export const COPY = {
   rateLimited: 'You’re sending messages faster than I can read them — give me a moment.',
   dailyCeiling: 'I’m at capacity for automated answers right now, but I can still show you what our help pages say, and our team is reachable on WhatsApp.',
 
+  // ── Prompts the widget offers as buttons; a tap sends the text as the customer's message. ──
+  // Each is a question retrieve.ts answers with the intent it names (suggestions.test.ts holds
+  // it to that), so a tap never lands in the refusal it was meant to save the customer from.
+  // Approved by the owner on 2026-09-12, with the widget redesign.
+  /** Under the greeting of a fresh conversation. */
+  starters: ['What services do you offer?', 'What are your plans and prices?', 'Which areas do you serve?', 'How do you verify helpers?'],
+  /** Under an answer; lib/assistant/suggestions.ts picks up to three from what was just answered. */
+  prompts: {
+    services: 'What services do you offer?',
+    pricing: 'What are your plans and prices?',
+    areas: 'Which areas do you serve?',
+    verification: 'How do you verify helpers?',
+    replacements: 'How do replacements work?',
+    booking: 'How does booking work?',
+    gold: 'What is included in Gold?',
+    team: 'Talk to our team',
+  },
+  /** Shown for a moment after the reference in the panel's header is tapped, which copies it. */
+  copied: 'Copied',
+
   hoursLabel: SUPPORT_HOURS.label,
 } as const;

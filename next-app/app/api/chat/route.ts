@@ -2,7 +2,7 @@
 //
 // POST { conversation_id, message, history?, context?, page? } → a server-sent-event stream:
 //   event: status  data: {"state":"thinking"}
-//   event: answer  data: { text, sources, ref, escalate?, handoff?, intent, rung, language }
+//   event: answer  data: { text, sources, ref, escalate?, handoff?, intent, rung, language, suggestions }
 //   event: done    data: {}
 //
 // Why events and not token streaming: the number gate in lib/assistant/answer.ts needs the
@@ -22,6 +22,7 @@ import { NextResponse, after } from 'next/server';
 import { answer, type Turn, type Answer } from '@/lib/assistant/answer';
 import { providerFromEnv } from '@/lib/assistant/provider';
 import { COPY } from '@/lib/assistant/copy';
+import { suggestionsFor } from '@/lib/assistant/suggestions';
 import { refFor } from '@/lib/assistant/ref';
 import { corsHeaders } from '@/lib/assistant/cors';
 import { recordClientFromEnv, upsertConversation, insertMessages } from '@/lib/support/record';
@@ -258,6 +259,7 @@ export async function POST(req: Request) {
           escalate: null,
           handoff: { inHours, text: ack },
           talk_to_team: COPY.talkToTeam,
+          suggestions: [],
         });
         send(controller, 'done', {});
         controller.close();
@@ -299,13 +301,14 @@ export async function POST(req: Request) {
           escalate: a.escalate ?? null,
           handoff: a.handoff ?? null,
           talk_to_team: a.escalate ? COPY.talkToTeam : null,
+          suggestions: suggestionsFor(a),
         });
 
         after(async () => {
           try {
             await persist({ conversationId, ref, channel: userId ? 'app_chat' : 'site_chat', userId, page, context, userMessage: message, a, now, turnIndex });
-            // A handoff opens the conversation in Chatwoot with the whole transcript. Only after
-            // persist(), so the row exists for Chatwoot's id to be written onto.
+            // A handoff opens the conversation in Chatwoot with the record's transcript. Only after
+            // persist(), so the row holds this turn too and Chatwoot's id can be written onto it.
             if (a.handoff) {
               const result = await startHandoff(record, chatwoot, {
                 conversationId,
@@ -327,7 +330,7 @@ export async function POST(req: Request) {
         });
       } catch (e) {
         console.error('[chat] answer threw', e);
-        send(controller, 'answer', { conversation_id: conversationId, ref: refFor(conversationId), mode: 'assistant', text: COPY.refuse, sources: [], intent: 'unknown', rung: 3, escalate: 'low_confidence', handoff: null, talk_to_team: COPY.talkToTeam });
+        send(controller, 'answer', { conversation_id: conversationId, ref: refFor(conversationId), mode: 'assistant', text: COPY.refuse, sources: [], intent: 'unknown', rung: 3, escalate: 'low_confidence', handoff: null, talk_to_team: COPY.talkToTeam, suggestions: suggestionsFor({ intent: 'unknown' }) });
       } finally {
         send(controller, 'done', {});
         controller.close();
