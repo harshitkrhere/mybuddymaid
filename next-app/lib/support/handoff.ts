@@ -105,7 +105,7 @@ export async function handedOff(record: RecordClient | null, conversationId: str
 // ─── Forward ────────────────────────────────────────────────────────────────────────────────
 
 export async function forwardMessage(record: RecordClient, chatwoot: ChatwootClient | null, h: HandedOff, content: string, now: Date = new Date()): Promise<boolean> {
-  const chatwootMessageId = chatwoot ? await postCustomerMessage(chatwoot, h.chatwootConversationId, content) : null;
+  const chatwootMessageId = chatwoot ? await postCustomerMessage(chatwoot, h.row.id, h.chatwootConversationId, content) : null;
   // Record it even if Chatwoot refused: the transcript is ours, and the pull will not
   // double-write because the id is only set when Chatwoot accepted it.
   await insertMessages(record, [{ conversation_id: h.row.id, sender: 'customer', body: content, chatwoot_message_id: chatwootMessageId, created_at: now.toISOString() }]);
@@ -132,7 +132,7 @@ export interface PullResult {
 export async function pullReplies(record: RecordClient, chatwoot: ChatwootClient | null, h: HandedOff, afterIso: string, now: Date = new Date()): Promise<PullResult> {
   let status: string | null = null;
   if (chatwoot) {
-    const messages = await fetchMessages(chatwoot, h.chatwootConversationId);
+    const messages = await fetchMessages(chatwoot, h.row.id, h.chatwootConversationId);
     const fromTeam = messages.filter((m) => (m.message_type === 'outgoing' || m.message_type === 'template') && !m.private && m.content.trim());
     if (fromTeam.length) {
       // Idempotent on chatwoot_message_id; a 409 from the unique index is success.
@@ -152,7 +152,7 @@ export async function pullReplies(record: RecordClient, chatwoot: ChatwootClient
       if (firstHuman?.sender?.name && !h.row.handled_by) patch.handled_by = firstHuman.sender.name;
       await patchConversation(record, h.row.id, patch);
     }
-    status = await fetchStatus(chatwoot, h.chatwootConversationId);
+    status = await fetchStatus(chatwoot, h.row.id, h.chatwootConversationId);
     if (status === 'resolved' && !h.row.closed_at) {
       await patchConversation(record, h.row.id, { outcome: h.row.outcome ?? 'resolved', closed_at: now.toISOString() });
     }
