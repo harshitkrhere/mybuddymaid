@@ -30,11 +30,16 @@
 .mbm-chat__title { display: flex; flex-direction: column; line-height: 1.2; }
 .mbm-chat__title strong { font-size: 15px; }
 .mbm-chat__ref { font-size: 12px; opacity: 0.85; font-variant-numeric: tabular-nums; }
+.mbm-chat__actions { display: flex; align-items: center; gap: 4px; }
 .mbm-chat__close {
   background: transparent; border: 0; color: #fff; font-size: 26px; line-height: 1;
   width: 36px; height: 36px; border-radius: 8px; cursor: pointer;
 }
-.mbm-chat__close:hover, .mbm-chat__close:focus-visible { background: rgba(255, 255, 255, 0.18); outline: 2px solid #fff; outline-offset: -2px; }
+.mbm-chat__new {
+  background: rgba(255, 255, 255, 0.14); border: 0; color: #fff; font: inherit; font-size: 12.5px; font-weight: 600;
+  padding: 6px 10px; border-radius: 999px; cursor: pointer;
+}
+.mbm-chat__close:hover, .mbm-chat__close:focus-visible, .mbm-chat__new:hover, .mbm-chat__new:focus-visible { background: rgba(255, 255, 255, 0.24); outline: 2px solid #fff; outline-offset: -2px; }
 
 .mbm-chat__notice {
   padding: 10px 14px;

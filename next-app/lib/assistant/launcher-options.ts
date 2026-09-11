@@ -23,6 +23,7 @@ export interface LauncherOptions {
   placeholder: string;
   sendLabel: string;
   closeLabel: string;
+  newChatLabel: string;
   thinkingLabel: string;
   sourceLabel: string;
   talkToTeam: string;
@@ -48,6 +49,7 @@ export const LAUNCHER_OPTIONS: LauncherOptions = {
   placeholder: 'Ask about areas, plans, prices…',
   sendLabel: 'Send',
   closeLabel: 'Close chat',
+  newChatLabel: 'New chat', // approved by the owner, 2026-09-11
   thinkingLabel: 'Assistant is typing',
   sourceLabel: COPY.sourceLabel,
   talkToTeam: COPY.talkToTeam,
