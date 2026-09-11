@@ -27,6 +27,7 @@ interface Case {
   escalate?: EscalationReason | null;
   lang?: 'en' | 'hi';
   sourceUrl?: string | RegExp;
+  preface?: RegExp;
 }
 
 const inr = (n: number) => `₹${new Intl.NumberFormat('en-IN').format(n)}`;
@@ -88,6 +89,9 @@ const CASES: Case[] = [
   { q: 'sector 50 noida', intent: 'serviceability', city: 'noida', locality: 'sector-50', includes: ['Noida'] },
   { q: 'which areas do you cover', intent: 'serviceability', includes: [/locality or 6-digit pincode/, ...CITIES.map((c) => c.name)] },
   { q: 'nanny for newborn in pune', intent: 'serviceability', city: 'pune', service: 'babysitter-nanny', includes: ['Pune', /babysitter/i] },
+  // Two questions in one: the place becomes a preface and its page joins the sources.
+  { q: 'do you serve dlf phase 3 and how much is gold?', intent: 'plan_detail', plan: 'gold', locality: 'dlf-phase-3', city: 'gurgaon', includes: [inr(gold.fee)], sourceUrl: '/gurgaon/dlf-phase-3', preface: /^Yes — we serve DLF Phase 3, Gurgaon/ },
+  { q: 'i am in 110016, cook charges?', intent: 'pricing', pincode: '110016', service: 'cook', includes: ['Cook'], sourceUrl: '/pincode/110016', preface: /110016/ },
 
   // ── Pricing and plans, from plans.ts ──
   { q: 'how much does the gold plan cost', intent: 'plan_detail', plan: 'gold', includes: [inr(gold.fee), `${gold.termMonths} months`, `${gold.replacements} replacement`, `${gold.verifiedProfiles} verified profile`], sourceUrl: '/pricing' },
@@ -186,6 +190,8 @@ for (const c of CASES) {
       if (typeof exc === 'string') assert.ok(!r.answer.includes(exc), `answer must not contain "${exc}"`);
       else assert.doesNotMatch(r.answer, exc);
     }
+    if (c.preface) assert.match(r.preface ?? '', c.preface, 'preface');
+    else assert.equal(r.preface, undefined, 'unexpected preface');
     if (c.sourceUrl) {
       const urls = r.sources.map((s) => s.url);
       const ok = typeof c.sourceUrl === 'string' ? urls.includes(c.sourceUrl) : urls.some((u) => (c.sourceUrl as RegExp).test(u));

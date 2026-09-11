@@ -74,6 +74,8 @@ export interface Retrieval {
   entries: KnowledgeEntry[];
   /** Complete, deterministic answer text. Shown as-is when no model is available. */
   answer: string;
+  /** A serviceability sentence that precedes the answer when a price question names a place. */
+  preface?: string;
   sources: Source[];
   /** 0–1. Below LOW_CONFIDENCE the assistant refuses and offers a person. */
   confidence: number;
@@ -416,6 +418,19 @@ function serviceabilityAnswer(e: Entities): { answer: string; sources: Source[];
 }
 
 export function retrieve(text: string): Retrieval {
+  const r = retrieveOne(text);
+  // "I'm in DLF Phase 3 — how much is Gold?" asks two things. The intent picks the price half;
+  // if a place was named as well, the serviceability answer becomes a preface so both halves
+  // are answered from the data, and the place's page joins the sources.
+  const placeNamed = r.entities.locality || r.entities.pincode || r.entities.ambiguousLocality;
+  if (placeNamed && (r.intent === 'pricing' || r.intent === 'plan_detail' || r.intent === 'service_info')) {
+    const s = serviceabilityAnswer(r.entities);
+    return { ...r, preface: s.answer, sources: dedupe([...s.sources, ...r.sources]) };
+  }
+  return r;
+}
+
+function retrieveOne(text: string): Retrieval {
   const language = detectLanguage(text);
   const entities = extractEntities(text);
   const intent = classifyIntent(text, entities);

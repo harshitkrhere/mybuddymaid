@@ -4,6 +4,7 @@ import './globals.css';
 import { Header } from '@/components/shared/Header';
 import { Footer } from '@/components/shared/Footer';
 import { Analytics } from '@/components/shared/Analytics';
+import { AssistantLauncher } from '@/components/shared/AssistantLauncher';
 import { VercelAnalytics } from '@/components/shared/VercelAnalytics';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { organizationLd } from '@/lib/seo-engine/jsonld';
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <div className="page">{children}</div>
         <Footer />
+        <AssistantLauncher />
         <Analytics />
         <VercelAnalytics />
       </body>

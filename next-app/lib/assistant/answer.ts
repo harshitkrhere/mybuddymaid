@@ -95,6 +95,7 @@ function allowedNumbers(r: Retrieval, message: string): Set<number> {
   const allowed = new Set<number>(ALWAYS_ALLOWED_NUMBERS);
   for (const e of r.entries) for (const n of numbersIn(`${e.q} ${e.a}`)) allowed.add(n);
   for (const n of numbersIn(r.answer)) allowed.add(n);
+  if (r.preface) for (const n of numbersIn(r.preface)) allowed.add(n);
   for (const n of numbersIn(message)) allowed.add(n);
   return allowed;
 }
@@ -152,7 +153,8 @@ function systemPrompt(r: Retrieval, signedIn: boolean): string {
     signedIn ? '- The customer is signed in to the app.' : '- The customer is browsing the website and is not signed in.',
     '',
     'THE ANSWER TO GIVE, IN YOUR OWN WORDS:',
-    r.answer,
+    r.preface ? `${r.preface}
+${r.answer}` : r.answer,
     '',
     facts ? `SUPPORTING FACTS:\n${facts}` : '',
   ]
@@ -226,5 +228,6 @@ const QUOTED_INTENTS = new Set<Intent>(['faq', 'pricing', 'plan_detail', 'refund
 /** Rung 3 text. Verbatim quotes get the "our help pages say" prefix; composed sentences do not. */
 export function unphrased(r: Retrieval): string {
   const quoted = QUOTED_INTENTS.has(r.intent) || (r.intent === 'service_info' && !!r.entities.service);
-  return quoted ? `${COPY.unphrasedPrefix}\n\n${r.answer}` : r.answer;
+  const body = quoted ? `${COPY.unphrasedPrefix}\n\n${r.answer}` : r.answer;
+  return r.preface ? `${r.preface}\n\n${body}` : body;
 }

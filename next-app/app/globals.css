@@ -285,3 +285,21 @@ td a:hover { color: var(--emerald-dark); }
   .btn, .card, .faq summary::after { transition: none; }
   .btn:hover, .card:hover { transform: none; }
 }
+
+/* support assistant launcher — the panel's own styles arrive with public/chat/widget.css on
+   first click; only the button needs to exist before then. Sits above the mobile sticky bar. */
+.mbm-launcher {
+  position: fixed; right: 16px; bottom: 16px; z-index: 9999;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  min-height: 48px; padding: 0 1.1rem 0 0.9rem; border: 0; border-radius: 999px;
+  background: var(--emerald-dark); color: #fff; font: inherit; font-weight: 600; font-size: 0.95rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22); cursor: pointer;
+}
+.mbm-launcher:hover { background: var(--emerald); }
+.mbm-launcher:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.mbm-launcher svg { width: 22px; height: 22px; flex: none; }
+@media (max-width: 760px) {
+  .mbm-launcher { bottom: calc(var(--sticky-h) + 12px); }
+  .mbm-launcher span { display: none; }
+  .mbm-launcher { padding: 0; width: 52px; height: 52px; justify-content: center; }
+}
