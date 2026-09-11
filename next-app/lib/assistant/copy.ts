@@ -4,6 +4,8 @@
 // │ CUSTOMER-FACING COPY. Changes here need the owner's approval before they are committed.  │
 // │ The notice text is also the DPDP Section 5 notice promised in Privacy Policy 2.0 §2.2,   │
 // │ so its wording carries legal weight; keep it identical to the policy draft.              │
+// │                                                                                          │
+// │ Approved by the owner on 2026-09-11, as committed in 5202d53a and 7411edb0.              │
 // └──────────────────────────────────────────────────────────────────────────────────────────┘
 //
 // Anything that quotes a price, a policy term or a place name is NOT here — those come from
