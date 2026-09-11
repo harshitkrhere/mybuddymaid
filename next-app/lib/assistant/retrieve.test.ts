@@ -138,6 +138,12 @@ const CASES: Case[] = [
   { q: 'i want to talk to a person', intent: 'human', escalate: 'asked_for_human' },
   { q: 'can i speak to someone from your team', intent: 'human', escalate: 'asked_for_human' },
   { q: 'kisi insaan se baat karni hai', intent: 'human', escalate: 'asked_for_human', lang: 'hi' },
+  { q: 'can you connect me to staff', intent: 'human', escalate: 'asked_for_human' },
+  { q: 'can i chat with support', intent: 'human', escalate: 'asked_for_human' },
+  { q: 'i need customer service', intent: 'human', escalate: 'asked_for_human' },
+  { q: 'please escalate this', intent: 'human', escalate: 'asked_for_human' },
+  // Asking about support hours is a contact question, not a request for a person.
+  { q: 'what are your support hours', intent: 'contact', includes: ['10 AM–7 PM'] },
   { q: 'maid did not come today', intent: 'complaint', escalate: 'complaint' },
   { q: 'the helper was rude to my mother', intent: 'complaint', escalate: 'complaint' },
   { q: 'someone stole my ring', intent: 'safety', escalate: 'safety', includes: [/police/i, '+91 93551 14869'] },

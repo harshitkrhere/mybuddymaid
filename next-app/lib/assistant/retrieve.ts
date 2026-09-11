@@ -238,7 +238,8 @@ export function extractEntities(text: string): Entities {
 const RULES: Array<[Intent, RegExp]> = [
   ['safety', /\b(theft|stole|stolen|chori|harass|abuse|abusive|assault|molest|hit me|hurt|injur|danger|unsafe|threat|missing|police complaint|fir\b)/i],
   // Order-independent: "kisi insaan se baat karni hai" puts the person before the verb.
-  ['human', /^(?=.*\b(talk|speak|chat|connect|baat)\b)(?=.*\b(person|human|agent|someone|team|executive|representative|manager|real|insaan|aadmi)\b)|\b(customer care|call me|callback|call back|real person|live agent)\b/i],
+  // "staff" and "support" were the first words a real visitor used that this missed (2026-09-11).
+  ['human', /^(?=.*\b(talk|speak|chat|connect|baat)\b)(?=.*\b(person|human|agent|someone|team|staff|support|operator|executive|representative|manager|real|insaan|aadmi|koi)\b)|\b(customer (care|service|support)|support team|call me|callback|call back|real person|live agent|transfer me|escalate)\b/i],
   ['payment_issue', /\b(payment|amount|money|paisa|paise)\b.*\b(failed|fail|deducted|debited|stuck|pending|twice|double|cut gaya|kat gaya)\b|\b(charged twice|transaction failed|double charged)\b/i],
   ['refund_request', /\b(want|need|give|get|process|initiate|start|please|chahiye|karo|kar do|wapas)\b.*\brefund\b|\brefund\b.*\b(my money|mera|mere|karo|kar do|chahiye|please|now|immediately|asap)\b|\b(money back|return my money|paise wapas|paisa wapas)\b/i],
   ['refund_question', /\brefund|refundable|money back policy|cancellation policy\b/i],
