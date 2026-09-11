@@ -254,3 +254,31 @@ test('every rupee figure in every plan or policy answer is a fee or a salary ban
     }
   }
 });
+
+// ─── Provider request shape ─────────────────────────────────────────────────────────────────
+
+test('OpenRouter requests carry reasoning:{enabled:false} by default; a custom extra body replaces it; other hosts get nothing extra', async () => {
+  const { providerFromEnv } = await import('./provider');
+  const or = providerFromEnv({ ASSISTANT_BASE_URL: 'https://openrouter.ai/api/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a' } as NodeJS.ProcessEnv)!;
+  assert.deepEqual(or.extraBody, { reasoning: { enabled: false } });
+  const custom = providerFromEnv({ ASSISTANT_BASE_URL: 'https://openrouter.ai/api/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a', ASSISTANT_EXTRA_BODY: '{"top_p":0.9}' } as NodeJS.ProcessEnv)!;
+  assert.deepEqual(custom.extraBody, { top_p: 0.9 });
+  const other = providerFromEnv({ ASSISTANT_BASE_URL: 'https://api.openai.com/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a' } as NodeJS.ProcessEnv)!;
+  assert.equal(other.extraBody, undefined);
+
+  // And the field actually reaches the wire.
+  let body = '';
+  const capture: FetchLike = async (url, init) => {
+    body = String(init.body);
+    return ok('fine')(url, init);
+  };
+  await answer({ message: 'what are your plans' }, { provider: or, fetchImpl: capture });
+  assert.deepEqual(JSON.parse(body).reasoning, { enabled: false });
+});
+
+test('a model that returns no content (a reasoning model that spent its budget thinking) is treated as unavailable', async () => {
+  const empty: FetchLike = async () => new Response(JSON.stringify({ model: 'm', choices: [{ message: { content: null, reasoning: 'thinking…' } }] }), { status: 200 });
+  const a = await answer({ message: 'what are your plans' }, { provider, fetchImpl: empty });
+  assert.equal(a.rung, 3);
+  assert.equal(a.modelId, null);
+});

@@ -28,6 +28,14 @@ export interface ProviderConfig {
   /** Sent as X-Title / HTTP-Referer; OpenRouter shows them in its dashboard. Harmless elsewhere. */
   appName?: string;
   appUrl?: string;
+  /**
+   * Extra fields merged into every request body. Set from ASSISTANT_EXTRA_BODY (JSON) for a
+   * provider that needs something non-standard. For OpenRouter the default is
+   * {"reasoning":{"enabled":false}}: some free models are reasoning models and will spend the
+   * whole token budget thinking and return no content at all — phrasing three sentences does
+   * not need reasoning. Providers that reject unknown fields get nothing extra unless asked.
+   */
+  extraBody?: Record<string, unknown>;
 }
 
 export interface ChatMessage {
@@ -57,12 +65,23 @@ export function providerFromEnv(env: NodeJS.ProcessEnv = process.env): ProviderC
     .map((m) => m.trim())
     .filter(Boolean);
   if (!baseUrl || !apiKey || !models.length) return null;
+  let extraBody: Record<string, unknown> | undefined;
+  if (env.ASSISTANT_EXTRA_BODY) {
+    try {
+      extraBody = JSON.parse(env.ASSISTANT_EXTRA_BODY) as Record<string, unknown>;
+    } catch {
+      console.warn('[assistant] ASSISTANT_EXTRA_BODY is not valid JSON; ignoring');
+    }
+  } else if (/openrouter\.ai/.test(baseUrl)) {
+    extraBody = { reasoning: { enabled: false } };
+  }
   return {
     baseUrl,
     apiKey,
     models,
     appName: env.ASSISTANT_APP_NAME ?? 'MyBuddyMaid support assistant',
     appUrl: env.ASSISTANT_APP_URL ?? 'https://mybuddymaid.in',
+    extraBody,
   };
 }
 
@@ -135,6 +154,7 @@ export async function phrase(
           ...(config.appName ? { 'X-Title': config.appName } : {}),
         },
         body: JSON.stringify({
+          ...(config.extraBody ?? {}),
           model,
           messages: req.messages,
           max_tokens: req.maxTokens ?? 320,
