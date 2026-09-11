@@ -247,7 +247,8 @@ const RULES: Array<[Intent, RegExp]> = [
   ['booking_status', /\b(my booking|booking status|status of my|where is my|track my|my request|when will .* (come|arrive|start)|kab aayegi|kab aayega|mera booking|meri booking)\b/i],
   ['replacement', /\b(replac|change (the |my )?(maid|helper|cook|nanny|didi|bai)|badal|left the job|has left|quit|ran away|bhaag)/i],
   ['verification', /\b(verif|background|police|aadhaar|aadhar|kyc|genuine|reliable|trustworthy|trusted|trust you|criminal|check(ed)? (the|their|her|his)|document|is it safe|safe to|safe hai)\b/i],
-  ['booking_process', /\b(how (do|to|can|should) (i|we) (book|hire|get|start|find|apply)|how does (it|this|booking) work|process|steps|register|sign ?up|apply|kaise (book|hire|kare|karu|karein|milegi|milega))\b/i],
+  // The bare word — "booking", "book", "hire" — is a question about the process too (2026-09-12).
+  ['booking_process', /\b(how (do|to|can|should) (i|we) (book|hire|get|start|find|apply)|how does (it|this|booking) work|process|steps|register|sign ?up|apply|kaise (book|hire|kare|karu|karein|milegi|milega))\b|^\s*(booking|book|hire|hiring)\s*\??\s*$/i],
   // Not bare "number": a card number or a booking number is not a request for ours.
   ['contact', /\b(contact|phone|call you|call us|whatsapp|email|mail|timings?|hours|opening|office|address|reach you|your number|phone number|contact number|mobile number|helpline|number do|number bhejo)\b/i],
 ];
@@ -258,7 +259,7 @@ function looksLikeGreeting(text: string): boolean {
 }
 
 function looksLikePricing(norm: string): boolean {
-  return /\b(price|pricing|cost|charge|charges|fee|fees|how much|rate|rates|₹|rupee|rupees|rs|plan|plans|package|packages|subscription|salary|salaries|wage|wages|pay|paid|kitna|kitne|paisa|paise|kharcha|tankhwah|silver|gold|diamond|cheap|expensive|budget)\b/.test(norm);
+  return /\b(price|prices|pricing|cost|costs|charge|charges|fee|fees|how much|rate|rates|₹|rupee|rupees|rs|plan|plans|package|packages|subscription|salary|salaries|wage|wages|pay|paid|kitna|kitne|paisa|paise|kharcha|tankhwah|silver|gold|diamond|cheap|expensive|budget)\b/.test(norm);
 }
 
 function looksLikeServiceability(norm: string, e: Entities): boolean {
@@ -266,8 +267,11 @@ function looksLikeServiceability(norm: string, e: Entities): boolean {
   return /\b(do you (serve|cover|work|operate)|available in|service in|services in|serve in|cover|area|areas|location|locality|pincode|pin code|near me|my city|which cit|coverage|deliver|kahan|kaha|available hai|milegi .* (mein|me))\b/.test(norm) || (!!e.city && !looksLikePricing(norm));
 }
 
+// Checked last, after pricing and serviceability, so a bare "service" or "services" — the first
+// word a real visitor typed that this missed (2026-09-12) — means "what do you offer", while
+// "services in noida" and "service charge" have already gone where they belong.
 function looksLikeServiceInfo(norm: string, e: Entities): boolean {
-  return !!e.service || /\b(what services|which services|services do you|types of|kind of|what do you (do|offer|provide)|what is a|what does a|duties|tasks|responsibilit|maid|cook|nanny|elder|helper|kaam)\b/.test(norm);
+  return !!e.service || /\b(what services|which services|services do you|types of|kind of|what do you (do|offer|provide)|what is a|what does a|duties|tasks|responsibilit|maid|cook|nanny|elder|helper|kaam|services?)\b/.test(norm);
 }
 
 // Work we do not place. Named so the answer is "we don't offer that, here is what we do"
