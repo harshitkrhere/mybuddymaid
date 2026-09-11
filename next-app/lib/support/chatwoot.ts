@@ -1,19 +1,28 @@
-// lib/support/chatwoot.ts — the Chatwoot Application API, as much of it as we use.
+// lib/support/chatwoot.ts — the two Chatwoot APIs we use, as much of them as we use.
 //
-// Three operations, all against the "Website assistant" API-channel inbox:
-//   openHandoff        — a website conversation the assistant is handing to a person becomes
-//                        a Chatwoot conversation, transcript included, status OPEN so it lands
-//                        in the queue (a bot-attached inbox otherwise parks it as "pending").
-//   postCustomerMessage — after the handoff, what the customer types next goes to the person,
-//                        not the bot.
-//   fetchMessages      — what the person replied, for the widget to show. This is the
-//                        free-tier path (owner: no paid webhooks yet); when the webhook is
-//                        live it simply arrives twice and the record's unique index dedupes.
+// Chatwoot's free tier has no personal API access tokens ("available on paid plans"), and an
+// agent bot's token is refused for creating contacts or conversations ("Access to this
+// endpoint is not authorized for bots" — seen live, 2026-09-11). What the free tier does give
+// an API-channel inbox is its CLIENT API: the public, token-free endpoints a custom chat
+// client uses, keyed by the inbox identifier shown on the inbox page. That is exactly what
+// our widget is — a custom client of the "Website assistant" inbox — so it does the work here:
 //
-// Plain fetch, injectable for tests, and every failure returns null or false with a log line.
-// The token is a person's access token (Chatwoot → Profile Settings → Access Token), not the
-// agent bot's: Chatwoot answers "Access to this endpoint is not authorized for bots" when a
-// bot token tries to create a contact (seen live, 2026-09-11). It never leaves the server.
+//   Client API (no token; the visitor's side of the conversation)
+//     create the contact and the conversation, post what the customer typed, list what the
+//     team replied, read the conversation's status.
+//   Bot token (Application API; the bot's side)
+//     the private hand-off note, the assistant's own turns as outgoing messages, and
+//     toggle_status → open so the conversation leaves the bot's "pending" queue. Every one
+//     of these is on Chatwoot's bot-accessible list. Without the token the conversation
+//     still exists, with the assistant's turns posted as the visitor with a prefix; it just
+//     stays pending until someone opens it.
+//
+// One contact per website conversation, whose Client-API identifier (source_id) is our own
+// conversation id — so nothing has to be stored to find it again, and a redelivered handoff
+// finds the same contact. Plain fetch, injectable for tests; every failure returns null or
+// false with a log line.
+
+import { createHmac } from 'node:crypto';
 
 export type FetchLike = (input: string, init: RequestInit) => Promise<Response>;
 
@@ -21,7 +30,12 @@ export interface ChatwootClient {
   apiUrl: string;
   accountId: string;
   inboxId: number;
-  token: string;
+  /** The inbox identifier shown on the inbox page; keys the Client API. Not a secret. */
+  inboxIdentifier: string;
+  /** The agent bot's access token, or null: then the bot-side steps are skipped. */
+  token: string | null;
+  /** Only when the inbox enforces user identity validation. */
+  hmacToken: string | null;
   fetchImpl: FetchLike;
   timeoutMs: number;
 }
@@ -30,9 +44,18 @@ export function chatwootFromEnv(env: Record<string, string | undefined> = proces
   const apiUrl = env.CHATWOOT_API_URL?.replace(/\/+$/, '');
   const accountId = env.CHATWOOT_ACCOUNT_ID;
   const inboxId = Number(env.CHATWOOT_INBOX_ID);
-  const token = env.CHATWOOT_API_TOKEN;
-  if (!apiUrl || !accountId || !Number.isFinite(inboxId) || inboxId <= 0 || !token) return null;
-  return { apiUrl, accountId, inboxId, token, fetchImpl: fetchImpl ?? (globalThis.fetch as FetchLike), timeoutMs: 8000 };
+  const inboxIdentifier = env.CHATWOOT_INBOX_IDENTIFIER?.trim();
+  if (!apiUrl || !accountId || !Number.isFinite(inboxId) || inboxId <= 0 || !inboxIdentifier) return null;
+  return {
+    apiUrl,
+    accountId,
+    inboxId,
+    inboxIdentifier,
+    token: env.CHATWOOT_API_TOKEN?.trim() || null,
+    hmacToken: env.CHATWOOT_HMAC_TOKEN?.trim() || null,
+    fetchImpl: fetchImpl ?? (globalThis.fetch as FetchLike),
+    timeoutMs: 8000,
+  };
 }
 
 export interface ChatwootMessage {
@@ -45,11 +68,16 @@ export interface ChatwootMessage {
   sender: { name?: string; type?: string } | null;
 }
 
-async function call<T>(c: ChatwootClient, path: string, init: RequestInit, what: string): Promise<{ status: number; body: T | null }> {
+interface Result<T> {
+  status: number;
+  body: T | null;
+}
+
+async function call<T>(c: ChatwootClient, url: string, init: RequestInit, what: string): Promise<Result<T>> {
   try {
-    const res = await c.fetchImpl(`${c.apiUrl}/api/v1/accounts/${c.accountId}${path}`, {
+    const res = await c.fetchImpl(url, {
       ...init,
-      headers: { api_access_token: c.token, 'content-type': 'application/json', ...(init.headers as Record<string, string> | undefined) },
+      headers: { 'content-type': 'application/json', ...(init.headers as Record<string, string> | undefined) },
       signal: AbortSignal.timeout(c.timeoutMs),
     });
     const text = await res.text();
@@ -67,59 +95,42 @@ async function call<T>(c: ChatwootClient, path: string, init: RequestInit, what:
   }
 }
 
+/** Client API: /public/api/v1/inboxes/{inbox_identifier}/… — no token. */
+function client<T>(c: ChatwootClient, path: string, init: RequestInit, what: string): Promise<Result<T>> {
+  return call<T>(c, `${c.apiUrl}/public/api/v1/inboxes/${encodeURIComponent(c.inboxIdentifier)}${path}`, init, what);
+}
+
+/** Application API as the bot: /api/v1/accounts/{account_id}/… — bot token. */
+async function bot<T>(c: ChatwootClient, path: string, init: RequestInit, what: string): Promise<Result<T>> {
+  if (!c.token) return { status: 0, body: null };
+  return call<T>(c, `${c.apiUrl}/api/v1/accounts/${c.accountId}${path}`, { ...init, headers: { api_access_token: c.token } }, what);
+}
+
+const contactPath = (sourceId: string) => `/contacts/${encodeURIComponent(sourceId)}`;
+const conversationPath = (sourceId: string, chatwootConversationId: number) => `${contactPath(sourceId)}/conversations/${chatwootConversationId}`;
+
 // ─── Contacts ───────────────────────────────────────────────────────────────────────────────
 
-interface ContactPayload {
+interface ClientContact {
   id?: number;
-  payload?: { contact?: { id?: number }; contact_inbox?: { source_id?: string } };
-  contact_inboxes?: Array<{ source_id?: string; inbox?: { id?: number } }>;
-}
-
-interface Contact {
-  id: number;
-  sourceId: string;
-}
-
-function parseContact(body: ContactPayload | null, inboxId: number): Contact | null {
-  if (!body) return null;
-  const id = body.payload?.contact?.id ?? body.id;
-  const fromPayload = body.payload?.contact_inbox?.source_id;
-  // A source_id belongs to one inbox; one for another inbox would be refused at conversation
-  // creation, so only ours counts (or an entry that does not say which inbox it is for).
-  const list = body.contact_inboxes ?? [];
-  const fromList = list.find((ci) => ci.inbox?.id === inboxId)?.source_id ?? list.find((ci) => !ci.inbox)?.source_id;
-  const sourceId = fromPayload ?? fromList;
-  return typeof id === 'number' && typeof sourceId === 'string' ? { id, sourceId } : null;
+  source_id?: string;
+  pubsub_token?: string;
 }
 
 /**
- * The contact for a website conversation. One per conversation, identified by our conversation
- * id, so a redelivered handoff finds the same contact rather than creating a second one.
+ * The contact for a website conversation, created if needed. Its Client-API identifier is our
+ * conversation id, which Chatwoot honours as the source_id and treats as idempotent: asking
+ * again returns the same contact.
  */
-async function ensureContact(c: ChatwootClient, identifier: string, name: string, phone: string | null): Promise<Contact | null> {
-  const created = await call<ContactPayload>(
-    c,
-    '/contacts',
-    { method: 'POST', body: JSON.stringify({ inbox_id: c.inboxId, identifier, name, ...(phone ? { phone_number: phone } : {}) }) },
-    'create contact',
-  );
-  if (created.status === 200 || created.status === 201) return parseContact(created.body, c.inboxId);
-
-  // 422 = identifier (or phone) already taken: find it instead.
-  if (created.status === 422) {
-    const found = await call<{ payload?: ContactPayload[] }>(c, `/contacts/search?q=${encodeURIComponent(identifier)}`, { method: 'GET' }, 'search contact');
-    const hit = found.body?.payload?.[0];
-    if (hit) {
-      const contact = parseContact(hit, c.inboxId);
-      if (contact) return contact;
-      // Known contact but not yet in this inbox: attach it.
-      if (typeof hit.id === 'number') {
-        const ci = await call<{ source_id?: string }>(c, `/contacts/${hit.id}/contact_inboxes`, { method: 'POST', body: JSON.stringify({ inbox_id: c.inboxId }) }, 'attach contact to inbox');
-        if (typeof ci.body?.source_id === 'string') return { id: hit.id, sourceId: ci.body.source_id };
-      }
-    }
-  }
-  return null;
+async function ensureContact(c: ChatwootClient, conversationId: string, name: string, phone: string | null): Promise<string | null> {
+  const body: Record<string, unknown> = { identifier: conversationId, source_id: conversationId, name };
+  if (phone) body.phone_number = phone;
+  if (c.hmacToken) body.identifier_hash = createHmac('sha256', c.hmacToken).update(conversationId).digest('hex');
+  const r = await client<ClientContact>(c, '/contacts', { method: 'POST', body: JSON.stringify(body) }, 'create contact');
+  if (r.status !== 200 && r.status !== 201) return null;
+  const sourceId = typeof r.body?.source_id === 'string' && r.body.source_id ? r.body.source_id : conversationId;
+  if (sourceId !== conversationId) console.warn(`[chatwoot] contact source_id ${sourceId} differs from conversation ${conversationId}; later calls will not find it`);
+  return sourceId;
 }
 
 // ─── Handoff ────────────────────────────────────────────────────────────────────────────────
@@ -146,25 +157,26 @@ export interface HandoffInput {
   signedIn?: boolean;
 }
 
+/** Shown in front of an assistant turn when it has to be posted from the visitor's side. */
+export const ASSISTANT_PREFIX = 'Assistant: ';
+
 /**
  * Open a Chatwoot conversation for a handoff. Returns the Chatwoot conversation id, or null
- * if any step failed (the caller keeps the WhatsApp/phone handoff, which is live regardless).
+ * if the contact or the conversation could not be created (the caller keeps the WhatsApp/phone
+ * handoff, which is live regardless). Failures after that leave a shorter transcript or a
+ * pending status, never a missing conversation.
  */
 export async function openHandoff(c: ChatwootClient, h: HandoffInput): Promise<number | null> {
   const name = h.contactName?.trim() || `Website visitor ${h.ref}`;
-  const contact = await ensureContact(c, h.conversationId, name, h.contactPhone ?? null);
-  if (!contact) return null;
+  const sourceId = await ensureContact(c, h.conversationId, name, h.contactPhone ?? null);
+  if (!sourceId) return null;
 
-  const created = await call<{ id?: number }>(
+  const created = await client<{ id?: number }>(
     c,
-    '/conversations',
+    `${contactPath(sourceId)}/conversations`,
     {
       method: 'POST',
       body: JSON.stringify({
-        source_id: contact.sourceId,
-        inbox_id: c.inboxId,
-        contact_id: contact.id,
-        status: 'open',
         custom_attributes: {
           mbm_conversation_id: h.conversationId,
           mbm_ref: h.ref,
@@ -183,23 +195,27 @@ export async function openHandoff(c: ChatwootClient, h: HandoffInput): Promise<n
   const conversationId = created.body?.id;
   if (typeof conversationId !== 'number') return null;
 
-  // The transcript, oldest first: the customer's turns as incoming, the assistant's as outgoing.
-  // Posted one by one because the API has no batch endpoint; a failure mid-way leaves a
-  // shorter transcript, not a missing conversation, so it is not treated as fatal.
+  // The private note first, so it sits above the transcript in the agent's view.
   const header = `[${h.ref}] Handed off by the website assistant${h.escalationReason ? ` — ${h.escalationReason.replace(/_/g, ' ')}` : ''}. Transcript follows.`;
-  await call(c, `/conversations/${conversationId}/messages`, { method: 'POST', body: JSON.stringify({ content: header, message_type: 'outgoing', private: true }) }, 'post header note');
+  await bot(c, `/conversations/${conversationId}/messages`, { method: 'POST', body: JSON.stringify({ content: header, message_type: 'outgoing', private: true }) }, 'post header note');
+
+  // The transcript, oldest first. The customer's turns are posted from the visitor's side;
+  // the assistant's as the bot, or from the visitor's side with a prefix if there is no token.
   for (const t of h.transcript) {
-    await call(
-      c,
-      `/conversations/${conversationId}/messages`,
-      { method: 'POST', body: JSON.stringify({ content: t.content, message_type: t.role === 'user' ? 'incoming' : 'outgoing' }) },
-      'post transcript message',
-    );
+    if (t.role === 'user') {
+      await client(c, `${conversationPath(sourceId, conversationId)}/messages`, { method: 'POST', body: JSON.stringify({ content: t.content }) }, 'post transcript (visitor)');
+      continue;
+    }
+    const asBot = await bot(c, `/conversations/${conversationId}/messages`, { method: 'POST', body: JSON.stringify({ content: t.content, message_type: 'outgoing' }) }, 'post transcript (assistant)');
+    if (asBot.status < 200 || asBot.status >= 300) {
+      await client(c, `${conversationPath(sourceId, conversationId)}/messages`, { method: 'POST', body: JSON.stringify({ content: ASSISTANT_PREFIX + t.content }) }, 'post transcript (assistant, as visitor)');
+    }
   }
 
-  // Belt and braces: a bot-attached inbox can park a new conversation as pending regardless of
-  // the status asked for at creation. Open it explicitly so it is in the queue.
-  await call(c, `/conversations/${conversationId}/toggle_status`, { method: 'POST', body: JSON.stringify({ status: 'open' }) }, 'open conversation');
+  // A bot-attached inbox parks a new conversation as pending. The bot hands it to a person by
+  // opening it — the one status change a bot token is allowed to make.
+  const opened = await bot(c, `/conversations/${conversationId}/toggle_status`, { method: 'POST', body: JSON.stringify({ status: 'open' }) }, 'open conversation');
+  if (opened.status < 200 || opened.status >= 300) console.warn(`[chatwoot] conversation ${conversationId} left pending (no bot token, or the call failed)`);
 
   return conversationId;
 }
@@ -207,35 +223,36 @@ export async function openHandoff(c: ChatwootClient, h: HandoffInput): Promise<n
 // ─── After the handoff ──────────────────────────────────────────────────────────────────────
 
 /** A message the customer typed after being handed off goes to the person, as theirs. */
-export async function postCustomerMessage(c: ChatwootClient, chatwootConversationId: number, content: string): Promise<number | null> {
-  const r = await call<{ id?: number }>(
+export async function postCustomerMessage(c: ChatwootClient, conversationId: string, chatwootConversationId: number, content: string): Promise<number | null> {
+  const r = await client<{ id?: number }>(
     c,
-    `/conversations/${chatwootConversationId}/messages`,
-    { method: 'POST', body: JSON.stringify({ content, message_type: 'incoming' }) },
+    `${conversationPath(conversationId, chatwootConversationId)}/messages`,
+    { method: 'POST', body: JSON.stringify({ content }) },
     'post customer message',
   );
   return typeof r.body?.id === 'number' ? r.body.id : null;
 }
 
-interface MessagesPayload {
-  payload?: Array<{
-    id?: number;
-    content?: string | null;
-    message_type?: string | number;
-    private?: boolean;
-    created_at?: string | number;
-    sender?: { name?: string; type?: string } | null;
-  }>;
+interface RawMessage {
+  id?: number;
+  content?: string | null;
+  message_type?: string | number;
+  private?: boolean;
+  created_at?: string | number;
+  sender?: { name?: string; type?: string } | null;
 }
 
 const TYPES: Record<number, string> = { 0: 'incoming', 1: 'outgoing', 2: 'activity', 3: 'template' };
 
-/** Every message on a conversation, oldest first, in a normalised shape. Empty on failure. */
-export async function fetchMessages(c: ChatwootClient, chatwootConversationId: number): Promise<ChatwootMessage[]> {
-  const r = await call<MessagesPayload>(c, `/conversations/${chatwootConversationId}/messages`, { method: 'GET' }, 'list messages');
-  const rows = r.body?.payload ?? [];
+/**
+ * Every message on a conversation, oldest first, in a normalised shape. The Client API already
+ * leaves out private notes and activity lines. Empty on failure.
+ */
+export async function fetchMessages(c: ChatwootClient, conversationId: string, chatwootConversationId: number): Promise<ChatwootMessage[]> {
+  const r = await client<RawMessage[] | { payload?: RawMessage[] }>(c, `${conversationPath(conversationId, chatwootConversationId)}/messages`, { method: 'GET' }, 'list messages');
+  const rows: RawMessage[] = Array.isArray(r.body) ? r.body : (r.body?.payload ?? []);
   return rows
-    .filter((m): m is Required<Pick<typeof m, 'id'>> & typeof m => typeof m.id === 'number')
+    .filter((m): m is Required<Pick<RawMessage, 'id'>> & RawMessage => typeof m.id === 'number')
     .map((m) => ({
       id: m.id,
       content: typeof m.content === 'string' ? m.content : '',
@@ -247,8 +264,15 @@ export async function fetchMessages(c: ChatwootClient, chatwootConversationId: n
     .sort((a, b) => a.id - b.id);
 }
 
-/** Current status of a conversation: open | pending | resolved | snoozed, or null on failure. */
-export async function fetchStatus(c: ChatwootClient, chatwootConversationId: number): Promise<string | null> {
-  const r = await call<{ status?: string }>(c, `/conversations/${chatwootConversationId}`, { method: 'GET' }, 'get conversation');
-  return typeof r.body?.status === 'string' ? r.body.status : null;
+/** Current status of a conversation: open | pending | resolved | snoozed, or null when unknown. */
+export async function fetchStatus(c: ChatwootClient, conversationId: string, chatwootConversationId: number): Promise<string | null> {
+  const r = await client<Array<{ id?: number; status?: string }> | { payload?: Array<{ id?: number; status?: string }> }>(
+    c,
+    `${contactPath(conversationId)}/conversations`,
+    { method: 'GET' },
+    'list conversations',
+  );
+  const rows = Array.isArray(r.body) ? r.body : (r.body?.payload ?? []);
+  const row = rows.find((x) => x.id === chatwootConversationId);
+  return typeof row?.status === 'string' ? row.status : null;
 }

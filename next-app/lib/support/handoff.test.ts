@@ -43,24 +43,24 @@ function record(row: Partial<ConversationRow> | null, opts: { messages?: object[
   return { client, calls };
 }
 
-/** Chatwoot double: enough of the API for a handoff, a forwarded message and a pull. */
+/** Chatwoot double: enough of both APIs for a handoff, a forwarded message and a pull. */
 function chatwoot(opts: { messages?: object[]; status?: string; refuse?: boolean } = {}) {
   const calls: Call[] = [];
   const fetchImpl: FetchLike = async (url, init) => {
-    const path = url.replace('https://app.chatwoot.com/api/v1/accounts/185110', '');
+    const path = url.replace('https://app.chatwoot.com/public/api/v1/inboxes/inbox-ident', '').replace('https://app.chatwoot.com/api/v1/accounts/185110', '');
     const method = init.method ?? 'GET';
     const body = init.body ? JSON.parse(String(init.body)) : undefined;
     calls.push({ method, path, body });
     if (opts.refuse) return new Response('nope', { status: 500 });
-    if (path === '/contacts') return new Response(JSON.stringify({ payload: { contact: { id: 7 }, contact_inbox: { source_id: 'src-7' } } }), { status: 200 });
-    if (path === '/conversations') return new Response(JSON.stringify({ id: 4242 }), { status: 200 });
+    if (path === '/contacts') return new Response(JSON.stringify({ id: 7, source_id: ID }), { status: 200 });
+    if (method === 'POST' && path === `/contacts/${ID}/conversations`) return new Response(JSON.stringify({ id: 4242 }), { status: 200 });
     if (method === 'POST' && path.endsWith('/messages')) return new Response(JSON.stringify({ id: 900 + calls.length }), { status: 200 });
     if (path.endsWith('/toggle_status')) return new Response(JSON.stringify({}), { status: 200 });
-    if (method === 'GET' && path.endsWith('/messages')) return new Response(JSON.stringify({ payload: opts.messages ?? [] }), { status: 200 });
-    if (method === 'GET' && /^\/conversations\/\d+$/.test(path)) return new Response(JSON.stringify({ status: opts.status ?? 'open' }), { status: 200 });
+    if (method === 'GET' && path.endsWith('/messages')) return new Response(JSON.stringify(opts.messages ?? []), { status: 200 });
+    if (method === 'GET' && path === `/contacts/${ID}/conversations`) return new Response(JSON.stringify([{ id: 4242, status: opts.status ?? 'open' }]), { status: 200 });
     return new Response('unexpected', { status: 500 });
   };
-  const client: ChatwootClient = { apiUrl: 'https://app.chatwoot.com', accountId: '185110', inboxId: 136538, token: 't', fetchImpl, timeoutMs: 1000 };
+  const client: ChatwootClient = { apiUrl: 'https://app.chatwoot.com', accountId: '185110', inboxId: 136538, inboxIdentifier: 'inbox-ident', token: 't', hmacToken: null, fetchImpl, timeoutMs: 1000 };
   return { client, calls };
 }
 
@@ -125,7 +125,7 @@ test('forwardMessage: posts as the customer, records the message with Chatwootâ€
   const h = (await handedOff(r.client, ID, NOW))!;
   assert.equal(await forwardMessage(r.client, cw.client, h, 'Any update?', NOW), true);
 
-  assert.deepEqual(cw.calls[0], { method: 'POST', path: '/conversations/4242/messages', body: { content: 'Any update?', message_type: 'incoming' } });
+  assert.deepEqual(cw.calls[0], { method: 'POST', path: `/contacts/${ID}/conversations/4242/messages`, body: { content: 'Any update?' } });
   const insert = r.calls.find((c) => c.method === 'POST' && c.path.startsWith('support_messages'))!.body as Array<Record<string, unknown>>;
   assert.equal(insert[0].sender, 'customer');
   assert.equal(insert[0].body, 'Any update?');
