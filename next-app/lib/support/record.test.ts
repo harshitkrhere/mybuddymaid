@@ -5,7 +5,7 @@
 // them — with the table's NOT NULL defaults, never a null that the column would refuse.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { alignKeys, insertMessages, type RecordClient, type FetchLike, type MessageRow } from './record';
+import { alignKeys, insertMessages, listTranscript, type RecordClient, type FetchLike, type MessageRow } from './record';
 
 const customer: MessageRow = { conversation_id: 'c1', sender: 'customer', body: 'hi', turn_index: 0, created_at: '2026-09-15T05:30:00.000Z' };
 const assistant: MessageRow = {
@@ -60,4 +60,16 @@ test('insertMessages sends the aligned rows; 409 counts as recorded', async () =
   assert.equal(await insertMessages(mk(409), [customer]), true);
   assert.equal(await insertMessages(mk(400), [customer]), false);
   assert.equal(await insertMessages(mk(500), []), true, 'nothing to insert is success');
+});
+
+test('listTranscript asks for one conversation’s newest turns and hands them back oldest first', async () => {
+  let url = '';
+  const fetchImpl: FetchLike = async (u) => {
+    url = u;
+    return new Response(JSON.stringify([{ ...assistant }, { ...customer }]), { status: 200 });
+  };
+  const c: RecordClient = { url: 'http://stub.local', key: 'k', fetchImpl, timeoutMs: 1000 };
+  const rows = await listTranscript(c, 'c1');
+  assert.match(url, /support_messages\?conversation_id=eq\.c1&sender=in\.\(customer,assistant\)&.*order=created_at\.desc&limit=80$/);
+  assert.deepEqual(rows.map((r) => r.sender), ['customer', 'assistant']);
 });

@@ -1,8 +1,12 @@
-// app/api/chatwoot/webhook/route.ts — Chatwoot's account-level webhook lands here.
+// app/api/chatwoot/webhook/route.ts — Chatwoot's webhook lands here.
 //
-// Register at Settings → Integrations → Webhooks with the events message_created,
-// conversation_status_changed and conversation_updated, and put the secret Chatwoot shows in
-// CHATWOOT_WEBHOOK_SECRET. Without that variable every delivery is refused with 500 — an
+// The sender is the API inbox itself: Inboxes → Website assistant → Settings holds the Webhook
+// URL (this route) and, beside it, the Webhook Secret that goes in CHATWOOT_WEBHOOK_SECRET. It
+// carries message_created, conversation_status_changed and conversation_updated for that inbox.
+// An account-level webhook (Settings → Integrations → Webhooks, where the plan has it) signs the
+// same way with its own secret and reaches every inbox. Only one sender may point here: each is
+// signed with its own secret, so a second one — an agent bot's outgoing URL, say — is refused
+// with 401 on every delivery. Without the variable every delivery is refused with 500 — an
 // unsigned receiver would let anyone write into the support record.
 //
 // Reads the raw body BEFORE parsing, because the signature covers the exact bytes sent.

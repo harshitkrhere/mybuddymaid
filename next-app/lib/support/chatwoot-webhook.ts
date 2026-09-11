@@ -12,7 +12,11 @@
 // be replayed later. Nothing below the signature check runs on unverified input.
 //
 // Idempotent: a redelivered event finds its message already recorded (unique index on
-// chatwoot_message_id) and does nothing. Safe to receive N times.
+// chatwoot_message_id) and does nothing. Safe to receive N times. And one-way: an incoming
+// message on the API inbox is one our own server posted through the Client API — the
+// transcript at handoff, the customer's later messages, the assistant's turns from the
+// visitor's side (handoff.ts) — and is on the record already, so its echo is acknowledged and
+// not written. Incoming on every other channel is a customer writing to the team.
 //
 // This module is pure logic with the record client injected, so chatwoot-webhook.test.ts
 // drives it with real HMACs and a stubbed PostgREST. The route in app/api/chatwoot/webhook
@@ -98,6 +102,14 @@ export function channelFrom(chatwootChannel: string | undefined): Channel {
   return 'site_chat';
 }
 
+/**
+ * Chatwoot's API channel has exactly one client here: our server, posting as the visitor. An
+ * incoming message there is never news — it is what handoff.ts just sent, already recorded.
+ */
+export function isOwnClientChannel(chatwootChannel: string | undefined): boolean {
+  return (chatwootChannel ?? '').toLowerCase() === 'channel::api';
+}
+
 function senderFrom(e: ChatwootEvent): Sender | null {
   const type = messageType(e);
   if (type === 'incoming') return 'customer';
@@ -149,7 +161,7 @@ async function ensureConversation(
   if (!lookup.ok) return null; // do not create on a failed lookup — that is how duplicates happen
   if (lookup.row) return { id: lookup.row.id, created: false, existing: lookup.row };
 
-  // A conversation that began in Chatwoot — WhatsApp, email, or a walk-in on the API inbox.
+  // A conversation that began in Chatwoot — WhatsApp, email, or one an agent opened on the API inbox.
   // Our escalations create their row first and carry chatwoot_conversation_id, so they never
   // land here. Where the Chatwoot conversation carries our id as a custom attribute (set by
   // the escalation path), honour it instead of creating a second row.
@@ -180,6 +192,7 @@ async function onMessageCreated(e: ChatwootEvent, client: RecordClient, now: Dat
   if (e.private) return { status: 'ignored', reason: 'private note' };
   const sender = senderFrom(e);
   if (!sender) return { status: 'ignored', reason: `message_type ${messageType(e)}` };
+  if (sender === 'customer' && isOwnClientChannel(conv.channel)) return { status: 'ignored', reason: 'echo of a message our own client posted' };
   const body = typeof e.content === 'string' ? e.content.trim() : '';
   if (!body) return { status: 'ignored', reason: 'empty content' };
 

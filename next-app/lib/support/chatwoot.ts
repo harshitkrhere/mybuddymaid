@@ -2,9 +2,11 @@
 //
 // Chatwoot's free tier has no personal API access tokens ("available on paid plans"), and an
 // agent bot's token is refused for creating contacts or conversations ("Access to this
-// endpoint is not authorized for bots" — seen live, 2026-09-11). What the free tier does give
-// an API-channel inbox is its CLIENT API: the public, token-free endpoints a custom chat
-// client uses, keyed by the inbox identifier shown on the inbox page. That is exactly what
+// endpoint is not authorized for bots") — on the free tier for every Application API call
+// ("API access is not enabled for this account"; both seen live, 2026-09-11), which is why the
+// bot side below is optional. What the free tier does give an API-channel inbox is its CLIENT
+// API: the public, token-free endpoints a custom chat client uses, keyed by the inbox
+// identifier shown on the inbox page. That is exactly what
 // our widget is — a custom client of the "Website assistant" inbox — so it does the work here:
 //
 //   Client API (no token; the visitor's side of the conversation)
@@ -14,8 +16,8 @@
 //     the private hand-off note, the assistant's own turns as outgoing messages, and
 //     toggle_status → open so the conversation leaves the bot's "pending" queue. Every one
 //     of these is on Chatwoot's bot-accessible list. Without the token the conversation
-//     still exists, with the assistant's turns posted as the visitor with a prefix; it just
-//     stays pending until someone opens it.
+//     still exists, with the assistant's turns posted as the visitor with a prefix — and
+//     with no bot attached to the inbox it starts open, so nothing waits on the token.
 //
 // One contact per website conversation, whose Client-API identifier (source_id) is our own
 // conversation id — so nothing has to be stored to find it again, and a redelivered handoff
@@ -122,9 +124,11 @@ interface ClientContact {
  * conversation id, which Chatwoot honours as the source_id and treats as idempotent: asking
  * again returns the same contact.
  */
-async function ensureContact(c: ChatwootClient, conversationId: string, name: string, phone: string | null): Promise<string | null> {
+async function ensureContact(c: ChatwootClient, conversationId: string, name: string): Promise<string | null> {
+  // Only a name goes on the contact. A phone number or email would let Chatwoot merge this
+  // contact with any other in the account that shares it, and one visitor's conversation must
+  // never sit under another's contact; the phone travels as a conversation attribute instead.
   const body: Record<string, unknown> = { identifier: conversationId, source_id: conversationId, name };
-  if (phone) body.phone_number = phone;
   if (c.hmacToken) body.identifier_hash = createHmac('sha256', c.hmacToken).update(conversationId).digest('hex');
   const r = await client<ClientContact>(c, '/contacts', { method: 'POST', body: JSON.stringify(body) }, 'create contact');
   if (r.status !== 200 && r.status !== 201) return null;
@@ -168,7 +172,7 @@ export const ASSISTANT_PREFIX = 'Assistant: ';
  */
 export async function openHandoff(c: ChatwootClient, h: HandoffInput): Promise<number | null> {
   const name = h.contactName?.trim() || `Website visitor ${h.ref}`;
-  const sourceId = await ensureContact(c, h.conversationId, name, h.contactPhone ?? null);
+  const sourceId = await ensureContact(c, h.conversationId, name);
   if (!sourceId) return null;
 
   const created = await client<{ id?: number }>(
@@ -187,6 +191,7 @@ export async function openHandoff(c: ChatwootClient, h: HandoffInput): Promise<n
           mbm_plan: h.plan ?? '',
           mbm_reason: h.escalationReason ?? '',
           mbm_signed_in: h.signedIn ? 'yes' : 'no',
+          mbm_phone: h.contactPhone ?? '',
         },
       }),
     },
@@ -213,9 +218,10 @@ export async function openHandoff(c: ChatwootClient, h: HandoffInput): Promise<n
   }
 
   // A bot-attached inbox parks a new conversation as pending. The bot hands it to a person by
-  // opening it — the one status change a bot token is allowed to make.
+  // opening it — the one status change a bot token is allowed to make. Without a token there is
+  // nothing to do: no bot is attached, and the conversation started open.
   const opened = await bot(c, `/conversations/${conversationId}/toggle_status`, { method: 'POST', body: JSON.stringify({ status: 'open' }) }, 'open conversation');
-  if (opened.status < 200 || opened.status >= 300) console.warn(`[chatwoot] conversation ${conversationId} left pending (no bot token, or the call failed)`);
+  if (c.token && (opened.status < 200 || opened.status >= 300)) console.warn(`[chatwoot] conversation ${conversationId} could not be opened; if a bot is attached to the inbox it is left pending`);
 
   return conversationId;
 }
