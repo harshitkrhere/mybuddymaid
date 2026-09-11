@@ -6,7 +6,7 @@
 // (decision 16): rung 3 must fire, must serve the retrieved answer, and must still be correct.
 import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { answer, gatedNumbers, passesGate, handoffFor } from './answer';
+import { answer, answersAfterHandoff, gatedNumbers, passesGate, handoffFor } from './answer';
 import { retrieve } from './retrieve';
 import { resetCircuits, type FetchLike, type ProviderConfig } from './provider';
 import { PLANS, PLAN_BY_KEY, SERVICES } from '../../data/seo';
@@ -34,6 +34,20 @@ const SUNDAY = new Date('2026-09-13T05:30:00Z');
 const SATURDAY_EVENING = new Date('2026-09-12T14:30:00Z'); // 20:00 IST
 
 beforeEach(() => resetCircuits());
+
+test('after a handoff the assistant answers alongside only when the facts help — never for contact details, a greeting or a blank', () => {
+  assert.equal(answersAfterHandoff({ intent: 'contact' }), false, 'the customer is already talking to us');
+  assert.equal(answersAfterHandoff({ intent: 'greeting' }), false);
+  assert.equal(answersAfterHandoff({ intent: 'booking_status' }), false);
+  assert.equal(answersAfterHandoff({ intent: 'unknown', escalate: 'low_confidence' }), false);
+  assert.equal(answersAfterHandoff({ intent: 'human', escalate: 'asked_for_human' }), false);
+  assert.equal(answersAfterHandoff({ intent: 'pricing' }), true);
+  assert.equal(answersAfterHandoff({ intent: 'serviceability' }), true);
+  // The live case: a name and number, typed because the handoff asked for them, read as a
+  // contact question. Acknowledge; do not hand back a "how to reach us" card.
+  const r = retrieve('name - harshit , phone - 9691982400');
+  assert.equal(answersAfterHandoff({ intent: r.intent, escalate: r.escalate }), false);
+});
 
 // ─── Rung 3 fires (decision 16) ─────────────────────────────────────────────────────────────
 

@@ -19,15 +19,15 @@
 // server-side only, raw fetch to PostgREST, no client SDK.
 
 import { NextResponse, after } from 'next/server';
-import { answer, type Turn, type Answer } from '@/lib/assistant/answer';
+import { answer, answersAfterHandoff, type Turn, type Answer } from '@/lib/assistant/answer';
 import { providerFromEnv } from '@/lib/assistant/provider';
 import { COPY } from '@/lib/assistant/copy';
 import { suggestionsFor } from '@/lib/assistant/suggestions';
 import { refFor } from '@/lib/assistant/ref';
 import { corsHeaders } from '@/lib/assistant/cors';
-import { recordClientFromEnv, upsertConversation, insertMessages } from '@/lib/support/record';
+import { recordClientFromEnv, upsertConversation, insertMessages, getConversation } from '@/lib/support/record';
 import { chatwootFromEnv } from '@/lib/support/chatwoot';
-import { handedOff, forwardMessage, forwardReply, startHandoff } from '@/lib/support/handoff';
+import { handedOffFrom, awaitingHandoffFrom, holdMessage, forwardMessage, forwardReply, startHandoff } from '@/lib/support/handoff';
 import { SUPPORT_HOURS, isWithinSupportHours } from '@/data/seo/contact';
 import { CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICE_BY_SLUG, PLAN_BY_KEY } from '@/data/seo';
 
@@ -225,25 +225,33 @@ export async function POST(req: Request) {
     controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
 
   // ── Handed off already? The person gets this message either way. If the assistant can still
-  // answer it from the published facts, it does — a visitor waiting for a reply should not be
-  // told "sent to our team" when the plans page has the answer — and the answer goes to the
-  // person too. Anything it cannot answer, or that asks for a person, is forwarded with an
-  // acknowledgement. ──
-  const handoff = record ? await handedOff(record, conversationId, now) : null;
-  if (handoff && record) {
-    const delivered = await forwardMessage(record, chatwoot, handoff, message, now);
+  // answer it from the published facts — a price, an area, a policy — it does, and the answer
+  // goes to the person too. Anything else, including the contact details the handoff asked
+  // for, gets the acknowledgement alone (answersAfterHandoff).
+  // While the Chatwoot conversation is still being opened — the seconds after the handoff, when
+  // the customer is typing the name and number it asked for — the message is held on the record
+  // and startHandoff posts it the moment the conversation exists. The assistant stays quiet. ──
+  const lookup = record ? await getConversation(record, conversationId) : null;
+  const row = lookup?.ok ? lookup.row : null;
+  const handoff = row ? handedOffFrom(row, now) : null;
+  const opening = !handoff && !!row && awaitingHandoffFrom(row, now);
+  if (record && (handoff || opening)) {
+    const delivered = handoff ? await forwardMessage(record, chatwoot, handoff, message, now) : false;
+    if (!handoff) await holdMessage(record, conversationId, message, now);
     const inHours = isWithinSupportHours(now);
     const ack = inHours ? COPY.forwardedInHours : COPY.forwardedOutOfHours(SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours);
     const stream = new ReadableStream({
       async start(controller) {
         send(controller, 'status', { state: 'forwarding' });
         let a: Answer | null = null;
-        try {
-          const candidate = await answer({ message, history, signedIn: !!userId, now }, { provider });
-          modelCallsToday.count += candidate.modelCalls;
-          if (!candidate.escalate) a = candidate;
-        } catch (e) {
-          console.error('[chat] answer threw (forward mode)', e);
+        if (handoff) {
+          try {
+            const candidate = await answer({ message, history, signedIn: !!userId, now }, { provider });
+            modelCallsToday.count += candidate.modelCalls;
+            if (answersAfterHandoff(candidate)) a = candidate;
+          } catch (e) {
+            console.error('[chat] answer threw (forward mode)', e);
+          }
         }
         send(controller, 'answer', {
           conversation_id: conversationId,
@@ -263,11 +271,12 @@ export async function POST(req: Request) {
         });
         send(controller, 'done', {});
         controller.close();
-        if (a) {
+        if (a && handoff) {
           const reply = a;
+          const h = handoff;
           after(async () => {
             try {
-              await forwardReply(record, chatwoot, handoff, { text: reply.text, sources: reply.sources, modelId: reply.modelId, rung: reply.rung, gateRejected: reply.gateRejected, redacted: reply.redacted }, now);
+              await forwardReply(record, chatwoot, h, { text: reply.text, sources: reply.sources, modelId: reply.modelId, rung: reply.rung, gateRejected: reply.gateRejected, redacted: reply.redacted }, now);
             } catch (e) {
               console.error('[chat] forwardReply threw', e);
             }
