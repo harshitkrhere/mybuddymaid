@@ -183,7 +183,7 @@ export async function insertMessages(c: RecordClient, rows: MessageRow[]): Promi
 export async function getConversation(c: RecordClient, id: string): Promise<Lookup> {
   const res = await call(
     c,
-    `support_conversations?id=eq.${encodeURIComponent(id)}&select=id,ref,channel,user_id,escalated,escalation_reason,chatwoot_conversation_id,first_agent_reply_at,handled_by,outcome,closed_at,last_message_at,contact_name,contact_phone&limit=1`,
+    `support_conversations?id=eq.${encodeURIComponent(id)}&select=id,ref,channel,user_id,escalated,escalated_at,escalation_reason,chatwoot_conversation_id,first_agent_reply_at,handled_by,outcome,closed_at,last_message_at,contact_name,contact_phone&limit=1`,
     { method: 'GET', headers: headers(c) },
     'conversation get',
   );

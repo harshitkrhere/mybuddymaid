@@ -30,6 +30,8 @@ import { openHandoff, postCustomerMessage, postAssistantMessage, fetchMessages, 
 import { assistantChatwootIds, getConversation, insertMessages, listMessagesAfter, listTranscript, patchConversation, type ConversationRow, type RecordClient } from './record';
 
 const HANDOFF_WINDOW_MS = 24 * 60 * 60 * 1000;
+/** How long after a handoff is decided its Chatwoot conversation may still be opening. */
+const HANDOFF_OPENING_MS = 2 * 60 * 1000;
 
 // ─── Start ──────────────────────────────────────────────────────────────────────────────────
 
@@ -87,6 +89,15 @@ export async function startHandoff(record: RecordClient | null, chatwoot: Chatwo
     escalated: true,
   });
   if (!ok) console.error(`[handoff] opened Chatwoot conversation ${chatwootId} but could not record it on ${h.conversationId}`);
+
+  // Anything the customer wrote while the conversation was being opened — their name and
+  // number, typically, since that is what the handoff asks for — was held on the record and is
+  // in neither the transcript nor Chatwoot. Post it now, in order, so the person sees it.
+  const sinceIso = recorded.length ? recorded[recorded.length - 1].created_at : undefined;
+  if (sinceIso) {
+    const held = await listMessagesAfter(record, h.conversationId, sinceIso, ['customer']);
+    for (const m of held) if (!m.chatwoot_message_id) await postCustomerMessage(chatwoot, h.conversationId, chatwootId, m.body);
+  }
   return { status: 'opened', chatwootConversationId: chatwootId };
 }
 
@@ -106,11 +117,34 @@ export async function handedOff(record: RecordClient | null, conversationId: str
   if (!record) return null;
   const lookup = await getConversation(record, conversationId);
   if (!lookup.ok || !lookup.row) return null;
-  const row = lookup.row;
+  return handedOffFrom(lookup.row, now);
+}
+
+/** The same decision from a row already in hand, so a route that looked it up need not ask twice. */
+export function handedOffFrom(row: ConversationRow, now: Date = new Date()): HandedOff | null {
   if (!row.chatwoot_conversation_id || row.closed_at) return null;
   const last = row.last_message_at ? new Date(row.last_message_at).getTime() : 0;
   if (now.getTime() - last > HANDOFF_WINDOW_MS) return null;
   return { row, chatwootConversationId: row.chatwoot_conversation_id };
+}
+
+/**
+ * A handoff decided moments ago whose Chatwoot conversation is still being opened: escalated,
+ * no Chatwoot id yet, within the opening window. What the customer writes now is held on the
+ * record (holdMessage) and posted by startHandoff once the conversation exists. The window
+ * keeps a handoff that failed from holding messages forever.
+ */
+export function awaitingHandoffFrom(row: ConversationRow, now: Date = new Date()): boolean {
+  if (row.chatwoot_conversation_id || !row.escalated || !row.escalated_at || row.closed_at) return false;
+  const since = now.getTime() - new Date(row.escalated_at).getTime();
+  return since >= 0 && since <= HANDOFF_OPENING_MS;
+}
+
+/** A message written while the Chatwoot conversation is being opened: onto the record, for startHandoff to post. */
+export async function holdMessage(record: RecordClient, conversationId: string, content: string, now: Date = new Date()): Promise<boolean> {
+  const ok = await insertMessages(record, [{ conversation_id: conversationId, sender: 'customer', body: content, created_at: now.toISOString() }]);
+  await patchConversation(record, conversationId, { last_message_at: now.toISOString() });
+  return ok;
 }
 
 // ─── Forward ────────────────────────────────────────────────────────────────────────────────

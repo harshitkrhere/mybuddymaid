@@ -6,7 +6,7 @@
 // them — idempotently, because the webhook may have recorded the same message first.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { startHandoff, handedOff, forwardMessage, forwardReply, pullReplies } from './handoff';
+import { startHandoff, handedOff, handedOffFrom, awaitingHandoffFrom, holdMessage, forwardMessage, forwardReply, pullReplies } from './handoff';
 import type { ChatwootClient } from './chatwoot';
 import type { RecordClient, FetchLike, ConversationRow } from './record';
 
@@ -38,7 +38,8 @@ function record(row: Partial<ConversationRow> | null, opts: { messages?: object[
     }
     if (method === 'GET' && path.startsWith('support_messages?') && path.includes('order=created_at.desc')) {
       // The transcript: the conversation's own turns, newest first, as PostgREST would answer.
-      const rows = (opts.messages ?? []).filter((m) => ['customer', 'assistant'].includes((m as { sender: string }).sender));
+      // A row marked `late` was written after this snapshot; only the after-query below sees it.
+      const rows = (opts.messages ?? []).filter((m) => ['customer', 'assistant'].includes((m as { sender: string }).sender) && !(m as { late?: boolean }).late);
       return new Response(JSON.stringify(rows.slice().reverse()), { status: 200 });
     }
     if (method === 'GET' && path.startsWith('support_messages?')) {
@@ -131,6 +132,43 @@ test('startHandoff: the transcript Chatwoot gets is the record’s copy of the c
   const cw2 = chatwoot();
   await startHandoff(r2.client, cw2.client, INPUT);
   assert.deepEqual(posted(cw2.calls), INPUT.transcript.map((t) => t.content));
+});
+
+test('startHandoff: what the customer wrote while the conversation was being opened is posted after the transcript', async () => {
+  const messages = [
+    { conversation_id: ID, sender: 'customer', body: 'connect me with team', created_at: '2026-09-15T05:29:00.000Z' },
+    { conversation_id: ID, sender: 'assistant', body: 'Of course — leave your name and number here.', created_at: '2026-09-15T05:29:00.001Z' },
+    { conversation_id: ID, sender: 'customer', body: 'name - harshit, phone - 9691982400', created_at: '2026-09-15T05:29:12.000Z', late: true },
+  ];
+  const r = record({ chatwoot_conversation_id: null }, { messages });
+  const cw = chatwoot();
+  assert.equal((await startHandoff(r.client, cw.client, INPUT)).status, 'opened');
+  const posted = cw.calls.filter((c) => c.method === 'POST' && c.path.endsWith('/messages') && !(c.body as { private?: boolean }).private).map((c) => (c.body as { content: string }).content);
+  assert.deepEqual(posted, ['connect me with team', 'Of course — leave your name and number here.', 'name - harshit, phone - 9691982400']);
+  // From the visitor's side, into the conversation just opened.
+  const last = cw.calls[cw.calls.length - 1];
+  assert.equal(last.path, `/contacts/${ID}/conversations/4242/messages`);
+});
+
+test('awaitingHandoffFrom: a handoff decided within two minutes and not yet in Chatwoot; nothing else', () => {
+  const t = (secondsAgo: number) => new Date(NOW.getTime() - secondsAgo * 1000).toISOString();
+  const base = { id: ID, ref: 'MBM-AAAAA', channel: 'site_chat' as const };
+  assert.equal(awaitingHandoffFrom({ ...base, escalated: true, escalated_at: t(20), chatwoot_conversation_id: null }, NOW), true);
+  assert.equal(awaitingHandoffFrom({ ...base, escalated: true, escalated_at: t(180), chatwoot_conversation_id: null }, NOW), false, 'too long ago: that handoff failed');
+  assert.equal(awaitingHandoffFrom({ ...base, escalated: true, escalated_at: t(20), chatwoot_conversation_id: 4242 }, NOW), false, 'already open: that is handedOff');
+  assert.equal(awaitingHandoffFrom({ ...base, escalated: false, escalated_at: null, chatwoot_conversation_id: null }, NOW), false);
+  assert.ok(handedOffFrom({ ...base, chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() }, NOW));
+  assert.equal(handedOffFrom({ ...base, chatwoot_conversation_id: null, last_message_at: NOW.toISOString() }, NOW), null);
+});
+
+test('holdMessage: recorded as the customer without a Chatwoot id, and the conversation is bumped', async () => {
+  const r = record({ chatwoot_conversation_id: null });
+  assert.equal(await holdMessage(r.client, ID, 'name - harshit, phone - 9691982400', NOW), true);
+  const insert = r.calls.find((c) => c.method === 'POST' && c.path.startsWith('support_messages'))!.body as Array<Record<string, unknown>>;
+  assert.equal(insert[0].sender, 'customer');
+  assert.ok(!insert[0].chatwoot_message_id, 'no Chatwoot id yet: startHandoff posts it later');
+  const patch = r.calls.find((c) => c.method === 'PATCH')!.body as Record<string, unknown>;
+  assert.equal(patch.last_message_at, NOW.toISOString());
 });
 
 // ─── handedOff ──────────────────────────────────────────────────────────────────────────────
