@@ -135,6 +135,27 @@ export async function findConversationByChatwootId(c: RecordClient, chatwootId: 
   }
 }
 
+// PostgREST inserts a JSON array as one statement and requires every object to have the same
+// keys (PGRST102 "All object keys must match" otherwise). A customer turn and an assistant
+// turn naturally carry different keys, so rows are widened to their union before sending.
+// NOT NULL columns get the table's own default rather than null.
+const NOT_NULL_DEFAULTS: Partial<MessageRow> = { turn_index: 0, gate_rejected: false, redacted: [] };
+
+export function alignKeys(rows: MessageRow[]): Record<string, unknown>[] {
+  const keys = new Set<string>();
+  for (const r of rows) for (const k of Object.keys(r)) keys.add(k);
+  return rows.map((r) => {
+    const out: Record<string, unknown> = {};
+    for (const k of keys) {
+      const rec: Record<string, unknown> = { ...r };
+      if (k in rec) out[k] = rec[k];
+      else if (k === 'created_at') out[k] = new Date().toISOString();
+      else out[k] = (NOT_NULL_DEFAULTS as Record<string, unknown>)[k] ?? null;
+    }
+    return out;
+  });
+}
+
 /**
  * Insert messages. A duplicate chatwoot_message_id (a redelivered webhook) is success, not
  * failure: PostgREST answers 409 on the unique index, and the row we wanted is already there.
@@ -145,7 +166,7 @@ export async function insertMessages(c: RecordClient, rows: MessageRow[]): Promi
     const res = await c.fetchImpl(`${c.url}/rest/v1/support_messages`, {
       method: 'POST',
       headers: headers(c, { Prefer: 'return=minimal' }),
-      body: JSON.stringify(rows),
+      body: JSON.stringify(alignKeys(rows)),
       signal: AbortSignal.timeout(c.timeoutMs),
     });
     if (res.ok) return true;
