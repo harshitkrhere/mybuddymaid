@@ -233,6 +233,22 @@ export async function postCustomerMessage(c: ChatwootClient, conversationId: str
   return typeof r.body?.id === 'number' ? r.body.id : null;
 }
 
+/**
+ * The assistant's own reply after a handoff, so the person sees the whole exchange: as the bot
+ * when there is a token, otherwise from the visitor's side with a prefix. Returns Chatwoot's id.
+ */
+export async function postAssistantMessage(c: ChatwootClient, conversationId: string, chatwootConversationId: number, content: string): Promise<number | null> {
+  const asBot = await bot<{ id?: number }>(c, `/conversations/${chatwootConversationId}/messages`, { method: 'POST', body: JSON.stringify({ content, message_type: 'outgoing' }) }, 'post assistant reply');
+  if (typeof asBot.body?.id === 'number') return asBot.body.id;
+  const asVisitor = await client<{ id?: number }>(
+    c,
+    `${conversationPath(conversationId, chatwootConversationId)}/messages`,
+    { method: 'POST', body: JSON.stringify({ content: ASSISTANT_PREFIX + content }) },
+    'post assistant reply (as visitor)',
+  );
+  return typeof asVisitor.body?.id === 'number' ? asVisitor.body.id : null;
+}
+
 interface RawMessage {
   id?: number;
   content?: string | null;

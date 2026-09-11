@@ -8,8 +8,12 @@
 //                  Idempotent: a conversation already handed off is left alone.
 //
 //   forwardMessage the customer typed again after the handoff. It goes to the person in
-//                  Chatwoot as the customer's own message, and is recorded — the bot stays
-//                  out of it.
+//                  Chatwoot as the customer's own message, and is recorded.
+//
+//   forwardReply   the assistant could still answer that message from the published facts,
+//                  so it did — and the answer goes to Chatwoot too, as the bot, so the person
+//                  sees the whole exchange. A question the assistant cannot answer is only
+//                  forwarded, with an acknowledgement.
 //
 //   pullReplies    the widget asks "anything from the team yet?". Chatwoot is asked for the
 //                  conversation's messages, the agent's replies are recorded (idempotent on
@@ -21,8 +25,8 @@
 // with stubs. If either is not configured the functions do the safe thing: nothing, and say so.
 
 import type { ChatwootClient, Transcript } from './chatwoot';
-import { openHandoff, postCustomerMessage, fetchMessages, fetchStatus } from './chatwoot';
-import { getConversation, insertMessages, listMessagesAfter, patchConversation, type ConversationRow, type RecordClient } from './record';
+import { openHandoff, postCustomerMessage, postAssistantMessage, fetchMessages, fetchStatus } from './chatwoot';
+import { assistantChatwootIds, getConversation, insertMessages, listMessagesAfter, patchConversation, type ConversationRow, type RecordClient } from './record';
 
 const HANDOFF_WINDOW_MS = 24 * 60 * 60 * 1000;
 
@@ -113,6 +117,34 @@ export async function forwardMessage(record: RecordClient, chatwoot: ChatwootCli
   return chatwootMessageId !== null;
 }
 
+export interface ForwardedReply {
+  text: string;
+  sources?: unknown;
+  modelId?: string | null;
+  rung?: number | null;
+  gateRejected?: boolean;
+  redacted?: string[];
+}
+
+/** The assistant's answer to a forwarded message: to Chatwoot as the bot, and onto the record. */
+export async function forwardReply(record: RecordClient, chatwoot: ChatwootClient | null, h: HandedOff, reply: ForwardedReply, now: Date = new Date()): Promise<void> {
+  const chatwootMessageId = chatwoot ? await postAssistantMessage(chatwoot, h.row.id, h.chatwootConversationId, reply.text) : null;
+  await insertMessages(record, [
+    {
+      conversation_id: h.row.id,
+      sender: 'assistant',
+      body: reply.text,
+      grounded_sources: reply.sources ?? null,
+      model_id: reply.modelId ?? null,
+      rung: reply.rung ?? null,
+      gate_rejected: !!reply.gateRejected,
+      redacted: reply.redacted ?? [],
+      chatwoot_message_id: chatwootMessageId,
+      created_at: new Date(now.getTime() + 1).toISOString(),
+    },
+  ]);
+}
+
 // ─── Pull ───────────────────────────────────────────────────────────────────────────────────
 
 export interface Reply {
@@ -133,7 +165,11 @@ export async function pullReplies(record: RecordClient, chatwoot: ChatwootClient
   let status: string | null = null;
   if (chatwoot) {
     const messages = await fetchMessages(chatwoot, h.row.id, h.chatwootConversationId);
-    const fromTeam = messages.filter((m) => (m.message_type === 'outgoing' || m.message_type === 'template') && !m.private && m.content.trim());
+    const outgoing = messages.filter((m) => (m.message_type === 'outgoing' || m.message_type === 'template') && !m.private && m.content.trim());
+    // The assistant's own replies were posted as the bot and are already on the record; they
+    // are not the team's, whatever sender type Chatwoot reports for them.
+    const ours = await assistantChatwootIds(record, h.row.id, outgoing.map((m) => m.id));
+    const fromTeam = outgoing.filter((m) => !ours.has(m.id));
     if (fromTeam.length) {
       // Idempotent on chatwoot_message_id; a 409 from the unique index is success.
       await insertMessages(
@@ -158,12 +194,13 @@ export async function pullReplies(record: RecordClient, chatwoot: ChatwootClient
     }
   }
 
-  // What the widget has not shown yet, from the record — which now includes anything the pull
-  // above wrote, and anything the webhook wrote before it.
-  const rows = await listMessagesAfter(record, h.row.id, afterIso, ['agent', 'assistant']);
+  // What the widget has not shown yet: what people wrote, from the record — which now includes
+  // anything the pull above wrote, and anything the webhook wrote before it. The assistant's
+  // turns are never here; the widget showed those as they were answered.
+  const rows = await listMessagesAfter(record, h.row.id, afterIso, ['agent']);
   const replies: Reply[] = rows
-    .filter((r) => r.chatwoot_message_id) // only what came from Chatwoot, never the bot's own turns
-    .map((r) => ({ id: r.chatwoot_message_id ?? null, sender: r.sender as 'agent' | 'assistant', body: r.body, created_at: r.created_at ?? now.toISOString() }));
+    .filter((r) => r.chatwoot_message_id) // only what came from Chatwoot
+    .map((r) => ({ id: r.chatwoot_message_id ?? null, sender: 'agent', body: r.body, created_at: r.created_at ?? now.toISOString() }));
 
   return { replies, status, closed: status === 'resolved' };
 }

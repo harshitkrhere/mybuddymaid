@@ -26,7 +26,7 @@ import { refFor } from '@/lib/assistant/ref';
 import { corsHeaders } from '@/lib/assistant/cors';
 import { recordClientFromEnv, upsertConversation, insertMessages } from '@/lib/support/record';
 import { chatwootFromEnv } from '@/lib/support/chatwoot';
-import { handedOff, forwardMessage, startHandoff } from '@/lib/support/handoff';
+import { handedOff, forwardMessage, forwardReply, startHandoff } from '@/lib/support/handoff';
 import { SUPPORT_HOURS, isWithinSupportHours } from '@/data/seo/contact';
 import { CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICE_BY_SLUG, PLAN_BY_KEY } from '@/data/seo';
 
@@ -223,31 +223,54 @@ export async function POST(req: Request) {
   const send = (controller: ReadableStreamDefaultController, event: string, data: unknown) =>
     controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
 
-  // ── Handed off already? Then the person gets this message, not the bot. ──
+  // ── Handed off already? The person gets this message either way. If the assistant can still
+  // answer it from the published facts, it does — a visitor waiting for a reply should not be
+  // told "sent to our team" when the plans page has the answer — and the answer goes to the
+  // person too. Anything it cannot answer, or that asks for a person, is forwarded with an
+  // acknowledgement. ──
   const handoff = record ? await handedOff(record, conversationId, now) : null;
   if (handoff && record) {
     const delivered = await forwardMessage(record, chatwoot, handoff, message, now);
     const inHours = isWithinSupportHours(now);
-    const text = inHours ? COPY.forwardedInHours : COPY.forwardedOutOfHours(SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours);
+    const ack = inHours ? COPY.forwardedInHours : COPY.forwardedOutOfHours(SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours);
     const stream = new ReadableStream({
-      start(controller) {
+      async start(controller) {
         send(controller, 'status', { state: 'forwarding' });
+        let a: Answer | null = null;
+        try {
+          const candidate = await answer({ message, history, signedIn: !!userId, now }, { provider });
+          if (candidate.rung === 1) modelCallsToday.count += 1;
+          if (!candidate.escalate) a = candidate;
+        } catch (e) {
+          console.error('[chat] answer threw (forward mode)', e);
+        }
         send(controller, 'answer', {
           conversation_id: conversationId,
           ref: refFor(conversationId),
           mode: 'forwarded',
           delivered,
-          text,
-          sources: [],
-          intent: 'handed_off',
-          language: null,
-          rung: null,
+          answered: !!a,
+          text: a ? a.text : ack,
+          sources: a ? a.sources : [],
+          intent: a ? a.intent : 'handed_off',
+          language: a ? a.language : null,
+          rung: a ? a.rung : null,
           escalate: null,
-          handoff: { inHours, text },
+          handoff: { inHours, text: ack },
           talk_to_team: COPY.talkToTeam,
         });
         send(controller, 'done', {});
         controller.close();
+        if (a) {
+          const reply = a;
+          after(async () => {
+            try {
+              await forwardReply(record, chatwoot, handoff, { text: reply.text, sources: reply.sources, modelId: reply.modelId, rung: reply.rung, gateRejected: reply.gateRejected, redacted: reply.redacted }, now);
+            } catch (e) {
+              console.error('[chat] forwardReply threw', e);
+            }
+          });
+        }
       },
     });
     return new Response(stream, {
