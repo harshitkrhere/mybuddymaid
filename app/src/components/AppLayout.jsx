@@ -1,5 +1,6 @@
 import { Outlet, NavLink } from 'react-router-dom';
-import { Home, Grid, CalendarDays, User, MapPin, Bell, Search, Sparkles, Crown } from 'lucide-react';
+import { Home, Grid, CalendarDays, User, MapPin, Search, Sparkles, Crown } from 'lucide-react';
+import AssistantButton from './AssistantButton';
 import { useAuth } from '../context/AuthContext';
 import { PLAN_DETAILS } from '../lib/constants';
 
@@ -68,10 +69,8 @@ export default function AppLayout() {
           </div>
           
           <div className="app-header-actions">
-            <button className="app-header-btn" style={{ background: '#1A1A1A', borderColor: 'rgba(255,255,255,0.08)', color: '#F1F5F9' }}>
-              <Bell size={18} />
-              <span className="notification-dot" />
-            </button>
+            {/* The notification bell that lived here did nothing and showed a permanent dot (FIN-A02). */}
+            <AssistantButton />
             <div className="mobile-only-avatar" style={{ background: '#34D399', color: '#0F0F0F' }}>{profile?.full_name?.charAt(0) || 'U'}</div>
           </div>
         </header>

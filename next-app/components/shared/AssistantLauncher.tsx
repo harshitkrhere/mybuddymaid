@@ -14,51 +14,7 @@
 // so the widget itself carries no copy.
 
 import Script from 'next/script';
-import { COPY } from '@/lib/assistant/copy';
-import { SUPPORT_PHONE_DISPLAY, SUPPORT_PHONE_E164, SUPPORT_WHATSAPP_NUMBER, SUPPORT_HOURS } from '@/data/seo/contact';
-
-export interface LauncherOptions {
-  endpoint: string;
-  title: string;
-  greeting: string;
-  notice: string;
-  privacyUrl: string;
-  privacyLabel: string;
-  placeholder: string;
-  sendLabel: string;
-  closeLabel: string;
-  thinkingLabel: string;
-  sourceLabel: string;
-  talkToTeam: string;
-  whatsappPrefix: string;
-  errorText: string;
-  phoneE164: string;
-  phoneDisplay: string;
-  whatsappNumber: string;
-  hoursLabel: string;
-}
-
-/** The options the widget receives. Exported so the booking app's launcher can reuse them. */
-export const LAUNCHER_OPTIONS: LauncherOptions = {
-  endpoint: '/api/chat',
-  title: 'MyBuddyMaid assistant',
-  greeting: COPY.greeting,
-  notice: COPY.notice,
-  privacyUrl: '/privacy-policy',
-  privacyLabel: 'Privacy Policy',
-  placeholder: 'Ask about areas, plans, prices…',
-  sendLabel: 'Send',
-  closeLabel: 'Close chat',
-  thinkingLabel: 'Assistant is typing',
-  sourceLabel: COPY.sourceLabel,
-  talkToTeam: COPY.talkToTeam,
-  whatsappPrefix: 'Hi MyBuddyMaid, I was chatting with your assistant',
-  errorText: COPY.refuse,
-  phoneE164: SUPPORT_PHONE_E164,
-  phoneDisplay: SUPPORT_PHONE_DISPLAY,
-  whatsappNumber: SUPPORT_WHATSAPP_NUMBER,
-  hoursLabel: SUPPORT_HOURS.label,
-};
+import { LAUNCHER_OPTIONS } from '@/lib/assistant/launcher-options';
 
 /**
  * JSON safe to embed in a <script>: "<" becomes a unicode escape so no "</script>" inside a
