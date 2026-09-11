@@ -8,7 +8,9 @@
  * All customer-facing copy arrives through init(): it is rendered server-side from
  * lib/assistant/copy.ts so there is one source. This file has no sentences of its own.
  *
- * Talks to /api/chat, which answers with server-sent events (status → answer → done).
+ * Talks to /api/chat, which answers with server-sent events (status → answer → done). Once a
+ * conversation has been handed to a person it polls /api/chat/replies every few seconds and
+ * shows what the team wrote in the same window — no webhook, no socket, nothing to install.
  */
 (function () {
   'use strict';
@@ -23,6 +25,9 @@
   var els = {};
   var busy = false;
   var lastFocus = null;
+  var pollTimer = null;
+  var pollMisses = 0;
+  var pollStarted = 0;
 
   // ── Storage ─────────────────────────────────────────────────────────────────────────────
   function load() {
@@ -33,7 +38,7 @@
         if (s && s.id && s.expires > Date.now()) return s;
       }
     } catch (e) { /* private mode, or blocked storage */ }
-    return { id: uuid(), ref: null, expires: Date.now() + TTL_MS, history: [], noticeSeen: false };
+    return { id: uuid(), ref: null, expires: Date.now() + TTL_MS, history: [], noticeSeen: false, handedOff: false, after: null };
   }
   function save() {
     try {
@@ -106,6 +111,7 @@
       els.notice.hidden = state.noticeSeen;
       state.history.forEach(function (t) { addMessage(t.role, t.content, t.sources); });
       if (state.ref) els.ref.textContent = state.ref;
+      if (state.handedOff) showEscalation(firstQuestion());
     } else {
       addMessage('assistant', opts.greeting);
     }
@@ -113,6 +119,7 @@
 
   function addMessage(role, text, sources) {
     var wrap = h('div', { class: 'mbm-chat__msg mbm-chat__msg--' + role });
+    if (role === 'agent') wrap.appendChild(h('span', { class: 'mbm-chat__who', text: opts.teamLabel }));
     var body = h('div', { class: 'mbm-chat__bubble' });
     // Preserve line breaks; never inject HTML.
     text.split('\n').forEach(function (line, i) {
@@ -150,6 +157,10 @@
     var text = opts.whatsappPrefix + (state.ref ? ' (ref ' + state.ref + ')' : '') + (firstQuestion ? ': ' + firstQuestion : '');
     els.escalate.querySelector('.mbm-chat__btn--wa').href = 'https://wa.me/' + opts.whatsappNumber + '?text=' + encodeURIComponent(text);
     els.escalate.hidden = false;
+  }
+  function firstQuestion() {
+    for (var i = 0; i < state.history.length; i++) if (state.history[i].role === 'user') return state.history[i].content.slice(0, 200);
+    return '';
   }
 
   // ── Sending ─────────────────────────────────────────────────────────────────────────────
@@ -210,13 +221,79 @@
     if (data.conversation_id) state.id = data.conversation_id;
     addMessage('assistant', data.text, data.sources);
     state.history.push({ role: 'assistant', content: data.text, sources: data.sources });
-    save();
-    if (data.escalate) {
-      var first = '';
-      for (var i = 0; i < state.history.length; i++) if (state.history[i].role === 'user') { first = state.history[i].content; break; }
-      showEscalation(first.slice(0, 200));
+    if (data.escalate) showEscalation(firstQuestion());
+    // A handoff (or a message forwarded after one) means a person may write back: start asking.
+    if (data.handoff || data.mode === 'forwarded') {
+      if (!state.handedOff) { state.handedOff = true; state.after = new Date().toISOString(); }
+      startPolling();
     }
+    save();
   }
+
+  // ── Replies from the team ───────────────────────────────────────────────────────────────
+  // Every pollMs while the conversation is with a person and the tab is visible. Stops when the
+  // team closes the conversation, when the server says it is no longer handed off (three times
+  // in a row — the handoff is created just after the answer, so the first ask can be early), or
+  // when the tab is hidden; a tab becoming visible asks straight away.
+  function startPolling() {
+    if (pollTimer || !state.handedOff || !opts.repliesEndpoint) return;
+    pollMisses = 0;
+    pollStarted = Date.now();
+    schedule(opts.pollMs || 10000);
+  }
+  function stopPolling() {
+    if (pollTimer) clearTimeout(pollTimer);
+    pollTimer = null;
+  }
+  function schedule(ms) {
+    stopPolling();
+    pollTimer = setTimeout(poll, ms);
+  }
+  function poll() {
+    pollTimer = null;
+    if (!state.handedOff) return;
+    if (document.visibilityState === 'hidden') return; // resumed by visibilitychange
+    var headers = {};
+    if (opts.token) headers.authorization = 'Bearer ' + opts.token;
+    var url = opts.repliesEndpoint + '?conversation_id=' + encodeURIComponent(state.id) + '&after=' + encodeURIComponent(state.after || '');
+    fetch(url, { headers: headers, cache: 'no-store' })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (data) {
+        if (!data) return;
+        if (!data.handed_off) {
+          if (++pollMisses >= 3) { state.handedOff = false; save(); }
+          return;
+        }
+        pollMisses = 0;
+        (data.replies || []).forEach(function (r) {
+          var role = r.sender === 'agent' ? 'agent' : 'assistant';
+          state.history.push({ role: role, content: r.body });
+          if (els.panel) addMessage(role, r.body);
+          if (!els.panel || els.panel.hidden) markUnread(true);
+        });
+        if (data.next_after) state.after = data.next_after;
+        if (data.closed) {
+          state.history.push({ role: 'assistant', content: opts.conversationClosed });
+          if (els.panel) addMessage('assistant', opts.conversationClosed);
+          state.handedOff = false;
+        }
+        save();
+      })
+      .catch(function () { /* network blip; the next poll will try again */ })
+      .then(function () {
+        if (!state.handedOff) return;
+        // Quick for the first five minutes, then every 30 seconds.
+        var base = opts.pollMs || 10000;
+        schedule(Date.now() - pollStarted > 5 * 60 * 1000 ? Math.max(base, 30000) : base);
+      });
+  }
+  function markUnread(on) {
+    var btn = document.getElementById('mbm-launcher');
+    if (btn) btn.classList.toggle('mbm-launcher--unread', !!on);
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible' && state && state.handedOff) { stopPolling(); poll(); }
+  });
 
   // Server-sent events over fetch. EventSource cannot POST, so the stream is read by hand.
   function readEvents(res, cb) {
@@ -248,6 +325,7 @@
     if (!els.panel) build();
     lastFocus = document.activeElement;
     els.panel.hidden = false;
+    markUnread(false);
     document.body.classList.add('mbm-chat-open');
     els.input.focus();
     if (opts.onOpen) opts.onOpen();
@@ -261,7 +339,7 @@
   function toggle() { if (!els.panel || els.panel.hidden) open(); else close(); }
 
   window.MBMChat = {
-    init: function (o) { opts = o; state = load(); return window.MBMChat; },
+    init: function (o) { opts = o; state = load(); if (state.handedOff) startPolling(); return window.MBMChat; },
     open: open,
     close: close,
     toggle: toggle,

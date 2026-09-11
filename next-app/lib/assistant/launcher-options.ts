@@ -12,6 +12,9 @@ import { SUPPORT_PHONE_DISPLAY, SUPPORT_PHONE_E164, SUPPORT_WHATSAPP_NUMBER, SUP
 
 export interface LauncherOptions {
   endpoint: string;
+  /** Polled while a conversation is with a person; see app/api/chat/replies/route.ts. */
+  repliesEndpoint: string;
+  pollMs: number;
   title: string;
   greeting: string;
   notice: string;
@@ -29,10 +32,14 @@ export interface LauncherOptions {
   phoneDisplay: string;
   whatsappNumber: string;
   hoursLabel: string;
+  teamLabel: string;
+  conversationClosed: string;
 }
 
 export const LAUNCHER_OPTIONS: LauncherOptions = {
   endpoint: '/api/chat',
+  repliesEndpoint: '/api/chat/replies',
+  pollMs: 10000,
   title: 'MyBuddyMaid assistant',
   greeting: COPY.greeting,
   notice: COPY.notice,
@@ -50,4 +57,6 @@ export const LAUNCHER_OPTIONS: LauncherOptions = {
   phoneDisplay: SUPPORT_PHONE_DISPLAY,
   whatsappNumber: SUPPORT_WHATSAPP_NUMBER,
   hoursLabel: SUPPORT_HOURS.label,
+  teamLabel: COPY.teamLabel,
+  conversationClosed: COPY.conversationClosed,
 };

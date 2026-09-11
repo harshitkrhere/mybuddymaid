@@ -1768,7 +1768,7 @@ where that memo left them.
 | C1 | **Outbound redaction** (phone / email / card-like numbers) between retrieval and the model call, with the unredacted message still stored — decision 17 | **S** | **DONE** — `lib/assistant/redact.ts`, tested |
 | C1 | `lib/assistant/provider.ts` adapter + the four-rung degradation ladder, **rung 3 built and tested first**, with the three-assertion rung-3 test — decision 16 | **M** | **DONE** — rung-3 test with all three assertions in `answer.test.ts` |
 | C1 | Server-side `/api/chat` route: streaming, queue for the 20 rpm cap, rate limiting, daily spend ceiling, phrasing cache | **L** | **DONE except the phrasing cache** — `app/api/chat/route.ts`; limits are in-memory per instance |
-| C2 | Chatwoot Cloud configured; bot wired as an agent-bot; escalation triggers; out-of-hours capture with the 24-hour promise | **M** | C0 |
+| C2 | Chatwoot Cloud configured; bot wired as an agent-bot; escalation triggers; out-of-hours capture with the 24-hour promise | **M** | **DONE (code) 2026-09-11** — account 185110, API inbox 136538; an escalation opens the Chatwoot conversation with the transcript (`lib/support/chatwoot.ts`, `handoff.ts`), later messages are forwarded to the person, and the widget polls `/api/chat/replies` for the team's replies (free tier: no webhook needed). Needs the bot token in Vercel and the migrations applied |
 | C2 | **Connect WhatsApp to Chatwoot** — prerequisite for the decision-8 baseline | **M** | C0 |
 | C2 | Lazy launcher on the site (`Analytics.tsx` pattern, intent-only, no idle timeout) | **M** | **DONE** — `components/shared/AssistantLauncher.tsx`, verified in the browser |
 | C2 | **Support hours to 10 AM–7 PM Mon–Sat from one constant** — bot branch, `PricingPage.jsx:207`, terms Annexure B, `v_support_sla` filter. Touches `app/src`, so `npm run build:spa` and commit `public/_spa` | **S** | **DONE** — `data/seo/contact.ts` → site, SPA via serviceability.json, bot |
@@ -2072,7 +2072,7 @@ attention it is referenced by `ref` and opened in Chatwoot.
 | R1 | Migration C: `support_conversations`, `support_messages`, indexes, RLS SELECT policies | **M** | **WRITTEN, NOT APPLIED** — `supabase/migrations/20260911090000_support_conversations.sql`; owner runs `supabase db push` |
 | R1 | `/api/chat` writes the record from the first message; `ref` generation | **M** | **DONE** — writes via `after()` once the Supabase variables are set |
 | R2 | `link-support-conversations` edge function + the widget's `anon_id` handling | **M** | R1 |
-| R2 | `chatwoot-webhook` edge function (signature-verified, `--no-verify-jwt`) + nightly reconciliation | **L** | R1, Initiative 3 C2 |
+| R2 | `chatwoot-webhook` edge function (signature-verified, `--no-verify-jwt`) + nightly reconciliation | **L** | **RECEIVER DONE** as a Next.js route (`app/api/chatwoot/webhook`, signature-verified); reconciliation is covered for website conversations by the polling pull in `lib/support/handoff.ts`; a nightly sweep for WhatsApp/email conversations is still to build |
 | R3 | The eight analytics views + the `v_support_gate` query | **M** | R2 |
 | R3 | Weekly report: email via Resend + authenticated admin page | **M** | R3 views |
 | R4 | Retention jobs (12-month message deletion, 30-day `anon_id` expiry, roll-up to counts) | **M** | R1 |
