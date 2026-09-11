@@ -59,6 +59,9 @@
 }
 .mbm-chat__msg--user .mbm-chat__bubble { background: #0f766e; color: #fff; border-bottom-right-radius: 4px; }
 .mbm-chat__msg--assistant .mbm-chat__bubble { border-bottom-left-radius: 4px; }
+.mbm-chat__msg--agent { align-self: flex-start; align-items: flex-start; }
+.mbm-chat__msg--agent .mbm-chat__bubble { background: #e6f4f1; border: 1px solid #b9e0d8; border-bottom-left-radius: 4px; }
+.mbm-chat__who { font-size: 11.5px; font-weight: 600; color: #0f766e; margin: 0 6px 2px; }
 .mbm-chat__sources { font-size: 12px; color: #555; margin: 4px 6px 0; }
 .mbm-chat__sources a { color: #0f766e; }
 
@@ -93,6 +96,12 @@
 }
 .mbm-chat__send:disabled { opacity: 0.55; cursor: default; }
 .mbm-chat__send:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
+
+/* A reply arrived while the panel was closed: a dot on the launcher. */
+.mbm-launcher--unread::after {
+  content: ''; position: absolute; top: -3px; right: -3px; width: 12px; height: 12px;
+  border-radius: 50%; background: #ef4444; border: 2px solid #fff;
+}
 
 /* The launcher lives in the page, not here — but it hides while the panel is open on phones. */
 @media (max-width: 640px) {

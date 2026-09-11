@@ -3437,6 +3437,8 @@
   },
   "assistant": {
     "endpoint": "/api/chat",
+    "repliesEndpoint": "/api/chat/replies",
+    "pollMs": 10000,
     "title": "MyBuddyMaid assistant",
     "greeting": "Hi, I’m MyBuddyMaid’s assistant. I can check whether we serve your area, explain our plans and prices, and answer questions about how verification and replacements work. What would you like to know?",
     "notice": "You are chatting with MyBuddyMaid’s automated assistant. It answers from our published service, pricing and policy information, and it can pass you to a member of our team. We keep a record of this conversation, and by continuing you agree that we may analyse conversations in aggregate to improve our service; we do not use them to build advertising profiles. Please type only what the assistant needs to answer you — there is no need to send your phone number, email address or address here, and you must never send card numbers, UPI PINs, passwords or one-time passwords. We will never ask for them. If you are not signed in we store a random reference in your browser so the conversation can continue; sign in and it is linked to your account. You can withdraw consent, ask what we hold, or complain to our Grievance Officer — see our Privacy Policy.",
@@ -3453,7 +3455,9 @@
     "phoneE164": "+919355114869",
     "phoneDisplay": "+91 93551 14869",
     "whatsappNumber": "919355114869",
-    "hoursLabel": "Mon–Sat, 10 AM–7 PM IST"
+    "hoursLabel": "Mon–Sat, 10 AM–7 PM IST",
+    "teamLabel": "MyBuddyMaid team",
+    "conversationClosed": "Our team has closed this conversation. Ask me anything else and I’ll start fresh."
   },
   "spaServiceMap": {
     "part-time": "part-time-maid",

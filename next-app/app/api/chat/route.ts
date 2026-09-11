@@ -23,7 +23,11 @@ import { answer, type Turn, type Answer } from '@/lib/assistant/answer';
 import { providerFromEnv } from '@/lib/assistant/provider';
 import { COPY } from '@/lib/assistant/copy';
 import { refFor } from '@/lib/assistant/ref';
+import { corsHeaders } from '@/lib/assistant/cors';
 import { recordClientFromEnv, upsertConversation, insertMessages } from '@/lib/support/record';
+import { chatwootFromEnv } from '@/lib/support/chatwoot';
+import { handedOff, forwardMessage, startHandoff } from '@/lib/support/handoff';
+import { SUPPORT_HOURS, isWithinSupportHours } from '@/data/seo/contact';
 import { CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICE_BY_SLUG, PLAN_BY_KEY } from '@/data/seo';
 
 export const runtime = 'nodejs';
@@ -60,32 +64,8 @@ function underDailyCeiling(now: Date): boolean {
   return modelCallsToday.count < DAILY_MODEL_CALLS;
 }
 
-// ─── CORS ───────────────────────────────────────────────────────────────────────────────────
-// The site and the booking app are same-origin. The native app (Initiative 1) will not be;
-// its origins are added to ASSISTANT_ALLOWED_ORIGINS when it exists.
-
-const ALLOWED_ORIGINS = new Set(
-  (process.env.ASSISTANT_ALLOWED_ORIGINS ?? 'https://mybuddymaid.in,https://www.mybuddymaid.in')
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean),
-);
-
-function corsHeaders(req: Request): Record<string, string> {
-  const origin = req.headers.get('origin') ?? '';
-  const allowed = ALLOWED_ORIGINS.has(origin) || (process.env.NODE_ENV !== 'production' && /^http:\/\/localhost(:\d+)?$/.test(origin));
-  return allowed
-    ? {
-        'Access-Control-Allow-Origin': origin,
-        'Access-Control-Allow-Headers': 'authorization, content-type',
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',
-        Vary: 'Origin',
-      }
-    : {};
-}
-
 export async function OPTIONS(req: Request) {
-  return new Response(null, { status: 204, headers: corsHeaders(req) });
+  return new Response(null, { status: 204, headers: corsHeaders(req, 'POST, OPTIONS') });
 }
 
 // ─── Input ──────────────────────────────────────────────────────────────────────────────────
@@ -205,7 +185,7 @@ async function persist(r: RecordInput): Promise<void> {
 // ─── Handler ────────────────────────────────────────────────────────────────────────────────
 
 export async function POST(req: Request) {
-  const cors = corsHeaders(req);
+  const cors = corsHeaders(req, 'POST, OPTIONS');
   const now = new Date();
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
 
@@ -236,10 +216,45 @@ export async function POST(req: Request) {
 
   const userId = await userIdFromToken(req);
   const provider = underDailyCeiling(now) ? providerFromEnv() : null;
+  const record = recordClientFromEnv();
+  const chatwoot = chatwootFromEnv();
 
   const encoder = new TextEncoder();
   const send = (controller: ReadableStreamDefaultController, event: string, data: unknown) =>
     controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
+
+  // ── Handed off already? Then the person gets this message, not the bot. ──
+  const handoff = record ? await handedOff(record, conversationId, now) : null;
+  if (handoff && record) {
+    const delivered = await forwardMessage(record, chatwoot, handoff, message, now);
+    const inHours = isWithinSupportHours(now);
+    const text = inHours ? COPY.forwardedInHours : COPY.forwardedOutOfHours(SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours);
+    const stream = new ReadableStream({
+      start(controller) {
+        send(controller, 'status', { state: 'forwarding' });
+        send(controller, 'answer', {
+          conversation_id: conversationId,
+          ref: refFor(conversationId),
+          mode: 'forwarded',
+          delivered,
+          text,
+          sources: [],
+          intent: 'handed_off',
+          language: null,
+          rung: null,
+          escalate: null,
+          handoff: { inHours, text },
+          talk_to_team: COPY.talkToTeam,
+        });
+        send(controller, 'done', {});
+        controller.close();
+      },
+    });
+    return new Response(stream, {
+      status: 200,
+      headers: { ...cors, 'Content-Type': 'text/event-stream; charset=utf-8', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no' },
+    });
+  }
 
   const stream = new ReadableStream({
     async start(controller) {
@@ -252,6 +267,7 @@ export async function POST(req: Request) {
         send(controller, 'answer', {
           conversation_id: conversationId,
           ref,
+          mode: 'assistant',
           text: a.text,
           sources: a.sources,
           intent: a.intent,
@@ -262,23 +278,33 @@ export async function POST(req: Request) {
           talk_to_team: a.escalate ? COPY.talkToTeam : null,
         });
 
-        after(() =>
-          persist({
-            conversationId,
-            ref,
-            channel: userId ? 'app_chat' : 'site_chat',
-            userId,
-            page,
-            context,
-            userMessage: message,
-            a,
-            now,
-            turnIndex,
-          }).catch((e) => console.error('[chat] persist threw', e)),
-        );
+        after(async () => {
+          try {
+            await persist({ conversationId, ref, channel: userId ? 'app_chat' : 'site_chat', userId, page, context, userMessage: message, a, now, turnIndex });
+            // A handoff opens the conversation in Chatwoot with the whole transcript. Only after
+            // persist(), so the row exists for Chatwoot's id to be written onto.
+            if (a.handoff) {
+              const result = await startHandoff(record, chatwoot, {
+                conversationId,
+                ref,
+                transcript: [...history, { role: 'user', content: message }, { role: 'assistant', content: a.text }],
+                escalationReason: a.escalate ?? null,
+                page: page ?? null,
+                city: a.entities.city ?? context.city ?? null,
+                locality: a.entities.locality?.slug ?? context.locality ?? null,
+                service: a.entities.service ?? context.service ?? null,
+                plan: a.entities.plan ?? context.plan ?? null,
+                signedIn: !!userId,
+              });
+              if (result.status === 'failed') console.error(`[chat] handoff for ${ref} failed: ${result.reason}`);
+            }
+          } catch (e) {
+            console.error('[chat] after() threw', e);
+          }
+        });
       } catch (e) {
         console.error('[chat] answer threw', e);
-        send(controller, 'answer', { conversation_id: conversationId, ref: refFor(conversationId), text: COPY.refuse, sources: [], intent: 'unknown', rung: 3, escalate: 'low_confidence', handoff: null, talk_to_team: COPY.talkToTeam });
+        send(controller, 'answer', { conversation_id: conversationId, ref: refFor(conversationId), mode: 'assistant', text: COPY.refuse, sources: [], intent: 'unknown', rung: 3, escalate: 'low_confidence', handoff: null, talk_to_team: COPY.talkToTeam });
       } finally {
         send(controller, 'done', {});
         controller.close();

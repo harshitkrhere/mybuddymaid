@@ -5,7 +5,8 @@
 // │ The notice text is also the DPDP Section 5 notice promised in Privacy Policy 2.0 §2.2,   │
 // │ so its wording carries legal weight; keep it identical to the policy draft.              │
 // │                                                                                          │
-// │ Approved by the owner on 2026-09-11, as committed in 5202d53a and 7411edb0.              │
+// │ Approved by the owner on 2026-09-11, as committed in 5202d53a and 7411edb0; the           │
+// │ after-handoff strings (forwarded / team label / closed) approved the same day.           │
 // └──────────────────────────────────────────────────────────────────────────────────────────┘
 //
 // Anything that quotes a price, a policy term or a place name is NOT here — those come from
@@ -86,6 +87,17 @@ export const COPY = {
     `Our team is available ${hoursLabel}. Leave your name and a phone number here and we’ll get back to you within ${replyWithinHours} hours — everything you’ve told me is saved for them.`,
   /** Label on the button the widget shows whenever a handoff is offered. */
   talkToTeam: 'Talk to our team',
+
+  // ── After the handoff: the customer keeps typing, the person replies in the same window. ──
+  /** Acknowledgement when a message is forwarded to the team during support hours. */
+  forwardedInHours: 'Sent to our team — a reply will appear here shortly.',
+  /** Outside hours: the 24-hour promise, and where the reply will come. */
+  forwardedOutOfHours: (hoursLabel: string, replyWithinHours: number) =>
+    `Sent to our team. They’re back ${hoursLabel} and will get back to you within ${replyWithinHours} hours.`,
+  /** Shown above a reply written by a person. */
+  teamLabel: 'MyBuddyMaid team',
+  /** When the team resolves the conversation; the assistant takes over again. */
+  conversationClosed: 'Our team has closed this conversation. Ask me anything else and I’ll start fresh.',
 
   /** Rung 3: the retrieved answer shown without a model, with its source. */
   unphrasedPrefix: 'Here’s what our help pages say:',

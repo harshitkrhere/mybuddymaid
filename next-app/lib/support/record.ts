@@ -157,3 +157,36 @@ export async function insertMessages(c: RecordClient, rows: MessageRow[]): Promi
     return false;
   }
 }
+
+/** A conversation by our id — what the chat route needs to know whether it has been handed off. */
+export async function getConversation(c: RecordClient, id: string): Promise<Lookup> {
+  const res = await call(
+    c,
+    `support_conversations?id=eq.${encodeURIComponent(id)}&select=id,ref,channel,user_id,escalated,escalation_reason,chatwoot_conversation_id,first_agent_reply_at,handled_by,outcome,closed_at,last_message_at,contact_name,contact_phone&limit=1`,
+    { method: 'GET', headers: headers(c) },
+    'conversation get',
+  );
+  if (!res) return { ok: false };
+  try {
+    const rows = (await res.json()) as ConversationRow[];
+    return { ok: true, row: rows[0] ?? null };
+  } catch {
+    return { ok: false };
+  }
+}
+
+/** Messages on a conversation after a point in time, oldest first. */
+export async function listMessagesAfter(c: RecordClient, conversationId: string, afterIso: string, senders: Sender[]): Promise<MessageRow[]> {
+  const res = await call(
+    c,
+    `support_messages?conversation_id=eq.${encodeURIComponent(conversationId)}&created_at=gt.${encodeURIComponent(afterIso)}&sender=in.(${senders.join(',')})&select=conversation_id,sender,body,created_at,chatwoot_message_id&order=created_at.asc&limit=50`,
+    { method: 'GET', headers: headers(c) },
+    'messages list',
+  );
+  if (!res) return [];
+  try {
+    return (await res.json()) as MessageRow[];
+  } catch {
+    return [];
+  }
+}
