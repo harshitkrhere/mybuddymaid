@@ -259,11 +259,11 @@ test('every rupee figure in every plan or policy answer is a fee or a salary ban
 
 test('OpenRouter requests carry reasoning:{enabled:false} by default; a custom extra body replaces it; other hosts get nothing extra', async () => {
   const { providerFromEnv } = await import('./provider');
-  const or = providerFromEnv({ ASSISTANT_BASE_URL: 'https://openrouter.ai/api/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a' } as NodeJS.ProcessEnv)!;
+  const or = providerFromEnv({ ASSISTANT_BASE_URL: 'https://openrouter.ai/api/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a' })!;
   assert.deepEqual(or.extraBody, { reasoning: { enabled: false } });
-  const custom = providerFromEnv({ ASSISTANT_BASE_URL: 'https://openrouter.ai/api/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a', ASSISTANT_EXTRA_BODY: '{"top_p":0.9}' } as NodeJS.ProcessEnv)!;
+  const custom = providerFromEnv({ ASSISTANT_BASE_URL: 'https://openrouter.ai/api/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a', ASSISTANT_EXTRA_BODY: '{"top_p":0.9}' })!;
   assert.deepEqual(custom.extraBody, { top_p: 0.9 });
-  const other = providerFromEnv({ ASSISTANT_BASE_URL: 'https://api.openai.com/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a' } as NodeJS.ProcessEnv)!;
+  const other = providerFromEnv({ ASSISTANT_BASE_URL: 'https://api.openai.com/v1', ASSISTANT_API_KEY: 'k', ASSISTANT_MODELS: 'a' })!;
   assert.equal(other.extraBody, undefined);
 
   // And the field actually reaches the wire.

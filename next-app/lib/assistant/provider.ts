@@ -57,7 +57,7 @@ export interface PhraseResult {
 
 export type FetchLike = (input: string, init: RequestInit) => Promise<Response>;
 
-export function providerFromEnv(env: NodeJS.ProcessEnv = process.env): ProviderConfig | null {
+export function providerFromEnv(env: Record<string, string | undefined> = process.env): ProviderConfig | null {
   const baseUrl = env.ASSISTANT_BASE_URL?.replace(/\/+$/, '');
   const apiKey = env.ASSISTANT_API_KEY;
   const models = (env.ASSISTANT_MODELS ?? '')

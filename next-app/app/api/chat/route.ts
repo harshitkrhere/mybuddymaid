@@ -23,6 +23,7 @@ import { answer, type Turn, type Answer } from '@/lib/assistant/answer';
 import { providerFromEnv } from '@/lib/assistant/provider';
 import { COPY } from '@/lib/assistant/copy';
 import { refFor } from '@/lib/assistant/ref';
+import { recordClientFromEnv, upsertConversation, insertMessages } from '@/lib/support/record';
 import { CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICE_BY_SLUG, PLAN_BY_KEY } from '@/data/seo';
 
 export const runtime = 'nodejs';
@@ -142,8 +143,8 @@ async function userIdFromToken(req: Request): Promise<string | null> {
 
 // ─── The support record (Initiative 4) ──────────────────────────────────────────────────────
 // Written after the response is sent, so a slow database never slows the customer. Failures
-// are logged; they do not affect the answer. Requires the migration in
-// supabase/migrations/20260911090000_support_conversations.sql to have been applied.
+// are logged inside lib/support/record.ts; they do not affect the answer. Requires the
+// migrations in supabase/migrations/20260911*.sql to have been applied.
 
 interface RecordInput {
   conversationId: string;
@@ -159,12 +160,10 @@ interface RecordInput {
 }
 
 async function persist(r: RecordInput): Promise<void> {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) return;
-  const headers = { apikey: key, Authorization: `Bearer ${key}`, 'content-type': 'application/json' };
+  const client = recordClientFromEnv();
+  if (!client) return;
 
-  const conversation = {
+  const ok = await upsertConversation(client, {
     id: r.conversationId,
     ref: r.ref,
     channel: r.channel,
@@ -182,21 +181,10 @@ async function persist(r: RecordInput): Promise<void> {
     device: r.context.device ?? null,
     language: r.a.language,
     last_message_at: r.now.toISOString(),
-  };
-
-  // Upsert the conversation; escalation fields only ever move from false to true.
-  const up = await fetch(`${url}/rest/v1/support_conversations?on_conflict=id`, {
-    method: 'POST',
-    headers: { ...headers, Prefer: 'resolution=merge-duplicates,return=minimal' },
-    body: JSON.stringify(conversation),
-    signal: AbortSignal.timeout(6000),
   });
-  if (!up.ok) {
-    console.error('[chat] conversation upsert failed', up.status, await up.text());
-    return;
-  }
+  if (!ok) return;
 
-  const messages = [
+  await insertMessages(client, [
     { conversation_id: r.conversationId, sender: 'customer', body: r.userMessage, turn_index: r.turnIndex, created_at: r.now.toISOString() },
     {
       conversation_id: r.conversationId,
@@ -210,15 +198,9 @@ async function persist(r: RecordInput): Promise<void> {
       redacted: r.a.redacted,
       created_at: new Date(r.now.getTime() + 1).toISOString(),
     },
-  ];
-  const ins = await fetch(`${url}/rest/v1/support_messages`, {
-    method: 'POST',
-    headers: { ...headers, Prefer: 'return=minimal' },
-    body: JSON.stringify(messages),
-    signal: AbortSignal.timeout(6000),
-  });
-  if (!ins.ok) console.error('[chat] message insert failed', ins.status, await ins.text());
+  ]);
 }
+
 
 // ─── Handler ────────────────────────────────────────────────────────────────────────────────
 
