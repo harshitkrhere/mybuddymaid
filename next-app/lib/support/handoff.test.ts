@@ -6,7 +6,7 @@
 // them — idempotently, because the webhook may have recorded the same message first.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { startHandoff, handedOff, forwardMessage, pullReplies } from './handoff';
+import { startHandoff, handedOff, forwardMessage, forwardReply, pullReplies } from './handoff';
 import type { ChatwootClient } from './chatwoot';
 import type { RecordClient, FetchLike, ConversationRow } from './record';
 
@@ -31,9 +31,15 @@ function record(row: Partial<ConversationRow> | null, opts: { messages?: object[
     if (method === 'GET' && path.startsWith('support_conversations?id=eq.')) {
       return new Response(JSON.stringify(row ? [{ id: ID, ref: 'MBM-AAAAA', channel: 'site_chat', ...row }] : []), { status: 200 });
     }
+    if (method === 'GET' && path.startsWith('support_messages?') && path.includes('sender=eq.assistant&chatwoot_message_id=in.')) {
+      const ids = path.match(/chatwoot_message_id=in\.\(([^)]*)\)/)![1].split(',').map(Number);
+      const rows = (opts.messages ?? []).filter((m) => (m as { sender: string }).sender === 'assistant' && ids.includes((m as { chatwoot_message_id: number }).chatwoot_message_id));
+      return new Response(JSON.stringify(rows.map((m) => ({ chatwoot_message_id: (m as { chatwoot_message_id: number }).chatwoot_message_id }))), { status: 200 });
+    }
     if (method === 'GET' && path.startsWith('support_messages?')) {
       const after = decodeURIComponent(path.match(/created_at=gt\.([^&]+)/)![1]);
-      const rows = (opts.messages ?? []).filter((m) => (m as { created_at: string }).created_at > after);
+      const senders = path.match(/sender=in\.\(([^)]*)\)/)![1].split(',');
+      const rows = (opts.messages ?? []).filter((m) => (m as { created_at: string }).created_at > after && senders.includes((m as { sender: string }).sender));
       return new Response(JSON.stringify(rows), { status: 200 });
     }
     if (method === 'POST' && path.startsWith('support_messages')) return new Response(null, { status: opts.insertStatus ?? 201 });
@@ -142,6 +148,30 @@ test('forwardMessage: when Chatwoot refuses, the message is still recorded (with
   assert.equal(insert[0].chatwoot_message_id, null);
 });
 
+test('forwardReply: the assistant’s answer goes to Chatwoot as the bot and onto the record with its model fields', async () => {
+  const r = record({ chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() });
+  const cw = chatwoot();
+  const h = (await handedOff(r.client, ID, NOW))!;
+  await forwardReply(r.client, cw.client, h, { text: 'Silver, Gold and Diamond…', sources: [{ id: 'plan-compare' }], modelId: 'google/gemma-4-31b-it:free', rung: 1, gateRejected: false, redacted: [] }, NOW);
+
+  assert.deepEqual(cw.calls[0], { method: 'POST', path: '/conversations/4242/messages', body: { content: 'Silver, Gold and Diamond…', message_type: 'outgoing' } });
+  const insert = r.calls.find((c) => c.method === 'POST' && c.path.startsWith('support_messages'))!.body as Array<Record<string, unknown>>;
+  assert.equal(insert[0].sender, 'assistant');
+  assert.equal(insert[0].model_id, 'google/gemma-4-31b-it:free');
+  assert.equal(insert[0].rung, 1);
+  assert.equal(typeof insert[0].chatwoot_message_id, 'number');
+});
+
+test('forwardReply: without a bot token the answer is posted from the visitor’s side with the prefix', async () => {
+  const r = record({ chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() });
+  const cw = chatwoot();
+  cw.client.token = null;
+  const h = (await handedOff(r.client, ID, NOW))!;
+  await forwardReply(r.client, cw.client, h, { text: 'Silver, Gold and Diamond…' }, NOW);
+  assert.equal(cw.calls[0].path, `/contacts/${ID}/conversations/4242/messages`);
+  assert.deepEqual(cw.calls[0].body, { content: 'Assistant: Silver, Gold and Diamond…' });
+});
+
 // ─── pullReplies ────────────────────────────────────────────────────────────────────────────
 
 const AGENT_MSG = { id: 9002, content: 'Yes — which service do you need?', message_type: 1, private: false, created_at: '2026-09-15T05:31:00Z', sender: { name: 'Info', type: 'user' } };
@@ -191,6 +221,19 @@ test('pullReplies: a resolved conversation closes our record and tells the widge
   const patch = r.calls.find((c) => c.method === 'PATCH')!.body as Record<string, unknown>;
   assert.equal(patch.outcome, 'resolved');
   assert.equal(patch.closed_at, NOW.toISOString());
+});
+
+test('pullReplies: the assistant’s own forwarded replies come back from Chatwoot as outgoing but are neither re-recorded, counted as the first human reply, nor shown again', async () => {
+  const BOT_REPLY = { id: 9005, content: 'Silver, Gold and Diamond…', message_type: 1, private: false, created_at: '2026-09-15T05:30:30Z', sender: { name: 'MyBuddyMaid Bot', type: 'user' } };
+  const r = record(
+    { chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString(), first_agent_reply_at: null, handled_by: null },
+    { messages: [{ conversation_id: ID, sender: 'assistant', body: BOT_REPLY.content, created_at: '2026-09-15T05:30:30.000Z', chatwoot_message_id: 9005 }] },
+  );
+  const h = (await handedOff(r.client, ID, NOW))!;
+  const out = await pullReplies(r.client, chatwoot({ messages: [BOT_REPLY] }).client, h, '2026-09-15T05:30:00.000Z', NOW);
+  assert.deepEqual(out.replies, []);
+  assert.ok(!r.calls.some((c) => c.method === 'POST' && c.path.startsWith('support_messages')), 'nothing inserted');
+  assert.ok(!r.calls.some((c) => c.method === 'PATCH'), 'first_agent_reply_at untouched');
 });
 
 test('pullReplies: without Chatwoot it still answers from the record (what the webhook wrote)', async () => {

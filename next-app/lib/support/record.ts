@@ -196,6 +196,24 @@ export async function getConversation(c: RecordClient, id: string): Promise<Look
   }
 }
 
+/** Which of these Chatwoot message ids are already on the record as the assistant's own. */
+export async function assistantChatwootIds(c: RecordClient, conversationId: string, ids: number[]): Promise<Set<number>> {
+  if (!ids.length) return new Set();
+  const res = await call(
+    c,
+    `support_messages?conversation_id=eq.${encodeURIComponent(conversationId)}&sender=eq.assistant&chatwoot_message_id=in.(${ids.join(',')})&select=chatwoot_message_id`,
+    { method: 'GET', headers: headers(c) },
+    'assistant ids lookup',
+  );
+  if (!res) return new Set();
+  try {
+    const rows = (await res.json()) as Array<{ chatwoot_message_id: number }>;
+    return new Set(rows.map((r) => r.chatwoot_message_id));
+  } catch {
+    return new Set();
+  }
+}
+
 /** Messages on a conversation after a point in time, oldest first. */
 export async function listMessagesAfter(c: RecordClient, conversationId: string, afterIso: string, senders: Sender[]): Promise<MessageRow[]> {
   const res = await call(
