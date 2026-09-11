@@ -2,6 +2,7 @@
 // rotation (4–5 natural variants per target, Appendix D) so anchors vary without spam.
 import type { Locality, Service } from '@/data/seo/types';
 import { hashKey } from './faqs';
+import { SUPPORT_PHONE_E164, SUPPORT_PHONE_DISPLAY, SUPPORT_WHATSAPP_NUMBER } from '@/data/seo/contact';
 
 export const paths = {
   city: (city: string) => `/${city}`,
@@ -40,7 +41,7 @@ export function serviceLocalityAnchor(svc: Service, target: Locality, fromKey: s
 }
 
 export function whatsappUrl(text: string): string {
-  return `https://wa.me/919355114869?text=${encodeURIComponent(text)}`;
+  return `https://wa.me/${SUPPORT_WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 /**
  * The prefilled WhatsApp message for a plan. Identical to the sentence the booking app's
@@ -60,5 +61,7 @@ export function planCtaHref(plan: { key: string; name: string }, paused: boolean
   return paused ? whatsappUrl(planWhatsappText(plan.name)) : `/app/auth?plan=${encodeURIComponent(plan.key)}`;
 }
 
-export const TEL_URL = 'tel:+919355114869';
-export const PHONE_DISPLAY = '+91 93551 14869';
+// The values live in data/seo/contact.ts alongside the support hours; these names are kept so
+// existing imports keep working.
+export const TEL_URL = `tel:${SUPPORT_PHONE_E164}`;
+export const PHONE_DISPLAY = SUPPORT_PHONE_DISPLAY;
