@@ -11,7 +11,9 @@
 //                        live it simply arrives twice and the record's unique index dedupes.
 //
 // Plain fetch, injectable for tests, and every failure returns null or false with a log line.
-// The token is a Chatwoot agent-bot access token (no seat cost); it never leaves the server.
+// The token is a person's access token (Chatwoot → Profile Settings → Access Token), not the
+// agent bot's: Chatwoot answers "Access to this endpoint is not authorized for bots" when a
+// bot token tries to create a contact (seen live, 2026-09-11). It never leaves the server.
 
 export type FetchLike = (input: string, init: RequestInit) => Promise<Response>;
 
