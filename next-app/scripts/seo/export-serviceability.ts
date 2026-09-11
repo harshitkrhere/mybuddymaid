@@ -7,6 +7,8 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { ALL_LOCALITIES, CITIES, PINCODES, PLANS, PURCHASES_PAUSED, SERVICES, ZONES } from '../../data/seo';
+import { SUPPORT_HOURS, SUPPORT_PHONE_E164, SUPPORT_PHONE_DISPLAY, SUPPORT_WHATSAPP_NUMBER } from '../../data/seo/contact';
+import { LAUNCHER_OPTIONS } from '../../lib/assistant/launcher-options';
 
 const ROOT = process.cwd();
 const OUT = path.resolve(ROOT, '..', 'app', 'src', 'lib', 'serviceability.json');
@@ -34,6 +36,16 @@ const payload = {
   plans: PLANS,
   /** Online checkout switch; the owner's decision, made in data/seo/plans.ts (FIN-U01). */
   purchasesPaused: PURCHASES_PAUSED,
+  /** Support contact and hours; the owner's decision, made in data/seo/contact.ts. */
+  contact: {
+    phoneE164: SUPPORT_PHONE_E164,
+    phoneDisplay: SUPPORT_PHONE_DISPLAY,
+    whatsappNumber: SUPPORT_WHATSAPP_NUMBER,
+    hoursLabel: SUPPORT_HOURS.label,
+    replyWithinHours: SUPPORT_HOURS.replyWithinHours,
+  },
+  /** The support assistant's widget options; every string comes from lib/assistant/copy.ts. */
+  assistant: LAUNCHER_OPTIONS,
   /** Booking-app service id -> data/seo service slug. */
   spaServiceMap: {
     'part-time': 'part-time-maid',

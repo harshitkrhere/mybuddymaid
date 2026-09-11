@@ -15,6 +15,10 @@ export const SPA_SERVICE_MAP = data.spaServiceMap;
 export const PINCODES = data.pincodes;
 /** Online checkout switch. The owner's decision, made in next-app/data/seo/plans.ts (FIN-U01). */
 export const PURCHASES_PAUSED = data.purchasesPaused === true;
+/** Support phone, WhatsApp and published hours; the owner's decision, made in data/seo/contact.ts. */
+export const CONTACT = data.contact;
+/** The support assistant's widget options; every string comes from next-app/lib/assistant/copy.ts. */
+export const ASSISTANT = data.assistant;
 
 /** Localities we serve in a city, alphabetically. */
 export function localitiesForCity(citySlug) {

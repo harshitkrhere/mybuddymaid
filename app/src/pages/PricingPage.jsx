@@ -3,17 +3,19 @@ import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
 import { PLAN_DETAILS } from '../lib/constants';
 // The paused-checkout switch is the owner's, set in next-app/data/seo/plans.ts and exported here.
-import { PURCHASES_PAUSED } from '../lib/serviceability';
+import { PURCHASES_PAUSED, CONTACT } from '../lib/serviceability';
 import {
   Crown, Check, Loader2, AlertCircle, Shield, Clock, Users,
   ChevronRight, Zap, Award, HeartHandshake, Mail, Phone,
   Sparkles, MessageCircle, X, PhoneCall
 } from 'lucide-react';
 
-const SUPPORT_PHONE = '+919355114869';
-const SUPPORT_PHONE_DISPLAY = '+91 93551 14869';
+// Phone, WhatsApp number and published hours come from the data layer (data/seo/contact.ts via
+// serviceability.json), so this modal, the site's CTAs and the terms cannot disagree about them.
+const SUPPORT_PHONE = CONTACT.phoneE164;
+const SUPPORT_PHONE_DISPLAY = CONTACT.phoneDisplay;
 const supportWhatsApp = (planName) =>
-  `https://wa.me/919355114869?text=${encodeURIComponent(`Hi MyBuddyMaid, I would like to book the ${planName || 'Gold'} package. Please help me complete the booking.`)}`;
+  `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(`Hi MyBuddyMaid, I would like to book the ${planName || 'Gold'} package. Please help me complete the booking.`)}`;
 
 // Testimonials removed: the three entries here were invented names with 5-star
 // ratings. We publish real reviews or none at all.
@@ -204,7 +206,7 @@ export default function PricingPage() {
                 <PhoneCall size={20} />
                 <div>
                   <span className="paused-btn-label">Call Us Now</span>
-                  <span className="paused-btn-sub">{SUPPORT_PHONE_DISPLAY} · Mon–Sun 9 AM–9 PM</span>
+                  <span className="paused-btn-sub">{SUPPORT_PHONE_DISPLAY} · {CONTACT.hoursLabel}</span>
                 </div>
               </a>
             </div>
