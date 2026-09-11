@@ -1764,15 +1764,15 @@ where that memo left them.
 |---|---|---|---|
 | C0 | Owner: Chatwoot Cloud subscription (Startups); OpenRouter account with the free-model training opt-out set and $10 of credits | **S** | owner |
 | C0 | Owner + counsel: the §B values, then publish the 2.0 documents. **Deferred by decision 2**, so C1–C3 proceed without it; C4 and public launch do not | **XL** (calendar) | owner |
-| C1 | Deterministic retrieval layer over the data layer (intent classification, entity extraction, `isServiceable`/`lookupPincode`/`PLANS`/`SERVICES`/`searchFaqs`) + the 67-question eval + the hallucination gate, in CI | **L** | — |
-| C1 | **Outbound redaction** (phone / email / card-like numbers) between retrieval and the model call, with the unredacted message still stored — decision 17 | **S** | C1 retrieval |
-| C1 | `lib/assistant/provider.ts` adapter + the four-rung degradation ladder, **rung 3 built and tested first**, with the three-assertion rung-3 test — decision 16 | **M** | C1 retrieval |
-| C1 | Server-side `/api/chat` route: streaming, queue for the 20 rpm cap, rate limiting, daily spend ceiling, phrasing cache | **L** | adapter |
+| C1 | Deterministic retrieval layer over the data layer (intent classification, entity extraction, `isServiceable`/`lookupPincode`/`PLANS`/`SERVICES`/`searchFaqs`) + the 67-question eval + the hallucination gate, in CI | **L** | **DONE 2026-09-11** — `lib/assistant/retrieve.ts`, 84-case eval, gate in CI |
+| C1 | **Outbound redaction** (phone / email / card-like numbers) between retrieval and the model call, with the unredacted message still stored — decision 17 | **S** | **DONE** — `lib/assistant/redact.ts`, tested |
+| C1 | `lib/assistant/provider.ts` adapter + the four-rung degradation ladder, **rung 3 built and tested first**, with the three-assertion rung-3 test — decision 16 | **M** | **DONE** — rung-3 test with all three assertions in `answer.test.ts` |
+| C1 | Server-side `/api/chat` route: streaming, queue for the 20 rpm cap, rate limiting, daily spend ceiling, phrasing cache | **L** | **DONE except the phrasing cache** — `app/api/chat/route.ts`; limits are in-memory per instance |
 | C2 | Chatwoot Cloud configured; bot wired as an agent-bot; escalation triggers; out-of-hours capture with the 24-hour promise | **M** | C0 |
 | C2 | **Connect WhatsApp to Chatwoot** — prerequisite for the decision-8 baseline | **M** | C0 |
-| C2 | Lazy launcher on the site (`Analytics.tsx` pattern, intent-only, no idle timeout) | **M** | C1 |
-| C2 | **Support hours to 10 AM–7 PM Mon–Sat from one constant** — bot branch, `PricingPage.jsx:207`, terms Annexure B, `v_support_sla` filter. Touches `app/src`, so `npm run build:spa` and commit `public/_spa` | **S** | decision 11 |
-| C3 | Widget in the booking app with the signed-in session; booking status under the user's JWT | **M** | C1 |
+| C2 | Lazy launcher on the site (`Analytics.tsx` pattern, intent-only, no idle timeout) | **M** | **DONE** — `components/shared/AssistantLauncher.tsx`, verified in the browser |
+| C2 | **Support hours to 10 AM–7 PM Mon–Sat from one constant** — bot branch, `PricingPage.jsx:207`, terms Annexure B, `v_support_sla` filter. Touches `app/src`, so `npm run build:spa` and commit `public/_spa` | **S** | **DONE** — `data/seo/contact.ts` → site, SPA via serviceability.json, bot |
+| C3 | Widget in the booking app with the signed-in session; booking status under the user's JWT | **M** | **DONE (widget + token)**; booking status under the JWT still to build |
 | C3 | Lead capture through `/api/lead` | **M** | **Phase 1d** |
 | C3 | Scheduled job re-checking the free-model list against OpenRouter's policy data | **S** | C1 |
 | C4 | Consent notice live, retention jobs, deletion wired into `delete-account` **and Chatwoot**, privacy policy published | **M** | C0 legal |
@@ -2069,8 +2069,8 @@ attention it is referenced by `ref` and opened in Chatwoot.
 
 | Phase | Work | Effort | Depends on |
 |---|---|---|---|
-| R1 | Migration C: `support_conversations`, `support_messages`, indexes, RLS SELECT policies | **M** | — |
-| R1 | `/api/chat` writes the record from the first message; `ref` generation | **M** | Initiative 3 C1 |
+| R1 | Migration C: `support_conversations`, `support_messages`, indexes, RLS SELECT policies | **M** | **WRITTEN, NOT APPLIED** — `supabase/migrations/20260911090000_support_conversations.sql`; owner runs `supabase db push` |
+| R1 | `/api/chat` writes the record from the first message; `ref` generation | **M** | **DONE** — writes via `after()` once the Supabase variables are set |
 | R2 | `link-support-conversations` edge function + the widget's `anon_id` handling | **M** | R1 |
 | R2 | `chatwoot-webhook` edge function (signature-verified, `--no-verify-jwt`) + nightly reconciliation | **L** | R1, Initiative 3 C2 |
 | R3 | The eight analytics views + the `v_support_gate` query | **M** | R2 |

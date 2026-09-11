@@ -28,3 +28,7 @@ mybuddymaid/.git
 # importer single-instance lock and atomic-write temp
 next-app/data/seo/.entities.lock
 next-app/data/seo/entities.json.*.tmp
+
+# The example file documents the variables and holds no values; it is meant to be committed.
+!.env.example
+!next-app/.env.example
