@@ -282,3 +282,18 @@ test('a model that returns no content (a reasoning model that spent its budget t
   assert.equal(a.rung, 3);
   assert.equal(a.modelId, null);
 });
+
+test('the gate refuses wording that asks for personal details the notice promised we would never ask for', async () => {
+  const r = retrieve('do you have maids in noida');
+  assert.equal(passesGate('Yes, we serve Noida. Tell me your locality or pincode and I’ll confirm.', r, 'do you have maids in noida'), true);
+  assert.equal(passesGate('Yes, we serve Noida. Tell me your exact address to confirm availability.', r, 'do you have maids in noida'), false);
+  assert.equal(passesGate('Sure — share your phone number and we will call you.', r, 'do you have maids in noida'), false);
+  assert.equal(passesGate('Please enter the OTP to continue.', r, 'do you have maids in noida'), false);
+  // Talking about OUR contact details is fine.
+  const c = retrieve('contact number');
+  assert.equal(passesGate(`You can reach our team on WhatsApp or by calling ${SUPPORT_PHONE_DISPLAY}, or email us.`, c, 'contact number'), true);
+
+  const a = await answer({ message: 'do you have maids in noida' }, { provider, fetchImpl: ok('Yes, we serve Noida. Tell me your exact address to confirm availability.') });
+  assert.equal(a.rung, 3);
+  assert.equal(a.gateRejected, true);
+});
