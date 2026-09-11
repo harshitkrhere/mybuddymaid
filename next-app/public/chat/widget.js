@@ -74,7 +74,10 @@
     els.ref = h('span', { class: 'mbm-chat__ref', text: '' });
     var header = h('div', { class: 'mbm-chat__header' }, [
       h('div', { class: 'mbm-chat__title' }, [h('strong', { text: opts.title }), els.ref]),
-      h('button', { class: 'mbm-chat__close', type: 'button', 'aria-label': opts.closeLabel, onclick: close, text: '×' })
+      h('div', { class: 'mbm-chat__actions' }, [
+        h('button', { class: 'mbm-chat__new', type: 'button', onclick: reset, text: opts.newChatLabel }),
+        h('button', { class: 'mbm-chat__close', type: 'button', 'aria-label': opts.closeLabel, onclick: close, text: '×' })
+      ])
     ]);
 
     els.notice = h('div', { class: 'mbm-chat__notice', role: 'note' }, [
@@ -321,6 +324,22 @@
   }
 
   // ── Open / close ────────────────────────────────────────────────────────────────────────
+  // A fresh conversation: new id, empty history, the notice shown again. The old one stays on
+  // the server's record under its own reference; nothing here deletes anything.
+  function reset() {
+    if (busy) return;
+    stopPolling();
+    state = { id: uuid(), ref: null, expires: Date.now() + TTL_MS, history: [], noticeSeen: false, handedOff: false, after: null };
+    save();
+    els.log.textContent = '';
+    els.typing = null;
+    els.ref.textContent = '';
+    els.escalate.hidden = true;
+    els.notice.hidden = false;
+    addMessage('assistant', opts.greeting);
+    els.input.focus();
+  }
+
   function open() {
     if (!els.panel) build();
     lastFocus = document.activeElement;
