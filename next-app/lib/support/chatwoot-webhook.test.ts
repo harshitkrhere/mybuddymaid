@@ -7,7 +7,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHmac } from 'node:crypto';
-import { verifyChatwootSignature, handleChatwootEvent, channelFrom, MAX_SKEW_SECONDS, type ChatwootEvent } from './chatwoot-webhook';
+import { verifyChatwootSignature, handleChatwootEvent, channelFrom, isOwnClientChannel, MAX_SKEW_SECONDS, type ChatwootEvent } from './chatwoot-webhook';
 import type { RecordClient, FetchLike } from './record';
 
 const SECRET = 'whsec_test_0123456789';
@@ -204,10 +204,27 @@ test('a status change for a conversation not in the record is ignored, not creat
 test('a Chatwoot conversation that carries our id as a custom attribute is written under that id', async () => {
   const { client, calls } = stubClient();
   const ours = 'bbbbbbbb-1111-4222-8333-444444444444';
-  const r = await handleChatwootEvent(incoming({ conversation: { id: 700, inbox_id: 67, channel: 'Channel::Api', custom_attributes: { mbm_conversation_id: ours } } }), client, NOW);
+  // An agent's reply that lands before the handoff has recorded Chatwoot's id on our row.
+  const r = await handleChatwootEvent(agentReply({ conversation: { id: 700, inbox_id: 67, channel: 'Channel::Api', custom_attributes: { mbm_conversation_id: ours } } }), client, NOW);
   assert.equal(r.status, 'recorded');
   const upsert = calls.find((c) => c.method === 'POST' && c.path.startsWith('support_conversations'))!.body as Record<string, unknown>;
   assert.equal(upsert.id, ours);
+});
+
+test('an incoming message on the API inbox is an echo of what our own client posted, and writes nothing', async () => {
+  // handoff.ts posts the transcript, the customer's later messages and the assistant's turns
+  // from the visitor's side; each is on the record before Chatwoot echoes it back.
+  const { client, calls } = stubClient({ existing: { 567: { id: 'aaaaaaaa-0000-4000-8000-000000000001' } } });
+  const echo = incoming({ content: 'Assistant: Here is what our help pages say…', conversation: { id: 567, inbox_id: 12, status: 'open', channel: 'Channel::Api' } });
+  const r = await handleChatwootEvent(echo, client, NOW);
+  assert.equal(r.status, 'ignored');
+  assert.equal(calls.length, 0, 'nothing was written');
+
+  // The team's replies on that inbox are still news.
+  const { client: c2, calls: calls2 } = stubClient({ existing: { 567: { id: 'aaaaaaaa-0000-4000-8000-000000000001' } } });
+  const r2 = await handleChatwootEvent(agentReply({ conversation: { id: 567, inbox_id: 12, status: 'open', channel: 'Channel::Api' } }), c2, NOW);
+  assert.equal(r2.status, 'recorded');
+  assert.ok(calls2.some((c) => c.method === 'POST' && c.path.startsWith('support_messages')), 'the agent reply was written');
 });
 
 test('unsubscribed events are acknowledged and write nothing', async () => {
@@ -223,4 +240,7 @@ test('channel mapping', () => {
   assert.equal(channelFrom('Channel::Sms'), 'phone');
   assert.equal(channelFrom('Channel::Api'), 'site_chat');
   assert.equal(channelFrom(undefined), 'site_chat');
+  assert.equal(isOwnClientChannel('Channel::Api'), true);
+  assert.equal(isOwnClientChannel('Channel::Whatsapp'), false);
+  assert.equal(isOwnClientChannel(undefined), false);
 });

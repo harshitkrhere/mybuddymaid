@@ -214,6 +214,25 @@ export async function assistantChatwootIds(c: RecordClient, conversationId: stri
   }
 }
 
+/**
+ * The conversation's own turns, oldest first — the server's copy, which is what a handoff
+ * sends to Chatwoot. Capped at the most recent `limit` messages, so a long chat keeps its end.
+ */
+export async function listTranscript(c: RecordClient, conversationId: string, limit = 80): Promise<MessageRow[]> {
+  const res = await call(
+    c,
+    `support_messages?conversation_id=eq.${encodeURIComponent(conversationId)}&sender=in.(customer,assistant)&select=conversation_id,sender,body,created_at&order=created_at.desc&limit=${limit}`,
+    { method: 'GET', headers: headers(c) },
+    'transcript list',
+  );
+  if (!res) return [];
+  try {
+    return ((await res.json()) as MessageRow[]).reverse();
+  } catch {
+    return [];
+  }
+}
+
 /** Messages on a conversation after a point in time, oldest first. */
 export async function listMessagesAfter(c: RecordClient, conversationId: string, afterIso: string, senders: Sender[]): Promise<MessageRow[]> {
   const res = await call(

@@ -3,8 +3,9 @@
 // Three moments, each a function the routes call:
 //
 //   startHandoff   the assistant has decided to escalate. Open the conversation in Chatwoot
-//                  with the transcript, and remember Chatwoot's id on our record. Runs after
-//                  the reply is sent (next/server's after()), so it never slows the customer.
+//                  with the record's copy of the transcript (never the caller's) and remember
+//                  Chatwoot's id on our record. Runs after the reply is sent (next/server's
+//                  after()), so it never slows the customer.
 //                  Idempotent: a conversation already handed off is left alone.
 //
 //   forwardMessage the customer typed again after the handoff. It goes to the person in
@@ -26,7 +27,7 @@
 
 import type { ChatwootClient, Transcript } from './chatwoot';
 import { openHandoff, postCustomerMessage, postAssistantMessage, fetchMessages, fetchStatus } from './chatwoot';
-import { assistantChatwootIds, getConversation, insertMessages, listMessagesAfter, patchConversation, type ConversationRow, type RecordClient } from './record';
+import { assistantChatwootIds, getConversation, insertMessages, listMessagesAfter, listTranscript, patchConversation, type ConversationRow, type RecordClient } from './record';
 
 const HANDOFF_WINDOW_MS = 24 * 60 * 60 * 1000;
 
@@ -58,10 +59,16 @@ export async function startHandoff(record: RecordClient | null, chatwoot: Chatwo
   const existing = lookup.row;
   if (existing?.chatwoot_conversation_id) return { status: 'already', chatwootConversationId: existing.chatwoot_conversation_id };
 
+  // The transcript is the server's copy of the conversation, never the caller's. What the
+  // widget sends as history is the visitor's to edit; the person reading the handoff must see
+  // what was actually said. The caller's copy stands in only when the record holds nothing.
+  const recorded = await listTranscript(record, h.conversationId);
+  const transcript: Transcript[] = recorded.length ? recorded.map((m) => ({ role: m.sender === 'assistant' ? 'assistant' : 'user', content: m.body })) : h.transcript;
+
   const chatwootId = await openHandoff(chatwoot, {
     conversationId: h.conversationId,
     ref: h.ref,
-    transcript: h.transcript,
+    transcript,
     contactName: existing?.contact_name ?? null,
     contactPhone: existing?.contact_phone ?? null,
     page: h.page ?? null,

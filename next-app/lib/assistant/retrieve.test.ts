@@ -99,6 +99,7 @@ const CASES: Case[] = [
   { q: 'what is the diamond package', intent: 'plan_detail', plan: 'diamond', includes: [inr(diamond.fee), 'police verification included'] },
   { q: 'what are your plans', intent: 'pricing', includes: PLANS.map((p) => inr(p.fee)) },
   { q: 'price?', intent: 'pricing', includes: [inr(silver.fee)] },
+  { q: 'prices', intent: 'pricing', includes: [inr(silver.fee)] },
   { q: 'cheapest plan', intent: 'plan_detail', plan: 'silver', includes: [inr(silver.fee)] },
   { q: 'is the fee the maid salary', intent: 'pricing', includes: [/not the helper.s salary/] },
   { q: 'can i pay online', intent: 'pricing', includes: [/Silver|Gold|Diamond/] },
@@ -108,6 +109,9 @@ const CASES: Case[] = [
   // ── Service scope ──
   ...SERVICES.map<Case>((s) => ({ q: `what does a ${s.name.toLowerCase()} do`, intent: ['service_info', 'pricing'], service: s.slug, includes: [s.name], sourceUrl: `/services/${s.slug}` })),
   { q: 'what services do you offer', intent: 'service_info', includes: SERVICES.map((s) => s.name) },
+  // One-word asks, as real visitors type them (a live miss on 2026-09-12).
+  { q: 'services', intent: 'service_info', includes: SERVICES.map((s) => s.name) },
+  { q: 'service', intent: 'service_info', includes: SERVICES.map((s) => s.name) },
   { q: 'do you provide drivers', intent: 'not_offered', includes: [/isn.t something we place/, 'cook'] },
   { q: 'need a plumber', intent: 'not_offered', includes: [/isn.t something we place/] },
 
@@ -128,6 +132,8 @@ const CASES: Case[] = [
 
   // ── Booking process and contact ──
   { q: 'how do i book', intent: 'booking_process', includes: [/WhatsApp/] },
+  { q: 'booking', intent: 'booking_process', includes: [/WhatsApp/] },
+  { q: 'areas', intent: 'serviceability', includes: [/locality or 6-digit pincode/] },
   { q: 'what is the process to hire a maid', intent: 'booking_process', includes: [/shortlist/i] },
   { q: 'kaise book kare', intent: 'booking_process', lang: 'hi' },
   { q: 'contact number', intent: 'contact', includes: ['+91 93551 14869', 'Mon–Sat, 10 AM–7 PM IST', '24 hours'], sourceUrl: '/contact' },

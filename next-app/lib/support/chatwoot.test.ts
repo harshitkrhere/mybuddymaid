@@ -130,6 +130,7 @@ test('openHandoff: contact and conversation through the Client API, note and ass
     mbm_plan: '',
     mbm_reason: 'payment',
     mbm_signed_in: 'no',
+    mbm_phone: '',
   });
 
   const note = calls[2];
@@ -148,6 +149,14 @@ test('openHandoff: with identity validation on, the contact carries the HMAC of 
   client.hmacToken = 'hmac-secret';
   await openHandoff(client, HANDOFF);
   assert.equal(calls[0].body?.identifier_hash, createHmac('sha256', 'hmac-secret').update(CONV).digest('hex'));
+});
+
+test('openHandoff: a known phone number goes on the conversation, never on the contact (Chatwoot would merge contacts by it)', async () => {
+  const { client, calls } = stub();
+  await openHandoff(client, { ...HANDOFF, contactPhone: '+919876543210' });
+  assert.equal(calls[0].body?.phone_number, undefined);
+  assert.equal(calls[0].body?.email, undefined);
+  assert.equal((calls[1].body?.custom_attributes as Record<string, string>).mbm_phone, '+919876543210');
 });
 
 test('openHandoff: without a bot token the conversation still opens, with the assistant’s turns posted from the visitor’s side, prefixed', async () => {

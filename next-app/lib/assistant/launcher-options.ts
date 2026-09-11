@@ -35,6 +35,10 @@ export interface LauncherOptions {
   hoursLabel: string;
   teamLabel: string;
   conversationClosed: string;
+  /** Buttons under the greeting of a fresh conversation; a tap sends the text as a message. */
+  starters: string[];
+  /** Shown for a moment after the reference in the header is tapped, which copies it. */
+  copiedLabel: string;
 }
 
 export const LAUNCHER_OPTIONS: LauncherOptions = {
@@ -61,4 +65,6 @@ export const LAUNCHER_OPTIONS: LauncherOptions = {
   hoursLabel: SUPPORT_HOURS.label,
   teamLabel: COPY.teamLabel,
   conversationClosed: COPY.conversationClosed,
+  starters: [...COPY.starters],
+  copiedLabel: COPY.copied,
 };
