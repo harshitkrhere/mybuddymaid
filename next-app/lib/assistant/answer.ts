@@ -18,6 +18,7 @@ import { SUPPORT_HOURS, SUPPORT_PHONE_DISPLAY, isWithinSupportHours } from '@/da
 import { ALWAYS_ALLOWED_NUMBERS, numbersIn, type Source } from './knowledge';
 import { retrieve, type Entities, type EscalationReason, type Intent, type Language, type Retrieval } from './retrieve';
 import { redact } from './redact';
+import { understand } from './understand';
 import { phrase, type ChatMessage, type FetchLike, type ProviderConfig } from './provider';
 import { COPY } from './copy';
 
@@ -55,6 +56,10 @@ export interface Answer {
   redacted: string[];
   /** True when a model answered but its wording was rejected by the number gate. */
   gateRejected: boolean;
+  /** The plain question the model read the message as, when the rules had drawn a blank. */
+  understoodAs: string | null;
+  /** Model calls made for this answer (0, 1 or 2), for the daily ceiling. */
+  modelCalls: number;
 }
 
 export interface AnswerOptions {
@@ -100,10 +105,18 @@ function allowedNumbers(r: Retrieval, message: string): Set<number> {
   return allowed;
 }
 
-/** True when every gated number in `wording` is accounted for. */
+// The widget's notice promises we will never ask for these. A model that turns "tell me your
+// locality" into "tell me your exact address" breaks that promise, so the wording is refused
+// unless the retrieved answer itself says it (it never does today).
+const PERSONAL_ASKS =
+  /\b(your (exact |full |home |complete |registered )?(address|phone( number)?|mobile( number)?|contact number|whatsapp number|email( address| id)?|card( number)?|aadhaar( number)?)|otp|one[- ]time password|upi pin|password)\b/i;
+
+/** True when every gated number in `wording` is accounted for and it asks for nothing personal. */
 export function passesGate(wording: string, r: Retrieval, message: string): boolean {
   const allowed = allowedNumbers(r, message);
   for (const n of gatedNumbers(wording)) if (!allowed.has(n)) return false;
+  const ask = wording.match(PERSONAL_ASKS)?.[0];
+  if (ask && !`${r.preface ?? ''} ${r.answer}`.toLowerCase().includes(ask.toLowerCase())) return false;
   return true;
 }
 
@@ -167,8 +180,25 @@ ${r.answer}` : r.answer,
 export async function answer(input: AnswerInput, opts: AnswerOptions = {}): Promise<Answer> {
   const history = (input.history ?? []).slice(-(opts.historyTurns ?? HISTORY_TURNS));
   const now = input.now ?? new Date();
-  const r = retrieve(input.message);
   const outbound = redact(input.message);
+  let r = retrieve(input.message);
+  let understoodAs: string | null = null;
+  let modelCalls = 0;
+
+  // Rung 0: the rules drew a blank. Ask the model what is being asked — as a plain question the
+  // rules DO understand — and retrieve that instead. The answer still comes from the data.
+  if (r.escalate === 'low_confidence' && opts.provider) {
+    modelCalls += 1;
+    const u = await understand(outbound.text.slice(0, MAX_MODEL_CHARS), redactedHistory(history), opts.provider, { fetchImpl: opts.fetchImpl });
+    if (u) {
+      const again = retrieve(u.question);
+      if (again.intent !== 'unknown') {
+        console.log(`[assistant] understood as "${u.question}" (${again.intent}) via ${u.modelId}`);
+        r = { ...again, language: r.language };
+        understoodAs = u.question;
+      }
+    }
+  }
 
   const base = {
     sources: r.sources,
@@ -178,6 +208,8 @@ export async function answer(input: AnswerInput, opts: AnswerOptions = {}): Prom
     confidence: r.confidence,
     redacted: outbound.removed,
     gateRejected: false,
+    understoodAs,
+    modelCalls,
   };
 
   // Escalations and greetings are fixed copy: no model, no gate, no network.
@@ -205,9 +237,10 @@ export async function answer(input: AnswerInput, opts: AnswerOptions = {}): Prom
     const messages: ChatMessage[] = [
       { role: 'system', content: systemPrompt(r, !!input.signedIn) },
       // Both roles are redacted: an assistant turn could have echoed something the customer typed.
-      ...history.map<ChatMessage>((t) => ({ role: t.role, content: redact(t.content).text.slice(0, MAX_MODEL_CHARS) })),
+      ...redactedHistory(history),
       { role: 'user', content: outbound.text.slice(0, MAX_MODEL_CHARS) },
     ];
+    base.modelCalls += 1;
     const result = await phrase({ messages }, opts.provider, { fetchImpl: opts.fetchImpl });
     if (result) {
       const wording = result.text.replace(/\s+\n/g, '\n').trim();
@@ -221,6 +254,10 @@ export async function answer(input: AnswerInput, opts: AnswerOptions = {}): Prom
 
   // Rung 3: the answer itself, with its source.
   return { ...base, text: unphrased(r), modelId: null, rung: 3 };
+}
+
+function redactedHistory(history: Turn[]): ChatMessage[] {
+  return history.map<ChatMessage>((t) => ({ role: t.role, content: redact(t.content).text.slice(0, MAX_MODEL_CHARS) }));
 }
 
 const QUOTED_INTENTS = new Set<Intent>(['faq', 'pricing', 'plan_detail', 'refund_question', 'replacement', 'verification', 'booking_process', 'contact']);

@@ -239,7 +239,7 @@ export async function POST(req: Request) {
         let a: Answer | null = null;
         try {
           const candidate = await answer({ message, history, signedIn: !!userId, now }, { provider });
-          if (candidate.rung === 1) modelCallsToday.count += 1;
+          modelCallsToday.count += candidate.modelCalls;
           if (!candidate.escalate) a = candidate;
         } catch (e) {
           console.error('[chat] answer threw (forward mode)', e);
@@ -284,7 +284,7 @@ export async function POST(req: Request) {
       send(controller, 'status', { state: 'thinking' });
       try {
         const a = await answer({ message, history, signedIn: !!userId, now }, { provider });
-        if (a.rung === 1) modelCallsToday.count += 1;
+        modelCallsToday.count += a.modelCalls;
 
         const ref = refFor(conversationId);
         send(controller, 'answer', {
