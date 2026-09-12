@@ -206,6 +206,29 @@ test('awaitingContactFrom: an escalation with a reason, no number and no Chatwoo
   assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), chatwoot_conversation_id: 4242 }, NOW), false, 'already with the team');
   assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), closed_at: NOW.toISOString() }, NOW), false);
   assert.equal(awaitingContactFrom({ ...base, escalated: false, escalated_at: null }, NOW), false);
+  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), escalation_reason: 'safety' }, NOW), false, 'safety does not wait');
+});
+
+test('waiting for the number and opening in Chatwoot are never both true: the card sent moments after the ask completes the handoff, it is not held', () => {
+  // The live failure: within two minutes of the ask, the row read as "opening", the details were
+  // held for a conversation nobody was opening, and the customer heard "sent to our team".
+  const t = (secondsAgo: number) => new Date(NOW.getTime() - secondsAgo * 1000).toISOString();
+  const base = { id: ID, ref: 'MBM-AAAAA', channel: 'site_chat' as const, escalated: true, escalated_at: t(20), chatwoot_conversation_id: null, closed_at: null };
+  const askedNoNumber = { ...base, escalation_reason: 'asked_for_human', contact_phone: null };
+  assert.equal(awaitingHandoffFrom(askedNoNumber, NOW), false);
+  assert.equal(awaitingContactFrom(askedNoNumber, NOW), true);
+  // The same reason with the number already on the record opens at once, so it is opening.
+  const askedWithNumber = { ...base, escalation_reason: 'asked_for_human', contact_phone: '+919691982400' };
+  assert.equal(awaitingHandoffFrom(askedWithNumber, NOW), true);
+  assert.equal(awaitingContactFrom(askedWithNumber, NOW), false);
+  // Safety opens at once and asks alongside: opening, never waiting.
+  const safety = { ...base, escalation_reason: 'safety', contact_phone: null };
+  assert.equal(awaitingHandoffFrom(safety, NOW), true);
+  assert.equal(awaitingContactFrom(safety, NOW), false);
+  for (const reason of ['complaint', 'refund', 'payment', 'turn_limit']) {
+    assert.equal(awaitingHandoffFrom({ ...base, escalation_reason: reason, contact_phone: null }, NOW), false, reason);
+    assert.equal(awaitingContactFrom({ ...base, escalation_reason: reason, contact_phone: null }, NOW), true, reason);
+  }
 });
 
 test('captureContact: the details go on the record and the transcript, then the conversation opens with the name on the contact and the number on the conversation', async () => {

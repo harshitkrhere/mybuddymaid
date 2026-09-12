@@ -11,6 +11,18 @@
 // the team, and goes to Chatwoot on purpose — on the conversation, never on the Chatwoot contact,
 // which would let Chatwoot merge contacts by it.
 
+/**
+ * The escalations that wait for the customer's name and number before the team gets the
+ * conversation. Safety is the exception: the team is alerted at once and the number asked for
+ * alongside. Shared by the assistant (which asks) and the handoff (which tells an escalation
+ * waiting for details apart from one whose Chatwoot conversation is being opened).
+ */
+export const REASONS_WAITING_FOR_CONTACT: ReadonlySet<string> = new Set(['asked_for_human', 'complaint', 'refund', 'payment', 'turn_limit']);
+
+export function waitsForContact(reason: string | null | undefined): boolean {
+  return !!reason && REASONS_WAITING_FOR_CONTACT.has(reason);
+}
+
 export interface ContactDetails {
   name: string | null;
   /** E.164: +91 and ten digits. */

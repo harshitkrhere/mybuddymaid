@@ -21,6 +21,7 @@ import { redact } from './redact';
 import { understand } from './understand';
 import { phrase, type ChatMessage, type FetchLike, type ProviderConfig } from './provider';
 import { COPY } from './copy';
+import { waitsForContact } from '@/lib/support/contact';
 
 export interface Turn {
   role: 'user' | 'assistant';
@@ -153,12 +154,12 @@ export function handoffFor(now: Date = new Date()): Handoff {
 
 // The team gets a conversation only with a way to reach the customer back (owner decision,
 // 2026-09-12). Every escalation waits for a name and mobile number first — except safety,
-// where the team is alerted at once and the number is asked for alongside.
-export const GATED_ESCALATIONS: ReadonlySet<EscalationReason> = new Set<EscalationReason>(['asked_for_human', 'complaint', 'refund', 'payment', 'turn_limit']);
+// where the team is alerted at once and the number is asked for alongside. Which reasons wait
+// is lib/support/contact.ts's, shared with the handoff.
 
 /** What an escalation adds to the retrieval: the handoff with the hours text, or the ask for details first. */
 export function escalationFor(leadIn: string, reason: EscalationReason, contactKnown: boolean, now: Date, policy = ''): Pick<Answer, 'text' | 'escalate' | 'handoff' | 'contactRequired' | 'modelId' | 'rung'> {
-  if (GATED_ESCALATIONS.has(reason) && !contactKnown) {
+  if (waitsForContact(reason) && !contactKnown) {
     return { text: `${leadIn} ${COPY.askContact}${policy}`, escalate: reason, contactRequired: true, modelId: null, rung: 3 };
   }
   const h = handoffFor(now);
