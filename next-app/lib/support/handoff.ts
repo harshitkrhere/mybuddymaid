@@ -35,7 +35,7 @@
 
 import type { ChatwootClient, Transcript } from './chatwoot';
 import { openHandoff, postCustomerMessage, postAssistantMessage, fetchMessages, fetchStatus, renameContact } from './chatwoot';
-import type { ContactDetails } from './contact';
+import { waitsForContact, type ContactDetails } from './contact';
 import { assistantChatwootIds, getConversation, insertMessages, listMessagesAfter, listTranscript, patchConversation, type ConversationRow, type RecordClient } from './record';
 
 const HANDOFF_WINDOW_MS = 24 * 60 * 60 * 1000;
@@ -142,9 +142,15 @@ export function handedOffFrom(row: ConversationRow, now: Date = new Date()): Han
  * no Chatwoot id yet, within the opening window. What the customer writes now is held on the
  * record (holdMessage) and posted by startHandoff once the conversation exists. The window
  * keeps a handoff that failed from holding messages forever.
+ *
+ * Not an escalation that is waiting for the customer's number: nothing is opening there until
+ * the details are in, and treating it as opening held the card's details as if a conversation
+ * existed and opened none (live, 2026-09-12). Safety, and a reason whose number is already on
+ * the record, open at once and are opening.
  */
 export function awaitingHandoffFrom(row: ConversationRow, now: Date = new Date()): boolean {
   if (row.chatwoot_conversation_id || !row.escalated || !row.escalated_at || row.closed_at) return false;
+  if (!row.contact_phone && waitsForContact(row.escalation_reason)) return false;
   const since = now.getTime() - new Date(row.escalated_at).getTime();
   return since >= 0 && since <= HANDOFF_OPENING_MS;
 }
@@ -172,9 +178,10 @@ export async function holdMessage(record: RecordClient, conversationId: string, 
 /** How long an escalation waits for the customer's details before a fresh ask is needed. */
 const CONTACT_WINDOW_MS = HANDOFF_WINDOW_MS;
 
-/** An escalation waiting for the customer's name and number: escalated, no number, no Chatwoot conversation, within a day. */
+/** An escalation waiting for the customer's name and number: a reason that waits, no number, no Chatwoot conversation, within a day. */
 export function awaitingContactFrom(row: ConversationRow, now: Date = new Date()): boolean {
   if (row.chatwoot_conversation_id || row.contact_phone || !row.escalated || !row.escalated_at || row.closed_at) return false;
+  if (!waitsForContact(row.escalation_reason)) return false;
   const since = now.getTime() - new Date(row.escalated_at).getTime();
   return since >= 0 && since <= CONTACT_WINDOW_MS;
 }
