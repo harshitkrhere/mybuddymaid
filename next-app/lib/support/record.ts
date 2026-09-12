@@ -196,6 +196,19 @@ export async function getConversation(c: RecordClient, id: string): Promise<Look
   }
 }
 
+/** The name and phone on a signed-in customer's profile, for offering back on the contact card. Null when unknown. */
+export async function profileContact(c: RecordClient, userId: string): Promise<{ name: string | null; phone: string | null } | null> {
+  const res = await call(c, `profiles?id=eq.${encodeURIComponent(userId)}&select=full_name,phone&limit=1`, { method: 'GET', headers: headers(c) }, 'profile get');
+  if (!res) return null;
+  try {
+    const rows = (await res.json()) as Array<{ full_name?: string | null; phone?: string | null }>;
+    const row = rows[0];
+    return row ? { name: row.full_name ?? null, phone: row.phone ?? null } : null;
+  } catch {
+    return null;
+  }
+}
+
 /** Which of these Chatwoot message ids are already on the record as the assistant's own. */
 export async function assistantChatwootIds(c: RecordClient, conversationId: string, ids: number[]): Promise<Set<number>> {
   if (!ids.length) return new Set();

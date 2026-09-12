@@ -39,6 +39,15 @@ export interface LauncherOptions {
   starters: string[];
   /** Shown for a moment after the reference in the header is tapped, which copies it. */
   copiedLabel: string;
+  /** The contact card shown before a handoff; see lib/support/contact.ts. */
+  contactTitle: string;
+  contactTitlePrefilled: string;
+  contactNameLabel: string;
+  contactPhoneLabel: string;
+  contactPhonePlaceholder: string;
+  contactSubmit: string;
+  contactLineLabels: { name: string; phone: string };
+  invalidPhone: string;
 }
 
 export const LAUNCHER_OPTIONS: LauncherOptions = {
@@ -67,4 +76,12 @@ export const LAUNCHER_OPTIONS: LauncherOptions = {
   conversationClosed: COPY.conversationClosed,
   starters: [...COPY.starters],
   copiedLabel: COPY.copied,
+  contactTitle: COPY.contactTitle,
+  contactTitlePrefilled: COPY.contactTitlePrefilled,
+  contactNameLabel: COPY.contactNameLabel,
+  contactPhoneLabel: COPY.contactPhoneLabel,
+  contactPhonePlaceholder: COPY.contactPhonePlaceholder,
+  contactSubmit: COPY.contactSubmit,
+  contactLineLabels: { ...COPY.contactLineLabels },
+  invalidPhone: COPY.invalidPhone,
 };

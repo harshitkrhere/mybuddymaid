@@ -240,6 +240,15 @@ export async function postCustomerMessage(c: ChatwootClient, conversationId: str
 }
 
 /**
+ * The contact's display name once the customer has given one — "Harshit" in place of "Website
+ * visitor MBM-XXXXX". Name only: a phone or email here would let Chatwoot merge contacts by it.
+ */
+export async function renameContact(c: ChatwootClient, conversationId: string, name: string): Promise<boolean> {
+  const r = await client(c, contactPath(conversationId), { method: 'PATCH', body: JSON.stringify({ name }) }, 'rename contact');
+  return r.status >= 200 && r.status < 300;
+}
+
+/**
  * The assistant's own reply after a handoff, so the person sees the whole exchange: as the bot
  * when there is a token, otherwise from the visitor's side with a prefix. Returns Chatwoot's id.
  */

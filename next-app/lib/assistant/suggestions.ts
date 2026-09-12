@@ -32,8 +32,8 @@ const BY_INTENT: Partial<Record<Intent, readonly string[]>> = {
 
 export const MAX_SUGGESTIONS = 3;
 
-/** Up to three prompts to offer under this answer; none when the conversation is with a person. */
-export function suggestionsFor(a: { intent: Intent; handoff?: unknown }): string[] {
-  if (a.handoff) return [];
+/** Up to three prompts to offer under this answer; none when the conversation is with a person, or while the contact card is up. */
+export function suggestionsFor(a: { intent: Intent; handoff?: unknown; contactRequired?: boolean }): string[] {
+  if (a.handoff || a.contactRequired) return [];
   return (BY_INTENT[a.intent] ?? []).slice(0, MAX_SUGGESTIONS);
 }

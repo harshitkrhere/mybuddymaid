@@ -35,6 +35,31 @@ const SATURDAY_EVENING = new Date('2026-09-12T14:30:00Z'); // 20:00 IST
 
 beforeEach(() => resetCircuits());
 
+test('an escalation waits for the customer’s name and number before the handoff — unless the record already has one, or it is a safety matter', async () => {
+  const human = await answer({ message: 'i want to talk to a person', now: TUESDAY_IN_HOURS }, { provider: null });
+  assert.equal(human.escalate, 'asked_for_human');
+  assert.equal(human.contactRequired, true);
+  assert.equal(human.handoff, undefined, 'no handoff until the details are in');
+  assert.ok(human.text.startsWith(COPY.escalateHuman));
+  assert.ok(human.text.includes(COPY.askContact));
+  assert.ok(!human.text.includes(SUPPORT_PHONE_DISPLAY), 'the hours text waits too');
+
+  const known = await answer({ message: 'i want to talk to a person', now: TUESDAY_IN_HOURS, contactKnown: true }, { provider: null });
+  assert.equal(known.contactRequired, false);
+  assert.ok(known.handoff, 'a number on the record: straight to the team');
+  assert.ok(known.text.includes(COPY.handoffInHours(SUPPORT_PHONE_DISPLAY)));
+
+  for (const q of ['maid did not come today', 'i want a refund now', 'payment deducted but no confirmation']) {
+    const a = await answer({ message: q, now: TUESDAY_IN_HOURS }, { provider: null });
+    assert.equal(a.contactRequired, true, q);
+    assert.equal(a.handoff, undefined, q);
+  }
+
+  const safety = await answer({ message: 'someone stole my ring', now: TUESDAY_IN_HOURS }, { provider: null });
+  assert.ok(safety.handoff, 'safety alerts the team at once');
+  assert.equal(safety.contactRequired, true, 'and asks for a number alongside');
+});
+
 test('after a handoff the assistant answers alongside only when the facts help — never for contact details, a greeting or a blank', () => {
   assert.equal(answersAfterHandoff({ intent: 'contact' }), false, 'the customer is already talking to us');
   assert.equal(answersAfterHandoff({ intent: 'greeting' }), false);
@@ -185,7 +210,8 @@ test('history handed to the model is bounded and redacted too', async () => {
 // ─── Escalation and handoff ─────────────────────────────────────────────────────────────────
 
 test('asking for a person hands off with the in-hours text during support hours', async () => {
-  const a = await answer({ message: 'i want to talk to a person', now: TUESDAY_IN_HOURS }, { provider, fetchImpl: ok('should not be called') });
+  // contactKnown: the record already holds a number, so the handoff need not wait for one.
+  const a = await answer({ message: 'i want to talk to a person', now: TUESDAY_IN_HOURS, contactKnown: true }, { provider, fetchImpl: ok('should not be called') });
   assert.equal(a.escalate, 'asked_for_human');
   assert.equal(a.handoff?.inHours, true);
   assert.ok(a.text.includes(SUPPORT_PHONE_DISPLAY));
@@ -194,7 +220,7 @@ test('asking for a person hands off with the in-hours text during support hours'
 
 test('outside support hours the handoff carries the 24-hour promise', async () => {
   for (const when of [SUNDAY, SATURDAY_EVENING]) {
-    const a = await answer({ message: 'i want to talk to a person', now: when }, { provider: null });
+    const a = await answer({ message: 'i want to talk to a person', now: when, contactKnown: true }, { provider: null });
     assert.equal(a.handoff?.inHours, false, when.toISOString());
     assert.ok(a.text.includes(`${SUPPORT_HOURS.replyWithinHours} hours`));
     assert.ok(a.text.includes(SUPPORT_HOURS.label));
@@ -231,7 +257,9 @@ test('three refusals in a row hand off (turn limit)', async () => {
   ];
   const a = await answer({ message: 'who won the match', history, now: TUESDAY_IN_HOURS }, { provider: null });
   assert.equal(a.escalate, 'turn_limit');
-  assert.ok(a.handoff);
+  assert.equal(a.contactRequired, true, 'the handoff waits for the customer’s number like any other');
+  const known = await answer({ message: 'who won the match', history, now: TUESDAY_IN_HOURS, contactKnown: true }, { provider: null });
+  assert.ok(known.handoff);
 });
 
 // ─── The hallucination gate, over the whole eval set ────────────────────────────────────────

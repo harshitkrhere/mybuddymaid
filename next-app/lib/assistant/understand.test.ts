@@ -111,10 +111,14 @@ test('the customer’s language survives an English rewrite, and the reader sees
 
 test('a rewrite can hand off — as a request for a person — but the handoff text is ours, not the model’s', async () => {
   const { fetchImpl } = stub('{"intent":"human","question":"I want to talk to a person"}');
-  const a = await answer({ message: 'koi hai jo mujhse baat kar sake?? ye bot bekar hai', now: TUESDAY_IN_HOURS }, { provider, fetchImpl });
+  const a = await answer({ message: 'koi hai jo mujhse baat kar sake?? ye bot bekar hai', now: TUESDAY_IN_HOURS, contactKnown: true }, { provider, fetchImpl });
   assert.equal(a.escalate, 'asked_for_human');
   assert.ok(a.handoff?.inHours);
   assert.ok(a.text.startsWith(COPY.escalateHuman));
+  // Without a number on the record the same reading waits for one, like any escalation.
+  const gated = await answer({ message: 'koi hai jo mujhse baat kar sake?? ye bot bekar hai', now: TUESDAY_IN_HOURS }, { provider, fetchImpl: stub('{"intent":"human","question":"I want to talk to a person"}').fetchImpl });
+  assert.equal(gated.contactRequired, true);
+  assert.equal(gated.handoff, undefined);
 });
 
 test('without a provider the rules alone still decide, exactly as before', async () => {

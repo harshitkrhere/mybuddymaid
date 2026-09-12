@@ -22,11 +22,20 @@
 //                  ones the widget has not shown are returned. This is the free-tier path;
 //                  it keeps working when the webhook arrives.
 //
+//   captureContact the customer has given the name and number the handoff waited for (owner
+//                  decision, 2026-09-12: the team gets a conversation only with a way to reach
+//                  the customer back). Onto the record, then the handoff — synchronously, so
+//                  "passed to our team" is said only once it is true.
+//
+//   noteContact    details given once the conversation is already with the team: onto the
+//                  record, and the Chatwoot contact takes the name.
+//
 // Both the record (Supabase) and Chatwoot are injected, so handoff.test.ts drives every path
 // with stubs. If either is not configured the functions do the safe thing: nothing, and say so.
 
 import type { ChatwootClient, Transcript } from './chatwoot';
-import { openHandoff, postCustomerMessage, postAssistantMessage, fetchMessages, fetchStatus } from './chatwoot';
+import { openHandoff, postCustomerMessage, postAssistantMessage, fetchMessages, fetchStatus, renameContact } from './chatwoot';
+import type { ContactDetails } from './contact';
 import { assistantChatwootIds, getConversation, insertMessages, listMessagesAfter, listTranscript, patchConversation, type ConversationRow, type RecordClient } from './record';
 
 const HANDOFF_WINDOW_MS = 24 * 60 * 60 * 1000;
@@ -140,11 +149,92 @@ export function awaitingHandoffFrom(row: ConversationRow, now: Date = new Date()
   return since >= 0 && since <= HANDOFF_OPENING_MS;
 }
 
-/** A message written while the Chatwoot conversation is being opened: onto the record, for startHandoff to post. */
-export async function holdMessage(record: RecordClient, conversationId: string, content: string, now: Date = new Date()): Promise<boolean> {
+/**
+ * A message written while the Chatwoot conversation is being opened: onto the record, for
+ * startHandoff to post. Contact details in it go on the row as well.
+ */
+export async function holdMessage(record: RecordClient, conversationId: string, content: string, now: Date = new Date(), contact: ContactDetails | null = null): Promise<boolean> {
   const ok = await insertMessages(record, [{ conversation_id: conversationId, sender: 'customer', body: content, created_at: now.toISOString() }]);
-  await patchConversation(record, conversationId, { last_message_at: now.toISOString() });
+  const fields: Partial<ConversationRow> = { last_message_at: now.toISOString() };
+  if (contact) {
+    fields.contact_phone = contact.phone;
+    if (contact.name) fields.contact_name = contact.name;
+  }
+  await patchConversation(record, conversationId, fields);
   return ok;
+}
+
+// ─── Contact before the handoff ─────────────────────────────────────────────────────────────
+// An escalation that waits for details is on the record as escalated, with a reason, no number
+// and no Chatwoot id. The customer's next message with a number in it — from the card or typed
+// — completes it, and the conversation is opened there and then.
+
+/** How long an escalation waits for the customer's details before a fresh ask is needed. */
+const CONTACT_WINDOW_MS = HANDOFF_WINDOW_MS;
+
+/** An escalation waiting for the customer's name and number: escalated, no number, no Chatwoot conversation, within a day. */
+export function awaitingContactFrom(row: ConversationRow, now: Date = new Date()): boolean {
+  if (row.chatwoot_conversation_id || row.contact_phone || !row.escalated || !row.escalated_at || row.closed_at) return false;
+  const since = now.getTime() - new Date(row.escalated_at).getTime();
+  return since >= 0 && since <= CONTACT_WINDOW_MS;
+}
+
+export interface CaptureInput {
+  conversationId: string;
+  ref: string;
+  contact: ContactDetails;
+  /** The details as a line of the transcript, in the copy's words. */
+  line: string;
+  page?: string | null;
+  city?: string | null;
+  locality?: string | null;
+  service?: string | null;
+  plan?: string | null;
+  signedIn?: boolean;
+}
+
+export type CaptureResult = { status: 'opened' | 'already'; chatwootConversationId: number } | { status: 'saved'; reason: string };
+
+/**
+ * The details are in: onto the record as the customer's turn and the row's contact fields, then
+ * the handoff — synchronously, so the customer hears "passed to our team" only once it is true,
+ * and nothing typed meanwhile can fall between the ask and the opening. 'saved' means the record
+ * has the details but Chatwoot could not be opened: the team still has a number to call, and the
+ * next escalation on this conversation goes straight through with it.
+ */
+export async function captureContact(record: RecordClient, chatwoot: ChatwootClient | null, row: ConversationRow, c: CaptureInput, now: Date = new Date()): Promise<CaptureResult> {
+  await insertMessages(record, [{ conversation_id: c.conversationId, sender: 'customer', body: c.line, created_at: now.toISOString() }]);
+  const fields: Partial<ConversationRow> = { contact_phone: c.contact.phone, last_message_at: now.toISOString() };
+  if (c.contact.name) fields.contact_name = c.contact.name;
+  await patchConversation(record, c.conversationId, fields);
+
+  const result = await startHandoff(record, chatwoot, {
+    conversationId: c.conversationId,
+    ref: c.ref,
+    transcript: [{ role: 'user', content: c.line }],
+    escalationReason: row.escalation_reason ?? null,
+    page: c.page ?? null,
+    city: c.city ?? null,
+    locality: c.locality ?? null,
+    service: c.service ?? null,
+    plan: c.plan ?? null,
+    signedIn: !!c.signedIn,
+  });
+  if (result.status === 'opened' || result.status === 'already') return { status: result.status, chatwootConversationId: result.chatwootConversationId };
+  return { status: 'saved', reason: result.reason };
+}
+
+/**
+ * Details given once the conversation is already with the team — after a safety handoff, which
+ * alerts first and asks alongside, or a customer correcting their number. The message itself was
+ * forwarded like any other; this puts the details on the record and the name on the Chatwoot
+ * contact, where the sidebar shows it.
+ */
+export async function noteContact(record: RecordClient, chatwoot: ChatwootClient | null, h: HandedOff, contact: ContactDetails): Promise<void> {
+  const fields: Partial<ConversationRow> = { contact_phone: contact.phone };
+  if (contact.name) fields.contact_name = contact.name;
+  await patchConversation(record, h.row.id, fields);
+  if (chatwoot && contact.name) await renameContact(chatwoot, h.row.id, contact.name);
 }
 
 // ─── Forward ────────────────────────────────────────────────────────────────────────────────

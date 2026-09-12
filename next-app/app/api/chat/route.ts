@@ -1,8 +1,9 @@
 // app/api/chat/route.ts — the support assistant's endpoint.
 //
-// POST { conversation_id, message, history?, context?, page? } → a server-sent-event stream:
-//   event: status  data: {"state":"thinking"}
-//   event: answer  data: { text, sources, ref, escalate?, handoff?, intent, rung, language, suggestions }
+// POST { conversation_id, message, history?, context?, page?, contact? } → a server-sent-event stream:
+//   event: status  data: {"state":"thinking" | "forwarding" | "connecting"}
+//   event: answer  data: { text, sources, ref, escalate?, handoff?, intent, rung, language, suggestions,
+//                          contact_required, contact_prefill? }
 //   event: done    data: {}
 //
 // Why events and not token streaming: the number gate in lib/assistant/answer.ts needs the
@@ -15,6 +16,16 @@
 // answer (rung 3). ASSISTANT_* turns on model phrasing; the Supabase variables turn on the
 // support record. Neither is needed for a correct answer.
 //
+// Contact before the handoff (owner decision, 2026-09-12): the team gets a conversation only
+// with a way to reach the customer back. When the assistant decides to hand off it asks for a
+// name and mobile number and answers with contact_required; the widget shows a card. The card's
+// fields arrive in `contact` and mean one thing whatever the record holds — "hand me over with
+// these" — and never reach a model: a model phrasing a contact line once promised a call-back
+// nobody would make (seen locally, 2026-09-12). A number typed into the message while the ask
+// is open counts too. The handoff is opened before the customer is told so. A safety escalation
+// alerts the team at once and asks alongside. A signed-in customer is offered the number on
+// their profile to confirm.
+//
 // Same posture as app/api/lead/route.ts: nodejs runtime, force-dynamic, the service-role key
 // server-side only, raw fetch to PostgREST, no client SDK.
 
@@ -25,9 +36,10 @@ import { COPY } from '@/lib/assistant/copy';
 import { suggestionsFor } from '@/lib/assistant/suggestions';
 import { refFor } from '@/lib/assistant/ref';
 import { corsHeaders } from '@/lib/assistant/cors';
-import { recordClientFromEnv, upsertConversation, insertMessages, getConversation } from '@/lib/support/record';
+import { recordClientFromEnv, upsertConversation, insertMessages, patchConversation, getConversation, profileContact, type RecordClient, type ConversationRow } from '@/lib/support/record';
 import { chatwootFromEnv } from '@/lib/support/chatwoot';
-import { handedOffFrom, awaitingHandoffFrom, holdMessage, forwardMessage, forwardReply, startHandoff } from '@/lib/support/handoff';
+import { handedOffFrom, awaitingHandoffFrom, awaitingContactFrom, holdMessage, forwardMessage, forwardReply, startHandoff, captureContact, noteContact } from '@/lib/support/handoff';
+import { normalisePhone, formatPhone, cleanName, parseContactMessage, contactLine, type ContactDetails } from '@/lib/support/contact';
 import { SUPPORT_HOURS, isWithinSupportHours } from '@/data/seo/contact';
 import { CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICE_BY_SLUG, PLAN_BY_KEY } from '@/data/seo';
 
@@ -77,6 +89,8 @@ interface Body {
   history?: Array<{ role?: string; content?: string }>;
   page?: string;
   context?: { city?: string; locality?: string; service?: string; plan?: string; device?: string };
+  /** The contact card's fields, when the message is the card being sent. */
+  contact?: { name?: unknown; phone?: unknown };
 }
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -98,6 +112,32 @@ function sanitiseContext(c: Body['context']) {
   const plan = typeof c.plan === 'string' && PLAN_BY_KEY.has(c.plan as never) ? c.plan : undefined;
   const device = typeof c.device === 'string' && /^(mobile|tablet|desktop|app_android|app_ios)$/.test(c.device) ? c.device : undefined;
   return { city, locality, service, plan, device };
+}
+
+/**
+ * What this message carries as contact details: the card's fields, validated here whatever the
+ * client did, or a number typed into the message itself. `line` is the transcript's wording for
+ * the card's details; a typed message is its own line.
+ */
+interface GivenContact {
+  contact: ContactDetails | null;
+  line: string | null;
+  /** The card sent something that is not an Indian mobile. */
+  invalid: boolean;
+  /** The message reads as an attempt at a number, valid or not. */
+  attempted: boolean;
+}
+
+function contactFrom(raw: Body['contact'], message: string): GivenContact {
+  if (raw && typeof raw === 'object') {
+    const phone = normalisePhone(typeof raw.phone === 'string' ? raw.phone : null);
+    if (!phone) return { contact: null, line: null, invalid: true, attempted: true };
+    const contact: ContactDetails = { name: cleanName(typeof raw.name === 'string' ? raw.name : null), phone };
+    return { contact, line: contactLine(COPY.contactLineLabels, contact.name, formatPhone(phone)), invalid: false, attempted: true };
+  }
+  const parsed = parseContactMessage(message);
+  if (parsed.phone) return { contact: { name: parsed.name, phone: parsed.phone }, line: null, invalid: false, attempted: true };
+  return { contact: null, line: null, invalid: false, attempted: parsed.attempted };
 }
 
 // ─── Signed-in customers ────────────────────────────────────────────────────────────────────
@@ -122,6 +162,17 @@ async function userIdFromToken(req: Request): Promise<string | null> {
   }
 }
 
+/** The name and number on a signed-in customer's profile, offered back on the card to confirm. */
+async function prefillFor(record: RecordClient | null, userId: string | null): Promise<{ name: string | null; phone: string | null } | null> {
+  if (!record || !userId) return null;
+  const p = await profileContact(record, userId);
+  if (!p) return null;
+  const phone = p.phone ? normalisePhone(p.phone) : null;
+  const name = cleanName(p.name);
+  if (!phone && !name) return null;
+  return { name, phone: phone ? formatPhone(phone) : null };
+}
+
 // ─── The support record (Initiative 4) ──────────────────────────────────────────────────────
 // Written after the response is sent, so a slow database never slows the customer. Failures
 // are logged inside lib/support/record.ts; they do not affect the answer. Requires the
@@ -140,11 +191,10 @@ interface RecordInput {
   turnIndex: number;
 }
 
-async function persist(r: RecordInput): Promise<void> {
-  const client = recordClientFromEnv();
-  if (!client) return;
-
-  const ok = await upsertConversation(client, {
+/** The conversation row for this turn. Escalation fields are set when the turn escalates and never cleared by a later turn: an escalation waiting for the customer's number (awaitingContactFrom) must survive whatever is asked meanwhile. */
+async function persistConversation(client: RecordClient, r: RecordInput): Promise<boolean> {
+  const escalating = !!(r.a.handoff || r.a.contactRequired);
+  return upsertConversation(client, {
     id: r.conversationId,
     ref: r.ref,
     channel: r.channel,
@@ -156,14 +206,17 @@ async function persist(r: RecordInput): Promise<void> {
     service_slug: r.a.entities.service ?? r.context.service ?? null,
     plan_key: r.a.entities.plan ?? r.context.plan ?? null,
     topic: r.a.intent,
-    escalated: !!r.a.handoff,
-    escalated_at: r.a.handoff ? r.now.toISOString() : null,
-    escalation_reason: r.a.handoff ? r.a.escalate : null,
+    ...(escalating ? { escalated: true, escalated_at: r.now.toISOString(), escalation_reason: r.a.escalate ?? null } : {}),
     device: r.context.device ?? null,
     language: r.a.language,
     last_message_at: r.now.toISOString(),
   });
-  if (!ok) return;
+}
+
+async function persist(r: RecordInput): Promise<void> {
+  const client = recordClientFromEnv();
+  if (!client) return;
+  if (!(await persistConversation(client, r))) return;
 
   await insertMessages(client, [
     { conversation_id: r.conversationId, sender: 'customer', body: r.userMessage, turn_index: r.turnIndex, created_at: r.now.toISOString() },
@@ -181,7 +234,6 @@ async function persist(r: RecordInput): Promise<void> {
     },
   ]);
 }
-
 
 // ─── Handler ────────────────────────────────────────────────────────────────────────────────
 
@@ -219,141 +271,336 @@ export async function POST(req: Request) {
   const provider = underDailyCeiling(now) ? providerFromEnv() : null;
   const record = recordClientFromEnv();
   const chatwoot = chatwootFromEnv();
+  const ref = refFor(conversationId);
+  const channel: 'site_chat' | 'app_chat' = userId ? 'app_chat' : 'site_chat';
+  const inHours = isWithinSupportHours(now);
+  const given = contactFrom(body.contact, message);
+  const fromCard = !!body.contact;
 
   const encoder = new TextEncoder();
   const send = (controller: ReadableStreamDefaultController, event: string, data: unknown) =>
     controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
-
-  // ── Handed off already? The person gets this message either way. If the assistant can still
-  // answer it from the published facts — a price, an area, a policy — it does, and the answer
-  // goes to the person too. Anything else, including the contact details the handoff asked
-  // for, gets the acknowledgement alone (answersAfterHandoff).
-  // While the Chatwoot conversation is still being opened — the seconds after the handoff, when
-  // the customer is typing the name and number it asked for — the message is held on the record
-  // and startHandoff posts it the moment the conversation exists. The assistant stays quiet. ──
-  const lookup = record ? await getConversation(record, conversationId) : null;
-  const row = lookup?.ok ? lookup.row : null;
-  const handoff = row ? handedOffFrom(row, now) : null;
-  const opening = !handoff && !!row && awaitingHandoffFrom(row, now);
-  if (record && (handoff || opening)) {
-    const delivered = handoff ? await forwardMessage(record, chatwoot, handoff, message, now) : false;
-    if (!handoff) await holdMessage(record, conversationId, message, now);
-    const inHours = isWithinSupportHours(now);
-    const ack = inHours ? COPY.forwardedInHours : COPY.forwardedOutOfHours(SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours);
-    const stream = new ReadableStream({
-      async start(controller) {
-        send(controller, 'status', { state: 'forwarding' });
-        let a: Answer | null = null;
-        if (handoff) {
-          try {
-            const candidate = await answer({ message, history, signedIn: !!userId, now }, { provider });
-            modelCallsToday.count += candidate.modelCalls;
-            if (answersAfterHandoff(candidate)) a = candidate;
-          } catch (e) {
-            console.error('[chat] answer threw (forward mode)', e);
-          }
-        }
-        send(controller, 'answer', {
-          conversation_id: conversationId,
-          ref: refFor(conversationId),
-          mode: 'forwarded',
-          delivered,
-          answered: !!a,
-          text: a ? a.text : ack,
-          sources: a ? a.sources : [],
-          intent: a ? a.intent : 'handed_off',
-          language: a ? a.language : null,
-          rung: a ? a.rung : null,
-          escalate: null,
-          handoff: { inHours, text: ack },
-          talk_to_team: COPY.talkToTeam,
-          suggestions: [],
-        });
-        send(controller, 'done', {});
-        controller.close();
-        if (a && handoff) {
-          const reply = a;
-          const h = handoff;
-          after(async () => {
-            try {
-              await forwardReply(record, chatwoot, h, { text: reply.text, sources: reply.sources, modelId: reply.modelId, rung: reply.rung, gateRejected: reply.gateRejected, redacted: reply.redacted }, now);
-            } catch (e) {
-              console.error('[chat] forwardReply threw', e);
-            }
-          });
-        }
-      },
-    });
-    return new Response(stream, {
+  const sse = (start: (controller: ReadableStreamDefaultController) => Promise<void>) =>
+    new Response(new ReadableStream({ start }), {
       status: 200,
       headers: { ...cors, 'Content-Type': 'text/event-stream; charset=utf-8', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no' },
     });
-  }
-
-  const stream = new ReadableStream({
-    async start(controller) {
+  /** One fixed answer, no model: the fields every answer carries, overridden by what this one says. */
+  const reply = (event: Record<string, unknown>, work?: () => Promise<void>) =>
+    sse(async (controller) => {
       send(controller, 'status', { state: 'thinking' });
-      try {
-        const a = await answer({ message, history, signedIn: !!userId, now }, { provider });
-        modelCallsToday.count += a.modelCalls;
-
-        const ref = refFor(conversationId);
-        send(controller, 'answer', {
-          conversation_id: conversationId,
-          ref,
-          mode: 'assistant',
-          text: a.text,
-          sources: a.sources,
-          intent: a.intent,
-          language: a.language,
-          rung: a.rung,
-          escalate: a.escalate ?? null,
-          handoff: a.handoff ?? null,
-          talk_to_team: a.escalate ? COPY.talkToTeam : null,
-          suggestions: suggestionsFor(a),
-        });
-
+      send(controller, 'answer', {
+        conversation_id: conversationId,
+        ref,
+        mode: 'assistant',
+        sources: [],
+        language: null,
+        rung: 3,
+        handoff: null,
+        talk_to_team: COPY.talkToTeam,
+        contact_required: false,
+        contact_prefill: null,
+        suggestions: [],
+        ...event,
+      });
+      send(controller, 'done', {});
+      controller.close();
+      if (work) {
         after(async () => {
           try {
-            await persist({ conversationId, ref, channel: userId ? 'app_chat' : 'site_chat', userId, page, context, userMessage: message, a, now, turnIndex });
-            // A handoff opens the conversation in Chatwoot with the record's transcript. Only after
-            // persist(), so the row holds this turn too and Chatwoot's id can be written onto it.
-            if (a.handoff) {
-              const result = await startHandoff(record, chatwoot, {
-                conversationId,
-                ref,
-                transcript: [...history, { role: 'user', content: message }, { role: 'assistant', content: a.text }],
-                escalationReason: a.escalate ?? null,
-                page: page ?? null,
-                city: a.entities.city ?? context.city ?? null,
-                locality: a.entities.locality?.slug ?? context.locality ?? null,
-                service: a.entities.service ?? context.service ?? null,
-                plan: a.entities.plan ?? context.plan ?? null,
-                signedIn: !!userId,
-              });
-              if (result.status === 'failed') console.error(`[chat] handoff for ${ref} failed: ${result.reason}`);
-            }
+            await work();
           } catch (e) {
             console.error('[chat] after() threw', e);
           }
         });
+      }
+    });
+
+  // Where this conversation stands: with the team, about to be, waiting for the customer's
+  // number, or the assistant's.
+  const lookup = record ? await getConversation(record, conversationId) : null;
+  const row = lookup?.ok ? lookup.row : null;
+  const handoff = row ? handedOffFrom(row, now) : null;
+  const opening = !handoff && !!row && awaitingHandoffFrom(row, now);
+  const awaitingContact = !handoff && !opening && !!row && awaitingContactFrom(row, now);
+
+  // ── The card sent a number that is not one. Nothing is recorded; the card comes back. ──
+  if (fromCard && given.invalid) {
+    return reply({ text: COPY.invalidPhone, intent: 'human', escalate: row?.escalation_reason ?? 'asked_for_human', contact_required: true, contact_prefill: await prefillFor(record, userId) });
+  }
+
+  // ── With the team already, or about to be. The person gets this message either way. If the
+  // assistant can still answer it from the published facts — a price, an area, a policy — it
+  // does, and the answer goes to the person too; anything else gets the acknowledgement alone
+  // (answersAfterHandoff). Contact details given now — after a safety handoff, which asks
+  // alongside, or a corrected number — go on the record and the Chatwoot contact's name.
+  // While the Chatwoot conversation is still being opened the message is held on the record
+  // and startHandoff posts it the moment the conversation exists; the assistant stays quiet. ──
+  if (record && row && (handoff || opening)) {
+    const line = given.line ?? message;
+    const delivered = handoff ? await forwardMessage(record, chatwoot, handoff, line, now) : false;
+    if (!handoff) await holdMessage(record, conversationId, line, now, given.contact);
+    if (handoff && given.contact) await noteContact(record, chatwoot, handoff, given.contact);
+    const contactRequired = !row.contact_phone && !given.contact;
+    const ack = inHours ? COPY.forwardedInHours : COPY.forwardedOutOfHours(SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours);
+    return sse(async (controller) => {
+      send(controller, 'status', { state: 'forwarding' });
+      let a: Answer | null = null;
+      // Contact details are for the person, not a question for the assistant.
+      if (handoff && !given.contact) {
+        try {
+          const candidate = await answer({ message, history, signedIn: !!userId, now }, { provider });
+          modelCallsToday.count += candidate.modelCalls;
+          if (answersAfterHandoff(candidate)) a = candidate;
+        } catch (e) {
+          console.error('[chat] answer threw (forward mode)', e);
+        }
+      }
+      send(controller, 'answer', {
+        conversation_id: conversationId,
+        ref,
+        mode: 'forwarded',
+        delivered,
+        answered: !!a,
+        text: a ? a.text : ack,
+        sources: a ? a.sources : [],
+        intent: a ? a.intent : 'handed_off',
+        language: a ? a.language : null,
+        rung: a ? a.rung : null,
+        escalate: null,
+        handoff: { inHours, text: ack },
+        talk_to_team: COPY.talkToTeam,
+        contact_required: contactRequired,
+        contact_prefill: contactRequired ? await prefillFor(record, userId) : null,
+        suggestions: [],
+      });
+      send(controller, 'done', {});
+      controller.close();
+      if (a && handoff) {
+        const reply = a;
+        const h = handoff;
+        after(async () => {
+          try {
+            await forwardReply(record, chatwoot, h, { text: reply.text, sources: reply.sources, modelId: reply.modelId, rung: reply.rung, gateRejected: reply.gateRejected, redacted: reply.redacted }, now);
+          } catch (e) {
+            console.error('[chat] forwardReply threw', e);
+          }
+        });
+      }
+    });
+  }
+
+  // The details are in: the handoff, now, and only then the word that it happened. Writes the
+  // customer's line and the assistant's reply to the record afterwards.
+  const captureInto = async (controller: ReadableStreamDefaultController, rec: RecordClient, target: ConversationRow, contact: ContactDetails, line: string) => {
+    send(controller, 'status', { state: 'connecting' });
+    const result = await captureContact(
+      rec,
+      chatwoot,
+      target,
+      {
+        conversationId,
+        ref,
+        contact,
+        line,
+        page: page ?? null,
+        city: context.city ?? target.city_slug ?? null,
+        locality: context.locality ?? target.locality_slug ?? null,
+        service: context.service ?? target.service_slug ?? null,
+        plan: context.plan ?? target.plan_key ?? null,
+        signedIn: !!userId,
+      },
+      now,
+    );
+    const chatwootId = result.status === 'saved' ? null : result.chatwootConversationId;
+    if (result.status === 'saved') console.error(`[chat] handoff for ${ref}: details saved, Chatwoot not opened (${result.reason})`);
+    const phone = formatPhone(contact.phone);
+    const text =
+      chatwootId === null
+        ? COPY.contactSaved(contact.name, phone)
+        : inHours
+          ? COPY.contactThanksInHours(contact.name)
+          : COPY.contactThanksOutOfHours(contact.name, phone, SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours);
+    send(controller, 'answer', {
+      conversation_id: conversationId,
+      ref,
+      mode: 'assistant',
+      text,
+      sources: [],
+      intent: 'human',
+      language: null,
+      rung: 3,
+      escalate: target.escalation_reason ?? 'asked_for_human',
+      handoff: chatwootId === null ? null : { inHours, text },
+      talk_to_team: COPY.talkToTeam,
+      contact_required: false,
+      contact_prefill: null,
+      suggestions: [],
+    });
+    send(controller, 'done', {});
+    controller.close();
+    after(async () => {
+      try {
+        if (chatwootId !== null) {
+          const h = { row: { ...target, contact_name: contact.name ?? target.contact_name ?? null, contact_phone: contact.phone, chatwoot_conversation_id: chatwootId }, chatwootConversationId: chatwootId };
+          await forwardReply(rec, chatwoot, h, { text, rung: 3, modelId: null }, now);
+        } else {
+          await insertMessages(rec, [{ conversation_id: conversationId, sender: 'assistant', body: text, rung: 3, created_at: new Date(now.getTime() + 1).toISOString() }]);
+        }
       } catch (e) {
-        console.error('[chat] answer threw', e);
-        send(controller, 'answer', { conversation_id: conversationId, ref: refFor(conversationId), mode: 'assistant', text: COPY.refuse, sources: [], intent: 'unknown', rung: 3, escalate: 'low_confidence', handoff: null, talk_to_team: COPY.talkToTeam, suggestions: suggestionsFor({ intent: 'unknown' }) });
-      } finally {
+        console.error('[chat] after() threw (contact)', e);
+      }
+    });
+  };
+
+  // ── The card was sent: the customer's details, for the team, never for a model. Whatever the
+  // record holds this means "hand me over with these": a row that is waiting goes straight on;
+  // a stale ask, or a card kept from an earlier visit, renews the escalation; a conversation the
+  // record never saw gets its row now. Only with no record at all is there nothing to do but
+  // say so and point at WhatsApp and the phone. ──
+  if (fromCard && given.contact) {
+    const unsaved = () => reply({ text: COPY.contactNotSaved, intent: 'human', escalate: 'asked_for_human' });
+    if (!record || !lookup?.ok) return unsaved();
+    let target = row;
+    if (!target) {
+      await upsertConversation(record, {
+        id: conversationId,
+        ref,
+        channel,
+        anon_id: userId ? null : conversationId,
+        user_id: userId,
+        started_from: page?.slice(0, 300) ?? null,
+        topic: 'human',
+        escalated: true,
+        escalated_at: now.toISOString(),
+        escalation_reason: 'asked_for_human',
+        device: context.device ?? null,
+        last_message_at: now.toISOString(),
+      });
+      const again = await getConversation(record, conversationId);
+      target = again.ok ? again.row : null;
+      if (!target) return unsaved();
+    } else if (!awaitingContact) {
+      const renewed = { escalated: true, escalated_at: now.toISOString(), escalation_reason: target.escalation_reason ?? 'asked_for_human' };
+      await patchConversation(record, conversationId, renewed);
+      target = { ...target, ...renewed };
+    }
+    const rec = record;
+    const t = target;
+    return sse((controller) => captureInto(controller, rec, t, given.contact!, given.line ?? message));
+  }
+
+  // ── Waiting for the customer's name and number, and they typed them — or tried to. A
+  // number in the message completes the handoff; a try that is not a number is answered with
+  // what one looks like. Anything else is a question like any other, answered below with the
+  // card kept up. ──
+  if (record && row && awaitingContact) {
+    if (given.contact) {
+      const rec = record;
+      return sse((controller) => captureInto(controller, rec, row, given.contact!, message));
+    }
+    if (given.attempted) {
+      const rec = record;
+      return reply({ text: COPY.invalidPhone, intent: 'human', escalate: row.escalation_reason ?? 'asked_for_human', contact_required: true, contact_prefill: await prefillFor(record, userId) }, async () => {
+        await insertMessages(rec, [
+          { conversation_id: conversationId, sender: 'customer', body: message, turn_index: turnIndex, created_at: now.toISOString() },
+          { conversation_id: conversationId, sender: 'assistant', body: COPY.invalidPhone, turn_index: turnIndex + 1, rung: 3, created_at: new Date(now.getTime() + 1).toISOString() },
+        ]);
+        await patchConversation(rec, conversationId, { last_message_at: now.toISOString() });
+      });
+    }
+  }
+
+  // ── The assistant's. A number already on the record means a fresh escalation need not ask
+  // again; an ask still unanswered keeps the card up under whatever is answered now. ──
+  const contactKnown = !!row?.contact_phone;
+  return sse(async (controller) => {
+    send(controller, 'status', { state: 'thinking' });
+    try {
+      const a = await answer({ message, history, signedIn: !!userId, now, contactKnown }, { provider });
+      modelCallsToday.count += a.modelCalls;
+      const contactRequired = !!a.contactRequired || awaitingContact;
+      const recordInput: RecordInput = { conversationId, ref, channel, userId, page, context, userMessage: message, a, now, turnIndex };
+
+      // "call me on 98765 43210": the details came with the ask. The row is written now, since
+      // the capture needs it, and the ask itself is never shown.
+      if (record && lookup?.ok && given.contact && a.contactRequired && !a.handoff) {
+        const rec = record;
+        if (await persistConversation(rec, recordInput)) {
+          const fresh = await getConversation(rec, conversationId);
+          if (fresh.ok && fresh.row) {
+            await captureInto(controller, rec, fresh.row, given.contact, message);
+            return;
+          }
+        }
+      }
+
+      send(controller, 'answer', {
+        conversation_id: conversationId,
+        ref,
+        mode: 'assistant',
+        text: a.text,
+        sources: a.sources,
+        intent: a.intent,
+        language: a.language,
+        rung: a.rung,
+        escalate: a.escalate ?? null,
+        handoff: a.handoff ?? null,
+        talk_to_team: a.escalate ? COPY.talkToTeam : null,
+        contact_required: contactRequired,
+        contact_prefill: contactRequired ? await prefillFor(record, userId) : null,
+        suggestions: contactRequired ? [] : suggestionsFor(a),
+      });
+
+      after(async () => {
+        try {
+          await persist(recordInput);
+          // A handoff that need not wait for details — safety, or a number already on the
+          // record — opens the conversation in Chatwoot with the record's transcript. Only
+          // after persist(), so the row holds this turn too and Chatwoot's id can be written
+          // onto it. A handoff waiting for details is opened by captureContact instead.
+          if (a.handoff) {
+            const result = await startHandoff(record, chatwoot, {
+              conversationId,
+              ref,
+              transcript: [...history, { role: 'user', content: message }, { role: 'assistant', content: a.text }],
+              escalationReason: a.escalate ?? null,
+              page: page ?? null,
+              city: a.entities.city ?? context.city ?? null,
+              locality: a.entities.locality?.slug ?? context.locality ?? null,
+              service: a.entities.service ?? context.service ?? null,
+              plan: a.entities.plan ?? context.plan ?? null,
+              signedIn: !!userId,
+            });
+            if (result.status === 'failed') console.error(`[chat] handoff for ${ref} failed: ${result.reason}`);
+          }
+        } catch (e) {
+          console.error('[chat] after() threw', e);
+        }
+      });
+    } catch (e) {
+      console.error('[chat] answer threw', e);
+      send(controller, 'answer', {
+        conversation_id: conversationId,
+        ref,
+        mode: 'assistant',
+        text: COPY.refuse,
+        sources: [],
+        intent: 'unknown',
+        rung: 3,
+        escalate: 'low_confidence',
+        handoff: null,
+        talk_to_team: COPY.talkToTeam,
+        contact_required: awaitingContact,
+        contact_prefill: null,
+        suggestions: awaitingContact ? [] : suggestionsFor({ intent: 'unknown' }),
+      });
+    } finally {
+      // captureInto closes the stream itself; closing twice would throw.
+      if (controller.desiredSize !== null) {
         send(controller, 'done', {});
         controller.close();
       }
-    },
-  });
-
-  return new Response(stream, {
-    status: 200,
-    headers: {
-      ...cors,
-      'Content-Type': 'text/event-stream; charset=utf-8',
-      'Cache-Control': 'no-cache, no-transform',
-      'X-Accel-Buffering': 'no',
-    },
+    }
   });
 }
