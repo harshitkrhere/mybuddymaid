@@ -20,6 +20,8 @@
  * Talks to /api/chat, which answers with server-sent events (status → answer → done). Once a
  * conversation has been handed to a person it polls /api/chat/replies every few seconds and
  * shows what the team wrote in the same window — no webhook, no socket, nothing to install.
+ * From then on the assistant is silent: a forwarded message gets a delivery line under the
+ * customer's bubble, not an answer, until the team closes the conversation.
  */
 (function () {
   'use strict';
@@ -178,7 +180,7 @@
     els.log.appendChild(els.notice);
 
     if (state.history.length) {
-      state.history.forEach(function (t) { addMessage(t.role, t.content, t.sources); });
+      state.history.forEach(function (t) { addMessage(t.role, t.content, t.sources, t.delivery); });
     } else {
       addMessage('assistant', opts.greeting);
     }
@@ -201,7 +203,15 @@
     if (t) els.log.insertBefore(el, t); else els.log.appendChild(el);
   }
 
-  function addMessage(role, text, sources) {
+  // A turn of the conversation; 'system' is a line of its own, not a bubble. A customer's turn
+  // may carry a delivery line under it once the server has said where the message went.
+  function addMessage(role, text, sources, delivery) {
+    if (role === 'system') {
+      var line = h('div', { class: 'mbm-chat__system', role: 'status', text: text });
+      place(line);
+      scrollToEnd();
+      return line;
+    }
     var wrap = h('div', { class: 'mbm-chat__msg mbm-chat__msg--' + role });
     if (role === 'agent') wrap.appendChild(h('span', { class: 'mbm-chat__who', text: opts.teamLabel }));
     var body = h('div', { class: 'mbm-chat__bubble' });
@@ -219,11 +229,36 @@
       });
       wrap.appendChild(src);
     }
+    if (delivery) wrap.appendChild(h('span', { class: 'mbm-chat__delivery', text: delivery }));
+    if (role === 'user') els.lastUser = wrap;
     place(wrap);
     scrollToEnd();
     return wrap;
   }
   function scrollToEnd() { els.log.scrollTop = els.log.scrollHeight; }
+
+  // Where the customer's last message went, once a person has the conversation: a line under
+  // the bubble in place of an answer, kept with the turn so a reload shows it again.
+  function setDelivery(text) {
+    for (var i = state.history.length - 1; i >= 0; i--) {
+      if (state.history[i].role === 'user') { state.history[i].delivery = text; break; }
+    }
+    if (!els.lastUser) return;
+    var el = els.lastUser.querySelector('.mbm-chat__delivery');
+    if (!el) { el = h('span', { class: 'mbm-chat__delivery' }); els.lastUser.appendChild(el); }
+    el.textContent = text;
+  }
+  // A note of its own — "our team is back …" — shown once per stretch: not again while the
+  // same note is the last one and nobody from the team has written since.
+  function addNote(text) {
+    for (var i = state.history.length - 1; i >= 0; i--) {
+      var t = state.history[i];
+      if (t.role === 'agent') break;
+      if (t.role === 'system') { if (t.content === text) return; break; }
+    }
+    state.history.push({ role: 'system', content: text });
+    addMessage('system', text);
+  }
 
   // Prompts offered as buttons: one wrapping row under the latest answer. Gone the moment the
   // customer sends anything, so the log never carries a stale offer.
@@ -355,9 +390,10 @@
     if (!text) return;
     submitText(text);
   }
-  // The turns sent with a message: everything before it, minus the contact details.
+  // The turns sent with a message: the customer's and the assistant's before it, minus the
+  // contact details; the team's replies and the panel's own notes are not the assistant's context.
   function sentHistory() {
-    return state.history.filter(function (t) { return !t.contact; }).slice(-MAX_STORED_TURNS);
+    return state.history.filter(function (t) { return (t.role === 'user' || t.role === 'assistant') && !t.contact; }).slice(-MAX_STORED_TURNS);
   }
   function submitText(text) {
     if (busy) return;
@@ -417,10 +453,17 @@
     setTyping(false);
     if (data.ref) { state.ref = data.ref; setRef(data.ref); }
     if (data.conversation_id) state.id = data.conversation_id;
-    addMessage('assistant', data.text, data.sources);
-    state.history.push({ role: 'assistant', content: data.text, sources: data.sources });
     // A handoff (or a message forwarded after one) means a person may write back: start asking.
     var withPerson = !!(data.handoff || data.mode === 'forwarded');
+    if (data.mode === 'forwarded') {
+      // The conversation is the person's: no bubble from the assistant, only where the message
+      // went and, outside support hours, when the team is back.
+      if (data.delivery) setDelivery(data.delivery);
+      if (data.note) addNote(data.note);
+    } else {
+      addMessage('assistant', data.text, data.sources);
+      state.history.push({ role: 'assistant', content: data.text, sources: data.sources });
+    }
     if (withPerson) {
       if (!state.handedOff) { state.handedOff = true; state.after = new Date().toISOString(); }
       startPolling();

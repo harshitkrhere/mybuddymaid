@@ -131,18 +131,9 @@ export function passesGate(wording: string, r: Retrieval, message: string): bool
 
 // ─── Handoff ────────────────────────────────────────────────────────────────────────────────
 
-// After a handoff every message goes to the person; the assistant answers alongside only when
-// the published facts genuinely help — a price, an area, a policy. Contact details the customer
-// was asked to leave, a greeting, a booking question only a person can look up: the
-// acknowledgement alone. A customer already talking to us must never be handed a "how to reach
-// us" card for typing their phone number (seen live, 2026-09-12).
-const ANSWERS_AFTER_HANDOFF: ReadonlySet<Intent> = new Set<Intent>([
-  'pricing', 'plan_detail', 'serviceability', 'service_info', 'replacement', 'refund_question', 'verification', 'booking_process', 'faq', 'not_offered',
-]);
-
-export function answersAfterHandoff(a: Pick<Answer, 'intent' | 'escalate'>): boolean {
-  return !a.escalate && ANSWERS_AFTER_HANDOFF.has(a.intent);
-}
+// Once a person has the conversation the assistant does not answer at all: the route never
+// calls answer() for a handed-off conversation (owner decision, 2026-09-12 — an answer
+// alongside the person's was tried, and read as two voices in one chat).
 
 export function handoffFor(now: Date = new Date()): Handoff {
   const inHours = isWithinSupportHours(now);

@@ -95,6 +95,14 @@
 .mbm-chat__sources a { color: var(--mbm-emerald); text-decoration: none; }
 .mbm-chat__sources a:hover { text-decoration: underline; }
 
+/* Once a person has the conversation: where the customer's message went, under the bubble;
+   and a note of its own, centred, for when the team is back. */
+.mbm-chat__delivery { margin: 3px 8px 0; font-size: 11.5px; color: var(--mbm-muted); }
+.mbm-chat__system {
+  align-self: center; max-width: 92%; padding: 6px 12px; border-radius: 999px;
+  background: var(--mbm-bg); color: var(--mbm-muted); font-size: 12px; line-height: 1.4; text-align: center;
+}
+
 /* Prompts offered as buttons: one wrapping row under the latest answer. */
 .mbm-chat__chips { display: flex; flex-wrap: wrap; gap: 8px; align-self: flex-start; max-width: 100%; padding: 2px 0 4px; }
 .mbm-chat__chip {
