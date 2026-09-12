@@ -6,7 +6,7 @@
 // them — idempotently, because the webhook may have recorded the same message first.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { startHandoff, handedOff, handedOffFrom, awaitingHandoffFrom, awaitingContactFrom, captureContact, noteContact, holdMessage, forwardMessage, forwardReply, pullReplies } from './handoff';
+import { startHandoff, handedOff, handedOffFrom, recentlyActive, awaitingHandoffFrom, awaitingContactFrom, captureContact, noteContact, holdMessage, forwardMessage, forwardReply, pullReplies } from './handoff';
 import type { ChatwootClient } from './chatwoot';
 import type { RecordClient, FetchLike, ConversationRow } from './record';
 
@@ -96,7 +96,7 @@ test('startHandoff: opens the conversation and writes Chatwoot’s id, inbox and
   assert.deepEqual(result, { status: 'opened', chatwootConversationId: 4242 });
   const patch = r.calls.find((c) => c.method === 'PATCH')!;
   assert.equal(patch.path, `support_conversations?id=eq.${ID}`);
-  assert.deepEqual(patch.body, { chatwoot_conversation_id: 4242, chatwoot_inbox_id: 136538, escalated: true });
+  assert.deepEqual(patch.body, { chatwoot_conversation_id: 4242, chatwoot_inbox_id: 136538, escalated: true, closed_at: null });
 });
 
 test('startHandoff: a conversation already in Chatwoot is left alone (a redelivered escalation opens nothing)', async () => {
@@ -104,6 +104,16 @@ test('startHandoff: a conversation already in Chatwoot is left alone (a redelive
   const cw = chatwoot();
   assert.deepEqual(await startHandoff(r.client, cw.client, INPUT), { status: 'already', chatwootConversationId: 4242 });
   assert.equal(cw.calls.length, 0);
+});
+
+test('startHandoff: a conversation the team closed gets a new one when the customer escalates again, and the row is open again', async () => {
+  const r = liveRecord({ chatwoot_conversation_id: 4242, closed_at: '2026-09-15T05:00:00.000Z', outcome: 'resolved', contact_name: 'Harshit', contact_phone: '+919691982400' });
+  const cw = chatwoot();
+  assert.equal((await startHandoff(r.client, cw.client, INPUT)).status, 'opened');
+  assert.ok(cw.calls.some((c) => c.method === 'POST' && c.path === `/contacts/${ID}/conversations`), 'a new Chatwoot conversation, for the same contact');
+  assert.equal(r.current.closed_at, null);
+  assert.equal(r.current.outcome, 'resolved', 'the earlier outcome is kept');
+  assert.equal(r.current.contact_phone, '+919691982400', 'the number is not asked for again');
 });
 
 test('startHandoff: a failed record lookup or a refusing Chatwoot is reported, not thrown', async () => {
@@ -158,8 +168,8 @@ test('awaitingHandoffFrom: a handoff decided within two minutes and not yet in C
   assert.equal(awaitingHandoffFrom({ ...base, escalated: true, escalated_at: t(180), chatwoot_conversation_id: null }, NOW), false, 'too long ago: that handoff failed');
   assert.equal(awaitingHandoffFrom({ ...base, escalated: true, escalated_at: t(20), chatwoot_conversation_id: 4242 }, NOW), false, 'already open: that is handedOff');
   assert.equal(awaitingHandoffFrom({ ...base, escalated: false, escalated_at: null, chatwoot_conversation_id: null }, NOW), false);
-  assert.ok(handedOffFrom({ ...base, chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() }, NOW));
-  assert.equal(handedOffFrom({ ...base, chatwoot_conversation_id: null, last_message_at: NOW.toISOString() }, NOW), null);
+  assert.ok(handedOffFrom({ ...base, chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() }));
+  assert.equal(handedOffFrom({ ...base, chatwoot_conversation_id: null, last_message_at: NOW.toISOString() }), null);
 });
 
 /** A record double whose conversation row and message table are live: what is patched or inserted is seen by later reads. */
@@ -204,7 +214,7 @@ test('awaitingContactFrom: an escalation with a reason, no number and no Chatwoo
   assert.equal(awaitingContactFrom({ ...base, escalated_at: t(25 * 60 * 60) }, NOW), false, 'a day on, the ask is stale');
   assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), contact_phone: '+919691982400' }, NOW), false, 'the number is in');
   assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), chatwoot_conversation_id: 4242 }, NOW), false, 'already with the team');
-  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), closed_at: NOW.toISOString() }, NOW), false);
+  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), chatwoot_conversation_id: 4242, closed_at: t(60) }, NOW), true, 'closed by the team and asked again: a new conversation waits for the number');
   assert.equal(awaitingContactFrom({ ...base, escalated: false, escalated_at: null }, NOW), false);
   assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), escalation_reason: 'safety' }, NOW), false, 'safety does not wait');
 });
@@ -305,18 +315,23 @@ test('holdMessage: recorded as the customer without a Chatwoot id, and the conve
 
 // ─── handedOff ──────────────────────────────────────────────────────────────────────────────
 
-test('handedOff: true only with a Chatwoot id, not closed, active within 24 hours', async () => {
+test('handedOff: a Chatwoot conversation the team has not closed, however long the silence; a day bounds only reading the replies', async () => {
   const recent = new Date(NOW.getTime() - 60 * 60 * 1000).toISOString();
   const stale = new Date(NOW.getTime() - 25 * 60 * 60 * 1000).toISOString();
 
-  const yes = await handedOff(record({ chatwoot_conversation_id: 4242, last_message_at: recent }).client, ID, NOW);
+  const yes = await handedOff(record({ chatwoot_conversation_id: 4242, last_message_at: recent }).client, ID);
   assert.equal(yes?.chatwootConversationId, 4242);
+  assert.ok(await handedOff(record({ chatwoot_conversation_id: 4242, last_message_at: stale }).client, ID), 'a day of silence does not hand the conversation back to the bot');
 
-  assert.equal(await handedOff(record({ chatwoot_conversation_id: null, last_message_at: recent }).client, ID, NOW), null);
-  assert.equal(await handedOff(record({ chatwoot_conversation_id: 4242, last_message_at: recent, closed_at: recent }).client, ID, NOW), null);
-  assert.equal(await handedOff(record({ chatwoot_conversation_id: 4242, last_message_at: stale }).client, ID, NOW), null);
-  assert.equal(await handedOff(record(null).client, ID, NOW), null);
-  assert.equal(await handedOff(null, ID, NOW), null);
+  assert.equal(await handedOff(record({ chatwoot_conversation_id: null, last_message_at: recent }).client, ID), null);
+  assert.equal(await handedOff(record({ chatwoot_conversation_id: 4242, last_message_at: recent, closed_at: recent }).client, ID), null, 'closed by the team: the assistant is back');
+  assert.equal(await handedOff(record(null).client, ID), null);
+  assert.equal(await handedOff(null, ID), null);
+
+  const row = { id: ID, ref: 'MBM-AAAAA', channel: 'site_chat' as const, chatwoot_conversation_id: 4242 };
+  assert.equal(recentlyActive({ ...row, last_message_at: recent }, NOW), true);
+  assert.equal(recentlyActive({ ...row, last_message_at: stale }, NOW), false);
+  assert.equal(recentlyActive({ ...row }, NOW), false);
 });
 
 // ─── forwardMessage ─────────────────────────────────────────────────────────────────────────
@@ -324,7 +339,7 @@ test('handedOff: true only with a Chatwoot id, not closed, active within 24 hour
 test('forwardMessage: posts as the customer, records the message with Chatwoot’s id, bumps last_message_at', async () => {
   const r = record({ chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() });
   const cw = chatwoot();
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   assert.equal(await forwardMessage(r.client, cw.client, h, 'Any update?', NOW), true);
 
   assert.deepEqual(cw.calls[0], { method: 'POST', path: `/contacts/${ID}/conversations/4242/messages`, body: { content: 'Any update?' } });
@@ -338,7 +353,7 @@ test('forwardMessage: posts as the customer, records the message with Chatwoot�
 
 test('forwardMessage: when Chatwoot refuses, the message is still recorded (without an id) and delivery is false', async () => {
   const r = record({ chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() });
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   assert.equal(await forwardMessage(r.client, chatwoot({ refuse: true }).client, h, 'hello?', NOW), false);
   const insert = r.calls.find((c) => c.method === 'POST' && c.path.startsWith('support_messages'))!.body as Array<Record<string, unknown>>;
   assert.equal(insert[0].chatwoot_message_id, null);
@@ -347,7 +362,7 @@ test('forwardMessage: when Chatwoot refuses, the message is still recorded (with
 test('forwardReply: the assistant’s answer goes to Chatwoot as the bot and onto the record with its model fields', async () => {
   const r = record({ chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() });
   const cw = chatwoot();
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   await forwardReply(r.client, cw.client, h, { text: 'Silver, Gold and Diamond…', sources: [{ id: 'plan-compare' }], modelId: 'google/gemma-4-31b-it:free', rung: 1, gateRejected: false, redacted: [] }, NOW);
 
   assert.deepEqual(cw.calls[0], { method: 'POST', path: '/conversations/4242/messages', body: { content: 'Silver, Gold and Diamond…', message_type: 'outgoing' } });
@@ -362,7 +377,7 @@ test('forwardReply: without a bot token the answer is posted from the visitor’
   const r = record({ chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() });
   const cw = chatwoot();
   cw.client.token = null;
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   await forwardReply(r.client, cw.client, h, { text: 'Silver, Gold and Diamond…' }, NOW);
   assert.equal(cw.calls[0].path, `/contacts/${ID}/conversations/4242/messages`);
   assert.deepEqual(cw.calls[0].body, { content: 'Assistant: Silver, Gold and Diamond…' });
@@ -380,7 +395,7 @@ test('pullReplies: records the agent’s public replies (not notes, not the cust
     { messages: [{ conversation_id: ID, sender: 'agent', body: AGENT_MSG.content, created_at: '2026-09-15T05:31:00.000Z', chatwoot_message_id: 9002 }] },
   );
   const cw = chatwoot({ messages: [CUSTOMER_MSG, AGENT_MSG, NOTE] });
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   const out = await pullReplies(r.client, cw.client, h, '2026-09-15T05:30:00.000Z', NOW);
 
   const insert = r.calls.find((c) => c.method === 'POST' && c.path.startsWith('support_messages'))!.body as Array<Record<string, unknown>>;
@@ -402,7 +417,7 @@ test('pullReplies: a reply the webhook already recorded (409) is not an error, a
     { chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString(), first_agent_reply_at: '2026-09-15T05:31:00.000Z', handled_by: 'Info' },
     { messages: [{ conversation_id: ID, sender: 'agent', body: AGENT_MSG.content, created_at: '2026-09-15T05:31:00.000Z', chatwoot_message_id: 9002 }], insertStatus: 409 },
   );
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   const out = await pullReplies(r.client, chatwoot({ messages: [AGENT_MSG] }).client, h, '2026-09-15T05:31:00.000Z', NOW);
   assert.deepEqual(out.replies, []);
   const patch = r.calls.find((c) => c.method === 'PATCH')!.body as Record<string, unknown>;
@@ -411,7 +426,7 @@ test('pullReplies: a reply the webhook already recorded (409) is not an error, a
 
 test('pullReplies: a resolved conversation closes our record and tells the widget', async () => {
   const r = record({ chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString(), closed_at: null });
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   const out = await pullReplies(r.client, chatwoot({ status: 'resolved' }).client, h, NOW.toISOString(), NOW);
   assert.equal(out.closed, true);
   const patch = r.calls.find((c) => c.method === 'PATCH')!.body as Record<string, unknown>;
@@ -425,7 +440,7 @@ test('pullReplies: the assistant’s own forwarded replies come back from Chatwo
     { chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString(), first_agent_reply_at: null, handled_by: null },
     { messages: [{ conversation_id: ID, sender: 'assistant', body: BOT_REPLY.content, created_at: '2026-09-15T05:30:30.000Z', chatwoot_message_id: 9005 }] },
   );
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   const out = await pullReplies(r.client, chatwoot({ messages: [BOT_REPLY] }).client, h, '2026-09-15T05:30:00.000Z', NOW);
   assert.deepEqual(out.replies, []);
   assert.ok(!r.calls.some((c) => c.method === 'POST' && c.path.startsWith('support_messages')), 'nothing inserted');
@@ -437,7 +452,7 @@ test('pullReplies: without Chatwoot it still answers from the record (what the w
     { chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() },
     { messages: [{ conversation_id: ID, sender: 'agent', body: 'from the webhook', created_at: '2026-09-15T05:32:00.000Z', chatwoot_message_id: 9010 }, { conversation_id: ID, sender: 'assistant', body: 'the bot’s own turn', created_at: '2026-09-15T05:32:30.000Z', chatwoot_message_id: null }] },
   );
-  const h = (await handedOff(r.client, ID, NOW))!;
+  const h = (await handedOff(r.client, ID))!;
   const out = await pullReplies(r.client, null, h, NOW.toISOString(), NOW);
   assert.equal(out.status, null);
   assert.deepEqual(out.replies.map((x) => x.body), ['from the webhook']);

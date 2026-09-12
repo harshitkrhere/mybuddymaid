@@ -3,7 +3,7 @@
 // POST { conversation_id, message, history?, context?, page?, contact? } → a server-sent-event stream:
 //   event: status  data: {"state":"thinking" | "forwarding" | "connecting"}
 //   event: answer  data: { text, sources, ref, escalate?, handoff?, intent, rung, language, suggestions,
-//                          contact_required, contact_prefill? }
+//                          contact_required, contact_prefill?; and, forwarded to the team: delivery, note? }
 //   event: done    data: {}
 //
 // Why events and not token streaming: the number gate in lib/assistant/answer.ts needs the
@@ -30,7 +30,7 @@
 // server-side only, raw fetch to PostgREST, no client SDK.
 
 import { NextResponse, after } from 'next/server';
-import { answer, answersAfterHandoff, type Turn, type Answer } from '@/lib/assistant/answer';
+import { answer, type Turn, type Answer } from '@/lib/assistant/answer';
 import { providerFromEnv } from '@/lib/assistant/provider';
 import { COPY } from '@/lib/assistant/copy';
 import { suggestionsFor } from '@/lib/assistant/suggestions';
@@ -320,7 +320,7 @@ export async function POST(req: Request) {
   // number, or the assistant's.
   const lookup = record ? await getConversation(record, conversationId) : null;
   const row = lookup?.ok ? lookup.row : null;
-  const handoff = row ? handedOffFrom(row, now) : null;
+  const handoff = row ? handedOffFrom(row) : null;
   const opening = !handoff && !!row && awaitingHandoffFrom(row, now);
   const awaitingContact = !handoff && !opening && !!row && awaitingContactFrom(row, now);
 
@@ -329,46 +329,35 @@ export async function POST(req: Request) {
     return reply({ text: COPY.invalidPhone, intent: 'human', escalate: row?.escalation_reason ?? 'asked_for_human', contact_required: true, contact_prefill: await prefillFor(record, userId) });
   }
 
-  // ── With the team already, or about to be. The person gets this message either way. If the
-  // assistant can still answer it from the published facts — a price, an area, a policy — it
-  // does, and the answer goes to the person too; anything else gets the acknowledgement alone
-  // (answersAfterHandoff). Contact details given now — after a safety handoff, which asks
-  // alongside, or a corrected number — go on the record and the Chatwoot contact's name.
-  // While the Chatwoot conversation is still being opened the message is held on the record
-  // and startHandoff posts it the moment the conversation exists; the assistant stays quiet. ──
+  // ── With the team, or about to be. The conversation is the person's now: the message goes
+  // to them and the assistant says nothing — no answer alongside, no model call — until the
+  // team closes the conversation (owner decision, 2026-09-12). The widget shows a delivery
+  // line under the customer's bubble instead, and outside support hours a note on when the
+  // team is back. Contact details given now — after a safety handoff, which asks alongside,
+  // or a corrected number — go on the record and the Chatwoot contact's name. While the
+  // Chatwoot conversation is still being opened the message is held on the record and
+  // startHandoff posts it the moment the conversation exists. ──
   if (record && row && (handoff || opening)) {
     const line = given.line ?? message;
-    const delivered = handoff ? await forwardMessage(record, chatwoot, handoff, line, now) : false;
-    if (!handoff) await holdMessage(record, conversationId, line, now, given.contact);
+    const delivered = handoff ? await forwardMessage(record, chatwoot, handoff, line, now) : await holdMessage(record, conversationId, line, now, given.contact);
     if (handoff && given.contact) await noteContact(record, chatwoot, handoff, given.contact);
     const contactRequired = !row.contact_phone && !given.contact;
-    const ack = inHours ? COPY.forwardedInHours : COPY.forwardedOutOfHours(SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours);
     return sse(async (controller) => {
       send(controller, 'status', { state: 'forwarding' });
-      let a: Answer | null = null;
-      // Contact details are for the person, not a question for the assistant.
-      if (handoff && !given.contact) {
-        try {
-          const candidate = await answer({ message, history, signedIn: !!userId, now }, { provider });
-          modelCallsToday.count += candidate.modelCalls;
-          if (answersAfterHandoff(candidate)) a = candidate;
-        } catch (e) {
-          console.error('[chat] answer threw (forward mode)', e);
-        }
-      }
       send(controller, 'answer', {
         conversation_id: conversationId,
         ref,
         mode: 'forwarded',
         delivered,
-        answered: !!a,
-        text: a ? a.text : ack,
-        sources: a ? a.sources : [],
-        intent: a ? a.intent : 'handed_off',
-        language: a ? a.language : null,
-        rung: a ? a.rung : null,
+        text: '',
+        delivery: delivered ? COPY.sentToTeam : COPY.notSentToTeam,
+        note: inHours ? null : COPY.teamBack(SUPPORT_HOURS.label, SUPPORT_HOURS.replyWithinHours),
+        sources: [],
+        intent: 'handed_off',
+        language: null,
+        rung: null,
         escalate: null,
-        handoff: { inHours, text: ack },
+        handoff: { inHours, text: '' },
         talk_to_team: COPY.talkToTeam,
         contact_required: contactRequired,
         contact_prefill: contactRequired ? await prefillFor(record, userId) : null,
@@ -376,17 +365,6 @@ export async function POST(req: Request) {
       });
       send(controller, 'done', {});
       controller.close();
-      if (a && handoff) {
-        const reply = a;
-        const h = handoff;
-        after(async () => {
-          try {
-            await forwardReply(record, chatwoot, h, { text: reply.text, sources: reply.sources, modelId: reply.modelId, rung: reply.rung, gateRejected: reply.gateRejected, redacted: reply.redacted }, now);
-          } catch (e) {
-            console.error('[chat] forwardReply threw', e);
-          }
-        });
-      }
     });
   }
 

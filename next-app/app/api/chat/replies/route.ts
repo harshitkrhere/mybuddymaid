@@ -10,7 +10,7 @@
 // working unchanged once the webhook is live.
 //
 // What a conversation id grants: the team's replies on that conversation, for 24 hours after
-// its last message (lib/support/handoff.ts, handedOff). The id is a random uuid held in the
+// its last message (lib/support/handoff.ts, recentlyActive). The id is a random uuid held in the
 // visitor's browser and is never shown to anyone else; the same possession already lets the
 // holder continue the conversation. Closed conversations, and anything older, return nothing.
 //
@@ -22,7 +22,7 @@ import { NextResponse } from 'next/server';
 import { corsHeaders } from '@/lib/assistant/cors';
 import { recordClientFromEnv, listMessagesAfter } from '@/lib/support/record';
 import { chatwootFromEnv } from '@/lib/support/chatwoot';
-import { handedOff, pullReplies } from '@/lib/support/handoff';
+import { handedOff, recentlyActive, pullReplies } from '@/lib/support/handoff';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -53,8 +53,8 @@ export async function GET(req: Request) {
   const record = recordClientFromEnv();
   if (!record) return NextResponse.json({ handed_off: false, replies: [], status: null, closed: false, next_after: afterIso }, { headers });
 
-  const h = await handedOff(record, conversationId, now);
-  if (!h) return NextResponse.json({ handed_off: false, replies: [], status: null, closed: false, next_after: afterIso }, { headers });
+  const h = await handedOff(record, conversationId);
+  if (!h || !recentlyActive(h.row, now)) return NextResponse.json({ handed_off: false, replies: [], status: null, closed: false, next_after: afterIso }, { headers });
 
   const chatwoot = chatwootFromEnv();
   const previous = lastPull.get(conversationId) ?? 0;

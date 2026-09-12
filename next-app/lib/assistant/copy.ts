@@ -92,12 +92,15 @@ export const COPY = {
   /** Label on the button the widget shows whenever a handoff is offered. */
   talkToTeam: 'Talk to our team',
 
-  // ── After the handoff: the customer keeps typing, the person replies in the same window. ──
-  /** Acknowledgement when a message is forwarded to the team during support hours. */
-  forwardedInHours: 'Sent to our team — a reply will appear here shortly.',
-  /** Outside hours: the 24-hour promise, and where the reply will come. */
-  forwardedOutOfHours: (hoursLabel: string, replyWithinHours: number) =>
-    `Sent to our team. They’re back ${hoursLabel} and will get back to you within ${replyWithinHours} hours.`,
+  // ── After the handoff: the customer keeps typing, the person replies in the same window, and
+  // the assistant says nothing until the team closes the conversation (owner decision,
+  // 2026-09-12). What the widget shows in place of an answer; approved by the owner the same day. ──
+  /** A small line under the customer's message once it has reached the team. */
+  sentToTeam: 'Sent to our team',
+  /** The same line when Chatwoot refused the message; the WhatsApp and call buttons sit beside it. */
+  notSentToTeam: 'Not sent — please use WhatsApp or call us',
+  /** A line of its own, once, when the customer writes outside support hours. */
+  teamBack: (hoursLabel: string, replyWithinHours: number) => `Our team is back ${hoursLabel} and will reply within ${replyWithinHours} hours.`,
   /** Shown above a reply written by a person. */
   teamLabel: 'MyBuddyMaid team',
   /** When the team resolves the conversation; the assistant takes over again. */

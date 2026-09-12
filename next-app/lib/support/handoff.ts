@@ -11,10 +11,10 @@
 //   forwardMessage the customer typed again after the handoff. It goes to the person in
 //                  Chatwoot as the customer's own message, and is recorded.
 //
-//   forwardReply   the assistant could still answer that message from the published facts,
-//                  so it did — and the answer goes to Chatwoot too, as the bot, so the person
-//                  sees the whole exchange. A question the assistant cannot answer is only
-//                  forwarded, with an acknowledgement.
+//   forwardReply   the assistant's last word once the details are in — "passed to our team" —
+//                  to Chatwoot too, so the person sees what the customer was told. After that
+//                  the assistant says nothing until the team closes the conversation (owner
+//                  decision, 2026-09-12): every message is the person's to answer.
 //
 //   pullReplies    the widget asks "anything from the team yet?". Chatwoot is asked for the
 //                  conversation's messages, the agent's replies are recorded (idempotent on
@@ -38,7 +38,8 @@ import { openHandoff, postCustomerMessage, postAssistantMessage, fetchMessages, 
 import { waitsForContact, type ContactDetails } from './contact';
 import { assistantChatwootIds, getConversation, insertMessages, listMessagesAfter, listTranscript, patchConversation, type ConversationRow, type RecordClient } from './record';
 
-const HANDOFF_WINDOW_MS = 24 * 60 * 60 * 1000;
+/** How long after the last message the team's replies stay readable with the conversation id alone. */
+const REPLIES_WINDOW_MS = 24 * 60 * 60 * 1000;
 /** How long after a handoff is decided its Chatwoot conversation may still be opening. */
 const HANDOFF_OPENING_MS = 2 * 60 * 1000;
 
@@ -68,7 +69,9 @@ export async function startHandoff(record: RecordClient | null, chatwoot: Chatwo
   const lookup = await getConversation(record, h.conversationId);
   if (!lookup.ok) return { status: 'failed', reason: 'record lookup failed' };
   const existing = lookup.row;
-  if (existing?.chatwoot_conversation_id) return { status: 'already', chatwootConversationId: existing.chatwoot_conversation_id };
+  // Open with the team already: nothing to do. Closed by the team and escalated again: that
+  // conversation is resolved, so a new one is opened for the same contact and the row reopened.
+  if (existing?.chatwoot_conversation_id && !existing.closed_at) return { status: 'already', chatwootConversationId: existing.chatwoot_conversation_id };
 
   // The transcript is the server's copy of the conversation, never the caller's. What the
   // widget sends as history is the visitor's to edit; the person reading the handoff must see
@@ -96,6 +99,7 @@ export async function startHandoff(record: RecordClient | null, chatwoot: Chatwo
     chatwoot_conversation_id: chatwootId,
     chatwoot_inbox_id: chatwoot.inboxId,
     escalated: true,
+    closed_at: null, // a row the team had closed is open again, with the new conversation
   });
   if (!ok) console.error(`[handoff] opened Chatwoot conversation ${chatwootId} but could not record it on ${h.conversationId}`);
 
@@ -118,28 +122,42 @@ export interface HandedOff {
 }
 
 /**
- * Whether messages on this conversation should go to the person rather than the bot: it has a
- * Chatwoot conversation, it is not closed, and it was active in the last 24 hours. The window
- * bounds how long possession of a conversation id grants access to what the team wrote.
+ * Whether messages on this conversation go to the person rather than the bot: it has a Chatwoot
+ * conversation the team has not closed. No time limit — the conversation is the team's until
+ * they close it, however long the silence, and the assistant does not answer meanwhile (owner
+ * decision, 2026-09-12). Reading the team's replies is bounded separately: recentlyActive.
  */
-export async function handedOff(record: RecordClient | null, conversationId: string, now: Date = new Date()): Promise<HandedOff | null> {
+export async function handedOff(record: RecordClient | null, conversationId: string): Promise<HandedOff | null> {
   if (!record) return null;
   const lookup = await getConversation(record, conversationId);
   if (!lookup.ok || !lookup.row) return null;
-  return handedOffFrom(lookup.row, now);
+  return handedOffFrom(lookup.row);
+}
+
+/** Open with the team: a Chatwoot conversation the team has not closed. */
+export function openInChatwoot(row: ConversationRow): boolean {
+  return !!row.chatwoot_conversation_id && !row.closed_at;
 }
 
 /** The same decision from a row already in hand, so a route that looked it up need not ask twice. */
-export function handedOffFrom(row: ConversationRow, now: Date = new Date()): HandedOff | null {
+export function handedOffFrom(row: ConversationRow): HandedOff | null {
   if (!row.chatwoot_conversation_id || row.closed_at) return null;
-  const last = row.last_message_at ? new Date(row.last_message_at).getTime() : 0;
-  if (now.getTime() - last > HANDOFF_WINDOW_MS) return null;
   return { row, chatwootConversationId: row.chatwoot_conversation_id };
 }
 
 /**
+ * Whether the team's replies may be read with the conversation id alone: a message on either
+ * side within the last day. This bounds how long a leaked id grants access to what the team
+ * wrote; the customer's own next message re-arms it.
+ */
+export function recentlyActive(row: ConversationRow, now: Date = new Date()): boolean {
+  const last = row.last_message_at ? new Date(row.last_message_at).getTime() : 0;
+  return now.getTime() - last <= REPLIES_WINDOW_MS;
+}
+
+/**
  * A handoff decided moments ago whose Chatwoot conversation is still being opened: escalated,
- * no Chatwoot id yet, within the opening window. What the customer writes now is held on the
+ * not open with the team (none yet, or the team closed the last one), within the opening window. What the customer writes now is held on the
  * record (holdMessage) and posted by startHandoff once the conversation exists. The window
  * keeps a handoff that failed from holding messages forever.
  *
@@ -149,7 +167,7 @@ export function handedOffFrom(row: ConversationRow, now: Date = new Date()): Han
  * the record, open at once and are opening.
  */
 export function awaitingHandoffFrom(row: ConversationRow, now: Date = new Date()): boolean {
-  if (row.chatwoot_conversation_id || !row.escalated || !row.escalated_at || row.closed_at) return false;
+  if (openInChatwoot(row) || !row.escalated || !row.escalated_at) return false;
   if (!row.contact_phone && waitsForContact(row.escalation_reason)) return false;
   const since = now.getTime() - new Date(row.escalated_at).getTime();
   return since >= 0 && since <= HANDOFF_OPENING_MS;
@@ -176,11 +194,11 @@ export async function holdMessage(record: RecordClient, conversationId: string, 
 // — completes it, and the conversation is opened there and then.
 
 /** How long an escalation waits for the customer's details before a fresh ask is needed. */
-const CONTACT_WINDOW_MS = HANDOFF_WINDOW_MS;
+const CONTACT_WINDOW_MS = 24 * 60 * 60 * 1000;
 
 /** An escalation waiting for the customer's name and number: a reason that waits, no number, no Chatwoot conversation, within a day. */
 export function awaitingContactFrom(row: ConversationRow, now: Date = new Date()): boolean {
-  if (row.chatwoot_conversation_id || row.contact_phone || !row.escalated || !row.escalated_at || row.closed_at) return false;
+  if (openInChatwoot(row) || row.contact_phone || !row.escalated || !row.escalated_at) return false;
   if (!waitsForContact(row.escalation_reason)) return false;
   const since = now.getTime() - new Date(row.escalated_at).getTime();
   return since >= 0 && since <= CONTACT_WINDOW_MS;
