@@ -11,6 +11,12 @@
  * options, and the follow-ups under each answer come from the server with the answer
  * (lib/assistant/suggestions.ts). A tap sends the prompt as the customer's own message.
  *
+ * Before a person gets the conversation the server asks for a name and mobile number
+ * (contact_required on the answer) and the panel shows a card for them; sending it posts the
+ * details as the customer's message with the fields alongside, and the server opens the
+ * conversation for the team before it says so. A signed-in customer's number arrives
+ * pre-filled to confirm.
+ *
  * Talks to /api/chat, which answers with server-sent events (status → answer → done). Once a
  * conversation has been handed to a person it polls /api/chat/replies every few seconds and
  * shows what the team wrote in the same window — no webhook, no socket, nothing to install.
@@ -36,7 +42,7 @@
 
   // ── Storage ─────────────────────────────────────────────────────────────────────────────
   function fresh() {
-    return { id: uuid(), ref: null, expires: Date.now() + TTL_MS, history: [], noticeSeen: false, handedOff: false, after: null, suggestions: null };
+    return { id: uuid(), ref: null, expires: Date.now() + TTL_MS, history: [], noticeSeen: false, handedOff: false, after: null, suggestions: null, contact: null };
   }
   function load() {
     try {
@@ -62,6 +68,18 @@
       return (c === 'x' ? r : (r & 0x3) | 0x8).toString(16);
     });
   }
+
+  // ── Phone numbers: the same rule as lib/support/contact.ts, so the card can say what is
+  // wrong before anything is sent. The server decides again regardless. ──
+  function normalisePhone(raw) {
+    var d = String(raw || '').replace(/[^\d+]/g, '');
+    if (d.charAt(0) === '+') d = d.slice(1);
+    if (d.indexOf('0091') === 0) d = d.slice(4);
+    else if (d.length === 12 && d.indexOf('91') === 0) d = d.slice(2);
+    else if (d.length === 11 && d.charAt(0) === '0') d = d.slice(1);
+    return /^[6-9]\d{9}$/.test(d) ? '+91' + d : null;
+  }
+  function formatPhone(e164) { return '+91 ' + e164.slice(3, 8) + ' ' + e164.slice(8); }
 
   // ── DOM ─────────────────────────────────────────────────────────────────────────────────
   function h(tag, attrs, children) {
@@ -90,12 +108,14 @@
   var ICON_SEND = 'M12 19V5M5 12l7-7 7 7';
   var ICON_NEW = 'M12 5v14M5 12h14';
 
-  // Only where a pointer can hover does the input take focus on its own; on a phone that would
-  // raise the keyboard over the greeting and the prompts before the customer has read them.
-  function focusInput() {
+  // Only where a pointer can hover does a field take focus on its own; on a phone that would
+  // raise the keyboard over what the customer has not read yet.
+  function focusEl(el) {
+    if (!el) return;
     if (window.matchMedia && !window.matchMedia('(hover: hover)').matches) return;
-    els.input.focus();
+    el.focus();
   }
+  function focusInput() { focusEl(els.input); }
 
   function build() {
     els.panel = h('div', { class: 'mbm-chat', role: 'dialog', 'aria-label': opts.title, 'aria-modal': 'false', hidden: '' });
@@ -142,12 +162,14 @@
   }
 
   // The log, from the state: the notice first (it scrolls away with the conversation instead of
-  // holding a fixed strip, and goes once the first message is sent), then the turns, then the
-  // prompts — the starters under a fresh greeting, or the last answer's follow-ups.
+  // holding a fixed strip, and goes once the first message is sent), then the turns, then what
+  // trails — the contact card while details are wanted, else the starters under a fresh greeting
+  // or the last answer's follow-ups.
   function renderConversation() {
     els.log.textContent = '';
     els.typing = null;
     els.chips = null;
+    els.card = null;
     els.notice = h('div', { class: 'mbm-chat__notice', role: 'note' }, [
       h('p', { text: opts.notice }),
       h('a', { href: opts.privacyUrl, text: opts.privacyLabel, target: '_blank', rel: 'noopener' })
@@ -163,6 +185,7 @@
     setRef(state.ref);
 
     if (state.handedOff) showEscalation(firstQuestion());
+    if (state.contact) renderContactCard(state.contact.prefill);
     else if (!hasUserTurn()) renderChips(opts.starters || []);
     else if (state.suggestions && state.suggestions.length) renderChips(state.suggestions);
     scrollToEnd();
@@ -170,6 +193,12 @@
   function hasUserTurn() {
     for (var i = 0; i < state.history.length; i++) if (state.history[i].role === 'user') return true;
     return false;
+  }
+  // Whatever sits at the end of the log for the customer to act on; messages go above it.
+  function trailing() { return els.card || els.chips || null; }
+  function place(el) {
+    var t = trailing();
+    if (t) els.log.insertBefore(el, t); else els.log.appendChild(el);
   }
 
   function addMessage(role, text, sources) {
@@ -190,14 +219,13 @@
       });
       wrap.appendChild(src);
     }
-    // Prompts always sit last; a message arriving from the team goes above them.
-    if (els.chips) els.log.insertBefore(wrap, els.chips); else els.log.appendChild(wrap);
+    place(wrap);
     scrollToEnd();
     return wrap;
   }
   function scrollToEnd() { els.log.scrollTop = els.log.scrollHeight; }
 
-  // Prompts offered as buttons under the latest answer. One row that wraps; gone the moment the
+  // Prompts offered as buttons: one wrapping row under the latest answer. Gone the moment the
   // customer sends anything, so the log never carries a stale offer.
   function renderChips(list) {
     clearChips();
@@ -213,12 +241,66 @@
     if (els.chips) { els.chips.remove(); els.chips = null; }
   }
 
+  // The contact card: a name and a mobile number, before a person gets the conversation. Stays
+  // up — with what has been typed into it — under anything answered meanwhile, until the details
+  // are sent or the server stops asking.
+  function renderContactCard(prefill) {
+    clearChips();
+    if (els.card) return;
+    var title = h('p', { class: 'mbm-chat__contact-title', text: prefill && prefill.phone ? opts.contactTitlePrefilled : opts.contactTitle });
+    els.cardName = h('input', { type: 'text', name: 'name', autocomplete: 'name', maxlength: '60', required: '' });
+    els.cardPhone = h('input', { type: 'tel', name: 'phone', autocomplete: 'tel', inputmode: 'tel', maxlength: '20', required: '', placeholder: opts.contactPhonePlaceholder });
+    if (prefill) {
+      if (prefill.name) els.cardName.value = prefill.name;
+      if (prefill.phone) els.cardPhone.value = prefill.phone;
+    }
+    els.cardPhone.addEventListener('input', function () { els.cardPhone.setCustomValidity(''); });
+    els.cardSubmit = h('button', { class: 'mbm-chat__contact-submit', type: 'submit', text: opts.contactSubmit });
+    els.cardSubmit.disabled = busy;
+    els.card = h('form', { class: 'mbm-chat__contact', onsubmit: onContactSubmit }, [
+      title,
+      h('label', null, [h('span', { text: opts.contactNameLabel }), els.cardName]),
+      h('label', null, [h('span', { text: opts.contactPhoneLabel }), els.cardPhone]),
+      els.cardSubmit
+    ]);
+    els.log.appendChild(els.card);
+    scrollToEnd();
+    focusEl(prefill && prefill.name ? els.cardPhone : els.cardName);
+  }
+  function clearCard() {
+    if (els.card) { els.card.remove(); els.card = null; els.cardName = null; els.cardPhone = null; els.cardSubmit = null; }
+  }
+  function onContactSubmit(e) {
+    if (e) e.preventDefault();
+    if (busy) return;
+    var name = (els.cardName.value || '').trim();
+    var phone = normalisePhone(els.cardPhone.value);
+    if (!phone) {
+      els.cardPhone.setCustomValidity(opts.invalidPhone);
+      els.cardPhone.reportValidity();
+      return;
+    }
+    var line = (name ? opts.contactLineLabels.name + ': ' + name + '\n' : '') + opts.contactLineLabels.phone + ': ' + formatPhone(phone);
+    var hist = sentHistory();
+    clearCard();
+    state.contact = null;
+    els.notice.hidden = true;
+    state.noticeSeen = true;
+    addMessage('user', line);
+    // Kept out of the history sent with later messages: the details are for the team, and the
+    // server already has them on the record.
+    state.history.push({ role: 'user', content: line, contact: true });
+    state.suggestions = null;
+    save();
+    send(line, hist, { name: name, phone: phone });
+  }
+
   function setTyping(on) {
     if (on && !els.typing) {
       els.typing = h('div', { class: 'mbm-chat__msg mbm-chat__msg--assistant mbm-chat__typing', 'aria-label': opts.thinkingLabel }, [
         h('div', { class: 'mbm-chat__bubble' }, [h('span'), h('span'), h('span')])
       ]);
-      els.log.appendChild(els.typing);
+      place(els.typing);
       scrollToEnd();
     } else if (!on && els.typing) {
       els.typing.remove();
@@ -232,7 +314,7 @@
     els.escalate.hidden = false;
   }
   function firstQuestion() {
-    for (var i = 0; i < state.history.length; i++) if (state.history[i].role === 'user') return state.history[i].content.slice(0, 200);
+    for (var i = 0; i < state.history.length; i++) if (state.history[i].role === 'user' && !state.history[i].contact) return state.history[i].content.slice(0, 200);
     return '';
   }
 
@@ -262,13 +344,20 @@
     els.input.style.overflowY = wanted > max ? 'auto' : 'hidden';
     updateSend();
   }
-  function updateSend() { els.send.disabled = busy || !(els.input.value || '').trim(); }
+  function updateSend() {
+    els.send.disabled = busy || !(els.input.value || '').trim();
+    if (els.cardSubmit) els.cardSubmit.disabled = busy;
+  }
 
   function onSubmit(e) {
     if (e) e.preventDefault();
     var text = (els.input.value || '').trim();
     if (!text) return;
     submitText(text);
+  }
+  // The turns sent with a message: everything before it, minus the contact details.
+  function sentHistory() {
+    return state.history.filter(function (t) { return !t.contact; }).slice(-MAX_STORED_TURNS);
   }
   function submitText(text) {
     if (busy) return;
@@ -277,14 +366,15 @@
     els.notice.hidden = true;
     state.noticeSeen = true;
     clearChips();
+    var hist = sentHistory();
     addMessage('user', text);
     state.history.push({ role: 'user', content: text });
     state.suggestions = null;
     save();
-    send(text);
+    send(text, hist, null);
   }
 
-  function send(text) {
+  function send(text, hist, contact) {
     busy = true;
     updateSend();
     setTyping(true);
@@ -295,10 +385,11 @@
     var body = {
       conversation_id: state.id,
       message: text,
-      history: state.history.slice(0, -1).slice(-MAX_STORED_TURNS),
+      history: hist,
       page: location.pathname,
       context: opts.context || {}
     };
+    if (contact) body.contact = contact;
 
     fetch(opts.endpoint, { method: 'POST', headers: headers, body: JSON.stringify(body) })
       .then(function (res) {
@@ -338,7 +429,15 @@
     // once a person has the conversation. An ordinary answer after a refusal takes it away.
     if (data.escalate || withPerson || state.handedOff) showEscalation(firstQuestion());
     else els.escalate.hidden = true;
-    state.suggestions = withPerson ? null : (data.suggestions && data.suggestions.length ? data.suggestions : null);
+    // The contact card, while the server wants a name and number; gone the moment it stops.
+    if (data.contact_required) {
+      state.contact = { prefill: data.contact_prefill || null };
+      renderContactCard(state.contact.prefill);
+    } else if (state.contact || els.card) {
+      state.contact = null;
+      clearCard();
+    }
+    state.suggestions = withPerson || data.contact_required ? null : (data.suggestions && data.suggestions.length ? data.suggestions : null);
     if (state.suggestions) renderChips(state.suggestions);
     save();
   }
@@ -450,10 +549,8 @@
     if (!els.panel) build();
     lastFocus = document.activeElement;
     els.panel.hidden = false;
-    // Reading a layout property commits the closed state, so the transition has somewhere to go.
-    // (A frame callback would do the same, but never fires in a background tab.)
-    void els.panel.offsetHeight;
-    els.panel.classList.add('mbm-chat--open');
+    // Two frames so the first paint is the closed state and the transition has somewhere to go.
+    requestAnimationFrame(function () { requestAnimationFrame(function () { els.panel.classList.add('mbm-chat--open'); }); });
     markUnread(false);
     document.body.classList.add('mbm-chat-open');
     scrollToEnd();

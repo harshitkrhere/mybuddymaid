@@ -106,6 +106,27 @@
 .mbm-chat__chip:active { transform: translateY(1px); }
 .mbm-chat__chip:focus-visible { outline: 2px solid var(--mbm-mint); outline-offset: 1px; }
 
+/* The contact card: a name and a mobile number before a person gets the conversation. */
+.mbm-chat__contact {
+  align-self: stretch; display: flex; flex-direction: column; gap: 10px; margin: 2px 0 4px; padding: 14px;
+  border: 1px solid var(--mbm-mint); border-radius: 16px; background: #fff; box-shadow: 0 0 0 3px var(--mbm-mint-soft);
+}
+.mbm-chat__contact-title { margin: 0; font-size: 13.5px; font-weight: 700; color: var(--mbm-obsidian); }
+.mbm-chat__contact label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 600; color: var(--mbm-muted); }
+.mbm-chat__contact input {
+  min-height: 42px; padding: 0 12px; border: 1px solid var(--mbm-line); border-radius: 12px;
+  font: inherit; font-size: 16px; color: var(--mbm-ink); background: var(--mbm-bg);
+}
+.mbm-chat__contact input::placeholder { color: var(--mbm-muted); font-weight: 400; }
+.mbm-chat__contact input:focus { outline: none; border-color: var(--mbm-mint); background: #fff; box-shadow: 0 0 0 3px var(--mbm-mint-soft); }
+.mbm-chat__contact-submit {
+  min-height: 42px; margin-top: 2px; border: 0; border-radius: 999px; background: var(--mbm-obsidian); color: #fff;
+  font-weight: 700; font-size: 14px; cursor: pointer; transition: background 0.12s ease;
+}
+.mbm-chat__contact-submit:hover { background: var(--mbm-emerald); }
+.mbm-chat__contact-submit:disabled { opacity: 0.5; cursor: default; }
+.mbm-chat__contact-submit:focus-visible { outline: 2px solid var(--mbm-mint); outline-offset: 2px; }
+
 .mbm-chat__typing .mbm-chat__bubble { display: inline-flex; gap: 5px; padding: 13px 15px; }
 .mbm-chat__typing span { width: 6px; height: 6px; border-radius: 50%; background: #9ca3af; animation: mbm-blink 1.2s infinite; }
 .mbm-chat__typing span:nth-child(2) { animation-delay: 0.2s; }
@@ -134,7 +155,7 @@
 .mbm-chat__input {
   flex: 1; min-height: 44px; max-height: 140px; resize: none; overflow-y: hidden;
   border: 1px solid var(--mbm-line); border-radius: 14px; padding: 11px 14px;
-  font: inherit; line-height: 1.4; color: var(--mbm-ink); background: var(--mbm-bg);
+  font: inherit; font-size: 16px; line-height: 1.4; color: var(--mbm-ink); background: var(--mbm-bg); /* 16px: iOS does not zoom a field this size */
 }
 .mbm-chat__input::placeholder { color: var(--mbm-muted); }
 .mbm-chat__input:focus { outline: none; border-color: var(--mbm-mint); background: #fff; box-shadow: 0 0 0 3px var(--mbm-mint-soft); }

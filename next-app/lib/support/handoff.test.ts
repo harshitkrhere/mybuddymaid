@@ -6,7 +6,7 @@
 // them — idempotently, because the webhook may have recorded the same message first.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { startHandoff, handedOff, handedOffFrom, awaitingHandoffFrom, holdMessage, forwardMessage, forwardReply, pullReplies } from './handoff';
+import { startHandoff, handedOff, handedOffFrom, awaitingHandoffFrom, awaitingContactFrom, captureContact, noteContact, holdMessage, forwardMessage, forwardReply, pullReplies } from './handoff';
 import type { ChatwootClient } from './chatwoot';
 import type { RecordClient, FetchLike, ConversationRow } from './record';
 
@@ -70,6 +70,7 @@ function chatwoot(opts: { messages?: object[]; status?: string; refuse?: boolean
     if (path.endsWith('/toggle_status')) return new Response(JSON.stringify({}), { status: 200 });
     if (method === 'GET' && path.endsWith('/messages')) return new Response(JSON.stringify(opts.messages ?? []), { status: 200 });
     if (method === 'GET' && path === `/contacts/${ID}/conversations`) return new Response(JSON.stringify([{ id: 4242, status: opts.status ?? 'open' }]), { status: 200 });
+    if (method === 'PATCH' && path === `/contacts/${ID}`) return new Response(JSON.stringify({ id: 7, name: (body as { name: string }).name }), { status: 200 });
     return new Response('unexpected', { status: 500 });
   };
   const client: ChatwootClient = { apiUrl: 'https://app.chatwoot.com', accountId: '185110', inboxId: 136538, inboxIdentifier: 'inbox-ident', token: 't', hmacToken: null, fetchImpl, timeoutMs: 1000 };
@@ -159,6 +160,114 @@ test('awaitingHandoffFrom: a handoff decided within two minutes and not yet in C
   assert.equal(awaitingHandoffFrom({ ...base, escalated: false, escalated_at: null, chatwoot_conversation_id: null }, NOW), false);
   assert.ok(handedOffFrom({ ...base, chatwoot_conversation_id: 4242, last_message_at: NOW.toISOString() }, NOW));
   assert.equal(handedOffFrom({ ...base, chatwoot_conversation_id: null, last_message_at: NOW.toISOString() }, NOW), null);
+});
+
+/** A record double whose conversation row and message table are live: what is patched or inserted is seen by later reads. */
+function liveRecord(row: Partial<ConversationRow>, messages: Array<Record<string, unknown>> = []) {
+  const calls: Call[] = [];
+  const current: Record<string, unknown> = { id: ID, ref: 'MBM-AAAAA', channel: 'site_chat', ...row };
+  const table: Array<Record<string, unknown>> = messages.map((m) => ({ ...m }));
+  const fetchImpl: FetchLike = async (url, init) => {
+    const path = url.replace(/^https?:\/\/[^/]+\/rest\/v1\//, '');
+    const method = init.method ?? 'GET';
+    const body = init.body ? JSON.parse(String(init.body)) : undefined;
+    calls.push({ method, path, body });
+    if (method === 'GET' && path.startsWith('support_conversations?id=eq.')) return new Response(JSON.stringify([current]), { status: 200 });
+    if (method === 'PATCH' && path.startsWith('support_conversations?id=eq.')) {
+      Object.assign(current, body);
+      return new Response(null, { status: 204 });
+    }
+    if (method === 'POST' && path.startsWith('support_messages')) {
+      for (const m of body as Array<Record<string, unknown>>) table.push(m);
+      return new Response(null, { status: 201 });
+    }
+    if (method === 'GET' && path.startsWith('support_messages?') && path.includes('order=created_at.desc')) {
+      const rows = table.filter((m) => ['customer', 'assistant'].includes(String(m.sender)));
+      return new Response(JSON.stringify(rows.slice().reverse()), { status: 200 });
+    }
+    if (method === 'GET' && path.startsWith('support_messages?')) {
+      const after = decodeURIComponent(path.match(/created_at=gt\.([^&]+)/)![1]);
+      const senders = path.match(/sender=in\.\(([^)]*)\)/)![1].split(',');
+      return new Response(JSON.stringify(table.filter((m) => String(m.created_at) > after && senders.includes(String(m.sender)))), { status: 200 });
+    }
+    return new Response(null, { status: 204 });
+  };
+  const client: RecordClient = { url: 'http://stub.local', key: 'k', fetchImpl, timeoutMs: 1000 };
+  return { client, calls, current, table };
+}
+
+test('awaitingContactFrom: an escalation with a reason, no number and no Chatwoot conversation, within a day', () => {
+  const t = (secondsAgo: number) => new Date(NOW.getTime() - secondsAgo * 1000).toISOString();
+  const base = { id: ID, ref: 'MBM-AAAAA', channel: 'site_chat' as const, escalated: true, escalation_reason: 'asked_for_human', chatwoot_conversation_id: null, contact_phone: null };
+  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30) }, NOW), true);
+  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(3 * 60 * 60) }, NOW), true, 'hours later, still waiting');
+  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(25 * 60 * 60) }, NOW), false, 'a day on, the ask is stale');
+  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), contact_phone: '+919691982400' }, NOW), false, 'the number is in');
+  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), chatwoot_conversation_id: 4242 }, NOW), false, 'already with the team');
+  assert.equal(awaitingContactFrom({ ...base, escalated_at: t(30), closed_at: NOW.toISOString() }, NOW), false);
+  assert.equal(awaitingContactFrom({ ...base, escalated: false, escalated_at: null }, NOW), false);
+});
+
+test('captureContact: the details go on the record and the transcript, then the conversation opens with the name on the contact and the number on the conversation', async () => {
+  const r = liveRecord(
+    { escalated: true, escalated_at: NOW.toISOString(), escalation_reason: 'asked_for_human', chatwoot_conversation_id: null, contact_phone: null },
+    [
+      { conversation_id: ID, sender: 'customer', body: 'connect me with team', created_at: '2026-09-15T05:29:00.000Z' },
+      { conversation_id: ID, sender: 'assistant', body: 'Of course — so our team can reach you, please share your name and mobile number below.', created_at: '2026-09-15T05:29:00.001Z' },
+    ],
+  );
+  const cw = chatwoot();
+  const result = await captureContact(
+    r.client,
+    cw.client,
+    r.current as unknown as ConversationRow,
+    { conversationId: ID, ref: 'MBM-AAAAA', contact: { name: 'Harshit', phone: '+919691982400' }, line: 'Name: Harshit\nPhone: +91 96919 82400', city: 'delhi' },
+    NOW,
+  );
+  assert.deepEqual(result, { status: 'opened', chatwootConversationId: 4242 });
+
+  // The record: the line as the customer's turn, the details on the row, Chatwoot's id after.
+  assert.equal(r.current.contact_name, 'Harshit');
+  assert.equal(r.current.contact_phone, '+919691982400');
+  assert.equal(r.current.chatwoot_conversation_id, 4242);
+  assert.ok(r.table.some((m) => m.sender === 'customer' && m.body === 'Name: Harshit\nPhone: +91 96919 82400'));
+
+  // Chatwoot: the contact by name, the number as a conversation attribute, the transcript ending with the line — once.
+  const contact = cw.calls.find((c) => c.method === 'POST' && c.path === '/contacts')!.body as Record<string, unknown>;
+  assert.equal(contact.name, 'Harshit');
+  assert.equal(contact.phone_number, undefined, 'never on the contact');
+  const conv = cw.calls.find((c) => c.method === 'POST' && c.path === `/contacts/${ID}/conversations`)!.body as { custom_attributes: Record<string, string> };
+  assert.equal(conv.custom_attributes.mbm_phone, '+919691982400');
+  assert.equal(conv.custom_attributes.mbm_reason, 'asked_for_human');
+  assert.equal(conv.custom_attributes.mbm_city, 'delhi');
+  const posted = cw.calls.filter((c) => c.method === 'POST' && c.path.endsWith('/messages') && !(c.body as { private?: boolean }).private).map((c) => (c.body as { content: string }).content);
+  assert.deepEqual(posted, ['connect me with team', 'Of course — so our team can reach you, please share your name and mobile number below.', 'Name: Harshit\nPhone: +91 96919 82400']);
+});
+
+test('captureContact: when Chatwoot refuses, the details are still on the record and the result says saved', async () => {
+  const r = liveRecord({ escalated: true, escalated_at: NOW.toISOString(), escalation_reason: 'complaint', chatwoot_conversation_id: null, contact_phone: null });
+  const result = await captureContact(r.client, chatwoot({ refuse: true }).client, r.current as unknown as ConversationRow, { conversationId: ID, ref: 'MBM-AAAAA', contact: { name: null, phone: '+919691982400' }, line: 'Phone: +91 96919 82400' }, NOW);
+  assert.deepEqual(result, { status: 'saved', reason: 'chatwoot refused' });
+  assert.equal(r.current.contact_phone, '+919691982400');
+  assert.equal(r.current.contact_name, undefined, 'no name given, none written');
+  assert.equal(r.current.chatwoot_conversation_id, null);
+});
+
+test('noteContact: details given once the conversation is with the team go on the record and rename the Chatwoot contact', async () => {
+  const r = liveRecord({ chatwoot_conversation_id: 4242, contact_phone: null });
+  const cw = chatwoot();
+  await noteContact(r.client, cw.client, { row: r.current as unknown as ConversationRow, chatwootConversationId: 4242 }, { name: 'Priya', phone: '+919876543210' });
+  assert.equal(r.current.contact_name, 'Priya');
+  assert.equal(r.current.contact_phone, '+919876543210');
+  assert.deepEqual(cw.calls.map((c) => `${c.method} ${c.path}`), [`PATCH /contacts/${ID}`]);
+  assert.deepEqual(cw.calls[0].body, { name: 'Priya' });
+});
+
+test('holdMessage: details typed while the conversation is opening go on the row with the message', async () => {
+  const r = liveRecord({ escalated: true, escalated_at: NOW.toISOString(), chatwoot_conversation_id: null });
+  await holdMessage(r.client, ID, 'Phone: +91 96919 82400', NOW, { name: null, phone: '+919691982400' });
+  assert.equal(r.current.contact_phone, '+919691982400');
+  assert.equal(r.current.last_message_at, NOW.toISOString());
 });
 
 test('holdMessage: recorded as the customer without a Chatwoot id, and the conversation is bumped', async () => {

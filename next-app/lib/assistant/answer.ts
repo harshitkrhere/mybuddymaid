@@ -33,6 +33,8 @@ export interface AnswerInput {
   history?: Turn[];
   signedIn?: boolean;
   now?: Date;
+  /** The record already holds a number for this customer, so a handoff need not ask for one. */
+  contactKnown?: boolean;
 }
 
 export interface Handoff {
@@ -49,6 +51,12 @@ export interface Answer {
   confidence: number;
   escalate?: EscalationReason;
   handoff?: Handoff;
+  /**
+   * The handoff waits for the customer's name and number; the widget shows the contact card.
+   * Set alongside `handoff` for safety, where the team is alerted at once and the number is
+   * asked for as well.
+   */
+  contactRequired?: boolean;
   /** Which model phrased the text, or null when rung 3 served it. Stored on the record. */
   modelId: string | null;
   rung: 1 | 3;
@@ -143,6 +151,20 @@ export function handoffFor(now: Date = new Date()): Handoff {
   };
 }
 
+// The team gets a conversation only with a way to reach the customer back (owner decision,
+// 2026-09-12). Every escalation waits for a name and mobile number first — except safety,
+// where the team is alerted at once and the number is asked for alongside.
+export const GATED_ESCALATIONS: ReadonlySet<EscalationReason> = new Set<EscalationReason>(['asked_for_human', 'complaint', 'refund', 'payment', 'turn_limit']);
+
+/** What an escalation adds to the retrieval: the handoff with the hours text, or the ask for details first. */
+export function escalationFor(leadIn: string, reason: EscalationReason, contactKnown: boolean, now: Date, policy = ''): Pick<Answer, 'text' | 'escalate' | 'handoff' | 'contactRequired' | 'modelId' | 'rung'> {
+  if (GATED_ESCALATIONS.has(reason) && !contactKnown) {
+    return { text: `${leadIn} ${COPY.askContact}${policy}`, escalate: reason, contactRequired: true, modelId: null, rung: 3 };
+  }
+  const h = handoffFor(now);
+  return { text: `${leadIn} ${h.text}${policy}`, escalate: reason, handoff: h, contactRequired: !contactKnown, modelId: null, rung: 3 };
+}
+
 // ─── Turn limit ─────────────────────────────────────────────────────────────────────────────
 
 /**
@@ -227,8 +249,7 @@ export async function answer(input: AnswerInput, opts: AnswerOptions = {}): Prom
 
   // Escalations and greetings are fixed copy: no model, no gate, no network.
   if (hitTurnLimit(r, history)) {
-    const h = handoffFor(now);
-    return { ...base, text: `${COPY.escalateTurnLimit} ${h.text}`, escalate: 'turn_limit', handoff: h, modelId: null, rung: 3 };
+    return { ...base, ...escalationFor(COPY.escalateTurnLimit, 'turn_limit', !!input.contactKnown, now) };
   }
   if (r.escalate === 'low_confidence') {
     // Not in the knowledge: refuse and OFFER a person. The escalate flag is kept for the record
@@ -237,9 +258,8 @@ export async function answer(input: AnswerInput, opts: AnswerOptions = {}): Prom
     return { ...base, text: COPY.refuse, escalate: r.escalate, modelId: null, rung: 3 };
   }
   if (r.escalate) {
-    const h = handoffFor(now);
     const policy = r.escalate === 'refund' && r.entries[0] ? `\n\n${r.entries[0].a}` : '';
-    return { ...base, text: `${r.answer} ${h.text}${policy}`, escalate: r.escalate, handoff: h, modelId: null, rung: 3 };
+    return { ...base, ...escalationFor(r.answer, r.escalate, !!input.contactKnown, now, policy) };
   }
   if (r.intent === 'greeting' || r.intent === 'booking_status') {
     return { ...base, text: r.answer, modelId: null, rung: 3 };

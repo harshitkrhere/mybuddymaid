@@ -3441,7 +3441,7 @@
     "pollMs": 10000,
     "title": "MyBuddyMaid assistant",
     "greeting": "Hi, I’m MyBuddyMaid’s assistant. I can check whether we serve your area, explain our plans and prices, and answer questions about how verification and replacements work. What would you like to know?",
-    "notice": "You are chatting with MyBuddyMaid’s automated assistant. It answers from our published service, pricing and policy information, and it can pass you to a member of our team. We keep a record of this conversation, and by continuing you agree that we may analyse conversations in aggregate to improve our service; we do not use them to build advertising profiles. Please type only what the assistant needs to answer you — there is no need to send your phone number, email address or address here, and you must never send card numbers, UPI PINs, passwords or one-time passwords. We will never ask for them. If you are not signed in we store a random reference in your browser so the conversation can continue; sign in and it is linked to your account. You can withdraw consent, ask what we hold, or complain to our Grievance Officer — see our Privacy Policy.",
+    "notice": "You are chatting with MyBuddyMaid’s automated assistant. It answers from our published service, pricing and policy information, and it can pass you to a member of our team. We keep a record of this conversation, and by continuing you agree that we may analyse conversations in aggregate to improve our service; we do not use them to build advertising profiles. Please type only what the assistant needs to answer you. There is no need to send your phone number, email address or address here unless our team needs to call you back, in which case the assistant will ask for your name and mobile number; we use them only to contact you about your request and keep them with the record of this conversation. You must never send card numbers, UPI PINs, passwords or one-time passwords. We will never ask for them. If you are not signed in we store a random reference in your browser so the conversation can continue; sign in and it is linked to your account. You can withdraw consent, ask what we hold, or complain to our Grievance Officer — see our Privacy Policy.",
     "privacyUrl": "/privacy-policy",
     "privacyLabel": "Privacy Policy",
     "placeholder": "Ask about areas, plans, prices…",
@@ -3458,7 +3458,25 @@
     "whatsappNumber": "919355114869",
     "hoursLabel": "Mon–Sat, 10 AM–7 PM IST",
     "teamLabel": "MyBuddyMaid team",
-    "conversationClosed": "Our team has closed this conversation. Ask me anything else and I’ll start fresh."
+    "conversationClosed": "Our team has closed this conversation. Ask me anything else and I’ll start fresh.",
+    "starters": [
+      "What services do you offer?",
+      "What are your plans and prices?",
+      "Which areas do you serve?",
+      "How do you verify helpers?"
+    ],
+    "copiedLabel": "Copied",
+    "contactTitle": "So our team can call you back",
+    "contactTitlePrefilled": "Is this the best number to reach you on?",
+    "contactNameLabel": "Your name",
+    "contactPhoneLabel": "Mobile number",
+    "contactPhonePlaceholder": "10-digit mobile number",
+    "contactSubmit": "Send details",
+    "contactLineLabels": {
+      "name": "Name",
+      "phone": "Phone"
+    },
+    "invalidPhone": "That doesn’t look like an Indian mobile number. Please enter 10 digits starting with 6, 7, 8 or 9."
   },
   "spaServiceMap": {
     "part-time": "part-time-maid",

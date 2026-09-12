@@ -19,11 +19,15 @@ import { SUPPORT_HOURS, SUPPORT_PHONE_DISPLAY } from '@/data/seo/contact';
 const list = (items: string[]) => (items.length <= 1 ? items.join('') : `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`);
 
 export const COPY = {
-  /** Shown above the input before the first message. Verbatim from Privacy Policy 2.0 §2.2. */
+  /**
+   * Shown above the input before the first message. Verbatim from Privacy Policy 2.0 §2.2. The
+   * sentence on contact details was revised on 2026-09-12 at the owner's direction, in both
+   * places, when the assistant began asking for a name and number before a handoff.
+   */
   notice:
     'You are chatting with MyBuddyMaid’s automated assistant. It answers from our published service, pricing and policy information, and it can pass you to a member of our team. ' +
     'We keep a record of this conversation, and by continuing you agree that we may analyse conversations in aggregate to improve our service; we do not use them to build advertising profiles. ' +
-    'Please type only what the assistant needs to answer you — there is no need to send your phone number, email address or address here, and you must never send card numbers, UPI PINs, passwords or one-time passwords. We will never ask for them. ' +
+    'Please type only what the assistant needs to answer you. There is no need to send your phone number, email address or address here unless our team needs to call you back, in which case the assistant will ask for your name and mobile number; we use them only to contact you about your request and keep them with the record of this conversation. You must never send card numbers, UPI PINs, passwords or one-time passwords. We will never ask for them. ' +
     'If you are not signed in we store a random reference in your browser so the conversation can continue; sign in and it is linked to your account. ' +
     'You can withdraw consent, ask what we hold, or complain to our Grievance Officer — see our Privacy Policy.',
 
@@ -127,6 +131,31 @@ export const COPY = {
   },
   /** Shown for a moment after the reference in the panel's header is tapped, which copies it. */
   copied: 'Copied',
+
+  // ── Contact before the handoff (owner decision, 2026-09-12): the team gets a conversation
+  // only with a way to reach the customer back. Approved by the owner on 2026-09-12. ──
+  /** Follows the escalation lead-in in place of the hours text, until the details are in. */
+  askContact: 'So our team can reach you, please share your name and mobile number below.',
+  /** The card's title; the second when the number on the customer's account is offered back. */
+  contactTitle: 'So our team can call you back',
+  contactTitlePrefilled: 'Is this the best number to reach you on?',
+  contactNameLabel: 'Your name',
+  contactPhoneLabel: 'Mobile number',
+  contactPhonePlaceholder: '10-digit mobile number',
+  contactSubmit: 'Send details',
+  /** How the details read in the transcript — the widget's bubble and the record use the same words. */
+  contactLineLabels: { name: 'Name', phone: 'Phone' },
+  invalidPhone: 'That doesn’t look like an Indian mobile number. Please enter 10 digits starting with 6, 7, 8 or 9.',
+  /** Once the details are in and the conversation is with the team. */
+  contactThanksInHours: (name: string | null) =>
+    `Thanks${name ? `, ${name}` : ''} — I’ve passed this to our team with everything you’ve told me. A reply will appear here shortly.`,
+  contactThanksOutOfHours: (name: string | null, phone: string, hoursLabel: string, replyWithinHours: number) =>
+    `Thanks${name ? `, ${name}` : ''} — I’ve passed this to our team with everything you’ve told me. They’re back ${hoursLabel} and will call you on ${phone} within ${replyWithinHours} hours.`,
+  /** The details are saved but the conversation could not be opened for the team just now. */
+  contactSaved: (name: string | null, phone: string) =>
+    `Thanks${name ? `, ${name}` : ''} — I’ve saved your details and our team will call you on ${phone}. For anything urgent, WhatsApp or call us.`,
+  /** Nothing could be saved at all (the record is unreachable): say so, and point at the ways that work. */
+  contactNotSaved: 'I couldn’t pass your details to our team just now. The fastest way to reach them is WhatsApp or a call.',
 
   hoursLabel: SUPPORT_HOURS.label,
 } as const;

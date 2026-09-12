@@ -33,6 +33,7 @@ test('never offers the question just answered', () => {
 test('nothing once a person has the conversation; a greeting and a blank both get somewhere to go', () => {
   assert.deepEqual(suggestionsFor({ intent: 'human', handoff: { inHours: true, text: '' } }), []);
   assert.deepEqual(suggestionsFor({ intent: 'pricing', handoff: { inHours: true, text: '' } }), []);
+  assert.deepEqual(suggestionsFor({ intent: 'human', contactRequired: true }), [], 'the contact card is up; nothing competes with it');
   assert.equal(suggestionsFor({ intent: 'greeting' }).length, 3);
   assert.equal(suggestionsFor({ intent: 'unknown' }).length, 3);
   // A refusal is shown with the WhatsApp-or-call card, so the team chip would repeat it.

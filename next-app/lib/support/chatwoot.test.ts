@@ -8,7 +8,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHmac } from 'node:crypto';
-import { chatwootFromEnv, openHandoff, postCustomerMessage, fetchMessages, fetchStatus, ASSISTANT_PREFIX, type ChatwootClient, type FetchLike } from './chatwoot';
+import { chatwootFromEnv, openHandoff, postCustomerMessage, renameContact, fetchMessages, fetchStatus, ASSISTANT_PREFIX, type ChatwootClient, type FetchLike } from './chatwoot';
 
 const CLIENT = 'https://app.chatwoot.com/public/api/v1/inboxes/inbox-ident';
 const BOT = 'https://app.chatwoot.com/api/v1/accounts/185110';
@@ -50,6 +50,7 @@ function stub(opts: { contactStatus?: number; conversationStatus?: number; botSt
       if (method === 'GET' && path === `/contacts/${CONV}/conversations`) {
         return new Response(JSON.stringify(opts.conversations ?? [{ id: 4242, status: 'open' }]), { status: 200 });
       }
+      if (method === 'PATCH' && path === `/contacts/${CONV}`) return new Response(JSON.stringify({ id: 77, name: body?.name }), { status: 200 });
       return new Response('unexpected client call', { status: 404 });
     }
     if (api === 'bot') {
@@ -201,6 +202,24 @@ test('postCustomerMessage sends the text from the visitor’s side and returns C
   assert.equal(typeof id, 'number');
   assert.equal(calls[0].api, 'client');
   assert.deepEqual(calls[0].body, { content: 'Any update?' });
+});
+
+test('openHandoff: a known name is the contact’s name; the number still never touches the contact', async () => {
+  const { client, calls } = stub();
+  await openHandoff(client, { ...HANDOFF, contactName: 'Harshit', contactPhone: '+919691982400' });
+  assert.equal(calls[0].body?.name, 'Harshit');
+  assert.equal(calls[0].body?.phone_number, undefined);
+  assert.equal((calls[1].body?.custom_attributes as Record<string, string>).mbm_phone, '+919691982400');
+});
+
+test('renameContact: the contact’s display name through the Client API, name only', async () => {
+  const { client, calls } = stub();
+  assert.equal(await renameContact(client, CONV, 'Harshit'), true);
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].api, 'client');
+  assert.equal(calls[0].method, 'PATCH');
+  assert.equal(calls[0].path, `/contacts/${CONV}`);
+  assert.deepEqual(calls[0].body, { name: 'Harshit' });
 });
 
 test('fetchMessages normalises numeric types and epoch timestamps, sorted by id, from a bare array or a payload', async () => {
