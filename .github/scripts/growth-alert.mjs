@@ -6,8 +6,10 @@
 // comment and is closed. Plain Node and the preinstalled `gh` CLI; no dependencies.
 //
 // Inputs (environment): COLLECT_RESULT, HEALTH_RESULT (success|failure|cancelled|skipped),
-// ALERTS (JSON array from docs/growth/alerts.json), REPORT_PATH, RUN_URL, GH_TOKEN, GH_REPO.
+// ALERTS_FILE (path to the alerts.json the collect job uploaded; missing when that job
+// failed early), REPORT_PATH, RUN_URL, GH_TOKEN, GH_REPO.
 import { execFileSync } from 'node:child_process';
+import { existsSync, readFileSync } from 'node:fs';
 
 const LABEL = 'growth-alert';
 const gh = (args, input) => execFileSync('gh', args, { encoding: 'utf8', input, stdio: ['pipe', 'pipe', 'inherit'] }).trim();
@@ -15,11 +17,17 @@ const gh = (args, input) => execFileSync('gh', args, { encoding: 'utf8', input, 
 const collect = process.env.COLLECT_RESULT ?? 'unknown';
 const health = process.env.HEALTH_RESULT ?? 'unknown';
 let alerts = [];
-try {
-  alerts = JSON.parse(process.env.ALERTS || '[]');
-} catch {
-  alerts = [{ severity: 'warn', message: 'alerts.json could not be parsed' }];
+const alertsFile = process.env.ALERTS_FILE ?? '';
+if (alertsFile && existsSync(alertsFile)) {
+  try {
+    alerts = JSON.parse(readFileSync(alertsFile, 'utf8'));
+  } catch {
+    alerts = [{ severity: 'warn', message: `${alertsFile} could not be parsed` }];
+  }
+} else if (collect === 'success') {
+  alerts = [{ severity: 'warn', message: 'the collect job succeeded but uploaded no alerts file' }];
 }
+console.log(`alerts file: ${alertsFile || '(none)'} → ${alerts.length} alert(s); collect=${collect}, site-health=${health}`);
 const problems = [];
 if (collect !== 'success') problems.push(`- **collect job ${collect}** — one or more sources did not report; the report marks them n/a.`);
 if (health !== 'success') problems.push(`- **site-health job ${health}** — the production crawl or the redirect sample failed.`);

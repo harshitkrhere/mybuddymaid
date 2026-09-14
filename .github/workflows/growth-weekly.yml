@@ -38,9 +38,6 @@ jobs:
     defaults:
       run:
         working-directory: next-app
-    outputs:
-      alerts: ${{ steps.report.outputs.alerts }}
-      report: ${{ steps.report.outputs.report }}
     env:
       GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
       GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
@@ -71,10 +68,15 @@ jobs:
         continue-on-error: true
         run: npm run growth:supabase
       - id: report
-        run: |
-          npm run growth:report -- ${{ inputs.baseline && '--baseline' || '' }}
-          echo "alerts=$(jq -c . ../docs/growth/alerts.json)" >> "$GITHUB_OUTPUT"
-          echo "report=docs/growth/reports/latest.md" >> "$GITHUB_OUTPUT"
+        run: npm run growth:report -- ${{ inputs.baseline && '--baseline' || '' }}
+      # The alert job reads the alerts as a file: a job output silently arrived empty on the
+      # first run (2026-09-15), and an artifact has no such ambiguity.
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: growth-alerts
+          path: docs/growth/alerts.json
+          if-no-files-found: ignore
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -139,9 +141,14 @@ jobs:
       GH_REPO: ${{ github.repository }}
       COLLECT_RESULT: ${{ needs.collect.result }}
       HEALTH_RESULT: ${{ needs.site-health.result }}
-      ALERTS: ${{ needs.collect.outputs.alerts }}
-      REPORT_PATH: ${{ needs.collect.outputs.report }}
+      ALERTS_FILE: alerts/alerts.json
+      REPORT_PATH: docs/growth/reports/latest.md
       RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        continue-on-error: true # absent when collect failed before writing the report
+        with:
+          name: growth-alerts
+          path: alerts
       - run: node .github/scripts/growth-alert.mjs
