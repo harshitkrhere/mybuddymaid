@@ -199,7 +199,12 @@ function funnelTable(site: Record<string, Pair>): string {
     step('Leads (call-back form)', site.leads),
     step('Signups (profiles created)', site.signups),
     step('Booking requests', site.bookingRequests),
-    step('Bookings active or completed', site.bookingsConfirmed),
+    '',
+    // Owner, 2026-09-15: the team calls every request but never moves the row from
+    // "pending" to "active", so the status says nothing about the outcome. Requests are the
+    // bookings number until the team records placements; the confirmed count stays in the
+    // summary JSON for the day it does.
+    '_Booking requests are the bookings number: the team contacts every request, but the booking status in the database is not updated afterwards, so "pending" does not mean unconverted. When placements start being marked active, a placements row appears here._',
   ].join('\n');
 }
 
@@ -351,7 +356,7 @@ export function composeBaseline(i: ReportInputs, r: ComposedReport): string {
     `| Chat conversations (escalated) | ${combo(['chats', 'escalated'], ([a, b]) => `${a} (${b})`)} | | | support_conversations |`,
     `| Leads | ${v('leads')} | | | leads table |`,
     `| Signups | ${v('signups')} | | | profiles |`,
-    `| Booking requests (active or completed) | ${combo(['bookingRequests', 'bookingsConfirmed'], ([a, b]) => `${a} (${b})`)} | | | bookings |`,
+    `| Booking requests | ${v('bookingRequests')} | | | bookings (status is not maintained by the team, so requests are the bookings number) |`,
     `| Session → WhatsApp/call click rate | ${pct(((s.whatsapp ?? 0) + (s.call ?? 0)) || null, s.organicSessions ?? null)} | | | derived |`,
     `| Click → signup rate | ${pct(s.signups ?? null, ((s.whatsapp ?? 0) + (s.call ?? 0) + (s.app ?? 0)) || null)} | | | derived (all clicks, not only organic) |`,
     `| Signup → booking request rate | ${pct(s.bookingRequests ?? null, s.signups ?? null)} | | | derived |`,
