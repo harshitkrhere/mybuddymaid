@@ -148,9 +148,14 @@ export function evaluateAlerts(i: ReportInputs, site: Record<string, Pair>, tier
   if ((site.staleLeads.cur ?? 0) > 10) {
     alerts.push({ id: 'stale-leads', severity: 'warn', metric: 'Leads waiting', message: `${site.staleLeads.cur} leads have sat in status 'new' for more than 24 hours`, current: site.staleLeads.cur, previous: null });
   }
+  // a few stray www impressions linger for weeks after a 308 to the apex; alert only when
+  // they are more than noise (over 20 and over 1 % of all impressions)
   const hosts = i.gsc?.hostsByImpressions ?? {};
+  const totalImp = Object.values(hosts).reduce((s, v) => s + v, 0);
   for (const [host, imp] of Object.entries(hosts)) {
-    if (/^www\./.test(host) && imp > 0) alerts.push({ id: `canonical-host:${host}`, severity: 'warn', metric: 'Non-canonical host', message: `${host} is getting impressions (${imp}); the canonical host is the apex`, current: imp, previous: null });
+    if (/^www\./.test(host) && imp > 20 && imp > totalImp * 0.01) {
+      alerts.push({ id: `canonical-host:${host}`, severity: 'warn', metric: 'Non-canonical host', message: `${host} is getting impressions (${imp}); the canonical host is the apex`, current: imp, previous: null });
+    }
   }
   return alerts;
 }

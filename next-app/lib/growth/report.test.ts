@@ -118,15 +118,15 @@ test('the report has a row for every city, Tier 1 first, with n/a for sources th
 
 test('alerts fire on an indexed-count drop, a stale-lead backlog and a www host, and respect the noise guards', () => {
   const previous: WeeklySummary = { asOf: '2026-09-04', windows: W, cities: {}, site: { indexedPass: 2500 }, alerts: [] };
-  const { alerts } = composeWeeklyReport(inputs({ previous, gsc: gsc({ hostsByImpressions: { 'mybuddymaid.in': 1000, 'www.mybuddymaid.in': 12 } }) }));
+  const { alerts } = composeWeeklyReport(inputs({ previous, gsc: gsc({ hostsByImpressions: { 'mybuddymaid.in': 1000, 'www.mybuddymaid.in': 120 } }) }));
   const ids = alerts.map((a) => a.id);
   assert.ok(ids.includes('gsc-indexed-drop'), '2200 vs 2500 is a 12% drop');
   assert.ok(ids.includes('stale-leads'));
   assert.ok(ids.includes('canonical-host:www.mybuddymaid.in'));
   assert.ok(!ids.includes('tier1-clicks-drop'), 'a click drop on fewer than 50 previous clicks is noise');
   assert.equal(alerts.find((a) => a.id === 'gsc-indexed-drop')?.severity, 'critical');
-  const quiet = composeWeeklyReport(inputs({ previous: { ...previous, site: { indexedPass: 2210 } }, supabase: null }));
-  assert.deepEqual(quiet.alerts, []);
+  const quiet = composeWeeklyReport(inputs({ previous: { ...previous, site: { indexedPass: 2210 } }, supabase: null, gsc: gsc({ hostsByImpressions: { 'mybuddymaid.in': 1000, 'www.mybuddymaid.in': 6 } }) }));
+  assert.deepEqual(quiet.alerts, [], 'a handful of stray www impressions is noise, not an alert');
 });
 
 test('the baseline table says which sources were not connected instead of carrying a zero', () => {
