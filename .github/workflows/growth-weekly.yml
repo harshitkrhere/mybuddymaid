@@ -47,7 +47,8 @@ jobs:
       BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
       NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-      GROWTH_RAW_DIR: ${{ runner.temp }}/raw
+      # a plain path: the `runner` context is not available in a job-level env block
+      GROWTH_RAW_DIR: /tmp/growth-raw
       GROWTH_END: ${{ inputs.end }}
     steps:
       - uses: actions/checkout@v4
@@ -78,7 +79,7 @@ jobs:
         if: always()
         with:
           name: growth-raw-${{ github.run_id }}
-          path: ${{ runner.temp }}/raw
+          path: /tmp/growth-raw
           retention-days: 90
           if-no-files-found: ignore
       - name: Commit snapshots and report

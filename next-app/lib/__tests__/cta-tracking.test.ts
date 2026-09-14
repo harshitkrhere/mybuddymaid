@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { ATTRIBUTION_KEYS, ATTR_FIRST_KEY, ATTR_SESSION_KEY } from '../../components/shared/Analytics';
+import { ATTRIBUTION_KEYS, ATTR_FIRST_KEY, ATTR_SESSION_KEY, GA_ID } from '../../components/shared/Analytics';
 import { NO_CONTEXT, trackAttrs } from '../../components/seo/CtaButtons';
 
 const REPO = resolve(fileURLToPath(import.meta.url), '../../../..');
@@ -44,8 +44,12 @@ test('both front-ends capture attribution into the same storage keys and tag the
   }
   assert.match(site, /source:'site'/);
   assert.match(app, /source:'app'/);
-  assert.match(app, /googletagmanager\.com\/gtag\/js\?id=G-R24QC81J4P/, 'the app reports to the same GA4 property as the site');
+  assert.ok(app.includes(`googletagmanager.com/gtag/js?id=${GA_ID}`), 'the app loads the same GA4 property as the site');
+  assert.ok(app.includes(`window.gtag('config','${GA_ID}'`), 'the app configures the same GA4 property as the site');
   assert.match(read('next-app/components/seo/LeadForm.tsx'), /attribution: readAttribution\(\)/);
+  // Umami was dropped on 2026-09-15 (owner decision): GA4 and Vercel Analytics are the two that remain
+  assert.doesNotMatch(site, /cloud\.umami\.is|data-website-id/);
+  assert.doesNotMatch(app, /cloud\.umami\.is|data-website-id/);
 });
 
 test('the chat widget reports its three moments as events, never the message or the number', () => {

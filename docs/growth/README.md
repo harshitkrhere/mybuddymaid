@@ -64,8 +64,9 @@ more than 10 leads waiting in `new` for over 24 h · a `www` host receiving impr
 6. **Register the GA4 dimensions** once: `npm run growth:ga4:register`. GA4 can only break an
    event down by a parameter that is registered as an event-scoped custom dimension, and
    registration is not retroactive, so CTA clicks by city exist only from 24–48 hours after
-   this run. Record the date here: **registered on: _(not yet)_**. Then downgrade the service
-   account to Viewer.
+   this run. Record the date here: **registered on: 2026-09-15** (property 554134326, the
+   owner's own; the six dimensions are city, zone, locality, service, pincode, source). Then
+   downgrade the service account to Viewer.
 7. Run the two workflows once by hand (Actions → *Growth — daily index census* → Run workflow
    with cap `25`; then *Growth — weekly report* with `baseline` ticked) and read
    `reports/latest.md`. Reconcile any GA4 geo city listed as "unmapped" into

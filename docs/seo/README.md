@@ -304,7 +304,9 @@ service slug is in `RESERVED_SLUGS` and the importer rejects reserved slugs.
 - **Rank tracking**: `docs/seo/keywords.csv` — 5,464 keywords, each mapped to the single
   URL that owns it, with a column showing whether that target is currently indexable.
   Keyword variants never get their own URL; the mapping is the proof.
-- **Analytics**: GA4 `G-R24QC81J4P` plus Umami. Clicks on WhatsApp, call and app CTAs
+- **Analytics**: GA4 `G-9T870SQ5F3` (the owner's property, created 2026-09-15; the legacy
+  `G-R24QC81J4P` belonged to a property nobody could open) plus Vercel Analytics. Umami was
+  dropped the same day: its dashboard was the old agency's and recorded nothing. Clicks on WhatsApp, call and app CTAs
   fire `whatsapp_click`, `call_click` and `app_click` with `city`, `zone`, `locality`,
   `service` and `pincode`, so every lead is attributable to the page that produced it.
   The lead form would fire `lead_submit` with the same parameters, but it ships
