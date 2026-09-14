@@ -4,6 +4,7 @@ import { supabase } from '../lib/supabase';
 import { PLAN_DETAILS } from '../lib/constants';
 // The paused-checkout switch is the owner's, set in next-app/data/seo/plans.ts and exported here.
 import { PURCHASES_PAUSED, CONTACT } from '../lib/serviceability';
+import { track } from '../lib/track';
 import {
   Crown, Check, Loader2, AlertCircle, Shield, Clock, Users,
   ChevronRight, Zap, Award, HeartHandshake, Mail, Phone,
@@ -57,6 +58,7 @@ export default function PricingPage() {
       const p = PLAN_DETAILS[planKey];
       setPausedPlanName(p?.name || planKey);
       setShowPausedModal(true);
+      track('paused_modal_shown', { plan: planKey });
       return;
     }
 
@@ -191,6 +193,8 @@ export default function PricingPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="paused-modal-btn paused-btn-whatsapp"
+                data-mbm-track="whatsapp_click"
+                data-mbm-service={`plan:${pausedPlanName}`}
               >
                 <MessageCircle size={20} />
                 <div>
@@ -202,6 +206,8 @@ export default function PricingPage() {
               <a
                 href={`tel:${SUPPORT_PHONE}`}
                 className="paused-modal-btn paused-btn-phone"
+                data-mbm-track="call_click"
+                data-mbm-service={`plan:${pausedPlanName}`}
               >
                 <PhoneCall size={20} />
                 <div>

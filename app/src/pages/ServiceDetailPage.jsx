@@ -3,7 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
 import { SERVICES } from '../lib/constants';
-import { CITIES, localitiesForCity, bookingLocationLabel } from '../lib/serviceability';
+import { CITIES, CONTACT, SPA_SERVICE_MAP, localitiesForCity, bookingLocationLabel } from '../lib/serviceability';
+import { track } from '../lib/track';
 import { SERVICE_ICONS, SERVICE_COLORS } from '../components/ServiceIcons';
 import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone, Headphones, X, MessageCircle } from 'lucide-react';
 
@@ -36,7 +37,8 @@ export default function ServiceDetailPage() {
   const [error, setError] = useState('');
   const [showSupport, setShowSupport] = useState(false);
 
-  const SUPPORT_PHONE = '9355114869';
+  // The data-layer slug for this service, for the events; the app's own ids differ.
+  const serviceSlug = SPA_SERVICE_MAP[serviceId] || serviceId;
 
   if (!service) {
     return (
@@ -69,6 +71,7 @@ export default function ServiceDetailPage() {
         notes: notes.trim(),
       });
       setSuccess(true);
+      track('booking_requested', { service: serviceSlug, city: citySlug, locality: localitySlug });
       // Send booking confirmation email (non-blocking)
       try {
         await supabase.functions.invoke('send-booking-email', {
@@ -204,21 +207,27 @@ export default function ServiceDetailPage() {
             <button className="support-close" onClick={() => setShowSupport(false)}><X size={18} /></button>
             <h3 className="support-title">Contact Support</h3>
             <p className="support-sub">Choose how you'd like to reach us</p>
+            {/* number from the data layer (data/seo/contact.ts via serviceability.json); the
+                data-mbm-* attributes make these clicks the same GA4 events as the site's CTAs */}
             <a
-              href={`tel:+91${SUPPORT_PHONE}`}
+              href={`tel:${CONTACT.phoneE164}`}
               className="support-option support-call"
+              data-mbm-track="call_click"
+              data-mbm-service={serviceSlug}
             >
               <Phone size={20} />
               <div>
                 <span className="support-option-label">Call Us</span>
-                <span className="support-option-sub">+91 {SUPPORT_PHONE}</span>
+                <span className="support-option-sub">{CONTACT.phoneDisplay}</span>
               </div>
             </a>
             <a
-              href={`https://wa.me/91${SUPPORT_PHONE}?text=${encodeURIComponent(`Hi MyBuddyMaid, I need help with ${service.name} service. Please assist me.`)}`}
+              href={`https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(`Hi MyBuddyMaid, I need help with ${service.name} service. Please assist me.`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="support-option support-wa"
+              data-mbm-track="whatsapp_click"
+              data-mbm-service={serviceSlug}
             >
               <MessageCircle size={20} />
               <div>

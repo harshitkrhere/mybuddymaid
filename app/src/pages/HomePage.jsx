@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { SERVICES, PLAN_DETAILS } from '../lib/constants';
 import { SERVICE_ICONS, SERVICE_COLORS } from '../components/ServiceIcons';
-import { Shield, Clock, Star, ChevronRight, Crown, Sparkles } from 'lucide-react';
+import { Shield, ChevronRight, Crown, Sparkles } from 'lucide-react';
 
 export default function HomePage() {
   const { user, profile, userPlan, userBookings } = useAuth();
@@ -86,10 +86,10 @@ export default function HomePage() {
         )}
       </section>
 
+      {/* Only claims with a system of record behind them: the invented rating, family count and
+          deployment time were removed (ASSUMPTIONS.md #47 — real facts or none at all). */}
       <div className="home-trust">
         <span className="home-trust-chip"><Shield size={14} /> Verified Helpers</span>
-        <span className="home-trust-chip"><Clock size={14} /> 24hr Deployment</span>
-        <span className="home-trust-chip"><Star size={14} /> 4.9 Rating</span>
       </div>
 
       <section className="home-section">
@@ -151,12 +151,6 @@ export default function HomePage() {
           <p>Verified, trained & background-checked helpers</p>
         </div>
       </section>
-
-      <div className="home-stats">
-        <div className="home-stat"><strong>12K+</strong><span>Families Served</span></div>
-        <div className="home-stat"><strong>4.9</strong><span>Avg Rating</span></div>
-        <div className="home-stat"><strong>24hr</strong><span>Deployment</span></div>
-      </div>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { CITIES } from '../lib/serviceability';
+import { track } from '../lib/track';
 import { User, Phone, Mail, MapPin, ArrowRight, Loader2, Home as HomeIcon } from 'lucide-react';
 
 export default function OnboardingPage() {
@@ -33,6 +34,8 @@ export default function OnboardingPage() {
         email: authEmail,
         city,
       });
+      // the one moment that means "a new account is usable": sign-up alone may never verify
+      track('onboarding_completed', { city });
       navigate('/home', { replace: true });
     } catch (err) {
       setError(err.message || 'Something went wrong. Please try again.');
