@@ -32,3 +32,7 @@ next-app/data/seo/entities.json.*.tmp
 # The example file documents the variables and holds no values; it is meant to be committed.
 !.env.example
 !next-app/.env.example
+
+# Raw Search Console CSV exports from scripts/seo/gsc-report.ts (the growth pipeline keeps
+# its committed snapshots under docs/growth/ instead)
+/reports/

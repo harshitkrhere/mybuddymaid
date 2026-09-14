@@ -1,0 +1,59 @@
+# Growth — daily index census (docs/growth/README.md).
+#
+# Inspects the slice of the indexable estate that is due through the Search Console URL
+# Inspection API (400 URLs a day, inside the 2,000/day quota; the whole estate roughly weekly)
+# and commits the verdict ledger. Data only: the commit step refuses to stage anything outside
+# docs/growth/. Pushes made with GITHUB_TOKEN do not trigger other workflows, and [skip ci]
+# is in the message for anyone who re-pushes by hand.
+#
+# Secret: GSC_SERVICE_ACCOUNT_JSON — the service-account key file's JSON. The account must be
+# a Full user on the Search Console property (a Restricted user gets 403 from this API).
+name: Growth — daily index census
+
+on:
+  schedule:
+    - cron: '17 2 * * *' # 07:47 IST
+  workflow_dispatch:
+    inputs:
+      cap:
+        description: URLs to inspect (400 for a normal day, 25 for a smoke test)
+        required: false
+        default: '400'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: growth-data
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: next-app
+    env:
+      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: next-app/package-lock.json
+      - run: npm ci
+      - name: Inspect today's slice
+        run: npm run growth:inspect -- --cap "${{ inputs.cap || '400' }}"
+      - name: Commit the ledger
+        if: always()
+        working-directory: ${{ github.workspace }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/growth/data/inspection
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          if git diff --cached --name-only | grep -v '^docs/growth/'; then echo "::error::a path outside docs/growth/ was staged"; exit 1; fi
+          git commit -m "growth: daily index census $(date -u +%F) [skip ci]"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"

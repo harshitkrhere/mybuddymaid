@@ -24,7 +24,17 @@
     "seo:keywords": "tsx scripts/seo/gen-keywords.ts",
     "seo:draft": "tsx scripts/seo/draft-copy.ts",
     "seo:gsc": "tsx scripts/seo/gsc-report.ts",
-    "seo:export-spa": "tsx scripts/seo/export-serviceability.ts"
+    "seo:export-spa": "tsx scripts/seo/export-serviceability.ts",
+    "growth:gsc": "tsx scripts/growth/gsc.ts",
+    "growth:inspect": "tsx scripts/growth/inspect.ts",
+    "growth:ga4": "tsx scripts/growth/ga4.ts",
+    "growth:ga4:register": "tsx scripts/growth/ga4-register-dimensions.ts",
+    "growth:bing": "tsx scripts/growth/bing.ts",
+    "growth:supabase": "tsx scripts/growth/supabase.ts",
+    "growth:report": "tsx scripts/growth/weekly-report.ts",
+    "growth:freshness": "tsx scripts/growth/freshness.ts",
+    "growth:all": "npm run growth:gsc && npm run growth:ga4 && npm run growth:bing && npm run growth:supabase && npm run growth:report",
+    "release:batch": "tsx scripts/growth/release-batch.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
