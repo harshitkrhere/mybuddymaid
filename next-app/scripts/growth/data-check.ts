@@ -3,6 +3,12 @@
 // booking requests in one week real activity or a database copy, and why did 61 booking
 // cities not match the eight served cities?
 //
+// The first run (2026-09-15) answered the second: the `city` column mostly holds a STATE
+// ("Uttar Pradesh", "Gujarat", …), written by the old booking flow, and more than half of all
+// booking requests came from states outside the eight cities. It also showed sign-ups and
+// bookings falling from ~65 and ~30 a day to a handful on 2026-09-07, the relaunch day — so
+// the day tables now run to today and split bookings into inside / outside the footprint.
+//
 // Prints aggregates only — counts per day, per status, and the raw city strings that the
 // report could not match — never a name, e-mail or phone number. Runs where the service
 // key lives (GitHub Actions, growth-datacheck.yml) or locally with the two variables set:
@@ -14,6 +20,7 @@ import { CITIES, ZONES } from '../../data/seo';
 import { fetchAll, normaliseCityText, type PgClient } from '../../lib/growth/supabase';
 import { fail, fetchImpl } from './_env';
 
+const DAYS = 45;
 const day = (ts: string) => ts.slice(0, 10);
 const month = (ts: string) => ts.slice(0, 7);
 const count = (m: Record<string, number>, k: string) => {
@@ -37,34 +44,61 @@ async function main() {
   console.log(`profiles: ${profiles.length} rows, first ${profiles[0] ? day(profiles[0].created_at) : '-'}, last ${profiles.at(-1) ? day(profiles.at(-1)!.created_at) : '-'}`);
   console.log(`bookings: ${bookings.length} rows, first ${bookings[0] ? day(bookings[0].created_at) : '-'}, last ${bookings.at(-1) ? day(bookings.at(-1)!.created_at) : '-'}`);
 
+  const since = new Date(Date.now() - DAYS * 86400000).toISOString().slice(0, 10);
+  const matchOf = (b: { city: string | null }) => normaliseCityText(b.city, CITIES, ZONES);
+
   const pm: Record<string, number> = {};
   for (const p of profiles) count(pm, month(p.created_at));
   table('Profiles created, by month', pm);
-  const pd: Record<string, number> = {};
-  const since = new Date(Date.now() - 45 * 86400000).toISOString().slice(0, 10);
-  for (const p of profiles) if (day(p.created_at) >= since) count(pd, day(p.created_at));
-  table('Profiles created, by day (last 45 days)', pd);
 
   const bm: Record<string, number> = {};
   for (const b of bookings) count(bm, month(b.created_at));
   table('Bookings created, by month', bm);
-  const bd: Record<string, number> = {};
-  for (const b of bookings) if (day(b.created_at) >= since) count(bd, day(b.created_at));
-  table('Bookings created, by day (last 45 days)', bd);
+
+  // One row per day, every day, so a cliff is visible as a cliff and not as a missing row.
+  console.log(`\n### By day, last ${DAYS} days — sign-ups, and booking requests inside / outside the eight cities\n`);
+  console.log('| Day | Sign-ups | Booking requests | In the eight cities | City not matched |\n|---|---:|---:|---:|---:|');
+  const pd: Record<string, number> = {};
+  for (const p of profiles) if (day(p.created_at) >= since) count(pd, day(p.created_at));
+  const bd: Record<string, { all: number; inside: number; outside: number }> = {};
+  for (const b of bookings) {
+    const d = day(b.created_at);
+    if (d < since) continue;
+    const row = (bd[d] ??= { all: 0, inside: 0, outside: 0 });
+    row.all++;
+    if (matchOf(b)) row.inside++;
+    else row.outside++;
+  }
+  for (let i = DAYS; i >= 0; i--) {
+    const d = new Date(Date.now() - i * 86400000).toISOString().slice(0, 10);
+    const r = bd[d] ?? { all: 0, inside: 0, outside: 0 };
+    console.log(`| ${d} | ${pd[d] ?? 0} | ${r.all} | ${r.inside} | ${r.outside} |`);
+  }
 
   const st: Record<string, number> = {};
   for (const b of bookings) count(st, b.status ?? '(null)');
   table('Bookings by status (all time)', st, false);
 
   const matched: Record<string, number> = {};
+  const matchedRecent: Record<string, number> = {};
   const unmatched: Record<string, number> = {};
+  const unmatchedRecent: Record<string, number> = {};
   for (const b of bookings) {
-    const slug = normaliseCityText(b.city, CITIES, ZONES);
-    if (slug) count(matched, slug);
-    else count(unmatched, (b.city ?? '(empty)').trim().slice(0, 40) || '(empty)');
+    const slug = matchOf(b);
+    const recent = day(b.created_at) >= since;
+    if (slug) {
+      count(matched, slug);
+      if (recent) count(matchedRecent, slug);
+    } else {
+      const k = (b.city ?? '(empty)').trim().slice(0, 40) || '(empty)';
+      count(unmatched, k);
+      if (recent) count(unmatchedRecent, k);
+    }
   }
   table('Bookings by matched city (all time)', matched, false);
+  table(`Bookings by matched city (last ${DAYS} days)`, matchedRecent, false);
   table('City strings the report could not match (all time, top 40)', unmatched, false);
+  table(`City strings the report could not match (last ${DAYS} days, top 40)`, unmatchedRecent, false);
 }
 
 main().catch((e) => {
