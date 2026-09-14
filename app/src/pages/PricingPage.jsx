@@ -5,6 +5,7 @@ import { PLAN_DETAILS } from '../lib/constants';
 // The paused-checkout switch is the owner's, set in next-app/data/seo/plans.ts and exported here.
 import { PURCHASES_PAUSED, CONTACT } from '../lib/serviceability';
 import { track } from '../lib/track';
+import { readContext } from '../lib/context';
 import {
   Crown, Check, Loader2, AlertCircle, Shield, Clock, Users,
   ChevronRight, Zap, Award, HeartHandshake, Mail, Phone,
@@ -45,7 +46,8 @@ export default function PricingPage() {
     if (profile?.phone && !phoneTouched.current) setBuyPhone(profile.phone);
   }, [profile?.phone]);
   const [contactError, setContactError] = useState('');
-  const [selectedPlan, setSelectedPlan] = useState('gold');
+  // The plan the site's card named, when the visitor came from one (lib/context.js); Gold otherwise.
+  const [selectedPlan, setSelectedPlan] = useState(() => readContext()?.plan || 'gold');
   const [showPausedModal, setShowPausedModal] = useState(false);
   const [pausedPlanName, setPausedPlanName] = useState('');
 

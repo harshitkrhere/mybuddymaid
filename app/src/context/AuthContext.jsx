@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { supabase } from '../lib/supabase';
+import { bookingRow, legacyBookingRow, isUnknownColumnError } from '../lib/booking';
 
 const AuthContext = createContext({});
 
@@ -150,19 +151,14 @@ export function AuthProvider({ children }) {
 
   const createBooking = async (bookingData) => {
     if (!user) throw new Error('Not authenticated');
-    const { data, error } = await supabase
-      .from('bookings')
-      .insert({
-        user_id: user.id,
-        service: bookingData.service_type,
-        email: bookingData.email || '',
-        phone: bookingData.phone || '',
-        city: bookingData.city || profile?.city || 'Delhi',
-        notes: bookingData.notes || '',
-        status: 'pending',
-      })
-      .select()
-      .single();
+    const row = bookingRow(bookingData, { userId: user.id, profileCity: profile?.city });
+    let { data, error } = await supabase.from('bookings').insert(row).select().single();
+    if (error && isUnknownColumnError(error)) {
+      // The location columns arrive with the 2026-09-15 migration. Until the owner applies it
+      // the database knows only the old columns — write those rather than lose the booking.
+      console.warn('[MyBuddyMaid] bookings has no location columns yet; writing the legacy row:', error.message);
+      ({ data, error } = await supabase.from('bookings').insert(legacyBookingRow(row)).select().single());
+    }
     if (error) throw error;
     setUserBookings(prev => [data, ...prev]);
     return data;

@@ -3,10 +3,12 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../lib/supabase';
 import { SERVICES } from '../lib/constants';
-import { CITIES, CONTACT, SPA_SERVICE_MAP, localitiesForCity, bookingLocationLabel } from '../lib/serviceability';
+import { CITIES, CONTACT, SPA_SERVICE_MAP, localitiesForCity, localityBySlug, bookingLocationLabel } from '../lib/serviceability';
 import { track } from '../lib/track';
+import { readContext } from '../lib/context';
+import { readAttribution } from '../lib/booking';
 import { SERVICE_ICONS, SERVICE_COLORS } from '../components/ServiceIcons';
-import { ArrowLeft, Check, MapPin, FileText, Loader2, CheckCircle2, Mail, Phone, Headphones, X, MessageCircle } from 'lucide-react';
+import { ArrowLeft, Check, MapPin, FileText, Building2, Loader2, CheckCircle2, Mail, Phone, Headphones, X, MessageCircle } from 'lucide-react';
 
 export default function ServiceDetailPage() {
   const { serviceId } = useParams();
@@ -29,8 +31,12 @@ export default function ServiceDetailPage() {
   }, [profile?.phone]);
   // Location comes from the SEO data layer (app/src/lib/serviceability.json), so the
   // form can only ever offer areas we actually serve.
-  const [citySlug, setCitySlug] = useState('');
-  const [localitySlug, setLocalitySlug] = useState('');
+  // Pre-filled from the site's CTA context when the visitor came from a location page
+  // (lib/context.js, FIN-B02); empty otherwise, as before.
+  const [ctx] = useState(() => readContext());
+  const [citySlug, setCitySlug] = useState(ctx?.city || '');
+  const [localitySlug, setLocalitySlug] = useState(ctx?.locality || '');
+  const [society, setSociety] = useState('');
   const [notes, setNotes] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -69,6 +75,12 @@ export default function ServiceDetailPage() {
         phone: bookPhone.trim(),
         city: locationLabel,
         notes: notes.trim(),
+        // the data layer's shape too, so the booking is a demand signal for a specific society
+        city_slug: citySlug,
+        locality_slug: localitySlug,
+        pincode: localityBySlug(citySlug, localitySlug)?.pincodes?.[0] || null,
+        society: society.trim() || null,
+        attribution: readAttribution(),
       });
       setSuccess(true);
       track('booking_requested', { service: serviceSlug, city: citySlug, locality: localitySlug });
@@ -169,6 +181,10 @@ export default function ServiceDetailPage() {
                         </option>
                       ))}
                     </select>
+                  </div>
+                  <div className="booking-field">
+                    <label><Building2 size={14} /> Society / building (optional)</label>
+                    <input type="text" value={society} onChange={e => setSociety(e.target.value)} placeholder="Name of your society or building" maxLength={120} />
                   </div>
                   <div className="booking-field">
                     <label><FileText size={14} /> Notes (optional)</label>

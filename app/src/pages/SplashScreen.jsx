@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { readContext, destinationFor, markRouted } from '../lib/context';
 
 export default function SplashScreen() {
   const navigate = useNavigate();
-  const location = useLocation();
   const { isAuthenticated, loading } = useAuth();
   const [timerDone, setTimerDone] = useState(false);
 
@@ -25,20 +25,12 @@ export default function SplashScreen() {
       return;
     }
 
-    const ctx = location.state?.redirectContext || sessionStorage.getItem('mbm_redirect_context');
-    sessionStorage.removeItem('mbm_redirect_context');
-
-    let destination = '/home';
-    if (ctx) {
-      const serviceIds = ['part-time', 'full-time', 'elderly-care', 'cook', 'nanny', 'postnatal'];
-      const planNames = ['silver', 'gold', 'diamond'];
-      if (ctx === 'book') destination = '/services';
-      else if (serviceIds.includes(ctx)) destination = `/services/${ctx}`;
-      else if (planNames.includes(ctx)) destination = '/profile?tab=packages';
-    }
-
-    navigate(destination, { replace: true });
-  }, [timerDone, loading, isAuthenticated, navigate, location.state]);
+    // The context the site's CTA passed (lib/context.js) routes once — to the service, the
+    // services list or the pricing page — and stays for the booking sheet to pre-fill from.
+    const destination = destinationFor(readContext());
+    if (destination) markRouted();
+    navigate(destination || '/home', { replace: true });
+  }, [timerDone, loading, isAuthenticated, navigate]);
 
   return (
     <div className="splash-screen">
