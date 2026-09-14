@@ -24,7 +24,10 @@
 // with source 'app'; lib/__tests__/cta-tracking.test.ts pins the two to the same keys.
 import Script from 'next/script';
 
-export const GA_ID = 'G-R24QC81J4P';
+// The owner's own GA4 property, created 2026-09-15. The previous id (G-R24QC81J4P) came
+// with the legacy site and belonged to a property nobody at the company could open, so the
+// clicks recorded under it were never readable. app/index.html carries the same id.
+export const GA_ID = 'G-9T870SQ5F3';
 const UMAMI_ID = '90b0b752-39a0-4d32-a614-8dcc9d242af8';
 const IDLE_MS = 4000;
 
