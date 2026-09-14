@@ -34,7 +34,8 @@
     "growth:report": "tsx scripts/growth/weekly-report.ts",
     "growth:freshness": "tsx scripts/growth/freshness.ts",
     "growth:all": "npm run growth:gsc && npm run growth:ga4 && npm run growth:bing && npm run growth:supabase && npm run growth:report",
-    "release:batch": "tsx scripts/growth/release-batch.ts"
+    "release:batch": "tsx scripts/growth/release-batch.ts",
+    "growth:playbooks": "tsx scripts/growth/playbooks.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
