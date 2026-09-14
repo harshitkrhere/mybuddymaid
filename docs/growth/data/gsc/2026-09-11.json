@@ -1,0 +1,2141 @@
+{
+  "kind": "gsc",
+  "version": 1,
+  "generatedAt": "2026-09-14T18:51:06.202Z",
+  "site": "sc-domain:mybuddymaid.in",
+  "windows": {
+    "current": {
+      "start": "2026-09-05",
+      "end": "2026-09-11"
+    },
+    "previous": {
+      "start": "2026-08-29",
+      "end": "2026-09-04"
+    }
+  },
+  "byCity": {
+    "current": {
+      "national": {
+        "clicks": 2263,
+        "impressions": 38994,
+        "position": 8.5,
+        "pages": 2570
+      },
+      "mangalore": {
+        "clicks": 23,
+        "impressions": 300,
+        "position": 6.8,
+        "pages": 16
+      },
+      "delhi": {
+        "clicks": 33,
+        "impressions": 729,
+        "position": 9.6,
+        "pages": 33
+      },
+      "gurgaon": {
+        "clicks": 19,
+        "impressions": 445,
+        "position": 21.1,
+        "pages": 13
+      },
+      "pune": {
+        "clicks": 16,
+        "impressions": 503,
+        "position": 9,
+        "pages": 25
+      },
+      "bangalore": {
+        "clicks": 12,
+        "impressions": 443,
+        "position": 14.5,
+        "pages": 22
+      },
+      "mumbai": {
+        "clicks": 10,
+        "impressions": 559,
+        "position": 15,
+        "pages": 28
+      },
+      "greater-noida": {
+        "clicks": 7,
+        "impressions": 165,
+        "position": 10.6,
+        "pages": 12
+      },
+      "other": {
+        "clicks": 10,
+        "impressions": 238,
+        "position": 5.7,
+        "pages": 40
+      },
+      "noida": {
+        "clicks": 5,
+        "impressions": 161,
+        "position": 22.5,
+        "pages": 15
+      }
+    },
+    "previous": {
+      "national": {
+        "clicks": 2450,
+        "impressions": 43358,
+        "position": 9.1,
+        "pages": 2692
+      },
+      "other": {
+        "clicks": 7,
+        "impressions": 218,
+        "position": 6.3,
+        "pages": 42
+      }
+    }
+  },
+  "byPageType": {
+    "current": {
+      "home": {
+        "clicks": 217,
+        "impressions": 744,
+        "position": 3.1,
+        "pages": 3
+      },
+      "trust": {
+        "clicks": 2038,
+        "impressions": 37807,
+        "position": 8.6,
+        "pages": 2534
+      },
+      "service-city": {
+        "clicks": 40,
+        "impressions": 1134,
+        "position": 17.5,
+        "pages": 25
+      },
+      "service-locality": {
+        "clicks": 38,
+        "impressions": 927,
+        "position": 10.4,
+        "pages": 86
+      },
+      "city": {
+        "clicks": 15,
+        "impressions": 535,
+        "position": 13.6,
+        "pages": 9
+      },
+      "locality": {
+        "clicks": 28,
+        "impressions": 630,
+        "position": 8.5,
+        "pages": 40
+      },
+      "blog": {
+        "clicks": 8,
+        "impressions": 415,
+        "position": 8.5,
+        "pages": 29
+      },
+      "zone": {
+        "clicks": 4,
+        "impressions": 79,
+        "position": 11.3,
+        "pages": 4
+      },
+      "other": {
+        "clicks": 10,
+        "impressions": 238,
+        "position": 5.7,
+        "pages": 40
+      },
+      "service-hub": {
+        "clicks": 0,
+        "impressions": 28,
+        "position": 18.5,
+        "pages": 4
+      }
+    },
+    "previous": {
+      "home": {
+        "clicks": 115,
+        "impressions": 597,
+        "position": 4.4,
+        "pages": 7
+      },
+      "trust": {
+        "clicks": 2329,
+        "impressions": 42503,
+        "position": 9.2,
+        "pages": 2665
+      },
+      "blog": {
+        "clicks": 6,
+        "impressions": 258,
+        "position": 9.9,
+        "pages": 20
+      },
+      "other": {
+        "clicks": 7,
+        "impressions": 218,
+        "position": 6.3,
+        "pages": 42
+      }
+    }
+  },
+  "hostsByImpressions": {
+    "mybuddymaid.in": 42531,
+    "www.mybuddymaid.in": 6
+  },
+  "topPages": [
+    {
+      "path": "/",
+      "clicks": 217,
+      "impressions": 716
+    },
+    {
+      "path": "/maid-service-in-vadodara",
+      "clicks": 83,
+      "impressions": 1061
+    },
+    {
+      "path": "/maid-service-in-dehradun",
+      "clicks": 69,
+      "impressions": 756
+    },
+    {
+      "path": "/maid-service-in-mysore",
+      "clicks": 37,
+      "impressions": 326
+    },
+    {
+      "path": "/full-time-maid-service-in-chennai",
+      "clicks": 36,
+      "impressions": 568
+    },
+    {
+      "path": "/maid-service-in-ludhiana",
+      "clicks": 29,
+      "impressions": 440
+    },
+    {
+      "path": "/cook-service-in-dehradun",
+      "clicks": 27,
+      "impressions": 404
+    },
+    {
+      "path": "/maid-service-in-visakhapatnam",
+      "clicks": 25,
+      "impressions": 318
+    },
+    {
+      "path": "/cook-service-in-kochi",
+      "clicks": 25,
+      "impressions": 304
+    },
+    {
+      "path": "/maid-service-in-kochi",
+      "clicks": 21,
+      "impressions": 412
+    },
+    {
+      "path": "/maid-service-in-kanpur",
+      "clicks": 21,
+      "impressions": 276
+    },
+    {
+      "path": "/maid-service-in-raipur",
+      "clicks": 17,
+      "impressions": 179
+    },
+    {
+      "path": "/nanny-service-in-dehradun",
+      "clicks": 16,
+      "impressions": 221
+    },
+    {
+      "path": "/services/full-time-maid/mangalore",
+      "clicks": 14,
+      "impressions": 141
+    },
+    {
+      "path": "/cook-service-in-ranchi",
+      "clicks": 13,
+      "impressions": 201
+    },
+    {
+      "path": "/nanny-service-in-lucknow",
+      "clicks": 13,
+      "impressions": 115
+    },
+    {
+      "path": "/nanny-service-in-hyderabad",
+      "clicks": 12,
+      "impressions": 289
+    },
+    {
+      "path": "/maid-service-in-rohini-delhi",
+      "clicks": 12,
+      "impressions": 276
+    },
+    {
+      "path": "/cook-service-in-bhubaneswar",
+      "clicks": 12,
+      "impressions": 215
+    },
+    {
+      "path": "/full-time-maid-service-in-chandigarh",
+      "clicks": 12,
+      "impressions": 185
+    },
+    {
+      "path": "/nanny-service-in-greater-faridabad-faridabad",
+      "clicks": 12,
+      "impressions": 165
+    },
+    {
+      "path": "/cook-service-in-bejai-mangalore",
+      "clicks": 12,
+      "impressions": 89
+    },
+    {
+      "path": "/full-time-maid-service-in-ahmedabad",
+      "clicks": 11,
+      "impressions": 205
+    },
+    {
+      "path": "/nanny-service-in-vadodara",
+      "clicks": 11,
+      "impressions": 156
+    },
+    {
+      "path": "/full-time-maid-service-in-panchkula-chandigarh",
+      "clicks": 11,
+      "impressions": 84
+    },
+    {
+      "path": "/maid-service-in-varanasi",
+      "clicks": 10,
+      "impressions": 153
+    },
+    {
+      "path": "/cook-service-in-surat",
+      "clicks": 10,
+      "impressions": 84
+    },
+    {
+      "path": "/full-time-maid-service-in-raipur",
+      "clicks": 10,
+      "impressions": 72
+    },
+    {
+      "path": "/cook-service-in-nashik",
+      "clicks": 10,
+      "impressions": 56
+    },
+    {
+      "path": "/maid-service-in-civil-lines-agra",
+      "clicks": 9,
+      "impressions": 269
+    },
+    {
+      "path": "/cook-service-in-nagpur",
+      "clicks": 9,
+      "impressions": 86
+    },
+    {
+      "path": "/cook-service-in-kondapur-hyderabad",
+      "clicks": 9,
+      "impressions": 68
+    },
+    {
+      "path": "/full-time-maid-service-in-noida",
+      "clicks": 8,
+      "impressions": 190
+    },
+    {
+      "path": "/best-maid-service-in-varanasi",
+      "clicks": 8,
+      "impressions": 178
+    },
+    {
+      "path": "/nanny-service-in-secunderabad-hyderabad",
+      "clicks": 8,
+      "impressions": 167
+    },
+    {
+      "path": "/nanny-service-in-guwahati",
+      "clicks": 8,
+      "impressions": 127
+    },
+    {
+      "path": "/best-maid-service-in-vijayawada",
+      "clicks": 8,
+      "impressions": 99
+    },
+    {
+      "path": "/cook-service-in-mangalore",
+      "clicks": 8,
+      "impressions": 90
+    },
+    {
+      "path": "/nanny-service-in-raipur",
+      "clicks": 8,
+      "impressions": 90
+    },
+    {
+      "path": "/cook-service-in-greater-noida-west-noida",
+      "clicks": 8,
+      "impressions": 82
+    },
+    {
+      "path": "/best-maid-service-in-raipur",
+      "clicks": 8,
+      "impressions": 78
+    },
+    {
+      "path": "/nanny-service-in-vijayawada",
+      "clicks": 8,
+      "impressions": 62
+    },
+    {
+      "path": "/cook-service-in-thiruvananthapuram",
+      "clicks": 8,
+      "impressions": 45
+    },
+    {
+      "path": "/full-time-maid-service-in-delhi",
+      "clicks": 7,
+      "impressions": 398
+    },
+    {
+      "path": "/nanny-service-in-kolkata",
+      "clicks": 7,
+      "impressions": 224
+    },
+    {
+      "path": "/full-time-maid-service-in-agra",
+      "clicks": 7,
+      "impressions": 116
+    },
+    {
+      "path": "/maid-service-in-aluva-kochi",
+      "clicks": 7,
+      "impressions": 114
+    },
+    {
+      "path": "/full-time-maid-service-in-mangalore",
+      "clicks": 7,
+      "impressions": 111
+    },
+    {
+      "path": "/maid-service-in-circuit-house-area-jodhpur",
+      "clicks": 7,
+      "impressions": 108
+    },
+    {
+      "path": "/maid-service-in-agra",
+      "clicks": 7,
+      "impressions": 95
+    }
+  ],
+  "keywords": [
+    {
+      "city": "delhi",
+      "keyword": "maid service in delhi",
+      "targetUrl": "/delhi",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "maid service in new delhi",
+      "targetUrl": "/delhi",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "maid service in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "maid agency in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "maid provider in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "house maid in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "housemaid in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "professional maid service in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "best maid service in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "verified maid service in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "reliable maid service in hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "maid near me hauz khas",
+      "targetUrl": "/delhi/hauz-khas",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "maid service in chanakyapuri",
+      "targetUrl": "/delhi/chanakyapuri",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "maid agency in chanakyapuri",
+      "targetUrl": "/delhi/chanakyapuri",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "maid provider in chanakyapuri",
+      "targetUrl": "/delhi/chanakyapuri",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "house maid in chanakyapuri",
+      "targetUrl": "/delhi/chanakyapuri",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "housemaid in chanakyapuri",
+      "targetUrl": "/delhi/chanakyapuri",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "professional maid service in chanakyapuri",
+      "targetUrl": "/delhi/chanakyapuri",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "best maid service in chanakyapuri",
+      "targetUrl": "/delhi/chanakyapuri",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "delhi",
+      "keyword": "verified maid service in chanakyapuri",
+      "targetUrl": "/delhi/chanakyapuri",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid service in noida",
+      "targetUrl": "/noida",
+      "priority": "very-high",
+      "current": {
+        "impressions": 1,
+        "clicks": 0,
+        "position": 81,
+        "topPage": "https://mybuddymaid.in/noida",
+        "onTarget": true
+      },
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid service in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid agency in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid provider in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "house maid in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "housemaid in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "professional maid service in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "best maid service in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "verified maid service in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "reliable maid service in sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid near me sector 50",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid service in sector 50 noida",
+      "targetUrl": "/noida/sector-50",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid service in sector 51",
+      "targetUrl": "/noida/sector-51",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid agency in sector 51",
+      "targetUrl": "/noida/sector-51",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "maid provider in sector 51",
+      "targetUrl": "/noida/sector-51",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "house maid in sector 51",
+      "targetUrl": "/noida/sector-51",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "housemaid in sector 51",
+      "targetUrl": "/noida/sector-51",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "professional maid service in sector 51",
+      "targetUrl": "/noida/sector-51",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "best maid service in sector 51",
+      "targetUrl": "/noida/sector-51",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "noida",
+      "keyword": "verified maid service in sector 51",
+      "targetUrl": "/noida/sector-51",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid service in gurgaon",
+      "targetUrl": "/gurgaon",
+      "priority": "very-high",
+      "current": {
+        "impressions": 3,
+        "clicks": 0,
+        "position": 61.3,
+        "topPage": "https://mybuddymaid.in/gurgaon",
+        "onTarget": true
+      },
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid service in gurugram",
+      "targetUrl": "/gurgaon",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid service in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid agency in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid provider in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "house maid in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "housemaid in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "professional maid service in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "best maid service in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "verified maid service in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "reliable maid service in dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid near me dlf phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid service in dlf city phase 1",
+      "targetUrl": "/gurgaon/dlf-phase-1",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid service in dlf phase 2",
+      "targetUrl": "/gurgaon/dlf-phase-2",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid agency in dlf phase 2",
+      "targetUrl": "/gurgaon/dlf-phase-2",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "maid provider in dlf phase 2",
+      "targetUrl": "/gurgaon/dlf-phase-2",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "house maid in dlf phase 2",
+      "targetUrl": "/gurgaon/dlf-phase-2",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "housemaid in dlf phase 2",
+      "targetUrl": "/gurgaon/dlf-phase-2",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "professional maid service in dlf phase 2",
+      "targetUrl": "/gurgaon/dlf-phase-2",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "gurgaon",
+      "keyword": "best maid service in dlf phase 2",
+      "targetUrl": "/gurgaon/dlf-phase-2",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid service in mumbai",
+      "targetUrl": "/mumbai",
+      "priority": "very-high",
+      "current": {
+        "impressions": 1,
+        "clicks": 0,
+        "position": 58,
+        "topPage": "https://mybuddymaid.in/services/full-time-maid/mumbai",
+        "onTarget": false
+      },
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid service in bombay",
+      "targetUrl": "/mumbai",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid service in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid agency in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid provider in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "house maid in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "housemaid in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "professional maid service in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "best maid service in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "verified maid service in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "reliable maid service in fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid near me fort",
+      "targetUrl": "/mumbai/fort",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid service in colaba",
+      "targetUrl": "/mumbai/colaba",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid agency in colaba",
+      "targetUrl": "/mumbai/colaba",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "maid provider in colaba",
+      "targetUrl": "/mumbai/colaba",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "house maid in colaba",
+      "targetUrl": "/mumbai/colaba",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "housemaid in colaba",
+      "targetUrl": "/mumbai/colaba",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "professional maid service in colaba",
+      "targetUrl": "/mumbai/colaba",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "best maid service in colaba",
+      "targetUrl": "/mumbai/colaba",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "mumbai",
+      "keyword": "verified maid service in colaba",
+      "targetUrl": "/mumbai/colaba",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "maid service in pune",
+      "targetUrl": "/pune",
+      "priority": "very-high",
+      "current": {
+        "impressions": 1,
+        "clicks": 0,
+        "position": 126,
+        "topPage": "https://mybuddymaid.in/services/full-time-maid/pune",
+        "onTarget": false
+      },
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "maid service in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "maid agency in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "maid provider in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "house maid in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "housemaid in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "professional maid service in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "best maid service in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "verified maid service in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "reliable maid service in aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "maid near me aundh",
+      "targetUrl": "/pune/aundh",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "maid service in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "maid agency in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "maid provider in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "house maid in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "housemaid in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "professional maid service in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "best maid service in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "verified maid service in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "pune",
+      "keyword": "reliable maid service in baner",
+      "targetUrl": "/pune/baner",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid service in bangalore",
+      "targetUrl": "/bangalore",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid service in bengaluru",
+      "targetUrl": "/bangalore",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid service in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid agency in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": {
+        "impressions": 1,
+        "clicks": 0,
+        "position": 23,
+        "topPage": "https://mybuddymaid.in/bangalore/whitefield/full-time-maid",
+        "onTarget": false
+      },
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid provider in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "house maid in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "housemaid in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "professional maid service in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "best maid service in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "verified maid service in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "reliable maid service in whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid near me whitefield",
+      "targetUrl": "/bangalore/whitefield",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid service in marathahalli",
+      "targetUrl": "/bangalore/marathahalli",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid agency in marathahalli",
+      "targetUrl": "/bangalore/marathahalli",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "maid provider in marathahalli",
+      "targetUrl": "/bangalore/marathahalli",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "house maid in marathahalli",
+      "targetUrl": "/bangalore/marathahalli",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "housemaid in marathahalli",
+      "targetUrl": "/bangalore/marathahalli",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "professional maid service in marathahalli",
+      "targetUrl": "/bangalore/marathahalli",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "best maid service in marathahalli",
+      "targetUrl": "/bangalore/marathahalli",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "bangalore",
+      "keyword": "verified maid service in marathahalli",
+      "targetUrl": "/bangalore/marathahalli",
+      "priority": "very-high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "maid service",
+      "targetUrl": "/",
+      "priority": "very-high",
+      "current": {
+        "impressions": 7,
+        "clicks": 1,
+        "position": 9.1,
+        "topPage": "https://mybuddymaid.in/gurgaon",
+        "onTarget": false
+      },
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "maid service india",
+      "targetUrl": "/services/maid-service",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "domestic help agency india",
+      "targetUrl": "/services/maid-service",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "full-time maid service",
+      "targetUrl": "/services/full-time-maid",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "part-time maid service",
+      "targetUrl": "/services/part-time-maid",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "cook service",
+      "targetUrl": "/services/cook",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "babysitter / nanny service",
+      "targetUrl": "/services/babysitter-nanny",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "elder care service",
+      "targetUrl": "/services/elder-care",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "domestic help service",
+      "targetUrl": "/services/domestic-help",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "maid police verification process",
+      "targetUrl": "/how-we-verify",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "maid replacement policy",
+      "targetUrl": "/replacement-policy",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "maid service charges india",
+      "targetUrl": "/pricing",
+      "priority": "high",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "full time maid india",
+      "targetUrl": "/services/full-time-maid",
+      "priority": "medium",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "full day maid india",
+      "targetUrl": "/services/full-time-maid",
+      "priority": "medium",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "8-hour maid india",
+      "targetUrl": "/services/full-time-maid",
+      "priority": "medium",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "part time maid india",
+      "targetUrl": "/services/part-time-maid",
+      "priority": "medium",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "hourly maid india",
+      "targetUrl": "/services/part-time-maid",
+      "priority": "medium",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "morning maid india",
+      "targetUrl": "/services/part-time-maid",
+      "priority": "medium",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "cook service india",
+      "targetUrl": "/services/cook",
+      "priority": "medium",
+      "current": null,
+      "previous": null
+    },
+    {
+      "city": "national",
+      "keyword": "home cook india",
+      "targetUrl": "/services/cook",
+      "priority": "medium",
+      "current": null,
+      "previous": null
+    }
+  ],
+  "sitemaps": [
+    {
+      "path": "/sitemaps/bangalore-hubs-1.xml",
+      "submitted": 38,
+      "lastDownloaded": "2026-09-10T09:05:29.866Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/bangalore-services-1.xml",
+      "submitted": 182,
+      "lastDownloaded": "2026-09-13T13:30:40Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/delhi-hubs-1.xml",
+      "submitted": 93,
+      "lastDownloaded": "2026-09-13T23:36:09.629Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/delhi-services-1.xml",
+      "submitted": 496,
+      "lastDownloaded": "2026-09-13T22:51:13.114Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/global-core-1.xml",
+      "submitted": 99,
+      "lastDownloaded": "2026-09-12T14:11:20.062Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/greater-noida-hubs-1.xml",
+      "submitted": 15,
+      "lastDownloaded": "2026-09-10T11:40:18.417Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/greater-noida-services-1.xml",
+      "submitted": 71,
+      "lastDownloaded": "2026-09-10T14:54:58.843Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/gurgaon-hubs-1.xml",
+      "submitted": 55,
+      "lastDownloaded": "2026-09-11T14:09:25.943Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/gurgaon-services-1.xml",
+      "submitted": 300,
+      "lastDownloaded": "2026-09-10T17:12:11.844Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/mangalore-hubs-1.xml",
+      "submitted": 29,
+      "lastDownloaded": "2026-09-14T10:28:06.074Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/mangalore-services-1.xml",
+      "submitted": 148,
+      "lastDownloaded": "2026-09-10T18:35:37.530Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/mumbai-hubs-1.xml",
+      "submitted": 58,
+      "lastDownloaded": "2026-09-10T11:38:42.866Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/mumbai-services-1.xml",
+      "submitted": 307,
+      "lastDownloaded": "2026-09-14T05:05:48.891Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/noida-hubs-1.xml",
+      "submitted": 60,
+      "lastDownloaded": "2026-09-10T11:37:05.495Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/noida-services-1.xml",
+      "submitted": 341,
+      "lastDownloaded": "2026-09-14T03:08:45.440Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/pincodes-1.xml",
+      "submitted": 20,
+      "lastDownloaded": "2026-09-14T02:43:56.467Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/pune-hubs-1.xml",
+      "submitted": 37,
+      "lastDownloaded": "2026-09-14T15:38:35.159Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/sitemaps/pune-services-1.xml",
+      "submitted": 184,
+      "lastDownloaded": "2026-09-13T17:30:29.515Z",
+      "isPending": false,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "expansion": [
+    {
+      "city": "vadodara",
+      "name": "Vadodara",
+      "impressions": 352,
+      "clicks": 27,
+      "queries": 44,
+      "topQueries": [
+        "house help in vadodara",
+        "kamwali bai agency vadodara",
+        "house help services in vadodara"
+      ]
+    },
+    {
+      "city": "dehradun",
+      "name": "Dehradun",
+      "impressions": 295,
+      "clicks": 32,
+      "queries": 38,
+      "topQueries": [
+        "cook in dehradun",
+        "house help in dehradun",
+        "nanny in dehradun"
+      ]
+    },
+    {
+      "city": "kochi",
+      "name": "Kochi",
+      "impressions": 249,
+      "clicks": 9,
+      "queries": 25,
+      "topQueries": [
+        "kochi cook",
+        "maid in kochi",
+        "maids in kochi"
+      ]
+    },
+    {
+      "city": "ranchi",
+      "name": "Ranchi",
+      "impressions": 174,
+      "clicks": 6,
+      "queries": 22,
+      "topQueries": [
+        "cook in ranchi",
+        "maid in ranchi",
+        "maid service in ranchi"
+      ]
+    },
+    {
+      "city": "mysore",
+      "name": "Mysore",
+      "impressions": 157,
+      "clicks": 20,
+      "queries": 21,
+      "topQueries": [
+        "house help in mysore",
+        "house maid services in mysore contact number",
+        "maid service for home in mysore"
+      ]
+    },
+    {
+      "city": "chennai",
+      "name": "Chennai",
+      "impressions": 152,
+      "clicks": 5,
+      "queries": 52,
+      "topQueries": [
+        "domestic help services in chennai",
+        "maid services for home in chennai",
+        "online maid service chennai"
+      ]
+    },
+    {
+      "city": "bhubaneswar",
+      "name": "Bhubaneswar",
+      "impressions": 145,
+      "clicks": 7,
+      "queries": 23,
+      "topQueries": [
+        "cook in bhubaneswar",
+        "cook service in bhubaneswar",
+        "cook for home in bhubaneswar"
+      ]
+    },
+    {
+      "city": "hyderabad",
+      "name": "Hyderabad",
+      "impressions": 142,
+      "clicks": 8,
+      "queries": 49,
+      "topQueries": [
+        "nanny hyderabad",
+        "cook in kondapur hyderabad",
+        "live in maid hyderabad"
+      ]
+    },
+    {
+      "city": "lucknow",
+      "name": "Lucknow",
+      "impressions": 117,
+      "clicks": 7,
+      "queries": 30,
+      "topQueries": [
+        "nanny in lucknow",
+        "part time maid in lucknow",
+        "maid app in lucknow"
+      ]
+    },
+    {
+      "city": "raipur",
+      "name": "Raipur",
+      "impressions": 117,
+      "clicks": 7,
+      "queries": 22,
+      "topQueries": [
+        "maid service in raipur",
+        "maid raipur",
+        "maid in raipur"
+      ]
+    },
+    {
+      "city": "agra",
+      "name": "Agra",
+      "impressions": 116,
+      "clicks": 4,
+      "queries": 23,
+      "topQueries": [
+        "house help in agra",
+        "maid service in agra",
+        "house maid in agra contact number"
+      ]
+    },
+    {
+      "city": "ludhiana",
+      "name": "Ludhiana",
+      "impressions": 104,
+      "clicks": 4,
+      "queries": 23,
+      "topQueries": [
+        "maid in ludhiana",
+        "house help in ludhiana",
+        "part time maid in ludhiana near me"
+      ]
+    },
+    {
+      "city": "kolkata",
+      "name": "Kolkata",
+      "impressions": 94,
+      "clicks": 3,
+      "queries": 43,
+      "topQueries": [
+        "24 hrs nanny in kolkata",
+        "full time maid in kolkata",
+        "maid service kolkata"
+      ]
+    },
+    {
+      "city": "vijayawada",
+      "name": "Vijayawada",
+      "impressions": 87,
+      "clicks": 5,
+      "queries": 12,
+      "topQueries": [
+        "maid services for home in vijayawada",
+        "maid service in vijayawada",
+        "maid vijayawada"
+      ]
+    },
+    {
+      "city": "varanasi",
+      "name": "Varanasi",
+      "impressions": 86,
+      "clicks": 8,
+      "queries": 21,
+      "topQueries": [
+        "maid service in varanasi",
+        "care taker in varanasi",
+        "maid in varanasi"
+      ]
+    },
+    {
+      "city": "nagpur",
+      "name": "Nagpur",
+      "impressions": 79,
+      "clicks": 1,
+      "queries": 19,
+      "topQueries": [
+        "maid service in nagpur",
+        "nanny in nagpur",
+        "cook in nagpur"
+      ]
+    },
+    {
+      "city": "ahmedabad",
+      "name": "Ahmedabad",
+      "impressions": 71,
+      "clicks": 2,
+      "queries": 25,
+      "topQueries": [
+        "24 hrs maid in ahmedabad salary",
+        "cook in south bopal ahmedabad",
+        "maid in ahmedabad"
+      ]
+    },
+    {
+      "city": "faridabad",
+      "name": "Faridabad",
+      "impressions": 68,
+      "clicks": 6,
+      "queries": 22,
+      "topQueries": [
+        "nanny faridabad",
+        "full time maid agency in faridabad",
+        "full time maid in faridabad"
+      ]
+    },
+    {
+      "city": "kanpur",
+      "name": "Kanpur",
+      "impressions": 66,
+      "clicks": 6,
+      "queries": 17,
+      "topQueries": [
+        "house help in kanpur",
+        "maid in kanpur",
+        "maid services in kanpur"
+      ]
+    },
+    {
+      "city": "guwahati",
+      "name": "Guwahati",
+      "impressions": 61,
+      "clicks": 5,
+      "queries": 21,
+      "topQueries": [
+        "nanny in guwahati",
+        "house maid services guwahati price list",
+        "baby sitter in guwahati"
+      ]
+    },
+    {
+      "city": "indore",
+      "name": "Indore",
+      "impressions": 61,
+      "clicks": 1,
+      "queries": 14,
+      "topQueries": [
+        "house maid services near vijay nagar, indore",
+        "khana banane wali bai in indore salary",
+        "nanny in indore"
+      ]
+    },
+    {
+      "city": "coimbatore",
+      "name": "Coimbatore",
+      "impressions": 58,
+      "clicks": 1,
+      "queries": 16,
+      "topQueries": [
+        "need cook for home in coimbatore",
+        "home maid service in coimbatore price",
+        "nanny coimbatore"
+      ]
+    },
+    {
+      "city": "jaipur",
+      "name": "Jaipur",
+      "impressions": 55,
+      "clicks": 1,
+      "queries": 26,
+      "topQueries": [
+        "maid in jaipur vidhyadhar nagar",
+        "full time maid salary in jaipur",
+        "full time maid in jaipur"
+      ]
+    },
+    {
+      "city": "bhopal",
+      "name": "Bhopal",
+      "impressions": 54,
+      "clicks": 2,
+      "queries": 18,
+      "topQueries": [
+        "nanny bhopal",
+        "nanny in bhopal",
+        "part time maid in bhopal"
+      ]
+    },
+    {
+      "city": "nashik",
+      "name": "Nashik",
+      "impressions": 53,
+      "clicks": 4,
+      "queries": 20,
+      "topQueries": [
+        "house help nashik",
+        "nanny in nashik",
+        "house maid services in nashik with price"
+      ]
+    },
+    {
+      "city": "patna",
+      "name": "Patna",
+      "impressions": 52,
+      "clicks": 3,
+      "queries": 15,
+      "topQueries": [
+        "24 hours maid service in patna",
+        "nanny in patna",
+        "maid salary in patna per month"
+      ]
+    },
+    {
+      "city": "surat",
+      "name": "Surat",
+      "impressions": 51,
+      "clicks": 2,
+      "queries": 18,
+      "topQueries": [
+        "24 hrs maid in surat salary",
+        "online maid service surat",
+        "maid service surat"
+      ]
+    },
+    {
+      "city": "chandigarh",
+      "name": "Chandigarh",
+      "impressions": 36,
+      "clicks": 0,
+      "queries": 12,
+      "topQueries": [
+        "full-time maid agency in chandigarh",
+        "full time maid chandigarh",
+        "maid agency chandigarh"
+      ]
+    },
+    {
+      "city": "madurai",
+      "name": "Madurai",
+      "impressions": 28,
+      "clicks": 1,
+      "queries": 9,
+      "topQueries": [
+        "house maid service in madurai",
+        "maid service for home madurai",
+        "maid in madurai"
+      ]
+    },
+    {
+      "city": "jodhpur",
+      "name": "Jodhpur",
+      "impressions": 26,
+      "clicks": 2,
+      "queries": 5,
+      "topQueries": [
+        "full time maid in jodhpur",
+        "house help in jodhpur",
+        "maid service in jodhpur"
+      ]
+    },
+    {
+      "city": "ghaziabad",
+      "name": "Ghaziabad",
+      "impressions": 22,
+      "clicks": 1,
+      "queries": 10,
+      "topQueries": [
+        "maid service in ghaziabad",
+        "nanny ghaziabad",
+        "full time maid ghaziabad"
+      ]
+    },
+    {
+      "city": "thane",
+      "name": "Thane",
+      "impressions": 6,
+      "clicks": 0,
+      "queries": 5,
+      "topQueries": [
+        "maid service in thane",
+        "baby sitter thane",
+        "babysitter thane"
+      ]
+    },
+    {
+      "city": "visakhapatnam",
+      "name": "Visakhapatnam",
+      "impressions": 1,
+      "clicks": 0,
+      "queries": 1,
+      "topQueries": [
+        "visakhapatnam"
+      ]
+    }
+  ],
+  "errors": []
+}

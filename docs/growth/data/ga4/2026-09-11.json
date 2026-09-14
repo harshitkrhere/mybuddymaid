@@ -1,0 +1,62 @@
+{
+  "kind": "ga4",
+  "version": 1,
+  "generatedAt": "2026-09-14T18:51:08.357Z",
+  "propertyId": "554134326",
+  "windows": {
+    "current": {
+      "start": "2026-09-05",
+      "end": "2026-09-11"
+    },
+    "previous": {
+      "start": "2026-08-29",
+      "end": "2026-09-04"
+    }
+  },
+  "customDimensions": {
+    "registered": [
+      "service",
+      "source",
+      "pincode",
+      "city",
+      "zone",
+      "locality"
+    ],
+    "missing": []
+  },
+  "cta": {
+    "current": {
+      "total": {
+        "whatsapp_click": 0,
+        "call_click": 0,
+        "app_click": 0
+      },
+      "byCity": {},
+      "byService": {},
+      "topLocalities": []
+    },
+    "previous": {
+      "total": {
+        "whatsapp_click": 0,
+        "call_click": 0,
+        "app_click": 0
+      },
+      "byCity": {},
+      "byService": {},
+      "topLocalities": []
+    }
+  },
+  "organicGeo": {
+    "current": {
+      "totalSessions": 0,
+      "byCity": {},
+      "unmapped": []
+    },
+    "previous": {
+      "totalSessions": 0,
+      "byCity": {},
+      "unmapped": []
+    }
+  },
+  "errors": []
+}

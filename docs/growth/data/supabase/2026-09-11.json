@@ -1,0 +1,97 @@
+{
+  "kind": "supabase",
+  "version": 1,
+  "generatedAt": "2026-09-14T18:51:14.997Z",
+  "windows": {
+    "current": {
+      "start": "2026-09-05",
+      "end": "2026-09-11"
+    },
+    "previous": {
+      "start": "2026-08-29",
+      "end": "2026-09-04"
+    }
+  },
+  "signups": {
+    "current": 186,
+    "previous": 463
+  },
+  "bookings": {
+    "current": {
+      "total": 81,
+      "confirmed": 0,
+      "byStatus": {
+        "pending": 81
+      },
+      "byCity": {
+        "bangalore": 6,
+        "gurgaon": 2,
+        "mumbai": 2,
+        "pune": 3,
+        "noida": 2,
+        "delhi": 5
+      },
+      "byService": {
+        "postnatal": 2,
+        "full-time": 10,
+        "nanny": 21,
+        "cook": 11,
+        "part-time": 35,
+        "elderly-care": 2
+      },
+      "unmappedCity": 61
+    },
+    "previous": {
+      "total": 210,
+      "confirmed": 0,
+      "byStatus": {
+        "pending": 210
+      },
+      "byCity": {
+        "delhi": 10
+      },
+      "byService": {
+        "cook": 46,
+        "full-time": 50,
+        "part-time": 71,
+        "nanny": 38,
+        "elderly-care": 3,
+        "postnatal": 2
+      },
+      "unmappedCity": 200
+    }
+  },
+  "support": {
+    "current": {
+      "conversations": 12,
+      "escalated": 8,
+      "leadCaptured": 0,
+      "byCity": {
+        "mumbai": 1
+      }
+    },
+    "previous": {
+      "conversations": 0,
+      "escalated": 0,
+      "leadCaptured": 0,
+      "byCity": {}
+    }
+  },
+  "leads": {
+    "current": {
+      "total": 0,
+      "byCity": {},
+      "byService": {},
+      "byStatus": {},
+      "staleNew": 0
+    },
+    "previous": {
+      "total": 0,
+      "byCity": {},
+      "byService": {},
+      "byStatus": {},
+      "staleNew": 0
+    }
+  },
+  "errors": []
+}

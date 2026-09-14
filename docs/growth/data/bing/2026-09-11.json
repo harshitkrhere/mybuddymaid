@@ -1,0 +1,1535 @@
+{
+  "kind": "bing",
+  "version": 1,
+  "generatedAt": "2026-09-14T18:51:11.187Z",
+  "siteUrl": "https://mybuddymaid.in/",
+  "windows": {
+    "current": {
+      "start": "2026-09-05",
+      "end": "2026-09-11"
+    },
+    "previous": {
+      "start": "2026-08-29",
+      "end": "2026-09-04"
+    }
+  },
+  "crawl": {
+    "latest": {
+      "date": "2026-09-13",
+      "inIndex": 3306,
+      "crawledPages": 447,
+      "code4xx": 109,
+      "code5xx": 0,
+      "crawlErrors": 147,
+      "blockedByRobots": 8
+    },
+    "series": [
+      {
+        "date": "2026-08-31",
+        "inIndex": 3403,
+        "crawledPages": 141,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-01",
+        "inIndex": 3394,
+        "crawledPages": 111,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-02",
+        "inIndex": 3391,
+        "crawledPages": 138,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-03",
+        "inIndex": 3392,
+        "crawledPages": 160,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-04",
+        "inIndex": 3392,
+        "crawledPages": 135,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-05",
+        "inIndex": 3393,
+        "crawledPages": 143,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-06",
+        "inIndex": 3393,
+        "crawledPages": 119,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-07",
+        "inIndex": 3400,
+        "crawledPages": 132,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-08",
+        "inIndex": 3400,
+        "crawledPages": 42,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-09",
+        "inIndex": 3400,
+        "crawledPages": 25,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-10",
+        "inIndex": 3387,
+        "crawledPages": 156,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-11",
+        "inIndex": 3364,
+        "crawledPages": 338,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-12",
+        "inIndex": 3320,
+        "crawledPages": 300,
+        "code5xx": 0
+      },
+      {
+        "date": "2026-09-13",
+        "inIndex": 3306,
+        "crawledPages": 447,
+        "code5xx": 0
+      }
+    ]
+  },
+  "traffic": {
+    "current": {
+      "clicks": 115,
+      "impressions": 961
+    },
+    "previous": {
+      "clicks": 116,
+      "impressions": 925
+    }
+  },
+  "queries": [
+    {
+      "query": "mybuddy maid",
+      "clicks": 5,
+      "impressions": 50,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 4,
+      "impressions": 45,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid wakad cook contact",
+      "clicks": 0,
+      "impressions": 20,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid cooks services",
+      "clicks": 0,
+      "impressions": 19,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid thudiyalur contact number",
+      "clicks": 0,
+      "impressions": 18,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 0,
+      "impressions": 17,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid cook booking options",
+      "clicks": 0,
+      "impressions": 17,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 2,
+      "impressions": 16,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "guwahati maid services price comparison",
+      "clicks": 0,
+      "impressions": 16,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid app download",
+      "clicks": 0,
+      "impressions": 14,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 2,
+      "impressions": 13,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 2,
+      "impressions": 13,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "hire maid instantly in east delhi",
+      "clicks": 5,
+      "impressions": 12,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mumbai domestic help market demand verified maids",
+      "clicks": 0,
+      "impressions": 12,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid patna",
+      "clicks": 0,
+      "impressions": 12,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "desi maid",
+      "clicks": 3,
+      "impressions": 12,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nanny",
+      "clicks": 0,
+      "impressions": 11,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 1,
+      "impressions": 10,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid.in instagram",
+      "clicks": 0,
+      "impressions": 10,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid pune city page",
+      "clicks": 0,
+      "impressions": 10,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid services in bhubaneswar",
+      "clicks": 2,
+      "impressions": 10,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid ernakulam cook charges",
+      "clicks": 0,
+      "impressions": 9,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 1,
+      "impressions": 8,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "personal assistant salary india 2026 domestic help",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "part time maid cook driver cost hyderabad monthly 2025 2026",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "pune cook maid cleaning monthly cost 2026",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "hyderabad domestic help market",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "kukatpally hyderabad maid service",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid instagram review",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "hyderabad domestic help demand 2026",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "online maid in dehradun",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "chennai house help salary premium homes",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "trusted maid services in chennai",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "verified maid service kochi",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "domestic helper salary bangalore 2026 monthly",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service in kalkaji delhi",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid salary indiranagar bangalore 2026 part time laundry deep cleaning",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nanny services in kukatpally hyderabad ₹12000 per month",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service bodakdev ahmedabad",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid booking app noida extension greater noida west",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "dilsuknagar kothapet live-in maid salary",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "delhi ncr domestic help salary 2026 cook nanny driver",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nagpur domestic help maid monthly salary 2026",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nanny services kanpur",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "pay rate for domestic maid chennai omr",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "verified cook agency ernakulam charges",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service cost in pune per month",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "live-in maid salary chennai tamil nadu 2025",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "house maid service baner pune",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "full time made in pune",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "india housemaid monthly salary india 2026",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "jayanagar bangalore housemaid full time cook jobs contact",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "babysitting services in faridabad",
+      "clicks": 2,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maidbuddy",
+      "clicks": 1,
+      "impressions": 8,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "navi mumbai maid cooking domestic help services verified",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "hyde park sector 78 noida cooking cleaning maid monthly charges",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid charges hyde park sector 78 noida",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "what are typical monthly rates for daily home cooks in hebbal",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "verified name of co. that provides nany & japa to look after baby in pune",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "elderly male bathing help service dehradun hourly",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "hourly charges for elderly male bathing help in dehradun",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nagpur part time cook service home",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "verified full time maid service provider bangalore",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "full day maid and service in nashik",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "full day maids chembur",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cooking maid chembur mumbai",
+      "clicks": 0,
+      "impressions": 8,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "housekeepers ,cook in yelahanka",
+      "clicks": 3,
+      "impressions": 7,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "pune full-time maid cook laundry monthly 2026",
+      "clicks": 0,
+      "impressions": 7,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "top-rated japa maid services kolkata",
+      "clicks": 0,
+      "impressions": 7,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "stay in maid chennai services",
+      "clicks": 0,
+      "impressions": 7,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid salary navi mumbai",
+      "clicks": 0,
+      "impressions": 7,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "legal requirements for hiring domestic help in mumbai",
+      "clicks": 0,
+      "impressions": 7,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "ballygunge maid monthly salary 2026",
+      "clicks": 0,
+      "impressions": 7,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "my buddy maid manikonda",
+      "clicks": 1,
+      "impressions": 7,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cook maid agency chembur mumbai",
+      "clicks": 0,
+      "impressions": 7,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "buy maid from mangalore",
+      "clicks": 1,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "full time maid salary in india",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "one time maid for washing services vasant vihar dehradun",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "bangalore maid agency reviews verified replacement refund",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid in ranchi",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 8,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "what is the average cost of househelp in kolkata for mope and broom",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "median salary for maids in tier 1 cities india",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "delhi ncr domestic help salaries 2026 maid driver cook nanny household manager",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "online maid services in bhubaneswar",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "best reliable trustworthy part time maid service in mira road east",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddymaid thane maid hourly charges",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "best maid cum nanny services in delhi vasant kunj",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "thane kolshet maid charges washing machine clothes drying folding",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "apna maid agency live in maid cook mira road salary",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "typical festival bonus structure for household staff in chennai",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "single occasion maid service koramangala",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "checklist for hiring domestic help delhi",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "full time maid cost in odisha 20000 caregiver cost bhubaneswar",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "helping maids ahmedabad",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "household help cost savings bangalore maid salary 2026",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "kochi elderly care services pricing monthly",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "pune domestic maid monthly cost 2026",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "i need a full-time live-in maid in the gachibowli area",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "part time maid cook driver app booking cost hyderabad monthly 2025 2026",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "hyderabad telangana elder care home monthly salary caregiver nurse cook 2026 india",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 1,
+      "impressions": 6,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service in vadodara",
+      "clicks": 1,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service for home in vadodara",
+      "clicks": 1,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service rate electronic city bangalore monthly cooking cleaning 2 bhk",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "daily maid service sector 15 faridabad",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "hire maid for home",
+      "clicks": 1,
+      "impressions": 6,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "instamaid services bhopal",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid near me",
+      "clicks": 1,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "south bopal ahmedabad maid cook domestic help monthly charges 2026",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "part time maid services in south delhi",
+      "clicks": 1,
+      "impressions": 6,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "jodhpur maid",
+      "clicks": 1,
+      "impressions": 6,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "housemade for pune university",
+      "clicks": 0,
+      "impressions": 6,
+      "avgImpressionPosition": 8,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "gaur city noida cook provide",
+      "clicks": 2,
+      "impressions": 5,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maids for house in mohali punjab",
+      "clicks": 1,
+      "impressions": 5,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "paschim vihar maid service review",
+      "clicks": 0,
+      "impressions": 5,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service near agra for full time attendant",
+      "clicks": 1,
+      "impressions": 5,
+      "avgImpressionPosition": 7,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cooking maid for elderly near murugappa polytechnic avadi chennai",
+      "clicks": 0,
+      "impressions": 5,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "part-time daily cook service avadi chennai",
+      "clicks": 0,
+      "impressions": 5,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid",
+      "clicks": 0,
+      "impressions": 5,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "house help in  mysore",
+      "clicks": 1,
+      "impressions": 5,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cook near bellandur",
+      "clicks": 1,
+      "impressions": 5,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nanny",
+      "clicks": 0,
+      "impressions": 5,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "online maid service delhi",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 20,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "online maid service yelahanka",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid for providing service to old person + airoli",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "vasant kunj maids",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service in guwahati",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maids app for pune kothrud",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maids for home (punjagutta, very close to banjara hills)",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nanny pune",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 9,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "online hourly maid services in jodhpur rajasthan",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "home maid  in coimbatore",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "house maid services vashi",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "special needs nanny salary in india",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "live-in nanny hyderabad 30000",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 7,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "book us maid service in c scheme jaipur instant maid",
+      "clicks": 3,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid for preschool sikkarayapuram chennai",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "live in maid in mohali for female",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid surathkale",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nanny faridabad",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid in vadodara",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid agencies in.gurugram",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cook maid salary tezpur monthly 2025 2026",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "meehelp maid hourly rate noida",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "medhaam provides any nanny service in ghaziabad",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service in patna",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "home food servants in mangalore",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "experience full time maid needed in mohali, background checked, clean and good reviews",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "instant help maid in hyderabad",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cook hire monthly basis mohali",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maidsfor elderly parents in delhi",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "instant parttime maid in ahmedabad",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mybuddy maid review",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "domestic cook agency whitefield bangalore cook at home",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "freelance cleaning and cooking service rates in faridabad",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "which is the best nanny services in undri pune",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cook in zirakpur",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 8,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "trusted one-day cook hyderabad reviews",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid in vadodara",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid online in sector 87 noida",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid for house work in narahi lucknow city",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cooking maid in chennai near perungulathur ssm",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "reliable maid agencies in dwarka",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "baby sitter in faridabad",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "caregivers vasant kunj new delhi",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "full day maid and servent in nashik",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service in delhi",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 10,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maids in vadodara",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "how to get a maid in pune",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "regular maid jaipur",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maids center in dum dum kolkata",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service in chandigarh city",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid service in bhubaneswar",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maids in bhubaneswar",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "hire maid in noida monthly basis",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cook maid salary in chennai for 1 person per month",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "find me nanny agency that supply nanny near pari chowk. base your decision on reviews and comments",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "nanny in raipur",
+      "clicks": 4,
+      "impressions": 4,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "full time maid",
+      "clicks": 3,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "mij maid service vaishali nagar",
+      "clicks": 2,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid online login chandigarh",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "professional house maid services in banashankari bangalore for residence",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "care giver agencies in nagpur",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid + nanny chennai",
+      "clicks": 1,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "tamil nadu housemaid salary chennai latest",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "north indian maid in chennai",
+      "clicks": 0,
+      "impressions": 4,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "online maid service delhi",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 12,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "find maid online in delhi",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 10,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "online maid",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 10,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "maid services in kalkaji",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "cook charges in thiruvanmiyur for one meal",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "professional cleaning and cooking service for elderly parents noida",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 6,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "home maid service in ghaziabad",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 5,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "experienced nanny cost whitefield bangalore",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 1,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "disputes end of month milkman maid bill india households",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 4,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "out service yelahanka anta",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 3,
+      "avgClickPosition": -1
+    },
+    {
+      "query": "linkedin live-in maid agency bangalore recent posts 2026",
+      "clicks": 0,
+      "impressions": 3,
+      "avgImpressionPosition": 2,
+      "avgClickPosition": -1
+    }
+  ],
+  "feeds": [
+    {
+      "url": "https://mybuddymaid.in/sitemap.xml",
+      "status": "Success",
+      "urlCount": 18,
+      "lastCrawled": "2026-09-14",
+      "submitted": "2026-09-14"
+    }
+  ],
+  "errors": []
+}
