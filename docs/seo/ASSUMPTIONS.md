@@ -52,7 +52,12 @@ editing one data file unless noted.
     the existing `mbm_redirect_context` handshake (now pointing at `/app/auth`). An
     unauthenticated lead form is scaffolded but ships disabled behind an env flag until
     the accompanying Supabase migration (new `leads` table) is applied — the repo cannot
-    apply DB migrations itself.
+    apply DB migrations itself. Update 2026-09-15 (growth plan W2): the migration is promoted to
+    `supabase/migrations/20260915120000_leads_and_placement_locality.sql` for the owner to apply;
+    the form moves below the pricing table with real error messages, a honeypot, per-address and
+    per-phone limits and a same-origin check, and each lead opens a conversation in the team's
+    Chatwoot inbox. The `mbm_redirect_context` handshake now carries `?city&locality&service&plan`
+    through sign-in and pre-fills the booking sheet (`app/src/lib/context.js`).
 13. **Support phone number**: `9355114869` is treated as canonical (used by every tel/wa.me
     link); the stray display-only "+91 93184 29135" in PricingPage is treated as stale copy.
 14. **Blog port**: the 25 `blog/*` + 3 flat `blog-*` + 7 comparison guides are ported

@@ -226,6 +226,85 @@ export async function openHandoff(c: ChatwootClient, h: HandoffInput): Promise<n
   return conversationId;
 }
 
+// ─── Call-back requests (the lead form) ────────────────────────────────────────────────────
+
+export interface LeadHandoff {
+  /** The lead row's id — the contact's Client-API identifier, so a retry finds the same contact. */
+  leadId: string;
+  ref: string;
+  name: string;
+  phone: string;
+  city: string;
+  cityName: string;
+  locality: string;
+  localityName: string;
+  service: string | null;
+  serviceName: string | null;
+  pincode: string | null;
+  society: string | null;
+  page: string | null;
+}
+
+/** The request as the team reads it — the one incoming message on the conversation. */
+export function leadMessage(l: LeadHandoff): string {
+  const lines = [
+    'Call-back request from the website.',
+    `Name: ${l.name}`,
+    `Mobile: ${l.phone}`,
+    `Area: ${l.localityName}, ${l.cityName}${l.pincode ? ` (${l.pincode})` : ''}`,
+    `Service: ${l.serviceName ?? 'not specified'}`,
+  ];
+  if (l.society) lines.push(`Society / building: ${l.society}`);
+  if (l.page) lines.push(`Page: ${l.page}`);
+  return lines.join('\n');
+}
+
+/**
+ * Open a conversation for a call-back request: the contact under the lead's own name, the
+ * request as an incoming message from the visitor's side (so it reads as theirs and the
+ * reply timer starts), and — with a bot token — the conversation opened so it leaves the
+ * bot's pending queue. Returns the Chatwoot conversation id, or null when nothing was
+ * created; the lead row exists either way, so a failure here loses the inbox thread, never
+ * the lead. One contact per lead, keyed by the lead id: a call-back is its own conversation,
+ * never merged into someone else's.
+ */
+export async function openLeadConversation(c: ChatwootClient, l: LeadHandoff): Promise<number | null> {
+  const sourceId = await ensureContact(c, l.leadId, l.name);
+  if (!sourceId) return null;
+
+  const created = await client<{ id?: number }>(
+    c,
+    `${contactPath(sourceId)}/conversations`,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        custom_attributes: {
+          mbm_conversation_id: l.leadId,
+          mbm_ref: l.ref,
+          mbm_page: l.page ?? '',
+          mbm_city: l.city,
+          mbm_locality: l.locality,
+          mbm_service: l.service ?? '',
+          mbm_plan: '',
+          mbm_reason: 'callback_request',
+          mbm_signed_in: 'no',
+          mbm_phone: l.phone,
+        },
+      }),
+    },
+    'create lead conversation',
+  );
+  const conversationId = created.body?.id;
+  if (typeof conversationId !== 'number') return null;
+
+  await client(c, `${conversationPath(sourceId, conversationId)}/messages`, { method: 'POST', body: JSON.stringify({ content: leadMessage(l) }) }, 'post lead message');
+
+  const opened = await bot(c, `/conversations/${conversationId}/toggle_status`, { method: 'POST', body: JSON.stringify({ status: 'open' }) }, 'open lead conversation');
+  if (c.token && (opened.status < 200 || opened.status >= 300)) console.warn(`[chatwoot] lead conversation ${conversationId} could not be opened; if a bot is attached to the inbox it is left pending`);
+
+  return conversationId;
+}
+
 // ─── After the handoff ──────────────────────────────────────────────────────────────────────
 
 /** A message the customer typed after being handed off goes to the person, as theirs. */

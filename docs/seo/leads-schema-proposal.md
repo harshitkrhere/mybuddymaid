@@ -1,8 +1,12 @@
 # Proposal: make leads and bookings attributable to a society
 
-**Status: proposed, not applied.** The SQL is in
-[`app/migrations/2026-09-06-leads-and-placement-locality.sql`](../../app/migrations/2026-09-06-leads-and-placement-locality.sql).
-It touches the live Supabase project and needs the owner to run it.
+**Status: promoted on 2026-09-15, waiting for the owner to apply it.** The SQL is
+[`supabase/migrations/20260915120000_leads_and_placement_locality.sql`](../../supabase/migrations/20260915120000_leads_and_placement_locality.sql)
+(with `attribution` on both tables and `chatwoot_conversation_id` on leads added since this
+proposal was written). It touches the live Supabase project and needs the owner to run it. The
+code that depends on it — the lead route, the booking app's location columns — shipped in the
+same pull request and tolerates the table being behind: the route stays off until the flags are
+set, and the app retries a booking with the old column set when the new ones are refused.
 
 ## Why
 

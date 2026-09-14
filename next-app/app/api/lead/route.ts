@@ -1,80 +1,94 @@
-// app/api/lead/route.ts — unauthenticated lead capture from the location pages.
-// Disabled unless LEADS_ENABLED=true AND the Supabase service credentials are present,
-// because the `leads` table needs a migration that this repo cannot apply on its own
-// (see docs/seo/ASSUMPTIONS.md #12). Every location value is validated against the data
-// layer, so nothing outside the service footprint can be written.
-import { NextResponse } from 'next/server';
-import { ALL_LOCALITIES, CITY_BY_SLUG, SERVICE_BY_SLUG, isServiceable } from '@/data/seo';
+// app/api/lead/route.ts — unauthenticated call-back requests from the location pages.
+//
+// Off unless LEADS_ENABLED=true and the Supabase service credentials are set: the `leads`
+// table arrives with supabase/migrations/20260915120000_leads_and_placement_locality.sql,
+// which the owner applies (ASSUMPTIONS.md #12). The rules live in lib/leads/validate.ts and
+// are tested there; this file is the order of the checks and the two side effects:
+//   1. the row, through PostgREST with the service-role key (lib/leads/store.ts);
+//   2. once the response is sent, a conversation in the team's Chatwoot inbox with the
+//      request as its first message (lib/support/chatwoot.ts), so a call-back is answered
+//      where every other customer conversation is and its reply time is measured there.
+// Rejections, cheapest first: the flag, a foreign Origin, the per-address limit, bad JSON,
+// the field rules. Two requests are accepted without a row: a filled honeypot field, and a
+// second request for the same number within ten minutes. The limits are per instance
+// (lib/leads/rate-limit.ts) — a stated limitation, not a guarantee.
+import { NextResponse, after } from 'next/server';
+import { CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICE_BY_SLUG, isServiceable } from '@/data/seo';
+import { ENTITY_BY_PATH } from '@/data/seo/entities';
+import { validateLead, originAllowed, clientIp, type LeadInput, type LeadRules } from '@/lib/leads/validate';
+import { SlidingWindow } from '@/lib/leads/rate-limit';
+import { insertLead, linkLeadConversation } from '@/lib/leads/store';
+import { recordClientFromEnv } from '@/lib/support/record';
+import { chatwootFromEnv, openLeadConversation } from '@/lib/support/chatwoot';
+import { refFor } from '@/lib/assistant/ref';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-interface LeadBody {
-  name?: string;
-  phone?: string;
-  city?: string;
-  locality?: string;
-  service?: string;
-  pincode?: string;
-  page?: string;
-}
+const TEN_MINUTES = 10 * 60_000;
+const perAddress = new SlidingWindow(5, TEN_MINUTES);
+const perPhone = new SlidingWindow(1, TEN_MINUTES);
+
+const RULES: LeadRules = {
+  cityExists: (city) => CITY_BY_SLUG.has(city as never),
+  localityExists: (city, locality) => LOCALITY_BY_PATH.has(`${city}/${locality}`),
+  serviceExists: (service) => SERVICE_BY_SLUG.has(service as never),
+  pincodeServiceable: (pincode) => isServiceable(pincode),
+  entityExists: (city, locality, entity) => ENTITY_BY_PATH.has(`${city}/${locality}/${entity}`),
+};
+
+const json = (body: Record<string, unknown>, status = 200) => NextResponse.json(body, { status });
 
 export async function POST(request: Request) {
-  if (process.env.LEADS_ENABLED !== 'true') {
-    return NextResponse.json({ error: 'Lead capture is not enabled' }, { status: 503 });
+  if (process.env.LEADS_ENABLED !== 'true') return json({ error: 'Lead capture is not enabled' }, 503);
+
+  const h = request.headers;
+  if (!originAllowed(h.get('origin'), [h.get('x-forwarded-host'), h.get('host')])) return json({ error: 'Forbidden' }, 403);
+  if (!perAddress.allow(clientIp(h))) {
+    return json({ error: 'Too many requests from this connection. Please try again in a few minutes, or message us on WhatsApp.' }, 429);
   }
 
-  let body: LeadBody;
+  let body: LeadInput;
   try {
-    body = (await request.json()) as LeadBody;
+    body = ((await request.json()) ?? {}) as LeadInput;
   } catch {
-    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+    return json({ error: 'Invalid JSON' }, 400);
   }
+  const v = validateLead(body, RULES);
+  if (!v.ok) return json({ error: v.error, field: v.field }, 400);
+  if (v.honeypot) return json({ ok: true });
+  const row = v.row;
+  if (!perPhone.allow(row.phone)) return json({ ok: true });
 
-  const name = (body.name ?? '').trim().slice(0, 80);
-  const phone = (body.phone ?? '').replace(/\D/g, '').slice(-10);
-  const city = (body.city ?? '').trim();
-  const locality = (body.locality ?? '').trim();
-  const service = (body.service ?? '').trim();
+  const store = recordClientFromEnv();
+  if (!store) return json({ error: 'Lead storage is not configured' }, 503);
+  const inserted = await insertLead(store, row);
+  if (!inserted) return json({ error: 'Could not save your request' }, 502);
 
-  if (name.length < 2) return NextResponse.json({ error: 'Name required' }, { status: 400 });
-  if (!/^\d{10}$/.test(phone)) return NextResponse.json({ error: 'Valid 10-digit mobile required' }, { status: 400 });
-  if (!CITY_BY_SLUG.has(city as never)) return NextResponse.json({ error: 'Unknown city' }, { status: 400 });
-  if (!ALL_LOCALITIES.some((l) => l.city === city && l.slug === locality)) {
-    return NextResponse.json({ error: 'We do not serve that locality yet' }, { status: 400 });
+  const chatwoot = chatwootFromEnv();
+  if (chatwoot) {
+    after(async () => {
+      try {
+        const chatwootId = await openLeadConversation(chatwoot, {
+          leadId: inserted.id,
+          ref: refFor(inserted.id),
+          name: row.name,
+          phone: row.phone,
+          city: row.city_slug,
+          cityName: CITY_BY_SLUG.get(row.city_slug as never)?.name ?? row.city_slug,
+          locality: row.locality_slug,
+          localityName: LOCALITY_BY_PATH.get(`${row.city_slug}/${row.locality_slug}`)?.name ?? row.locality_slug,
+          service: row.service_slug,
+          serviceName: row.service_slug ? (SERVICE_BY_SLUG.get(row.service_slug as never)?.name ?? row.service_slug) : null,
+          pincode: row.pincode,
+          society: row.society,
+          page: row.source_page,
+        });
+        if (chatwootId !== null) await linkLeadConversation(store, inserted.id, chatwootId);
+      } catch (e) {
+        console.error('[lead] after() threw', e instanceof Error ? e.message : e);
+      }
+    });
   }
-  if (service && !SERVICE_BY_SLUG.has(service as never)) return NextResponse.json({ error: 'Unknown service' }, { status: 400 });
-  if (body.pincode && !isServiceable(body.pincode)) return NextResponse.json({ error: 'Pincode outside service area' }, { status: 400 });
-
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url || !key) {
-    return NextResponse.json({ error: 'Lead storage is not configured' }, { status: 503 });
-  }
-
-  const res = await fetch(`${url}/rest/v1/leads`, {
-    method: 'POST',
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${key}`,
-      'content-type': 'application/json',
-      Prefer: 'return=minimal',
-    },
-    body: JSON.stringify({
-      name,
-      phone,
-      city,
-      locality,
-      service: service || null,
-      pincode: body.pincode ?? null,
-      source_page: (body.page ?? '').slice(0, 300),
-      status: 'new',
-    }),
-  });
-
-  if (!res.ok) {
-    console.error('lead insert failed', res.status, await res.text());
-    return NextResponse.json({ error: 'Could not save lead' }, { status: 502 });
-  }
-  return NextResponse.json({ ok: true });
+  return json({ ok: true });
 }

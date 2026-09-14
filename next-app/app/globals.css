@@ -136,7 +136,6 @@ img { max-width: 100%; height: auto; }
 .badges li::before { content: ''; width: 14px; height: 14px; flex-shrink: 0; background: var(--mint); -webkit-mask: var(--icon-check) center / contain no-repeat; mask: var(--icon-check) center / contain no-repeat; }
 .hero .btn-call { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.25); }
 .hero .btn-call:hover { border-color: var(--mint); color: var(--mint); }
-.hero .lead-form { margin-top: 1.25rem; }
 @media (min-width: 768px) {
   .hero { padding: 3rem 2.75rem; }
 }
@@ -234,6 +233,11 @@ td a:hover { color: var(--emerald-dark); }
 .lead-form input:focus, .lead-form select:focus { outline: none; border-color: var(--mint); box-shadow: 0 0 0 3px var(--mint-glow); }
 .lead-form button { grid-column: 1 / -1; }
 .lead-form__error { grid-column: 1 / -1; color: #b91c1c; margin: 0; }
+.lead-form__done { color: var(--emerald-dark); font-weight: 600; }
+.lead-form input[aria-invalid="true"], .lead-form select[aria-invalid="true"] { border-color: #b91c1c; }
+/* the honeypot: off-screen for people, present for scripts that fill every field they find */
+.lead-form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.lead { max-width: var(--measure); }
 @media (max-width: 560px) { .lead-form { grid-template-columns: 1fr; } }
 
 /* sticky mobile CTA — height reserved by body padding at mobile widths */

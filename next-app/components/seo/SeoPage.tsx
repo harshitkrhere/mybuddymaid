@@ -1,9 +1,10 @@
 // components/seo/SeoPage.tsx — renders any PageModel (server component). Everything
 // SEO-relevant is in the HTML response: content, links, JSON-LD. Only the CTA buttons
-// and the lead form are client components.
+// and the call-back form are client components.
 import type { PageModel } from '@/lib/seo-engine/compose';
 import { inr } from '@/lib/seo-engine/compose';
 import { CITIES, ALL_LOCALITIES, SERVICES } from '@/data/seo';
+import { SUPPORT_HOURS } from '@/data/seo/contact';
 import { JsonLd } from './JsonLd';
 import { CtaButtons, StickyCta } from './CtaButtons';
 import { LeadForm } from './LeadForm';
@@ -49,7 +50,6 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
           ))}
         </ul>
         <CtaButtons ctx={m.cta} />
-        {options && <LeadForm ctx={m.cta} options={options} />}
       </header>
 
       <main className="content">
@@ -112,6 +112,16 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
             <p>
               See the full <a href="/pricing">pricing page</a> for plans.
             </p>
+          </section>
+        )}
+
+        {/* Below the fold on purpose: the hero already carries three CTAs (audit 1.4). The form
+            needs no account, so a visitor who will not sign up still leaves a number. */}
+        {options && (
+          <section className="lead" id="callback">
+            <h2>Request a call back</h2>
+            <p>Prefer that we call you? Leave your details and the team calls back during working hours ({SUPPORT_HOURS.label}). No sign-up needed.</p>
+            <LeadForm ctx={m.cta} options={options} hoursLabel={SUPPORT_HOURS.label} />
           </section>
         )}
 

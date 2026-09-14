@@ -211,6 +211,7 @@ export function composeEntity(entity: Entity): PageModel {
       zone: zone.slug,
       locality: loc.slug,
       pincode: entity.pincode,
+      entity: entity.slug,
     },
   };
 
