@@ -37,6 +37,7 @@ jobs:
       - run: npm test
       - run: npm run seo:validate
       - run: npm run seo:gate
+      - run: npm run seo:jsonld
 
   booking-app:
     name: app — lint, tests, committed bundle is current

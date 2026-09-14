@@ -9,10 +9,14 @@
 //
 // Optional flags: --days 28 (default) · --site sc-domain:mybuddymaid.in
 // Output: reports/gsc-YYYY-MM-DD.csv plus a summary table on stdout.
+//
+// The token minting and the URL classifier now live in lib/growth (google-auth.ts,
+// classify.ts) and are shared with the growth pipeline (scripts/growth/*), which writes the
+// per-city snapshots the weekly report reads. This script keeps the raw page × query CSV.
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { createSign } from 'node:crypto';
-import { ALL_LOCALITIES, CITY_BY_SLUG, SERVICE_BY_SLUG } from '../../data/seo';
+import { classify } from '../../lib/growth/classify';
+import { accessToken, bearer, SCOPES } from '../../lib/growth/google-auth';
 
 const KEY_FILE = process.env.GSC_SERVICE_ACCOUNT_JSON;
 const args = process.argv.slice(2);
@@ -34,33 +38,6 @@ interface KeyFile {
   private_key: string;
 }
 
-/** Mint a Google OAuth access token from the service-account key (JWT bearer flow). */
-async function accessToken(key: KeyFile): Promise<string> {
-  const now = Math.floor(Date.now() / 1000);
-  const b64 = (o: unknown) => Buffer.from(JSON.stringify(o)).toString('base64url');
-  const header = b64({ alg: 'RS256', typ: 'JWT' });
-  const claims = b64({
-    iss: key.client_email,
-    scope: 'https://www.googleapis.com/auth/webmasters.readonly',
-    aud: 'https://oauth2.googleapis.com/token',
-    exp: now + 3600,
-    iat: now,
-  });
-  const signer = createSign('RSA-SHA256');
-  signer.update(`${header}.${claims}`);
-  const signature = signer.sign(key.private_key, 'base64url');
-  const res = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-      assertion: `${header}.${claims}.${signature}`,
-    }),
-  });
-  if (!res.ok) throw new Error(`token exchange failed: ${res.status} ${await res.text()}`);
-  return ((await res.json()) as { access_token: string }).access_token;
-}
-
 interface Row {
   keys: string[];
   clicks: number;
@@ -69,30 +46,9 @@ interface Row {
   position: number;
 }
 
-/** Classify a URL against the page architecture. */
-function classify(url: string) {
-  const p = new URL(url).pathname.replace(/\/$/, '') || '/';
-  const seg = p.split('/').filter(Boolean);
-  if (p === '/') return { type: 'home', city: '', locality: '', service: '' };
-  if (seg[0] === 'services') {
-    return { type: seg.length === 2 ? 'service-hub' : 'service-city', city: seg[2] ?? '', locality: '', service: seg[1] ?? '' };
-  }
-  if (seg[0] === 'pincode') return { type: 'pincode', city: '', locality: '', service: '' };
-  if (seg[0] === 'blog') return { type: 'blog', city: '', locality: '', service: '' };
-  if (seg.length === 1) return { type: CITY_BY_SLUG.has(seg[0] as never) ? 'city' : 'trust', city: seg[0], locality: '', service: '' };
-  if (seg.length === 2) {
-    const isLocality = ALL_LOCALITIES.some((l) => l.city === seg[0] && l.slug === seg[1]);
-    return { type: isLocality ? 'locality' : 'zone', city: seg[0], locality: isLocality ? seg[1] : '', service: '' };
-  }
-  if (seg.length === 3 && SERVICE_BY_SLUG.has(seg[2] as never)) {
-    return { type: 'service-locality', city: seg[0], locality: seg[1], service: seg[2] };
-  }
-  return { type: 'entity', city: seg[0], locality: seg[1], service: seg[3] ?? '' };
-}
-
 async function main() {
   const key = JSON.parse(fs.readFileSync(KEY_FILE!, 'utf8')) as KeyFile;
-  const token = await accessToken(key);
+  const token = await accessToken(key, [SCOPES.gsc]);
   const end = END ? new Date(END) : new Date(Date.now() - 2 * 86400000); // GSC lags ~2 days
   const start = new Date(end.getTime() - DAYS * 86400000);
   const iso = (d: Date) => d.toISOString().slice(0, 10);
@@ -104,7 +60,7 @@ async function main() {
       `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(SITE)}/searchAnalytics/query`,
       {
         method: 'POST',
-        headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+        headers: bearer(token),
         body: JSON.stringify({
           startDate: iso(start),
           endDate: iso(end),

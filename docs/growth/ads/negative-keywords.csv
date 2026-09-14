@@ -1,0 +1,71 @@
+keyword,match_type,reason
+hyderabad,phrase,city outside the footprint (hyderabad)
+chennai,phrase,city outside the footprint (chennai)
+kolkata,phrase,city outside the footprint (kolkata)
+ahmedabad,phrase,city outside the footprint (ahmedabad)
+ghaziabad,phrase,city outside the footprint (ghaziabad)
+faridabad,phrase,city outside the footprint (faridabad)
+jaipur,phrase,city outside the footprint (jaipur)
+lucknow,phrase,city outside the footprint (lucknow)
+chandigarh,phrase,city outside the footprint (chandigarh)
+indore,phrase,city outside the footprint (indore)
+surat,phrase,city outside the footprint (surat)
+nagpur,phrase,city outside the footprint (nagpur)
+thane,phrase,city outside the footprint (thane)
+vadodara,phrase,city outside the footprint (vadodara)
+coimbatore,phrase,city outside the footprint (coimbatore)
+kochi,phrase,city outside the footprint (kochi)
+bhopal,phrase,city outside the footprint (bhopal)
+visakhapatnam,phrase,city outside the footprint (visakhapatnam)
+mysore,phrase,city outside the footprint (mysore)
+ludhiana,phrase,city outside the footprint (ludhiana)
+dehradun,phrase,city outside the footprint (dehradun)
+bhubaneswar,phrase,city outside the footprint (bhubaneswar)
+ranchi,phrase,city outside the footprint (ranchi)
+agra,phrase,city outside the footprint (agra)
+varanasi,phrase,city outside the footprint (varanasi)
+kanpur,phrase,city outside the footprint (kanpur)
+nashik,phrase,city outside the footprint (nashik)
+raipur,phrase,city outside the footprint (raipur)
+guwahati,phrase,city outside the footprint (guwahati)
+patna,phrase,city outside the footprint (patna)
+madurai,phrase,city outside the footprint (madurai)
+jodhpur,phrase,city outside the footprint (jodhpur)
+vijayawada,phrase,city outside the footprint (vijayawada)
+thiruvananthapuram,phrase,city outside the footprint (thiruvananthapuram)
+job,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+jobs,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+vacancy,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+vacancies,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+naukri,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+hiring,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+wanted,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+recruitment,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+apply,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+salary for maid,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+maid salary,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+work as maid,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+maid work,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+housekeeping job,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+cook job,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+nanny job,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+driver,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+security guard,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+office boy,phrase,"job-seeker intent: a helper looking for work, not a household hiring one"
+maid cafe,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+maid outfit,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+maid dress,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+maid costume,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+maid of honor,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+maid of honour,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+mermaid,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+milkmaid,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+maiden,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+robot,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+app download,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+free,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+training,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+course,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+certificate,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+agency registration,phrase,"unrelated meaning of ""maid"" or non-buyer intent"
+franchise,phrase,"unrelated meaning of ""maid"" or non-buyer intent"

@@ -123,7 +123,8 @@ for (const page of [...allCorePages(), ...allEntityPages()]) {
     checkBlock(page.path, block);
     if (isObj(block) && typeof block['@type'] === 'string') types.add(block['@type']);
   }
-  if (!types.has('BreadcrumbList')) err(`${page.path}: missing BreadcrumbList`);
+  // a one-item trail (the home page) is not a breadcrumb (FIN-SEO05); every other page needs one
+  if (!types.has('BreadcrumbList') && page.crumbs.length > 1) err(`${page.path}: missing BreadcrumbList`);
   // A FAQPage may only be emitted when the FAQs are actually visible on the page.
   if (types.has('FAQPage') && page.faqs.length < 2) err(`${page.path}: FAQPage emitted but fewer than 2 FAQs are rendered`);
   if (page.faqs.length >= 2 && !types.has('FAQPage')) err(`${page.path}: renders FAQs but emits no FAQPage`);

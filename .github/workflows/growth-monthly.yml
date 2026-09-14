@@ -1,0 +1,39 @@
+# Growth — monthly content-freshness review (docs/growth/README.md).
+#
+# On the first of the month, lists the pages that earn the most clicks whose data-layer facts
+# are older than 90 days and opens an issue with the list. It changes no page: re-verifying
+# pricing bands, landmarks and local FAQs is a person's job; the issue is the reminder.
+name: Growth — monthly freshness review
+
+on:
+  schedule:
+    - cron: '33 3 1 * *' # 09:03 IST on the 1st
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: next-app
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: next-app/package-lock.json
+      - run: npm ci
+      - name: List stale top pages
+        run: npm run growth:freshness -- --days 90 --top 30 > "${{ runner.temp }}/freshness.md"
+      - name: Open the review issue
+        run: |
+          cat "${{ runner.temp }}/freshness.md"
+          gh label create growth-freshness --color 0E8A16 --description "Monthly content-freshness review" --force
+          gh issue create --title "Content freshness review — $(date -u +%Y-%m)" --label growth-freshness --body-file "${{ runner.temp }}/freshness.md"

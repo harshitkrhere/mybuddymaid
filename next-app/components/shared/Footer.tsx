@@ -1,6 +1,7 @@
 // components/shared/Footer.tsx — data-driven footer: cities, services, trust, legal.
 import { CITIES, SERVICES } from '@/data/seo';
 import { PHONE_DISPLAY, TEL_URL, whatsappUrl } from '@/lib/seo-engine/links';
+import { NO_CONTEXT, trackAttrs } from '@/components/seo/CtaButtons';
 
 export function Footer() {
   return (
@@ -56,10 +57,12 @@ export function Footer() {
           <h3>Contact</h3>
           <ul>
             <li>
-              <a href={TEL_URL}>{PHONE_DISPLAY}</a>
+              <a href={TEL_URL} {...trackAttrs('call_click', NO_CONTEXT)}>
+                {PHONE_DISPLAY}
+              </a>
             </li>
             <li>
-              <a href={whatsappUrl('Hi MyBuddyMaid, I need help hiring a helper.')} rel="noopener" target="_blank">
+              <a href={whatsappUrl('Hi MyBuddyMaid, I need help hiring a helper.')} rel="noopener" target="_blank" {...trackAttrs('whatsapp_click', NO_CONTEXT)}>
                 WhatsApp
               </a>
             </li>

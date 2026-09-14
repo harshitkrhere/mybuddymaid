@@ -173,7 +173,9 @@ for (const s of SERVICES) {
   for (const c of CITIES) metas.push(serviceCityMeta(s, c));
 }
 for (const p of PINCODES.filter((p2) => p2.localities.length >= 2)) {
-  metas.push(pincodeMeta(p, p.localities.map(titleCaseSlug)));
+  // the same names the page renders (compose.ts passes Locality.name), so the uniqueness
+  // check covers the title that is actually served
+  metas.push(pincodeMeta(p, p.localities.map((s) => LOCALITY_BY_PATH.get(`${p.city}/${s}`)?.name ?? titleCaseSlug(s))));
 }
 // Phase 5 entity pages share the /<city>/<area>/<slug> namespace with the service ×
 // locality pages, so their titles and descriptions belong in the same uniqueness check.

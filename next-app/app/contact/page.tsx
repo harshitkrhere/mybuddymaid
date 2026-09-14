@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TrustPage } from '@/components/seo/TrustPage';
+import { NO_CONTEXT, trackAttrs } from '@/components/seo/CtaButtons';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
+import { PHONE_DISPLAY, TEL_URL, whatsappUrl } from '@/lib/seo-engine/links';
 import { CITIES } from '@/data/seo';
 
 export const dynamic = 'force-static';
@@ -24,12 +26,16 @@ export default function ContactPage() {
       <ul>
         <li>
           <strong>WhatsApp:</strong>{' '}
-          <a href="https://wa.me/919355114869?text=Hi%20MyBuddyMaid%2C%20I%20need%20help%20hiring%20a%20helper." target="_blank" rel="noopener">
-            +91 93551 14869
+          {/* number and message from the data layer (data/seo/contact.ts), tracked like every other CTA */}
+          <a href={whatsappUrl('Hi MyBuddyMaid, I need help hiring a helper.')} target="_blank" rel="noopener" {...trackAttrs('whatsapp_click', NO_CONTEXT)}>
+            {PHONE_DISPLAY}
           </a>
         </li>
         <li>
-          <strong>Phone:</strong> <a href="tel:+919355114869">+91 93551 14869</a>
+          <strong>Phone:</strong>{' '}
+          <a href={TEL_URL} {...trackAttrs('call_click', NO_CONTEXT)}>
+            {PHONE_DISPLAY}
+          </a>
         </li>
         <li>
           <strong>Email:</strong> <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a>
