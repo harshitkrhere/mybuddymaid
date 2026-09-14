@@ -4,6 +4,7 @@
 // links inline showed nothing. The checkbox keeps the toggle CSS-only and the nav links
 // always in the server-rendered HTML (they carry the site-wide internal linking).
 import Image from 'next/image';
+import { NO_CONTEXT, trackAttrs } from '@/components/seo/CtaButtons';
 
 export function Header() {
   return (
@@ -27,7 +28,7 @@ export function Header() {
             <a href="/pricing">Pricing</a>
             <a href="/how-we-verify">Verification</a>
             <a href="/blog">Blog</a>
-            <a href="/app" className="btn btn-primary btn-sm">
+            <a href="/app" className="btn btn-primary btn-sm" {...trackAttrs('app_click', NO_CONTEXT)}>
               Open app
             </a>
           </nav>

@@ -14,7 +14,12 @@ export interface CtaContext {
   pincode?: string;
 }
 
-function trackAttrs(event: string, ctx: CtaContext) {
+/**
+ * The attributes the delegated listener in components/shared/Analytics.tsx reads. Every
+ * WhatsApp, call and app link on the site should carry them — the footer, the contact page
+ * and the header included — or its clicks are invisible in the funnel.
+ */
+export function trackAttrs(event: string, ctx: CtaContext) {
   return {
     'data-mbm-track': event,
     'data-mbm-city': ctx.city || '(none)',
@@ -24,6 +29,9 @@ function trackAttrs(event: string, ctx: CtaContext) {
     'data-mbm-pincode': ctx.pincode || '(none)',
   };
 }
+
+/** Context for a link with no page locality behind it (footer, header, contact page). */
+export const NO_CONTEXT: CtaContext = { whatsappText: '', city: '' };
 
 export function CtaButtons({ ctx, compact = false }: { ctx: CtaContext; compact?: boolean }) {
   const appHref = `/app/auth?city=${encodeURIComponent(ctx.city)}&locality=${encodeURIComponent(ctx.locality ?? '')}&service=${encodeURIComponent(ctx.service ?? '')}`;

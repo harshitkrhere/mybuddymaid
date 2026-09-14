@@ -11,6 +11,17 @@ export interface LeadFormOptions {
   services: { slug: string; name: string }[];
 }
 
+/** How the visitor arrived, as components/shared/Analytics.tsx recorded it; null when unknown or storage is unavailable. */
+export function readAttribution(): { last: unknown; first: unknown } | null {
+  try {
+    const last = JSON.parse(sessionStorage.getItem('mbm_attr') || 'null');
+    const first = JSON.parse(localStorage.getItem('mbm_first_attr') || 'null');
+    return last || first ? { last, first } : null;
+  } catch {
+    return null;
+  }
+}
+
 export function LeadForm({ ctx, options }: { ctx: CtaContext; options: LeadFormOptions }) {
   const [city, setCity] = useState(ctx.city || options.cities[0]?.slug || '');
   const [locality, setLocality] = useState(ctx.locality || '');
@@ -29,10 +40,10 @@ export function LeadForm({ ctx, options }: { ctx: CtaContext; options: LeadFormO
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ name, phone, city, locality, service, pincode: ctx.pincode, page: window.location.pathname }),
+        body: JSON.stringify({ name, phone, city, locality, service, pincode: ctx.pincode, page: window.location.pathname, attribution: readAttribution() }),
       });
       if (!res.ok) throw new Error(String(res.status));
-      window.gtag?.('event', 'lead_submit', { city, locality, service, pincode: ctx.pincode ?? '(none)', page_path: window.location.pathname });
+      window.gtag?.('event', 'lead_submit', { city, locality, service, pincode: ctx.pincode ?? '(none)', source: 'site', page_path: window.location.pathname });
       setState('done');
     } catch {
       setState('error');

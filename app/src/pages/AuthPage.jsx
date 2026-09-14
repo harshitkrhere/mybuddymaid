@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { track } from '../lib/track';
 
 // M2: Map raw Supabase errors to user-friendly messages (L2 fix)
 const FRIENDLY_ERRORS = {
@@ -78,6 +79,7 @@ export default function AuthPage() {
 
   const handleGoogleSignUp = async () => {
     if (!agreed) { setError(CONSENT_REQUIRED); return; }
+    track('signup_started', { method: 'google' });
     await handleGoogleLogin();
   };
 
@@ -116,6 +118,7 @@ export default function AuthPage() {
     setLoading(true);
     try {
       await signUpWithEmail(email, password);
+      track('signup_started', { method: 'email' });
       setSuccessMsg('Verification link sent to your email! Please check your inbox and verify before signing in.');
     } catch (err) {
       setError(friendlyError(err.message));

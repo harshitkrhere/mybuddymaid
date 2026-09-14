@@ -83,6 +83,20 @@
   }
   function formatPhone(e164) { return '+91 ' + e164.slice(3, 8) + ' ' + e164.slice(8); }
 
+  // ── Analytics: three moments of the chat as GA4 events, through the page's gtag shim
+  // (components/shared/Analytics.tsx on the site, index.html in the booking app). The page's
+  // locality context rides along; never the message, the name or the number. ──
+  function track(event) {
+    try {
+      if (typeof window.gtag !== 'function') return;
+      var c = (opts && opts.context) || {};
+      window.gtag('event', event, {
+        city: c.city || '(none)', locality: c.locality || '(none)', service: c.service || '(none)',
+        source: opts && opts.token ? 'app' : 'site', page_path: location.pathname
+      });
+    } catch (e) { /* analytics never breaks the chat */ }
+  }
+
   // ── DOM ─────────────────────────────────────────────────────────────────────────────────
   function h(tag, attrs, children) {
     var el = document.createElement(tag);
@@ -328,6 +342,7 @@
     state.suggestions = null;
     save();
     send(line, hist, { name: name, phone: phone });
+    track('chat_contact_submitted');
   }
 
   function setTyping(on) {
@@ -346,6 +361,7 @@
   function showEscalation(firstQuestion) {
     var text = opts.whatsappPrefix + (state.ref ? ' (ref ' + state.ref + ')' : '') + (firstQuestion ? ': ' + firstQuestion : '');
     els.escalate.querySelector('.mbm-chat__btn--wa').href = 'https://wa.me/' + opts.whatsappNumber + '?text=' + encodeURIComponent(text);
+    if (els.escalate.hidden) track('chat_escalate');
     els.escalate.hidden = false;
   }
   function firstQuestion() {
@@ -598,6 +614,7 @@
     document.body.classList.add('mbm-chat-open');
     scrollToEnd();
     focusInput();
+    track('chat_open');
     if (opts.onOpen) opts.onOpen();
   }
   function close() {
