@@ -9,7 +9,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { KNOWLEDGE, KNOWLEDGE_BY_ID, KNOWLEDGE_STATS, numbersIn, ALWAYS_ALLOWED_NUMBERS } from './knowledge';
-import { PLANS, CITIES, ALL_LOCALITIES, SERVICES, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD } from '../../data/seo';
+import { PLANS, CITIES, ALL_LOCALITIES, SERVICES, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD, NON_REFUNDABLE_FEE } from '../../data/seo';
 import { SUPPORT_HOURS } from '../../data/seo/contact';
 
 const page = (p: string) => readFileSync(path.join(__dirname, '..', '..', 'app', p, 'page.tsx'), 'utf8');
@@ -55,12 +55,13 @@ test('plan entries quote exactly what plans.ts says — fee, term, replacements,
 test('the refund entry quotes the published window and threshold, and nothing else', () => {
   const e = KNOWLEDGE_BY_ID.get('policy-refund')!;
   const nums = numbersIn(e.a);
-  assert.deepEqual([...nums].sort((a, b) => a - b), [REFUND_PROFILE_THRESHOLD, REFUND_WINDOW_DAYS].sort((a, b) => a - b));
+  assert.deepEqual([...nums].sort((a, b) => a - b), [REFUND_PROFILE_THRESHOLD, REFUND_WINDOW_DAYS, NON_REFUNDABLE_FEE].sort((a, b) => a - b));
   assert.equal(e.source.url, '/replacement-policy');
   const src = page('replacement-policy');
   assert.match(src, /REFUND_PROFILE_THRESHOLD/, 'the page must render the threshold from the data layer');
   assert.match(src, /REFUND_WINDOW_DAYS/, 'the page must render the window from the data layer');
-  for (const phrase of ['refundable, minus a processing fee', 'successfully hired', 'becomes unresponsive']) {
+  assert.match(src, /NON_REFUNDABLE_FEE/, 'the page must render the non-refundable component from the data layer');
+  for (const phrase of ['non-refundable: it covers onboarding and verification', 'successfully hired', 'becomes unresponsive']) {
     assert.ok(src.includes(phrase), `replacement-policy page no longer says "${phrase}" — update policy-refund in knowledge.ts`);
   }
 });

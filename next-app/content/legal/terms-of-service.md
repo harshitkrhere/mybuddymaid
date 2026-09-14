@@ -1,24 +1,24 @@
 # Terms of Service
 
 Effective date: 15 September 2026
-Version: 2.0 (draft for legal review; not yet in force)
+Version: 2.0
 Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions dated March 2026 (booking app)
 
 ## At a glance
 
 - MyBuddyMaid introduces you to verified domestic helpers. You interview them, you decide, and you employ the helper directly and pay their salary yourself.
 - You pay us a one-time platform fee for a plan (Silver, Gold or Diamond). The fee buys verification, shortlisting, interviews and replacement cover for the plan term. No part of it is the helper's wages.
-- The fee is refundable, less a processing fee, only if we cannot introduce three suitable verified profiles within 60 days of payment. Once a helper has been hired there is no refund. Approved refunds are initiated within 14 business days; your bank then credits it.
+- ₹2,000 of every plan fee is non-refundable: it pays for onboarding and verification. The rest is refundable only if we cannot introduce three suitable verified profiles within 60 days of payment. Once a helper has been hired there is no refund. Approved refunds are initiated within 14 business days; your bank then credits it.
 - Cancel or reschedule a confirmed interview or trial with at least 24 hours' notice, or it counts against your plan.
 - Provide safe, lawful access to your home. We can withdraw a helper immediately, with no refund, from an unsafe or abusive household.
 - Do not hire a helper we introduced outside the platform for 12 months. Doing so costs liquidated damages of ₹21,000 per helper.
-- Our liability to you is capped at the lesser of ₹5,000 or the fee you paid. Disputes go to a grievance officer first, then binding arbitration in Bengaluru. Your rights under the Consumer Protection Act are not taken away.
+- Our liability to you is capped at the lesser of ₹5,000 or the fee you paid. Disputes go to a grievance officer first, then binding arbitration in New Delhi. Your rights under the Consumer Protection Act are not taken away.
 
 ## 1. About these Terms {#about}
 
 > **Summary:** These Terms are a contract between you and the company that runs MyBuddyMaid. You accept them by creating an account, sending a request, or paying for a plan. You must be an adult acting for your own household.
 
-1.1 **Who we are.** MyBuddyMaid Pvt Limited, a private limited company registered under the laws of India with registration number [CIN / REGISTRATION NUMBER] and GSTIN [GSTIN], having its registered office at 175, 5th Floor, Main Road, Chandra Layout, Bengaluru, Karnataka 560040, India, operates the MyBuddyMaid platform (the "Company", "MyBuddyMaid", "we", "us" or "our").
+1.1 **Who we are.** MyBuddyMaid Private Limited, a private limited company registered under the laws of India (CIN U96908DC2026PTC474931), having its registered office at C/o Kanchan Bhatiya, 2-A/3 SF, Front Side, Asif Ali Road, Darya Ganj, New Delhi, Central Delhi 110002, Delhi, India, operates the MyBuddyMaid platform (the "Company", "MyBuddyMaid", "we", "us" or "our").
 
 1.2 **What these Terms govern.** These Terms of Service (the "Terms") govern your access to and use of the website at mybuddymaid.in, the booking application at mybuddymaid.in/app, our WhatsApp, telephone and email channels, and every service we provide through them (together, the "Platform"). They apply to every visitor, account holder and household that uses the Platform (the "Client", "you" or "your").
 
@@ -37,7 +37,7 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 2.1 In these Terms the following words have the following meanings:
 
 - **"Account"** means the registered account you create on the Platform, whether by email and password or by signing in with Google.
-- **"Business Day"** means a day other than a Saturday, a Sunday or a public holiday notified in the State of Karnataka under the Negotiable Instruments Act, 1881.
+- **"Business Day"** means a day other than a Saturday, a Sunday or a public holiday notified in the National Capital Territory of Delhi under the Negotiable Instruments Act, 1881.
 - **"Client"** means the person or household that uses the Platform to seek a Helper, and includes every adult member of that household who interacts with a Helper.
 - **"Engagement"** means the working relationship between a Client and a Helper that begins when the Client confirms that the Helper will start work, or when the Helper starts work, whichever is earlier, including any trial period.
 - **"Helper"** (also referred to on the Platform as a domestic helper, service provider, professional, maid, cook, nanny or attendant) means an individual whose profile we introduce to a Client for possible Engagement, including part-time and full-time house help, live-in help, cooks, babysitters and nannies, elder-care attendants, general domestic help and, where offered, postnatal-care attendants.
@@ -102,7 +102,7 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 4.4 **Helper's remuneration.** The Helper's salary, working hours, rest days, leave, food, accommodation and every other term of the Engagement are agreed between you and the Helper and are paid by you directly to the Helper. Salary ranges published on the Platform are indicative guidance only. The Company does not collect, hold, guarantee or arbitrate wages, and is not responsible for any dispute about them.
 
-4.5 **Taxes and invoices.** Platform Fees are stated [inclusive of / exclusive of] Goods and Services Tax at the applicable rate. We will issue a tax invoice for every Platform Fee to the email address on your Account.
+4.5 **Taxes and invoices.** Platform Fees are stated in Indian Rupees. The Company is not yet registered under the Central Goods and Services Tax Act, 2017, and no GST is charged on Platform Fees at present. Once our registration is complete, GST at the applicable rate will apply to Platform Fees in addition to the amount stated; it will be shown on the pricing page and at checkout before you pay, and on the tax invoice we issue to the email address on your Account. Until then we issue an invoice without GST for every Platform Fee.
 
 4.6 **Price changes.** We may revise Platform Fees at any time. A revision applies only to Plans confirmed after it is published; the fee quoted to you when you confirmed your Plan is the fee that applies to it.
 
@@ -155,13 +155,13 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 ## 7. Refunds {#refunds}
 
-> **Summary:** The plan fee is refundable, less a processing fee, in one situation only: we fail to introduce three suitable verified profiles matching your original requirements within 60 days of payment. Claim within 15 days after that window closes. There is no refund once a Helper has been hired. Approved refunds are initiated within 14 Business Days of approval.
+> **Summary:** ₹2,000 of the plan fee is never refunded: it covers onboarding and verification, including police verification where your plan includes it. The rest is refundable in one situation only: we fail to introduce three suitable verified profiles matching your original requirements within 60 days of payment. Claim within 15 days after that window closes. There is no refund once a Helper has been hired. Approved refunds are initiated within 14 Business Days of approval.
 
 > **Critical:** Approved refunds are initiated to the original payment method within fourteen (14) Business Days of approval; the credit then depends on your bank or card issuer. A refund claim must be filed by the 75th day after payment or it will not be considered.
 
-7.1 **General rule.** Except as expressly provided in this Section 7 and in Sections 4.8 and 8.5, the Platform Fee is non-refundable. You acknowledge that our verification and matching work begins as soon as the Platform Fee is received and that the Platform Fee is consideration for that work and for replacement cover, not for the outcome of any Engagement.
+7.1 **General rule.** Except as expressly provided in this Section 7 and in Sections 4.8 and 8.5, the Platform Fee is non-refundable. You acknowledge that our verification and matching work begins as soon as the Platform Fee is received and that the Platform Fee is consideration for that work and for replacement cover, not for the outcome of any Engagement. In every case, ₹2,000 of the Platform Fee is non-refundable: it covers our onboarding, shortlisting and verification costs, including police verification where the Plan includes it (the "Non-Refundable Component", stated in Annexure B).
 
-7.2 **Eligibility for a refund.** You are entitled to a refund of the Platform Fee, less the processing fee stated in Annexure B, if and only if:
+7.2 **Eligibility for a refund.** You are entitled to a refund of the Platform Fee, less the Non-Refundable Component, if and only if:
 
 - (a) we have not introduced at least three (3) suitable Verified Profiles matching the requirements you stated when you confirmed the Plan within the Refund Window;
 - (b) during the Refund Window you responded to our communications within two (2) Business Days, attended the interviews we arranged, and did not materially change your requirements; and
@@ -207,7 +207,7 @@ Supersedes: Terms of Service dated August 2026 (website) and Terms & Conditions 
 
 8.4 **Cancellation by us or by a Helper.** Where the Company or the Helper cancels or fails to attend a Confirmed Session with less than twenty-four (24) hours' notice, the Introduction is not counted against your Plan, any session fee paid for it is refunded or credited in full within ten (10) Business Days, and we reschedule on a priority basis. A Helper who withdraws before or shortly after the start of an Engagement is replaced under Section 6 without using a Replacement from your entitlement.
 
-8.5 **Cancellation of a Plan by the Company.** If we cancel a Plan before the first Introduction for reasons of capacity or coverage, we refund the Platform Fee in full, without deduction of the processing fee, within ten (10) Business Days of the cancellation.
+8.5 **Cancellation of a Plan by the Company.** If we cancel a Plan before the first Introduction for reasons of capacity or coverage, we refund the Platform Fee in full, without deduction of the Non-Refundable Component, within ten (10) Business Days of the cancellation.
 
 ## 9. Your obligations, property access and safety {#safety}
 
@@ -364,7 +364,7 @@ The assistant's answers are drawn from the service, pricing and policy informati
 
 ## 17. Governing law and dispute resolution {#disputes}
 
-> **Summary:** Indian law applies. Raise a complaint with our grievance officer first; we acknowledge within 48 hours and resolve within 30 days. What cannot be resolved goes to binding arbitration by a sole arbitrator in Bengaluru. Claims are brought individually, not as a class. If you are a consumer, you keep your right to go to the consumer commissions instead.
+> **Summary:** Indian law applies. Raise a complaint with our grievance officer first; we acknowledge within 48 hours and resolve within 30 days. What cannot be resolved goes to binding arbitration by a sole arbitrator in New Delhi. Claims are brought individually, not as a class. If you are a consumer, you keep your right to go to the consumer commissions instead.
 
 17.1 **Governing law.** These Terms, and every dispute or claim arising out of or in connection with them, the Platform, a Plan, an Introduction or an Engagement, including non-contractual disputes or claims, are governed by the laws of India, without regard to conflict-of-laws principles.
 
@@ -372,14 +372,14 @@ The assistant's answers are drawn from the service, pricing and policy informati
 
 17.3 **Step two: binding arbitration.** Any dispute that is not resolved within thirty (30) days of a grievance under Section 17.2 shall be referred to and finally resolved by arbitration under the Arbitration and Conciliation Act, 1996, as amended, on the following terms:
 
-- (a) the tribunal shall consist of a sole arbitrator appointed by agreement between the parties within fifteen (15) days of a written request by either party, failing which by [APPOINTING AUTHORITY, e.g. the Arbitration Centre – Karnataka (Domestic and International) / the Bangalore International Mediation, Arbitration and Conciliation Centre] on the application of either party;
-- (b) the seat and venue of the arbitration shall be Bengaluru, Karnataka, India, and the proceedings may be conducted by video conference;
+- (a) the tribunal shall consist of a sole arbitrator appointed by agreement between the parties within fifteen (15) days of a written request by either party, failing which by the Delhi International Arbitration Centre on the application of either party;
+- (b) the seat and venue of the arbitration shall be New Delhi, India, and the proceedings may be conducted by video conference;
 - (c) the language of the arbitration shall be English;
 - (d) the parties agree to the fast-track procedure under Section 29B of the Act where the amount in dispute does not exceed ₹10,00,000;
 - (e) the arbitrator may award costs in accordance with Section 31A of the Act; and
 - (f) the award shall be final and binding on the parties, and the parties shall keep the arbitration and the award confidential in accordance with Section 42A of the Act.
 
-17.4 **Courts.** Subject to Section 17.3, the courts at Bengaluru, Karnataka have exclusive jurisdiction over any application for interim relief under Section 9 of the Arbitration and Conciliation Act, 1996, any proceeding to enforce an award, and any matter that is not capable of arbitration under Indian law.
+17.4 **Courts.** Subject to Section 17.3, the courts at New Delhi have exclusive jurisdiction over any application for interim relief under Section 9 of the Arbitration and Conciliation Act, 1996, any proceeding to enforce an award, and any matter that is not capable of arbitration under Indian law.
 
 17.5 **Consumer remedies preserved.** Nothing in this Section 17 prevents a Client who is a consumer within the meaning of the Consumer Protection Act, 2019 from filing a complaint before the District, State or National Consumer Disputes Redressal Commission, or with the Central Consumer Protection Authority, in respect of a matter within their jurisdiction. The agreement to arbitrate in Section 17.3 is without prejudice to that statutory option, and a Client who elects it is not required to arbitrate that dispute.
 
@@ -415,7 +415,7 @@ The assistant's answers are drawn from the service, pricing and policy informati
 
 ## Annexure A: Plans {#annexure-a}
 
-> **Note:** The figures in this Annexure are rendered from the same data that drives the pricing page, so the three cannot drift apart. Fees are stated [inclusive of / exclusive of] GST.
+> **Note:** The figures in this Annexure are rendered from the same data that drives the pricing page, so the three cannot drift apart. No GST is currently charged on Platform Fees (Section 4.5).
 
 | Plan | Platform Fee | Plan Term | Replacements included | Verified Profiles per matching round | Police verification |
 |---|---|---|---|---|---|
@@ -438,11 +438,11 @@ A.3 Fees may be revised prospectively under Section 4.6. The fee stated in your 
 
 | Item | Amount or period | Where it applies |
 |---|---|---|
-| Refund processing fee | [AMOUNT OR PERCENTAGE, e.g. 10% of the Platform Fee] | Deducted from a refund under Section 7.2 |
+| Non-Refundable Component of the Platform Fee | ₹2,000 on every Plan — onboarding, shortlisting and verification costs, including police verification where the Plan includes it | Deducted from a refund under Section 7.2; not deducted under Section 8.5 |
 | Refund claim window | Days 61 to 75 after payment | Section 7.4 |
 | Refund assessment | Acknowledged within 2 Business Days; decided within 10 Business Days | Section 7.6 |
 | Refund initiation time | 14 Business Days from approval, to the original payment method | Section 7.7 |
-| Interview or trial session fee | [AMOUNT, or "Not applicable"] | Forfeited on a late cancellation or No-Show under Section 8.2 |
+| Interview or trial session fee | Not applicable | Section 8.2 |
 | Liquidated damages for direct engagement | ₹21,000 per Helper per violation | Section 10.3 |
 | Grievance acknowledgement and resolution | 48 hours; 30 days | Section 17.2 |
 | Support hours | Monday to Saturday, 10:00 AM to 7:00 PM IST | Section 3.3(e) |
@@ -452,10 +452,10 @@ A.3 Fees may be revised prospectively under Section 4.6. The fee stated in your 
 
 C.1 In accordance with the Consumer Protection (E-Commerce) Rules, 2020, the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and the Digital Personal Data Protection Act, 2023, the Company has appointed the following Grievance Officer:
 
-- **Name:** [GRIEVANCE OFFICER NAME]
-- **Designation:** Grievance Officer, MyBuddyMaid Pvt Limited
+- **Name:** Shivraj Singh
+- **Designation:** Grievance Officer, MyBuddyMaid Private Limited
 - **Email:** governance@mybuddymaid.in
 - **Telephone:** +91 93551 14869 (Monday to Saturday, 10:00 AM to 7:00 PM IST)
-- **Address:** 175, 5th Floor, Main Road, Chandra Layout, Bengaluru, Karnataka 560040, India
+- **Address:** C/o Kanchan Bhatiya, 2-A/3 SF, Front Side, Asif Ali Road, Darya Ganj, New Delhi, Central Delhi 110002, Delhi, India
 
 C.2 Grievances are acknowledged within forty-eight (48) hours of receipt and resolved within thirty (30) days. A grievance relating to personal data that is not resolved to your satisfaction may be escalated to the Data Protection Board of India as described in the Privacy Policy.

@@ -1,7 +1,7 @@
 # Privacy Policy
 
 Effective date: 15 September 2026
-Version: 2.0 (draft for legal review; not yet in force)
+Version: 2.0
 Supersedes: Privacy Policy dated August 2026 (website) and Privacy Policy dated April 2026 (booking app)
 
 ## At a glance
@@ -17,7 +17,7 @@ Supersedes: Privacy Policy dated August 2026 (website) and Privacy Policy dated 
 
 > **Summary:** This policy explains what personal data MyBuddyMaid collects, why, who sees it, how long we keep it, and how you can control it. It applies to the website, the booking app, and our WhatsApp, phone and email channels, and to Clients, visitors and Helpers.
 
-1.1 **The Data Fiduciary.** MyBuddyMaid Pvt Limited, a private limited company registered in India with registration number [CIN / REGISTRATION NUMBER], having its registered office at 175, 5th Floor, Main Road, Chandra Layout, Bengaluru, Karnataka 560040, operating as "MyBuddyMaid" ("we", "us", "our"), is the **Data Fiduciary** under the Digital Personal Data Protection Act, 2023 (the "DPDP Act") for the personal data described in this policy. The DPDP Act is the law that governs our processing.
+1.1 **The Data Fiduciary.** MyBuddyMaid Private Limited, a private limited company registered in India (CIN U96908DC2026PTC474931), having its registered office at C/o Kanchan Bhatiya, 2-A/3 SF, Front Side, Asif Ali Road, Darya Ganj, New Delhi, Central Delhi 110002, Delhi, India, operating as "MyBuddyMaid" ("we", "us", "our"), is the **Data Fiduciary** under the Digital Personal Data Protection Act, 2023 (the "DPDP Act") for the personal data described in this policy. The DPDP Act is the law that governs our processing.
 
 Where, and only to the extent that, the General Data Protection Regulation (EU) 2016/679 or the UK GDPR applies to a particular processing activity under its own territorial-scope rules, we act as the data controller for that activity; and where, and only to the extent that, we meet the thresholds to be a "business" under the California Consumer Privacy Act as amended by the California Privacy Rights Act (the "CCPA"), we act as such. Section 14 sets out the additional rights that apply in those cases. Nothing in this paragraph extends a foreign law to processing it does not reach.
 
@@ -55,7 +55,7 @@ Where, and only to the extent that, the General Data Protection Regulation (EU) 
 
 2.2 **Support conversations, and the notice we show before you type.** Our support chat is answered first by an automated assistant. Before your first message, the chat window shows this notice, and you can read this policy from it:
 
-> **Before you start.** You are chatting with MyBuddyMaid's automated assistant. It answers from our published service, pricing and policy information, and it can pass you to a member of our team. We keep a record of this conversation, and by continuing you agree that we may analyse conversations in aggregate to improve our service; we do not use them to build advertising profiles. **Please type only what the assistant needs to answer you. There is no need to send your phone number, email address or address here unless our team needs to call you back, in which case the assistant will ask for your name and mobile number; we use them only to contact you about your request and keep them with the record of this conversation. You must never send card numbers, UPI PINs, passwords or one-time passwords. We will never ask for them.** If you are not signed in we store a random reference in your browser so the conversation can continue; sign in and it is linked to your account. You can withdraw consent, ask what we hold, or complain to our Grievance Officer — see our Privacy Policy.
+> **Before you start.** You are chatting with MyBuddyMaid’s automated assistant. It answers from our published service, pricing and policy information, and it can pass you to a member of our team. We keep a record of this conversation, and by continuing you agree that we may analyse conversations in aggregate to improve our service; we do not use them to build advertising profiles. **Please type only what the assistant needs to answer you. There is no need to send your phone number, email address or address here unless our team needs to call you back, in which case the assistant will ask for your name and mobile number; we use them only to contact you about your request and keep them with the record of this conversation. You must never send card numbers, UPI PINs, passwords or one-time passwords. We will never ask for them.** If you are not signed in we store a random reference in your browser so the conversation can continue; sign in and it is linked to your account. You can withdraw consent, ask what we hold, or complain to our Grievance Officer — see our Privacy Policy.
 
 If you use the chat without signing in, the reference we store identifies the conversation, not you, and we do not combine it with our website analytics. If you sign in or create an account in the same browsing session, we link that conversation to your account so that our team can see what you have already told us; from that point the conversation is part of your account data and is deleted with it.
 
@@ -98,7 +98,7 @@ For individuals in the EU, the UK or California, **Section 14 of this policy** (
 - (b) in the **chat window**, before your first message, in the words set out in Section 2.2; and
 - (c) at any other point where we ask for consent for a new purpose.
 
-In every case the notice states the data and the purpose in plain language; tells you that you may withdraw consent at any time, as easily as you gave it, by the routes in Section 8.2; tells you that you may raise a grievance with our Grievance Officer under Section 8.5; and tells you that you may complain to the Data Protection Board of India if we do not resolve it. This policy, in English, is available from every notice, and we will provide it in Hindi or Kannada on request under Section 5(3) of the Act.
+In every case the notice states the data and the purpose in plain language; tells you that you may withdraw consent at any time, as easily as you gave it, by the routes in Section 8.2; tells you that you may raise a grievance with our Grievance Officer under Section 8.5; and tells you that you may complain to the Data Protection Board of India if we do not resolve it. This policy, in English, is available from every notice, and we will provide it on request in Hindi or any other language listed in the Eighth Schedule to the Constitution, as Section 5(3) of the Act provides.
 
 3.3 **Consent.** Where we rely on consent, it is requested in clear language, for a stated purpose, by an affirmative action such as submitting a form, ticking a box or tapping a button. You may withdraw consent at any time as described in Section 8, and withdrawal is as easy as giving it. Withdrawal does not affect processing already carried out, and where the withdrawn consent was necessary to provide a service, we may no longer be able to provide it.
 
@@ -128,7 +128,7 @@ We use only providers whose terms state that they do not use what we send them t
 | Resend, Inc. | Sending transactional email (request confirmations, plan confirmations, receipts) | Name, email address, the contents of the email, delivery logs | United States |
 | Google LLC (Google Sign-In) | Optional sign-in with your Google account | Google account identifier, name, email, profile picture | Global |
 | Google LLC (Google Analytics 4) | Website usage analytics, loaded only after you consent through the cookie notice | Device and technical data, analytics identifiers, interactions with buttons and links | United States and other Google locations |
-| Umami Software, Inc. (Umami Cloud) | Privacy-focused, cookieless website analytics | Device and technical data without persistent identifiers | [UMAMI REGION, e.g. European Union / United States] |
+| Umami Software, Inc. (Umami Cloud) | Privacy-focused, cookieless website analytics | Device and technical data without persistent identifiers | United States |
 | Meta Platforms, Inc. (WhatsApp) | Messaging with you, if you contact us on WhatsApp | Your phone number, profile name and the messages you send | Global; subject to WhatsApp's own terms and privacy policy |
 | Chatwoot Inc. | Hosting the support inbox our team answers from, across chat, WhatsApp, email and phone records | Support interaction data; identity and contact data; the contents of your messages | **United States.** Chatwoot's hosted service stores and processes data on servers in the United States and offers no choice of region |
 | OpenRouter, Inc. | Routing our support assistant's requests to a language model | Your support chat message, after the removal described in Section 3.6, and the published information we looked up to answer it. Not your name, contact number, address, bookings or payment details from your account | United States |
@@ -136,7 +136,6 @@ We use only providers whose terms state that they do not use what we send them t
 | AtlasCloud | Generating the wording of the assistant's answer, when the providers above are unavailable | As above | United States |
 
 4.2.1 **The assistant's language-model providers.** The three rows above marked as generating the assistant's wording are the providers we use today, in that order of preference; the second and third are used only when the one before it is unavailable. We use only providers whose published terms state that they do not use what we send them to train their models. If we add, remove or reorder a provider we will update this policy, and where the change is material we will give notice under Section 15.
-| [BOT-PROTECTION PROVIDER, e.g. Cloudflare, Inc. (Turnstile)] | Protecting forms from automated abuse, when enabled | Device and technical data | Global |
 
 4.3 **Police authorities.** For Helpers placed under plans that include police verification, we submit the Helper's identity and address details to the relevant police authority for verification, and receive the authority's report.
 
@@ -269,7 +268,7 @@ We use only providers whose terms state that they do not use what we send them t
 
 > **Summary:** To verify a Helper we collect identity and address documents, references, an assessment, and, for some plans, a police-verification report. We share a dossier with the Client before placement. Helpers have the same rights as anyone else, and Clients must keep the dossier confidential and delete it when it is no longer needed.
 
-11.1 **What we collect from Helpers.** When a Helper applies to join our verified pool we collect, with their written consent: name, photograph, date of birth, gender, contact details, current and permanent address; identity and address documents, including a validation of the Helper's Aadhaar identity carried out by [AADHAAR VERIFICATION METHOD, e.g. offline QR-code or masked-Aadhaar verification], of which we retain the verification result and a masked reference only; work history, skills, languages, service categories and locality preferences; the names and contact details of previous households who act as references, and what those references tell us; the notes of our in-person behavioural assessment; and, for Helpers to be placed under the Gold and Diamond plans, the police-verification report obtained through the relevant police authority.
+11.1 **What we collect from Helpers.** When a Helper applies to join our verified pool we collect, with their written consent: name, photograph, date of birth, gender, contact details, current and permanent address; identity and address documents, including a validation of the Helper's Aadhaar identity, of which we retain the verification result and a masked reference only; work history, skills, languages, service categories and locality preferences; the names and contact details of previous households who act as references, and what those references tell us; the notes of our in-person behavioural assessment; and, for Helpers to be placed under the Gold and Diamond plans, the police-verification report obtained through the relevant police authority.
 
 11.2 **Why.** To verify identity and suitability, as described on the How We Verify Helpers page; to match Helpers with Clients; to arrange interviews and placements; to provide replacement cover; to meet legal requirements; and to handle grievances.
 
@@ -279,7 +278,7 @@ We use only providers whose terms state that they do not use what we send them t
 
 11.5 **Retention.** We keep a Helper's verification data for the period of their association with our pool and for thirty-six (36) months after their last placement or last contact, to provide replacement cover, to respond to grievances from households, and to defend legal claims, after which it is erased or anonymised. A police-verification report is retained for the period stated by the issuing authority, or thirty-six (36) months, whichever is shorter.
 
-11.6 **Helpers' rights.** Helpers have every right described in Section 8, exercisable in the same way. We provide this policy and the consent form to Helpers in [LANGUAGES, e.g. English, Hindi and Kannada], and our team explains it in person before consent is taken.
+11.6 **Helpers' rights.** Helpers have every right described in Section 8, exercisable in the same way. We provide this policy and the consent form to Helpers in English and, on request, in Hindi or any other language listed in the Eighth Schedule to the Constitution, and our team explains it in person before consent is taken.
 
 ## 12. Communications and marketing {#communications}
 
@@ -301,7 +300,7 @@ We use only providers whose terms state that they do not use what we send them t
 
 14.1 **European Economic Area and United Kingdom.** If you are in the EEA or the UK, the following applies in addition to the rest of this policy.
 
-- (a) **Controller and representative.** The controller is the entity named in Section 1.1. [Where required by Article 27 of the GDPR, our representative in the EU is [EU REPRESENTATIVE NAME AND ADDRESS] and in the UK is [UK REPRESENTATIVE NAME AND ADDRESS].]
+- (a) **Controller and representative.** The controller is the entity named in Section 1.1.
 - (b) **Lawful bases.** The lawful basis for each purpose is stated in the right-hand column of the table in Section 3.1. Where we rely on legitimate interests, we have balanced those interests against your rights, and you may ask us for a summary of that assessment.
 - (c) **Your additional rights.** You have the right to data portability, the right to restrict processing, the right to object to processing based on legitimate interests and to direct marketing, and the right not to be subject to a decision based solely on automated processing. Exercise them by emailing governance@mybuddymaid.in; we respond within one month, extendable by two further months for complex requests, and we will tell you if we need the extension.
 - (d) **Transfers.** See Section 5.5.
@@ -329,12 +328,12 @@ We use only providers whose terms state that they do not use what we send them t
 
 16.1 **Grievance Officer.** In accordance with the DPDP Act and the rules made under it, the Consumer Protection (E-Commerce) Rules, 2020 and the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, our Grievance Officer is:
 
-- **Name:** [GRIEVANCE OFFICER NAME]
-- **Designation:** Grievance Officer, MyBuddyMaid Pvt Limited
+- **Name:** Shivraj Singh
+- **Designation:** Grievance Officer, MyBuddyMaid Private Limited
 - **Email:** governance@mybuddymaid.in
 - **Privacy requests:** governance@mybuddymaid.in
 - **Telephone:** +91 93551 14869 (Monday to Saturday, 10:00 AM to 7:00 PM IST)
-- **Address:** 175, 5th Floor, Main Road, Chandra Layout, Bengaluru, Karnataka 560040, India
+- **Address:** C/o Kanchan Bhatiya, 2-A/3 SF, Front Side, Asif Ali Road, Darya Ganj, New Delhi, Central Delhi 110002, Delhi, India
 
 16.2 **Escalation.** A grievance that is not resolved to your satisfaction within thirty (30) days may be escalated to the Data Protection Board of India under Section 13(3) of the DPDP Act.
 

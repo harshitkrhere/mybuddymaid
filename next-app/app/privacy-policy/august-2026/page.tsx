@@ -1,0 +1,44 @@
+// The August 2026 privacy policy, archived under its own URL when version 2.0 replaced it
+// (Privacy Policy 2.0 §15 promises earlier versions stay available). Not indexed.
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { TrustPage } from '@/components/seo/TrustPage';
+import { staticMetadata } from '@/lib/seo-engine/page-metadata';
+
+export const dynamic = 'force-static';
+
+export const metadata: Metadata = staticMetadata({
+  title: 'Privacy Policy (August 2026, superseded)',
+  description: 'The MyBuddyMaid Privacy Policy dated August 2026, replaced by version 2.0.',
+  path: '/privacy-policy/august-2026',
+  noindex: true,
+});
+
+export default function PrivacyPolicyPage() {
+  return (
+    <TrustPage
+      title="Privacy policy (August 2026)"
+      intro="The previous version of our privacy policy, kept for reference."
+      path="/privacy-policy/august-2026"
+    >
+      <p className="legal__superseded">
+        This is the privacy policy dated August 2026, kept for reference. It was replaced by <Link href="/privacy-policy">version 2.0, effective 15 September 2026</Link>.
+      </p>
+      <p className="muted">Last updated: August 2026</p>
+      <h2>1. Information We Collect</h2>
+      <p>We collect information you provide directly: name, phone number, email, address, and service preferences when you create an account or book a service.</p>
+      <h2>2. How We Use Your Information</h2>
+      <p>Your information is used to: match you with verified professionals, process bookings and payments, communicate service updates, and improve our platform.</p>
+      <h2>3. Information Sharing</h2>
+      <p>We share your information only with: the assigned home help professional (contact details for coordination), payment processors (Razorpay), and as required by law.</p>
+      <h2>4. Data Security</h2>
+      <p>We implement industry-standard security measures including encryption, secure servers, and access controls to protect your personal information.</p>
+      <h2>5. Cookies</h2>
+      <p>We use essential cookies for authentication and analytics cookies (Google Analytics, Umami) to improve our services. You can disable analytics cookies in your browser settings.</p>
+      <h2>6. Your Rights</h2>
+      <p>You may request access to, correction of, or deletion of your personal data by contacting us at info@mybuddymaid.in.</p>
+      <h2>7. Contact</h2>
+      <p>For privacy-related questions, email us at <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a> or call +91 9355114869.</p>
+    </TrustPage>
+  );
+}

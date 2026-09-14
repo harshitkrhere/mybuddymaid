@@ -9,7 +9,7 @@ import assert from 'node:assert/strict';
 import { answer, gatedNumbers, passesGate, handoffFor } from './answer';
 import { retrieve } from './retrieve';
 import { resetCircuits, type FetchLike, type ProviderConfig } from './provider';
-import { PLANS, PLAN_BY_KEY, SERVICES } from '../../data/seo';
+import { PLANS, PLAN_BY_KEY, SERVICES, NON_REFUNDABLE_FEE } from '../../data/seo';
 import { SUPPORT_PHONE_DISPLAY, SUPPORT_HOURS } from '../../data/seo/contact';
 import { COPY } from './copy';
 
@@ -272,7 +272,7 @@ test('every rung-3 answer passes the number gate against its own retrieval', asy
 });
 
 test('every rupee figure in every plan or policy answer is a fee or a salary band from the data layer', async () => {
-  const legitimate = new Set<number>([...PLANS.map((p) => p.fee), ...SERVICES.flatMap((s) => Object.values(s.pricing).flatMap((b) => [b.from, b.to]))]);
+  const legitimate = new Set<number>([...PLANS.map((p) => p.fee), NON_REFUNDABLE_FEE, ...SERVICES.flatMap((s) => Object.values(s.pricing).flatMap((b) => [b.from, b.to]))]);
   const questions = ['what are your plans', ...PLANS.map((p) => `${p.key} plan details`), ...SERVICES.map((s) => `${s.name.toLowerCase()} charges`), 'what is your refund policy'];
   for (const q of questions) {
     const a = await answer({ message: q }, { provider: null });

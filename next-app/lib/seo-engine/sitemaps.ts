@@ -25,8 +25,8 @@ const TRUST_PAGES: SitemapUrl[] = [
   { loc: '/pricing', lastmod: '2026-09-05' },
   { loc: '/about', lastmod: '2026-09-05' },
   { loc: '/contact', lastmod: '2026-09-05' },
-  { loc: '/privacy-policy', lastmod: '2026-09-08' },
-  { loc: '/terms-of-service', lastmod: '2026-09-08' },
+  { loc: '/privacy-policy', lastmod: '2026-09-14' },
+  { loc: '/terms-of-service', lastmod: '2026-09-14' },
   { loc: '/services', lastmod: '2026-09-05' },
   { loc: '/blog', lastmod: '2026-09-05' },
 ];
