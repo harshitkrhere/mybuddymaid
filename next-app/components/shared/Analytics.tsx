@@ -10,7 +10,12 @@
 //      referrer — in sessionStorage (this visit) and localStorage (first touch), so the
 //      lead form and, once the schema allows it, the booking can carry attribution. No
 //      cookie is set and nothing leaves the browser until a form is sent;
-//   4. loads gtag.js and Umami on the first user interaction, or after a short timeout.
+//   4. loads gtag.js on the first user interaction, or after a short timeout.
+//
+// Umami is gone (owner decision, 2026-09-15): its dashboard belonged to the old agency's
+// account and had recorded nothing for the site; GA4 and Vercel Analytics are the two that
+// remain. The privacy policy still names Umami as a processor; dropping that line is a
+// legal-text edit for the next policy revision, not an engineering one.
 //
 // Trade-off (documented in docs/seo/ASSUMPTIONS.md #24): gtag.js is ~190KB and cost
 // roughly 560ms of main-thread blocking when loaded eagerly. Deferring it keeps the page
@@ -28,7 +33,6 @@ import Script from 'next/script';
 // with the legacy site and belonged to a property nobody at the company could open, so the
 // clicks recorded under it were never readable. app/index.html carries the same id.
 export const GA_ID = 'G-9T870SQ5F3';
-const UMAMI_ID = '90b0b752-39a0-4d32-a614-8dcc9d242af8';
 const IDLE_MS = 4000;
 
 /** Storage keys and query parameters shared with app/index.html. */
@@ -69,10 +73,6 @@ const BOOTSTRAP = `
     g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id=${GA_ID}';
     g.onload=function(){ window.gtag('js',new Date()); window.gtag('config','${GA_ID}',{send_page_view:true}); };
     document.head.appendChild(g);
-    var u=document.createElement('script');
-    u.async=true; u.defer=true; u.src='https://cloud.umami.is/script.js';
-    u.setAttribute('data-website-id','${UMAMI_ID}');
-    document.head.appendChild(u);
   }
   ['pointerdown','keydown','touchstart','scroll'].forEach(function(evt){
     window.addEventListener(evt,load,{once:true,passive:true});

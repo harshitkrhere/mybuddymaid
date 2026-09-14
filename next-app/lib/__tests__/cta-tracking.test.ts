@@ -47,6 +47,9 @@ test('both front-ends capture attribution into the same storage keys and tag the
   assert.ok(app.includes(`googletagmanager.com/gtag/js?id=${GA_ID}`), 'the app loads the same GA4 property as the site');
   assert.ok(app.includes(`window.gtag('config','${GA_ID}'`), 'the app configures the same GA4 property as the site');
   assert.match(read('next-app/components/seo/LeadForm.tsx'), /attribution: readAttribution\(\)/);
+  // Umami was dropped on 2026-09-15 (owner decision): GA4 and Vercel Analytics are the two that remain
+  assert.doesNotMatch(site, /umami/i);
+  assert.doesNotMatch(app, /umami/i);
 });
 
 test('the chat widget reports its three moments as events, never the message or the number', () => {
