@@ -114,10 +114,16 @@ function escapeXml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-/** Every indexable canonical URL (for crawl/indexnow tooling). */
+/**
+ * Every indexable canonical URL (for crawl/indexnow tooling and the growth census) — the
+ * same set the sitemap advertises: gated core pages, the trust pages and the blog posts.
+ * The blog posts were missing until 2026-09-14, so they were never submitted to IndexNow,
+ * never seeded into the crawl and would have been absent from the index census.
+ */
 export function allIndexableUrls(): string[] {
   const out: string[] = [];
   for (const m of allCorePages()) if (idx(m.path)) out.push(m.path);
   out.push(...TRUST_PAGES.map((t) => t.loc));
+  out.push(...BLOG_POSTS.map((p) => `/blog/${p.slug}`));
   return out;
 }

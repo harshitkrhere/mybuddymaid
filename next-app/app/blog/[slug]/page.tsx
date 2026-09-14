@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BLOG_BY_SLUG, BLOG_POSTS } from '@/data/blog/posts';
+import { areasForPost } from '@/lib/blog/links';
 import { stripLegacyHeader } from '@/lib/blog/legacy-header';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
@@ -31,6 +32,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     { name: post.title, path: `/blog/${slug}` },
   ];
   const related = BLOG_POSTS.filter((p) => p.slug !== slug && p.category === post.category).slice(0, 4);
+  // the places this guide applies to (lib/blog/links.ts): a city guide links its hub, hero
+  // localities and service pages; a service guide its hub and Tier-1 city pages; the rest,
+  // and every guide about a city we do not serve, list the eight cities we do
+  const areas = areasForPost(slug);
   return (
     <>
       <JsonLd
@@ -69,6 +74,18 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               {related.map((r) => (
                 <li key={r.slug}>
                   <Link href={`/blog/${r.slug}`}>{r.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        {areas.length > 0 && (
+          <>
+            <h2>Where we serve</h2>
+            <ul className="link-list">
+              {areas.map((a) => (
+                <li key={a.path}>
+                  <Link href={a.path}>{a.name}</Link>
                 </li>
               ))}
             </ul>

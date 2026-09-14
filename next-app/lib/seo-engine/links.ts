@@ -14,10 +14,14 @@ export const paths = {
   pincode: (pin: string) => `/pincode/${pin}`,
 };
 
+// Every variant is at least four words for a one-word locality name: the quality gate's
+// local-token ratio counts only sentences of four words or more (scripts/seo/uniqueness.ts),
+// so a three-word anchor would silently drop a local sentence and move marginal pages
+// across the index/noindex line for a cosmetic change.
 const LOCALITY_ANCHORS = [
   (n: string) => `maid service in ${n}`,
-  (n: string) => `maids in ${n}`,
-  (n: string) => `${n} house help`,
+  (n: string) => `hire a maid in ${n}`,
+  (n: string) => `house help in ${n}`,
   (n: string) => `hire a verified maid in ${n}`,
   (n: string) => `domestic help in ${n}`,
 ];
