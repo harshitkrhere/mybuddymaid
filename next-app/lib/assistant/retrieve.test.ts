@@ -116,7 +116,7 @@ const CASES: Case[] = [
   { q: 'need a plumber', intent: 'not_offered', includes: [/isn.t something we place/] },
 
   // ── Replacement and refund ──
-  { q: 'what is your refund policy', intent: 'refund_question', includes: ['60 days', '3 suitable verified profiles', 'processing fee'], excludes: [/connect you/i], sourceUrl: '/replacement-policy', escalate: null },
+  { q: 'what is your refund policy', intent: 'refund_question', includes: ['60 days', '3 suitable verified profiles', '₹2,000 of every plan fee is non-refundable'], excludes: [/connect you/i], sourceUrl: '/replacement-policy', escalate: null },
   { q: 'is the fee refundable', intent: 'refund_question', includes: ['60 days'] },
   { q: 'i want a refund now', intent: 'refund_request', escalate: 'refund', includes: [/decided by a person/] },
   { q: 'paise wapas chahiye', intent: 'refund_request', escalate: 'refund', lang: 'hi' },

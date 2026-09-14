@@ -185,6 +185,28 @@ Email mapping used, and one flag:
 - [AADHAAR VERIFICATION METHOD], [LANGUAGES] for the Helper consent form
 - [EU REPRESENTATIVE NAME AND ADDRESS], [UK REPRESENTATIVE NAME AND ADDRESS], only if the business markets to those regions; otherwise delete 14.1(a)'s bracketed sentence
 
+**Filled on 2026-09-14** (owner) and published the same day — the documents now live at
+`next-app/content/legal/` and render at /privacy-policy and /terms-of-service; the August 2026
+versions are archived at /privacy-policy/august-2026 and /terms-of-service/august-2026.
+
+| Variable | Filled with |
+|---|---|
+| Entity | **MyBuddyMaid Private Limited**, CIN **U96908DC2026PTC474931**, incorporated in Delhi |
+| Registered office | C/o Kanchan Bhatiya, 2-A/3 SF, Front Side, Asif Ali Road, Darya Ganj, New Delhi, Central Delhi 110002, Delhi |
+| GSTIN | Not yet registered. §4.5 now says no GST is charged until registration is complete, after which it applies in addition to the stated fee and is shown before payment. Add the GSTIN and revisit §4.5 when it arrives |
+| Grievance Officer | **Shivraj Singh** (founder), governance@mybuddymaid.in |
+| Refund processing fee | Replaced by a **Non-Refundable Component of ₹2,000 on every plan** (onboarding, shortlisting and verification, including police verification where the plan includes it) — §7.1, Annexure B; `NON_REFUNDABLE_FEE` in `data/seo/plans.ts`, quoted by the replacement-policy page and the assistant |
+| Unresponsive clients | Owner: "no refund if the person goes silent" — already §7.3(b): three contact attempts over seven or more days |
+| Interview / trial session fee | Not applicable |
+| Arbitration | Delhi International Arbitration Centre; seat New Delhi; courts at New Delhi; Business Day holidays per the NCT of Delhi |
+| Umami region | United States (`cloud.umami.is`) |
+| Bot protection | Row removed — none is in use |
+| Aadhaar method / languages / EU representative | Method left unstated (result and masked reference retained); languages "English, and on request Hindi or any Eighth Schedule language"; EU/UK representative clause removed |
+
+One flag carried forward: both documents say effective **15 September 2026** and were published on
+14 September, so the fifteen-day notice ToS §1.6 promises for material changes was not given for
+2.0 itself. Existing account holders should be emailed about the new terms.
+
 ## 6. Suggested publication sequence {#sequence}
 
 1. Advocate's review of both drafts, with this memo, and the decisions in Section 4 taken.

@@ -58,6 +58,12 @@ export const PLAN_BY_KEY = new Map(PLANS.map((p) => [p.key, p]));
 export const REFUND_WINDOW_DAYS = 60;
 /** Profiles we must supply within the refund window for the fee to be non-refundable. */
 export const REFUND_PROFILE_THRESHOLD = 3;
+/**
+ * The part of every plan fee that is never refunded: onboarding, shortlisting and verification
+ * costs, including police verification where the plan includes it. Terms 2.0 §7.1 and
+ * Annexure B; owner decision 2026-09-12.
+ */
+export const NON_REFUNDABLE_FEE = 2000;
 
 /**
  * Online checkout is paused while the Razorpay account is on hold (docs/seo/ASSUMPTIONS.md #50).

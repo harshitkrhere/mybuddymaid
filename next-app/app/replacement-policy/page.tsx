@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TrustPage } from '@/components/seo/TrustPage';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
-import { PLANS, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD } from '@/data/seo';
+import { PLANS, REFUND_WINDOW_DAYS, REFUND_PROFILE_THRESHOLD, NON_REFUNDABLE_FEE } from '@/data/seo';
 
 export const dynamic = 'force-static';
 
@@ -61,7 +61,7 @@ export default function ReplacementPolicyPage() {
 
       <h2>Refunds</h2>
       <p>
-        The platform fee is refundable, minus a processing fee, only if we are unable to provide {REFUND_PROFILE_THRESHOLD} suitable verified profiles matching your original stated requirements within{' '}
+        ₹{NON_REFUNDABLE_FEE.toLocaleString('en-IN')} of every plan fee is non-refundable: it covers onboarding and verification, including police verification where your plan includes it. The rest of the platform fee is refundable only if we are unable to provide {REFUND_PROFILE_THRESHOLD} suitable verified profiles matching your original stated requirements within{' '}
         {REFUND_WINDOW_DAYS} days of payment.
         Refunds are not issued once a candidate has been successfully hired, or where the client becomes unresponsive. The full terms are in our{' '}
         <Link href="/terms-of-service">terms of service</Link>.

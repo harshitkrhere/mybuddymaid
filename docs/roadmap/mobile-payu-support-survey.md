@@ -976,7 +976,7 @@ Every number below was read from the data layer, not estimated:
 | `data/seo/content/zone-content.json` | zone FAQs | **70** |
 | `data/blog/posts.ts` | blog posts | **35** (per `AUDIT/02-ROUTES.md:35`) |
 | `/how-we-verify`, `/replacement-policy` | trust and policy copy | 2 pages |
-| `docs/legal/drafts/` | 2.0 terms (448 lines) and privacy policy (298 lines) | **not yet published** |
+| `next-app/content/legal/` (moved from `docs/legal/drafts/`) | 2.0 terms and privacy policy, rendered by `lib/legal/markdown.ts` | **PUBLISHED 2026-09-14** — MyBuddyMaid Private Limited, CIN U96908DC2026PTC474931, Delhi; August 2026 versions archived under `/august-2026` |
 
 That is **184 curated FAQ answers** before a single one is written for the bot.
 

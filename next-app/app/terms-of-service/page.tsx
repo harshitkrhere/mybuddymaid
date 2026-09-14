@@ -1,39 +1,24 @@
+// app/terms-of-service/page.tsx — Terms of Service 2.0, rendered from content/legal/terms-of-service.md.
+// The August 2026 version stays at /terms-of-service/august-2026.
 import type { Metadata } from 'next';
 import { TrustPage } from '@/components/seo/TrustPage';
+import { LegalDocument } from '@/components/seo/LegalDocument';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
+import { legalDocument } from '@/lib/legal/documents';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = staticMetadata({
   title: 'Terms of Service',
-  description: 'MyBuddyMaid Terms of Service — conditions for using our home help services platform.',
+  description: 'MyBuddyMaid Terms of Service — plans, fees, verification, replacements, refunds, cancellations, and how disputes are resolved.',
   path: '/terms-of-service',
 });
 
 export default function TermsPage() {
+  const doc = legalDocument('terms-of-service');
   return (
-    <TrustPage
-      title="Terms of service"
-      intro="The conditions for using the MyBuddyMaid platform and the services booked through it."
-      path="/terms-of-service"
-    >
-      <p className="muted">Last updated: August 2026</p>
-      <h2>1. Service Overview</h2>
-      <p>MyBuddyMaid is a platform that connects families with verified home help professionals including maids, cooks, nannies, elderly care providers, and postnatal care specialists.</p>
-      <h2>2. User Accounts</h2>
-      <p>You must provide accurate information when creating an account. You are responsible for maintaining the confidentiality of your account credentials.</p>
-      <h2>3. Booking & Payments</h2>
-      <p>Bookings are confirmed upon payment. All payments are processed securely through Razorpay. Prices are displayed in Indian Rupees (INR).</p>
-      <h2>4. Replacement Guarantee</h2>
-      <p>We offer free replacements within the guarantee period of your plan (10–18 months depending on the plan). Replacement requests must be made through the platform or by contacting support.</p>
-      <h2>5. Cancellation & Refunds</h2>
-      <p>Cancellation requests are processed within 7 business days. Refund eligibility depends on the stage of service and is assessed on a case-by-case basis.</p>
-      <h2>6. Liability</h2>
-      <p>MyBuddyMaid acts as a marketplace connecting families with professionals. While we verify all professionals, we are not liable for actions performed by them outside the scope of their engagement.</p>
-      <h2>7. Governing Law</h2>
-      <p>These terms are governed by the laws of India. Any disputes shall be resolved through arbitration in Bengaluru, Karnataka.</p>
-      <h2>8. Contact</h2>
-      <p>Questions about these terms? Contact us at <a href="mailto:info@mybuddymaid.in">info@mybuddymaid.in</a> or +91 9355114869.</p>
+    <TrustPage title="Terms of service" intro="The conditions for using the MyBuddyMaid platform and the services booked through it." path="/terms-of-service">
+      <LegalDocument doc={doc} previous={{ label: 'read the August 2026 version', href: '/terms-of-service/august-2026' }} />
     </TrustPage>
   );
 }

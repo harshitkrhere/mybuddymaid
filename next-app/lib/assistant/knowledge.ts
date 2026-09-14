@@ -23,6 +23,7 @@ import {
   GLOBAL_FAQS,
   HOUSING_FAQ_POOLS,
   REFUND_WINDOW_DAYS,
+  NON_REFUNDABLE_FEE,
   REFUND_PROFILE_THRESHOLD,
   PURCHASES_PAUSED,
 } from '@/data/seo';
@@ -163,7 +164,8 @@ function policyEntries(): KnowledgeEntry[] {
       kind: 'policy',
       q: 'What is the refund policy? Can I get my money back?',
       a:
-        `The platform fee is refundable, minus a processing fee, only if we are unable to provide ${REFUND_PROFILE_THRESHOLD} suitable verified profiles ` +
+        `₹${NON_REFUNDABLE_FEE.toLocaleString('en-IN')} of every plan fee is non-refundable: it covers onboarding and verification, including police verification where your plan includes it. ` +
+        `The rest of the platform fee is refundable only if we are unable to provide ${REFUND_PROFILE_THRESHOLD} suitable verified profiles ` +
         `matching your original stated requirements within ${REFUND_WINDOW_DAYS} days of payment. Refunds are not issued once a candidate has been successfully hired, or where the client becomes unresponsive; ` +
         'a placement that does not work out is covered by a replacement instead. A refund request is decided by our team, not by this assistant.',
       source: { title: 'Replacement policy', url: '/replacement-policy' },
