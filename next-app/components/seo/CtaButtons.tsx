@@ -12,6 +12,8 @@ export interface CtaContext {
   locality?: string;
   service?: string;
   pincode?: string;
+  /** The society page the visitor is on (Phase 5), so a call-back request is attributed to it. */
+  entity?: string;
 }
 
 /**

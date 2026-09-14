@@ -97,7 +97,7 @@ export interface PageModel {
   wordFloor: number;
   localRatioFloor: number;
   updatedAt: string;
-  cta: { whatsappText: string; city: string; zone?: string; locality?: string; service?: string; pincode?: string };
+  cta: { whatsappText: string; city: string; zone?: string; locality?: string; service?: string; pincode?: string; entity?: string };
   /** All main-content text, for the uniqueness gate. */
   mainText: string;
 }

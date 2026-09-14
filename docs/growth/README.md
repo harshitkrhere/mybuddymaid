@@ -72,6 +72,34 @@ more than 10 leads waiting in `new` for over 24 h · a `www` host receiving impr
    `reports/latest.md`. Reconcile any GA4 geo city listed as "unmapped" into
    `lib/growth/ga4.ts` before trusting the per-city session column.
 
+## Turning on the call-back form (owner)
+
+The form on every location page ("Request a call back", below the pricing table) is built and
+off. It goes live in this order. Each step is safe on its own, and nothing shows to visitors
+until step 3.
+
+1. **Apply the database change.** Supabase → your project → *SQL Editor* → *New query* → paste
+   the whole of `supabase/migrations/20260915120000_leads_and_placement_locality.sql` → *Run*.
+   It only adds things (one table, one view, six empty columns on bookings); running it twice
+   is harmless. Check: *Table Editor* now lists `leads`. If you use the CLI instead,
+   `supabase db push` from the repo root does the same.
+2. **Give the site its database keys.** Vercel → project → *Settings* → *Environment Variables*,
+   scope **Production** only: `NEXT_PUBLIC_SUPABASE_URL` (the project URL) and
+   `SUPABASE_SERVICE_ROLE_KEY` (Supabase → *Settings* → *API Keys* → the **secret** key,
+   `sb_secret_…`, never the publishable one). The chat assistant already uses the same two
+   names, so they may be there already.
+3. **Switch it on.** Same page: `LEADS_ENABLED` = `true` and `NEXT_PUBLIC_LEADS_ENABLED` = `true`,
+   both, Production. Then *Deployments* → latest → *Redeploy*: the second flag is baked into the
+   pages at build time, so a redeploy is required.
+4. **One test lead.** Open any locality page, scroll to the form, send your own number. Expect
+   four things: the thank-you line on the page; a row in Supabase → `leads`; a new conversation
+   in the Chatwoot inbox with the request as its first message; `lead_submit` in GA4 → Admin →
+   DebugView. Then set that row's `status` to `spam` so it does not count.
+
+To switch it off again, set both flags to `false` and redeploy. Leads appear in the Monday
+report from the next run (`reports/latest.md`, funnel section) and open the alert issue when
+more than ten sit in `new` for over a day.
+
 ## Running locally (PowerShell)
 
 ```powershell

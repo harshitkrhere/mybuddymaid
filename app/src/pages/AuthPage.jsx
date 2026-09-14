@@ -52,11 +52,8 @@ export default function AuthPage() {
   }, [cooldown]);
 
   useEffect(() => {
-    if (isAuthenticated) {
-      const ctx = sessionStorage.getItem('mbm_redirect_context');
-      sessionStorage.removeItem('mbm_redirect_context');
-      navigate('/splash', { state: { redirectContext: ctx }, replace: true });
-    }
+    // The splash reads the site's context from storage itself (lib/context.js).
+    if (isAuthenticated) navigate('/splash', { replace: true });
   }, [isAuthenticated]);
 
   const handleModeSwitch = (isSignUp) => {
@@ -93,9 +90,7 @@ export default function AuthPage() {
     try {
       await signInWithEmail(email, password);
       failCountRef.current = 0;
-      const ctx = sessionStorage.getItem('mbm_redirect_context');
-      sessionStorage.removeItem('mbm_redirect_context');
-      navigate('/splash', { state: { redirectContext: ctx }, replace: true });
+      navigate('/splash', { replace: true });
     } catch (err) {
       failCountRef.current += 1;
       // Progressive cooldown: 5s after 3 fails, 15s after 5, 30s after 7

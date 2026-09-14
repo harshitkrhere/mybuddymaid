@@ -8,7 +8,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHmac } from 'node:crypto';
-import { chatwootFromEnv, openHandoff, postCustomerMessage, renameContact, fetchMessages, fetchStatus, ASSISTANT_PREFIX, type ChatwootClient, type FetchLike } from './chatwoot';
+import { chatwootFromEnv, openHandoff, openLeadConversation, postCustomerMessage, renameContact, fetchMessages, fetchStatus, ASSISTANT_PREFIX, type ChatwootClient, type FetchLike } from './chatwoot';
 
 const CLIENT = 'https://app.chatwoot.com/public/api/v1/inboxes/inbox-ident';
 const BOT = 'https://app.chatwoot.com/api/v1/accounts/185110';
@@ -245,4 +245,55 @@ test('fetchStatus reads the conversation’s status from the contact’s convers
   assert.equal(await fetchStatus(stub({ conversations: [{ id: 1, status: 'open' }, { id: 4242, status: 'resolved' }] }).client, CONV, 4242), 'resolved');
   assert.equal(await fetchStatus(stub({ conversations: [{ id: 4242 }] }).client, CONV, 4242), null);
   assert.equal(await fetchStatus(stub({ conversations: [] }).client, CONV, 4242), null);
+});
+
+// ─── Call-back requests ─────────────────────────────────────────────────────────────────────
+
+const LEAD = {
+  leadId: CONV,
+  ref: 'MBM-LEAD1',
+  name: 'Priya',
+  phone: '9876543210',
+  city: 'gurgaon',
+  cityName: 'Gurgaon',
+  locality: 'dlf-phase-3',
+  localityName: 'DLF Phase 3',
+  service: 'cook',
+  serviceName: 'Cook',
+  pincode: '122010',
+  society: 'Tower B, Park Place',
+  page: '/gurgaon/dlf-phase-3/cook',
+};
+
+test('openLeadConversation: the contact under the lead’s name, the request as the visitor’s message, then opened', async () => {
+  const { client, calls } = stub();
+  const id = await openLeadConversation(client, LEAD);
+  assert.equal(id, 4242);
+  assert.deepEqual(
+    calls.map((c) => `${c.api} ${c.method} ${c.path}`),
+    ['client POST /contacts', `client POST /contacts/${CONV}/conversations`, `client POST /contacts/${CONV}/conversations/4242/messages`, 'bot POST /conversations/4242/toggle_status'],
+  );
+  assert.equal(calls[0].body?.name, 'Priya');
+  assert.equal(calls[0].body?.phone_number, undefined, 'the phone never goes on the contact (Chatwoot would merge contacts by it)');
+  const attrs = calls[1].body?.custom_attributes as Record<string, string>;
+  assert.equal(attrs.mbm_reason, 'callback_request');
+  assert.equal(attrs.mbm_phone, '9876543210');
+  assert.equal(attrs.mbm_locality, 'dlf-phase-3');
+  const message = String(calls[2].body?.content);
+  assert.match(message, /^Call-back request from the website\./);
+  assert.match(message, /Mobile: 9876543210/);
+  assert.match(message, /Area: DLF Phase 3, Gurgaon \(122010\)/);
+  assert.match(message, /Service: Cook/);
+  assert.match(message, /Society \/ building: Tower B, Park Place/);
+  assert.deepEqual(calls[3].body, { status: 'open' });
+});
+
+test('openLeadConversation: a refused contact or conversation yields null; without a token nothing goes to the bot API', async () => {
+  assert.equal(await openLeadConversation(stub({ contactStatus: 422 }).client, LEAD), null);
+  assert.equal(await openLeadConversation(stub({ conversationStatus: 500 }).client, LEAD), null);
+  const { client, calls } = stub();
+  client.token = null;
+  assert.equal(await openLeadConversation(client, { ...LEAD, service: null, serviceName: null, society: null, pincode: null }), 4242);
+  assert.ok(calls.every((c) => c.api === 'client'));
+  assert.match(String(calls[2].body?.content), /Area: DLF Phase 3, Gurgaon\nService: not specified\nPage:/);
 });

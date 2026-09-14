@@ -4,6 +4,19 @@ Hand-kept. The Monday report (`reports/latest.md`) links here for "what changed 
 the numbers are the report's job, the causes are this file's. One line per shipped change,
 newest week first, with the lever it was meant to move.
 
+## Week of 2026-09-14, second batch (branch `growth/week-2`, awaiting the owner's merge)
+
+- Call-back form without an account (W2 Tranche B): the `leads` migration promoted to
+  `supabase/migrations/` with attribution and a Chatwoot link; `/api/lead` rewritten with the
+  right column names, a same-origin check, a honeypot, per-address and per-phone limits; the form
+  moved below the pricing table with real error messages; each lead opens a conversation in the
+  team's inbox. Off until the owner applies the migration and sets both LEADS flags. Lever: a
+  visitor who will not sign up can still leave a number on any of the 2,489 pages.
+- Context carry into the booking app (W2 A4): `?city&locality&service&plan` from a location page
+  survives sign-in, routes to the right service and pre-fills the booking sheet; bookings now
+  carry city, locality, pincode, society and attribution (with a fallback until the migration
+  lands). Lever: the 100 % context loss the audit measured on "Book in the app" goes to zero.
+
 ## Week of 2026-09-14 (branch `growth/week-1`, awaiting the owner's merge)
 
 - Measurement pipeline (`next-app/lib/growth`, `next-app/scripts/growth`, three workflows):
