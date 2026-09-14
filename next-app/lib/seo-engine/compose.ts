@@ -19,7 +19,8 @@ import {
 } from '@/data/seo';
 import { ENTITIES_BY_LOCALITY } from '@/data/seo/entities';
 import { cityFaqs, localityFaqs, serviceCityFaqs, serviceHubFaqs, serviceLocalityFaqs, zoneFaqs } from './faqs';
-import { paths } from './links';
+import { localityAnchor, paths } from './links';
+import { guidesForPage } from '@/lib/blog/links';
 import {
   cityMeta,
   homeMeta,
@@ -208,7 +209,8 @@ export function composeLocality(loc: Locality): PageModel {
     { name: zone.name, path: paths.zone(city.slug, zone.slug) },
     { name: loc.name, path: meta.canonicalPath },
   ];
-  const nearby: LinkItem[] = nearbyLocs.map((n) => ({ name: n.name, path: paths.locality(n.city, n.slug), anchor: `maid service in ${n.name}` }));
+  // anchor text rotates per (source page, target) so 342 hubs do not repeat one phrase
+  const nearby: LinkItem[] = nearbyLocs.map((n) => ({ name: n.name, path: paths.locality(n.city, n.slug), anchor: localityAnchor(n, meta.canonicalPath) }));
   const jsonld = [
     breadcrumbLd(crumbs),
     serviceLd({
@@ -254,6 +256,9 @@ export function composeLocality(loc: Locality): PageModel {
       ...loc.pincodes
         .filter((pin) => (PINCODE_BY_PIN.get(pin)?.localities.length ?? 0) >= 2)
         .map((pin) => ({ name: pin, path: paths.pincode(pin), anchor: `maid service in ${pin}` })),
+      // the city guide and a verification guide: the blog was reachable only from the
+      // header and footer before, and no guide linked a hub back
+      ...guidesForPage(meta.canonicalPath, loc.city),
     ],
     jsonld,
     localTokens,
@@ -428,16 +433,23 @@ export function composeServiceLocality(svc: Service, loc: Locality): PageModel {
     { name: loc.name, path: paths.locality(loc.city, loc.slug) },
     { name: svc.name, path: meta.canonicalPath },
   ];
+  // not rotated: "cook in X" is three words, which the gate's sentence filter ignores, and a
+  // longer variant would count as a new local sentence and shift marginal verdicts — decide
+  // that with the week-3 census, not here
   const nearby: LinkItem[] = nearbyLocs.map((n) => ({
     name: n.name,
     path: paths.serviceLocality(n.city, n.slug, svc.slug),
     anchor: `${svc.name.toLowerCase()} in ${n.name}`,
   }));
-  const related: LinkItem[] = SERVICES.filter((s) => s.slug !== svc.slug).map((s) => ({
-    name: s.name,
-    path: paths.serviceLocality(loc.city, loc.slug, s.slug),
-    anchor: `${s.name.toLowerCase()} in ${loc.name}`,
-  }));
+  const related: LinkItem[] = [
+    ...SERVICES.filter((s) => s.slug !== svc.slug).map((s) => ({
+      name: s.name,
+      path: paths.serviceLocality(loc.city, loc.slug, s.slug),
+      anchor: `${s.name.toLowerCase()} in ${loc.name}`,
+    })),
+    // the city guide and this service's guide
+    ...guidesForPage(meta.canonicalPath, loc.city, svc.slug),
+  ];
   const jsonld = [
     breadcrumbLd(crumbs),
     serviceLd({ name: `${svc.name} in ${loc.name}, ${city.name}`, serviceType: svc.name, description: meta.description, path: meta.canonicalPath, city, pincodes: loc.pincodes, band }),
@@ -518,7 +530,7 @@ export function composeZone(zone: Zone): PageModel {
     { name: city.name, path: paths.city(city.slug) },
     { name: zone.name, path: meta.canonicalPath },
   ];
-  const nearby: LinkItem[] = locs.map((l) => ({ name: l.name, path: paths.locality(l.city, l.slug), anchor: `maid service in ${l.name}` }));
+  const nearby: LinkItem[] = locs.map((l) => ({ name: l.name, path: paths.locality(l.city, l.slug), anchor: localityAnchor(l, meta.canonicalPath) }));
   const adjacent = (ZONES_BY_CITY.get(zone.city) ?? []).filter((z) => z.slug !== zone.slug);
   const related: LinkItem[] = [
     ...SERVICES.map((s) => ({ name: s.name, path: paths.serviceCity(s.slug, city.slug), anchor: `${s.name.toLowerCase()} in ${city.name}` })),
@@ -581,7 +593,7 @@ export function composeCity(city: City): PageModel {
     { name: city.name, path: meta.canonicalPath },
   ];
   const serviceCards: ServiceCard[] = SERVICES.map((s) => ({ service: s, path: paths.serviceCity(s.slug, city.slug), from: s.pricing[city.pricingTier].from, blurb: `${city.name} — ${s.shortDescription}` }));
-  const nearby: LinkItem[] = heroes.map((h) => ({ name: h.name, path: paths.locality(h.city, h.slug), anchor: `maid service in ${h.name}` }));
+  const nearby: LinkItem[] = heroes.map((h) => ({ name: h.name, path: paths.locality(h.city, h.slug), anchor: localityAnchor(h, meta.canonicalPath) }));
   const cityPins = PINCODES.filter((p) => p.city === city.slug && p.localities.length >= 2);
   const related: LinkItem[] = [
     ...zones.map((z) => ({ name: z.name, path: paths.zone(z.city, z.slug), anchor: `maid service in ${z.name}` })),
@@ -847,7 +859,7 @@ export function composePincode(rec: PincodeRecord): PageModel {
     { name: city.name, path: paths.city(city.slug) },
     { name: `Pincode ${rec.pin}`, path: meta.canonicalPath },
   ];
-  const nearby: LinkItem[] = locs.map((l) => ({ name: l.name, path: paths.locality(l.city, l.slug), anchor: `maid service in ${l.name}` }));
+  const nearby: LinkItem[] = locs.map((l) => ({ name: l.name, path: paths.locality(l.city, l.slug), anchor: localityAnchor(l, meta.canonicalPath) }));
   const related: LinkItem[] = nearbyPins.map((p) => ({ name: p.pin, path: paths.pincode(p.pin), anchor: `maid service in ${p.pin}` }));
   return finish({
     type: 'pincode',
@@ -937,7 +949,8 @@ export function composeHome(): PageModel {
     faqs,
     nearby: CITIES.map((c) => ({ name: c.name, path: paths.city(c.slug), anchor: `maid service in ${c.name}` })),
     related: [],
-    jsonld: [breadcrumbLd(crumbs), ...(faqs.length ? [faqLd(faqs)] : [])],
+    // a one-item BreadcrumbList says nothing (FIN-SEO05); the home page has no trail
+    jsonld: [...(crumbs.length > 1 ? [breadcrumbLd(crumbs)] : []), ...(faqs.length ? [faqLd(faqs)] : [])],
     localTokens: [],
     missingRequired: [],
     wordFloor: 600,

@@ -1,6 +1,7 @@
 // lib/seo-engine/meta.ts — title/H1/description templates (Appendix D).
 // One function per page type; scripts/seo/validate.ts asserts global uniqueness.
 import type { City, Locality, PincodeRecord, Service, Zone } from '@/data/seo/types';
+import { LOCALITY_BY_PATH } from '@/data/seo';
 
 export const SITE_URL = 'https://mybuddymaid.in';
 export const BRAND = 'MyBuddyMaid';
@@ -33,6 +34,15 @@ function desc(base: string, neighbours: string[]): string {
   return clamp(d, 155);
 }
 
+/**
+ * Display names for locality slugs in one city. Descriptions used to title-case the slug
+ * ("Dlf Phase 2", "Hsr Layout") — visible in every SERP snippet; the data layer has the
+ * real name, so use it and fall back to the slug only for a slug it does not know.
+ */
+export function localityNames(city: string, slugs: string[]): string[] {
+  return slugs.map((s) => LOCALITY_BY_PATH.get(`${city}/${s}`)?.name ?? titleCaseSlug(s));
+}
+
 /** Alt name shown in titles/H1s — only the true city-name variants, kept short. */
 const TITLE_ALT: Record<string, string> = {
   gurgaon: 'Gurugram',
@@ -62,7 +72,7 @@ export function cityMeta(city: City): PageMeta {
     h1: `Maid Service in ${city.name}${alt}`,
     description: desc(
       `Verified, background-checked maids, cooks & nannies across ${city.name}${alt}. Replacement policy included.`,
-      city.heroLocalities.map(titleCaseSlug),
+      localityNames(city.slug, city.heroLocalities),
     ),
     canonicalPath: `/${city.slug}`,
   };
@@ -78,7 +88,7 @@ export function zoneMeta(zone: Zone, city: City): PageMeta {
     h1: `Maid Service in ${zone.name}, ${city.name}`,
     description: desc(
       `Maid, cook & nanny service across ${zone.name}, ${city.name}: verified helpers with a replacement policy.`,
-      zone.localities.map(titleCaseSlug),
+      localityNames(zone.city, zone.localities),
     ),
     canonicalPath: `/${city.slug}/${zone.slug}`,
   };
@@ -95,7 +105,7 @@ export function localityMeta(loc: Locality, city: City): PageMeta {
     h1: `Maid Service in ${loc.name}, ${city.name}`,
     description: desc(
       `Maid service in ${loc.name} (${loc.pincodes.join(', ')}): verified, background-checked helpers, replacement policy.`,
-      loc.neighbours.map(titleCaseSlug),
+      localityNames(loc.city, loc.neighbours),
     ),
     canonicalPath: `/${city.slug}/${loc.slug}`,
   };
@@ -110,7 +120,7 @@ export function serviceLocalityMeta(svc: Service, loc: Locality, city: City): Pa
     h1: `${svc.name} in ${loc.name}, ${city.name}`,
     description: desc(
       `${svc.name} in ${loc.name} (${loc.pincodes.join(', ')}): verified helpers, replacement policy.`,
-      loc.neighbours.map(titleCaseSlug),
+      localityNames(loc.city, loc.neighbours),
     ),
     canonicalPath: `/${city.slug}/${loc.slug}/${svc.slug}`,
   };
@@ -127,7 +137,7 @@ export function serviceCityMeta(svc: Service, city: City): PageMeta {
     h1: `${svc.name} in ${city.name}${alt}`,
     description: desc(
       `${svc.name} across ${city.name}${alt}: verified, background-checked helpers with a replacement policy.`,
-      city.heroLocalities.map(titleCaseSlug),
+      localityNames(city.slug, city.heroLocalities),
     ),
     canonicalPath: `/services/${svc.slug}/${city.slug}`,
   };

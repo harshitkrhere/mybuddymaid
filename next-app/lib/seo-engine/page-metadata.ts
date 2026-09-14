@@ -1,15 +1,14 @@
 // lib/seo-engine/page-metadata.ts — PageModel → Next.js Metadata (brief §6.4):
 // title/description from Appendix D templates, absolute self-canonical (metadataBase
-// in the root layout), robots from the quality gate, OG/Twitter with a per-page image.
+// in the root layout), robots from the quality gate, OG/Twitter with a per-page image
+// whose parameters are signed (lib/seo-engine/og-sign.ts) when OG_SIGNING_SECRET is set.
 import type { Metadata } from 'next';
 import type { PageModel } from './compose';
 import { robotsFor } from './gate';
 import { BRAND } from './meta';
+import { ogImagePath } from './og-sign';
 
-export function ogImagePath(title: string, subtitle: string): string {
-  const p = new URLSearchParams({ t: title.slice(0, 80), s: subtitle.slice(0, 100) });
-  return `/og?${p.toString()}`;
-}
+export { ogImagePath };
 
 export function metadataFor(m: PageModel, opts?: { ogTitle?: string; ogSubtitle?: string }): Metadata {
   const robots = robotsFor(m.path);

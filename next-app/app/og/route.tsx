@@ -1,13 +1,25 @@
-// /og?t=Title&s=Subtitle — brand-styled Open Graph image, rendered on demand and
+// /og?t=Title&s=Subtitle&sig=… — brand-styled Open Graph image, rendered on demand and
 // cached at the edge (one route instead of 2,500 build-time renders).
+//
+// When OG_SIGNING_SECRET is set, only requests whose parameters were signed by the site's
+// own metadata (lib/seo-engine/og-sign.ts) are rendered; anything else is a 400, so the
+// endpoint cannot be used to render arbitrary text under the brand (FIN-S05). Unset, it
+// accepts everything, which keeps local development and unconfigured previews working.
 import { ImageResponse } from 'next/og';
+import { verifyOg } from '@/lib/seo-engine/og-verify';
 
 export const runtime = 'edge';
 
-export function GET(req: Request) {
+export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const title = (searchParams.get('t') || 'MyBuddyMaid').slice(0, 80);
-  const subtitle = (searchParams.get('s') || 'Verified maids, cooks & nannies').slice(0, 100);
+  const rawTitle = searchParams.get('t') ?? '';
+  const rawSubtitle = searchParams.get('s') ?? '';
+  const secret = process.env.OG_SIGNING_SECRET;
+  if (secret && !(await verifyOg(rawTitle, rawSubtitle, searchParams.get('sig') ?? '', secret))) {
+    return new Response('unsigned og request', { status: 400, headers: { 'cache-control': 'no-store' } });
+  }
+  const title = (rawTitle || 'MyBuddyMaid').slice(0, 80);
+  const subtitle = (rawSubtitle || 'Verified maids, cooks & nannies').slice(0, 100);
   return new ImageResponse(
     (
       <div

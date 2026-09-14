@@ -24,6 +24,14 @@ test('both legal pages are in the indexable URL list the crawl and IndexNow tool
   for (const path of LEGAL_PAGES) assert.ok(urls.includes(path), `${path} is missing from allIndexableUrls()`);
 });
 
+test('allIndexableUrls() is exactly the set of URLs the sitemap advertises (blog posts included)', () => {
+  const sitemap = new Set(shards.flatMap((s) => s.urls.map((u) => u.loc)));
+  const listed = new Set(allIndexableUrls());
+  assert.deepEqual([...listed].filter((u) => !sitemap.has(u)), [], 'listed but not in the sitemap');
+  assert.deepEqual([...sitemap].filter((u) => !listed.has(u)), [], 'in the sitemap but not listed for crawl, IndexNow and the census');
+  assert.ok([...listed].some((u) => u.startsWith('/blog/')), 'blog posts are part of the indexable estate');
+});
+
 test('every sitemap entry is a unique site-relative path with a dated lastmod', () => {
   const seen = new Set<string>();
   for (const u of shards.flatMap((s) => s.urls)) {
