@@ -27842,6 +27842,14 @@
     "lat": 28.4756989,
     "lng": 77.0901755,
     "facts": {
+      "Towers or blocks": "Block A Ext",
+      "Approximate homes": "about 300 plots / floors",
+      "Builder": "DLF",
+      "Possession year": "1990–1995",
+      "Typical flat sizes": "3, 4 and 5 BHK independent floors, 2,000–4,500 sq ft",
+      "Helper entry process": "Colony gate barrier / Security guard check",
+      "Helper ID card issued by": "DLF Qutab Enclave RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -27849,8 +27857,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "chakarpur",
@@ -27863,6 +27871,14 @@
     "lat": 28.4729582,
     "lng": 77.0861526,
     "facts": {
+      "Towers or blocks": "Village settlement",
+      "Approximate homes": "about 2,000 homes",
+      "Builder": "Private / Self-built",
+      "Possession year": "Traditional / 1990s onward",
+      "Typical flat sizes": "1, 2 and 3 BHK independent floors / rooms",
+      "Helper entry process": "Open entry",
+      "Helper ID card issued by": "None",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -27870,8 +27886,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "dlf-hamilton-court",
@@ -27884,6 +27900,14 @@
     "lat": 28.4678557,
     "lng": 77.0843509,
     "facts": {
+      "Towers or blocks": "6 towers",
+      "Approximate homes": "264 flats",
+      "Builder": "DLF",
+      "Possession year": "2003",
+      "Typical flat sizes": "3 and 4 BHK, 2,540–4,500 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & guard register",
+      "Helper ID card issued by": "Condominium Association / Estate Office",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -27891,8 +27915,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "dlf-i",
@@ -27905,6 +27929,14 @@
     "lat": 28.4745826,
     "lng": 77.1012998,
     "facts": {
+      "Towers or blocks": "Blocks A–H",
+      "Approximate homes": "about 3,500 homes",
+      "Builder": "DLF",
+      "Possession year": "1985–1995",
+      "Typical flat sizes": "3, 4 and 5 BHK villas and builder floors, 1,800–5,000 sq ft",
+      "Helper entry process": "Sector gate security check",
+      "Helper ID card issued by": "DLF Phase 1 RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -27912,8 +27944,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "dlf-iv",
@@ -27928,6 +27960,14 @@
     "lat": 28.4705373,
     "lng": 77.0826973,
     "facts": {
+      "Towers or blocks": "Blocks A–H",
+      "Approximate homes": "about 3,000 homes",
+      "Builder": "DLF",
+      "Possession year": "1992–1998",
+      "Typical flat sizes": "3 and 4 BHK independent floors, 1,800–4,000 sq ft",
+      "Helper entry process": "Sector gate security check",
+      "Helper ID card issued by": "DLF Phase 4 RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -27935,8 +27975,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "dlf-phase-1-a-block",
@@ -27949,6 +27989,14 @@
     "lat": 28.474632,
     "lng": 77.0878484,
     "facts": {
+      "Towers or blocks": "Block A",
+      "Approximate homes": "about 500 plots / floors",
+      "Builder": "DLF",
+      "Possession year": "1985–1992",
+      "Typical flat sizes": "3, 4 and 5 BHK villas and floors, 2,000–5,000 sq ft",
+      "Helper entry process": "Block gate security check",
+      "Helper ID card issued by": "DLF Phase 1 RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -27956,8 +28004,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "dlf-phase-1-block-f",
@@ -27970,6 +28018,14 @@
     "lat": 28.4652399,
     "lng": 77.0967302,
     "facts": {
+      "Towers or blocks": "Block F",
+      "Approximate homes": "about 400 plots / floors",
+      "Builder": "DLF",
+      "Possession year": "1990–1995",
+      "Typical flat sizes": "3, 4 and 5 BHK independent floors, 2,200–4,500 sq ft",
+      "Helper entry process": "Block gate security check",
+      "Helper ID card issued by": "DLF Phase 1 RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -27977,8 +28033,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "huda",
@@ -27991,6 +28047,14 @@
     "lat": 28.4699793,
     "lng": 77.091071,
     "facts": {
+      "Towers or blocks": "Plotted sectors",
+      "Approximate homes": "about 1,500 plots / floors",
+      "Builder": "HUDA",
+      "Possession year": "1990s",
+      "Typical flat sizes": "2, 3 and 4 BHK builder floors, 1,200–3,000 sq ft",
+      "Helper entry process": "Open entry / Sector gate check",
+      "Helper ID card issued by": "Sector RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -27998,8 +28062,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "huda-sector-27",
@@ -28012,6 +28076,14 @@
     "lat": 28.4652162,
     "lng": 77.0916077,
     "facts": {
+      "Towers or blocks": "Sector 27 blocks",
+      "Approximate homes": "about 1,200 plots / floors",
+      "Builder": "HUDA",
+      "Possession year": "1995–2000",
+      "Typical flat sizes": "3 and 4 BHK builder floors, 1,500–3,500 sq ft",
+      "Helper entry process": "Sector barrier check",
+      "Helper ID card issued by": "Sector 27 RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28019,8 +28091,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "ivy",
@@ -28033,6 +28105,14 @@
     "lat": 28.4706569,
     "lng": 77.0782558,
     "facts": {
+      "Towers or blocks": "7 towers",
+      "Approximate homes": "156 flats",
+      "Builder": "Silverglades",
+      "Possession year": "2008",
+      "Typical flat sizes": "3 and 4 BHK plus 5 BHK penthouses, 3,100–7,800 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & biometric/guard pass",
+      "Helper ID card issued by": "The Ivy Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28040,8 +28120,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "janpratinidhi-apartments",
@@ -28054,6 +28134,14 @@
     "lat": 28.4683892,
     "lng": 77.092837,
     "facts": {
+      "Towers or blocks": "6 towers",
+      "Approximate homes": "168 flats",
+      "Builder": "Janpratinidhi CGHS",
+      "Possession year": "2004",
+      "Typical flat sizes": "3 and 4 BHK, 1,630–2,770 sq ft",
+      "Helper entry process": "Gate pass & resident confirmation via intercom/app",
+      "Helper ID card issued by": "Janpratinidhi CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28061,8 +28149,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "perch-arbor-golf-course-road",
@@ -28075,6 +28163,14 @@
     "lat": 28.472739,
     "lng": 77.0932299,
     "facts": {
+      "Towers or blocks": "1 building",
+      "Approximate homes": "about 25 suites",
+      "Builder": "Perch Serviced Apartments",
+      "Possession year": "2015",
+      "Typical flat sizes": "1 and 2 BHK serviced suites, 500–1,100 sq ft",
+      "Helper entry process": "Front desk reception registration",
+      "Helper ID card issued by": "Facility Management",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28082,8 +28178,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sahara-grace",
@@ -28096,6 +28192,14 @@
     "lat": 28.4771228,
     "lng": 77.0862562,
     "facts": {
+      "Towers or blocks": "3 towers",
+      "Approximate homes": "207 flats",
+      "Builder": "Sahara",
+      "Possession year": "2008",
+      "Typical flat sizes": "3 and 4 BHK plus penthouses, 2,906–5,530 sq ft",
+      "Helper entry process": "Security app approval & biometric entry gate",
+      "Helper ID card issued by": "Sahara Grace Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28103,8 +28207,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "saraswati-vihar",
@@ -28117,6 +28221,14 @@
     "lat": 28.4758709,
     "lng": 77.0823159,
     "facts": {
+      "Towers or blocks": "Blocks A–D",
+      "Approximate homes": "about 800 plots / floors",
+      "Builder": "HUDA / Private builders",
+      "Possession year": "1995–2000",
+      "Typical flat sizes": "2, 3 and 4 BHK builder floors, 1,200–2,500 sq ft",
+      "Helper entry process": "Colony gate security check",
+      "Helper ID card issued by": "Saraswati Vihar RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28124,8 +28236,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sikanderpur",
@@ -28138,6 +28250,14 @@
     "lat": 28.4812387,
     "lng": 77.0976311,
     "facts": {
+      "Towers or blocks": "Village settlement",
+      "Approximate homes": "about 3,000 homes",
+      "Builder": "Private / Self-built",
+      "Possession year": "Traditional / 1990s onward",
+      "Typical flat sizes": "1, 2 and 3 BHK independent floors / rooms",
+      "Helper entry process": "Open entry",
+      "Helper ID card issued by": "None",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28145,8 +28265,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sikanderpur-rmrg-station",
@@ -28159,6 +28279,14 @@
     "lat": 28.4809969,
     "lng": 77.0944367,
     "facts": {
+      "Towers or blocks": "N/A (Metro Station)",
+      "Approximate homes": "N/A",
+      "Builder": "Rapid Metro Gurgaon / DMRC",
+      "Possession year": "2013",
+      "Typical flat sizes": "N/A",
+      "Helper entry process": "N/A (Public Transit)",
+      "Helper ID card issued by": "N/A",
+      "Service lift for helpers": "N/A",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28166,8 +28294,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sushant-lok-i",
@@ -28180,6 +28308,14 @@
     "lat": 28.4735571,
     "lng": 77.0765762,
     "facts": {
+      "Towers or blocks": "Blocks A–C",
+      "Approximate homes": "about 4,000 homes",
+      "Builder": "Ansal API",
+      "Possession year": "1990–1998",
+      "Typical flat sizes": "3, 4 and 5 BHK builder floors & villas, 1,800–4,500 sq ft",
+      "Helper entry process": "Colony gate security check",
+      "Helper ID card issued by": "Sushant Lok 1 RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 1, Gurgaon",
       "Pincode": "122002",
       "Housing type": "independent houses",
@@ -28187,8 +28323,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "beverly-park-1",
@@ -28201,6 +28337,14 @@
     "lat": 28.4782527,
     "lng": 77.0775455,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "about 580 flats",
+      "Builder": "DLF",
+      "Possession year": "2003",
+      "Typical flat sizes": "3 BHK, 2,600–3,000 sq ft",
+      "Helper entry process": "Security app approval & biometric gate entry",
+      "Helper ID card issued by": "DLF Beverly Park 1 Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 2, Gurgaon",
       "Pincode": "122002",
       "Housing type": "mixed",
@@ -28208,8 +28352,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "beverly-park-2",
@@ -28222,6 +28366,14 @@
     "lat": 28.480888,
     "lng": 77.0815692,
     "facts": {
+      "Towers or blocks": "3 towers",
+      "Approximate homes": "about 560 flats",
+      "Builder": "DLF",
+      "Possession year": "2004",
+      "Typical flat sizes": "3 and 4 BHK, 2,500–3,800 sq ft",
+      "Helper entry process": "Security app approval & biometric gate entry",
+      "Helper ID card issued by": "DLF Beverly Park 2 Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 2, Gurgaon",
       "Pincode": "122002",
       "Housing type": "mixed",
@@ -28229,8 +28381,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "essel-towers",
@@ -28243,6 +28395,14 @@
     "lat": 28.476243,
     "lng": 77.0749316,
     "facts": {
+      "Towers or blocks": "9 blocks",
+      "Approximate homes": "about 1,100 flats",
+      "Builder": "Suncity Projects",
+      "Possession year": "2003",
+      "Typical flat sizes": "2 to 5 BHK, 1,100–3,700 sq ft",
+      "Helper entry process": "Security app (MyGate) pass & entry register",
+      "Helper ID card issued by": "Essel Towers Maintenance Office / RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 2, Gurgaon",
       "Pincode": "122002",
       "Housing type": "mixed",
@@ -28250,8 +28410,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "heritage-city",
@@ -28264,6 +28424,14 @@
     "lat": 28.4823245,
     "lng": 77.0777954,
     "facts": {
+      "Towers or blocks": "18 blocks",
+      "Approximate homes": "about 725 flats",
+      "Builder": "Unitech",
+      "Possession year": "2003",
+      "Typical flat sizes": "4 BHK, 1,960–3,250 sq ft",
+      "Helper entry process": "Guarded gate pass & resident intercom approval",
+      "Helper ID card issued by": "Heritage City RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 2, Gurgaon",
       "Pincode": "122002",
       "Housing type": "mixed",
@@ -28271,8 +28439,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "m-g-road",
@@ -28285,6 +28453,14 @@
     "lat": 28.4795543,
     "lng": 77.0798926,
     "facts": {
+      "Towers or blocks": "N/A (Metro Station)",
+      "Approximate homes": "N/A",
+      "Builder": "DMRC",
+      "Possession year": "2010",
+      "Typical flat sizes": "N/A",
+      "Helper entry process": "N/A (Public Transit)",
+      "Helper ID card issued by": "N/A",
+      "Service lift for helpers": "N/A",
       "Parent locality": "DLF Phase 2, Gurgaon",
       "Pincode": "122002",
       "Housing type": "mixed",
@@ -28292,8 +28468,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "mgf-villas",
@@ -28306,6 +28482,14 @@
     "lat": 28.4859455,
     "lng": 77.0850342,
     "facts": {
+      "Towers or blocks": "8 towers",
+      "Approximate homes": "about 300 flats",
+      "Builder": "Emaar MGF",
+      "Possession year": "2013",
+      "Typical flat sizes": "2 and 3 BHK, 1,000–2,735 sq ft",
+      "Helper entry process": "Security app pass & guard check",
+      "Helper ID card issued by": "MGF Villas Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 2, Gurgaon",
       "Pincode": "122002",
       "Housing type": "mixed",
@@ -28313,8 +28497,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "pilot-court",
@@ -28327,6 +28511,14 @@
     "lat": 28.4773402,
     "lng": 77.0749658,
     "facts": {
+      "Towers or blocks": "3 blocks",
+      "Approximate homes": "about 50 flats",
+      "Builder": "Cooperative Group Housing Society",
+      "Possession year": "2000",
+      "Typical flat sizes": "3 BHK, 1,600–2,000 sq ft",
+      "Helper entry process": "Gate entry register & resident verification",
+      "Helper ID card issued by": "Pilot Court RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 2, Gurgaon",
       "Pincode": "122002",
       "Housing type": "mixed",
@@ -28334,8 +28526,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sirhaul",
@@ -28348,6 +28540,14 @@
     "lat": 28.4873162,
     "lng": 77.070681,
     "facts": {
+      "Towers or blocks": "Village settlement",
+      "Approximate homes": "about 2,500 homes",
+      "Builder": "Private / Self-built",
+      "Possession year": "Traditional / 1990s onward",
+      "Typical flat sizes": "1, 2 and 3 BHK independent floors / rooms",
+      "Helper entry process": "Open entry",
+      "Helper ID card issued by": "None",
+      "Service lift for helpers": "No",
       "Parent locality": "DLF Phase 2, Gurgaon",
       "Pincode": "122002",
       "Housing type": "mixed",
@@ -28355,8 +28555,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "belvedere-apartments",
@@ -28369,6 +28569,14 @@
     "lat": 28.4905493,
     "lng": 77.0910798,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "about 500 flats",
+      "Builder": "DLF",
+      "Possession year": "2004",
+      "Typical flat sizes": "3 and 4 BHK, 1,400–2,100 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & guard entry register",
+      "Helper ID card issued by": "Belvedere Park Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 3, Gurgaon",
       "Pincode": "122010",
       "Housing type": "builder floors",
@@ -28376,8 +28584,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "belvedere-towers",
@@ -28390,6 +28598,14 @@
     "lat": 28.4910092,
     "lng": 77.0895958,
     "facts": {
+      "Towers or blocks": "3 towers",
+      "Approximate homes": "480 flats",
+      "Builder": "DLF",
+      "Possession year": "2002",
+      "Typical flat sizes": "3 and 4 BHK, 1,400–2,600 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & guard entry register",
+      "Helper ID card issued by": "DLF Belvedere Towers Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "DLF Phase 3, Gurgaon",
       "Pincode": "122010",
       "Housing type": "builder floors",
@@ -28397,8 +28613,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "cyber-city",
@@ -28709,6 +28925,14 @@
     "lat": 28.4522016,
     "lng": 77.0927113,
     "facts": {
+      "Towers or blocks": "1 tower",
+      "Approximate homes": "48 flats",
+      "Builder": "Bhawna CGHS",
+      "Possession year": "2009",
+      "Typical flat sizes": "4 BHK, 3,000–3,250 sq ft",
+      "Helper entry process": "Gate register entry & resident intercom confirmation",
+      "Helper ID card issued by": "Society RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28716,8 +28940,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "carlton-estate",
@@ -28730,6 +28954,14 @@
     "lat": 28.4477468,
     "lng": 77.0939919,
     "facts": {
+      "Towers or blocks": "5 towers",
+      "Approximate homes": "about 480 flats",
+      "Builder": "DLF",
+      "Possession year": "2003",
+      "Typical flat sizes": "3 and 4 BHK, 1,267–1,740 sq ft",
+      "Helper entry process": "Security app (MyGate) pass & entry register",
+      "Helper ID card issued by": "Estate Management / DLF Services",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28737,8 +28969,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "dlf-5",
@@ -28751,6 +28983,14 @@
     "lat": 28.4471643,
     "lng": 77.0937399,
     "facts": {
+      "Towers or blocks": "Township (multiple condominiums)",
+      "Approximate homes": "about 6,000 homes",
+      "Builder": "DLF",
+      "Possession year": "2002–2020",
+      "Typical flat sizes": "3, 4 and 5 BHK luxury residences, 1,500–11,000 sq ft",
+      "Helper entry process": "Condominium specific gate pass / MyGate app",
+      "Helper ID card issued by": "DLF Services / Respective Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28758,8 +28998,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "dlf-golf-links",
@@ -28772,6 +29012,14 @@
     "lat": 28.4551205,
     "lng": 77.1017004,
     "facts": {
+      "Towers or blocks": "Golf enclave (Aralias, Magnolias, Camellias)",
+      "Approximate homes": "about 1,300 super-luxury residences",
+      "Builder": "DLF",
+      "Possession year": "2008–2020",
+      "Typical flat sizes": "4, 5 and 6 BHK penthouses and apartments, 5,800–12,000 sq ft",
+      "Helper entry process": "Multi-tier biometric security & RFID card entry",
+      "Helper ID card issued by": "DLF Golf Links Estate Management",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28779,8 +29027,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "galaxy-apartments",
@@ -28793,6 +29041,14 @@
     "lat": 28.4540469,
     "lng": 77.0956888,
     "facts": {
+      "Towers or blocks": "8 towers",
+      "Approximate homes": "256 flats",
+      "Builder": "Galaxy CGHS",
+      "Possession year": "2007",
+      "Typical flat sizes": "3 BHK, 1,750–2,550 sq ft",
+      "Helper entry process": "Guard register entry & resident phone confirmation",
+      "Helper ID card issued by": "Galaxy CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28800,8 +29056,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "hextax-commune",
@@ -28814,6 +29070,14 @@
     "lat": 28.4553068,
     "lng": 77.0954633,
     "facts": {
+      "Towers or blocks": "3 towers",
+      "Approximate homes": "about 108 flats",
+      "Builder": "Hextax CGHS",
+      "Possession year": "2008",
+      "Typical flat sizes": "3 and 4 BHK, 2,250–2,750 sq ft",
+      "Helper entry process": "Main gate register & resident approval",
+      "Helper ID card issued by": "Hextax CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28821,8 +29085,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "palm-spring",
@@ -28835,6 +29099,14 @@
     "lat": 28.4462412,
     "lng": 77.1020094,
     "facts": {
+      "Towers or blocks": "6 towers and 40 villas",
+      "Approximate homes": "about 260 homes",
+      "Builder": "Emaar",
+      "Possession year": "2007",
+      "Typical flat sizes": "3 and 4 BHK plus penthouses, 2,560–5,250 sq ft",
+      "Helper entry process": "Security app approval & guard pass",
+      "Helper ID card issued by": "The Palm Springs Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28842,8 +29114,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "princeton-estate",
@@ -28856,6 +29128,14 @@
     "lat": 28.448409,
     "lng": 77.0972288,
     "facts": {
+      "Towers or blocks": "9 towers",
+      "Approximate homes": "about 900 flats",
+      "Builder": "DLF",
+      "Possession year": "2002",
+      "Typical flat sizes": "2, 3 and 4 BHK, 964–1,562 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & guard register",
+      "Helper ID card issued by": "Princeton Estate Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28863,8 +29143,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "royalton-tower",
@@ -28877,6 +29157,14 @@
     "lat": 28.4493937,
     "lng": 77.0968432,
     "facts": {
+      "Towers or blocks": "1 tower",
+      "Approximate homes": "76 flats",
+      "Builder": "DLF",
+      "Possession year": "2009",
+      "Typical flat sizes": "4 BHK, about 2,940 sq ft",
+      "Helper entry process": "Security app approval & reception check-in",
+      "Helper ID card issued by": "Royalton Tower Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28884,8 +29172,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sector-42-43",
@@ -28898,6 +29186,14 @@
     "lat": 28.4574254,
     "lng": 77.0969529,
     "facts": {
+      "Towers or blocks": "N/A (Metro Station)",
+      "Approximate homes": "N/A",
+      "Builder": "Rapid Metro Gurgaon / HMRTC",
+      "Possession year": "2017",
+      "Typical flat sizes": "N/A",
+      "Helper entry process": "N/A (Public Transit)",
+      "Helper ID card issued by": "N/A",
+      "Service lift for helpers": "N/A",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28905,8 +29201,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sector-53-54",
@@ -28919,6 +29215,14 @@
     "lat": 28.4463829,
     "lng": 77.1004632,
     "facts": {
+      "Towers or blocks": "N/A (Metro Station)",
+      "Approximate homes": "N/A",
+      "Builder": "Rapid Metro Gurgaon / HMRTC",
+      "Possession year": "2017",
+      "Typical flat sizes": "N/A",
+      "Helper entry process": "N/A (Public Transit)",
+      "Helper ID card issued by": "N/A",
+      "Service lift for helpers": "N/A",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28926,8 +29230,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "the-belaire",
@@ -28940,6 +29244,14 @@
     "lat": 28.4487365,
     "lng": 77.1014511,
     "facts": {
+      "Towers or blocks": "5 towers",
+      "Approximate homes": "580 flats",
+      "Builder": "DLF",
+      "Possession year": "2013",
+      "Typical flat sizes": "4 BHK, 2,858–4,098 sq ft",
+      "Helper entry process": "Security app (MyGate) gate pass & guard check",
+      "Helper ID card issued by": "DLF Belaire Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28947,8 +29259,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "the-belaire-apartments",
@@ -28982,6 +29294,14 @@
     "lat": 28.4517049,
     "lng": 77.0943319,
     "facts": {
+      "Towers or blocks": "5 towers",
+      "Approximate homes": "about 360 flats",
+      "Builder": "DLF",
+      "Possession year": "2009",
+      "Typical flat sizes": "3 and 4 BHK, 2,277–2,800 sq ft",
+      "Helper entry process": "Security app approval & biometric entry gate",
+      "Helper ID card issued by": "DLF The Icon Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -28989,8 +29309,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "the-magnolias",
@@ -29003,6 +29323,14 @@
     "lat": 28.4563286,
     "lng": 77.1001159,
     "facts": {
+      "Towers or blocks": "19 towers (5 building clusters)",
+      "Approximate homes": "about 590 flats",
+      "Builder": "DLF",
+      "Possession year": "2012",
+      "Typical flat sizes": "4 and 5 BHK, 6,360–10,400 sq ft",
+      "Helper entry process": "High-security biometric / RFID card entry & resident clearance",
+      "Helper ID card issued by": "The Magnolias Estate Management",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -29010,8 +29338,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "the-pinnacle",
@@ -29024,6 +29352,14 @@
     "lat": 28.4527167,
     "lng": 77.0959333,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "288 flats",
+      "Builder": "DLF",
+      "Possession year": "2008",
+      "Typical flat sizes": "4 BHK, 3,868–4,000 sq ft",
+      "Helper entry process": "Security app (MyGate) pass & entry register",
+      "Helper ID card issued by": "The Pinnacle Condominium Association",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -29031,8 +29367,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "the-summit",
@@ -29045,6 +29381,14 @@
     "lat": 28.4468192,
     "lng": 77.1049431,
     "facts": {
+      "Towers or blocks": "3 towers",
+      "Approximate homes": "240 flats",
+      "Builder": "DLF",
+      "Possession year": "2010",
+      "Typical flat sizes": "4 BHK, 2,950–3,500 sq ft",
+      "Helper entry process": "Security app approval & guard pass",
+      "Helper ID card issued by": "The Summit Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -29052,8 +29396,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "trinity-towers",
@@ -29066,6 +29410,14 @@
     "lat": 28.4485746,
     "lng": 77.0949949,
     "facts": {
+      "Towers or blocks": "3 towers",
+      "Approximate homes": "about 230 flats",
+      "Builder": "DLF",
+      "Possession year": "2006",
+      "Typical flat sizes": "3 and 4 BHK, 2,210–2,779 sq ft",
+      "Helper entry process": "Security app approval & gate register",
+      "Helper ID card issued by": "Trinity Towers Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -29073,8 +29425,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "wellington-estate",
@@ -29087,6 +29439,14 @@
     "lat": 28.4472409,
     "lng": 77.0955645,
     "facts": {
+      "Towers or blocks": "6 towers",
+      "Approximate homes": "about 550 flats",
+      "Builder": "DLF",
+      "Possession year": "2004",
+      "Typical flat sizes": "3 and 4 BHK, 1,330–1,740 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & guard register",
+      "Helper ID card issued by": "Wellington Estate Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -29094,8 +29454,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "west-end-heights",
@@ -29108,6 +29468,14 @@
     "lat": 28.449084,
     "lng": 77.0933123,
     "facts": {
+      "Towers or blocks": "5 towers",
+      "Approximate homes": "about 370 flats",
+      "Builder": "DLF",
+      "Possession year": "2007",
+      "Typical flat sizes": "4 BHK, 2,500–2,700 sq ft",
+      "Helper entry process": "Security app approval & gate pass",
+      "Helper ID card issued by": "West End Heights Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Golf Course Road, Gurgaon",
       "Pincode": "122002",
       "Housing type": "gated societies",
@@ -29115,8 +29483,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "ambience-creacions",
@@ -31378,6 +31746,14 @@
     "lat": 28.4239436,
     "lng": 77.1038108,
     "facts": {
+      "Towers or blocks": "5 towers",
+      "Approximate homes": "120 flats",
+      "Builder": "Aabhas CGHS",
+      "Possession year": "2003",
+      "Typical flat sizes": "3 and 4 BHK, 2,250–2,750 sq ft",
+      "Helper entry process": "Guard register entry & resident phone confirmation",
+      "Helper ID card issued by": "Aabhas CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31385,8 +31761,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "arihant-society",
@@ -31399,6 +31775,14 @@
     "lat": 28.420617,
     "lng": 77.0990133,
     "facts": {
+      "Towers or blocks": "2 blocks",
+      "Approximate homes": "40 flats",
+      "Builder": "Arihant CGHS",
+      "Possession year": "2001",
+      "Typical flat sizes": "3 BHK, 1,550–1,850 sq ft",
+      "Helper entry process": "Gate register entry & resident verification",
+      "Helper ID card issued by": "Arihant CGHS RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31406,8 +31790,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "ashoka-apartment",
@@ -31420,6 +31804,14 @@
     "lat": 28.4255388,
     "lng": 77.101917,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "120 flats",
+      "Builder": "Ashoka CGHS",
+      "Possession year": "2002",
+      "Typical flat sizes": "3 and 4 BHK, 1,400–2,000 sq ft",
+      "Helper entry process": "Main gate entry register & resident intercom check",
+      "Helper ID card issued by": "Ashoka Apartment RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31427,8 +31819,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "devender-vihar",
@@ -31441,6 +31833,14 @@
     "lat": 28.4285872,
     "lng": 77.0930506,
     "facts": {
+      "Towers or blocks": "18 towers",
+      "Approximate homes": "750 flats",
+      "Builder": "Army Welfare Housing Organisation (AWHO)",
+      "Possession year": "1998–2000",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,200–2,100 sq ft",
+      "Helper entry process": "Guard gate check & resident approval pass",
+      "Helper ID card issued by": "AWHO Devinder Vihar Society Office",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31448,8 +31848,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "devinder-vihar",
@@ -31483,6 +31883,14 @@
     "lat": 28.429622,
     "lng": 77.0983977,
     "facts": {
+      "Towers or blocks": "10 towers",
+      "Approximate homes": "about 280 flats",
+      "Builder": "Haryana Employees Welfare Organisation (HEWO)",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, 1,200–1,430 sq ft",
+      "Helper entry process": "Gate entry register & resident verification",
+      "Helper ID card issued by": "HEWO-2 Apartments RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31490,8 +31898,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "jal-vayu-towers",
@@ -31504,6 +31912,14 @@
     "lat": 28.4301624,
     "lng": 77.096995,
     "facts": {
+      "Towers or blocks": "8 towers",
+      "Approximate homes": "about 540 flats",
+      "Builder": "AFNHB",
+      "Possession year": "2003",
+      "Typical flat sizes": "2 and 3 BHK, about 800–1,800 sq ft",
+      "Helper entry process": "Security gate check & helper pass registration",
+      "Helper ID card issued by": "AFNHB Jal Vayu Towers Society Office",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31511,8 +31927,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "jnu-aravali-apartments",
@@ -31525,6 +31941,14 @@
     "lat": 28.42063,
     "lng": 77.0985788,
     "facts": {
+      "Towers or blocks": "2 blocks",
+      "Approximate homes": "50 flats",
+      "Builder": "JNU Teachers CGHS",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, about 1,000–1,700 sq ft",
+      "Helper entry process": "Gate register entry & resident phone confirmation",
+      "Helper ID card issued by": "JNU Aravali CGHS RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31532,8 +31956,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "joy-kunj-apartment",
@@ -31546,6 +31970,14 @@
     "lat": 28.4249777,
     "lng": 77.0949734,
     "facts": {
+      "Towers or blocks": "2 towers",
+      "Approximate homes": "about 60 flats",
+      "Builder": "Joy Kunj CGHS",
+      "Possession year": "2002",
+      "Typical flat sizes": "3 BHK, 1,650–1,900 sq ft",
+      "Helper entry process": "Gate register entry & resident verification",
+      "Helper ID card issued by": "Joy Kunj CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31553,8 +31985,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "judge-enclave",
@@ -31567,6 +31999,14 @@
     "lat": 28.4320946,
     "lng": 77.0960332,
     "facts": {
+      "Towers or blocks": "2 towers",
+      "Approximate homes": "about 60 flats",
+      "Builder": "Judicial Officers CGHS",
+      "Possession year": "2003",
+      "Typical flat sizes": "3 and 4 BHK, 1,800–2,400 sq ft",
+      "Helper entry process": "Guarded gate register entry & intercom confirmation",
+      "Helper ID card issued by": "Judge Enclave CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31574,8 +32014,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "kendriya-vihar",
@@ -31588,6 +32028,14 @@
     "lat": 28.4228813,
     "lng": 77.0941749,
     "facts": {
+      "Towers or blocks": "28 blocks",
+      "Approximate homes": "1,940 flats",
+      "Builder": "CGEWHO",
+      "Possession year": "2000–2002",
+      "Typical flat sizes": "1, 2 and 3 BHK, about 600–2,100 sq ft",
+      "Helper entry process": "Security barrier pass & resident register entry",
+      "Helper ID card issued by": "Kendriya Vihar Society Office",
+      "Service lift for helpers": "No",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31595,8 +32043,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "prerana-c-g-h-s-ltd",
@@ -31609,6 +32057,14 @@
     "lat": 28.4206465,
     "lng": 77.0972852,
     "facts": {
+      "Towers or blocks": "2 towers",
+      "Approximate homes": "48 flats",
+      "Builder": "Prerana CGHS",
+      "Possession year": "2002",
+      "Typical flat sizes": "3 BHK + study, about 1,700–2,000 sq ft",
+      "Helper entry process": "Gate register entry & resident phone verification",
+      "Helper ID card issued by": "Prerana CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31616,8 +32072,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "rail-vihar",
@@ -31630,6 +32086,14 @@
     "lat": 28.4303094,
     "lng": 77.1015086,
     "facts": {
+      "Towers or blocks": "35 blocks",
+      "Approximate homes": "about 350 flats",
+      "Builder": "IRWO",
+      "Possession year": "1998",
+      "Typical flat sizes": "2 and 3 BHK, 950–1,450 sq ft",
+      "Helper entry process": "Guard post entry register & resident approval",
+      "Helper ID card issued by": "Rail Vihar Society Office",
+      "Service lift for helpers": "No",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31637,8 +32101,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sanskriti-apartments",
@@ -31651,6 +32115,14 @@
     "lat": 28.4241738,
     "lng": 77.1031633,
     "facts": {
+      "Towers or blocks": "1 tower",
+      "Approximate homes": "22 flats",
+      "Builder": "Sanskriti CGHS",
+      "Possession year": "2001",
+      "Typical flat sizes": "3 BHK, about 1,750 sq ft",
+      "Helper entry process": "Guard register entry & intercom check",
+      "Helper ID card issued by": "Sanskriti CGHS RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sector 56, Gurgaon",
       "Pincode": "122011",
       "Housing type": "mixed",
@@ -31658,8 +32130,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "harmony-homes",
@@ -34633,6 +35105,14 @@
     "lat": 28.409702,
     "lng": 77.0373677,
     "facts": {
+      "Towers or blocks": "Villa community",
+      "Approximate homes": "about 100 villas",
+      "Builder": "SS Group",
+      "Possession year": "2012",
+      "Typical flat sizes": "3 and 4 BHK villas, 2,500–3,600 sq ft",
+      "Helper entry process": "Security app approval & main gate check-in",
+      "Helper ID card issued by": "Aaronville RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34640,8 +35120,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "c-block",
@@ -34654,6 +35134,14 @@
     "lat": 28.4044814,
     "lng": 77.0370889,
     "facts": {
+      "Towers or blocks": "Block C",
+      "Approximate homes": "about 350 plots / floors",
+      "Builder": "Private / Township developers",
+      "Possession year": "2005–2010",
+      "Typical flat sizes": "3 and 4 BHK builder floors, 1,500–3,000 sq ft",
+      "Helper entry process": "Colony security barrier check",
+      "Helper ID card issued by": "Block C RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34661,8 +35149,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "eldeco-mansionz",
@@ -34675,6 +35163,14 @@
     "lat": 28.4127367,
     "lng": 77.0401413,
     "facts": {
+      "Towers or blocks": "Gated villa enclave",
+      "Approximate homes": "about 150 villas",
+      "Builder": "Eldeco",
+      "Possession year": "2008",
+      "Typical flat sizes": "3, 4 and 5 BHK villas, 1,707–3,150 sq ft",
+      "Helper entry process": "Main gate security pass & resident app approval",
+      "Helper ID card issued by": "Eldeco Mansionz RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34682,8 +35178,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "greenville",
@@ -34696,6 +35192,14 @@
     "lat": 28.4084834,
     "lng": 77.040891,
     "facts": {
+      "Towers or blocks": "8 towers",
+      "Approximate homes": "about 450 flats",
+      "Builder": "Parsvnath",
+      "Possession year": "2009",
+      "Typical flat sizes": "2 and 3 BHK, 1,495–2,080 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & guard register",
+      "Helper ID card issued by": "Parsvnath Greenville RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34703,8 +35207,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "parkview-city-i",
@@ -34717,6 +35221,14 @@
     "lat": 28.4050328,
     "lng": 77.0414842,
     "facts": {
+      "Towers or blocks": "10 towers",
+      "Approximate homes": "about 550 flats",
+      "Builder": "Bestech",
+      "Possession year": "2007",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,776–2,567 sq ft",
+      "Helper entry process": "Security app approval & biometric gate entry",
+      "Helper ID card issued by": "Bestech Park View City 1 RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34724,8 +35236,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "parkview-city-ii",
@@ -34738,6 +35250,14 @@
     "lat": 28.4040769,
     "lng": 77.0456178,
     "facts": {
+      "Towers or blocks": "8 towers",
+      "Approximate homes": "about 430 flats",
+      "Builder": "Bestech",
+      "Possession year": "2008",
+      "Typical flat sizes": "3 and 4 BHK, 1,859–2,383 sq ft",
+      "Helper entry process": "Security app approval & visitor pass at gate",
+      "Helper ID card issued by": "Bestech Park View City 2 RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34745,8 +35265,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "primanti",
@@ -34759,6 +35279,14 @@
     "lat": 28.4050698,
     "lng": 77.0367057,
     "facts": {
+      "Towers or blocks": "11 towers plus villas",
+      "Approximate homes": "about 1,100 homes",
+      "Builder": "Tata Housing",
+      "Possession year": "2017",
+      "Typical flat sizes": "3 and 4 BHK flats, 2,550–3,850 sq ft",
+      "Helper entry process": "Security app (MyGate) pass & biometric card entry",
+      "Helper ID card issued by": "Tata Primanti Estate Management",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34766,8 +35294,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "silver-crest",
@@ -34780,6 +35308,14 @@
     "lat": 28.4099419,
     "lng": 77.0385285,
     "facts": {
+      "Towers or blocks": "Villa enclave",
+      "Approximate homes": "about 30 villas",
+      "Builder": "Ashiana Homes",
+      "Possession year": "2005",
+      "Typical flat sizes": "3 BHK villas, about 2,520 sq ft",
+      "Helper entry process": "Guarded gate entry & resident verification",
+      "Helper ID card issued by": "Silver Crest RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34787,8 +35323,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "south-end",
@@ -34801,6 +35337,14 @@
     "lat": 28.4103424,
     "lng": 77.0404209,
     "facts": {
+      "Towers or blocks": "Plotted enclave",
+      "Approximate homes": "about 600 homes",
+      "Builder": "Uppal Group",
+      "Possession year": "2004",
+      "Typical flat sizes": "3 and 4 BHK independent floors, 1,550–2,700 sq ft",
+      "Helper entry process": "Colony gate security barrier check",
+      "Helper ID card issued by": "Uppal South End RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34808,8 +35352,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "spaze-privy",
@@ -34822,6 +35366,14 @@
     "lat": 28.4085289,
     "lng": 77.0349528,
     "facts": {
+      "Towers or blocks": "11 towers",
+      "Approximate homes": "about 560 flats",
+      "Builder": "Spaze",
+      "Possession year": "2012",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,600–2,650 sq ft",
+      "Helper entry process": "Security app pass & gate register",
+      "Helper ID card issued by": "Spaze Privy RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34829,8 +35381,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "tatvam-villas",
@@ -34843,6 +35395,14 @@
     "lat": 28.4059121,
     "lng": 77.0390726,
     "facts": {
+      "Towers or blocks": "Villa enclave",
+      "Approximate homes": "about 250 villas",
+      "Builder": "Vipul",
+      "Possession year": "2015",
+      "Typical flat sizes": "3, 4 and 5 BHK villas, 3,000–7,650 sq ft",
+      "Helper entry process": "Guarded gate check-in & resident approval pass",
+      "Helper ID card issued by": "Tatvam Villas RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34850,20 +35410,28 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "technica-cyber-park",
     "city": "gurgaon",
     "locality": "sohna-road",
-    "kind": "society",
+    "kind": "commercial",
     "name": "Technica Cyber Park",
     "altNames": [],
     "pincode": "122102",
     "lat": 28.4158514,
     "lng": 77.039339,
     "facts": {
+      "Towers or blocks": "2 towers",
+      "Approximate homes": "N/A (Commercial IT Park)",
+      "Builder": "Technica Group",
+      "Possession year": "2011",
+      "Typical flat sizes": "N/A (Commercial Office Space)",
+      "Helper entry process": "N/A (Commercial Security Check)",
+      "Helper ID card issued by": "Building Management Office",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34871,8 +35439,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "tower-b1-4",
@@ -34885,6 +35453,14 @@
     "lat": 28.4128641,
     "lng": 77.0437592,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "about 240 flats",
+      "Builder": "Bestech / Vatika",
+      "Possession year": "2010",
+      "Typical flat sizes": "3 and 4 BHK, 1,800–2,500 sq ft",
+      "Helper entry process": "Security app approval & guard register",
+      "Helper ID card issued by": "Society RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34892,8 +35468,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "vatika-city",
@@ -34906,6 +35482,14 @@
     "lat": 28.4041091,
     "lng": 77.0473065,
     "facts": {
+      "Towers or blocks": "19 towers",
+      "Approximate homes": "about 1,350 flats",
+      "Builder": "Vatika",
+      "Possession year": "2012",
+      "Typical flat sizes": "2, 3 and 4 BHK flats, duplexes and penthouses",
+      "Helper entry process": "Security app (MyGate) approval & RFID / gate pass",
+      "Helper ID card issued by": "Vatika City Estate Management",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34913,8 +35497,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "vipul-greens",
@@ -34927,6 +35511,14 @@
     "lat": 28.4156815,
     "lng": 77.0373515,
     "facts": {
+      "Towers or blocks": "24 towers",
+      "Approximate homes": "about 640 flats",
+      "Builder": "Vipul",
+      "Possession year": "2010",
+      "Typical flat sizes": "3 and 4 BHK flats and penthouses, 1,860–3,387 sq ft",
+      "Helper entry process": "Security app approval & guard entry register",
+      "Helper ID card issued by": "Vipul Greens Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34934,8 +35526,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "vipul-world",
@@ -34948,6 +35540,14 @@
     "lat": 28.4159462,
     "lng": 77.0367921,
     "facts": {
+      "Towers or blocks": "Township blocks",
+      "Approximate homes": "about 800 plots",
+      "Builder": "Vipul",
+      "Possession year": "2008",
+      "Typical flat sizes": "3 and 4 BHK independent floors, 1,469–3,240 sq ft",
+      "Helper entry process": "Township entry barrier check",
+      "Helper ID card issued by": "Vipul World RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "Sohna Road, Gurgaon",
       "Pincode": "122102",
       "Housing type": "gated societies",
@@ -34955,8 +35555,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "jalvayu-vihar",
@@ -35095,6 +35695,14 @@
     "lat": 28.4233424,
     "lng": 77.0350447,
     "facts": {
+      "Towers or blocks": "11 towers",
+      "Approximate homes": "about 1,400 flats",
+      "Builder": "Central Park",
+      "Possession year": "2014",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,495–4,615 sq ft",
+      "Helper entry process": "Security app pass & biometric gate clearance",
+      "Helper ID card issued by": "Central Park Resorts Management",
+      "Service lift for helpers": "Yes",
       "Parent locality": "South City 2, Gurgaon",
       "Pincode": "122018",
       "Housing type": "mixed",
@@ -35102,8 +35710,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "ews-society",
@@ -35116,6 +35724,14 @@
     "lat": 28.4187979,
     "lng": 77.04361,
     "facts": {
+      "Towers or blocks": "4 blocks",
+      "Approximate homes": "about 200 flats",
+      "Builder": "Unitech",
+      "Possession year": "2008",
+      "Typical flat sizes": "1 BHK, 400–600 sq ft",
+      "Helper entry process": "Open entry / Guard check",
+      "Helper ID card issued by": "Local RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "South City 2, Gurgaon",
       "Pincode": "122018",
       "Housing type": "mixed",
@@ -35123,8 +35739,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "orchid-petals",
@@ -35137,6 +35753,14 @@
     "lat": 28.4150259,
     "lng": 77.0439485,
     "facts": {
+      "Towers or blocks": "27 towers",
+      "Approximate homes": "about 1,350 flats",
+      "Builder": "Orchid Infrastructure Developers",
+      "Possession year": "2007",
+      "Typical flat sizes": "3 and 4 BHK, 1,805–3,550 sq ft",
+      "Helper entry process": "Security app approval & biometric gate entry",
+      "Helper ID card issued by": "Orchid Petals Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "South City 2, Gurgaon",
       "Pincode": "122018",
       "Housing type": "mixed",
@@ -35144,8 +35768,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sispal-vihar",
@@ -35158,6 +35782,14 @@
     "lat": 28.4163226,
     "lng": 77.0435301,
     "facts": {
+      "Towers or blocks": "17 towers",
+      "Approximate homes": "about 1,130 flats",
+      "Builder": "AWHO",
+      "Possession year": "2003",
+      "Typical flat sizes": "2, 3 and 4 BHK, from 1,295 sq ft",
+      "Helper entry process": "Security barrier pass & visitor register",
+      "Helper ID card issued by": "AWHO Sispal Vihar Society Office",
+      "Service lift for helpers": "Yes",
       "Parent locality": "South City 2, Gurgaon",
       "Pincode": "122018",
       "Housing type": "mixed",
@@ -35165,8 +35797,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "south-city-ii",
@@ -35179,6 +35811,14 @@
     "lat": 28.4194893,
     "lng": 77.0436109,
     "facts": {
+      "Towers or blocks": "Blocks A–F",
+      "Approximate homes": "about 2,500 homes",
+      "Builder": "Unitech",
+      "Possession year": "2003–2008",
+      "Typical flat sizes": "3 and 4 BHK builder floors & villas, 1,800–4,500 sq ft",
+      "Helper entry process": "Sector gate security check",
+      "Helper ID card issued by": "South City II RWA",
+      "Service lift for helpers": "No",
       "Parent locality": "South City 2, Gurgaon",
       "Pincode": "122018",
       "Housing type": "mixed",
@@ -35186,8 +35826,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "tikri",
@@ -35200,6 +35840,14 @@
     "lat": 28.4197857,
     "lng": 77.0359836,
     "facts": {
+      "Towers or blocks": "Village settlement",
+      "Approximate homes": "about 1,500 homes",
+      "Builder": "Private / Self-built",
+      "Possession year": "Traditional / 1990s onward",
+      "Typical flat sizes": "1, 2 and 3 BHK independent floors / rooms",
+      "Helper entry process": "Open entry",
+      "Helper ID card issued by": "None",
+      "Service lift for helpers": "No",
       "Parent locality": "South City 2, Gurgaon",
       "Pincode": "122018",
       "Housing type": "mixed",
@@ -35207,8 +35855,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "vipul-greens",
@@ -35221,6 +35869,14 @@
     "lat": 28.4165925,
     "lng": 77.0374734,
     "facts": {
+      "Towers or blocks": "24 towers",
+      "Approximate homes": "about 640 flats",
+      "Builder": "Vipul",
+      "Possession year": "2010",
+      "Typical flat sizes": "3 and 4 BHK flats and penthouses, 1,860–3,387 sq ft",
+      "Helper entry process": "Security app approval & guard entry register",
+      "Helper ID card issued by": "Vipul Greens Condominium RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "South City 2, Gurgaon",
       "Pincode": "122018",
       "Housing type": "mixed",
@@ -35228,8 +35884,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "hashtag-mercernoida24",
@@ -35664,6 +36320,14 @@
     "lat": 28.5117025,
     "lng": 77.4086554,
     "facts": {
+      "Towers or blocks": "16 towers",
+      "Approximate homes": "about 1,150 flats",
+      "Builder": "Purvanchal",
+      "Possession year": "2014",
+      "Typical flat sizes": "3 and 4 BHK, 1,315–2,955 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & guard pass",
+      "Helper ID card issued by": "Purvanchal Royal Park AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 137, Noida",
       "Pincode": "201305",
       "Housing type": "gated societies",
@@ -35671,8 +36335,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "ska-orion",
@@ -36189,6 +36853,14 @@
     "lat": 28.5759302,
     "lng": 77.3689062,
     "facts": {
+      "Towers or blocks": "Tower A (The Crescent)",
+      "Approximate homes": "about 32 flats",
+      "Builder": "Swaraj Homes / Crescent CGHS",
+      "Possession year": "2004",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,100–1,930 sq ft",
+      "Helper entry process": "Security app approval & gate register",
+      "Helper ID card issued by": "The Crescent RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 50, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -36196,8 +36868,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "crescent-b-tower",
@@ -36210,6 +36882,14 @@
     "lat": 28.575964,
     "lng": 77.3692689,
     "facts": {
+      "Towers or blocks": "Tower B (The Crescent)",
+      "Approximate homes": "about 32 flats",
+      "Builder": "Swaraj Homes / Crescent CGHS",
+      "Possession year": "2004",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,100–1,930 sq ft",
+      "Helper entry process": "Security app approval & gate register",
+      "Helper ID card issued by": "The Crescent RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 50, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -36217,8 +36897,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "crescent-c-tower",
@@ -36231,6 +36911,14 @@
     "lat": 28.5762422,
     "lng": 77.3694919,
     "facts": {
+      "Towers or blocks": "Tower C (The Crescent)",
+      "Approximate homes": "about 32 flats",
+      "Builder": "Swaraj Homes / Crescent CGHS",
+      "Possession year": "2004",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,100–1,930 sq ft",
+      "Helper entry process": "Security app approval & gate register",
+      "Helper ID card issued by": "The Crescent RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 50, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -36238,8 +36926,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "crescent-d-tower",
@@ -36252,6 +36940,14 @@
     "lat": 28.5764702,
     "lng": 77.3693047,
     "facts": {
+      "Towers or blocks": "Tower D (The Crescent)",
+      "Approximate homes": "about 34 flats",
+      "Builder": "Swaraj Homes / Crescent CGHS",
+      "Possession year": "2004",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,100–1,930 sq ft",
+      "Helper entry process": "Security app approval & gate register",
+      "Helper ID card issued by": "The Crescent RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 50, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -36259,8 +36955,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "kailash-dham",
@@ -36273,6 +36969,14 @@
     "lat": 28.5729861,
     "lng": 77.3655754,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "about 400 flats",
+      "Builder": "Purvanchal, for Kailash Dham Sahkari Awas Samiti",
+      "Possession year": "2004",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,060–2,100 sq ft",
+      "Helper entry process": "Gate entry pass & resident intercom verification",
+      "Helper ID card issued by": "Kailash Dham RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 50, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -36280,8 +36984,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "morna",
@@ -36294,6 +36998,14 @@
     "lat": 28.5795394,
     "lng": 77.3585906,
     "facts": {
+      "Towers or blocks": "Village settlement",
+      "Approximate homes": "about 1,200 homes",
+      "Builder": "Private / Self-built",
+      "Possession year": "Traditional / 1990s onward",
+      "Typical flat sizes": "1, 2 and 3 BHK independent floors / rooms",
+      "Helper entry process": "Open entry",
+      "Helper ID card issued by": "None",
+      "Service lift for helpers": "No",
       "Parent locality": "Sector 50, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -36301,8 +37013,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "the-crescent",
@@ -36315,6 +37027,14 @@
     "lat": 28.5761141,
     "lng": 77.3691636,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "about 130 flats",
+      "Builder": "Swaraj Homes / Crescent CGHS",
+      "Possession year": "2004",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,100–1,930 sq ft",
+      "Helper entry process": "Security app approval & gate register",
+      "Helper ID card issued by": "The Crescent RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 50, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -36322,8 +37042,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "dhawalgiri-apartments-12a",
@@ -36693,6 +37413,14 @@
     "lat": 28.6221589,
     "lng": 77.3681027,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "about 120 flats",
+      "Builder": "Akansha CGHS",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, 1,300–1,775 sq ft",
+      "Helper entry process": "Gate register entry & resident phone verification",
+      "Helper ID card issued by": "Akansha CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36700,8 +37428,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "bhagirathi-apartments",
@@ -36714,6 +37442,14 @@
     "lat": 28.6234051,
     "lng": 77.3690102,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "about 156 flats",
+      "Builder": "Bhagirathi CGHS",
+      "Possession year": "2001",
+      "Typical flat sizes": "2 and 3 BHK, 1,120–1,600 sq ft",
+      "Helper entry process": "Gate register entry & resident verification",
+      "Helper ID card issued by": "Bhagirathi CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36721,8 +37457,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "block-a-shramdeep-apartments",
@@ -36735,6 +37471,14 @@
     "lat": 28.6215638,
     "lng": 77.3678373,
     "facts": {
+      "Towers or blocks": "Block A",
+      "Approximate homes": "48 flats",
+      "Builder": "Sampada Group",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, 980–1,400 sq ft",
+      "Helper entry process": "Gate register check & resident confirmation",
+      "Helper ID card issued by": "Shramdeep CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36742,8 +37486,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "block-b-shramdeep-apartments",
@@ -36756,6 +37500,14 @@
     "lat": 28.6211403,
     "lng": 77.3678283,
     "facts": {
+      "Towers or blocks": "Block B",
+      "Approximate homes": "48 flats",
+      "Builder": "Sampada Group",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, 980–1,400 sq ft",
+      "Helper entry process": "Gate register check & resident confirmation",
+      "Helper ID card issued by": "Shramdeep CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36763,8 +37515,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "designers-park-apartments",
@@ -36777,6 +37529,14 @@
     "lat": 28.621147,
     "lng": 77.3687964,
     "facts": {
+      "Towers or blocks": "6 towers",
+      "Approximate homes": "about 204 flats",
+      "Builder": "Designers Park CGHS",
+      "Possession year": "2003",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,100–2,100 sq ft",
+      "Helper entry process": "Security app approval & guard register",
+      "Helper ID card issued by": "Designers Park AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36784,8 +37544,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "gail-apartments",
@@ -36798,6 +37558,14 @@
     "lat": 28.6209438,
     "lng": 77.3700661,
     "facts": {
+      "Towers or blocks": "5 towers",
+      "Approximate homes": "about 280 flats",
+      "Builder": "GAIL Housing Society",
+      "Possession year": "2001",
+      "Typical flat sizes": "2 and 3 BHK, 1,150–1,680 sq ft",
+      "Helper entry process": "Guarded gate register & resident approval",
+      "Helper ID card issued by": "GAIL Apartments RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36805,8 +37573,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "prangan-apartment",
@@ -36840,6 +37608,14 @@
     "lat": 28.6221375,
     "lng": 77.3692324,
     "facts": {
+      "Towers or blocks": "2 towers",
+      "Approximate homes": "about 72 flats",
+      "Builder": "Prangan CGHS",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, 1,100–1,675 sq ft",
+      "Helper entry process": "Gate register entry & resident phone check",
+      "Helper ID card issued by": "Prangan CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36847,8 +37623,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "prithvi-vihar",
@@ -36861,6 +37637,14 @@
     "lat": 28.6231041,
     "lng": 77.3731102,
     "facts": {
+      "Towers or blocks": "3 towers",
+      "Approximate homes": "about 120 flats",
+      "Builder": "Prithvi Vihar CGHS",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, 1,150–1,650 sq ft",
+      "Helper entry process": "Gate register check & resident verification",
+      "Helper ID card issued by": "Prithvi Vihar RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36868,8 +37652,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "shaurya-apartments",
@@ -36882,6 +37666,14 @@
     "lat": 28.6222024,
     "lng": 77.3725371,
     "facts": {
+      "Towers or blocks": "2 towers",
+      "Approximate homes": "about 84 flats",
+      "Builder": "Metropark Developers",
+      "Possession year": "2003",
+      "Typical flat sizes": "2 and 3 BHK, 1,100–1,800 sq ft",
+      "Helper entry process": "Main gate entry register & resident confirmation",
+      "Helper ID card issued by": "Shaurya Apartments RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36889,8 +37681,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "shramdeep-apartments",
@@ -36903,6 +37695,14 @@
     "lat": 28.6212649,
     "lng": 77.3678693,
     "facts": {
+      "Towers or blocks": "2 blocks",
+      "Approximate homes": "about 96 flats",
+      "Builder": "Sampada Group",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, 980–1,400 sq ft",
+      "Helper entry process": "Gate register check & resident confirmation",
+      "Helper ID card issued by": "Shramdeep CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36910,8 +37710,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "srijan-apartments",
@@ -36924,6 +37724,14 @@
     "lat": 28.6222912,
     "lng": 77.3714652,
     "facts": {
+      "Towers or blocks": "3 towers",
+      "Approximate homes": "about 152 flats",
+      "Builder": "Srijan CGHS",
+      "Possession year": "2002",
+      "Typical flat sizes": "2 and 3 BHK, 1,200–1,560 sq ft",
+      "Helper entry process": "Gate register entry & resident phone check",
+      "Helper ID card issued by": "Srijan CGHS RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36931,8 +37739,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "telecom-city",
@@ -36945,6 +37753,14 @@
     "lat": 28.6213401,
     "lng": 77.3716303,
     "facts": {
+      "Towers or blocks": "4 towers",
+      "Approximate homes": "about 206 flats",
+      "Builder": "Telecom Employees CGHS",
+      "Possession year": "2001",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,000–1,925 sq ft",
+      "Helper entry process": "Gate register entry & resident verification",
+      "Helper ID card issued by": "Telecom City RWA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 62, Noida",
       "Pincode": "201301",
       "Housing type": "mixed",
@@ -36952,8 +37768,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "yarrows-apartment",
@@ -37050,6 +37866,14 @@
     "lat": 28.5589293,
     "lng": 77.3864637,
     "facts": {
+      "Towers or blocks": "15 towers",
+      "Approximate homes": "about 1,600 flats",
+      "Builder": "Antriksh",
+      "Possession year": "2016",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,010–3,375 sq ft",
+      "Helper entry process": "Security app approval & guard pass",
+      "Helper ID card issued by": "Antriksh Golf View 1 AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37057,8 +37881,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "block-d-jm-orchid",
@@ -37071,6 +37895,14 @@
     "lat": 28.5709902,
     "lng": 77.3847508,
     "facts": {
+      "Towers or blocks": "Tower D",
+      "Approximate homes": "about 80 flats",
+      "Builder": "JM Housing",
+      "Possession year": "2014",
+      "Typical flat sizes": "2, 3 and 4 BHK, 1,114–2,485 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & visitor pass",
+      "Helper ID card issued by": "JM Orchid AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37078,8 +37910,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "brahm-colony",
@@ -37092,6 +37924,14 @@
     "lat": 28.5675422,
     "lng": 77.3756503,
     "facts": {
+      "Towers or blocks": "Colony settlement",
+      "Approximate homes": "about 400 homes",
+      "Builder": "Private / Self-built",
+      "Possession year": "2000s",
+      "Typical flat sizes": "1, 2 and 3 BHK independent floors / houses",
+      "Helper entry process": "Open entry",
+      "Helper ID card issued by": "None",
+      "Service lift for helpers": "No",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37099,8 +37939,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "hindon-vihar",
@@ -37113,6 +37953,14 @@
     "lat": 28.5579359,
     "lng": 77.3760071,
     "facts": {
+      "Towers or blocks": "Colony settlement",
+      "Approximate homes": "about 600 homes",
+      "Builder": "Private / Self-built",
+      "Possession year": "2000s",
+      "Typical flat sizes": "1, 2 and 3 BHK independent floors / houses",
+      "Helper entry process": "Open entry",
+      "Helper ID card issued by": "None",
+      "Service lift for helpers": "No",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37120,8 +37968,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "iitl-nimbus-the-hyde-park",
@@ -37136,6 +37984,14 @@
     "lat": 28.563238,
     "lng": 77.3894368,
     "facts": {
+      "Towers or blocks": "23 towers",
+      "Approximate homes": "about 2,000 flats",
+      "Builder": "Nimbus",
+      "Possession year": "2018",
+      "Typical flat sizes": "2, 3 and 4 BHK, 915–2,380 sq ft",
+      "Helper entry process": "Security app (MyGate) approval & guard pass",
+      "Helper ID card issued by": "The Hyde Park AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37143,8 +37999,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "mahagun-mezzaria",
@@ -37157,6 +38013,14 @@
     "lat": 28.5629109,
     "lng": 77.3829451,
     "facts": {
+      "Towers or blocks": "8 towers",
+      "Approximate homes": "about 730 flats",
+      "Builder": "Mahagun",
+      "Possession year": "2021",
+      "Typical flat sizes": "3 and 4 BHK, 2,500–3,525 sq ft",
+      "Helper entry process": "Security app approval & biometric gate check-in",
+      "Helper ID card issued by": "Mahagun Mezzaria AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37164,8 +38028,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "mahagun-moderne",
@@ -37180,6 +38044,14 @@
     "lat": 28.5626766,
     "lng": 77.3866551,
     "facts": {
+      "Towers or blocks": "18 towers",
+      "Approximate homes": "about 2,200 flats",
+      "Builder": "Mahagun",
+      "Possession year": "2016",
+      "Typical flat sizes": "2, 3 and 4 BHK (5 BHK in the Marvella tower)",
+      "Helper entry process": "Security app (MyGate) approval & biometric / RFID gate entry",
+      "Helper ID card issued by": "Mahagun Moderne AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37187,8 +38059,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "marvella",
@@ -37201,6 +38073,14 @@
     "lat": 28.561433,
     "lng": 77.3863345,
     "facts": {
+      "Towers or blocks": "1 iconic tower (inside Mahagun Moderne)",
+      "Approximate homes": "about 90 luxury suites",
+      "Builder": "Mahagun",
+      "Possession year": "2016",
+      "Typical flat sizes": "5 BHK luxury suites, 4,000–5,000 sq ft",
+      "Helper entry process": "Security app approval & concierge check-in",
+      "Helper ID card issued by": "Mahagun Moderne AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37208,8 +38088,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "north-eye",
@@ -37222,6 +38102,14 @@
     "lat": 28.5727077,
     "lng": 77.388002,
     "facts": {
+      "Towers or blocks": "1 iconic skyscraper tower",
+      "Approximate homes": "about 2,300 flats",
+      "Builder": "Supertech",
+      "Possession year": "2021",
+      "Typical flat sizes": "Studio, 2, 3 and 4 BHK, 535–3,350 sq ft",
+      "Helper entry process": "Security app pass & biometric lobby entry",
+      "Helper ID card issued by": "North Eye Estate Management",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37229,8 +38117,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "panchsheel-pratishta",
@@ -37243,6 +38131,14 @@
     "lat": 28.5741234,
     "lng": 77.383946,
     "facts": {
+      "Towers or blocks": "8 towers",
+      "Approximate homes": "about 570 flats",
+      "Builder": "Panchsheel",
+      "Possession year": "2015",
+      "Typical flat sizes": "2 and 3 BHK, 1,310–2,050 sq ft",
+      "Helper entry process": "Security app pass & guard entry register",
+      "Helper ID card issued by": "Panchsheel Pratishta AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37250,8 +38146,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "princely-estate",
@@ -37266,6 +38162,14 @@
     "lat": 28.5653815,
     "lng": 77.3823376,
     "facts": {
+      "Towers or blocks": "17 towers",
+      "Approximate homes": "about 2,000 flats",
+      "Builder": "Amrapali",
+      "Possession year": "2015",
+      "Typical flat sizes": "1, 2 and 3 BHK, 675–1,315 sq ft",
+      "Helper entry process": "Security app pass & entry register",
+      "Helper ID card issued by": "Amrapali Princely Estate AOA / Court Receiver",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37273,8 +38177,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "rainbow-metro-station",
@@ -37287,6 +38191,14 @@
     "lat": 28.5743583,
     "lng": 77.3782348,
     "facts": {
+      "Towers or blocks": "N/A (Metro Station)",
+      "Approximate homes": "N/A",
+      "Builder": "Noida Metro Rail Corporation (NMRC)",
+      "Possession year": "2019",
+      "Typical flat sizes": "N/A",
+      "Helper entry process": "N/A (Public Transit)",
+      "Helper ID card issued by": "N/A",
+      "Service lift for helpers": "N/A",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37294,8 +38206,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "sunshine-helios",
@@ -37308,6 +38220,14 @@
     "lat": 28.5603348,
     "lng": 77.3854087,
     "facts": {
+      "Towers or blocks": "6 towers",
+      "Approximate homes": "about 400 flats",
+      "Builder": "Sunshine Housing & Infrastructure",
+      "Possession year": "2015",
+      "Typical flat sizes": "3, 4 and 5 BHK, 1,575–4,300 sq ft",
+      "Helper entry process": "Security app approval & visitor pass",
+      "Helper ID card issued by": "Sunshine Helios AOA",
+      "Service lift for helpers": "Yes",
       "Parent locality": "Sector 76, Noida",
       "Pincode": "201301",
       "Housing type": "gated societies",
@@ -37315,8 +38235,8 @@
     },
     "source": "OpenStreetMap via Overpass API",
     "licence": "ODbL 1.0 — © OpenStreetMap contributors",
-    "status": "draft",
-    "updatedAt": "2026-09-06"
+    "status": "ready",
+    "updatedAt": "2026-09-15"
   },
   {
     "slug": "supertech-north-eye",

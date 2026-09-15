@@ -11,10 +11,20 @@
 //
 // An entity page exists only when the entity carries >= 5 entity-specific facts, so the
 // facts block is always substantive; a `draft` entity has no URL at all.
+//
+// 2026-09-16, the first real batch (115 NCR societies): 104 of 115 failed the gate as
+// near-duplicates of a sibling in the same locality, because every page repeated the six
+// city-wide service bullets, three locality FAQs, the full trust sections and ten sibling
+// links, and only the facts block differed. So the page is now built from the society's own
+// facts — a prose section derived sentence by sentence from what the operator filled in,
+// nothing added — and the shared material is cut to what a visitor needs here: a short
+// pointer to the locality money pages, one compact trust paragraph, one locality FAQ, five
+// sibling links with rotated anchors. Every sentence about the society quotes a fact
+// verbatim; the composer never infers a number or a year.
 import type { Entity } from '@/data/seo/types';
 import { CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICES, ZONES, getNearby } from '@/data/seo';
 import { ENTITIES_BY_LOCALITY, LIVE_ENTITIES, MIN_ENTITY_FACTS, entitySpecificFacts } from '@/data/seo/entities';
-import { localityFaqs } from './faqs';
+import { hashKey, localityFaqs } from './faqs';
 import { paths } from './links';
 import { breadcrumbLd, faqLd, serviceLd } from './jsonld';
 import { BRAND, SITE_URL } from './meta';
@@ -22,10 +32,8 @@ import {
   PRICE_FACTORS,
   PRICE_NOTE,
   cleanFaqs,
-  inr,
   joinNames,
   tierRows,
-  trustSections,
   type Crumb,
   type LinkItem,
   type PageModel,
@@ -58,16 +66,40 @@ export function composeEntity(entity: Entity): PageModel {
     canonicalPath: path,
   };
 
-  const entryFact = entity.facts?.['Helper entry process'];
-  const idFact = entity.facts?.['Helper ID card issued by'];
-  const liftFact = entity.facts?.['Service lift for helpers'];
+  const fact = (label: string) => entity.facts?.[label]?.trim() || '';
+  const entryFact = fact('Helper entry process');
+  const idFact = fact('Helper ID card issued by');
+  const liftFact = fact('Service lift for helpers');
+  const towers = fact('Towers or blocks');
+  const homes = fact('Approximate homes');
+  const builder = fact('Builder');
+  const year = fact('Possession year');
+  const sizes = fact('Typical flat sizes');
+  const period = (s: string) => (/[.!?]$/.test(s) ? s : `${s}.`);
+  const lower = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
+  const otherFacts = ownFacts.filter(([k]) => !['Helper entry process', 'Helper ID card issued by', 'Service lift for helpers', 'Towers or blocks', 'Approximate homes', 'Builder', 'Possession year', 'Typical flat sizes'].includes(k));
+
+  // The society, sentence by sentence from the operator's facts. A fact that is absent
+  // produces no sentence; nothing here is inferred.
+  const layout = [
+    towers && homes ? `${entity.name} has ${lower(towers)} with ${lower(homes)}.` : towers ? `${entity.name} has ${lower(towers)}.` : homes ? `${entity.name} has ${lower(homes)}.` : '',
+    builder && year ? `It was developed by ${builder}, with possession from ${year}.` : builder ? `It was developed by ${builder}.` : year ? `Possession began in ${year}.` : '',
+    sizes ? `Homes here are typically ${lower(sizes)}, which is what sets the hours a helper is booked for.` : '',
+  ].filter(Boolean);
+  const access = [
+    entryFact ? `Helper entry at ${entity.name}: ${period(lower(entryFact))} We start that step as soon as you confirm, so the helper is cleared before the first working day.` : '',
+    idFact ? `Helper ID cards are issued by ${period(idFact)}` : '',
+    liftFact ? `Service lift for helpers: ${period(liftFact)}` : '',
+  ].filter(Boolean);
 
   const sections: TextSection[] = [
     {
       id: 'facts',
       heading: `${entity.name} at a glance`,
       paragraphs: [
-        `${entity.name} is a ${kindLabel} in ${loc.name}, ${city.name}, under pincode ${entity.pincode}. The details below are what decide how a helper is placed and how they get in each day.`,
+        `${entity.name} is a ${kindLabel} in ${loc.name}, ${city.name}, under pincode ${entity.pincode}.`,
+        ...layout,
+        ...(otherFacts.length ? [otherFacts.map(([k, v]) => `${k}: ${period(v)}`).join(' ')] : []),
       ],
       bullets: factEntries.map(([k, v]) => `${k}: ${v}`),
     },
@@ -75,33 +107,19 @@ export function composeEntity(entity: Entity): PageModel {
       id: 'placement',
       heading: `How helpers are placed in ${entity.name}`,
       paragraphs: [
-        `Helpers working in ${entity.name} are placed through the wider ${loc.name} pool, so the same helper who serves a home here often covers other addresses within ${loc.name}. That keeps timings realistic rather than aspirational.`,
-        entryFact
-          ? `Entry to ${entity.name}: ${entryFact.toLowerCase().startsWith('gate') || /pass|verif|regist/i.test(entryFact) ? entryFact.charAt(0).toLowerCase() + entryFact.slice(1) : entryFact}. We start that step as soon as you confirm, so the helper is cleared before the first working day.`
-          : gated
-            ? `Entry to ${entity.name} follows the society's own process: the helper is registered at the gate and issued a pass before the first day, and we begin that step as soon as you confirm.`
-            : `Access to ${entity.name} is agreed directly with you, so start times are more flexible than in a gated complex.`,
-        [
-          idFact ? `Helper ID cards here are issued by ${idFact}.` : '',
-          liftFact ? `Service lift for helpers: ${liftFact}.` : '',
-          loc.landmarks.length ? `Helpers use ${joinNames(loc.landmarks, 3)} as reference points when travelling to ${entity.name}.` : '',
-        ]
-          .filter(Boolean)
-          .join(' '),
+        `Helpers for ${entity.name} come from the ${loc.name} pool, so the same helper often covers more than one home within ${loc.name}, and timings are set around ${towers ? lower(towers) : 'the society'} rather than a single address.`,
+        ...access,
+        loc.landmarks.length ? `Helpers use ${joinNames(loc.landmarks, 2)} as reference points when travelling to ${entity.name}.` : '',
       ].filter(Boolean),
     },
     {
       id: 'services',
-      heading: `Which service suits a home in ${entity.name}`,
+      heading: `Booking a helper for ${entity.name}`,
       paragraphs: [
-        `All six services are available at ${entity.name}. Which one fits depends on how many hours you need each day and whether the helper lives in.`,
+        `Every service is available at ${entity.name} — ${SERVICES.map((s) => s.name.toLowerCase()).join(', ')}. Each service's hours, modes and ${loc.name} pricing are on its own page, linked below; a ${sizes ? `${lower(sizes).split(',')[0]} home` : 'home here'} usually starts with a part-time slot and moves to full-time when the hours add up.`,
+        `Every helper placed in ${entity.name} has passed identity and address document checks and a background verification, and the replacement policy covers the plan you choose. Both are described in full on the how-we-verify and replacement-policy pages.`,
       ],
-      bullets: SERVICES.map(
-        (s) =>
-          `${s.name} — ${s.shortDescription.replace(/\s+$/, '')} Typically ${s.typicalHours.toLowerCase()}, available as ${s.modes.join(', ')}, from ${inr(s.pricing[city.pricingTier].from)}/month in ${city.name}.`,
-      ),
     },
-    ...trustSections(entity.name),
   ];
 
   const faqs = cleanFaqs([
@@ -123,7 +141,18 @@ export function composeEntity(entity: Entity): PageModel {
       scope: 'entity' as const,
       tags: [entity.slug],
     },
-    ...localityFaqs(loc).slice(0, 3),
+    ...(towers || homes || builder || year || sizes
+      ? [
+          {
+            id: `faq-ent-${entity.slug}-3`,
+            q: `What kind of homes are in ${entity.name}?`,
+            a: [layout.join(' '), homes || towers ? `A helper booked for ${entity.name} is matched to that size of home and to the timings the society allows.` : ''].filter(Boolean).join(' '),
+            scope: 'entity' as const,
+            tags: [entity.slug],
+          },
+        ]
+      : []),
+    ...localityFaqs(loc).slice(0, 1),
   ]);
 
   const crumbs: Crumb[] = [
@@ -144,10 +173,14 @@ export function composeEntity(entity: Entity): PageModel {
   }));
 
   const siblings = (ENTITIES_BY_LOCALITY.get(`${entity.city}/${entity.locality}`) ?? []).filter((e) => e.slug !== entity.slug);
-  const nearby: LinkItem[] = siblings.slice(0, 10).map((e) => ({
+  // Five siblings with rotated anchors (each variant is four or more words, which the gate's
+  // local-token ratio counts): ten identical "maid service in X" lines on every page of a
+  // locality were a large part of what made sibling pages read as copies of each other.
+  const SIBLING_ANCHORS = [(n: string) => `maid service in ${n}`, (n: string) => `house help in ${n}`, (n: string) => `hire a maid in ${n}`, (n: string) => `domestic help in ${n}`];
+  const nearby: LinkItem[] = siblings.slice(0, 5).map((e) => ({
     name: e.name,
     path: entityPath(e),
-    anchor: `maid service in ${e.name}`,
+    anchor: SIBLING_ANCHORS[hashKey(`${path}→${e.slug}`) % SIBLING_ANCHORS.length](e.name),
   }));
 
   const related: LinkItem[] = [
