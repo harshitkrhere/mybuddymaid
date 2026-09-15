@@ -8,6 +8,7 @@ import { SUPPORT_HOURS } from '@/data/seo/contact';
 import { JsonLd } from './JsonLd';
 import { CtaButtons, StickyCta } from './CtaButtons';
 import { LeadForm } from './LeadForm';
+import { ProofStrip } from './ProofStrip';
 
 const LEADS_ENABLED = process.env.NEXT_PUBLIC_LEADS_ENABLED === 'true';
 
@@ -49,7 +50,8 @@ export function SeoPage({ model, children }: { model: PageModel; children?: Reac
             <li key={b}>{b}</li>
           ))}
         </ul>
-        <CtaButtons ctx={m.cta} />
+        <CtaButtons ctx={m.cta} hero />
+        <ProofStrip />
       </header>
 
       <main className="content">
