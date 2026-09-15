@@ -105,6 +105,19 @@ img { max-width: 100%; height: auto; }
 .btn-call:hover { border-color: var(--mint); }
 .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.25rem 0 0; }
 .cta-row .btn-app { order: -1; }
+/* the reply-time line under every button row (A3), and the hero's demoted app link while checkout is paused (A6) */
+.cta-note { margin: 0.65rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.cta-alt { margin: 0.25rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.cta-link { color: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+.hero .cta-note, .hero .cta-alt, .final-cta .cta-note, .final-cta .cta-alt { color: rgba(255, 255, 255, 0.62); }
+.hero .cta-link, .final-cta .cta-link { color: var(--mint); }
+/* the proof strip (A5): three verification facts under the hero buttons, each already on /how-we-verify */
+.proof { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: 0.85rem; font-weight: 600; color: rgba(255, 255, 255, 0.8); }
+.proof li { position: relative; padding-left: 1.2rem; }
+.proof li::before { content: ''; position: absolute; left: 0; top: 0.3em; width: 12px; height: 12px; background: var(--mint); -webkit-mask: var(--icon-check) center / contain no-repeat; mask: var(--icon-check) center / contain no-repeat; }
+.proof__link { padding-left: 0; }
+.proof__link::before { display: none; }
+.proof__link a { color: var(--mint); }
 
 /* breadcrumbs */
 .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem; padding: 0.9rem 0 0.75rem; margin: 0; font-size: 0.85rem; color: var(--muted); }

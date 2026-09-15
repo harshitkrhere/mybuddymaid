@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BLOG_BY_SLUG, BLOG_POSTS } from '@/data/blog/posts';
-import { areasForPost } from '@/lib/blog/links';
+import { areasForPost, ctaForPost } from '@/lib/blog/links';
+import { CtaButtons, StickyCta } from '@/components/seo/CtaButtons';
 import { stripLegacyHeader } from '@/lib/blog/legacy-header';
 import { staticMetadata } from '@/lib/seo-engine/page-metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
@@ -36,6 +37,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   // localities and service pages; a service guide its hub and Tier-1 city pages; the rest,
   // and every guide about a city we do not serve, list the eight cities we do
   const areas = areasForPost(slug);
+  // the buttons (A7): WhatsApp prefilled with what this guide is about, call, the app
+  const cta = ctaForPost(slug);
   return (
     <>
       <JsonLd
@@ -67,6 +70,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {post.category} · Published {post.datePublished} · {post.readingMinutes} min read
         </p>
         <div dangerouslySetInnerHTML={{ __html: stripLegacyHeader(post.html) }} />
+        <section className="final-cta">
+          <h2>Ready to book?</h2>
+          <p>Message us on WhatsApp with your requirement, or call — we reply during working hours.</p>
+          <CtaButtons ctx={cta} />
+        </section>
         {related.length > 0 && (
           <>
             <h2>Related guides</h2>
@@ -92,6 +100,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </>
         )}
       </main>
+      <StickyCta ctx={cta} />
     </>
   );
 }

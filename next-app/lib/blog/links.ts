@@ -10,6 +10,7 @@ import { cityGuides, serviceGuides, tagsOf, TRUST_GUIDES } from '@/data/blog/tag
 import { CITIES, CITY_BY_SLUG, LOCALITY_BY_PATH, SERVICES, SERVICE_BY_SLUG } from '@/data/seo';
 import { hashKey } from '@/lib/seo-engine/faqs';
 import { paths } from '@/lib/seo-engine/links';
+import type { CtaContext } from '@/components/seo/CtaButtons';
 
 export interface GuideLink {
   name: string;
@@ -76,4 +77,27 @@ export function areasForPost(slug: string): AreaLink[] {
   }
   for (const c of CITIES) add(cityHub(c.slug));
   return out;
+}
+
+/** The message when nothing more specific is known — a guide index, a guide about a city we do not serve. */
+export const GENERIC_WHATSAPP_TEXT = 'Hi MyBuddyMaid, I would like to book a verified helper.';
+
+/**
+ * The buttons a guide carries (A7): the WhatsApp message names what the guide is about, so the
+ * team knows the intent, and the city or service travels with the click for the report. A guide
+ * about a city outside the footprint gets the generic message — it must not read as an offer.
+ */
+export function ctaForPost(slug: string): CtaContext {
+  const t = tagsOf(slug);
+  if (t.outsideFootprint) return { whatsappText: GENERIC_WHATSAPP_TEXT, city: '' };
+  if (t.kind === 'city-guide' && t.cities?.length) {
+    const c = CITY_BY_SLUG.get(t.cities[0]);
+    if (c) return { whatsappText: `Hi MyBuddyMaid, I need a maid in ${c.name}.`, city: c.slug };
+  }
+  if (t.kind === 'service-guide' && t.services?.length) {
+    const s = SERVICE_BY_SLUG.get(t.services[0]);
+    if (s) return { whatsappText: `Hi MyBuddyMaid, I need a ${s.name.toLowerCase()}.`, city: '', service: s.slug };
+  }
+  const post = BLOG_BY_SLUG.get(slug);
+  return { whatsappText: post ? `Hi MyBuddyMaid, I read your guide "${post.title}" and would like to book a helper.` : GENERIC_WHATSAPP_TEXT, city: '' };
 }

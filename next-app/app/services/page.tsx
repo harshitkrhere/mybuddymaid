@@ -5,6 +5,8 @@ import { staticMetadata } from '@/lib/seo-engine/page-metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbLd } from '@/lib/seo-engine/jsonld';
 import { inr } from '@/lib/seo-engine/compose';
+import { CtaButtons, StickyCta, siteContext } from '@/components/seo/CtaButtons';
+import { GENERIC_WHATSAPP_TEXT } from '@/lib/blog/links';
 
 export const dynamic = 'force-static';
 
@@ -19,6 +21,7 @@ export default function ServicesIndex() {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
   ];
+  const cta = siteContext(GENERIC_WHATSAPP_TEXT);
   return (
     <>
       <JsonLd data={[breadcrumbLd(crumbs)]} />
@@ -42,6 +45,11 @@ export default function ServicesIndex() {
             </li>
           ))}
         </ul>
+        <section className="final-cta">
+          <h2>Ready to book?</h2>
+          <p>Message us on WhatsApp with your requirement, or call — we reply during working hours.</p>
+          <CtaButtons ctx={cta} />
+        </section>
         <h2>By city</h2>
         <ul className="link-list">
           {CITIES.map((c) => (
@@ -51,6 +59,7 @@ export default function ServicesIndex() {
           ))}
         </ul>
       </main>
+      <StickyCta ctx={cta} />
     </>
   );
 }

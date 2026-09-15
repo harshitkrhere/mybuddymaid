@@ -13,6 +13,8 @@ import { staticMetadata } from '@/lib/seo-engine/page-metadata';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { breadcrumbLd } from '@/lib/seo-engine/jsonld';
 import { Icon, type IconName } from '@/components/home/HomeIcons';
+import { CtaButtons, siteContext } from '@/components/seo/CtaButtons';
+import { GENERIC_WHATSAPP_TEXT } from '@/lib/blog/links';
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '600', '700', '800'], display: 'swap', variable: '--font-jakarta' });
 
@@ -153,6 +155,7 @@ export default function BlogIndex() {
           <div>
             <h2>Ready to hire?</h2>
             <p>Verified maids, cooks, nannies and elder-care helpers with a replacement policy.</p>
+            <CtaButtons ctx={siteContext(GENERIC_WHATSAPP_TEXT)} compact />
           </div>
           <div className="blog-cta__links">
             <Link href="/" className="btn btn-primary">
