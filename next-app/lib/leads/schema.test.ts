@@ -50,6 +50,13 @@ test('every column the route inserts exists on the leads table', () => {
   for (const k of ['attribution', 'chatwoot_conversation_id']) assert.ok(cols.has(k), `leads.${k}`);
 });
 
+test('the columns added after the 2026-09-06 proposal are also ADDed explicitly, for a table that already exists', () => {
+  // the live project had the proposal\'s table already; CREATE TABLE IF NOT EXISTS left it without these
+  const sql = read(MIGRATION);
+  for (const c of ['attribution', 'chatwoot_conversation_id']) assert.match(sql, new RegExp(`ALTER TABLE leads ADD COLUMN IF NOT EXISTS ${c}\\s`), `leads.${c}`);
+  assert.match(sql, /REVOKE ALL ON leads FROM anon, authenticated;/);
+});
+
 test('bookings gains every column the booking app writes', () => {
   const sql = read(MIGRATION);
   const app = read('app/src/lib/booking.js');
