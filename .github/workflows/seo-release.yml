@@ -1,0 +1,43 @@
+# SEO — release a sitemap shard (docs/seo/README.md §6, step 6). Manual only.
+#
+# After a deploy that added a Phase 5 batch, this submits the shard's URLs to IndexNow (Bing,
+# Yandex, Naver and the rest) and re-submits the sitemap index to Bing Webmaster Tools. Google
+# discovers the shard through the sitemap index it already has. Runs where the keys live, so
+# no key is ever needed on a laptop. Record the batch in docs/seo/rollout-log.md afterwards.
+name: SEO — release a sitemap shard
+
+on:
+  workflow_dispatch:
+    inputs:
+      shard:
+        description: 'Sitemap shard name, e.g. entities-ncr-1-1'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: next-app
+    env:
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: next-app/package-lock.json
+      - run: npm ci
+      - name: Check the deployed shard exists
+        run: |
+          n=$(curl -s --max-time 30 "https://mybuddymaid.in/sitemaps/${{ inputs.shard }}.xml" | grep -o '<loc>' | wc -l)
+          echo "shard ${{ inputs.shard }} is live with $n URLs"
+          [ "$n" -gt 0 ] || { echo "::error::the shard is not served by the live site yet — deploy first"; exit 1; }
+      - name: IndexNow + Bing sitemap re-submission
+        run: npm run release:batch -- "${{ inputs.shard }}"
