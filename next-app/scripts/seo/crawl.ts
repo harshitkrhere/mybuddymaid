@@ -10,10 +10,14 @@ import { assertReachable, hasBypass, siteFetch } from './_fetch';
 import { allIndexableUrls } from '../../lib/seo-engine/sitemaps';
 import { gateFor, hasGateVerdict } from '../../lib/seo-engine/gate';
 import { SITE_URL } from '../../lib/seo-engine/meta';
+import { SERVICE_BY_SLUG } from '../../data/seo';
 
 const BASE = (process.env.BASE_URL ?? 'http://localhost:3000').replace(/\/$/, '');
 const CONCURRENCY = Number(process.env.CRAWL_CONCURRENCY ?? 12);
 const MAX_DEPTH_CORE = 3;
+// Phase 5 society pages sit one level below their locality (home → city → zone → locality →
+// society), so their ceiling is one deeper; every one is also advertised in its batch shard.
+const MAX_DEPTH_ENTITY = 4;
 
 interface PageInfo {
   path: string;
@@ -150,7 +154,7 @@ async function main() {
     if (seg[0] === 'blog') return seg.length === 1 ? 'blog-index' : 'blog-post';
     if (seg.length === 1) return 'trust/city';
     if (seg.length === 2) return 'zone/locality';
-    if (seg.length === 3) return 'service-locality';
+    if (seg.length === 3) return SERVICE_BY_SLUG.has(seg[2] as never) ? 'service-locality' : 'entity';
     return 'other';
   };
   const depthByType = new Map<string, { max: number; worst: string; n: number }>();
@@ -168,10 +172,11 @@ async function main() {
 
   console.log('\n--- click depth by page type ---');
   for (const [t, d] of [...depthByType].sort()) {
-    const flag = d.max > MAX_DEPTH_CORE && t !== 'other' ? '  << over depth 3' : '';
+    const limit = t === 'entity' ? MAX_DEPTH_ENTITY : MAX_DEPTH_CORE;
+    const flag = d.max > limit && t !== 'other' ? `  << over depth ${limit}` : '';
     console.log(`  ${t.padEnd(18)} pages=${String(d.n).padStart(5)}  max depth=${d.max}  (${d.worst})${flag}`);
-    if (d.max > MAX_DEPTH_CORE && !['other', 'blog-post'].includes(t)) {
-      err(`click depth ${d.max} > ${MAX_DEPTH_CORE} for page type ${t} (e.g. ${d.worst})`);
+    if (d.max > limit && !['other', 'blog-post'].includes(t)) {
+      err(`click depth ${d.max} > ${limit} for page type ${t} (e.g. ${d.worst})`);
     }
   }
 
