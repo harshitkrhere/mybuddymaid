@@ -262,12 +262,20 @@ The loop:
    never prefix or substring: "Gaur City 7th Avenue" under Gaur City is a distinct
    tower-level entity and the brief's own example of the target long-tail.
 2. **A `draft` entity has no URL at all** — not a noindexed page, no page.
-3. `npm run seo:entities -- --export-worksheet ../docs/seo/entity-worksheet.csv` — one
-   row per candidate, sorted by locality, `serve?` first. The operator marks `y` on the
+3. `npm run seo:entities -- --placements` (service key; GitHub runs it monthly and on demand via
+   *SEO — society worksheet from placements*) reads the bookings and call-back requests that
+   name a society into `data/seo/quality/placements.json` — counts per society, never a person.
+   Then `npm run seo:entities -- --export-worksheet ../docs/seo/entity-worksheet.csv [--top <n>]`
+   — one row per candidate, the societies customers actually named first (prefilled `serve? = y`
+   where a booking exists, a `signal` column such as "2 bookings · 1 request · last 2026-09-15"),
+   then Tier-1 cities and hero localities; societies customers named that match no candidate are
+   appended for the operator to confirm. `--top` cuts the sheet to the first n rows for a first
+   batch. The operator marks `y` on the
    societies we actually place in and fills their `fact:` columns; on re-import with
    `--csv`, rows not marked `y` are dropped from the store (drafts only; a `ready`/`live`
-   entity is never deleted by a CSV). Listing societies from memory is impossible; ticking
-   from a list is easy.
+   entity is never deleted by a CSV; pass `--keep-untriaged` when re-importing a partial
+   sheet so unticked candidates survive). Listing societies from memory is impossible;
+   ticking from a list is easy.
 4. `npm run seo:entities -- --promote` moves entities with **≥ 5 entity-specific facts**
    to `ready`. Facts inherited from the parent locality (`Parent locality`, `Pincode`,
    `Housing type`, `Nearest landmark`) are identical for every entity under that parent,
