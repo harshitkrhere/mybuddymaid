@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-09-15T10:19:19.678Z",
+  "bookings": 1,
+  "leads": 0,
+  "rows": [
+    {
+      "city": "gurgaon",
+      "locality": "sector-45",
+      "entity_slug": null,
+      "society": "Block C",
+      "societyKey": "block c",
+      "bookings": 1,
+      "leads": 0,
+      "last": "2026-09-15"
+    }
+  ]
+}
