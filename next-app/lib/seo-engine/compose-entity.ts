@@ -47,7 +47,10 @@ export function composeEntity(entity: Entity): PageModel {
   const city = CITY_BY_SLUG.get(entity.city)!;
   const loc = LOCALITY_BY_PATH.get(`${entity.city}/${entity.locality}`)!;
   const zone = ZONES.find((z) => z.city === loc.city && z.slug === loc.zone)!;
-  const factEntries = Object.entries(entity.facts ?? {}).filter(([, v]) => v.trim() !== '');
+  // Rendered facts: the operator's own plus the parent locality and pincode. The locality's
+  // housing profile is left out: 'independent houses' under a six-tower society is the
+  // locality's shape, not this society's, and reads as a contradiction (seen on ncr-1).
+  const factEntries = Object.entries(entity.facts ?? {}).filter(([k, v]) => v.trim() !== '' && k !== 'Housing type');
   const ownFacts = entitySpecificFacts(entity);
   const path = entityPath(entity);
   const kindLabel = entity.kind.replace(/-/g, ' ');
@@ -107,7 +110,7 @@ export function composeEntity(entity: Entity): PageModel {
       id: 'placement',
       heading: `How helpers are placed in ${entity.name}`,
       paragraphs: [
-        `Helpers for ${entity.name} come from the ${loc.name} pool, so the same helper often covers more than one home within ${loc.name}, and timings are set around ${towers ? lower(towers) : 'the society'} rather than a single address.`,
+        `Helpers for ${entity.name} come from the ${loc.name} pool, so the same helper often covers more than one home within ${loc.name}, and timings are planned across ${towers ? lower(towers) : 'the society'} rather than for a single address.`,
         ...access,
         loc.landmarks.length ? `Helpers use ${joinNames(loc.landmarks, 2)} as reference points when travelling to ${entity.name}.` : '',
       ].filter(Boolean),

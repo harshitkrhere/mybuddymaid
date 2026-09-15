@@ -15134,569 +15134,569 @@
     "/gurgaon/dlf-phase-1/a-block-extension-dlf-city-phase-1": {
       "index": true,
       "reasons": [],
-      "words": 696,
-      "localRatio": 0.848
+      "words": 693,
+      "localRatio": 0.867
     },
     "/gurgaon/dlf-phase-1/chakarpur": {
       "index": true,
       "reasons": [],
-      "words": 562,
-      "localRatio": 0.787
+      "words": 559,
+      "localRatio": 0.804
     },
     "/gurgaon/dlf-phase-1/dlf-hamilton-court": {
       "index": true,
       "reasons": [],
-      "words": 605,
-      "localRatio": 0.891
+      "words": 602,
+      "localRatio": 0.911
     },
     "/gurgaon/dlf-phase-1/dlf-i": {
       "index": true,
       "reasons": [],
-      "words": 606,
-      "localRatio": 0.848
+      "words": 603,
+      "localRatio": 0.867
     },
     "/gurgaon/dlf-phase-1/dlf-iv": {
       "index": true,
       "reasons": [],
-      "words": 602,
-      "localRatio": 0.848
+      "words": 599,
+      "localRatio": 0.867
     },
     "/gurgaon/dlf-phase-1/dlf-phase-1-a-block": {
       "index": true,
       "reasons": [],
-      "words": 653,
-      "localRatio": 0.848
+      "words": 650,
+      "localRatio": 0.867
     },
     "/gurgaon/dlf-phase-1/dlf-phase-1-block-f": {
       "index": true,
       "reasons": [],
-      "words": 650,
-      "localRatio": 0.848
+      "words": 647,
+      "localRatio": 0.867
     },
     "/gurgaon/dlf-phase-1/huda": {
       "index": true,
       "reasons": [],
-      "words": 573,
-      "localRatio": 0.761
+      "words": 570,
+      "localRatio": 0.778
     },
     "/gurgaon/dlf-phase-1/huda-sector-27": {
       "index": true,
       "reasons": [],
-      "words": 616,
-      "localRatio": 0.756
+      "words": 613,
+      "localRatio": 0.773
     },
     "/gurgaon/dlf-phase-1/ivy": {
       "index": true,
       "reasons": [],
-      "words": 584,
-      "localRatio": 0.804
+      "words": 581,
+      "localRatio": 0.822
     },
     "/gurgaon/dlf-phase-1/janpratinidhi-apartments": {
       "index": true,
       "reasons": [],
-      "words": 589,
-      "localRatio": 0.804
+      "words": 586,
+      "localRatio": 0.822
     },
     "/gurgaon/dlf-phase-1/perch-arbor-golf-course-road": {
       "index": true,
       "reasons": [],
-      "words": 646,
-      "localRatio": 0.766
+      "words": 643,
+      "localRatio": 0.783
     },
     "/gurgaon/dlf-phase-1/sahara-grace": {
       "index": true,
       "reasons": [],
-      "words": 592,
-      "localRatio": 0.804
+      "words": 589,
+      "localRatio": 0.822
     },
     "/gurgaon/dlf-phase-1/saraswati-vihar": {
       "index": true,
       "reasons": [],
-      "words": 601,
-      "localRatio": 0.766
+      "words": 598,
+      "localRatio": 0.783
     },
     "/gurgaon/dlf-phase-1/sikanderpur": {
       "index": false,
       "reasons": [
         "near-duplicate of /gurgaon/dlf-phase-1/chakarpur (Jaccard 0.61 > 0.6)"
       ],
-      "words": 556,
-      "localRatio": 0.766
+      "words": 553,
+      "localRatio": 0.783
     },
     "/gurgaon/dlf-phase-1/sikanderpur-rmrg-station": {
       "index": true,
       "reasons": [],
-      "words": 587,
-      "localRatio": 0.841
+      "words": 584,
+      "localRatio": 0.86
     },
     "/gurgaon/dlf-phase-1/sushant-lok-i": {
       "index": true,
       "reasons": [],
-      "words": 622,
-      "localRatio": 0.761
+      "words": 619,
+      "localRatio": 0.778
     },
     "/gurgaon/dlf-phase-2/beverly-park-1": {
       "index": true,
       "reasons": [],
-      "words": 600,
+      "words": 598,
       "localRatio": 0.822
     },
     "/gurgaon/dlf-phase-2/beverly-park-2": {
       "index": true,
       "reasons": [],
-      "words": 606,
+      "words": 604,
       "localRatio": 0.822
     },
     "/gurgaon/dlf-phase-2/essel-towers": {
       "index": true,
       "reasons": [],
-      "words": 593,
+      "words": 591,
       "localRatio": 0.822
     },
     "/gurgaon/dlf-phase-2/heritage-city": {
       "index": true,
       "reasons": [],
-      "words": 575,
+      "words": 573,
       "localRatio": 0.822
     },
     "/gurgaon/dlf-phase-2/m-g-road": {
       "index": true,
       "reasons": [],
-      "words": 575,
+      "words": 573,
       "localRatio": 0.833
     },
     "/gurgaon/dlf-phase-2/mgf-villas": {
       "index": true,
       "reasons": [],
-      "words": 585,
+      "words": 583,
       "localRatio": 0.822
     },
     "/gurgaon/dlf-phase-2/pilot-court": {
       "index": true,
       "reasons": [],
-      "words": 581,
+      "words": 579,
       "localRatio": 0.783
     },
     "/gurgaon/dlf-phase-2/sirhaul": {
       "index": true,
       "reasons": [],
-      "words": 554,
+      "words": 552,
       "localRatio": 0.783
     },
     "/gurgaon/dlf-phase-3/belvedere-apartments": {
       "index": true,
       "reasons": [],
-      "words": 571,
-      "localRatio": 0.881
+      "words": 568,
+      "localRatio": 0.902
     },
     "/gurgaon/dlf-phase-3/belvedere-towers": {
       "index": true,
       "reasons": [],
-      "words": 569,
-      "localRatio": 0.881
+      "words": 566,
+      "localRatio": 0.902
     },
     "/gurgaon/golf-course-road/bhawna-apartments": {
       "index": true,
       "reasons": [],
-      "words": 584,
-      "localRatio": 0.783
+      "words": 581,
+      "localRatio": 0.8
     },
     "/gurgaon/golf-course-road/carlton-estate": {
       "index": true,
       "reasons": [],
-      "words": 596,
-      "localRatio": 0.848
+      "words": 593,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/dlf-5": {
       "index": true,
       "reasons": [],
-      "words": 613,
-      "localRatio": 0.826
+      "words": 610,
+      "localRatio": 0.844
     },
     "/gurgaon/golf-course-road/dlf-golf-links": {
       "index": true,
       "reasons": [],
-      "words": 651,
-      "localRatio": 0.826
+      "words": 648,
+      "localRatio": 0.844
     },
     "/gurgaon/golf-course-road/galaxy-apartments": {
       "index": true,
       "reasons": [],
-      "words": 585,
-      "localRatio": 0.783
+      "words": 582,
+      "localRatio": 0.8
     },
     "/gurgaon/golf-course-road/hextax-commune": {
       "index": true,
       "reasons": [],
-      "words": 593,
-      "localRatio": 0.783
+      "words": 590,
+      "localRatio": 0.8
     },
     "/gurgaon/golf-course-road/palm-spring": {
       "index": true,
       "reasons": [],
-      "words": 615,
-      "localRatio": 0.783
+      "words": 612,
+      "localRatio": 0.8
     },
     "/gurgaon/golf-course-road/princeton-estate": {
       "index": true,
       "reasons": [],
-      "words": 592,
-      "localRatio": 0.848
+      "words": 589,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/royalton-tower": {
       "index": true,
       "reasons": [],
-      "words": 581,
-      "localRatio": 0.848
+      "words": 578,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/sector-42-43": {
       "index": true,
       "reasons": [],
-      "words": 595,
-      "localRatio": 0.795
+      "words": 592,
+      "localRatio": 0.814
     },
     "/gurgaon/golf-course-road/sector-53-54": {
       "index": false,
       "reasons": [
-        "near-duplicate of /gurgaon/golf-course-road/sector-42-43 (Jaccard 0.63 > 0.6)"
+        "near-duplicate of /gurgaon/golf-course-road/sector-42-43 (Jaccard 0.62 > 0.6)"
       ],
-      "words": 595,
-      "localRatio": 0.795
+      "words": 592,
+      "localRatio": 0.814
     },
     "/gurgaon/golf-course-road/the-belaire": {
       "index": true,
       "reasons": [],
-      "words": 588,
-      "localRatio": 0.848
+      "words": 585,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/the-icon": {
       "index": true,
       "reasons": [],
-      "words": 597,
-      "localRatio": 0.848
+      "words": 594,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/the-magnolias": {
       "index": true,
       "reasons": [],
-      "words": 613,
-      "localRatio": 0.848
+      "words": 610,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/the-pinnacle": {
       "index": true,
       "reasons": [],
-      "words": 585,
-      "localRatio": 0.848
+      "words": 582,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/the-summit": {
       "index": true,
       "reasons": [],
-      "words": 581,
-      "localRatio": 0.848
+      "words": 578,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/trinity-towers": {
       "index": true,
       "reasons": [],
-      "words": 592,
-      "localRatio": 0.848
+      "words": 589,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/wellington-estate": {
       "index": true,
       "reasons": [],
-      "words": 595,
-      "localRatio": 0.848
+      "words": 592,
+      "localRatio": 0.867
     },
     "/gurgaon/golf-course-road/west-end-heights": {
       "index": true,
       "reasons": [],
-      "words": 606,
-      "localRatio": 0.848
+      "words": 603,
+      "localRatio": 0.867
     },
     "/gurgaon/sector-56/aabhas-society": {
       "index": true,
       "reasons": [],
-      "words": 587,
+      "words": 585,
       "localRatio": 0.822
     },
     "/gurgaon/sector-56/arihant-society": {
       "index": true,
       "reasons": [],
-      "words": 572,
+      "words": 570,
       "localRatio": 0.778
     },
     "/gurgaon/sector-56/ashoka-apartment": {
       "index": true,
       "reasons": [],
-      "words": 586,
+      "words": 584,
       "localRatio": 0.822
     },
     "/gurgaon/sector-56/devender-vihar": {
       "index": true,
       "reasons": [],
-      "words": 599,
+      "words": 597,
       "localRatio": 0.826
     },
     "/gurgaon/sector-56/hewo-2-apartments": {
       "index": true,
       "reasons": [],
-      "words": 613,
+      "words": 611,
       "localRatio": 0.826
     },
     "/gurgaon/sector-56/jal-vayu-towers": {
       "index": true,
       "reasons": [],
-      "words": 608,
+      "words": 606,
       "localRatio": 0.822
     },
     "/gurgaon/sector-56/jnu-aravali-apartments": {
       "index": true,
       "reasons": [],
-      "words": 609,
+      "words": 607,
       "localRatio": 0.783
     },
     "/gurgaon/sector-56/joy-kunj-apartment": {
       "index": true,
       "reasons": [],
-      "words": 598,
+      "words": 596,
       "localRatio": 0.826
     },
     "/gurgaon/sector-56/judge-enclave": {
       "index": true,
       "reasons": [],
-      "words": 590,
+      "words": 588,
       "localRatio": 0.826
     },
     "/gurgaon/sector-56/kendriya-vihar": {
       "index": true,
       "reasons": [],
-      "words": 588,
+      "words": 586,
       "localRatio": 0.778
     },
     "/gurgaon/sector-56/prerana-c-g-h-s-ltd": {
       "index": true,
       "reasons": [],
-      "words": 660,
+      "words": 658,
       "localRatio": 0.822
     },
     "/gurgaon/sector-56/rail-vihar": {
       "index": true,
       "reasons": [],
-      "words": 582,
+      "words": 580,
       "localRatio": 0.778
     },
     "/gurgaon/sector-56/sanskriti-apartments": {
       "index": true,
       "reasons": [],
-      "words": 568,
+      "words": 566,
       "localRatio": 0.778
     },
     "/gurgaon/sohna-road/aaronville": {
       "index": true,
       "reasons": [],
-      "words": 559,
-      "localRatio": 0.739
+      "words": 556,
+      "localRatio": 0.756
     },
     "/gurgaon/sohna-road/c-block": {
       "index": true,
       "reasons": [],
-      "words": 583,
-      "localRatio": 0.745
+      "words": 580,
+      "localRatio": 0.761
     },
     "/gurgaon/sohna-road/eldeco-mansionz": {
       "index": true,
       "reasons": [],
-      "words": 579,
-      "localRatio": 0.739
+      "words": 576,
+      "localRatio": 0.756
     },
     "/gurgaon/sohna-road/greenville": {
       "index": true,
       "reasons": [],
-      "words": 551,
-      "localRatio": 0.783
+      "words": 548,
+      "localRatio": 0.8
     },
     "/gurgaon/sohna-road/parkview-city-i": {
-      "index": true,
-      "reasons": [],
-      "words": 593,
-      "localRatio": 0.804
-    },
-    "/gurgaon/sohna-road/parkview-city-ii": {
-      "index": true,
-      "reasons": [],
-      "words": 596,
-      "localRatio": 0.783
-    },
-    "/gurgaon/sohna-road/primanti": {
-      "index": true,
-      "reasons": [],
-      "words": 572,
-      "localRatio": 0.783
-    },
-    "/gurgaon/sohna-road/silver-crest": {
-      "index": true,
-      "reasons": [],
-      "words": 560,
-      "localRatio": 0.739
-    },
-    "/gurgaon/sohna-road/south-end": {
-      "index": true,
-      "reasons": [],
-      "words": 577,
-      "localRatio": 0.739
-    },
-    "/gurgaon/sohna-road/spaze-privy": {
-      "index": true,
-      "reasons": [],
-      "words": 565,
-      "localRatio": 0.783
-    },
-    "/gurgaon/sohna-road/tatvam-villas": {
-      "index": true,
-      "reasons": [],
-      "words": 574,
-      "localRatio": 0.739
-    },
-    "/gurgaon/sohna-road/technica-cyber-park": {
-      "index": true,
-      "reasons": [],
-      "words": 581,
-      "localRatio": 0.783
-    },
-    "/gurgaon/sohna-road/tower-b1-4": {
-      "index": true,
-      "reasons": [],
-      "words": 585,
-      "localRatio": 0.787
-    },
-    "/gurgaon/sohna-road/vatika-city": {
-      "index": true,
-      "reasons": [],
-      "words": 570,
-      "localRatio": 0.783
-    },
-    "/gurgaon/sohna-road/vipul-greens": {
-      "index": true,
-      "reasons": [],
-      "words": 582,
-      "localRatio": 0.783
-    },
-    "/gurgaon/sohna-road/vipul-world": {
-      "index": true,
-      "reasons": [],
-      "words": 570,
-      "localRatio": 0.739
-    },
-    "/gurgaon/south-city-2/central-park-ii": {
-      "index": true,
-      "reasons": [],
-      "words": 601,
-      "localRatio": 0.822
-    },
-    "/gurgaon/south-city-2/ews-society": {
-      "index": true,
-      "reasons": [],
-      "words": 553,
-      "localRatio": 0.778
-    },
-    "/gurgaon/south-city-2/orchid-petals": {
-      "index": true,
-      "reasons": [],
-      "words": 586,
-      "localRatio": 0.826
-    },
-    "/gurgaon/south-city-2/sispal-vihar": {
-      "index": true,
-      "reasons": [],
-      "words": 576,
-      "localRatio": 0.822
-    },
-    "/gurgaon/south-city-2/south-city-ii": {
-      "index": true,
-      "reasons": [],
-      "words": 613,
-      "localRatio": 0.778
-    },
-    "/gurgaon/south-city-2/tikri": {
-      "index": true,
-      "reasons": [],
-      "words": 547,
-      "localRatio": 0.783
-    },
-    "/gurgaon/south-city-2/vipul-greens": {
       "index": true,
       "reasons": [],
       "words": 590,
       "localRatio": 0.822
     },
+    "/gurgaon/sohna-road/parkview-city-ii": {
+      "index": true,
+      "reasons": [],
+      "words": 593,
+      "localRatio": 0.8
+    },
+    "/gurgaon/sohna-road/primanti": {
+      "index": true,
+      "reasons": [],
+      "words": 569,
+      "localRatio": 0.8
+    },
+    "/gurgaon/sohna-road/silver-crest": {
+      "index": true,
+      "reasons": [],
+      "words": 557,
+      "localRatio": 0.756
+    },
+    "/gurgaon/sohna-road/south-end": {
+      "index": true,
+      "reasons": [],
+      "words": 574,
+      "localRatio": 0.756
+    },
+    "/gurgaon/sohna-road/spaze-privy": {
+      "index": true,
+      "reasons": [],
+      "words": 562,
+      "localRatio": 0.8
+    },
+    "/gurgaon/sohna-road/tatvam-villas": {
+      "index": true,
+      "reasons": [],
+      "words": 571,
+      "localRatio": 0.756
+    },
+    "/gurgaon/sohna-road/technica-cyber-park": {
+      "index": true,
+      "reasons": [],
+      "words": 578,
+      "localRatio": 0.8
+    },
+    "/gurgaon/sohna-road/tower-b1-4": {
+      "index": true,
+      "reasons": [],
+      "words": 582,
+      "localRatio": 0.804
+    },
+    "/gurgaon/sohna-road/vatika-city": {
+      "index": true,
+      "reasons": [],
+      "words": 567,
+      "localRatio": 0.8
+    },
+    "/gurgaon/sohna-road/vipul-greens": {
+      "index": true,
+      "reasons": [],
+      "words": 579,
+      "localRatio": 0.8
+    },
+    "/gurgaon/sohna-road/vipul-world": {
+      "index": true,
+      "reasons": [],
+      "words": 567,
+      "localRatio": 0.756
+    },
+    "/gurgaon/south-city-2/central-park-ii": {
+      "index": true,
+      "reasons": [],
+      "words": 599,
+      "localRatio": 0.822
+    },
+    "/gurgaon/south-city-2/ews-society": {
+      "index": true,
+      "reasons": [],
+      "words": 551,
+      "localRatio": 0.778
+    },
+    "/gurgaon/south-city-2/orchid-petals": {
+      "index": true,
+      "reasons": [],
+      "words": 584,
+      "localRatio": 0.826
+    },
+    "/gurgaon/south-city-2/sispal-vihar": {
+      "index": true,
+      "reasons": [],
+      "words": 574,
+      "localRatio": 0.822
+    },
+    "/gurgaon/south-city-2/south-city-ii": {
+      "index": true,
+      "reasons": [],
+      "words": 611,
+      "localRatio": 0.778
+    },
+    "/gurgaon/south-city-2/tikri": {
+      "index": true,
+      "reasons": [],
+      "words": 545,
+      "localRatio": 0.783
+    },
+    "/gurgaon/south-city-2/vipul-greens": {
+      "index": true,
+      "reasons": [],
+      "words": 588,
+      "localRatio": 0.822
+    },
     "/noida/sector-137/purvanchal-royal-park": {
       "index": true,
       "reasons": [],
-      "words": 561,
-      "localRatio": 0.902
+      "words": 558,
+      "localRatio": 0.925
     },
     "/noida/sector-50/crescent-a-tower": {
       "index": true,
       "reasons": [],
-      "words": 614,
-      "localRatio": 0.809
+      "words": 611,
+      "localRatio": 0.826
     },
     "/noida/sector-50/crescent-b-tower": {
       "index": false,
       "reasons": [
         "near-duplicate of /noida/sector-50/crescent-a-tower (Jaccard 0.63 > 0.6)"
       ],
-      "words": 613,
-      "localRatio": 0.809
+      "words": 610,
+      "localRatio": 0.826
     },
     "/noida/sector-50/crescent-c-tower": {
       "index": false,
       "reasons": [
         "near-duplicate of /noida/sector-50/crescent-b-tower (Jaccard 0.63 > 0.6)"
       ],
-      "words": 613,
-      "localRatio": 0.809
+      "words": 610,
+      "localRatio": 0.826
     },
     "/noida/sector-50/crescent-d-tower": {
       "index": false,
       "reasons": [
         "near-duplicate of /noida/sector-50/crescent-a-tower (Jaccard 0.61 > 0.6)"
       ],
-      "words": 614,
-      "localRatio": 0.809
+      "words": 611,
+      "localRatio": 0.826
     },
     "/noida/sector-50/kailash-dham": {
       "index": true,
       "reasons": [],
-      "words": 599,
-      "localRatio": 0.809
+      "words": 596,
+      "localRatio": 0.826
     },
     "/noida/sector-50/morna": {
       "index": true,
       "reasons": [],
-      "words": 554,
-      "localRatio": 0.766
+      "words": 551,
+      "localRatio": 0.783
     },
     "/noida/sector-50/the-crescent": {
       "index": true,
       "reasons": [],
-      "words": 589,
-      "localRatio": 0.809
+      "words": 586,
+      "localRatio": 0.826
     },
     "/noida/sector-62/akansha-apartments": {
-      "index": true,
-      "reasons": [],
-      "words": 576,
-      "localRatio": 0.822
-    },
-    "/noida/sector-62/bhagirathi-apartments": {
       "index": true,
       "reasons": [],
       "words": 574,
       "localRatio": 0.822
     },
+    "/noida/sector-62/bhagirathi-apartments": {
+      "index": true,
+      "reasons": [],
+      "words": 572,
+      "localRatio": 0.822
+    },
     "/noida/sector-62/block-a-shramdeep-apartments": {
       "index": true,
       "reasons": [],
-      "words": 602,
+      "words": 600,
       "localRatio": 0.822
     },
     "/noida/sector-62/block-b-shramdeep-apartments": {
@@ -15704,37 +15704,37 @@
       "reasons": [
         "near-duplicate of /noida/sector-62/block-a-shramdeep-apartments (Jaccard 0.63 > 0.6)"
       ],
-      "words": 601,
+      "words": 599,
       "localRatio": 0.822
     },
     "/noida/sector-62/designers-park-apartments": {
       "index": true,
       "reasons": [],
-      "words": 594,
+      "words": 592,
       "localRatio": 0.826
     },
     "/noida/sector-62/gail-apartments": {
       "index": true,
       "reasons": [],
-      "words": 576,
+      "words": 574,
       "localRatio": 0.826
     },
     "/noida/sector-62/prangan-apartments": {
       "index": true,
       "reasons": [],
-      "words": 576,
+      "words": 574,
       "localRatio": 0.822
     },
     "/noida/sector-62/prithvi-vihar": {
       "index": true,
       "reasons": [],
-      "words": 576,
+      "words": 574,
       "localRatio": 0.826
     },
     "/noida/sector-62/shaurya-apartments": {
       "index": true,
       "reasons": [],
-      "words": 576,
+      "words": 574,
       "localRatio": 0.822
     },
     "/noida/sector-62/shramdeep-apartments": {
@@ -15742,100 +15742,100 @@
       "reasons": [
         "near-duplicate of /noida/sector-62/block-b-shramdeep-apartments (Jaccard 0.60 > 0.6)"
       ],
-      "words": 570,
+      "words": 568,
       "localRatio": 0.867
     },
     "/noida/sector-62/srijan-apartments": {
       "index": true,
       "reasons": [],
-      "words": 576,
+      "words": 574,
       "localRatio": 0.822
     },
     "/noida/sector-62/telecom-city": {
       "index": true,
       "reasons": [],
-      "words": 576,
+      "words": 574,
       "localRatio": 0.826
     },
     "/noida/sector-76/antriksh-golf-view-1": {
       "index": true,
       "reasons": [],
-      "words": 621,
-      "localRatio": 0.804
+      "words": 618,
+      "localRatio": 0.822
     },
     "/noida/sector-76/block-d-jm-orchid": {
       "index": true,
       "reasons": [],
-      "words": 621,
-      "localRatio": 0.804
+      "words": 618,
+      "localRatio": 0.822
     },
     "/noida/sector-76/brahm-colony": {
       "index": true,
       "reasons": [],
-      "words": 561,
-      "localRatio": 0.761
+      "words": 558,
+      "localRatio": 0.778
     },
     "/noida/sector-76/hindon-vihar": {
       "index": false,
       "reasons": [
         "near-duplicate of /noida/sector-76/brahm-colony (Jaccard 0.63 > 0.6)"
       ],
-      "words": 561,
-      "localRatio": 0.761
+      "words": 558,
+      "localRatio": 0.778
     },
     "/noida/sector-76/iitl-nimbus-the-hyde-park": {
       "index": true,
       "reasons": [],
-      "words": 636,
-      "localRatio": 0.804
+      "words": 633,
+      "localRatio": 0.822
     },
     "/noida/sector-76/mahagun-mezzaria": {
       "index": true,
       "reasons": [],
-      "words": 584,
-      "localRatio": 0.804
+      "words": 581,
+      "localRatio": 0.822
     },
     "/noida/sector-76/mahagun-moderne": {
       "index": true,
       "reasons": [],
-      "words": 590,
-      "localRatio": 0.804
+      "words": 587,
+      "localRatio": 0.822
     },
     "/noida/sector-76/marvella": {
       "index": true,
       "reasons": [],
-      "words": 581,
-      "localRatio": 0.804
+      "words": 578,
+      "localRatio": 0.822
     },
     "/noida/sector-76/north-eye": {
       "index": true,
       "reasons": [],
-      "words": 593,
-      "localRatio": 0.804
+      "words": 590,
+      "localRatio": 0.822
     },
     "/noida/sector-76/panchsheel-pratishta": {
       "index": true,
       "reasons": [],
-      "words": 581,
-      "localRatio": 0.804
+      "words": 578,
+      "localRatio": 0.822
     },
     "/noida/sector-76/princely-estate": {
       "index": true,
       "reasons": [],
-      "words": 584,
-      "localRatio": 0.804
+      "words": 581,
+      "localRatio": 0.822
     },
     "/noida/sector-76/rainbow-metro-station": {
       "index": true,
       "reasons": [],
-      "words": 585,
-      "localRatio": 0.841
+      "words": 582,
+      "localRatio": 0.86
     },
     "/noida/sector-76/sunshine-helios": {
       "index": true,
       "reasons": [],
-      "words": 584,
-      "localRatio": 0.809
+      "words": 581,
+      "localRatio": 0.826
     }
   }
 }
