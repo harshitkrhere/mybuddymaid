@@ -31,6 +31,18 @@ export class SlidingWindow {
     return true;
   }
 
+  /**
+   * Withdraws the most recent hit for a key: the action it counted did not happen (an insert the
+   * database refused), so the next attempt must be allowed to try again.
+   */
+  forget(key: string): void {
+    const times = this.hits.get(key);
+    if (!times?.length) return;
+    times.pop();
+    if (times.length) this.hits.set(key, times);
+    else this.hits.delete(key);
+  }
+
   /** Drops keys with no hit inside the window, so a long-lived instance does not grow forever. */
   prune(since: number = this.now() - this.windowMs): void {
     for (const [key, times] of this.hits) {

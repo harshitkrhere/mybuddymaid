@@ -63,7 +63,11 @@ export async function POST(request: Request) {
   const store = recordClientFromEnv();
   if (!store) return json({ error: 'Lead storage is not configured' }, 503);
   const inserted = await insertLead(store, row);
-  if (!inserted) return json({ error: 'Could not save your request' }, 502);
+  if (!inserted) {
+    // nothing was saved, so the number must not count as seen: a retry has to reach the database again
+    perPhone.forget(row.phone);
+    return json({ error: 'Could not save your request' }, 502);
+  }
 
   const chatwoot = chatwootFromEnv();
   if (chatwoot) {

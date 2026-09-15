@@ -40,3 +40,14 @@ test('prune drops keys with no hit inside the window', () => {
   w.prune();
   assert.equal(w.size, 1);
 });
+
+test('forget withdraws the latest hit, so a refused insert does not block the retry', () => {
+  let t = 0;
+  const w = new SlidingWindow(1, 600_000, () => t);
+  assert.ok(w.allow('9876543210'));
+  assert.ok(!w.allow('9876543210'), 'the second attempt inside the window is normally refused');
+  w.forget('9876543210');
+  assert.ok(w.allow('9876543210'), 'after forget the retry is allowed');
+  w.forget('never-seen');
+  assert.equal(w.size, 1);
+});
