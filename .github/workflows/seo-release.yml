@@ -37,7 +37,7 @@ jobs:
       - run: npm ci
       - name: Read the IndexNow key from the committed key file
         run: |
-          key=$(ls public/*.txt | grep -oE "[a-f0-9]{32,64}.txt$" | head -1 | sed "s/.txt$//")
+          key=$(ls public/*.txt | grep -oE "[a-f0-9]{32,64}\.txt$" | head -1 | sed "s/\.txt$//")
           [ -n "$key" ] || { echo "::error::no IndexNow key file under next-app/public/"; exit 1; }
           echo "INDEXNOW_KEY=$key" >> "$GITHUB_ENV"
           echo "key file: $key.txt"
