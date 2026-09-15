@@ -64,7 +64,16 @@ CREATE TABLE IF NOT EXISTS leads (
   updated_at    TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+-- The table may already exist from the 2026-09-06 proposal SQL (it did on the live project, seen
+-- 2026-09-15: the CREATE above is then a no-op and the two columns added since are missing, and
+-- every insert fails with "column leads.attribution does not exist"). Add them explicitly.
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS attribution JSONB CHECK (attribution IS NULL OR jsonb_typeof(attribution) = 'object');
+ALTER TABLE leads ADD COLUMN IF NOT EXISTS chatwoot_conversation_id BIGINT;
+
 ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
+-- Default grants give the browser roles table privileges (RLS still returns nothing to them);
+-- take even that away, as the support tables do. Only the service role touches leads.
+REVOKE ALL ON leads FROM anon, authenticated;
 -- No policies on purpose: nothing but the service role (the Next.js route, the owner's
 -- dashboard tooling) may read or write leads. This matches email_logs after the
 -- security migration (H1). Do NOT add an anon INSERT policy — the route validates the

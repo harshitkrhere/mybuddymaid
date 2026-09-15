@@ -10,9 +10,12 @@
 //   $env:NEXT_PUBLIC_SUPABASE_URL = 'https://<ref>.supabase.co'
 //   $env:SUPABASE_SERVICE_ROLE_KEY = '<sb_secret_...>'
 //   npm run growth:datacheck
+//
+// --purge-test-leads deletes the rows a probe of the live form leaves behind (name "Test lead
+// (delete me)", phone 9999999999) and prints how many went. Nothing else is ever deleted.
 import { CITIES, ZONES } from '../../data/seo';
 import { fetchAll, normaliseCityText, type PgClient } from '../../lib/growth/supabase';
-import { fail, fetchImpl } from './_env';
+import { fail, fetchImpl, hasFlag } from './_env';
 
 const day = (ts: string) => ts.slice(0, 10);
 const month = (ts: string) => ts.slice(0, 7);
@@ -30,6 +33,16 @@ async function main() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/+$/, '') ?? fail('Set NEXT_PUBLIC_SUPABASE_URL.');
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY ?? fail('Set SUPABASE_SERVICE_ROLE_KEY.');
   const client: PgClient = { url, key, fetchImpl };
+
+  if (hasFlag('--purge-test-leads')) {
+    const res = await fetchImpl(`${url}/rest/v1/leads?phone=eq.9999999999&name=eq.${encodeURIComponent('Test lead (delete me)')}&select=id`, {
+      method: 'DELETE',
+      headers: { apikey: key, Authorization: `Bearer ${key}`, Prefer: 'return=representation' },
+    });
+    const body = await res.text();
+    if (!res.ok) fail(`purge failed: ${res.status} ${body.slice(0, 200)}`);
+    console.log(`purged ${(JSON.parse(body) as unknown[]).length} test lead row(s)`);
+  }
 
   const profiles = await fetchAll<{ created_at: string }>(client, 'profiles', 'select=created_at&order=created_at.asc');
   const bookings = await fetchAll<{ created_at: string; status: string | null; city: string | null }>(client, 'bookings', 'select=created_at,status,city&order=created_at.asc');
