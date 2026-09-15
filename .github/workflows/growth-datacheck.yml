@@ -5,6 +5,11 @@ name: Growth — data check (manual)
 
 on:
   workflow_dispatch:
+    inputs:
+      purge_test_leads:
+        description: 'Also delete the fake test rows a form probe leaves in leads (name "Test lead (delete me)", phone 9999999999)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -26,4 +31,4 @@ jobs:
           cache: npm
           cache-dependency-path: next-app/package-lock.json
       - run: npm ci
-      - run: npm run growth:datacheck
+      - run: npm run growth:datacheck -- ${{ inputs.purge_test_leads && '--purge-test-leads' || '' }}
