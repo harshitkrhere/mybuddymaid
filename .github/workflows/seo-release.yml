@@ -1,0 +1,50 @@
+# SEO — release a sitemap shard (docs/seo/README.md §6, step 6). Manual only.
+#
+# After a deploy that added a Phase 5 batch, this submits the shard's URLs to IndexNow (Bing,
+# Yandex, Naver and the rest) and re-submits the sitemap index to Bing Webmaster Tools. Google
+# discovers the shard through the sitemap index it already has. The IndexNow key is public by
+# design — it is the name of the key file committed under next-app/public/ and served at the
+# site root — so it is read from the checkout; only the Bing key is a secret. Record the batch
+# in docs/seo/rollout-log.md afterwards.
+name: SEO — release a sitemap shard
+
+on:
+  workflow_dispatch:
+    inputs:
+      shard:
+        description: 'Sitemap shard name, e.g. entities-ncr-1-1'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: next-app
+    env:
+      BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: next-app/package-lock.json
+      - run: npm ci
+      - name: Read the IndexNow key from the committed key file
+        run: |
+          key=$(ls public/*.txt | grep -oE "[a-f0-9]{32,64}\.txt$" | head -1 | sed "s/\.txt$//")
+          [ -n "$key" ] || { echo "::error::no IndexNow key file under next-app/public/"; exit 1; }
+          echo "INDEXNOW_KEY=$key" >> "$GITHUB_ENV"
+          echo "key file: $key.txt"
+      - name: Check the deployed shard exists
+        run: |
+          n=$(curl -s --max-time 30 "https://mybuddymaid.in/sitemaps/${{ inputs.shard }}.xml" | grep -o '<loc>' | wc -l)
+          echo "shard ${{ inputs.shard }} is live with $n URLs"
+          [ "$n" -gt 0 ] || { echo "::error::the shard is not served by the live site yet — deploy first"; exit 1; }
+      - name: IndexNow + Bing sitemap re-submission
+        run: npm run release:batch -- "${{ inputs.shard }}"

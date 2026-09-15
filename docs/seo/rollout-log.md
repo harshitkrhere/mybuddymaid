@@ -234,4 +234,4 @@ the worksheet is dropped on that import.
 
 | Batch | City | Date | URLs | Indexed after 3 weeks | Next batch released? |
 |---|---|---|---|---|---|
-| *(none yet)* | | | | | |
+| ncr-1 | Gurgaon, Noida | 2026-09-16 | 115 entities ready, **107 indexable**, 8 noindex (near-duplicate sibling towers: Crescent A–D, Shramdeep A/B, Sikanderpur/Chakarpur, Sector 53-54/42-43); shard `entities-ncr-1-1` | *(census from ~2026-10-07)* | *(decide at 3 weeks)* |

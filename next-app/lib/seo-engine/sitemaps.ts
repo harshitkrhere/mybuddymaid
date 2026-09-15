@@ -88,7 +88,8 @@ export function buildShards(): Shard[] {
   shards.push(...split('pincodes', pins));
 
   // Phase 5: entity pages, one shard per rollout batch
-  for (const [batch, urls] of entityPages()) shards.push(...split(`entities-${batch}`, urls));
+  // only the entity pages the gate lets through: a noindexed page must never be advertised
+  for (const [batch, urls] of entityPages()) shards.push(...split(`entities-${batch}`, urls.filter((u) => idx(u.loc))));
 
   return shards.filter((s) => s.urls.length > 0);
 }
@@ -125,5 +126,7 @@ export function allIndexableUrls(): string[] {
   for (const m of allCorePages()) if (idx(m.path)) out.push(m.path);
   out.push(...TRUST_PAGES.map((t) => t.loc));
   out.push(...BLOG_POSTS.map((p) => `/blog/${p.slug}`));
+  // Phase 5: the entity pages a released batch advertises, gate-filtered like the shards
+  for (const [, urls] of entityPages()) for (const u of urls) if (idx(u.loc)) out.push(u.loc);
   return out;
 }
