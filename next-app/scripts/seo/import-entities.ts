@@ -21,16 +21,28 @@
 // with >= 5 *entity-specific* facts to "ready" (facts inherited from the parent locality
 // do not count); the operator approves the rest by hand.
 //   npx tsx scripts/seo/import-entities.ts --promote
+//
+// Demand, since 2026-09-15: bookings from the app and call-back requests carry a locality and,
+// optionally, the society the customer typed. --placements reads them (service key; counts
+// only, never a person) into data/seo/quality/placements.json, and the worksheet then puts the
+// societies customers actually named first, prefilled serve? = y where a booking exists, with
+// a "signal" column ("2 bookings · 1 request · last 2026-09-15"). Societies customers named
+// that match no candidate are appended as extra rows for the operator to confirm.
+//   npx tsx scripts/seo/import-entities.ts --placements --export-worksheet ../docs/seo/entity-worksheet.csv
+//   npx tsx scripts/seo/import-entities.ts --export-worksheet first-batch.csv --top 120
 import * as dns from 'node:dns';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 dns.setDefaultResultOrder('ipv4first');
 import { ALL_LOCALITIES, CITY_BY_SLUG, LOCALITY_BY_PATH, RESERVED_SLUGS } from '../../data/seo';
 import { MIN_ENTITY_FACTS, meetsReadinessGate } from '../../data/seo/entities';
+import { aggregatePlacements, attachSignals, signalLabel, worksheetRank, type DemandRow, type PlacementRow, type Signal } from '../../lib/seo-engine/entity-match';
+import { fetchAll, TableMissingError } from '../../lib/growth/supabase';
 import type { Entity, EntityKind, Locality } from '../../data/seo/types';
 
 const ROOT = process.cwd();
 const STORE = path.join(ROOT, 'data', 'seo', 'entities.json');
+const PLACEMENTS = path.join(ROOT, 'data', 'seo', 'quality', 'placements.json');
 const args = process.argv.slice(2);
 const argValue = (f: string) => {
   const i = args.indexOf(f);
@@ -468,25 +480,88 @@ out center tags 400;`;
 // ---------------------------------------------------------------------------
 // operator worksheet
 // ---------------------------------------------------------------------------
+function readPlacements(): PlacementRow[] {
+  if (!fs.existsSync(PLACEMENTS)) return [];
+  try {
+    return (JSON.parse(fs.readFileSync(PLACEMENTS, 'utf8')) as { rows?: PlacementRow[] }).rows ?? [];
+  } catch {
+    return [];
+  }
+}
+
 function exportWorksheet(file: string) {
-  const drafts = [...byKey.values()]
-    .filter((e) => e.status === 'draft' && !meetsReadinessGate(e))
-    .sort((a, b) => a.city.localeCompare(b.city) || a.locality.localeCompare(b.locality) || a.name.localeCompare(b.name));
+  const drafts = [...byKey.values()].filter((e) => e.status === 'draft' && !meetsReadinessGate(e));
+  // Demand from bookings and call-back requests (--placements): the societies customers named
+  // come first, prefilled y where a booking exists; the rest sort Tier 1 → Tier 2 and hero
+  // localities first, so the top of the sheet is always the best use of the operator's time.
+  const { matched, unmatched } = attachSignals(readPlacements(), drafts);
+  const keyOf = (e: Entity) => `${e.city}/${e.locality}/${e.slug}`;
+  const rankOf = (city: string, locality: string, signal: Signal | undefined) => {
+    const c = CITY_BY_SLUG.get(city as never);
+    return worksheetRank({ signal, tier: (c?.tier ?? 2) as 1 | 2, heroLocality: !!c?.heroLocalities.includes(locality) });
+  };
+  const sorted = drafts.sort(
+    (a, b) =>
+      rankOf(a.city, a.locality, matched.get(keyOf(a))) - rankOf(b.city, b.locality, matched.get(keyOf(b))) ||
+      a.city.localeCompare(b.city) ||
+      a.locality.localeCompare(b.locality) ||
+      a.name.localeCompare(b.name),
+  );
   // `serve?` comes first so the operator can triage top-to-bottom: y = we place helpers
   // here, anything else = drop on re-import. source and licence round-trip so an OSM
-  // candidate does not lose its ODbL attribution (README §9).
-  const header = ['serve?', 'name', 'locality', 'city', 'kind', 'pincode', 'source', 'licence', ...WORKSHEET_FACTS.map((f) => `fact:${f}`)];
+  // candidate does not lose its ODbL attribution (README §9). `signal` is read-only context.
+  const header = ['serve?', 'signal', 'name', 'locality', 'city', 'kind', 'pincode', 'source', 'licence', ...WORKSHEET_FACTS.map((f) => `fact:${f}`)];
   const q = (s: string) => (/[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s);
-  const rows = drafts.map((e) =>
-    ['', e.name, e.locality, e.city, e.kind, e.pincode, e.source, e.licence, ...WORKSHEET_FACTS.map((f) => e.facts?.[f] ?? '')]
-      .map(q)
-      .join(','),
-  );
-  fs.writeFileSync(file, [header.join(','), ...rows].join('\n') + '\n');
+  const line = (cells: string[]) => cells.map(q).join(',');
+  const rows = sorted.map((e) => {
+    const signal = matched.get(keyOf(e));
+    return line([signal?.bookings ? 'y' : '', signalLabel(signal), e.name, e.locality, e.city, e.kind, e.pincode, e.source, e.licence, ...WORKSHEET_FACTS.map((f) => e.facts?.[f] ?? '')]);
+  });
+  // societies customers named that match no candidate: confirm the name and it becomes a draft
+  const extra = unmatched
+    .filter((r) => r.society)
+    .map((r) => {
+      const loc = LOCALITY_BY_PATH.get(`${r.city}/${r.locality}`);
+      return line([r.bookings ? 'y' : '', signalLabel({ bookings: r.bookings, leads: r.leads, last: r.last, society: r.society }), r.society!, r.locality, r.city, 'society', loc?.pincodes[0] ?? '', 'customer request', 'operator-supplied', ...WORKSHEET_FACTS.map(() => '')]);
+    });
+  const top = Number(argValue('--top') ?? 0);
+  const all = [...extra, ...rows];
+  const out = top > 0 ? all.slice(0, top) : all;
+  fs.writeFileSync(file, [header.join(','), ...out].join('\n') + '\n');
   console.log(
-    `worksheet: ${drafts.length} drafts written to ${file} — mark serve? = y on the societies we place in, ` +
-      `fill their fact: columns (>= ${MIN_ENTITY_FACTS} per row), then --csv ${path.basename(file)} --promote; ` +
+    `worksheet: ${out.length} rows written to ${file} (${drafts.length} drafts, ${matched.size} with a customer signal, ${extra.length} customer-named societies with no candidate` +
+      (top > 0 ? `, cut to the first ${top}` : '') +
+      `) — mark serve? = y on the societies we place in, fill their fact: columns (>= ${MIN_ENTITY_FACTS} per row), then --csv ${path.basename(file)} --promote; ` +
       `rows not marked y are dropped (add --keep-untriaged to drop only explicit n)`,
+  );
+}
+
+// ---------------------------------------------------------------------------
+// demand: bookings and call-back requests that name a society
+// ---------------------------------------------------------------------------
+async function importPlacements() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/+$/, '');
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !key) {
+    console.error('--placements needs NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY (counts only are read; nothing personal is written anywhere)');
+    process.exit(1);
+  }
+  const client = { url, key, fetchImpl: (input: string, init?: RequestInit) => fetch(input, init) };
+  const select = 'select=city_slug,locality_slug,society,entity_slug,created_at&locality_slug=not.is.null&or=(society.not.is.null,entity_slug.not.is.null)';
+  const bookings = await fetchAll<DemandRow>(client, 'bookings', select);
+  let leads: DemandRow[] = [];
+  try {
+    leads = await fetchAll<DemandRow>(client, 'leads', `${select}&status=neq.spam`);
+  } catch (e) {
+    if (!(e instanceof TableMissingError)) throw e;
+  }
+  const rows = aggregatePlacements(bookings, leads);
+  fs.mkdirSync(path.dirname(PLACEMENTS), { recursive: true });
+  fs.writeFileSync(PLACEMENTS, JSON.stringify({ generatedAt: new Date().toISOString(), bookings: bookings.length, leads: leads.length, rows }, null, 2) + '\n');
+  const { matched, unmatched } = attachSignals(rows, [...byKey.values()]);
+  console.log(
+    `placements: ${bookings.length} bookings and ${leads.length} requests name a locality → ${rows.length} society rows; ` +
+      `${matched.size} match a candidate, ${unmatched.length} do not (they join the worksheet as extra rows) → ${path.relative(ROOT, PLACEMENTS)}`,
   );
 }
 
@@ -535,6 +610,7 @@ async function main() {
   const csv = argValue('--csv');
   const worksheet = argValue('--export-worksheet');
   if (csv) importCsv(csv);
+  if (args.includes('--placements')) await importPlacements();
   if (args.includes('--osm')) {
     const city = argValue('--city') ?? '';
     if (args.includes('--all')) {
@@ -574,9 +650,9 @@ async function main() {
     }
   }
   if (args.includes('--promote')) promote();
-  if (!csv && !worksheet && !args.includes('--osm') && !args.includes('--promote')) {
+  if (!csv && !worksheet && !args.includes('--osm') && !args.includes('--promote') && !args.includes('--placements')) {
     console.log(
-      'Usage: --csv <file> [--keep-untriaged] | --osm --city <city> (--locality <locality> | --all [--from <slug>]) [--verbose] | --export-worksheet <file> | --promote',
+      'Usage: --csv <file> [--keep-untriaged] | --osm --city <city> (--locality <locality> | --all [--from <slug>]) [--verbose] | --placements | --export-worksheet <file> [--top <n>] | --promote',
     );
     process.exit(0);
   }

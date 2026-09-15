@@ -1,0 +1,44 @@
+# SEO — the Phase 5 society worksheet, refreshed from real demand (docs/seo/README.md §6).
+#
+# Bookings from the app and call-back requests carry the locality and the society the customer
+# typed. On the first of the month (and on demand) this reads them where the service key lives,
+# writes counts per society into data/seo/quality/placements.json — never a name or a number —
+# and regenerates docs/seo/entity-worksheet.csv with the societies customers named on top. Only
+# those two files are committed; the entity store itself changes only through a reviewed PR.
+name: SEO — society worksheet from placements
+
+on:
+  schedule:
+    - cron: '3 4 1 * *' # 09:33 IST on the 1st
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  worksheet:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: next-app
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: next-app/package-lock.json
+      - run: npm ci
+      - name: Read placements and regenerate the worksheet
+        run: npm run seo:entities -- --placements --export-worksheet ../docs/seo/entity-worksheet.csv
+      - name: Commit the two data files if they changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seo/quality/placements.json ../docs/seo/entity-worksheet.csv
+          if git diff --cached --quiet; then echo "worksheet unchanged"; exit 0; fi
+          git commit -m "seo: society worksheet refreshed from placements $(date -u +%F) [skip ci]"
+          git push origin "HEAD:$GITHUB_REF_NAME"
