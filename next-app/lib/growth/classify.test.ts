@@ -29,7 +29,7 @@ test('every page type in the architecture is recognised', () => {
     ['/pincode/122011', 'pincode', 'gurgaon'],
     ['/blog/how-to-hire-maid-india-2026', 'blog', ''],
     ['/how-we-verify', 'trust', ''],
-    ['/hyderabad', 'trust', ''],
+    ['/hyderabad', 'other', ''],
     ['/hyderabad/banjara-hills', 'other', ''],
   ];
   for (const [path, type, city] of cases) {
